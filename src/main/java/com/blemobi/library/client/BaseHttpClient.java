@@ -37,9 +37,7 @@ public abstract class BaseHttpClient {
 	 * @throws IOException 
 	 * @throws ClientProtocolException 
 	 */
-	public PMessage postMethod(String basePath, List<NameValuePair> params, Cookie[] cookies) throws ClientProtocolException, IOException {
-		String url = createServerUrl(basePath);
-		
+	public PMessage postMethod(String url, List<NameValuePair> params, Cookie[] cookies) throws ClientProtocolException, IOException {
 		HttpPost httpPost = new HttpPost(url);
 
 		if (params != null) {
@@ -58,8 +56,7 @@ public abstract class BaseHttpClient {
 	 * @throws IOException 
 	 * @throws ClientProtocolException 
 	 */
-	public PMessage getMethod(String basePath, List<NameValuePair> params, Cookie[] cookies) throws ClientProtocolException, IOException {
-		String url = createServerUrl(basePath);
+	public PMessage getMethod(String url, List<NameValuePair> params, Cookie[] cookies) throws ClientProtocolException, IOException {
 		url = resetGetUrl(url, params);// 生成带参数的url
 		log.info("Exec getMethod() request url = [" + url + "]");
 		HttpGet httpGet = new HttpGet(url);
@@ -126,7 +123,7 @@ public abstract class BaseHttpClient {
 	 * @param basePath 资源路径
 	 * @return String 账户系统资源URL
 	 */
-	protected abstract String createServerUrl(String basePath);
+	public abstract String createServerUrl(String basePath);
 	
 	/**
 	 * 生成服务的URL
