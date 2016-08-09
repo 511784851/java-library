@@ -149,6 +149,14 @@ public final class GamificationProtos {
      * </pre>
      */
     ADDOTHERFRIEND(16, 16),
+    /**
+     * <code>REGISTER = 17;</code>
+     *
+     * <pre>
+     * 注册
+     * </pre>
+     */
+    REGISTER(17, 17),
     UNRECOGNIZED(-1, -1),
     ;
 
@@ -288,6 +296,14 @@ public final class GamificationProtos {
      * </pre>
      */
     public static final int ADDOTHERFRIEND_VALUE = 16;
+    /**
+     * <code>REGISTER = 17;</code>
+     *
+     * <pre>
+     * 注册
+     * </pre>
+     */
+    public static final int REGISTER_VALUE = 17;
 
 
     public final int getNumber() {
@@ -317,6 +333,7 @@ public final class GamificationProtos {
         case 14: return BINDACCOUNT;
         case 15: return DOWNLOADAPP;
         case 16: return ADDOTHERFRIEND;
+        case 17: return REGISTER;
         default: return null;
       }
     }
@@ -4874,15 +4891,15 @@ public final class GamificationProtos {
       "PBadgeDetail\"~\n\014PBadgeDetail\022\r\n\005statu\030\001 " +
       "\001(\005\022\014\n\004name\030\002 \001(\t\022\014\n\004icon\030\003 \001(\t\022\023\n\013descr" +
       "iption\030\004 \001(\t\022\020\n\010progress\030\005 \001(\t\022\014\n\004time\030\006" +
-      " \001(\003\022\016\n\006target\030\007 \001(\005*\211\002\n\010PTaskKey\022\013\n\007PUB" +
+      " \001(\003\022\016\n\006target\030\007 \001(\005*\227\002\n\010PTaskKey\022\013\n\007PUB" +
       "LISH\020\000\022\n\n\006FOLLOW\020\001\022\010\n\004VOTE\020\002\022\t\n\005REPLY\020\003\022" +
       "\020\n\014ADDCOMMUNITY\020\004\022\024\n\020PUBLISHCOMMUNITY\020\005\022" +
       "\r\n\tADDFRIEND\020\006\022\013\n\007FORWARD\020\007\022\r\n\tREDPACKET" +
       "\020\010\022\n\n\006REMIND\020\t\022\013\n\007PROFILE\020\n\022\017\n\013OPENCONTA" +
       "CT\020\013\022\016\n\nADDCONTACT\020\014\022\014\n\010FEEDBACK\020\r\022\017\n\013BI",
       "NDACCOUNT\020\016\022\017\n\013DOWNLOADAPP\020\017\022\022\n\016ADDOTHER" +
-      "FRIEND\020\020B,\n\026com.blemobi.sep.probufB\022Gami" +
-      "ficationProtosb\006proto3"
+      "FRIEND\020\020\022\014\n\010REGISTER\020\021B,\n\026com.blemobi.se" +
+      "p.probufB\022GamificationProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
