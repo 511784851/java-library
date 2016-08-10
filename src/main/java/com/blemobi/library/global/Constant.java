@@ -19,7 +19,6 @@ import lombok.extern.log4j.Log4j;
 public class Constant  {
 	
 	//通用键值的key的声明
-	private static final String KEY_WK_SERVER_URL = "wk_server_url";
 	private static final String KEY_REDIS_USER_ADDR = "redis_user_addr";
 	private static final String KEY_REDIS_USER_AUTH = "redis_user_auth";
 	private static final String KEY_HEALTH_CHECK_PORT = "health_check_port";
@@ -70,7 +69,6 @@ public class Constant  {
 		public void onEnvChange(Map<String, String> prop) {
 			
 			try{
-				aliWukongServiceURL = prop.get(KEY_WK_SERVER_URL);
 				redisServerAuth = prop.get(KEY_REDIS_USER_AUTH);
 				jettyServerPort  = Integer.parseInt(prop.get(KEY_JETTY_PORT));
 				chatServiceHealthPort  = Integer.parseInt(prop.get(KEY_HEALTH_CHECK_PORT));

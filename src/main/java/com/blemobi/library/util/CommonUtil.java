@@ -1,6 +1,8 @@
 package com.blemobi.library.util;
 
+import java.text.SimpleDateFormat;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.Cookie;
@@ -73,4 +75,10 @@ public class CommonUtil {
 		List<T> rtn = (List<T>) JSONArray.parseArray(jsonStr, clazz);
 		return rtn;
 	}
+	
+	public static String getNowDate() {
+    	SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+		String str = sdf.format(new Date());
+        return str;
+    }
 }

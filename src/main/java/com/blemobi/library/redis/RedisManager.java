@@ -1,6 +1,5 @@
 package com.blemobi.library.redis;
 
-import com.blemobi.library.exception.BaseException;
 import com.blemobi.library.global.Constant;
 
 import lombok.extern.log4j.Log4j;
@@ -13,7 +12,7 @@ public class RedisManager {
 	private static JedisPool pool = initPool();
 
 	// 获取redis连接对象
-	public static Jedis getRedis() throws BaseException {
+	public static Jedis getRedis() {
 		Jedis jedis = getRedisFromPool();
 		if (jedis == null) {
 			// 如果第一次获取失败，重复五次
@@ -29,7 +28,7 @@ public class RedisManager {
 			}
 			if (jedis == null) {
 				log.info("获取redis连接对象失败");
-				throw new BaseException(190000, "redis commount fail");
+				// throw new Exception("redis commount fail");
 			}
 		}
 		return jedis;

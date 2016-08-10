@@ -22,90 +22,97 @@ import com.blemobi.sep.probuf.ResultProtos.PMessage;
 
 import lombok.extern.log4j.Log4j;
 
-
 /**
- * @author 赵勇<andy.zhao@blemobi.com>
- * 远程调用类
+ * @author 赵勇<andy.zhao@blemobi.com> 远程调用类
  */
 @Log4j
 public abstract class BaseHttpClient {
+	private String basePath;
+	private List<NameValuePair> params;
+	private Cookie[] cookies;
+	private StringBuffer url;
+	protected String[] serverInfo;
+
 	/**
-	 * post方式调用
-	 * @param url 路径
-	 * @param params 参数信息
-	 * @return PMessage PMessage对象
-	 * @throws IOException 
-	 * @throws ClientProtocolException 
+	 * 构造方法
+	 * 
+	 * @param basePath
+	 *            服务路径
+	 * @param params
+	 *            参数信息
+	 * @param cookies
+	 *            cookies信息
 	 */
-	public PMessage postMethod(String url, List<NameValuePair> params, Cookie[] cookies) throws ClientProtocolException, IOException {
-		HttpPost httpPost = new HttpPost(url);
+	public BaseHttpClient(String basePath, List<NameValuePair> params, Cookie[] cookies) {
+		this.basePath = basePath;
+		this.params = params;
+		this.cookies = cookies;
+	}
+
+	/**
+	 * post方式
+	 * 
+	 * @return PMessage PMessage对象
+	 * @throws IOException
+	 * @throws ClientProtocolException
+	 */
+	public PMessage postMethod() throws ClientProtocolException, IOException {
+		HttpPost httpPost = new HttpPost(url.toString());
 
 		if (params != null) {
 			UrlEncodedFormEntity entity = new UrlEncodedFormEntity(params, "UTF-8");
 			httpPost.setEntity(entity);// 设置参数
 		}
 
-		return clientExecute(httpPost,cookies);
+		return execute(httpPost);
 	}
 
 	/**
 	 * get方式调用
-	 * @param url 路径
-	 * @param params 参数信息
+	 * 
 	 * @return PMessage PMessage对象
-	 * @throws IOException 
-	 * @throws ClientProtocolException 
+	 * @throws IOException
+	 * @throws ClientProtocolException
 	 */
-	public PMessage getMethod(String url, List<NameValuePair> params, Cookie[] cookies) throws ClientProtocolException, IOException {
-		url = resetGetUrl(url, params);// 生成带参数的url
+	public PMessage getMethod() throws ClientProtocolException, IOException {
+		resetGetUrl();// 生成带参数的url
 		log.info("Exec getMethod() request url = [" + url + "]");
-		HttpGet httpGet = new HttpGet(url);
+		HttpGet httpGet = new HttpGet(url.toString());
 
-		return clientExecute(httpGet,cookies);
-	}
-	public PMessage getMethod(String url, List<NameValuePair> params) throws ClientProtocolException, IOException {
-		return getMethod(url, params, null);
+		return execute(httpGet);
 	}
 
 	/**
 	 * 调用
-	 * @param httpRequestBase http请求信息
+	 * 
+	 * @param httpRequestBase
+	 *            http请求信息
 	 * @return PMessage PMessage对象
-	 * @throws IOException 
-	 * @throws ClientProtocolException 
+	 * @throws IOException
+	 * @throws ClientProtocolException
 	 */
-	private static PMessage clientExecute(HttpRequestBase httpRequestBase, Cookie[] cookies) throws ClientProtocolException, IOException {
+	private PMessage execute(HttpRequestBase httpRequestBase) throws ClientProtocolException, IOException {
 		if (cookies != null) {
+			// 设置cookie参数
 			StringBuilder sb = new StringBuilder();
 			for (Cookie ck : cookies) {
 				sb.append(ck.getName()).append('=').append(ck.getValue()).append(";");
 			}
-			httpRequestBase.setHeader("Cookie", sb.toString());// 设置cookie参数
+			httpRequestBase.setHeader("Cookie", sb.toString());
 		}
 		HttpClient client = HttpClientBuilder.create().build();
-
-		//httpRequestBase.addHeader("accept", MediaTypeExt.APPLICATION_PROTOBUF);
-
 		HttpResponse response = client.execute(httpRequestBase);
-
 		HttpEntity entity = response.getEntity();
 		byte[] data = EntityUtils.toByteArray(entity);
-
 		ResultProtos.PMessage message = ResultProtos.PMessage.parseFrom(data);
 
 		return message;
 	}
 
-	/**
-	 * 生成Get请求方式完整url
-	 * @param path 路径
-	 * @param params 参数信息
-	 * @return String 最终的url
-	 */
-	private String resetGetUrl(String path, List<NameValuePair> params){
-		StringBuffer url = new StringBuffer(path);
+	// 生成GET带参数的完整url
+	private void resetGetUrl() {
 		if (params != null) {
-			if(url.indexOf("?") < 0){
+			if (url.indexOf("?") < 0) {
 				url.append("?v=1");
 			}
 			for (NameValuePair nvp : params) {
@@ -115,33 +122,17 @@ public abstract class BaseHttpClient {
 				url.append(nvp.getValue());
 			}
 		}
-		return url.toString();
 	}
-	
-	/**
-	 * 生成各个系统的URL，需要子类实现
-	 * @param basePath 资源路径
-	 * @return String 账户系统资源URL
-	 */
-	public abstract String createServerUrl(String basePath);
-	
-	/**
-	 * 生成服务的URL
-	 * @param address IP地址
-	 * @param port IP端口
-	 * @param basePath 资源路径
-	 * @return String url路径
-	 */
-	protected String createUrl(String[] accountInfo, String basePath) {
-		String address = accountInfo[0];
-		int port = Integer.parseInt(accountInfo[1]);
-		
-		StringBuffer url = new StringBuffer("http://");
+
+	// 生成服务的URL
+	protected void createUrl() {
+		String address = serverInfo[0];
+		int port = Integer.parseInt(serverInfo[1]);
+
+		url = new StringBuffer("http://");
 		url.append(address);
 		url.append(":");
 		url.append(port);
 		url.append(basePath);
-
-		return url.toString();
 	}
 }

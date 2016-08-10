@@ -11,13 +11,6 @@ import lombok.extern.log4j.Log4j;
 @Log4j
 public class LocalProp {
 	private static final String[] Propkey = new String[]{
-			"wk_server_domain",
-			"wk_server_appToken",
-			"wk_ios_appKey",
-			"wk_ios_appSecret",
-			"wk_android_appKey",
-			"wk_android_appSecret",
-			"wk_server_url",
 			"health_check_port",
 			"redis_user_addr",
 			"redis_user_auth",
