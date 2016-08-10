@@ -1,5 +1,8 @@
 package com.blemobi.library.util;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
@@ -75,10 +78,22 @@ public class CommonUtil {
 		List<T> rtn = (List<T>) JSONArray.parseArray(jsonStr, clazz);
 		return rtn;
 	}
-	
+
 	public static String getNowDate() {
-    	SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
 		String str = sdf.format(new Date());
-        return str;
-    }
+		return str;
+	}
+
+	// 获取两个数的百分比
+	public static String accuracy(double num, double total, int scale) {
+		DecimalFormat df = (DecimalFormat) NumberFormat.getInstance();
+		// 可以设置精确几位小数
+		df.setMaximumFractionDigits(scale);
+		// 模式 例如四舍五入
+		df.setRoundingMode(RoundingMode.HALF_UP);
+		double accuracy_num = num / total * 100;
+		return df.format(accuracy_num) + "%";
+	}
+
 }

@@ -61,6 +61,7 @@ public class RedisManager {
 	}
 
 	// 释放redis对象
+	@SuppressWarnings("deprecation")
 	public static void returnResource(Jedis jedis) {
 		pool.returnResource(jedis);
 	}
