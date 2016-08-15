@@ -19,5 +19,5 @@ public interface ConsulChangeListener {
 	 * @param serviceName 是服务的名称
 	 * @param serverInfo  是serviceName服务的对应所有服务器，是一个二维数组格式。serverInfo[i][0]是IP地址，serverInfo[i][1]是端口值。
 	 */
-	public void onServiceChange(String serviceName, String[][] serverInfo);
+	public void onServiceChange(String serviceName, SocketInfo[] socketInfo);
 }

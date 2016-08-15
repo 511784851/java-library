@@ -8,7 +8,11 @@ package com.blemobi.library.consul;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
+import org.apache.commons.cli.ParseException;
+
+import com.blemobi.chat.rest.ConversationProcess;
 import com.ecwid.consul.v1.ConsulClient;
 import com.google.common.base.Strings;
 
@@ -49,7 +53,7 @@ public class ConsulManager {
 	 * @param consulLoopTime 获取配置信息的间隔时间，以毫秒为单位。
 	 * @throws IOException 
 	 */
-	public static void startService(String[] args, long consulLoopTime, String path){
+	public static void startService(String selfName,String[] args, long consulLoopTime){
 		if(!startFlag){
 			startFlag = true;
 			String env = checkStartMode(args,data);
@@ -85,7 +89,7 @@ public class ConsulManager {
 						System.exit(0);
 					}
 					
-		        	monitor = new ConsulMonitorThread(consulClient,consulLoopTime,listener,null,path);
+		        	monitor = new ConsulMonitorThread(selfName,consulClient,consulLoopTime,listener,null);
 					monitor.start();
 					
 				}

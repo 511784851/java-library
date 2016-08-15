@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.apache.log4j.Logger;
 
@@ -19,12 +20,7 @@ import com.ecwid.consul.v1.catalog.model.CatalogService;
 import lombok.extern.log4j.Log4j;
 @Log4j
 public class ConsulMonitorThread extends Thread {
-	//声明变量,聊天系统的在consul中的key-value中键名的前缀
-	private String KEY_PRE_FIX_CHAT = ""; 
 	
-	//声明变量,聊天系统依赖的两个服务分别是账户系统[account]和好友[social]系统。
-	private String[] SERVICE_NAME_LIST = new String[]{"account","login","news","oss","comment","social"};
-
 	private Logger logger = Logger.getLogger(ConsulMonitorThread.class);
 
 	//连接consul服务器的对象
@@ -33,17 +29,19 @@ public class ConsulMonitorThread extends Thread {
 	//适配器队列。
 	private ArrayList<ConsulChangeListener> allListener = null;
 
-	//依赖的两个服务{"account","social"}的信息记录表
-	java.util.HashMap<String, String[][]> allService = makeAllService(SERVICE_NAME_LIST);
+	//依赖的服务的信息记录表
+	HashMap<String, SocketInfo[]> allService = new HashMap<String, SocketInfo[]>();
 	
 	//Consul中的Key-value的值的map
-	Map<String,String> propInfo = new HashMap<String,String>();
+	Map<String,String> propInfo = new HashMap();
 
 	//访问consul服务器的Token
 	private String token = null;
 
 	//访问consul服务器的间隔时间，默认值.会被Constant.ConsulIntervalTime的值替代！
 	private long loopTime = 1000 * 60 * 30 * 1L;
+
+	private String selfName = null;
 
 	/**
 	 * 构造函数ConsulMonitorThread。
@@ -52,12 +50,12 @@ public class ConsulMonitorThread extends Thread {
 	 * @param allListener 适配器对象。
 	 * @param token 访问consul服务器的token认证信息。
 	 */
-	public ConsulMonitorThread(ConsulClient consulClient, long loopTime, ArrayList<ConsulChangeListener> allListener, String token, String path) {
+	public ConsulMonitorThread(String selfName, ConsulClient consulClient, long loopTime, ArrayList<ConsulChangeListener> allListener, String token) {
+		this.selfName  = selfName;
 		this.consulClient  = consulClient;
 		this.allListener  = allListener;
 		this.loopTime  = loopTime;
 		this.token   = token;
-		this.KEY_PRE_FIX_CHAT = "blemobi/sep/"+path+"/"+System.getProperty("EnvMode", "")+"/"; 
 		try {doNotifyAllListener();} catch (Exception e) {}//触发更新一次
 	}
 
@@ -66,10 +64,10 @@ public class ConsulMonitorThread extends Thread {
 	 * @param serviceNameList 服务名称的列表。
 	 * @return 返回Map,<String, String[][]> 的记录模式，其中String[][]的String[i][0]为IP地址，String[i][1]为端口 。
 	 */
-	private HashMap<String, String[][]> makeAllService(String[] serviceNameList) {
-		java.util.HashMap<String, String[][]> rtn = new java.util.HashMap<String, String[][]>();
+	private HashMap<String, SocketInfo[]> makeAllService(String[] serviceNameList) {
+		java.util.HashMap<String, SocketInfo[]> rtn = new java.util.HashMap<String, SocketInfo[]>();
 		for(String name:serviceNameList){ 
-			rtn.put(name, new String[0][2]);
+			rtn.put(name, new SocketInfo[0]);
 		}
 		return rtn;
 	}
@@ -91,12 +89,14 @@ public class ConsulMonitorThread extends Thread {
 	 * 从consul服务器获取信息变更，并且通知到所有的适配器对象。
 	 */
 	private void doNotifyAllListener() {
-		for(String serviceName:SERVICE_NAME_LIST){ 
-			String[][] info = getServiceInfo(consulClient,serviceName); 
+		String[] allServiceName = getAllServiceName(consulClient);
+		
+		for(String serviceName:allServiceName){ 
+			SocketInfo[] info = getServiceInfo(consulClient,serviceName); 
 			
 			log.info("list consul Server("+serviceName+")");
-			for(String[] serv: info){
-				log.info("consul server("+serviceName+") addr="+serv[0]+", port=["+serv[1]+"]");
+			for(SocketInfo serv: info){
+				log.info("consul server("+serviceName+") addr="+serv.getIpAddr()+", port=["+serv.getPort()+"]");
 			}
 			
 			
@@ -109,8 +109,20 @@ public class ConsulMonitorThread extends Thread {
 				}
 			}
 		}
+		for(String key:allService.keySet()){
+			boolean find = false;
+			for(String newKey:allServiceName){
+				if(newKey.equals(key)){
+					find = true;
+					break;
+				}
+				if(!find){
+					allService.remove(key);
+				}
+			}
+		}
 		
-		Map<String, String> prop = getEvnInfo(consulClient); 
+		Map<String, String> prop = getEvnInfo(consulClient,selfName ); 
 		log.info("list consul Env(key-value)");
 		for(String key: prop.keySet()){
 			log.info("consul "+key+"=["+prop.get(key)+"]");
@@ -125,14 +137,21 @@ public class ConsulMonitorThread extends Thread {
 		}
 	}
 	
+	private String[] getAllServiceName(ConsulClient consul) {
+		Map<String, com.ecwid.consul.v1.agent.model.Service> map = consul.getAgentServices().getValue(); 
+		String[] rtn = new String[map.size()];
+		return rtn;
+	}
+
+	
 	/**
 	 * 从consul服务器获取到的信息，通知到某个适配器对象，一般是用到某个适配器首次加入管理是调用。
 	 * @param listener 某个适配器对象。
 	 */
 	private void doNotifyOneListener(ConsulChangeListener listener) {
-		for(String serviceName:SERVICE_NAME_LIST){ 
-			String[][] info = allService.get(serviceName); 
-			listener.onServiceChange(serviceName, info);
+		for(Entry<String, SocketInfo[]> sdf:allService.entrySet()){
+			listener.onServiceChange(sdf.getKey(), sdf.getValue());
+			
 		}
 		listener.onEnvChange(propInfo);
 	}
@@ -144,7 +163,7 @@ public class ConsulMonitorThread extends Thread {
 	 * @param second 第二个数组对象。
 	 * @return 返回布尔值，两个数组中的内容相同时为true。
 	 */
-	private boolean checkServiceInfoSame(String[][] frist, String[][] second) {
+	private boolean checkServiceInfoSame(SocketInfo[] frist, SocketInfo[] second) {
 		boolean rtn = true;
 		if(frist.length == second.length){
 			for(int i=0;i<frist.length;i++){
@@ -166,9 +185,9 @@ public class ConsulMonitorThread extends Thread {
 	 * @param array 大集合。
 	 * @return 返回布尔值，如果元素存在于集合内，则为true。
 	 */
-	private boolean checkElementInArray(String[] element, String[][] array) {
+	private boolean checkElementInArray(SocketInfo element, SocketInfo[] array) {
 		for(int i=0;i<array.length;i++){
-			if(element[0].equals(array[i][0]) && element[1].equals(array[i][1]) ){
+			if(element.getIpAddr().equals(array[i].getIpAddr()) && (element.getPort()==array[i].getPort()) ){
 				return true;
 			}
 		}
@@ -218,8 +237,10 @@ public class ConsulMonitorThread extends Thread {
 	 * @param client 访问consul服务的对象。
 	 * @return 返回<key-value>的map对象。
 	 */
-	private Map<String, String> getEvnInfo(ConsulClient client) {
-		Map<String, String> rtn = new java.util.HashMap<String, String>();
+	private Map<String, String> getEvnInfo(ConsulClient client,String selfName) {
+		String KEY_PRE_FIX_CHAT = "blemobi/sep/"+selfName+"/"+System.getProperty("EnvMode", "")+"/"; 
+		
+		Map rtn = new java.util.HashMap<String, String>();
 		List<String> keys = (token==null)?consulClient.getKVKeysOnly(KEY_PRE_FIX_CHAT).getValue():consulClient.getKVKeysOnly(KEY_PRE_FIX_CHAT,null,token).getValue();
 
 		int size = keys.size();
@@ -266,8 +287,8 @@ public class ConsulMonitorThread extends Thread {
 	 * @param name 服务的名称。
 	 * @return 返回对应的服务的服务器列表。String[i][0]为IP地址，String[i][1]为端口。
 	 */
-	private String[][] getServiceInfo(ConsulClient client,String name) {
-		String[][] rtn = new String[0][2];  //2维的2个字符串，只是2个临时变量 
+	private SocketInfo[] getServiceInfo(ConsulClient client,String name) {
+		SocketInfo[] rtn = new SocketInfo[0];  
 
 		String param = (token==null)?"":"?token="+token;
 
@@ -279,10 +300,10 @@ public class ConsulMonitorThread extends Thread {
 		if (nodes.size() != 0) {
 			CatalogService[] service = new CatalogService[nodes.size()];
 			nodes.toArray(service);
-			rtn = new String[service.length][2];
+			rtn = new SocketInfo[service.length];
 			for(int i=0;i<service.length;i++){
-				rtn[i][0] = service[i].getServiceAddress();
-				rtn[i][1] = ""+service[i].getServicePort();
+				rtn[i].setIpAddr(service[i].getServiceAddress());
+				rtn[i].setPort(service[i].getServicePort());
 			}
 		} else {
 			logger.error("Please Notice！  Consul Serivie["+name+ "] Count = 0");
