@@ -12,6 +12,24 @@ public class BaseService {
 	private static Map<String, String> porp = new HashMap<String, String>();
 
 	/**
+	 * 从某个服务的consul服务器列表。
+	 * @param serviceName 某个服务的名称。
+	 * @return 返回某个服务的的全部连接信息。
+	 */
+	public static SocketInfo getRegisterServer(String serviceName) {
+		synchronized(sis){
+			ServiceInfo si = sis.get(serviceName);
+			if(si==null){
+				log.info("The service["+serviceName+"] can not find.");
+				return null;
+			}else{
+				SocketInfo[] all = si.getAllSocketInfo();
+				return all;
+			}
+		}
+	}
+	
+	/**
 	 * 从某个服务的consul服务器列表中，获取可用列表中随机选一个，如果没可用的，则返回null。
 	 * @param serviceName 某个服务的名称。
 	 * @return 返回某个服务的的可用连接信息。
