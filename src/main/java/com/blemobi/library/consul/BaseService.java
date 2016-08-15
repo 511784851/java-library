@@ -16,7 +16,7 @@ public class BaseService {
 	 * @param serviceName 某个服务的名称。
 	 * @return 返回某个服务的的全部连接信息。
 	 */
-	public static SocketInfo getRegisterServer(String serviceName) {
+	public static SocketInfo[] getRegisterServer(String serviceName) {
 		synchronized(sis){
 			ServiceInfo si = sis.get(serviceName);
 			if(si==null){
