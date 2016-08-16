@@ -1,68 +1,34 @@
 package com.blemobi.library.redis;
 
-import com.blemobi.library.global.Constant;
+import com.blemobi.library.consul.BaseService;
+import com.google.common.base.Strings;
 
-import lombok.extern.log4j.Log4j;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
-import redis.clients.jedis.JedisPoolConfig;
 
-@Log4j
 public class RedisManager {
-	private static JedisPool pool = initPool();
-
-	// 获取redis连接对象
+	/*
+	 * 获得Redis连接
+	 */
 	public static Jedis getRedis() {
-		Jedis jedis = getRedisFromPool();
-		if (jedis == null) {
-			// 如果第一次获取失败，重复五次
-			int n = 0;
-			while (jedis == null && n < 5) {
-				try {
-					Thread.sleep(100);
-				} catch (InterruptedException e) {
-
-				}
-				jedis = getRedisFromPool();
-				n++;
-			}
-			if (jedis == null) {
-				log.info("获取redis连接对象失败");
-				// throw new Exception("redis commount fail");
-			}
+		String auth = BaseService.getProperty("redis_user_auth");
+		RedisPoolSingleton redisPool = RedisPoolSingleton.getInstance();
+		JedisPool jedisPool = redisPool.getJedisPool();
+		Jedis jedis = jedisPool.getResource();
+		if (!Strings.isNullOrEmpty(auth)) {
+			jedis.auth(auth);
 		}
+
 		return jedis;
 	}
 
-	// 获取redis连接对象
-	private static Jedis getRedisFromPool() {
-		Jedis jedis = null;
-		try {
-			jedis = pool.getResource();
-			String redisAuth = Constant.getRedisUserAuth();
-			jedis.auth(redisAuth);
-		} catch (Exception e) {
-
-		}
-		return jedis;
-	}
-
-	// 初始化redis连接池
-	private static JedisPool initPool() {
-		String[] redisInfo = Constant.getRedisServer();
-
-		JedisPoolConfig config = new JedisPoolConfig();
-		config.setMaxTotal(Constant.getRedisMaxConnectNum());
-		config.setMaxIdle(3);
-		config.setMaxWaitMillis(10 * 1000);
-		JedisPool pool = new JedisPool(config, redisInfo[0], Integer.parseInt(redisInfo[1]));
-
-		return pool;
-	}
-
-	// 释放redis对象
+	/*
+	 * 释放Redis连接
+	 */
 	@SuppressWarnings("deprecation")
 	public static void returnResource(Jedis jedis) {
-		pool.returnResource(jedis);
+		RedisPoolSingleton redisPool = RedisPoolSingleton.getInstance();
+		JedisPool jedisPool = redisPool.getJedisPool();
+		jedisPool.returnResource(jedis);
 	}
 }

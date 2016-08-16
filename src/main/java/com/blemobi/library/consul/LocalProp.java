@@ -2,15 +2,11 @@ package com.blemobi.library.consul;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Properties;
-
-import com.blemobi.chat.core.ChatManager;
 
 import lombok.extern.log4j.Log4j;
 @Log4j

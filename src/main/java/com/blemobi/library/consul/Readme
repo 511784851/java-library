@@ -35,7 +35,7 @@ public static String getProperty(String key);
 
 
 4)本地配置文件信息样本(属于服务发现的配置信息，都是以前缀 "service_"开头,中间部分为服务名称，结尾是"addr"和"port")
-wk_android_appSecret=Sb7UjyqxPXv6Vnw7Pa04btfDnsslHnEu
+jetty_port=9018
 health_check_port=19006
 redis_user_addr=192.168.1.245:6379
 redis_user_auth=

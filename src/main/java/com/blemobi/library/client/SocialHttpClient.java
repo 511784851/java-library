@@ -6,7 +6,8 @@ import javax.servlet.http.Cookie;
 
 import org.apache.http.NameValuePair;
 
-import com.blemobi.library.global.Constant;
+import com.blemobi.library.consul.BaseService;
+import com.blemobi.library.consul.SocketInfo;
 
 /**
  * @author 赵勇<andy.zhao@blemobi.com> 好友系统调用类
@@ -14,8 +15,8 @@ import com.blemobi.library.global.Constant;
 public class SocialHttpClient extends BaseHttpClient {
 	public SocialHttpClient(String basePath, List<NameValuePair> params, Cookie[] cookies) {
 		super(basePath, params, cookies);
-		String[] serverInfo = Constant.getSocialServer();
-		super.serverInfo = serverInfo;
+		SocketInfo socketInfo = BaseService.getActiveServer("social");
+		super.socketInfo = socketInfo;
 		super.createUrl();
 	}
 }

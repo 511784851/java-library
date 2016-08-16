@@ -8,11 +8,7 @@ package com.blemobi.library.consul;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
-import org.apache.commons.cli.ParseException;
-
-import com.blemobi.chat.rest.ConversationProcess;
 import com.ecwid.consul.v1.ConsulClient;
 import com.google.common.base.Strings;
 

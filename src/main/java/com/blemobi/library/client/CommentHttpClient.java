@@ -6,7 +6,8 @@ import javax.servlet.http.Cookie;
 
 import org.apache.http.NameValuePair;
 
-import com.blemobi.library.global.Constant;
+import com.blemobi.library.consul.BaseService;
+import com.blemobi.library.consul.SocketInfo;
 
 /**
  * @author 赵勇<andy.zhao@blemobi.com> 评论系统调用类
@@ -14,8 +15,8 @@ import com.blemobi.library.global.Constant;
 public class CommentHttpClient extends BaseHttpClient {
 	public CommentHttpClient(String basePath, List<NameValuePair> params, Cookie[] cookies) {
 		super(basePath, params, cookies);
-		String[] serverInfo = Constant.getCommentServer();
-		super.serverInfo = serverInfo;
+		SocketInfo socketInfo = BaseService.getActiveServer("comment");
+		super.socketInfo = socketInfo;
 		super.createUrl();
 	}
 }

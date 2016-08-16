@@ -17,6 +17,7 @@ import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 
+import com.blemobi.library.consul.SocketInfo;
 import com.blemobi.sep.probuf.ResultProtos;
 import com.blemobi.sep.probuf.ResultProtos.PMessage;
 
@@ -31,7 +32,7 @@ public abstract class BaseHttpClient {
 	private List<NameValuePair> params;
 	private Cookie[] cookies;
 	private StringBuffer url;
-	protected String[] serverInfo;
+	protected SocketInfo socketInfo;
 
 	/**
 	 * 构造方法
@@ -43,7 +44,7 @@ public abstract class BaseHttpClient {
 	 * @param cookies
 	 *            cookies信息
 	 */
-	public BaseHttpClient(String basePath, List<NameValuePair> params, Cookie[] cookies) {
+	protected BaseHttpClient(String basePath, List<NameValuePair> params, Cookie[] cookies) {
 		this.basePath = basePath;
 		this.params = params;
 		this.cookies = cookies;
@@ -126,13 +127,10 @@ public abstract class BaseHttpClient {
 
 	// 生成服务的URL
 	protected void createUrl() {
-		String address = serverInfo[0];
-		int port = Integer.parseInt(serverInfo[1]);
-
 		url = new StringBuffer("http://");
-		url.append(address);
+		url.append(socketInfo.getIpAddr());
 		url.append(":");
-		url.append(port);
+		url.append(socketInfo.getPort());
 		url.append(basePath);
 	}
 }
