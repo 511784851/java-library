@@ -113,14 +113,20 @@ public abstract class BaseHttpClient {
 	// 生成GET带参数的完整url
 	private void resetGetUrl() {
 		if (params != null) {
+			int i = 0;
 			if (url.indexOf("?") < 0) {
-				url.append("?v=1");
+				url.append("?");
+			} else {
+				i = 1;
 			}
 			for (NameValuePair nvp : params) {
-				url.append("&");
+				if (i > 0) {
+					url.append("&");
+				}
 				url.append(nvp.getName());
 				url.append("=");
 				url.append(nvp.getValue());
+				i++;
 			}
 		}
 	}
