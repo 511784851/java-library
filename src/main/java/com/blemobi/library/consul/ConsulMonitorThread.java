@@ -94,7 +94,7 @@ public class ConsulMonitorThread extends Thread {
 		for(String serviceName:allServiceName){ 
 			SocketInfo[] info = getServiceInfo(consulClient,serviceName); 
 			
-			log.info("list consul Server("+serviceName+")");
+			log.info("list consul Server123("+serviceName+")");
 			for(SocketInfo serv: info){
 				log.info("consul server("+serviceName+") addr="+serv.getIpAddr()+", port=["+serv.getPort()+"]");
 			}
