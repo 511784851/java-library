@@ -40,7 +40,7 @@ public class ConsulMonitorThread extends Thread {
 
 	//访问consul服务器的间隔时间，默认值.会被Constant.ConsulIntervalTime的值替代！
 	//private long loopTime = 1000 * 60 * 30 * 1L;
-	private long loopTime = 1000 * 3L;
+	private long loopTime = 1000 * 5L;
 
 	private String selfName = null;
 
