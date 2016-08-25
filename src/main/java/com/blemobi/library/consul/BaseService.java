@@ -3,6 +3,7 @@ package com.blemobi.library.consul;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import lombok.extern.log4j.Log4j;
 
@@ -42,6 +43,7 @@ public class BaseService {
 				return null;
 			}else{
 				SocketInfo[] all = si.getAllSocketInfo();
+				log.info("getActiveServer "+ serviceName+ " all="+all.length);
 				List<String> error = si.getErrorList();
 				SocketInfo[] healthAccount = getOnlineServer(all,error);
 				if(healthAccount.length==0){
@@ -71,10 +73,9 @@ public class BaseService {
 		error.toArray(errorList);
 		
 		for(int i=0;i<count;i++){
-			String v = buff[i].getIpAddr() + "-" + buff[i].getPort();
+			String v = all[i].getIpAddr() + "-" + all[i].getPort();
 			if(!isExist(errorList,v)){
-				buff[index].setIpAddr(all[i].getIpAddr());
-				buff[index].setPort(all[i].getPort());
+				buff[index] = new SocketInfo(all[i].getIpAddr(),all[i].getPort());
 				index++;
 			}
 		}
@@ -128,12 +129,19 @@ public class BaseService {
 	}
 
 	// 创建Consul服务器的适配器对象，该对象能接受从consul服务器传递过来的配置信息变更通知。
-	private static ConsulChangeListener adapter = new ConsulChangeListener() {
+	public static ConsulChangeListener adapter = new ConsulChangeListener() {
 
 		public void onEnvChange(Map<String, String> prop) {
 			synchronized(porp){
 				porp.clear();
-				porp.putAll(prop);
+				
+				for(Entry<String, String> kv:prop.entrySet()){
+					log.info("consul "+kv.getKey()+" = ["+kv.getValue()+"]");
+				}
+				
+				for(Entry<String, String> kv:prop.entrySet()){
+					porp.put(kv.getKey(), kv.getValue());
+				}
 			}
 		}
 
@@ -142,6 +150,7 @@ public class BaseService {
 				ServiceInfo si = sis.get(serviceName);
 				if(si==null){
 					si = new ServiceInfo();
+					sis.put(serviceName, si);
 				}
 				si.setAllSocketInfo(socketInfo);
 				si.clearErrorServer();
