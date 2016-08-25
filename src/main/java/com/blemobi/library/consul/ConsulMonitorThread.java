@@ -90,54 +90,29 @@ public class ConsulMonitorThread extends Thread {
 	 * 从consul服务器获取信息变更，并且通知到所有的适配器对象。
 	 */
 	private void doNotifyAllListener() {
+		
 		String[] allServiceName = getAllServiceName(consulClient);
+		Map<String, String> prop = getEvnInfo(consulClient,selfName ); 
+		log.info("list consul Env(key-value)");
+		for(Entry<String, String> kv: prop.entrySet()){
+			propInfo.put(kv.getKey(), kv.getValue());
+		}
 		
 		for(String serviceName:allServiceName){ 
 			SocketInfo[] info = getServiceInfo(consulClient,serviceName); 
+			allService.put(serviceName, info);//有变化时则更新
 			
-			//log.info("list consul Server("+serviceName+")");
-//			for(SocketInfo serv: info){
-//				log.info("--------2----------------consul server("+serviceName+") addr="+serv.getIpAddr()+", port=["+serv.getPort()+"]");
-//			}
-			
-//			
-//			boolean isSame = true;
-//			if(info.length>0) isSame = checkServiceInfoSame(allService.get(serviceName),info);
-//			if(!isSame){
-//				allService.put(serviceName, info);//有变化时则更新
-				for(ConsulChangeListener listener:allListener){
-					listener.onServiceChange(serviceName, info);
-				}
-//			}
-		}
-		for(String key:allService.keySet()){
-			boolean find = false;
-			for(String newKey:allServiceName){
-				if(newKey.equals(key)){
-					find = true;
-					break;
-				}
-				if(!find){
-					allService.remove(key);
-				}
-			}
+
 		}
 		
-		Map<String, String> prop = getEvnInfo(consulClient,selfName ); 
-//		log.info("list consul Env(key-value)");
-//		for(String key: prop.keySet()){
-//			log.info("consul "+key+"=["+prop.get(key)+"]");
-//		}
-		
-//		boolean isPropSame = true;
-//		if(prop.size()>0) isPropSame = checkPopSame(propInfo,prop); // 检查2个map的内容是否一样
-//		if(!isPropSame){
-//			propInfo = prop;
-			for(ConsulChangeListener listener:allListener){
-				log.info("onEnvChange listener("+listener.toString()+")");
-				listener.onEnvChange(prop);
+		for(ConsulChangeListener listener:allListener){
+			for(Entry<String, SocketInfo[]> kv:allService.entrySet()){
+				listener.onServiceChange(kv.getKey(), kv.getValue());
 			}
-//		}
+			
+			listener.onEnvChange(propInfo);
+		}
+				
 	}
 	
 	private String[] getAllServiceName(ConsulClient consul) {
@@ -153,6 +128,9 @@ public class ConsulMonitorThread extends Thread {
 	 * @param listener 某个适配器对象。
 	 */
 	private void doNotifyOneListener(ConsulChangeListener listener) {
+		
+		log.info("init doNotifyOneListener(ConsulChangeListener listener)");
+		log.info(listener);
 		for(Entry<String, SocketInfo[]> sdf:allService.entrySet()){
 			listener.onServiceChange(sdf.getKey(), sdf.getValue());
 			
@@ -243,6 +221,8 @@ public class ConsulMonitorThread extends Thread {
 	 */
 	private Map<String, String> getEvnInfo(ConsulClient client,String selfName) {
 		String KEY_PRE_FIX_CHAT = "blemobi/sep/"+selfName+"/"+System.getProperty("EnvMode", "")+"/"; 
+		
+		//log.info(KEY_PRE_FIX_CHAT);
 		
 		Map rtn = new java.util.HashMap<String, String>();
 		List<String> keys = (token==null)?consulClient.getKVKeysOnly(KEY_PRE_FIX_CHAT).getValue():consulClient.getKVKeysOnly(KEY_PRE_FIX_CHAT,null,token).getValue();
