@@ -40,7 +40,7 @@ public class JettyServer {
 	public void start() throws Exception {
 		if (server == null) {
 			ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
-			context.setContextPath(contextPath);
+			context.setContextPath("/"+contextPath);
 
 			EnumSet<DispatcherType> enumSet = EnumSet.allOf(DispatcherType.class);
 			enumSet.add(DispatcherType.REQUEST);
@@ -48,7 +48,9 @@ public class JettyServer {
 			// 添加需要过滤的PATH
 			context.addFilter(ListParamFilter.class, "/*", enumSet);
 			for (ServerFilter serverFilter : serverFilterList) {
-				context.addFilter(serverFilter.getFilter().getClass(), serverFilter.getPath(), enumSet);
+				for (String path : serverFilter.getPathList()) {
+					context.addFilter(serverFilter.getFilter().getClass(), path, enumSet);
+				}
 			}
 
 			server = new Server(port);

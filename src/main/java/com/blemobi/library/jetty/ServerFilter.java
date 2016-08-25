@@ -1,22 +1,24 @@
 package com.blemobi.library.jetty;
 
+import java.util.List;
+
 import javax.servlet.Filter;
 
 public class ServerFilter {
 	private Filter filter;
-	private String path;
+	private List<String> pathList;
 
-	public ServerFilter(Filter filter, String path) {
+	public ServerFilter(Filter filter, List<String> pathList) {
 		this.filter = filter;
-		this.path = path;
+		this.pathList = pathList;
 	}
 
 	public Filter getFilter() {
 		return filter;
 	}
 
-	public String getPath() {
-		return path;
+	public List<String> getPathList() {
+		return pathList;
 	}
 
 }
