@@ -10,7 +10,7 @@ import lombok.extern.log4j.Log4j;
 @Log4j
 public class BaseService {
 	private static  Map<String, ServiceInfo> sis = new HashMap<String, ServiceInfo>();
-	private static Map<String, String> porp = new HashMap<String, String>();
+	private static  Map<String, String> env = new HashMap<String, String>();
 
 	/**
 	 * 从某个服务的consul服务器列表。
@@ -36,6 +36,7 @@ public class BaseService {
 	 * @return 返回某个服务的的可用连接信息。
 	 */
 	public static SocketInfo getActiveServer(String serviceName) {
+		
 		synchronized(sis){
 			ServiceInfo si = sis.get(serviceName);
 			if(si==null){
@@ -43,7 +44,6 @@ public class BaseService {
 				return null;
 			}else{
 				SocketInfo[] all = si.getAllSocketInfo();
-				log.info("getActiveServer "+ serviceName+ " all="+all.length);
 				List<String> error = si.getErrorList();
 				SocketInfo[] healthAccount = getOnlineServer(all,error);
 				if(healthAccount.length==0){
@@ -125,23 +125,23 @@ public class BaseService {
 	 * @return 对应键的值。
 	 */
 	public static String getProperty(String key) {
-		return porp.get(key);
+		return env.get(key);
 	}
 
 	// 创建Consul服务器的适配器对象，该对象能接受从consul服务器传递过来的配置信息变更通知。
 	public static ConsulChangeListener adapter = new ConsulChangeListener() {
 
 		public void onEnvChange(Map<String, String> prop) {
-			synchronized(porp){
-				porp.clear();
-				
+			log.info("----------------onEnvChange-----------");
+			synchronized(env){
+				env.clear();
 				for(Entry<String, String> kv:prop.entrySet()){
 					log.info("consul "+kv.getKey()+" = ["+kv.getValue()+"]");
 				}
 				
 				for(Entry<String, String> kv:prop.entrySet()){
-					porp.put(kv.getKey(), kv.getValue());
-				}
+					env.put(kv.getKey(), kv.getValue());
+				}				
 			}
 		}
 
