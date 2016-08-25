@@ -169,10 +169,8 @@ public class ConsulManager {
 	 * @param adapter 需要登记的适配器。
 	 */
 	public static void addConsulChangeListener(ConsulChangeListener adapter){
-		log.info("in addConsulChangeListener---------------");
 		if(!Strings.isNullOrEmpty(System.getProperty("EnvMode"))){
 			monitor.addConsulChangeListener(adapter);
-			log.info("------------------in addConsulChangeListener OK!");
 			
 		}else{
 			LocalProp.invokeEnv(adapter);
