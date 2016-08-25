@@ -39,7 +39,8 @@ public class ConsulMonitorThread extends Thread {
 	private String token = null;
 
 	//访问consul服务器的间隔时间，默认值.会被Constant.ConsulIntervalTime的值替代！
-	private long loopTime = 1000 * 60 * 30 * 1L;
+	//private long loopTime = 1000 * 60 * 30 * 1L;
+	private long loopTime = 1000 * 3L;
 
 	private String selfName = null;
 
@@ -94,20 +95,20 @@ public class ConsulMonitorThread extends Thread {
 		for(String serviceName:allServiceName){ 
 			SocketInfo[] info = getServiceInfo(consulClient,serviceName); 
 			
-			log.info("list consul Server("+serviceName+")");
-			for(SocketInfo serv: info){
-				log.info("consul server("+serviceName+") addr="+serv.getIpAddr()+", port=["+serv.getPort()+"]");
-			}
+			//log.info("list consul Server("+serviceName+")");
+//			for(SocketInfo serv: info){
+//				log.info("--------2----------------consul server("+serviceName+") addr="+serv.getIpAddr()+", port=["+serv.getPort()+"]");
+//			}
 			
-			
-			boolean isSame = true;
-			if(info.length>0) isSame = checkServiceInfoSame(allService.get(serviceName),info);
-			if(!isSame){
-				allService.put(serviceName, info);//有变化时则更新
+//			
+//			boolean isSame = true;
+//			if(info.length>0) isSame = checkServiceInfoSame(allService.get(serviceName),info);
+//			if(!isSame){
+//				allService.put(serviceName, info);//有变化时则更新
 				for(ConsulChangeListener listener:allListener){
 					listener.onServiceChange(serviceName, info);
 				}
-			}
+//			}
 		}
 		for(String key:allService.keySet()){
 			boolean find = false;
@@ -123,23 +124,26 @@ public class ConsulMonitorThread extends Thread {
 		}
 		
 		Map<String, String> prop = getEvnInfo(consulClient,selfName ); 
-		log.info("list consul Env(key-value)");
-		for(String key: prop.keySet()){
-			log.info("consul "+key+"=["+prop.get(key)+"]");
-		}
-		boolean isPropSame = true;
-		if(prop.size()>0) isPropSame = checkPopSame(propInfo,prop); // 检查2个map的内容是否一样
-		if(!isPropSame){
-			propInfo = prop;
+//		log.info("list consul Env(key-value)");
+//		for(String key: prop.keySet()){
+//			log.info("consul "+key+"=["+prop.get(key)+"]");
+//		}
+		
+//		boolean isPropSame = true;
+//		if(prop.size()>0) isPropSame = checkPopSame(propInfo,prop); // 检查2个map的内容是否一样
+//		if(!isPropSame){
+//			propInfo = prop;
 			for(ConsulChangeListener listener:allListener){
+				log.info("onEnvChange listener("+listener.toString()+")");
 				listener.onEnvChange(prop);
 			}
-		}
+//		}
 	}
 	
 	private String[] getAllServiceName(ConsulClient consul) {
 		Map<String, com.ecwid.consul.v1.agent.model.Service> map = consul.getAgentServices().getValue(); 
 		String[] rtn = new String[map.size()];
+		map.keySet().toArray(rtn);
 		return rtn;
 	}
 
@@ -302,8 +306,7 @@ public class ConsulMonitorThread extends Thread {
 			nodes.toArray(service);
 			rtn = new SocketInfo[service.length];
 			for(int i=0;i<service.length;i++){
-				rtn[i].setIpAddr(service[i].getServiceAddress());
-				rtn[i].setPort(service[i].getServicePort());
+				rtn[i] = new SocketInfo(service[i].getServiceAddress(),service[i].getServicePort());
 			}
 		} else {
 			logger.error("Please Notice！  Consul Serivie["+name+ "] Count = 0");
