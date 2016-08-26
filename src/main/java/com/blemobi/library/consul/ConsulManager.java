@@ -50,6 +50,7 @@ public class ConsulManager {
 	 * @throws IOException 
 	 */
 	public static void startService(String selfName,String[] args, long consulLoopTime){
+		String selfServ = selfName.substring(0, 1).toUpperCase()+selfName.substring(1);
 		if(!startFlag){
 			startFlag = true;
 			String env = checkStartMode(args,data);
@@ -58,11 +59,11 @@ public class ConsulManager {
 					log.info("System starting with local mode. ");
 					log.info("Now, System reading local config file. ");
 					try {
-						LocalProp.setLocalEnv("ChatManager.ini");
+						LocalProp.setLocalEnv(selfServ+"Manager.ini");
 						log.info("Read local Config File Finish!");
 					} catch (IOException e) {
 						log.info("Read local Config File Exception.");
-						log.info("Config file [ChatManager.ini] not exist or content is error！");
+						log.info("Config file ["+selfServ+"Manager.ini] not exist or content is error！");
 						log.info("System exit!");
 			        	log.info("Good bye!");
 						System.exit(0);
