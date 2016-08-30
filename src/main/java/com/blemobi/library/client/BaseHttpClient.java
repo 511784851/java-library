@@ -1,10 +1,16 @@
 package com.blemobi.library.client;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
 
 import javax.servlet.http.Cookie;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -82,7 +88,47 @@ public abstract class BaseHttpClient {
 
 		return execute(httpGet);
 	}
+	
+	/**
+	 * post方式传递body内容调用
+	 * @param body body内容
+	 * @return PMessage PMessage对象
+	 * @throws IOException
+	 * @throws ClientProtocolException
+	 */
+	public PMessage postBodyMethod(byte[] body) throws IOException {
+		URL httpUrl = new URL(url.toString());
+		HttpURLConnection urlConnection = (HttpURLConnection) httpUrl.openConnection();
 
+		urlConnection.setDoInput(true);  
+		urlConnection.setDoOutput(true);  
+		urlConnection.setUseCaches(false);  
+
+		urlConnection.setRequestProperty("Content-type", "form-data");
+		urlConnection.setRequestProperty("accept", "application/x-protobuf");
+		urlConnection.setRequestMethod("POST"); 
+		
+		if (cookies != null) {
+			StringBuilder sb = new StringBuilder();
+			for (Cookie ck : cookies) {
+				sb.append(ck.getName()).append('=').append(ck.getValue()).append(";");
+			}
+			urlConnection.setRequestProperty("Cookie", sb.toString());
+		}
+
+		OutputStream out = urlConnection.getOutputStream();
+		out.write(body);
+		out.flush();
+		out.close();
+
+		InputStream inputStream = urlConnection.getInputStream();
+		String encoding = urlConnection.getContentEncoding();
+		String bodyString = IOUtils.toString(inputStream, encoding);
+
+		ResultProtos.PMessage message = ResultProtos.PMessage.parseFrom(bodyString.getBytes());
+		return message;
+	}
+	
 	/**
 	 * 调用
 	 * 
