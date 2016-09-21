@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 
@@ -37,7 +36,7 @@ public abstract class BaseHttpClient {
 	private String basePath;
 	private List<NameValuePair> params;
 	private Cookie[] cookies;
-	private StringBuffer url;
+	protected StringBuffer url;
 	protected SocketInfo socketInfo;
 
 	/**
@@ -83,15 +82,17 @@ public abstract class BaseHttpClient {
 	 */
 	public PMessage getMethod() throws ClientProtocolException, IOException {
 		resetGetUrl();// 生成带参数的url
-		log.info("Exec getMethod() request url = [" + url + "]");
+		log.debug("Exec getMethod() request url = [" + url + "]");
 		HttpGet httpGet = new HttpGet(url.toString());
 
 		return execute(httpGet);
 	}
-	
+
 	/**
 	 * post方式传递body内容调用
-	 * @param body body内容
+	 * 
+	 * @param body
+	 *            body内容
 	 * @return PMessage PMessage对象
 	 * @throws IOException
 	 * @throws ClientProtocolException
@@ -100,20 +101,16 @@ public abstract class BaseHttpClient {
 		URL httpUrl = new URL(url.toString());
 		HttpURLConnection urlConnection = (HttpURLConnection) httpUrl.openConnection();
 
-		urlConnection.setDoInput(true);  
-		urlConnection.setDoOutput(true);  
-		urlConnection.setUseCaches(false);  
+		urlConnection.setDoInput(true);
+		urlConnection.setDoOutput(true);
+		urlConnection.setUseCaches(false);
 
 		urlConnection.setRequestProperty("Content-type", "form-data");
 		urlConnection.setRequestProperty("accept", "application/x-protobuf");
-		urlConnection.setRequestMethod("POST"); 
-		
+		urlConnection.setRequestMethod("POST");
+
 		if (cookies != null) {
-			StringBuilder sb = new StringBuilder();
-			for (Cookie ck : cookies) {
-				sb.append(ck.getName()).append('=').append(ck.getValue()).append(";");
-			}
-			urlConnection.setRequestProperty("Cookie", sb.toString());
+			urlConnection.setRequestProperty("Cookie", getCookie());
 		}
 
 		OutputStream out = urlConnection.getOutputStream();
@@ -128,7 +125,7 @@ public abstract class BaseHttpClient {
 		ResultProtos.PMessage message = ResultProtos.PMessage.parseFrom(bodyString.getBytes());
 		return message;
 	}
-	
+
 	/**
 	 * 调用
 	 * 
@@ -140,12 +137,7 @@ public abstract class BaseHttpClient {
 	 */
 	private PMessage execute(HttpRequestBase httpRequestBase) throws ClientProtocolException, IOException {
 		if (cookies != null) {
-			// 设置cookie参数
-			StringBuilder sb = new StringBuilder();
-			for (Cookie ck : cookies) {
-				sb.append(ck.getName()).append('=').append(ck.getValue()).append(";");
-			}
-			httpRequestBase.setHeader("Cookie", sb.toString());
+			httpRequestBase.setHeader("Cookie", getCookie());
 		}
 		HttpClient client = HttpClientBuilder.create().build();
 		HttpResponse response = client.execute(httpRequestBase);
@@ -184,5 +176,14 @@ public abstract class BaseHttpClient {
 		url.append(":");
 		url.append(socketInfo.getPort());
 		url.append(basePath);
+	}
+
+	// 设置cookie参数
+	private String getCookie() {
+		StringBuilder sb = new StringBuilder();
+		for (Cookie ck : cookies) {
+			sb.append(ck.getName()).append('=').append(ck.getValue()).append(";");
+		}
+		return sb.toString();
 	}
 }

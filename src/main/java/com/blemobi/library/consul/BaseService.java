@@ -5,12 +5,16 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.LogManager;
+
 import lombok.extern.log4j.Log4j;
 
 @Log4j
 public class BaseService {
 	private static  Map<String, ServiceInfo> sis = new HashMap<String, ServiceInfo>();
 	private static  Map<String, String> env = new HashMap<String, String>();
+	private static  String logLevel = null;
 
 	/**
 	 * 从某个服务的consul服务器列表。
@@ -21,7 +25,7 @@ public class BaseService {
 		synchronized(sis){
 			ServiceInfo si = sis.get(serviceName);
 			if(si==null){
-				log.info("The service["+serviceName+"] can not find.");
+				log.warn("The service["+serviceName+"] can not find.");
 				return null;
 			}else{
 				SocketInfo[] all = si.getAllSocketInfo();
@@ -40,14 +44,14 @@ public class BaseService {
 		synchronized(sis){
 			ServiceInfo si = sis.get(serviceName);
 			if(si==null){
-				log.info("The service["+serviceName+"] can not find.");
+				log.warn("The service["+serviceName+"] can not find.");
 				return null;
 			}else{
 				SocketInfo[] all = si.getAllSocketInfo();
 				List<String> error = si.getErrorList();
 				SocketInfo[] healthAccount = getOnlineServer(all,error);
 				if(healthAccount.length==0){
-					log.info("The service["+serviceName+"] health node not exist.");
+					log.warn("The service["+serviceName+"] health node not exist.");
 					return null;
 				}else{
 					int ramdom = (int)(Math.random() * healthAccount.length);
@@ -132,21 +136,29 @@ public class BaseService {
 	public static ConsulChangeListener adapter = new ConsulChangeListener() {
 
 		public void onEnvChange(Map<String, String> prop) {
-			log.info("----------------onEnvChange-----------");
+			log.debug("----------------onEnvChange-----------");
 			synchronized(env){
 				env.clear();
 				for(Entry<String, String> kv:prop.entrySet()){
-					log.info("consul "+kv.getKey()+" = ["+kv.getValue()+"]");
+					log.debug("consul "+kv.getKey()+" = ["+kv.getValue()+"]");
 				}
 				
 				for(Entry<String, String> kv:prop.entrySet()){
 					env.put(kv.getKey(), kv.getValue());
 				}				
 			}
+			String logLevel = env.get("log_level");
+			setLogLevel(logLevel);
+			
 		}
 
 		public void onServiceChange(String serviceName, SocketInfo[] socketInfo) {
 			synchronized(sis){
+				//log.info("The service["+serviceName+"], count="+socketInfo.length);
+				for(SocketInfo si:socketInfo){
+					//log.info("The service["+serviceName+"], SocketInfo addr=["+si.getIpAddr()+"], port=["+si.getPort()+"]");
+				}
+				
 				ServiceInfo si = sis.get(serviceName);
 				if(si==null){
 					si = new ServiceInfo();
@@ -161,5 +173,20 @@ public class BaseService {
 	};
 	static{
 		ConsulManager.addConsulChangeListener(adapter);
+	}
+	protected static void setLogLevel(String level) {
+		if(level==null) level = "";
+		if(!level.equals(logLevel)){
+			logLevel = level;
+			if(level.equalsIgnoreCase("ERROR")){
+				LogManager.getRootLogger().setLevel(Level.ERROR);  
+			}else if(level.equalsIgnoreCase("WARN")){
+				LogManager.getRootLogger().setLevel(Level.WARN);  
+			}else if(level.equalsIgnoreCase("INFO")){
+				LogManager.getRootLogger().setLevel(Level.INFO);  
+			}else{
+				LogManager.getRootLogger().setLevel(Level.DEBUG);  
+			}
+		}
 	}
 }

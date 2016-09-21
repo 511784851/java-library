@@ -14,15 +14,15 @@ import java.util.Map.Entry;
 import org.apache.log4j.Logger;
 
 import com.ecwid.consul.v1.ConsulClient;
+import com.ecwid.consul.v1.QueryParams;
 import com.ecwid.consul.v1.Response;
 import com.ecwid.consul.v1.catalog.model.CatalogService;
+import com.google.common.base.Strings;
 
 import lombok.extern.log4j.Log4j;
 @Log4j
 public class ConsulMonitorThread extends Thread {
 	
-	private Logger logger = Logger.getLogger(ConsulMonitorThread.class);
-
 	//连接consul服务器的对象
 	private ConsulClient consulClient = null;
 	
@@ -91,9 +91,9 @@ public class ConsulMonitorThread extends Thread {
 	 */
 	private void doNotifyAllListener() {
 		
-		String[] allServiceName = getAllServiceName(consulClient);
 		Map<String, String> prop = getEvnInfo(consulClient,selfName ); 
-		log.info("list consul Env(key-value)");
+		String[] allServiceName = getAllServiceName(consulClient);
+		log.debug("list consul Env(key-value)");
 		for(Entry<String, String> kv: prop.entrySet()){
 			propInfo.put(kv.getKey(), kv.getValue());
 		}
@@ -116,9 +116,14 @@ public class ConsulMonitorThread extends Thread {
 	}
 	
 	private String[] getAllServiceName(ConsulClient consul) {
-		Map<String, com.ecwid.consul.v1.agent.model.Service> map = consul.getAgentServices().getValue(); 
-		String[] rtn = new String[map.size()];
-		map.keySet().toArray(rtn);
+		List<String> names = new ArrayList<String>();
+		Response<Map<String, List<String>>> servs = consul.getCatalogServices(QueryParams.DEFAULT);
+		for (String serviceId : servs.getValue().keySet()) {
+			names.add(serviceId);
+		}
+		
+		String[] rtn = new String[names.size()];
+		names.toArray(rtn);
 		return rtn;
 	}
 
@@ -128,9 +133,6 @@ public class ConsulMonitorThread extends Thread {
 	 * @param listener 某个适配器对象。
 	 */
 	private void doNotifyOneListener(ConsulChangeListener listener) {
-		
-		log.info("init doNotifyOneListener(ConsulChangeListener listener)");
-		log.info(listener);
 		for(Entry<String, SocketInfo[]> sdf:allService.entrySet()){
 			listener.onServiceChange(sdf.getKey(), sdf.getValue());
 			
@@ -289,7 +291,7 @@ public class ConsulMonitorThread extends Thread {
 				rtn[i] = new SocketInfo(service[i].getServiceAddress(),service[i].getServicePort());
 			}
 		} else {
-			logger.error("Please Notice！  Consul Serivie["+name+ "] Count = 0");
+			log.error("Please Notice！  Consul Serivie["+name+ "] Count = 0");
 		}
 		return rtn;
 	}

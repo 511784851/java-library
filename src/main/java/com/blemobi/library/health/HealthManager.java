@@ -14,10 +14,10 @@ public class HealthManager {
 	 * @param healthPort
 	 *            健康服务的端口。
 	 */
-	public static void startService(int healthPort, String path) {
+	public static void startService(int healthPort, String serviceName) {
 		try {
 			HttpServer server = HttpServer.create(new InetSocketAddress(healthPort), 0);
-			server.createContext("/", new HealthHandler(path));
+			server.createContext("/", new HealthHandler(serviceName));
 			server.setExecutor(null); // creates a default executor
 			server.start();
 			log.info("Health Report Server Running Port:" + healthPort);

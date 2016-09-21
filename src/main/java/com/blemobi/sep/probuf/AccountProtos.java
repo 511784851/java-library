@@ -666,6 +666,254 @@ public final class AccountProtos {
     // @@protoc_insertion_point(enum_scope:common.ERightId)
   }
 
+  /**
+   * Protobuf enum {@code common.ELinkType}
+   *
+   * <pre>
+   *超链接类型
+   * </pre>
+   */
+  public enum ELinkType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>taobao = 0;</code>
+     *
+     * <pre>
+     *淘宝网
+     * </pre>
+     */
+    taobao(0, 0),
+    /**
+     * <code>jd = 1;</code>
+     *
+     * <pre>
+     *京东
+     * </pre>
+     */
+    jd(1, 1),
+    /**
+     * <code>yy = 2;</code>
+     *
+     * <pre>
+     *YY
+     * </pre>
+     */
+    yy(2, 2),
+    /**
+     * <code>huya = 3;</code>
+     *
+     * <pre>
+     *虎牙
+     * </pre>
+     */
+    huya(3, 3),
+    /**
+     * <code>douyu = 4;</code>
+     *
+     * <pre>
+     *斗鱼
+     * </pre>
+     */
+    douyu(4, 4),
+    /**
+     * <code>panda = 5;</code>
+     *
+     * <pre>
+     *熊猫TV
+     * </pre>
+     */
+    panda(5, 5),
+    /**
+     * <code>zhanqi = 6;</code>
+     *
+     * <pre>
+     *战旗
+     * </pre>
+     */
+    zhanqi(6, 6),
+    /**
+     * <code>quanmin = 7;</code>
+     *
+     * <pre>
+     *全民TV
+     * </pre>
+     */
+    quanmin(7, 7),
+    /**
+     * <code>weibo = 8;</code>
+     *
+     * <pre>
+     *新浪微博
+     * </pre>
+     */
+    weibo(8, 8),
+    /**
+     * <code>qzone = 9;</code>
+     *
+     * <pre>
+     *QQ空间
+     * </pre>
+     */
+    qzone(9, 9),
+    UNRECOGNIZED(-1, -1),
+    ;
+
+    /**
+     * <code>taobao = 0;</code>
+     *
+     * <pre>
+     *淘宝网
+     * </pre>
+     */
+    public static final int taobao_VALUE = 0;
+    /**
+     * <code>jd = 1;</code>
+     *
+     * <pre>
+     *京东
+     * </pre>
+     */
+    public static final int jd_VALUE = 1;
+    /**
+     * <code>yy = 2;</code>
+     *
+     * <pre>
+     *YY
+     * </pre>
+     */
+    public static final int yy_VALUE = 2;
+    /**
+     * <code>huya = 3;</code>
+     *
+     * <pre>
+     *虎牙
+     * </pre>
+     */
+    public static final int huya_VALUE = 3;
+    /**
+     * <code>douyu = 4;</code>
+     *
+     * <pre>
+     *斗鱼
+     * </pre>
+     */
+    public static final int douyu_VALUE = 4;
+    /**
+     * <code>panda = 5;</code>
+     *
+     * <pre>
+     *熊猫TV
+     * </pre>
+     */
+    public static final int panda_VALUE = 5;
+    /**
+     * <code>zhanqi = 6;</code>
+     *
+     * <pre>
+     *战旗
+     * </pre>
+     */
+    public static final int zhanqi_VALUE = 6;
+    /**
+     * <code>quanmin = 7;</code>
+     *
+     * <pre>
+     *全民TV
+     * </pre>
+     */
+    public static final int quanmin_VALUE = 7;
+    /**
+     * <code>weibo = 8;</code>
+     *
+     * <pre>
+     *新浪微博
+     * </pre>
+     */
+    public static final int weibo_VALUE = 8;
+    /**
+     * <code>qzone = 9;</code>
+     *
+     * <pre>
+     *QQ空间
+     * </pre>
+     */
+    public static final int qzone_VALUE = 9;
+
+
+    public final int getNumber() {
+      if (index == -1) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    public static ELinkType valueOf(int value) {
+      switch (value) {
+        case 0: return taobao;
+        case 1: return jd;
+        case 2: return yy;
+        case 3: return huya;
+        case 4: return douyu;
+        case 5: return panda;
+        case 6: return zhanqi;
+        case 7: return quanmin;
+        case 8: return weibo;
+        case 9: return qzone;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ELinkType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<ELinkType>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ELinkType>() {
+            public ELinkType findValueByNumber(int number) {
+              return ELinkType.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.AccountProtos.getDescriptor().getEnumTypes().get(2);
+    }
+
+    private static final ELinkType[] VALUES = values();
+
+    public static ELinkType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private ELinkType(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:common.ELinkType)
+  }
+
   public interface PUserListOrBuilder extends
       // @@protoc_insertion_point(interface_extends:common.PUserList)
       com.google.protobuf.MessageOrBuilder {
@@ -1453,6 +1701,1340 @@ public final class AccountProtos {
 
   }
 
+  public interface PLiveInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:common.PLiveInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string website = 1;</code>
+     *
+     * <pre>
+     * 网站
+     * </pre>
+     */
+    java.lang.String getWebsite();
+    /**
+     * <code>optional string website = 1;</code>
+     *
+     * <pre>
+     * 网站
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getWebsiteBytes();
+
+    /**
+     * <code>optional string url = 2;</code>
+     *
+     * <pre>
+     * 直播网址
+     * </pre>
+     */
+    java.lang.String getUrl();
+    /**
+     * <code>optional string url = 2;</code>
+     *
+     * <pre>
+     * 直播网址
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUrlBytes();
+  }
+  /**
+   * Protobuf type {@code common.PLiveInfo}
+   */
+  public  static final class PLiveInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:common.PLiveInfo)
+      PLiveInfoOrBuilder {
+    // Use PLiveInfo.newBuilder() to construct.
+    private PLiveInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PLiveInfo() {
+      website_ = "";
+      url_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PLiveInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              website_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              url_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLiveInfo_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLiveInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.AccountProtos.PLiveInfo.class, com.blemobi.sep.probuf.AccountProtos.PLiveInfo.Builder.class);
+    }
+
+    public static final int WEBSITE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object website_;
+    /**
+     * <code>optional string website = 1;</code>
+     *
+     * <pre>
+     * 网站
+     * </pre>
+     */
+    public java.lang.String getWebsite() {
+      java.lang.Object ref = website_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          website_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string website = 1;</code>
+     *
+     * <pre>
+     * 网站
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getWebsiteBytes() {
+      java.lang.Object ref = website_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        website_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int URL_FIELD_NUMBER = 2;
+    private volatile java.lang.Object url_;
+    /**
+     * <code>optional string url = 2;</code>
+     *
+     * <pre>
+     * 直播网址
+     * </pre>
+     */
+    public java.lang.String getUrl() {
+      java.lang.Object ref = url_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          url_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string url = 2;</code>
+     *
+     * <pre>
+     * 直播网址
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUrlBytes() {
+      java.lang.Object ref = url_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        url_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getWebsiteBytes().isEmpty()) {
+        output.writeBytes(1, getWebsiteBytes());
+      }
+      if (!getUrlBytes().isEmpty()) {
+        output.writeBytes(2, getUrlBytes());
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getWebsiteBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getWebsiteBytes());
+      }
+      if (!getUrlBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getUrlBytes());
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.AccountProtos.PLiveInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code common.PLiveInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:common.PLiveInfo)
+        com.blemobi.sep.probuf.AccountProtos.PLiveInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLiveInfo_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLiveInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.AccountProtos.PLiveInfo.class, com.blemobi.sep.probuf.AccountProtos.PLiveInfo.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.AccountProtos.PLiveInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        website_ = "";
+
+        url_ = "";
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLiveInfo_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PLiveInfo getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.AccountProtos.PLiveInfo.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PLiveInfo build() {
+        com.blemobi.sep.probuf.AccountProtos.PLiveInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PLiveInfo buildPartial() {
+        com.blemobi.sep.probuf.AccountProtos.PLiveInfo result = new com.blemobi.sep.probuf.AccountProtos.PLiveInfo(this);
+        result.website_ = website_;
+        result.url_ = url_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.AccountProtos.PLiveInfo) {
+          return mergeFrom((com.blemobi.sep.probuf.AccountProtos.PLiveInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.AccountProtos.PLiveInfo other) {
+        if (other == com.blemobi.sep.probuf.AccountProtos.PLiveInfo.getDefaultInstance()) return this;
+        if (!other.getWebsite().isEmpty()) {
+          website_ = other.website_;
+          onChanged();
+        }
+        if (!other.getUrl().isEmpty()) {
+          url_ = other.url_;
+          onChanged();
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.AccountProtos.PLiveInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.AccountProtos.PLiveInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object website_ = "";
+      /**
+       * <code>optional string website = 1;</code>
+       *
+       * <pre>
+       * 网站
+       * </pre>
+       */
+      public java.lang.String getWebsite() {
+        java.lang.Object ref = website_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            website_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string website = 1;</code>
+       *
+       * <pre>
+       * 网站
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getWebsiteBytes() {
+        java.lang.Object ref = website_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          website_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string website = 1;</code>
+       *
+       * <pre>
+       * 网站
+       * </pre>
+       */
+      public Builder setWebsite(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        website_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string website = 1;</code>
+       *
+       * <pre>
+       * 网站
+       * </pre>
+       */
+      public Builder clearWebsite() {
+        
+        website_ = getDefaultInstance().getWebsite();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string website = 1;</code>
+       *
+       * <pre>
+       * 网站
+       * </pre>
+       */
+      public Builder setWebsiteBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        website_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object url_ = "";
+      /**
+       * <code>optional string url = 2;</code>
+       *
+       * <pre>
+       * 直播网址
+       * </pre>
+       */
+      public java.lang.String getUrl() {
+        java.lang.Object ref = url_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            url_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string url = 2;</code>
+       *
+       * <pre>
+       * 直播网址
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUrlBytes() {
+        java.lang.Object ref = url_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          url_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string url = 2;</code>
+       *
+       * <pre>
+       * 直播网址
+       * </pre>
+       */
+      public Builder setUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        url_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string url = 2;</code>
+       *
+       * <pre>
+       * 直播网址
+       * </pre>
+       */
+      public Builder clearUrl() {
+        
+        url_ = getDefaultInstance().getUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string url = 2;</code>
+       *
+       * <pre>
+       * 直播网址
+       * </pre>
+       */
+      public Builder setUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        url_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:common.PLiveInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:common.PLiveInfo)
+    private static final com.blemobi.sep.probuf.AccountProtos.PLiveInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.AccountProtos.PLiveInfo();
+    }
+
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PLiveInfo> PARSER =
+        new com.google.protobuf.AbstractParser<PLiveInfo>() {
+      public PLiveInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PLiveInfo(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PLiveInfo> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.AccountProtos.PLiveInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PLiveInfoListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:common.PLiveInfoList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .common.PLiveInfo list = 1;</code>
+     */
+    java.util.List<com.blemobi.sep.probuf.AccountProtos.PLiveInfo> 
+        getListList();
+    /**
+     * <code>repeated .common.PLiveInfo list = 1;</code>
+     */
+    com.blemobi.sep.probuf.AccountProtos.PLiveInfo getList(int index);
+    /**
+     * <code>repeated .common.PLiveInfo list = 1;</code>
+     */
+    int getListCount();
+    /**
+     * <code>repeated .common.PLiveInfo list = 1;</code>
+     */
+    java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PLiveInfoOrBuilder> 
+        getListOrBuilderList();
+    /**
+     * <code>repeated .common.PLiveInfo list = 1;</code>
+     */
+    com.blemobi.sep.probuf.AccountProtos.PLiveInfoOrBuilder getListOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code common.PLiveInfoList}
+   */
+  public  static final class PLiveInfoList extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:common.PLiveInfoList)
+      PLiveInfoListOrBuilder {
+    // Use PLiveInfoList.newBuilder() to construct.
+    private PLiveInfoList(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PLiveInfoList() {
+      list_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PLiveInfoList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                list_ = new java.util.ArrayList<com.blemobi.sep.probuf.AccountProtos.PLiveInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              list_.add(input.readMessage(com.blemobi.sep.probuf.AccountProtos.PLiveInfo.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          list_ = java.util.Collections.unmodifiableList(list_);
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLiveInfoList_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLiveInfoList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.AccountProtos.PLiveInfoList.class, com.blemobi.sep.probuf.AccountProtos.PLiveInfoList.Builder.class);
+    }
+
+    public static final int LIST_FIELD_NUMBER = 1;
+    private java.util.List<com.blemobi.sep.probuf.AccountProtos.PLiveInfo> list_;
+    /**
+     * <code>repeated .common.PLiveInfo list = 1;</code>
+     */
+    public java.util.List<com.blemobi.sep.probuf.AccountProtos.PLiveInfo> getListList() {
+      return list_;
+    }
+    /**
+     * <code>repeated .common.PLiveInfo list = 1;</code>
+     */
+    public java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PLiveInfoOrBuilder> 
+        getListOrBuilderList() {
+      return list_;
+    }
+    /**
+     * <code>repeated .common.PLiveInfo list = 1;</code>
+     */
+    public int getListCount() {
+      return list_.size();
+    }
+    /**
+     * <code>repeated .common.PLiveInfo list = 1;</code>
+     */
+    public com.blemobi.sep.probuf.AccountProtos.PLiveInfo getList(int index) {
+      return list_.get(index);
+    }
+    /**
+     * <code>repeated .common.PLiveInfo list = 1;</code>
+     */
+    public com.blemobi.sep.probuf.AccountProtos.PLiveInfoOrBuilder getListOrBuilder(
+        int index) {
+      return list_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < list_.size(); i++) {
+        output.writeMessage(1, list_.get(i));
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < list_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, list_.get(i));
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveInfoList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveInfoList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveInfoList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveInfoList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveInfoList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveInfoList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveInfoList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveInfoList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveInfoList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveInfoList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.AccountProtos.PLiveInfoList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code common.PLiveInfoList}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:common.PLiveInfoList)
+        com.blemobi.sep.probuf.AccountProtos.PLiveInfoListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLiveInfoList_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLiveInfoList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.AccountProtos.PLiveInfoList.class, com.blemobi.sep.probuf.AccountProtos.PLiveInfoList.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.AccountProtos.PLiveInfoList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getListFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (listBuilder_ == null) {
+          list_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          listBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLiveInfoList_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PLiveInfoList getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.AccountProtos.PLiveInfoList.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PLiveInfoList build() {
+        com.blemobi.sep.probuf.AccountProtos.PLiveInfoList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PLiveInfoList buildPartial() {
+        com.blemobi.sep.probuf.AccountProtos.PLiveInfoList result = new com.blemobi.sep.probuf.AccountProtos.PLiveInfoList(this);
+        int from_bitField0_ = bitField0_;
+        if (listBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            list_ = java.util.Collections.unmodifiableList(list_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.list_ = list_;
+        } else {
+          result.list_ = listBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.AccountProtos.PLiveInfoList) {
+          return mergeFrom((com.blemobi.sep.probuf.AccountProtos.PLiveInfoList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.AccountProtos.PLiveInfoList other) {
+        if (other == com.blemobi.sep.probuf.AccountProtos.PLiveInfoList.getDefaultInstance()) return this;
+        if (listBuilder_ == null) {
+          if (!other.list_.isEmpty()) {
+            if (list_.isEmpty()) {
+              list_ = other.list_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureListIsMutable();
+              list_.addAll(other.list_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.list_.isEmpty()) {
+            if (listBuilder_.isEmpty()) {
+              listBuilder_.dispose();
+              listBuilder_ = null;
+              list_ = other.list_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              listBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getListFieldBuilder() : null;
+            } else {
+              listBuilder_.addAllMessages(other.list_);
+            }
+          }
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.AccountProtos.PLiveInfoList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.AccountProtos.PLiveInfoList) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.blemobi.sep.probuf.AccountProtos.PLiveInfo> list_ =
+        java.util.Collections.emptyList();
+      private void ensureListIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          list_ = new java.util.ArrayList<com.blemobi.sep.probuf.AccountProtos.PLiveInfo>(list_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.AccountProtos.PLiveInfo, com.blemobi.sep.probuf.AccountProtos.PLiveInfo.Builder, com.blemobi.sep.probuf.AccountProtos.PLiveInfoOrBuilder> listBuilder_;
+
+      /**
+       * <code>repeated .common.PLiveInfo list = 1;</code>
+       */
+      public java.util.List<com.blemobi.sep.probuf.AccountProtos.PLiveInfo> getListList() {
+        if (listBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(list_);
+        } else {
+          return listBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .common.PLiveInfo list = 1;</code>
+       */
+      public int getListCount() {
+        if (listBuilder_ == null) {
+          return list_.size();
+        } else {
+          return listBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .common.PLiveInfo list = 1;</code>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PLiveInfo getList(int index) {
+        if (listBuilder_ == null) {
+          return list_.get(index);
+        } else {
+          return listBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .common.PLiveInfo list = 1;</code>
+       */
+      public Builder setList(
+          int index, com.blemobi.sep.probuf.AccountProtos.PLiveInfo value) {
+        if (listBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureListIsMutable();
+          list_.set(index, value);
+          onChanged();
+        } else {
+          listBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PLiveInfo list = 1;</code>
+       */
+      public Builder setList(
+          int index, com.blemobi.sep.probuf.AccountProtos.PLiveInfo.Builder builderForValue) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          list_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          listBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PLiveInfo list = 1;</code>
+       */
+      public Builder addList(com.blemobi.sep.probuf.AccountProtos.PLiveInfo value) {
+        if (listBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureListIsMutable();
+          list_.add(value);
+          onChanged();
+        } else {
+          listBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PLiveInfo list = 1;</code>
+       */
+      public Builder addList(
+          int index, com.blemobi.sep.probuf.AccountProtos.PLiveInfo value) {
+        if (listBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureListIsMutable();
+          list_.add(index, value);
+          onChanged();
+        } else {
+          listBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PLiveInfo list = 1;</code>
+       */
+      public Builder addList(
+          com.blemobi.sep.probuf.AccountProtos.PLiveInfo.Builder builderForValue) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          list_.add(builderForValue.build());
+          onChanged();
+        } else {
+          listBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PLiveInfo list = 1;</code>
+       */
+      public Builder addList(
+          int index, com.blemobi.sep.probuf.AccountProtos.PLiveInfo.Builder builderForValue) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          list_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          listBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PLiveInfo list = 1;</code>
+       */
+      public Builder addAllList(
+          java.lang.Iterable<? extends com.blemobi.sep.probuf.AccountProtos.PLiveInfo> values) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, list_);
+          onChanged();
+        } else {
+          listBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PLiveInfo list = 1;</code>
+       */
+      public Builder clearList() {
+        if (listBuilder_ == null) {
+          list_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          listBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PLiveInfo list = 1;</code>
+       */
+      public Builder removeList(int index) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          list_.remove(index);
+          onChanged();
+        } else {
+          listBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PLiveInfo list = 1;</code>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PLiveInfo.Builder getListBuilder(
+          int index) {
+        return getListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .common.PLiveInfo list = 1;</code>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PLiveInfoOrBuilder getListOrBuilder(
+          int index) {
+        if (listBuilder_ == null) {
+          return list_.get(index);  } else {
+          return listBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .common.PLiveInfo list = 1;</code>
+       */
+      public java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PLiveInfoOrBuilder> 
+           getListOrBuilderList() {
+        if (listBuilder_ != null) {
+          return listBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(list_);
+        }
+      }
+      /**
+       * <code>repeated .common.PLiveInfo list = 1;</code>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PLiveInfo.Builder addListBuilder() {
+        return getListFieldBuilder().addBuilder(
+            com.blemobi.sep.probuf.AccountProtos.PLiveInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .common.PLiveInfo list = 1;</code>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PLiveInfo.Builder addListBuilder(
+          int index) {
+        return getListFieldBuilder().addBuilder(
+            index, com.blemobi.sep.probuf.AccountProtos.PLiveInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .common.PLiveInfo list = 1;</code>
+       */
+      public java.util.List<com.blemobi.sep.probuf.AccountProtos.PLiveInfo.Builder> 
+           getListBuilderList() {
+        return getListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.AccountProtos.PLiveInfo, com.blemobi.sep.probuf.AccountProtos.PLiveInfo.Builder, com.blemobi.sep.probuf.AccountProtos.PLiveInfoOrBuilder> 
+          getListFieldBuilder() {
+        if (listBuilder_ == null) {
+          listBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.blemobi.sep.probuf.AccountProtos.PLiveInfo, com.blemobi.sep.probuf.AccountProtos.PLiveInfo.Builder, com.blemobi.sep.probuf.AccountProtos.PLiveInfoOrBuilder>(
+                  list_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          list_ = null;
+        }
+        return listBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:common.PLiveInfoList)
+    }
+
+    // @@protoc_insertion_point(class_scope:common.PLiveInfoList)
+    private static final com.blemobi.sep.probuf.AccountProtos.PLiveInfoList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.AccountProtos.PLiveInfoList();
+    }
+
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveInfoList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PLiveInfoList> PARSER =
+        new com.google.protobuf.AbstractParser<PLiveInfoList>() {
+      public PLiveInfoList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PLiveInfoList(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PLiveInfoList> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.AccountProtos.PLiveInfoList getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface PUserOrBuilder extends
       // @@protoc_insertion_point(interface_extends:common.PUser)
       com.google.protobuf.MessageOrBuilder {
@@ -1479,7 +3061,7 @@ public final class AccountProtos {
      * <code>optional string password = 7;</code>
      *
      * <pre>
-     * 自有手机号码注册时输入的密码
+     * 自有手机号码注册时输入的密码      //这个可以移除，转移到Login
      * </pre>
      */
     java.lang.String getPassword();
@@ -1487,7 +3069,7 @@ public final class AccountProtos {
      * <code>optional string password = 7;</code>
      *
      * <pre>
-     * 自有手机号码注册时输入的密码
+     * 自有手机号码注册时输入的密码      //这个可以移除，转移到Login
      * </pre>
      */
     com.google.protobuf.ByteString
@@ -1704,7 +3286,7 @@ public final class AccountProtos {
      * <code>optional string link1 = 22;</code>
      *
      * <pre>
-     * 链接1  
+     * 链接1      //这个可以移除
      * </pre>
      */
     java.lang.String getLink1();
@@ -1712,7 +3294,7 @@ public final class AccountProtos {
      * <code>optional string link1 = 22;</code>
      *
      * <pre>
-     * 链接1  
+     * 链接1      //这个可以移除
      * </pre>
      */
     com.google.protobuf.ByteString
@@ -1722,7 +3304,7 @@ public final class AccountProtos {
      * <code>optional string link2 = 23;</code>
      *
      * <pre>
-     * 链接2  
+     * 链接2      //这个可以移除
      * </pre>
      */
     java.lang.String getLink2();
@@ -1730,7 +3312,7 @@ public final class AccountProtos {
      * <code>optional string link2 = 23;</code>
      *
      * <pre>
-     * 链接2  
+     * 链接2      //这个可以移除
      * </pre>
      */
     com.google.protobuf.ByteString
@@ -1740,7 +3322,7 @@ public final class AccountProtos {
      * <code>optional string link3 = 24;</code>
      *
      * <pre>
-     * 链接3
+     * 链接3      //这个可以移除
      * </pre>
      */
     java.lang.String getLink3();
@@ -1748,7 +3330,7 @@ public final class AccountProtos {
      * <code>optional string link3 = 24;</code>
      *
      * <pre>
-     * 链接3
+     * 链接3      //这个可以移除
      * </pre>
      */
     com.google.protobuf.ByteString
@@ -1850,6 +3432,85 @@ public final class AccountProtos {
      */
     com.google.protobuf.ByteString
         getAreaNameBytes();
+
+    /**
+     * <code>optional bool liveRemind = 32;</code>
+     *
+     * <pre>
+     * 直播提醒开关
+     * </pre>
+     */
+    boolean getLiveRemind();
+
+    /**
+     * <code>optional .common.PLiveInfoList liveInfo = 33;</code>
+     *
+     * <pre>
+     * 直播提醒信息
+     * </pre>
+     */
+    boolean hasLiveInfo();
+    /**
+     * <code>optional .common.PLiveInfoList liveInfo = 33;</code>
+     *
+     * <pre>
+     * 直播提醒信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.AccountProtos.PLiveInfoList getLiveInfo();
+    /**
+     * <code>optional .common.PLiveInfoList liveInfo = 33;</code>
+     *
+     * <pre>
+     * 直播提醒信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.AccountProtos.PLiveInfoListOrBuilder getLiveInfoOrBuilder();
+
+    /**
+     * <code>optional string thumbBackImage = 34;</code>
+     *
+     * <pre>
+     * 背景缩略图
+     * </pre>
+     */
+    java.lang.String getThumbBackImage();
+    /**
+     * <code>optional string thumbBackImage = 34;</code>
+     *
+     * <pre>
+     * 背景缩略图
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getThumbBackImageBytes();
+
+    /**
+     * <code>optional string bigBackImage = 35;</code>
+     *
+     * <pre>
+     * 背景大图
+     * </pre>
+     */
+    java.lang.String getBigBackImage();
+    /**
+     * <code>optional string bigBackImage = 35;</code>
+     *
+     * <pre>
+     * 背景大图
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getBigBackImageBytes();
+
+    /**
+     * <code>optional bool isFollowing = 36;</code>
+     *
+     * <pre>
+     * 是否关注
+     * </pre>
+     */
+    boolean getIsFollowing();
   }
   /**
    * Protobuf type {@code common.PUser}
@@ -1892,6 +3553,10 @@ public final class AccountProtos {
       forceChangePwd_ = false;
       areaCode_ = "";
       areaName_ = "";
+      liveRemind_ = false;
+      thumbBackImage_ = "";
+      bigBackImage_ = "";
+      isFollowing_ = false;
     }
 
     @java.lang.Override
@@ -2072,6 +3737,41 @@ public final class AccountProtos {
               areaName_ = bs;
               break;
             }
+            case 256: {
+
+              liveRemind_ = input.readBool();
+              break;
+            }
+            case 266: {
+              com.blemobi.sep.probuf.AccountProtos.PLiveInfoList.Builder subBuilder = null;
+              if (liveInfo_ != null) {
+                subBuilder = liveInfo_.toBuilder();
+              }
+              liveInfo_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PLiveInfoList.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(liveInfo_);
+                liveInfo_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 274: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              thumbBackImage_ = bs;
+              break;
+            }
+            case 282: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              bigBackImage_ = bs;
+              break;
+            }
+            case 288: {
+
+              isFollowing_ = input.readBool();
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2146,7 +3846,7 @@ public final class AccountProtos {
      * <code>optional string password = 7;</code>
      *
      * <pre>
-     * 自有手机号码注册时输入的密码
+     * 自有手机号码注册时输入的密码      //这个可以移除，转移到Login
      * </pre>
      */
     public java.lang.String getPassword() {
@@ -2167,7 +3867,7 @@ public final class AccountProtos {
      * <code>optional string password = 7;</code>
      *
      * <pre>
-     * 自有手机号码注册时输入的密码
+     * 自有手机号码注册时输入的密码      //这个可以移除，转移到Login
      * </pre>
      */
     public com.google.protobuf.ByteString
@@ -2651,7 +4351,7 @@ public final class AccountProtos {
      * <code>optional string link1 = 22;</code>
      *
      * <pre>
-     * 链接1  
+     * 链接1      //这个可以移除
      * </pre>
      */
     public java.lang.String getLink1() {
@@ -2672,7 +4372,7 @@ public final class AccountProtos {
      * <code>optional string link1 = 22;</code>
      *
      * <pre>
-     * 链接1  
+     * 链接1      //这个可以移除
      * </pre>
      */
     public com.google.protobuf.ByteString
@@ -2695,7 +4395,7 @@ public final class AccountProtos {
      * <code>optional string link2 = 23;</code>
      *
      * <pre>
-     * 链接2  
+     * 链接2      //这个可以移除
      * </pre>
      */
     public java.lang.String getLink2() {
@@ -2716,7 +4416,7 @@ public final class AccountProtos {
      * <code>optional string link2 = 23;</code>
      *
      * <pre>
-     * 链接2  
+     * 链接2      //这个可以移除
      * </pre>
      */
     public com.google.protobuf.ByteString
@@ -2739,7 +4439,7 @@ public final class AccountProtos {
      * <code>optional string link3 = 24;</code>
      *
      * <pre>
-     * 链接3
+     * 链接3      //这个可以移除
      * </pre>
      */
     public java.lang.String getLink3() {
@@ -2760,7 +4460,7 @@ public final class AccountProtos {
      * <code>optional string link3 = 24;</code>
      *
      * <pre>
-     * 链接3
+     * 链接3      //这个可以移除
      * </pre>
      */
     public com.google.protobuf.ByteString
@@ -2950,6 +4650,153 @@ public final class AccountProtos {
       }
     }
 
+    public static final int LIVEREMIND_FIELD_NUMBER = 32;
+    private boolean liveRemind_;
+    /**
+     * <code>optional bool liveRemind = 32;</code>
+     *
+     * <pre>
+     * 直播提醒开关
+     * </pre>
+     */
+    public boolean getLiveRemind() {
+      return liveRemind_;
+    }
+
+    public static final int LIVEINFO_FIELD_NUMBER = 33;
+    private com.blemobi.sep.probuf.AccountProtos.PLiveInfoList liveInfo_;
+    /**
+     * <code>optional .common.PLiveInfoList liveInfo = 33;</code>
+     *
+     * <pre>
+     * 直播提醒信息
+     * </pre>
+     */
+    public boolean hasLiveInfo() {
+      return liveInfo_ != null;
+    }
+    /**
+     * <code>optional .common.PLiveInfoList liveInfo = 33;</code>
+     *
+     * <pre>
+     * 直播提醒信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.AccountProtos.PLiveInfoList getLiveInfo() {
+      return liveInfo_ == null ? com.blemobi.sep.probuf.AccountProtos.PLiveInfoList.getDefaultInstance() : liveInfo_;
+    }
+    /**
+     * <code>optional .common.PLiveInfoList liveInfo = 33;</code>
+     *
+     * <pre>
+     * 直播提醒信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.AccountProtos.PLiveInfoListOrBuilder getLiveInfoOrBuilder() {
+      return getLiveInfo();
+    }
+
+    public static final int THUMBBACKIMAGE_FIELD_NUMBER = 34;
+    private volatile java.lang.Object thumbBackImage_;
+    /**
+     * <code>optional string thumbBackImage = 34;</code>
+     *
+     * <pre>
+     * 背景缩略图
+     * </pre>
+     */
+    public java.lang.String getThumbBackImage() {
+      java.lang.Object ref = thumbBackImage_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          thumbBackImage_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string thumbBackImage = 34;</code>
+     *
+     * <pre>
+     * 背景缩略图
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getThumbBackImageBytes() {
+      java.lang.Object ref = thumbBackImage_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        thumbBackImage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BIGBACKIMAGE_FIELD_NUMBER = 35;
+    private volatile java.lang.Object bigBackImage_;
+    /**
+     * <code>optional string bigBackImage = 35;</code>
+     *
+     * <pre>
+     * 背景大图
+     * </pre>
+     */
+    public java.lang.String getBigBackImage() {
+      java.lang.Object ref = bigBackImage_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          bigBackImage_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string bigBackImage = 35;</code>
+     *
+     * <pre>
+     * 背景大图
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getBigBackImageBytes() {
+      java.lang.Object ref = bigBackImage_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bigBackImage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ISFOLLOWING_FIELD_NUMBER = 36;
+    private boolean isFollowing_;
+    /**
+     * <code>optional bool isFollowing = 36;</code>
+     *
+     * <pre>
+     * 是否关注
+     * </pre>
+     */
+    public boolean getIsFollowing() {
+      return isFollowing_;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -3039,6 +4886,21 @@ public final class AccountProtos {
       }
       if (!getAreaNameBytes().isEmpty()) {
         output.writeBytes(31, getAreaNameBytes());
+      }
+      if (liveRemind_ != false) {
+        output.writeBool(32, liveRemind_);
+      }
+      if (liveInfo_ != null) {
+        output.writeMessage(33, getLiveInfo());
+      }
+      if (!getThumbBackImageBytes().isEmpty()) {
+        output.writeBytes(34, getThumbBackImageBytes());
+      }
+      if (!getBigBackImageBytes().isEmpty()) {
+        output.writeBytes(35, getBigBackImageBytes());
+      }
+      if (isFollowing_ != false) {
+        output.writeBool(36, isFollowing_);
       }
     }
 
@@ -3151,6 +5013,26 @@ public final class AccountProtos {
       if (!getAreaNameBytes().isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(31, getAreaNameBytes());
+      }
+      if (liveRemind_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(32, liveRemind_);
+      }
+      if (liveInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(33, getLiveInfo());
+      }
+      if (!getThumbBackImageBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(34, getThumbBackImageBytes());
+      }
+      if (!getBigBackImageBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(35, getBigBackImageBytes());
+      }
+      if (isFollowing_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(36, isFollowing_);
       }
       memoizedSerializedSize = size;
       return size;
@@ -3323,6 +5205,20 @@ public final class AccountProtos {
 
         areaName_ = "";
 
+        liveRemind_ = false;
+
+        if (liveInfoBuilder_ == null) {
+          liveInfo_ = null;
+        } else {
+          liveInfo_ = null;
+          liveInfoBuilder_ = null;
+        }
+        thumbBackImage_ = "";
+
+        bigBackImage_ = "";
+
+        isFollowing_ = false;
+
         return this;
       }
 
@@ -3375,6 +5271,15 @@ public final class AccountProtos {
         result.forceChangePwd_ = forceChangePwd_;
         result.areaCode_ = areaCode_;
         result.areaName_ = areaName_;
+        result.liveRemind_ = liveRemind_;
+        if (liveInfoBuilder_ == null) {
+          result.liveInfo_ = liveInfo_;
+        } else {
+          result.liveInfo_ = liveInfoBuilder_.build();
+        }
+        result.thumbBackImage_ = thumbBackImage_;
+        result.bigBackImage_ = bigBackImage_;
+        result.isFollowing_ = isFollowing_;
         onBuilt();
         return result;
       }
@@ -3483,6 +5388,23 @@ public final class AccountProtos {
         if (!other.getAreaName().isEmpty()) {
           areaName_ = other.areaName_;
           onChanged();
+        }
+        if (other.getLiveRemind() != false) {
+          setLiveRemind(other.getLiveRemind());
+        }
+        if (other.hasLiveInfo()) {
+          mergeLiveInfo(other.getLiveInfo());
+        }
+        if (!other.getThumbBackImage().isEmpty()) {
+          thumbBackImage_ = other.thumbBackImage_;
+          onChanged();
+        }
+        if (!other.getBigBackImage().isEmpty()) {
+          bigBackImage_ = other.bigBackImage_;
+          onChanged();
+        }
+        if (other.getIsFollowing() != false) {
+          setIsFollowing(other.getIsFollowing());
         }
         onChanged();
         return this;
@@ -3605,7 +5527,7 @@ public final class AccountProtos {
        * <code>optional string password = 7;</code>
        *
        * <pre>
-       * 自有手机号码注册时输入的密码
+       * 自有手机号码注册时输入的密码      //这个可以移除，转移到Login
        * </pre>
        */
       public java.lang.String getPassword() {
@@ -3626,7 +5548,7 @@ public final class AccountProtos {
        * <code>optional string password = 7;</code>
        *
        * <pre>
-       * 自有手机号码注册时输入的密码
+       * 自有手机号码注册时输入的密码      //这个可以移除，转移到Login
        * </pre>
        */
       public com.google.protobuf.ByteString
@@ -3646,7 +5568,7 @@ public final class AccountProtos {
        * <code>optional string password = 7;</code>
        *
        * <pre>
-       * 自有手机号码注册时输入的密码
+       * 自有手机号码注册时输入的密码      //这个可以移除，转移到Login
        * </pre>
        */
       public Builder setPassword(
@@ -3663,7 +5585,7 @@ public final class AccountProtos {
        * <code>optional string password = 7;</code>
        *
        * <pre>
-       * 自有手机号码注册时输入的密码
+       * 自有手机号码注册时输入的密码      //这个可以移除，转移到Login
        * </pre>
        */
       public Builder clearPassword() {
@@ -3676,7 +5598,7 @@ public final class AccountProtos {
        * <code>optional string password = 7;</code>
        *
        * <pre>
-       * 自有手机号码注册时输入的密码
+       * 自有手机号码注册时输入的密码      //这个可以移除，转移到Login
        * </pre>
        */
       public Builder setPasswordBytes(
@@ -4695,7 +6617,7 @@ public final class AccountProtos {
        * <code>optional string link1 = 22;</code>
        *
        * <pre>
-       * 链接1  
+       * 链接1      //这个可以移除
        * </pre>
        */
       public java.lang.String getLink1() {
@@ -4716,7 +6638,7 @@ public final class AccountProtos {
        * <code>optional string link1 = 22;</code>
        *
        * <pre>
-       * 链接1  
+       * 链接1      //这个可以移除
        * </pre>
        */
       public com.google.protobuf.ByteString
@@ -4736,7 +6658,7 @@ public final class AccountProtos {
        * <code>optional string link1 = 22;</code>
        *
        * <pre>
-       * 链接1  
+       * 链接1      //这个可以移除
        * </pre>
        */
       public Builder setLink1(
@@ -4753,7 +6675,7 @@ public final class AccountProtos {
        * <code>optional string link1 = 22;</code>
        *
        * <pre>
-       * 链接1  
+       * 链接1      //这个可以移除
        * </pre>
        */
       public Builder clearLink1() {
@@ -4766,7 +6688,7 @@ public final class AccountProtos {
        * <code>optional string link1 = 22;</code>
        *
        * <pre>
-       * 链接1  
+       * 链接1      //这个可以移除
        * </pre>
        */
       public Builder setLink1Bytes(
@@ -4785,7 +6707,7 @@ public final class AccountProtos {
        * <code>optional string link2 = 23;</code>
        *
        * <pre>
-       * 链接2  
+       * 链接2      //这个可以移除
        * </pre>
        */
       public java.lang.String getLink2() {
@@ -4806,7 +6728,7 @@ public final class AccountProtos {
        * <code>optional string link2 = 23;</code>
        *
        * <pre>
-       * 链接2  
+       * 链接2      //这个可以移除
        * </pre>
        */
       public com.google.protobuf.ByteString
@@ -4826,7 +6748,7 @@ public final class AccountProtos {
        * <code>optional string link2 = 23;</code>
        *
        * <pre>
-       * 链接2  
+       * 链接2      //这个可以移除
        * </pre>
        */
       public Builder setLink2(
@@ -4843,7 +6765,7 @@ public final class AccountProtos {
        * <code>optional string link2 = 23;</code>
        *
        * <pre>
-       * 链接2  
+       * 链接2      //这个可以移除
        * </pre>
        */
       public Builder clearLink2() {
@@ -4856,7 +6778,7 @@ public final class AccountProtos {
        * <code>optional string link2 = 23;</code>
        *
        * <pre>
-       * 链接2  
+       * 链接2      //这个可以移除
        * </pre>
        */
       public Builder setLink2Bytes(
@@ -4875,7 +6797,7 @@ public final class AccountProtos {
        * <code>optional string link3 = 24;</code>
        *
        * <pre>
-       * 链接3
+       * 链接3      //这个可以移除
        * </pre>
        */
       public java.lang.String getLink3() {
@@ -4896,7 +6818,7 @@ public final class AccountProtos {
        * <code>optional string link3 = 24;</code>
        *
        * <pre>
-       * 链接3
+       * 链接3      //这个可以移除
        * </pre>
        */
       public com.google.protobuf.ByteString
@@ -4916,7 +6838,7 @@ public final class AccountProtos {
        * <code>optional string link3 = 24;</code>
        *
        * <pre>
-       * 链接3
+       * 链接3      //这个可以移除
        * </pre>
        */
       public Builder setLink3(
@@ -4933,7 +6855,7 @@ public final class AccountProtos {
        * <code>optional string link3 = 24;</code>
        *
        * <pre>
-       * 链接3
+       * 链接3      //这个可以移除
        * </pre>
        */
       public Builder clearLink3() {
@@ -4946,7 +6868,7 @@ public final class AccountProtos {
        * <code>optional string link3 = 24;</code>
        *
        * <pre>
-       * 链接3
+       * 链接3      //这个可以移除
        * </pre>
        */
       public Builder setLink3Bytes(
@@ -5441,6 +7363,415 @@ public final class AccountProtos {
   }
   
         areaName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean liveRemind_ ;
+      /**
+       * <code>optional bool liveRemind = 32;</code>
+       *
+       * <pre>
+       * 直播提醒开关
+       * </pre>
+       */
+      public boolean getLiveRemind() {
+        return liveRemind_;
+      }
+      /**
+       * <code>optional bool liveRemind = 32;</code>
+       *
+       * <pre>
+       * 直播提醒开关
+       * </pre>
+       */
+      public Builder setLiveRemind(boolean value) {
+        
+        liveRemind_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool liveRemind = 32;</code>
+       *
+       * <pre>
+       * 直播提醒开关
+       * </pre>
+       */
+      public Builder clearLiveRemind() {
+        
+        liveRemind_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.blemobi.sep.probuf.AccountProtos.PLiveInfoList liveInfo_ = null;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.AccountProtos.PLiveInfoList, com.blemobi.sep.probuf.AccountProtos.PLiveInfoList.Builder, com.blemobi.sep.probuf.AccountProtos.PLiveInfoListOrBuilder> liveInfoBuilder_;
+      /**
+       * <code>optional .common.PLiveInfoList liveInfo = 33;</code>
+       *
+       * <pre>
+       * 直播提醒信息
+       * </pre>
+       */
+      public boolean hasLiveInfo() {
+        return liveInfoBuilder_ != null || liveInfo_ != null;
+      }
+      /**
+       * <code>optional .common.PLiveInfoList liveInfo = 33;</code>
+       *
+       * <pre>
+       * 直播提醒信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PLiveInfoList getLiveInfo() {
+        if (liveInfoBuilder_ == null) {
+          return liveInfo_ == null ? com.blemobi.sep.probuf.AccountProtos.PLiveInfoList.getDefaultInstance() : liveInfo_;
+        } else {
+          return liveInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .common.PLiveInfoList liveInfo = 33;</code>
+       *
+       * <pre>
+       * 直播提醒信息
+       * </pre>
+       */
+      public Builder setLiveInfo(com.blemobi.sep.probuf.AccountProtos.PLiveInfoList value) {
+        if (liveInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          liveInfo_ = value;
+          onChanged();
+        } else {
+          liveInfoBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .common.PLiveInfoList liveInfo = 33;</code>
+       *
+       * <pre>
+       * 直播提醒信息
+       * </pre>
+       */
+      public Builder setLiveInfo(
+          com.blemobi.sep.probuf.AccountProtos.PLiveInfoList.Builder builderForValue) {
+        if (liveInfoBuilder_ == null) {
+          liveInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          liveInfoBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .common.PLiveInfoList liveInfo = 33;</code>
+       *
+       * <pre>
+       * 直播提醒信息
+       * </pre>
+       */
+      public Builder mergeLiveInfo(com.blemobi.sep.probuf.AccountProtos.PLiveInfoList value) {
+        if (liveInfoBuilder_ == null) {
+          if (liveInfo_ != null) {
+            liveInfo_ =
+              com.blemobi.sep.probuf.AccountProtos.PLiveInfoList.newBuilder(liveInfo_).mergeFrom(value).buildPartial();
+          } else {
+            liveInfo_ = value;
+          }
+          onChanged();
+        } else {
+          liveInfoBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .common.PLiveInfoList liveInfo = 33;</code>
+       *
+       * <pre>
+       * 直播提醒信息
+       * </pre>
+       */
+      public Builder clearLiveInfo() {
+        if (liveInfoBuilder_ == null) {
+          liveInfo_ = null;
+          onChanged();
+        } else {
+          liveInfo_ = null;
+          liveInfoBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .common.PLiveInfoList liveInfo = 33;</code>
+       *
+       * <pre>
+       * 直播提醒信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PLiveInfoList.Builder getLiveInfoBuilder() {
+        
+        onChanged();
+        return getLiveInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .common.PLiveInfoList liveInfo = 33;</code>
+       *
+       * <pre>
+       * 直播提醒信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PLiveInfoListOrBuilder getLiveInfoOrBuilder() {
+        if (liveInfoBuilder_ != null) {
+          return liveInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return liveInfo_ == null ?
+              com.blemobi.sep.probuf.AccountProtos.PLiveInfoList.getDefaultInstance() : liveInfo_;
+        }
+      }
+      /**
+       * <code>optional .common.PLiveInfoList liveInfo = 33;</code>
+       *
+       * <pre>
+       * 直播提醒信息
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.AccountProtos.PLiveInfoList, com.blemobi.sep.probuf.AccountProtos.PLiveInfoList.Builder, com.blemobi.sep.probuf.AccountProtos.PLiveInfoListOrBuilder> 
+          getLiveInfoFieldBuilder() {
+        if (liveInfoBuilder_ == null) {
+          liveInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.blemobi.sep.probuf.AccountProtos.PLiveInfoList, com.blemobi.sep.probuf.AccountProtos.PLiveInfoList.Builder, com.blemobi.sep.probuf.AccountProtos.PLiveInfoListOrBuilder>(
+                  getLiveInfo(),
+                  getParentForChildren(),
+                  isClean());
+          liveInfo_ = null;
+        }
+        return liveInfoBuilder_;
+      }
+
+      private java.lang.Object thumbBackImage_ = "";
+      /**
+       * <code>optional string thumbBackImage = 34;</code>
+       *
+       * <pre>
+       * 背景缩略图
+       * </pre>
+       */
+      public java.lang.String getThumbBackImage() {
+        java.lang.Object ref = thumbBackImage_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            thumbBackImage_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string thumbBackImage = 34;</code>
+       *
+       * <pre>
+       * 背景缩略图
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getThumbBackImageBytes() {
+        java.lang.Object ref = thumbBackImage_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          thumbBackImage_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string thumbBackImage = 34;</code>
+       *
+       * <pre>
+       * 背景缩略图
+       * </pre>
+       */
+      public Builder setThumbBackImage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        thumbBackImage_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string thumbBackImage = 34;</code>
+       *
+       * <pre>
+       * 背景缩略图
+       * </pre>
+       */
+      public Builder clearThumbBackImage() {
+        
+        thumbBackImage_ = getDefaultInstance().getThumbBackImage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string thumbBackImage = 34;</code>
+       *
+       * <pre>
+       * 背景缩略图
+       * </pre>
+       */
+      public Builder setThumbBackImageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        thumbBackImage_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bigBackImage_ = "";
+      /**
+       * <code>optional string bigBackImage = 35;</code>
+       *
+       * <pre>
+       * 背景大图
+       * </pre>
+       */
+      public java.lang.String getBigBackImage() {
+        java.lang.Object ref = bigBackImage_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            bigBackImage_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string bigBackImage = 35;</code>
+       *
+       * <pre>
+       * 背景大图
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getBigBackImageBytes() {
+        java.lang.Object ref = bigBackImage_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bigBackImage_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string bigBackImage = 35;</code>
+       *
+       * <pre>
+       * 背景大图
+       * </pre>
+       */
+      public Builder setBigBackImage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        bigBackImage_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string bigBackImage = 35;</code>
+       *
+       * <pre>
+       * 背景大图
+       * </pre>
+       */
+      public Builder clearBigBackImage() {
+        
+        bigBackImage_ = getDefaultInstance().getBigBackImage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string bigBackImage = 35;</code>
+       *
+       * <pre>
+       * 背景大图
+       * </pre>
+       */
+      public Builder setBigBackImageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        bigBackImage_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean isFollowing_ ;
+      /**
+       * <code>optional bool isFollowing = 36;</code>
+       *
+       * <pre>
+       * 是否关注
+       * </pre>
+       */
+      public boolean getIsFollowing() {
+        return isFollowing_;
+      }
+      /**
+       * <code>optional bool isFollowing = 36;</code>
+       *
+       * <pre>
+       * 是否关注
+       * </pre>
+       */
+      public Builder setIsFollowing(boolean value) {
+        
+        isFollowing_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool isFollowing = 36;</code>
+       *
+       * <pre>
+       * 是否关注
+       * </pre>
+       */
+      public Builder clearIsFollowing() {
+        
+        isFollowing_ = false;
         onChanged();
         return this;
       }
@@ -6347,7 +8678,7 @@ public final class AccountProtos {
      * <code>optional string password = 9;</code>
      *
      * <pre>
-     * 自有手机号码注册时输入的密码
+     * 自有手机号码注册时输入的密码      //这个可以移除，转移到Login
      * </pre>
      */
     java.lang.String getPassword();
@@ -6355,7 +8686,7 @@ public final class AccountProtos {
      * <code>optional string password = 9;</code>
      *
      * <pre>
-     * 自有手机号码注册时输入的密码
+     * 自有手机号码注册时输入的密码      //这个可以移除，转移到Login
      * </pre>
      */
     com.google.protobuf.ByteString
@@ -6887,7 +9218,7 @@ public final class AccountProtos {
      * <code>optional string password = 9;</code>
      *
      * <pre>
-     * 自有手机号码注册时输入的密码
+     * 自有手机号码注册时输入的密码      //这个可以移除，转移到Login
      * </pre>
      */
     public java.lang.String getPassword() {
@@ -6908,7 +9239,7 @@ public final class AccountProtos {
      * <code>optional string password = 9;</code>
      *
      * <pre>
-     * 自有手机号码注册时输入的密码
+     * 自有手机号码注册时输入的密码      //这个可以移除，转移到Login
      * </pre>
      */
     public com.google.protobuf.ByteString
@@ -8106,7 +10437,7 @@ public final class AccountProtos {
        * <code>optional string password = 9;</code>
        *
        * <pre>
-       * 自有手机号码注册时输入的密码
+       * 自有手机号码注册时输入的密码      //这个可以移除，转移到Login
        * </pre>
        */
       public java.lang.String getPassword() {
@@ -8127,7 +10458,7 @@ public final class AccountProtos {
        * <code>optional string password = 9;</code>
        *
        * <pre>
-       * 自有手机号码注册时输入的密码
+       * 自有手机号码注册时输入的密码      //这个可以移除，转移到Login
        * </pre>
        */
       public com.google.protobuf.ByteString
@@ -8147,7 +10478,7 @@ public final class AccountProtos {
        * <code>optional string password = 9;</code>
        *
        * <pre>
-       * 自有手机号码注册时输入的密码
+       * 自有手机号码注册时输入的密码      //这个可以移除，转移到Login
        * </pre>
        */
       public Builder setPassword(
@@ -8164,7 +10495,7 @@ public final class AccountProtos {
        * <code>optional string password = 9;</code>
        *
        * <pre>
-       * 自有手机号码注册时输入的密码
+       * 自有手机号码注册时输入的密码      //这个可以移除，转移到Login
        * </pre>
        */
       public Builder clearPassword() {
@@ -8177,7 +10508,7 @@ public final class AccountProtos {
        * <code>optional string password = 9;</code>
        *
        * <pre>
-       * 自有手机号码注册时输入的密码
+       * 自有手机号码注册时输入的密码      //这个可以移除，转移到Login
        * </pre>
        */
       public Builder setPasswordBytes(
@@ -9228,7 +11559,25 @@ public final class AccountProtos {
         getNicknameBytes();
 
     /**
-     * <code>optional string HeadImgURL = 9;</code>
+     * <code>optional string RealName = 9;</code>
+     *
+     * <pre>
+     * 真实姓名
+     * </pre>
+     */
+    java.lang.String getRealName();
+    /**
+     * <code>optional string RealName = 9;</code>
+     *
+     * <pre>
+     * 真实姓名
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getRealNameBytes();
+
+    /**
+     * <code>optional string HeadImgURL = 10;</code>
      *
      * <pre>
      * 头像地址
@@ -9236,7 +11585,7 @@ public final class AccountProtos {
      */
     java.lang.String getHeadImgURL();
     /**
-     * <code>optional string HeadImgURL = 9;</code>
+     * <code>optional string HeadImgURL = 10;</code>
      *
      * <pre>
      * 头像地址
@@ -9244,6 +11593,24 @@ public final class AccountProtos {
      */
     com.google.protobuf.ByteString
         getHeadImgURLBytes();
+
+    /**
+     * <code>optional string UserResume = 11;</code>
+     *
+     * <pre>
+     * 简介
+     * </pre>
+     */
+    java.lang.String getUserResume();
+    /**
+     * <code>optional string UserResume = 11;</code>
+     *
+     * <pre>
+     * 简介
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUserResumeBytes();
   }
   /**
    * Protobuf type {@code common.PUserBase}
@@ -9265,7 +11632,9 @@ public final class AccountProtos {
       uUID_ = "";
       userName_ = "";
       nickname_ = "";
+      realName_ = "";
       headImgURL_ = "";
+      userResume_ = "";
     }
 
     @java.lang.Override
@@ -9318,7 +11687,19 @@ public final class AccountProtos {
             case 74: {
               com.google.protobuf.ByteString bs = input.readBytes();
 
+              realName_ = bs;
+              break;
+            }
+            case 82: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
               headImgURL_ = bs;
+              break;
+            }
+            case 90: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              userResume_ = bs;
               break;
             }
           }
@@ -9490,10 +11871,54 @@ public final class AccountProtos {
       }
     }
 
-    public static final int HEADIMGURL_FIELD_NUMBER = 9;
+    public static final int REALNAME_FIELD_NUMBER = 9;
+    private volatile java.lang.Object realName_;
+    /**
+     * <code>optional string RealName = 9;</code>
+     *
+     * <pre>
+     * 真实姓名
+     * </pre>
+     */
+    public java.lang.String getRealName() {
+      java.lang.Object ref = realName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          realName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string RealName = 9;</code>
+     *
+     * <pre>
+     * 真实姓名
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getRealNameBytes() {
+      java.lang.Object ref = realName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        realName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HEADIMGURL_FIELD_NUMBER = 10;
     private volatile java.lang.Object headImgURL_;
     /**
-     * <code>optional string HeadImgURL = 9;</code>
+     * <code>optional string HeadImgURL = 10;</code>
      *
      * <pre>
      * 头像地址
@@ -9514,7 +11939,7 @@ public final class AccountProtos {
       }
     }
     /**
-     * <code>optional string HeadImgURL = 9;</code>
+     * <code>optional string HeadImgURL = 10;</code>
      *
      * <pre>
      * 头像地址
@@ -9528,6 +11953,50 @@ public final class AccountProtos {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         headImgURL_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int USERRESUME_FIELD_NUMBER = 11;
+    private volatile java.lang.Object userResume_;
+    /**
+     * <code>optional string UserResume = 11;</code>
+     *
+     * <pre>
+     * 简介
+     * </pre>
+     */
+    public java.lang.String getUserResume() {
+      java.lang.Object ref = userResume_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          userResume_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string UserResume = 11;</code>
+     *
+     * <pre>
+     * 简介
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUserResumeBytes() {
+      java.lang.Object ref = userResume_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userResume_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -9558,8 +12027,14 @@ public final class AccountProtos {
       if (!getNicknameBytes().isEmpty()) {
         output.writeBytes(8, getNicknameBytes());
       }
+      if (!getRealNameBytes().isEmpty()) {
+        output.writeBytes(9, getRealNameBytes());
+      }
       if (!getHeadImgURLBytes().isEmpty()) {
-        output.writeBytes(9, getHeadImgURLBytes());
+        output.writeBytes(10, getHeadImgURLBytes());
+      }
+      if (!getUserResumeBytes().isEmpty()) {
+        output.writeBytes(11, getUserResumeBytes());
       }
     }
 
@@ -9585,9 +12060,17 @@ public final class AccountProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(8, getNicknameBytes());
       }
+      if (!getRealNameBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(9, getRealNameBytes());
+      }
       if (!getHeadImgURLBytes().isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(9, getHeadImgURLBytes());
+          .computeBytesSize(10, getHeadImgURLBytes());
+      }
+      if (!getUserResumeBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(11, getUserResumeBytes());
       }
       memoizedSerializedSize = size;
       return size;
@@ -9712,7 +12195,11 @@ public final class AccountProtos {
 
         nickname_ = "";
 
+        realName_ = "";
+
         headImgURL_ = "";
+
+        userResume_ = "";
 
         return this;
       }
@@ -9740,7 +12227,9 @@ public final class AccountProtos {
         result.uUID_ = uUID_;
         result.userName_ = userName_;
         result.nickname_ = nickname_;
+        result.realName_ = realName_;
         result.headImgURL_ = headImgURL_;
+        result.userResume_ = userResume_;
         onBuilt();
         return result;
       }
@@ -9771,8 +12260,16 @@ public final class AccountProtos {
           nickname_ = other.nickname_;
           onChanged();
         }
+        if (!other.getRealName().isEmpty()) {
+          realName_ = other.realName_;
+          onChanged();
+        }
         if (!other.getHeadImgURL().isEmpty()) {
           headImgURL_ = other.headImgURL_;
+          onChanged();
+        }
+        if (!other.getUserResume().isEmpty()) {
+          userResume_ = other.userResume_;
           onChanged();
         }
         onChanged();
@@ -10109,9 +12606,99 @@ public final class AccountProtos {
         return this;
       }
 
+      private java.lang.Object realName_ = "";
+      /**
+       * <code>optional string RealName = 9;</code>
+       *
+       * <pre>
+       * 真实姓名
+       * </pre>
+       */
+      public java.lang.String getRealName() {
+        java.lang.Object ref = realName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            realName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string RealName = 9;</code>
+       *
+       * <pre>
+       * 真实姓名
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getRealNameBytes() {
+        java.lang.Object ref = realName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          realName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string RealName = 9;</code>
+       *
+       * <pre>
+       * 真实姓名
+       * </pre>
+       */
+      public Builder setRealName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        realName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string RealName = 9;</code>
+       *
+       * <pre>
+       * 真实姓名
+       * </pre>
+       */
+      public Builder clearRealName() {
+        
+        realName_ = getDefaultInstance().getRealName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string RealName = 9;</code>
+       *
+       * <pre>
+       * 真实姓名
+       * </pre>
+       */
+      public Builder setRealNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        realName_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object headImgURL_ = "";
       /**
-       * <code>optional string HeadImgURL = 9;</code>
+       * <code>optional string HeadImgURL = 10;</code>
        *
        * <pre>
        * 头像地址
@@ -10132,7 +12719,7 @@ public final class AccountProtos {
         }
       }
       /**
-       * <code>optional string HeadImgURL = 9;</code>
+       * <code>optional string HeadImgURL = 10;</code>
        *
        * <pre>
        * 头像地址
@@ -10152,7 +12739,7 @@ public final class AccountProtos {
         }
       }
       /**
-       * <code>optional string HeadImgURL = 9;</code>
+       * <code>optional string HeadImgURL = 10;</code>
        *
        * <pre>
        * 头像地址
@@ -10169,7 +12756,7 @@ public final class AccountProtos {
         return this;
       }
       /**
-       * <code>optional string HeadImgURL = 9;</code>
+       * <code>optional string HeadImgURL = 10;</code>
        *
        * <pre>
        * 头像地址
@@ -10182,7 +12769,7 @@ public final class AccountProtos {
         return this;
       }
       /**
-       * <code>optional string HeadImgURL = 9;</code>
+       * <code>optional string HeadImgURL = 10;</code>
        *
        * <pre>
        * 头像地址
@@ -10195,6 +12782,96 @@ public final class AccountProtos {
   }
   
         headImgURL_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object userResume_ = "";
+      /**
+       * <code>optional string UserResume = 11;</code>
+       *
+       * <pre>
+       * 简介
+       * </pre>
+       */
+      public java.lang.String getUserResume() {
+        java.lang.Object ref = userResume_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            userResume_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string UserResume = 11;</code>
+       *
+       * <pre>
+       * 简介
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUserResumeBytes() {
+        java.lang.Object ref = userResume_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userResume_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string UserResume = 11;</code>
+       *
+       * <pre>
+       * 简介
+       * </pre>
+       */
+      public Builder setUserResume(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        userResume_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string UserResume = 11;</code>
+       *
+       * <pre>
+       * 简介
+       * </pre>
+       */
+      public Builder clearUserResume() {
+        
+        userResume_ = getDefaultInstance().getUserResume();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string UserResume = 11;</code>
+       *
+       * <pre>
+       * 简介
+       * </pre>
+       */
+      public Builder setUserResumeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        userResume_ = value;
         onChanged();
         return this;
       }
@@ -12233,6 +14910,10 @@ public final class AccountProtos {
 
     /**
      * <code>optional int32 levelType = 1;</code>
+     *
+     * <pre>
+     *会员等级类型
+     * </pre>
      */
     int getLevelType();
 
@@ -12346,6 +15027,10 @@ public final class AccountProtos {
     private int levelType_;
     /**
      * <code>optional int32 levelType = 1;</code>
+     *
+     * <pre>
+     *会员等级类型
+     * </pre>
      */
     public int getLevelType() {
       return levelType_;
@@ -12649,12 +15334,20 @@ public final class AccountProtos {
       private int levelType_ ;
       /**
        * <code>optional int32 levelType = 1;</code>
+       *
+       * <pre>
+       *会员等级类型
+       * </pre>
        */
       public int getLevelType() {
         return levelType_;
       }
       /**
        * <code>optional int32 levelType = 1;</code>
+       *
+       * <pre>
+       *会员等级类型
+       * </pre>
        */
       public Builder setLevelType(int value) {
         
@@ -12664,6 +15357,10 @@ public final class AccountProtos {
       }
       /**
        * <code>optional int32 levelType = 1;</code>
+       *
+       * <pre>
+       *会员等级类型
+       * </pre>
        */
       public Builder clearLevelType() {
         
@@ -12793,14 +15490,26 @@ public final class AccountProtos {
 
     /**
      * <code>optional .common.PLevelInfo levelInfo = 2;</code>
+     *
+     * <pre>
+     *会员等级信息
+     * </pre>
      */
     boolean hasLevelInfo();
     /**
      * <code>optional .common.PLevelInfo levelInfo = 2;</code>
+     *
+     * <pre>
+     *会员等级信息
+     * </pre>
      */
     com.blemobi.sep.probuf.AccountProtos.PLevelInfo getLevelInfo();
     /**
      * <code>optional .common.PLevelInfo levelInfo = 2;</code>
+     *
+     * <pre>
+     *会员等级信息
+     * </pre>
      */
     com.blemobi.sep.probuf.AccountProtos.PLevelInfoOrBuilder getLevelInfoOrBuilder();
   }
@@ -12938,18 +15647,30 @@ public final class AccountProtos {
     private com.blemobi.sep.probuf.AccountProtos.PLevelInfo levelInfo_;
     /**
      * <code>optional .common.PLevelInfo levelInfo = 2;</code>
+     *
+     * <pre>
+     *会员等级信息
+     * </pre>
      */
     public boolean hasLevelInfo() {
       return levelInfo_ != null;
     }
     /**
      * <code>optional .common.PLevelInfo levelInfo = 2;</code>
+     *
+     * <pre>
+     *会员等级信息
+     * </pre>
      */
     public com.blemobi.sep.probuf.AccountProtos.PLevelInfo getLevelInfo() {
       return levelInfo_ == null ? com.blemobi.sep.probuf.AccountProtos.PLevelInfo.getDefaultInstance() : levelInfo_;
     }
     /**
      * <code>optional .common.PLevelInfo levelInfo = 2;</code>
+     *
+     * <pre>
+     *会员等级信息
+     * </pre>
      */
     public com.blemobi.sep.probuf.AccountProtos.PLevelInfoOrBuilder getLevelInfoOrBuilder() {
       return getLevelInfo();
@@ -13283,12 +16004,20 @@ public final class AccountProtos {
           com.blemobi.sep.probuf.AccountProtos.PLevelInfo, com.blemobi.sep.probuf.AccountProtos.PLevelInfo.Builder, com.blemobi.sep.probuf.AccountProtos.PLevelInfoOrBuilder> levelInfoBuilder_;
       /**
        * <code>optional .common.PLevelInfo levelInfo = 2;</code>
+       *
+       * <pre>
+       *会员等级信息
+       * </pre>
        */
       public boolean hasLevelInfo() {
         return levelInfoBuilder_ != null || levelInfo_ != null;
       }
       /**
        * <code>optional .common.PLevelInfo levelInfo = 2;</code>
+       *
+       * <pre>
+       *会员等级信息
+       * </pre>
        */
       public com.blemobi.sep.probuf.AccountProtos.PLevelInfo getLevelInfo() {
         if (levelInfoBuilder_ == null) {
@@ -13299,6 +16028,10 @@ public final class AccountProtos {
       }
       /**
        * <code>optional .common.PLevelInfo levelInfo = 2;</code>
+       *
+       * <pre>
+       *会员等级信息
+       * </pre>
        */
       public Builder setLevelInfo(com.blemobi.sep.probuf.AccountProtos.PLevelInfo value) {
         if (levelInfoBuilder_ == null) {
@@ -13315,6 +16048,10 @@ public final class AccountProtos {
       }
       /**
        * <code>optional .common.PLevelInfo levelInfo = 2;</code>
+       *
+       * <pre>
+       *会员等级信息
+       * </pre>
        */
       public Builder setLevelInfo(
           com.blemobi.sep.probuf.AccountProtos.PLevelInfo.Builder builderForValue) {
@@ -13329,6 +16066,10 @@ public final class AccountProtos {
       }
       /**
        * <code>optional .common.PLevelInfo levelInfo = 2;</code>
+       *
+       * <pre>
+       *会员等级信息
+       * </pre>
        */
       public Builder mergeLevelInfo(com.blemobi.sep.probuf.AccountProtos.PLevelInfo value) {
         if (levelInfoBuilder_ == null) {
@@ -13347,6 +16088,10 @@ public final class AccountProtos {
       }
       /**
        * <code>optional .common.PLevelInfo levelInfo = 2;</code>
+       *
+       * <pre>
+       *会员等级信息
+       * </pre>
        */
       public Builder clearLevelInfo() {
         if (levelInfoBuilder_ == null) {
@@ -13361,6 +16106,10 @@ public final class AccountProtos {
       }
       /**
        * <code>optional .common.PLevelInfo levelInfo = 2;</code>
+       *
+       * <pre>
+       *会员等级信息
+       * </pre>
        */
       public com.blemobi.sep.probuf.AccountProtos.PLevelInfo.Builder getLevelInfoBuilder() {
         
@@ -13369,6 +16118,10 @@ public final class AccountProtos {
       }
       /**
        * <code>optional .common.PLevelInfo levelInfo = 2;</code>
+       *
+       * <pre>
+       *会员等级信息
+       * </pre>
        */
       public com.blemobi.sep.probuf.AccountProtos.PLevelInfoOrBuilder getLevelInfoOrBuilder() {
         if (levelInfoBuilder_ != null) {
@@ -13380,6 +16133,10 @@ public final class AccountProtos {
       }
       /**
        * <code>optional .common.PLevelInfo levelInfo = 2;</code>
+       *
+       * <pre>
+       *会员等级信息
+       * </pre>
        */
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.AccountProtos.PLevelInfo, com.blemobi.sep.probuf.AccountProtos.PLevelInfo.Builder, com.blemobi.sep.probuf.AccountProtos.PLevelInfoOrBuilder> 
@@ -14494,55 +17251,32 @@ public final class AccountProtos {
 
   }
 
-  public interface PBlacklistOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PBlacklist)
+  public interface PLiveRemindOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:common.PLiveRemind)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional int64 id = 1;</code>
-     *
-     * <pre>
-     *黑名单ID
-     * </pre>
+     * <code>optional bool offOn = 1;</code>
      */
-    long getId();
-
-    /**
-     * <code>optional string val = 2;</code>
-     *
-     * <pre>
-     *黑名单值
-     * </pre>
-     */
-    java.lang.String getVal();
-    /**
-     * <code>optional string val = 2;</code>
-     *
-     * <pre>
-     *黑名单值
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getValBytes();
+    boolean getOffOn();
   }
   /**
-   * Protobuf type {@code common.PBlacklist}
+   * Protobuf type {@code common.PLiveRemind}
    *
    * <pre>
-   *黑名单项
+   *第三方直播提醒开关
    * </pre>
    */
-  public  static final class PBlacklist extends
+  public  static final class PLiveRemind extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PBlacklist)
-      PBlacklistOrBuilder {
-    // Use PBlacklist.newBuilder() to construct.
-    private PBlacklist(com.google.protobuf.GeneratedMessage.Builder builder) {
+      // @@protoc_insertion_point(message_implements:common.PLiveRemind)
+      PLiveRemindOrBuilder {
+    // Use PLiveRemind.newBuilder() to construct.
+    private PLiveRemind(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
-    private PBlacklist() {
-      id_ = 0L;
-      val_ = "";
+    private PLiveRemind() {
+      offOn_ = false;
     }
 
     @java.lang.Override
@@ -14550,7 +17284,7 @@ public final class AccountProtos {
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
     }
-    private PBlacklist(
+    private PLiveRemind(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
       this();
@@ -14571,13 +17305,7 @@ public final class AccountProtos {
             }
             case 8: {
 
-              id_ = input.readInt64();
-              break;
-            }
-            case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-
-              val_ = bs;
+              offOn_ = input.readBool();
               break;
             }
           }
@@ -14594,40 +17322,449 @@ public final class AccountProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklist_descriptor;
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLiveRemind_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklist_fieldAccessorTable
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLiveRemind_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.AccountProtos.PBlacklist.class, com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder.class);
+              com.blemobi.sep.probuf.AccountProtos.PLiveRemind.class, com.blemobi.sep.probuf.AccountProtos.PLiveRemind.Builder.class);
     }
 
-    public static final int ID_FIELD_NUMBER = 1;
-    private long id_;
+    public static final int OFFON_FIELD_NUMBER = 1;
+    private boolean offOn_;
     /**
-     * <code>optional int64 id = 1;</code>
-     *
-     * <pre>
-     *黑名单ID
-     * </pre>
+     * <code>optional bool offOn = 1;</code>
      */
-    public long getId() {
-      return id_;
+    public boolean getOffOn() {
+      return offOn_;
     }
 
-    public static final int VAL_FIELD_NUMBER = 2;
-    private volatile java.lang.Object val_;
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (offOn_ != false) {
+        output.writeBool(1, offOn_);
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (offOn_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, offOn_);
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveRemind parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveRemind parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveRemind parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveRemind parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveRemind parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveRemind parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveRemind parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveRemind parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveRemind parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveRemind parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.AccountProtos.PLiveRemind prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
     /**
-     * <code>optional string val = 2;</code>
+     * Protobuf type {@code common.PLiveRemind}
      *
      * <pre>
-     *黑名单值
+     *第三方直播提醒开关
      * </pre>
      */
-    public java.lang.String getVal() {
-      java.lang.Object ref = val_;
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:common.PLiveRemind)
+        com.blemobi.sep.probuf.AccountProtos.PLiveRemindOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLiveRemind_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLiveRemind_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.AccountProtos.PLiveRemind.class, com.blemobi.sep.probuf.AccountProtos.PLiveRemind.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.AccountProtos.PLiveRemind.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        offOn_ = false;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLiveRemind_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PLiveRemind getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.AccountProtos.PLiveRemind.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PLiveRemind build() {
+        com.blemobi.sep.probuf.AccountProtos.PLiveRemind result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PLiveRemind buildPartial() {
+        com.blemobi.sep.probuf.AccountProtos.PLiveRemind result = new com.blemobi.sep.probuf.AccountProtos.PLiveRemind(this);
+        result.offOn_ = offOn_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.AccountProtos.PLiveRemind) {
+          return mergeFrom((com.blemobi.sep.probuf.AccountProtos.PLiveRemind)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.AccountProtos.PLiveRemind other) {
+        if (other == com.blemobi.sep.probuf.AccountProtos.PLiveRemind.getDefaultInstance()) return this;
+        if (other.getOffOn() != false) {
+          setOffOn(other.getOffOn());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.AccountProtos.PLiveRemind parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.AccountProtos.PLiveRemind) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean offOn_ ;
+      /**
+       * <code>optional bool offOn = 1;</code>
+       */
+      public boolean getOffOn() {
+        return offOn_;
+      }
+      /**
+       * <code>optional bool offOn = 1;</code>
+       */
+      public Builder setOffOn(boolean value) {
+        
+        offOn_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool offOn = 1;</code>
+       */
+      public Builder clearOffOn() {
+        
+        offOn_ = false;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:common.PLiveRemind)
+    }
+
+    // @@protoc_insertion_point(class_scope:common.PLiveRemind)
+    private static final com.blemobi.sep.probuf.AccountProtos.PLiveRemind DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.AccountProtos.PLiveRemind();
+    }
+
+    public static com.blemobi.sep.probuf.AccountProtos.PLiveRemind getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PLiveRemind> PARSER =
+        new com.google.protobuf.AbstractParser<PLiveRemind>() {
+      public PLiveRemind parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PLiveRemind(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PLiveRemind> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.AccountProtos.PLiveRemind getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PAccountInitInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:common.PAccountInitInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 authStatus = 1;</code>
+     *
+     * <pre>
+     *实名认证状态(0:未认证,1:审核中,2:审核未通过,3:已认证)
+     * </pre>
+     */
+    int getAuthStatus();
+
+    /**
+     * <code>optional string cellphone = 2;</code>
+     *
+     * <pre>
+     *手机号码
+     * </pre>
+     */
+    java.lang.String getCellphone();
+    /**
+     * <code>optional string cellphone = 2;</code>
+     *
+     * <pre>
+     *手机号码
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getCellphoneBytes();
+  }
+  /**
+   * Protobuf type {@code common.PAccountInitInfo}
+   *
+   * <pre>
+   * 基础信息
+   * </pre>
+   */
+  public  static final class PAccountInitInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:common.PAccountInitInfo)
+      PAccountInitInfoOrBuilder {
+    // Use PAccountInitInfo.newBuilder() to construct.
+    private PAccountInitInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PAccountInitInfo() {
+      authStatus_ = 0;
+      cellphone_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PAccountInitInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              authStatus_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              cellphone_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PAccountInitInfo_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PAccountInitInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo.class, com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo.Builder.class);
+    }
+
+    public static final int AUTHSTATUS_FIELD_NUMBER = 1;
+    private int authStatus_;
+    /**
+     * <code>optional int32 authStatus = 1;</code>
+     *
+     * <pre>
+     *实名认证状态(0:未认证,1:审核中,2:审核未通过,3:已认证)
+     * </pre>
+     */
+    public int getAuthStatus() {
+      return authStatus_;
+    }
+
+    public static final int CELLPHONE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object cellphone_;
+    /**
+     * <code>optional string cellphone = 2;</code>
+     *
+     * <pre>
+     *手机号码
+     * </pre>
+     */
+    public java.lang.String getCellphone() {
+      java.lang.Object ref = cellphone_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -14635,26 +17772,26 @@ public final class AccountProtos {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          val_ = s;
+          cellphone_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>optional string val = 2;</code>
+     * <code>optional string cellphone = 2;</code>
      *
      * <pre>
-     *黑名单值
+     *手机号码
      * </pre>
      */
     public com.google.protobuf.ByteString
-        getValBytes() {
-      java.lang.Object ref = val_;
+        getCellphoneBytes() {
+      java.lang.Object ref = cellphone_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        val_ = b;
+        cellphone_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -14673,11 +17810,11 @@ public final class AccountProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (id_ != 0L) {
-        output.writeInt64(1, id_);
+      if (authStatus_ != 0) {
+        output.writeInt32(1, authStatus_);
       }
-      if (!getValBytes().isEmpty()) {
-        output.writeBytes(2, getValBytes());
+      if (!getCellphoneBytes().isEmpty()) {
+        output.writeBytes(2, getCellphoneBytes());
       }
     }
 
@@ -14687,66 +17824,66 @@ public final class AccountProtos {
       if (size != -1) return size;
 
       size = 0;
-      if (id_ != 0L) {
+      if (authStatus_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, id_);
+          .computeInt32Size(1, authStatus_);
       }
-      if (!getValBytes().isEmpty()) {
+      if (!getCellphoneBytes().isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getValBytes());
+          .computeBytesSize(2, getCellphoneBytes());
       }
       memoizedSerializedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklist parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklist parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklist parseFrom(byte[] data)
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklist parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklist parseFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklist parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklist parseDelimitedFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklist parseDelimitedFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklist parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklist parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -14757,7 +17894,7 @@ public final class AccountProtos {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.blemobi.sep.probuf.AccountProtos.PBlacklist prototype) {
+    public static Builder newBuilder(com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -14772,29 +17909,29 @@ public final class AccountProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PBlacklist}
+     * Protobuf type {@code common.PAccountInitInfo}
      *
      * <pre>
-     *黑名单项
+     * 基础信息
      * </pre>
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PBlacklist)
-        com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder {
+        // @@protoc_insertion_point(builder_implements:common.PAccountInitInfo)
+        com.blemobi.sep.probuf.AccountProtos.PAccountInitInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklist_descriptor;
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PAccountInitInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklist_fieldAccessorTable
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PAccountInitInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.AccountProtos.PBlacklist.class, com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder.class);
+                com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo.class, com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo.Builder.class);
       }
 
-      // Construct using com.blemobi.sep.probuf.AccountProtos.PBlacklist.newBuilder()
+      // Construct using com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -14810,54 +17947,54 @@ public final class AccountProtos {
       }
       public Builder clear() {
         super.clear();
-        id_ = 0L;
+        authStatus_ = 0;
 
-        val_ = "";
+        cellphone_ = "";
 
         return this;
       }
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklist_descriptor;
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PAccountInitInfo_descriptor;
       }
 
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklist getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.AccountProtos.PBlacklist.getDefaultInstance();
+      public com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo.getDefaultInstance();
       }
 
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklist build() {
-        com.blemobi.sep.probuf.AccountProtos.PBlacklist result = buildPartial();
+      public com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo build() {
+        com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklist buildPartial() {
-        com.blemobi.sep.probuf.AccountProtos.PBlacklist result = new com.blemobi.sep.probuf.AccountProtos.PBlacklist(this);
-        result.id_ = id_;
-        result.val_ = val_;
+      public com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo buildPartial() {
+        com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo result = new com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo(this);
+        result.authStatus_ = authStatus_;
+        result.cellphone_ = cellphone_;
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.AccountProtos.PBlacklist) {
-          return mergeFrom((com.blemobi.sep.probuf.AccountProtos.PBlacklist)other);
+        if (other instanceof com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo) {
+          return mergeFrom((com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.blemobi.sep.probuf.AccountProtos.PBlacklist other) {
-        if (other == com.blemobi.sep.probuf.AccountProtos.PBlacklist.getDefaultInstance()) return this;
-        if (other.getId() != 0L) {
-          setId(other.getId());
+      public Builder mergeFrom(com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo other) {
+        if (other == com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo.getDefaultInstance()) return this;
+        if (other.getAuthStatus() != 0) {
+          setAuthStatus(other.getAuthStatus());
         }
-        if (!other.getVal().isEmpty()) {
-          val_ = other.val_;
+        if (!other.getCellphone().isEmpty()) {
+          cellphone_ = other.cellphone_;
           onChanged();
         }
         onChanged();
@@ -14872,11 +18009,11 @@ public final class AccountProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.blemobi.sep.probuf.AccountProtos.PBlacklist parsedMessage = null;
+        com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.AccountProtos.PBlacklist) e.getUnfinishedMessage();
+          parsedMessage = (com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -14886,60 +18023,60 @@ public final class AccountProtos {
         return this;
       }
 
-      private long id_ ;
+      private int authStatus_ ;
       /**
-       * <code>optional int64 id = 1;</code>
+       * <code>optional int32 authStatus = 1;</code>
        *
        * <pre>
-       *黑名单ID
+       *实名认证状态(0:未认证,1:审核中,2:审核未通过,3:已认证)
        * </pre>
        */
-      public long getId() {
-        return id_;
+      public int getAuthStatus() {
+        return authStatus_;
       }
       /**
-       * <code>optional int64 id = 1;</code>
+       * <code>optional int32 authStatus = 1;</code>
        *
        * <pre>
-       *黑名单ID
+       *实名认证状态(0:未认证,1:审核中,2:审核未通过,3:已认证)
        * </pre>
        */
-      public Builder setId(long value) {
+      public Builder setAuthStatus(int value) {
         
-        id_ = value;
+        authStatus_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int64 id = 1;</code>
+       * <code>optional int32 authStatus = 1;</code>
        *
        * <pre>
-       *黑名单ID
+       *实名认证状态(0:未认证,1:审核中,2:审核未通过,3:已认证)
        * </pre>
        */
-      public Builder clearId() {
+      public Builder clearAuthStatus() {
         
-        id_ = 0L;
+        authStatus_ = 0;
         onChanged();
         return this;
       }
 
-      private java.lang.Object val_ = "";
+      private java.lang.Object cellphone_ = "";
       /**
-       * <code>optional string val = 2;</code>
+       * <code>optional string cellphone = 2;</code>
        *
        * <pre>
-       *黑名单值
+       *手机号码
        * </pre>
        */
-      public java.lang.String getVal() {
-        java.lang.Object ref = val_;
+      public java.lang.String getCellphone() {
+        java.lang.Object ref = cellphone_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
-            val_ = s;
+            cellphone_ = s;
           }
           return s;
         } else {
@@ -14947,69 +18084,69 @@ public final class AccountProtos {
         }
       }
       /**
-       * <code>optional string val = 2;</code>
+       * <code>optional string cellphone = 2;</code>
        *
        * <pre>
-       *黑名单值
+       *手机号码
        * </pre>
        */
       public com.google.protobuf.ByteString
-          getValBytes() {
-        java.lang.Object ref = val_;
+          getCellphoneBytes() {
+        java.lang.Object ref = cellphone_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          val_ = b;
+          cellphone_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>optional string val = 2;</code>
+       * <code>optional string cellphone = 2;</code>
        *
        * <pre>
-       *黑名单值
+       *手机号码
        * </pre>
        */
-      public Builder setVal(
+      public Builder setCellphone(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        val_ = value;
+        cellphone_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string val = 2;</code>
+       * <code>optional string cellphone = 2;</code>
        *
        * <pre>
-       *黑名单值
+       *手机号码
        * </pre>
        */
-      public Builder clearVal() {
+      public Builder clearCellphone() {
         
-        val_ = getDefaultInstance().getVal();
+        cellphone_ = getDefaultInstance().getCellphone();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string val = 2;</code>
+       * <code>optional string cellphone = 2;</code>
        *
        * <pre>
-       *黑名单值
+       *手机号码
        * </pre>
        */
-      public Builder setValBytes(
+      public Builder setCellphoneBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        val_ = value;
+        cellphone_ = value;
         onChanged();
         return this;
       }
@@ -15024,27 +18161,27 @@ public final class AccountProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PBlacklist)
+      // @@protoc_insertion_point(builder_scope:common.PAccountInitInfo)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PBlacklist)
-    private static final com.blemobi.sep.probuf.AccountProtos.PBlacklist DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:common.PAccountInitInfo)
+    private static final com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.AccountProtos.PBlacklist();
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo();
     }
 
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklist getDefaultInstance() {
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PBlacklist> PARSER =
-        new com.google.protobuf.AbstractParser<PBlacklist>() {
-      public PBlacklist parsePartialFrom(
+    public static final com.google.protobuf.Parser<PAccountInitInfo> PARSER =
+        new com.google.protobuf.AbstractParser<PAccountInitInfo>() {
+      public PAccountInitInfo parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         try {
-          return new PBlacklist(input, extensionRegistry);
+          return new PAccountInitInfo(input, extensionRegistry);
         } catch (RuntimeException e) {
           if (e.getCause() instanceof
               com.google.protobuf.InvalidProtocolBufferException) {
@@ -15057,80 +18194,727 @@ public final class AccountProtos {
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PBlacklist> getParserForType() {
+    public com.google.protobuf.Parser<PAccountInitInfo> getParserForType() {
       return PARSER;
     }
 
-    public com.blemobi.sep.probuf.AccountProtos.PBlacklist getDefaultInstanceForType() {
+    public com.blemobi.sep.probuf.AccountProtos.PAccountInitInfo getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface PBlacklistListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PBlacklistList)
+  public interface PBackImageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:common.PBackImage)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .common.PBlacklist list = 1;</code>
+     * <code>optional string objectKey = 1;</code>
      *
      * <pre>
-     *黑名单列表
+     *背景图片objectkey
      * </pre>
      */
-    java.util.List<com.blemobi.sep.probuf.AccountProtos.PBlacklist> 
+    java.lang.String getObjectKey();
+    /**
+     * <code>optional string objectKey = 1;</code>
+     *
+     * <pre>
+     *背景图片objectkey
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getObjectKeyBytes();
+
+    /**
+     * <code>optional string url = 2;</code>
+     *
+     * <pre>
+     *图片URL
+     * </pre>
+     */
+    java.lang.String getUrl();
+    /**
+     * <code>optional string url = 2;</code>
+     *
+     * <pre>
+     *图片URL
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUrlBytes();
+  }
+  /**
+   * Protobuf type {@code common.PBackImage}
+   *
+   * <pre>
+   * 背景图片信息
+   * </pre>
+   */
+  public  static final class PBackImage extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:common.PBackImage)
+      PBackImageOrBuilder {
+    // Use PBackImage.newBuilder() to construct.
+    private PBackImage(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PBackImage() {
+      objectKey_ = "";
+      url_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PBackImage(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              objectKey_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              url_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBackImage_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBackImage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.AccountProtos.PBackImage.class, com.blemobi.sep.probuf.AccountProtos.PBackImage.Builder.class);
+    }
+
+    public static final int OBJECTKEY_FIELD_NUMBER = 1;
+    private volatile java.lang.Object objectKey_;
+    /**
+     * <code>optional string objectKey = 1;</code>
+     *
+     * <pre>
+     *背景图片objectkey
+     * </pre>
+     */
+    public java.lang.String getObjectKey() {
+      java.lang.Object ref = objectKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          objectKey_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string objectKey = 1;</code>
+     *
+     * <pre>
+     *背景图片objectkey
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getObjectKeyBytes() {
+      java.lang.Object ref = objectKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        objectKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int URL_FIELD_NUMBER = 2;
+    private volatile java.lang.Object url_;
+    /**
+     * <code>optional string url = 2;</code>
+     *
+     * <pre>
+     *图片URL
+     * </pre>
+     */
+    public java.lang.String getUrl() {
+      java.lang.Object ref = url_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          url_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string url = 2;</code>
+     *
+     * <pre>
+     *图片URL
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUrlBytes() {
+      java.lang.Object ref = url_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        url_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getObjectKeyBytes().isEmpty()) {
+        output.writeBytes(1, getObjectKeyBytes());
+      }
+      if (!getUrlBytes().isEmpty()) {
+        output.writeBytes(2, getUrlBytes());
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getObjectKeyBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getObjectKeyBytes());
+      }
+      if (!getUrlBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getUrlBytes());
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.AccountProtos.PBackImage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PBackImage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PBackImage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PBackImage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PBackImage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PBackImage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PBackImage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PBackImage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PBackImage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PBackImage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.AccountProtos.PBackImage prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code common.PBackImage}
+     *
+     * <pre>
+     * 背景图片信息
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:common.PBackImage)
+        com.blemobi.sep.probuf.AccountProtos.PBackImageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBackImage_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBackImage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.AccountProtos.PBackImage.class, com.blemobi.sep.probuf.AccountProtos.PBackImage.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.AccountProtos.PBackImage.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        objectKey_ = "";
+
+        url_ = "";
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBackImage_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PBackImage getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.AccountProtos.PBackImage.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PBackImage build() {
+        com.blemobi.sep.probuf.AccountProtos.PBackImage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PBackImage buildPartial() {
+        com.blemobi.sep.probuf.AccountProtos.PBackImage result = new com.blemobi.sep.probuf.AccountProtos.PBackImage(this);
+        result.objectKey_ = objectKey_;
+        result.url_ = url_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.AccountProtos.PBackImage) {
+          return mergeFrom((com.blemobi.sep.probuf.AccountProtos.PBackImage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.AccountProtos.PBackImage other) {
+        if (other == com.blemobi.sep.probuf.AccountProtos.PBackImage.getDefaultInstance()) return this;
+        if (!other.getObjectKey().isEmpty()) {
+          objectKey_ = other.objectKey_;
+          onChanged();
+        }
+        if (!other.getUrl().isEmpty()) {
+          url_ = other.url_;
+          onChanged();
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.AccountProtos.PBackImage parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.AccountProtos.PBackImage) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object objectKey_ = "";
+      /**
+       * <code>optional string objectKey = 1;</code>
+       *
+       * <pre>
+       *背景图片objectkey
+       * </pre>
+       */
+      public java.lang.String getObjectKey() {
+        java.lang.Object ref = objectKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            objectKey_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string objectKey = 1;</code>
+       *
+       * <pre>
+       *背景图片objectkey
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getObjectKeyBytes() {
+        java.lang.Object ref = objectKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          objectKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string objectKey = 1;</code>
+       *
+       * <pre>
+       *背景图片objectkey
+       * </pre>
+       */
+      public Builder setObjectKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        objectKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string objectKey = 1;</code>
+       *
+       * <pre>
+       *背景图片objectkey
+       * </pre>
+       */
+      public Builder clearObjectKey() {
+        
+        objectKey_ = getDefaultInstance().getObjectKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string objectKey = 1;</code>
+       *
+       * <pre>
+       *背景图片objectkey
+       * </pre>
+       */
+      public Builder setObjectKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        objectKey_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object url_ = "";
+      /**
+       * <code>optional string url = 2;</code>
+       *
+       * <pre>
+       *图片URL
+       * </pre>
+       */
+      public java.lang.String getUrl() {
+        java.lang.Object ref = url_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            url_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string url = 2;</code>
+       *
+       * <pre>
+       *图片URL
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUrlBytes() {
+        java.lang.Object ref = url_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          url_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string url = 2;</code>
+       *
+       * <pre>
+       *图片URL
+       * </pre>
+       */
+      public Builder setUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        url_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string url = 2;</code>
+       *
+       * <pre>
+       *图片URL
+       * </pre>
+       */
+      public Builder clearUrl() {
+        
+        url_ = getDefaultInstance().getUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string url = 2;</code>
+       *
+       * <pre>
+       *图片URL
+       * </pre>
+       */
+      public Builder setUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        url_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:common.PBackImage)
+    }
+
+    // @@protoc_insertion_point(class_scope:common.PBackImage)
+    private static final com.blemobi.sep.probuf.AccountProtos.PBackImage DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.AccountProtos.PBackImage();
+    }
+
+    public static com.blemobi.sep.probuf.AccountProtos.PBackImage getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PBackImage> PARSER =
+        new com.google.protobuf.AbstractParser<PBackImage>() {
+      public PBackImage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PBackImage(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PBackImage> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.AccountProtos.PBackImage getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PBackThumbImageListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:common.PBackThumbImageList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .common.PBackImage list = 1;</code>
+     */
+    java.util.List<com.blemobi.sep.probuf.AccountProtos.PBackImage> 
         getListList();
     /**
-     * <code>repeated .common.PBlacklist list = 1;</code>
-     *
-     * <pre>
-     *黑名单列表
-     * </pre>
+     * <code>repeated .common.PBackImage list = 1;</code>
      */
-    com.blemobi.sep.probuf.AccountProtos.PBlacklist getList(int index);
+    com.blemobi.sep.probuf.AccountProtos.PBackImage getList(int index);
     /**
-     * <code>repeated .common.PBlacklist list = 1;</code>
-     *
-     * <pre>
-     *黑名单列表
-     * </pre>
+     * <code>repeated .common.PBackImage list = 1;</code>
      */
     int getListCount();
     /**
-     * <code>repeated .common.PBlacklist list = 1;</code>
-     *
-     * <pre>
-     *黑名单列表
-     * </pre>
+     * <code>repeated .common.PBackImage list = 1;</code>
      */
-    java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder> 
+    java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PBackImageOrBuilder> 
         getListOrBuilderList();
     /**
-     * <code>repeated .common.PBlacklist list = 1;</code>
-     *
-     * <pre>
-     *黑名单列表
-     * </pre>
+     * <code>repeated .common.PBackImage list = 1;</code>
      */
-    com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder getListOrBuilder(
+    com.blemobi.sep.probuf.AccountProtos.PBackImageOrBuilder getListOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code common.PBlacklistList}
+   * Protobuf type {@code common.PBackThumbImageList}
    *
    * <pre>
-   *黑名单映射列表
+   * 背景缩略图列表
    * </pre>
    */
-  public  static final class PBlacklistList extends
+  public  static final class PBackThumbImageList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PBlacklistList)
-      PBlacklistListOrBuilder {
-    // Use PBlacklistList.newBuilder() to construct.
-    private PBlacklistList(com.google.protobuf.GeneratedMessage.Builder builder) {
+      // @@protoc_insertion_point(message_implements:common.PBackThumbImageList)
+      PBackThumbImageListOrBuilder {
+    // Use PBackThumbImageList.newBuilder() to construct.
+    private PBackThumbImageList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
-    private PBlacklistList() {
+    private PBackThumbImageList() {
       list_ = java.util.Collections.emptyList();
     }
 
@@ -15139,7 +18923,7 @@ public final class AccountProtos {
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
     }
-    private PBlacklistList(
+    private PBackThumbImageList(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
       this();
@@ -15160,10 +18944,10 @@ public final class AccountProtos {
             }
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                list_ = new java.util.ArrayList<com.blemobi.sep.probuf.AccountProtos.PBlacklist>();
+                list_ = new java.util.ArrayList<com.blemobi.sep.probuf.AccountProtos.PBackImage>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.AccountProtos.PBlacklist.PARSER, extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.AccountProtos.PBackImage.PARSER, extensionRegistry));
               break;
             }
           }
@@ -15183,67 +18967,47 @@ public final class AccountProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistList_descriptor;
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBackThumbImageList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistList_fieldAccessorTable
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBackThumbImageList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.AccountProtos.PBlacklistList.class, com.blemobi.sep.probuf.AccountProtos.PBlacklistList.Builder.class);
+              com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList.class, com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList.Builder.class);
     }
 
     public static final int LIST_FIELD_NUMBER = 1;
-    private java.util.List<com.blemobi.sep.probuf.AccountProtos.PBlacklist> list_;
+    private java.util.List<com.blemobi.sep.probuf.AccountProtos.PBackImage> list_;
     /**
-     * <code>repeated .common.PBlacklist list = 1;</code>
-     *
-     * <pre>
-     *黑名单列表
-     * </pre>
+     * <code>repeated .common.PBackImage list = 1;</code>
      */
-    public java.util.List<com.blemobi.sep.probuf.AccountProtos.PBlacklist> getListList() {
+    public java.util.List<com.blemobi.sep.probuf.AccountProtos.PBackImage> getListList() {
       return list_;
     }
     /**
-     * <code>repeated .common.PBlacklist list = 1;</code>
-     *
-     * <pre>
-     *黑名单列表
-     * </pre>
+     * <code>repeated .common.PBackImage list = 1;</code>
      */
-    public java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder> 
+    public java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PBackImageOrBuilder> 
         getListOrBuilderList() {
       return list_;
     }
     /**
-     * <code>repeated .common.PBlacklist list = 1;</code>
-     *
-     * <pre>
-     *黑名单列表
-     * </pre>
+     * <code>repeated .common.PBackImage list = 1;</code>
      */
     public int getListCount() {
       return list_.size();
     }
     /**
-     * <code>repeated .common.PBlacklist list = 1;</code>
-     *
-     * <pre>
-     *黑名单列表
-     * </pre>
+     * <code>repeated .common.PBackImage list = 1;</code>
      */
-    public com.blemobi.sep.probuf.AccountProtos.PBlacklist getList(int index) {
+    public com.blemobi.sep.probuf.AccountProtos.PBackImage getList(int index) {
       return list_.get(index);
     }
     /**
-     * <code>repeated .common.PBlacklist list = 1;</code>
-     *
-     * <pre>
-     *黑名单列表
-     * </pre>
+     * <code>repeated .common.PBackImage list = 1;</code>
      */
-    public com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder getListOrBuilder(
+    public com.blemobi.sep.probuf.AccountProtos.PBackImageOrBuilder getListOrBuilder(
         int index) {
       return list_.get(index);
     }
@@ -15280,53 +19044,53 @@ public final class AccountProtos {
     }
 
     private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistList parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistList parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistList parseFrom(byte[] data)
+    public static com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistList parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistList parseFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistList parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistList parseDelimitedFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistList parseDelimitedFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistList parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistList parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -15337,7 +19101,7 @@ public final class AccountProtos {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.blemobi.sep.probuf.AccountProtos.PBlacklistList prototype) {
+    public static Builder newBuilder(com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -15352,29 +19116,29 @@ public final class AccountProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PBlacklistList}
+     * Protobuf type {@code common.PBackThumbImageList}
      *
      * <pre>
-     *黑名单映射列表
+     * 背景缩略图列表
      * </pre>
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PBlacklistList)
-        com.blemobi.sep.probuf.AccountProtos.PBlacklistListOrBuilder {
+        // @@protoc_insertion_point(builder_implements:common.PBackThumbImageList)
+        com.blemobi.sep.probuf.AccountProtos.PBackThumbImageListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistList_descriptor;
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBackThumbImageList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistList_fieldAccessorTable
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBackThumbImageList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.AccountProtos.PBlacklistList.class, com.blemobi.sep.probuf.AccountProtos.PBlacklistList.Builder.class);
+                com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList.class, com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList.Builder.class);
       }
 
-      // Construct using com.blemobi.sep.probuf.AccountProtos.PBlacklistList.newBuilder()
+      // Construct using com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -15402,23 +19166,23 @@ public final class AccountProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistList_descriptor;
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBackThumbImageList_descriptor;
       }
 
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklistList getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.AccountProtos.PBlacklistList.getDefaultInstance();
+      public com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList.getDefaultInstance();
       }
 
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklistList build() {
-        com.blemobi.sep.probuf.AccountProtos.PBlacklistList result = buildPartial();
+      public com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList build() {
+        com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklistList buildPartial() {
-        com.blemobi.sep.probuf.AccountProtos.PBlacklistList result = new com.blemobi.sep.probuf.AccountProtos.PBlacklistList(this);
+      public com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList buildPartial() {
+        com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList result = new com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList(this);
         int from_bitField0_ = bitField0_;
         if (listBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -15434,16 +19198,16 @@ public final class AccountProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.AccountProtos.PBlacklistList) {
-          return mergeFrom((com.blemobi.sep.probuf.AccountProtos.PBlacklistList)other);
+        if (other instanceof com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList) {
+          return mergeFrom((com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.blemobi.sep.probuf.AccountProtos.PBlacklistList other) {
-        if (other == com.blemobi.sep.probuf.AccountProtos.PBlacklistList.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList other) {
+        if (other == com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList.getDefaultInstance()) return this;
         if (listBuilder_ == null) {
           if (!other.list_.isEmpty()) {
             if (list_.isEmpty()) {
@@ -15482,11 +19246,11 @@ public final class AccountProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.blemobi.sep.probuf.AccountProtos.PBlacklistList parsedMessage = null;
+        com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.AccountProtos.PBlacklistList) e.getUnfinishedMessage();
+          parsedMessage = (com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -15497,26 +19261,22 @@ public final class AccountProtos {
       }
       private int bitField0_;
 
-      private java.util.List<com.blemobi.sep.probuf.AccountProtos.PBlacklist> list_ =
+      private java.util.List<com.blemobi.sep.probuf.AccountProtos.PBackImage> list_ =
         java.util.Collections.emptyList();
       private void ensureListIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          list_ = new java.util.ArrayList<com.blemobi.sep.probuf.AccountProtos.PBlacklist>(list_);
+          list_ = new java.util.ArrayList<com.blemobi.sep.probuf.AccountProtos.PBackImage>(list_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.AccountProtos.PBlacklist, com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder, com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder> listBuilder_;
+          com.blemobi.sep.probuf.AccountProtos.PBackImage, com.blemobi.sep.probuf.AccountProtos.PBackImage.Builder, com.blemobi.sep.probuf.AccountProtos.PBackImageOrBuilder> listBuilder_;
 
       /**
-       * <code>repeated .common.PBlacklist list = 1;</code>
-       *
-       * <pre>
-       *黑名单列表
-       * </pre>
+       * <code>repeated .common.PBackImage list = 1;</code>
        */
-      public java.util.List<com.blemobi.sep.probuf.AccountProtos.PBlacklist> getListList() {
+      public java.util.List<com.blemobi.sep.probuf.AccountProtos.PBackImage> getListList() {
         if (listBuilder_ == null) {
           return java.util.Collections.unmodifiableList(list_);
         } else {
@@ -15524,11 +19284,7 @@ public final class AccountProtos {
         }
       }
       /**
-       * <code>repeated .common.PBlacklist list = 1;</code>
-       *
-       * <pre>
-       *黑名单列表
-       * </pre>
+       * <code>repeated .common.PBackImage list = 1;</code>
        */
       public int getListCount() {
         if (listBuilder_ == null) {
@@ -15538,13 +19294,9 @@ public final class AccountProtos {
         }
       }
       /**
-       * <code>repeated .common.PBlacklist list = 1;</code>
-       *
-       * <pre>
-       *黑名单列表
-       * </pre>
+       * <code>repeated .common.PBackImage list = 1;</code>
        */
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklist getList(int index) {
+      public com.blemobi.sep.probuf.AccountProtos.PBackImage getList(int index) {
         if (listBuilder_ == null) {
           return list_.get(index);
         } else {
@@ -15552,14 +19304,10 @@ public final class AccountProtos {
         }
       }
       /**
-       * <code>repeated .common.PBlacklist list = 1;</code>
-       *
-       * <pre>
-       *黑名单列表
-       * </pre>
+       * <code>repeated .common.PBackImage list = 1;</code>
        */
       public Builder setList(
-          int index, com.blemobi.sep.probuf.AccountProtos.PBlacklist value) {
+          int index, com.blemobi.sep.probuf.AccountProtos.PBackImage value) {
         if (listBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -15573,14 +19321,10 @@ public final class AccountProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PBlacklist list = 1;</code>
-       *
-       * <pre>
-       *黑名单列表
-       * </pre>
+       * <code>repeated .common.PBackImage list = 1;</code>
        */
       public Builder setList(
-          int index, com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder builderForValue) {
+          int index, com.blemobi.sep.probuf.AccountProtos.PBackImage.Builder builderForValue) {
         if (listBuilder_ == null) {
           ensureListIsMutable();
           list_.set(index, builderForValue.build());
@@ -15591,13 +19335,9 @@ public final class AccountProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PBlacklist list = 1;</code>
-       *
-       * <pre>
-       *黑名单列表
-       * </pre>
+       * <code>repeated .common.PBackImage list = 1;</code>
        */
-      public Builder addList(com.blemobi.sep.probuf.AccountProtos.PBlacklist value) {
+      public Builder addList(com.blemobi.sep.probuf.AccountProtos.PBackImage value) {
         if (listBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -15611,14 +19351,10 @@ public final class AccountProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PBlacklist list = 1;</code>
-       *
-       * <pre>
-       *黑名单列表
-       * </pre>
+       * <code>repeated .common.PBackImage list = 1;</code>
        */
       public Builder addList(
-          int index, com.blemobi.sep.probuf.AccountProtos.PBlacklist value) {
+          int index, com.blemobi.sep.probuf.AccountProtos.PBackImage value) {
         if (listBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -15632,14 +19368,10 @@ public final class AccountProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PBlacklist list = 1;</code>
-       *
-       * <pre>
-       *黑名单列表
-       * </pre>
+       * <code>repeated .common.PBackImage list = 1;</code>
        */
       public Builder addList(
-          com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder builderForValue) {
+          com.blemobi.sep.probuf.AccountProtos.PBackImage.Builder builderForValue) {
         if (listBuilder_ == null) {
           ensureListIsMutable();
           list_.add(builderForValue.build());
@@ -15650,14 +19382,10 @@ public final class AccountProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PBlacklist list = 1;</code>
-       *
-       * <pre>
-       *黑名单列表
-       * </pre>
+       * <code>repeated .common.PBackImage list = 1;</code>
        */
       public Builder addList(
-          int index, com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder builderForValue) {
+          int index, com.blemobi.sep.probuf.AccountProtos.PBackImage.Builder builderForValue) {
         if (listBuilder_ == null) {
           ensureListIsMutable();
           list_.add(index, builderForValue.build());
@@ -15668,14 +19396,10 @@ public final class AccountProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PBlacklist list = 1;</code>
-       *
-       * <pre>
-       *黑名单列表
-       * </pre>
+       * <code>repeated .common.PBackImage list = 1;</code>
        */
       public Builder addAllList(
-          java.lang.Iterable<? extends com.blemobi.sep.probuf.AccountProtos.PBlacklist> values) {
+          java.lang.Iterable<? extends com.blemobi.sep.probuf.AccountProtos.PBackImage> values) {
         if (listBuilder_ == null) {
           ensureListIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -15687,11 +19411,7 @@ public final class AccountProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PBlacklist list = 1;</code>
-       *
-       * <pre>
-       *黑名单列表
-       * </pre>
+       * <code>repeated .common.PBackImage list = 1;</code>
        */
       public Builder clearList() {
         if (listBuilder_ == null) {
@@ -15704,11 +19424,7 @@ public final class AccountProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PBlacklist list = 1;</code>
-       *
-       * <pre>
-       *黑名单列表
-       * </pre>
+       * <code>repeated .common.PBackImage list = 1;</code>
        */
       public Builder removeList(int index) {
         if (listBuilder_ == null) {
@@ -15721,24 +19437,16 @@ public final class AccountProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PBlacklist list = 1;</code>
-       *
-       * <pre>
-       *黑名单列表
-       * </pre>
+       * <code>repeated .common.PBackImage list = 1;</code>
        */
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder getListBuilder(
+      public com.blemobi.sep.probuf.AccountProtos.PBackImage.Builder getListBuilder(
           int index) {
         return getListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PBlacklist list = 1;</code>
-       *
-       * <pre>
-       *黑名单列表
-       * </pre>
+       * <code>repeated .common.PBackImage list = 1;</code>
        */
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder getListOrBuilder(
+      public com.blemobi.sep.probuf.AccountProtos.PBackImageOrBuilder getListOrBuilder(
           int index) {
         if (listBuilder_ == null) {
           return list_.get(index);  } else {
@@ -15746,13 +19454,9 @@ public final class AccountProtos {
         }
       }
       /**
-       * <code>repeated .common.PBlacklist list = 1;</code>
-       *
-       * <pre>
-       *黑名单列表
-       * </pre>
+       * <code>repeated .common.PBackImage list = 1;</code>
        */
-      public java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder> 
+      public java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PBackImageOrBuilder> 
            getListOrBuilderList() {
         if (listBuilder_ != null) {
           return listBuilder_.getMessageOrBuilderList();
@@ -15761,45 +19465,33 @@ public final class AccountProtos {
         }
       }
       /**
-       * <code>repeated .common.PBlacklist list = 1;</code>
-       *
-       * <pre>
-       *黑名单列表
-       * </pre>
+       * <code>repeated .common.PBackImage list = 1;</code>
        */
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder addListBuilder() {
+      public com.blemobi.sep.probuf.AccountProtos.PBackImage.Builder addListBuilder() {
         return getListFieldBuilder().addBuilder(
-            com.blemobi.sep.probuf.AccountProtos.PBlacklist.getDefaultInstance());
+            com.blemobi.sep.probuf.AccountProtos.PBackImage.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PBlacklist list = 1;</code>
-       *
-       * <pre>
-       *黑名单列表
-       * </pre>
+       * <code>repeated .common.PBackImage list = 1;</code>
        */
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder addListBuilder(
+      public com.blemobi.sep.probuf.AccountProtos.PBackImage.Builder addListBuilder(
           int index) {
         return getListFieldBuilder().addBuilder(
-            index, com.blemobi.sep.probuf.AccountProtos.PBlacklist.getDefaultInstance());
+            index, com.blemobi.sep.probuf.AccountProtos.PBackImage.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PBlacklist list = 1;</code>
-       *
-       * <pre>
-       *黑名单列表
-       * </pre>
+       * <code>repeated .common.PBackImage list = 1;</code>
        */
-      public java.util.List<com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder> 
+      public java.util.List<com.blemobi.sep.probuf.AccountProtos.PBackImage.Builder> 
            getListBuilderList() {
         return getListFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.AccountProtos.PBlacklist, com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder, com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder> 
+          com.blemobi.sep.probuf.AccountProtos.PBackImage, com.blemobi.sep.probuf.AccountProtos.PBackImage.Builder, com.blemobi.sep.probuf.AccountProtos.PBackImageOrBuilder> 
           getListFieldBuilder() {
         if (listBuilder_ == null) {
           listBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              com.blemobi.sep.probuf.AccountProtos.PBlacklist, com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder, com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder>(
+              com.blemobi.sep.probuf.AccountProtos.PBackImage, com.blemobi.sep.probuf.AccountProtos.PBackImage.Builder, com.blemobi.sep.probuf.AccountProtos.PBackImageOrBuilder>(
                   list_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
@@ -15819,27 +19511,27 @@ public final class AccountProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PBlacklistList)
+      // @@protoc_insertion_point(builder_scope:common.PBackThumbImageList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PBlacklistList)
-    private static final com.blemobi.sep.probuf.AccountProtos.PBlacklistList DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:common.PBackThumbImageList)
+    private static final com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.AccountProtos.PBlacklistList();
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList();
     }
 
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistList getDefaultInstance() {
+    public static com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PBlacklistList> PARSER =
-        new com.google.protobuf.AbstractParser<PBlacklistList>() {
-      public PBlacklistList parsePartialFrom(
+    public static final com.google.protobuf.Parser<PBackThumbImageList> PARSER =
+        new com.google.protobuf.AbstractParser<PBackThumbImageList>() {
+      public PBackThumbImageList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         try {
-          return new PBlacklistList(input, extensionRegistry);
+          return new PBackThumbImageList(input, extensionRegistry);
         } catch (RuntimeException e) {
           if (e.getCause() instanceof
               com.google.protobuf.InvalidProtocolBufferException) {
@@ -15852,72 +19544,151 @@ public final class AccountProtos {
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PBlacklistList> getParserForType() {
+    public com.google.protobuf.Parser<PBackThumbImageList> getParserForType() {
       return PARSER;
     }
 
-    public com.blemobi.sep.probuf.AccountProtos.PBlacklistList getDefaultInstanceForType() {
+    public com.blemobi.sep.probuf.AccountProtos.PBackThumbImageList getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface PBlacklistValOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PBlacklistVal)
+  public interface PReadNameAuthInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:common.PReadNameAuthInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated string list = 1;</code>
+     * <code>optional string uuid = 1;</code>
      *
      * <pre>
-     *黑名单值列表
+     *用户ID
      * </pre>
      */
-    com.google.protobuf.ProtocolStringList
-        getListList();
+    java.lang.String getUuid();
     /**
-     * <code>repeated string list = 1;</code>
+     * <code>optional string uuid = 1;</code>
      *
      * <pre>
-     *黑名单值列表
-     * </pre>
-     */
-    int getListCount();
-    /**
-     * <code>repeated string list = 1;</code>
-     *
-     * <pre>
-     *黑名单值列表
-     * </pre>
-     */
-    java.lang.String getList(int index);
-    /**
-     * <code>repeated string list = 1;</code>
-     *
-     * <pre>
-     *黑名单值列表
+     *用户ID
      * </pre>
      */
     com.google.protobuf.ByteString
-        getListBytes(int index);
+        getUuidBytes();
+
+    /**
+     * <code>optional int32 authStatus = 2;</code>
+     *
+     * <pre>
+     *实名认证状态(0:未认证,1:审核中,2:审核未通过,3:已认证)
+     * </pre>
+     */
+    int getAuthStatus();
+
+    /**
+     * <code>optional string readName = 3;</code>
+     *
+     * <pre>
+     *真实姓名
+     * </pre>
+     */
+    java.lang.String getReadName();
+    /**
+     * <code>optional string readName = 3;</code>
+     *
+     * <pre>
+     *真实姓名
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getReadNameBytes();
+
+    /**
+     * <code>optional string birthday = 4;</code>
+     *
+     * <pre>
+     *出生年月日
+     * </pre>
+     */
+    java.lang.String getBirthday();
+    /**
+     * <code>optional string birthday = 4;</code>
+     *
+     * <pre>
+     *出生年月日
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getBirthdayBytes();
+
+    /**
+     * <code>optional string idCardNo = 5;</code>
+     *
+     * <pre>
+     *身份证号码
+     * </pre>
+     */
+    java.lang.String getIdCardNo();
+    /**
+     * <code>optional string idCardNo = 5;</code>
+     *
+     * <pre>
+     *身份证号码
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getIdCardNoBytes();
+
+    /**
+     * <code>optional string idCardImg = 6;</code>
+     *
+     * <pre>
+     *身份证照片
+     * </pre>
+     */
+    java.lang.String getIdCardImg();
+    /**
+     * <code>optional string idCardImg = 6;</code>
+     *
+     * <pre>
+     *身份证照片
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getIdCardImgBytes();
+
+    /**
+     * <code>optional int32 authTime = 7;</code>
+     *
+     * <pre>
+     *认证时间
+     * </pre>
+     */
+    int getAuthTime();
   }
   /**
-   * Protobuf type {@code common.PBlacklistVal}
+   * Protobuf type {@code common.PReadNameAuthInfo}
    *
    * <pre>
-   *黑名单值列表
+   * 实名认证信息
    * </pre>
    */
-  public  static final class PBlacklistVal extends
+  public  static final class PReadNameAuthInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PBlacklistVal)
-      PBlacklistValOrBuilder {
-    // Use PBlacklistVal.newBuilder() to construct.
-    private PBlacklistVal(com.google.protobuf.GeneratedMessage.Builder builder) {
+      // @@protoc_insertion_point(message_implements:common.PReadNameAuthInfo)
+      PReadNameAuthInfoOrBuilder {
+    // Use PReadNameAuthInfo.newBuilder() to construct.
+    private PReadNameAuthInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
-    private PBlacklistVal() {
-      list_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private PReadNameAuthInfo() {
+      uuid_ = "";
+      authStatus_ = 0;
+      readName_ = "";
+      birthday_ = "";
+      idCardNo_ = "";
+      idCardImg_ = "";
+      authTime_ = 0;
     }
 
     @java.lang.Override
@@ -15925,7 +19696,7 @@ public final class AccountProtos {
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
     }
-    private PBlacklistVal(
+    private PReadNameAuthInfo(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
       this();
@@ -15946,11 +19717,42 @@ public final class AccountProtos {
             }
             case 10: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                list_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              list_.add(bs);
+
+              uuid_ = bs;
+              break;
+            }
+            case 16: {
+
+              authStatus_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              readName_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              birthday_ = bs;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              idCardNo_ = bs;
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              idCardImg_ = bs;
+              break;
+            }
+            case 56: {
+
+              authTime_ = input.readInt32();
               break;
             }
           }
@@ -15962,67 +19764,265 @@ public final class AccountProtos {
             new com.google.protobuf.InvalidProtocolBufferException(
                 e.getMessage()).setUnfinishedMessage(this));
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-          list_ = list_.getUnmodifiableView();
-        }
         makeExtensionsImmutable();
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistVal_descriptor;
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PReadNameAuthInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistVal_fieldAccessorTable
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PReadNameAuthInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.AccountProtos.PBlacklistVal.class, com.blemobi.sep.probuf.AccountProtos.PBlacklistVal.Builder.class);
+              com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo.class, com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo.Builder.class);
     }
 
-    public static final int LIST_FIELD_NUMBER = 1;
-    private com.google.protobuf.LazyStringList list_;
+    public static final int UUID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object uuid_;
     /**
-     * <code>repeated string list = 1;</code>
+     * <code>optional string uuid = 1;</code>
      *
      * <pre>
-     *黑名单值列表
+     *用户ID
      * </pre>
      */
-    public com.google.protobuf.ProtocolStringList
-        getListList() {
-      return list_;
+    public java.lang.String getUuid() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          uuid_ = s;
+        }
+        return s;
+      }
     }
     /**
-     * <code>repeated string list = 1;</code>
+     * <code>optional string uuid = 1;</code>
      *
      * <pre>
-     *黑名单值列表
-     * </pre>
-     */
-    public int getListCount() {
-      return list_.size();
-    }
-    /**
-     * <code>repeated string list = 1;</code>
-     *
-     * <pre>
-     *黑名单值列表
-     * </pre>
-     */
-    public java.lang.String getList(int index) {
-      return list_.get(index);
-    }
-    /**
-     * <code>repeated string list = 1;</code>
-     *
-     * <pre>
-     *黑名单值列表
+     *用户ID
      * </pre>
      */
     public com.google.protobuf.ByteString
-        getListBytes(int index) {
-      return list_.getByteString(index);
+        getUuidBytes() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AUTHSTATUS_FIELD_NUMBER = 2;
+    private int authStatus_;
+    /**
+     * <code>optional int32 authStatus = 2;</code>
+     *
+     * <pre>
+     *实名认证状态(0:未认证,1:审核中,2:审核未通过,3:已认证)
+     * </pre>
+     */
+    public int getAuthStatus() {
+      return authStatus_;
+    }
+
+    public static final int READNAME_FIELD_NUMBER = 3;
+    private volatile java.lang.Object readName_;
+    /**
+     * <code>optional string readName = 3;</code>
+     *
+     * <pre>
+     *真实姓名
+     * </pre>
+     */
+    public java.lang.String getReadName() {
+      java.lang.Object ref = readName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          readName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string readName = 3;</code>
+     *
+     * <pre>
+     *真实姓名
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getReadNameBytes() {
+      java.lang.Object ref = readName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        readName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BIRTHDAY_FIELD_NUMBER = 4;
+    private volatile java.lang.Object birthday_;
+    /**
+     * <code>optional string birthday = 4;</code>
+     *
+     * <pre>
+     *出生年月日
+     * </pre>
+     */
+    public java.lang.String getBirthday() {
+      java.lang.Object ref = birthday_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          birthday_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string birthday = 4;</code>
+     *
+     * <pre>
+     *出生年月日
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getBirthdayBytes() {
+      java.lang.Object ref = birthday_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        birthday_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IDCARDNO_FIELD_NUMBER = 5;
+    private volatile java.lang.Object idCardNo_;
+    /**
+     * <code>optional string idCardNo = 5;</code>
+     *
+     * <pre>
+     *身份证号码
+     * </pre>
+     */
+    public java.lang.String getIdCardNo() {
+      java.lang.Object ref = idCardNo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          idCardNo_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string idCardNo = 5;</code>
+     *
+     * <pre>
+     *身份证号码
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getIdCardNoBytes() {
+      java.lang.Object ref = idCardNo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        idCardNo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IDCARDIMG_FIELD_NUMBER = 6;
+    private volatile java.lang.Object idCardImg_;
+    /**
+     * <code>optional string idCardImg = 6;</code>
+     *
+     * <pre>
+     *身份证照片
+     * </pre>
+     */
+    public java.lang.String getIdCardImg() {
+      java.lang.Object ref = idCardImg_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          idCardImg_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string idCardImg = 6;</code>
+     *
+     * <pre>
+     *身份证照片
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getIdCardImgBytes() {
+      java.lang.Object ref = idCardImg_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        idCardImg_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AUTHTIME_FIELD_NUMBER = 7;
+    private int authTime_;
+    /**
+     * <code>optional int32 authTime = 7;</code>
+     *
+     * <pre>
+     *认证时间
+     * </pre>
+     */
+    public int getAuthTime() {
+      return authTime_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -16037,8 +20037,26 @@ public final class AccountProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < list_.size(); i++) {
-        output.writeBytes(1, list_.getByteString(i));
+      if (!getUuidBytes().isEmpty()) {
+        output.writeBytes(1, getUuidBytes());
+      }
+      if (authStatus_ != 0) {
+        output.writeInt32(2, authStatus_);
+      }
+      if (!getReadNameBytes().isEmpty()) {
+        output.writeBytes(3, getReadNameBytes());
+      }
+      if (!getBirthdayBytes().isEmpty()) {
+        output.writeBytes(4, getBirthdayBytes());
+      }
+      if (!getIdCardNoBytes().isEmpty()) {
+        output.writeBytes(5, getIdCardNoBytes());
+      }
+      if (!getIdCardImgBytes().isEmpty()) {
+        output.writeBytes(6, getIdCardImgBytes());
+      }
+      if (authTime_ != 0) {
+        output.writeInt32(7, authTime_);
       }
     }
 
@@ -16048,67 +20066,86 @@ public final class AccountProtos {
       if (size != -1) return size;
 
       size = 0;
-      {
-        int dataSize = 0;
-        for (int i = 0; i < list_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(list_.getByteString(i));
-        }
-        size += dataSize;
-        size += 1 * getListList().size();
+      if (!getUuidBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getUuidBytes());
+      }
+      if (authStatus_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, authStatus_);
+      }
+      if (!getReadNameBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getReadNameBytes());
+      }
+      if (!getBirthdayBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getBirthdayBytes());
+      }
+      if (!getIdCardNoBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, getIdCardNoBytes());
+      }
+      if (!getIdCardImgBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, getIdCardImgBytes());
+      }
+      if (authTime_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(7, authTime_);
       }
       memoizedSerializedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistVal parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistVal parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistVal parseFrom(byte[] data)
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistVal parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistVal parseFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistVal parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistVal parseDelimitedFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistVal parseDelimitedFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistVal parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistVal parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -16119,7 +20156,7 @@ public final class AccountProtos {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.blemobi.sep.probuf.AccountProtos.PBlacklistVal prototype) {
+    public static Builder newBuilder(com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -16134,29 +20171,29 @@ public final class AccountProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PBlacklistVal}
+     * Protobuf type {@code common.PReadNameAuthInfo}
      *
      * <pre>
-     *黑名单值列表
+     * 实名认证信息
      * </pre>
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PBlacklistVal)
-        com.blemobi.sep.probuf.AccountProtos.PBlacklistValOrBuilder {
+        // @@protoc_insertion_point(builder_implements:common.PReadNameAuthInfo)
+        com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistVal_descriptor;
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PReadNameAuthInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistVal_fieldAccessorTable
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PReadNameAuthInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.AccountProtos.PBlacklistVal.class, com.blemobi.sep.probuf.AccountProtos.PBlacklistVal.Builder.class);
+                com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo.class, com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo.Builder.class);
       }
 
-      // Construct using com.blemobi.sep.probuf.AccountProtos.PBlacklistVal.newBuilder()
+      // Construct using com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -16172,60 +20209,89 @@ public final class AccountProtos {
       }
       public Builder clear() {
         super.clear();
-        list_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        uuid_ = "";
+
+        authStatus_ = 0;
+
+        readName_ = "";
+
+        birthday_ = "";
+
+        idCardNo_ = "";
+
+        idCardImg_ = "";
+
+        authTime_ = 0;
+
         return this;
       }
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistVal_descriptor;
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PReadNameAuthInfo_descriptor;
       }
 
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklistVal getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.AccountProtos.PBlacklistVal.getDefaultInstance();
+      public com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo.getDefaultInstance();
       }
 
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklistVal build() {
-        com.blemobi.sep.probuf.AccountProtos.PBlacklistVal result = buildPartial();
+      public com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo build() {
+        com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklistVal buildPartial() {
-        com.blemobi.sep.probuf.AccountProtos.PBlacklistVal result = new com.blemobi.sep.probuf.AccountProtos.PBlacklistVal(this);
-        int from_bitField0_ = bitField0_;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          list_ = list_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.list_ = list_;
+      public com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo buildPartial() {
+        com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo result = new com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo(this);
+        result.uuid_ = uuid_;
+        result.authStatus_ = authStatus_;
+        result.readName_ = readName_;
+        result.birthday_ = birthday_;
+        result.idCardNo_ = idCardNo_;
+        result.idCardImg_ = idCardImg_;
+        result.authTime_ = authTime_;
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.AccountProtos.PBlacklistVal) {
-          return mergeFrom((com.blemobi.sep.probuf.AccountProtos.PBlacklistVal)other);
+        if (other instanceof com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo) {
+          return mergeFrom((com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.blemobi.sep.probuf.AccountProtos.PBlacklistVal other) {
-        if (other == com.blemobi.sep.probuf.AccountProtos.PBlacklistVal.getDefaultInstance()) return this;
-        if (!other.list_.isEmpty()) {
-          if (list_.isEmpty()) {
-            list_ = other.list_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureListIsMutable();
-            list_.addAll(other.list_);
-          }
+      public Builder mergeFrom(com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo other) {
+        if (other == com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo.getDefaultInstance()) return this;
+        if (!other.getUuid().isEmpty()) {
+          uuid_ = other.uuid_;
           onChanged();
+        }
+        if (other.getAuthStatus() != 0) {
+          setAuthStatus(other.getAuthStatus());
+        }
+        if (!other.getReadName().isEmpty()) {
+          readName_ = other.readName_;
+          onChanged();
+        }
+        if (!other.getBirthday().isEmpty()) {
+          birthday_ = other.birthday_;
+          onChanged();
+        }
+        if (!other.getIdCardNo().isEmpty()) {
+          idCardNo_ = other.idCardNo_;
+          onChanged();
+        }
+        if (!other.getIdCardImg().isEmpty()) {
+          idCardImg_ = other.idCardImg_;
+          onChanged();
+        }
+        if (other.getAuthTime() != 0) {
+          setAuthTime(other.getAuthTime());
         }
         onChanged();
         return this;
@@ -16239,11 +20305,11 @@ public final class AccountProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.blemobi.sep.probuf.AccountProtos.PBlacklistVal parsedMessage = null;
+        com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.AccountProtos.PBlacklistVal) e.getUnfinishedMessage();
+          parsedMessage = (com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -16252,133 +20318,529 @@ public final class AccountProtos {
         }
         return this;
       }
-      private int bitField0_;
 
-      private com.google.protobuf.LazyStringList list_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureListIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          list_ = new com.google.protobuf.LazyStringArrayList(list_);
-          bitField0_ |= 0x00000001;
-         }
-      }
+      private java.lang.Object uuid_ = "";
       /**
-       * <code>repeated string list = 1;</code>
+       * <code>optional string uuid = 1;</code>
        *
        * <pre>
-       *黑名单值列表
+       *用户ID
        * </pre>
        */
-      public com.google.protobuf.ProtocolStringList
-          getListList() {
-        return list_.getUnmodifiableView();
+      public java.lang.String getUuid() {
+        java.lang.Object ref = uuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            uuid_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>repeated string list = 1;</code>
+       * <code>optional string uuid = 1;</code>
        *
        * <pre>
-       *黑名单值列表
-       * </pre>
-       */
-      public int getListCount() {
-        return list_.size();
-      }
-      /**
-       * <code>repeated string list = 1;</code>
-       *
-       * <pre>
-       *黑名单值列表
-       * </pre>
-       */
-      public java.lang.String getList(int index) {
-        return list_.get(index);
-      }
-      /**
-       * <code>repeated string list = 1;</code>
-       *
-       * <pre>
-       *黑名单值列表
+       *用户ID
        * </pre>
        */
       public com.google.protobuf.ByteString
-          getListBytes(int index) {
-        return list_.getByteString(index);
+          getUuidBytes() {
+        java.lang.Object ref = uuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
       }
       /**
-       * <code>repeated string list = 1;</code>
+       * <code>optional string uuid = 1;</code>
        *
        * <pre>
-       *黑名单值列表
+       *用户ID
        * </pre>
        */
-      public Builder setList(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureListIsMutable();
-        list_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string list = 1;</code>
-       *
-       * <pre>
-       *黑名单值列表
-       * </pre>
-       */
-      public Builder addList(
+      public Builder setUuid(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureListIsMutable();
-        list_.add(value);
+  
+        uuid_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string list = 1;</code>
+       * <code>optional string uuid = 1;</code>
        *
        * <pre>
-       *黑名单值列表
+       *用户ID
        * </pre>
        */
-      public Builder addAllList(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureListIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, list_);
+      public Builder clearUuid() {
+        
+        uuid_ = getDefaultInstance().getUuid();
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string list = 1;</code>
+       * <code>optional string uuid = 1;</code>
        *
        * <pre>
-       *黑名单值列表
+       *用户ID
        * </pre>
        */
-      public Builder clearList() {
-        list_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string list = 1;</code>
-       *
-       * <pre>
-       *黑名单值列表
-       * </pre>
-       */
-      public Builder addListBytes(
+      public Builder setUuidBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureListIsMutable();
-        list_.add(value);
+  
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int authStatus_ ;
+      /**
+       * <code>optional int32 authStatus = 2;</code>
+       *
+       * <pre>
+       *实名认证状态(0:未认证,1:审核中,2:审核未通过,3:已认证)
+       * </pre>
+       */
+      public int getAuthStatus() {
+        return authStatus_;
+      }
+      /**
+       * <code>optional int32 authStatus = 2;</code>
+       *
+       * <pre>
+       *实名认证状态(0:未认证,1:审核中,2:审核未通过,3:已认证)
+       * </pre>
+       */
+      public Builder setAuthStatus(int value) {
+        
+        authStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 authStatus = 2;</code>
+       *
+       * <pre>
+       *实名认证状态(0:未认证,1:审核中,2:审核未通过,3:已认证)
+       * </pre>
+       */
+      public Builder clearAuthStatus() {
+        
+        authStatus_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object readName_ = "";
+      /**
+       * <code>optional string readName = 3;</code>
+       *
+       * <pre>
+       *真实姓名
+       * </pre>
+       */
+      public java.lang.String getReadName() {
+        java.lang.Object ref = readName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            readName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string readName = 3;</code>
+       *
+       * <pre>
+       *真实姓名
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getReadNameBytes() {
+        java.lang.Object ref = readName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          readName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string readName = 3;</code>
+       *
+       * <pre>
+       *真实姓名
+       * </pre>
+       */
+      public Builder setReadName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        readName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string readName = 3;</code>
+       *
+       * <pre>
+       *真实姓名
+       * </pre>
+       */
+      public Builder clearReadName() {
+        
+        readName_ = getDefaultInstance().getReadName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string readName = 3;</code>
+       *
+       * <pre>
+       *真实姓名
+       * </pre>
+       */
+      public Builder setReadNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        readName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object birthday_ = "";
+      /**
+       * <code>optional string birthday = 4;</code>
+       *
+       * <pre>
+       *出生年月日
+       * </pre>
+       */
+      public java.lang.String getBirthday() {
+        java.lang.Object ref = birthday_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            birthday_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string birthday = 4;</code>
+       *
+       * <pre>
+       *出生年月日
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getBirthdayBytes() {
+        java.lang.Object ref = birthday_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          birthday_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string birthday = 4;</code>
+       *
+       * <pre>
+       *出生年月日
+       * </pre>
+       */
+      public Builder setBirthday(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        birthday_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string birthday = 4;</code>
+       *
+       * <pre>
+       *出生年月日
+       * </pre>
+       */
+      public Builder clearBirthday() {
+        
+        birthday_ = getDefaultInstance().getBirthday();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string birthday = 4;</code>
+       *
+       * <pre>
+       *出生年月日
+       * </pre>
+       */
+      public Builder setBirthdayBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        birthday_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object idCardNo_ = "";
+      /**
+       * <code>optional string idCardNo = 5;</code>
+       *
+       * <pre>
+       *身份证号码
+       * </pre>
+       */
+      public java.lang.String getIdCardNo() {
+        java.lang.Object ref = idCardNo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            idCardNo_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string idCardNo = 5;</code>
+       *
+       * <pre>
+       *身份证号码
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getIdCardNoBytes() {
+        java.lang.Object ref = idCardNo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          idCardNo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string idCardNo = 5;</code>
+       *
+       * <pre>
+       *身份证号码
+       * </pre>
+       */
+      public Builder setIdCardNo(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        idCardNo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string idCardNo = 5;</code>
+       *
+       * <pre>
+       *身份证号码
+       * </pre>
+       */
+      public Builder clearIdCardNo() {
+        
+        idCardNo_ = getDefaultInstance().getIdCardNo();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string idCardNo = 5;</code>
+       *
+       * <pre>
+       *身份证号码
+       * </pre>
+       */
+      public Builder setIdCardNoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        idCardNo_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object idCardImg_ = "";
+      /**
+       * <code>optional string idCardImg = 6;</code>
+       *
+       * <pre>
+       *身份证照片
+       * </pre>
+       */
+      public java.lang.String getIdCardImg() {
+        java.lang.Object ref = idCardImg_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            idCardImg_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string idCardImg = 6;</code>
+       *
+       * <pre>
+       *身份证照片
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getIdCardImgBytes() {
+        java.lang.Object ref = idCardImg_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          idCardImg_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string idCardImg = 6;</code>
+       *
+       * <pre>
+       *身份证照片
+       * </pre>
+       */
+      public Builder setIdCardImg(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        idCardImg_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string idCardImg = 6;</code>
+       *
+       * <pre>
+       *身份证照片
+       * </pre>
+       */
+      public Builder clearIdCardImg() {
+        
+        idCardImg_ = getDefaultInstance().getIdCardImg();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string idCardImg = 6;</code>
+       *
+       * <pre>
+       *身份证照片
+       * </pre>
+       */
+      public Builder setIdCardImgBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        idCardImg_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int authTime_ ;
+      /**
+       * <code>optional int32 authTime = 7;</code>
+       *
+       * <pre>
+       *认证时间
+       * </pre>
+       */
+      public int getAuthTime() {
+        return authTime_;
+      }
+      /**
+       * <code>optional int32 authTime = 7;</code>
+       *
+       * <pre>
+       *认证时间
+       * </pre>
+       */
+      public Builder setAuthTime(int value) {
+        
+        authTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 authTime = 7;</code>
+       *
+       * <pre>
+       *认证时间
+       * </pre>
+       */
+      public Builder clearAuthTime() {
+        
+        authTime_ = 0;
         onChanged();
         return this;
       }
@@ -16393,27 +20855,27 @@ public final class AccountProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PBlacklistVal)
+      // @@protoc_insertion_point(builder_scope:common.PReadNameAuthInfo)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PBlacklistVal)
-    private static final com.blemobi.sep.probuf.AccountProtos.PBlacklistVal DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:common.PReadNameAuthInfo)
+    private static final com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.AccountProtos.PBlacklistVal();
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo();
     }
 
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistVal getDefaultInstance() {
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PBlacklistVal> PARSER =
-        new com.google.protobuf.AbstractParser<PBlacklistVal>() {
-      public PBlacklistVal parsePartialFrom(
+    public static final com.google.protobuf.Parser<PReadNameAuthInfo> PARSER =
+        new com.google.protobuf.AbstractParser<PReadNameAuthInfo>() {
+      public PReadNameAuthInfo parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         try {
-          return new PBlacklistVal(input, extensionRegistry);
+          return new PReadNameAuthInfo(input, extensionRegistry);
         } catch (RuntimeException e) {
           if (e.getCause() instanceof
               com.google.protobuf.InvalidProtocolBufferException) {
@@ -16426,61 +20888,60 @@ public final class AccountProtos {
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PBlacklistVal> getParserForType() {
+    public com.google.protobuf.Parser<PReadNameAuthInfo> getParserForType() {
       return PARSER;
     }
 
-    public com.blemobi.sep.probuf.AccountProtos.PBlacklistVal getDefaultInstanceForType() {
+    public com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface PBlacklistIDOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PBlacklistID)
+  public interface PReadNameAuthInfoListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:common.PReadNameAuthInfoList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated int64 list = 1;</code>
-     *
-     * <pre>
-     *黑名单ID列表
-     * </pre>
+     * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
      */
-    java.util.List<java.lang.Long> getListList();
+    java.util.List<com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo> 
+        getListList();
     /**
-     * <code>repeated int64 list = 1;</code>
-     *
-     * <pre>
-     *黑名单ID列表
-     * </pre>
+     * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
+     */
+    com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo getList(int index);
+    /**
+     * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
      */
     int getListCount();
     /**
-     * <code>repeated int64 list = 1;</code>
-     *
-     * <pre>
-     *黑名单ID列表
-     * </pre>
+     * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
      */
-    long getList(int index);
+    java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoOrBuilder> 
+        getListOrBuilderList();
+    /**
+     * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
+     */
+    com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoOrBuilder getListOrBuilder(
+        int index);
   }
   /**
-   * Protobuf type {@code common.PBlacklistID}
+   * Protobuf type {@code common.PReadNameAuthInfoList}
    *
    * <pre>
-   *黑名单ID列表
+   * 实名认证信息列表
    * </pre>
    */
-  public  static final class PBlacklistID extends
+  public  static final class PReadNameAuthInfoList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PBlacklistID)
-      PBlacklistIDOrBuilder {
-    // Use PBlacklistID.newBuilder() to construct.
-    private PBlacklistID(com.google.protobuf.GeneratedMessage.Builder builder) {
+      // @@protoc_insertion_point(message_implements:common.PReadNameAuthInfoList)
+      PReadNameAuthInfoListOrBuilder {
+    // Use PReadNameAuthInfoList.newBuilder() to construct.
+    private PReadNameAuthInfoList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
-    private PBlacklistID() {
+    private PReadNameAuthInfoList() {
       list_ = java.util.Collections.emptyList();
     }
 
@@ -16489,7 +20950,7 @@ public final class AccountProtos {
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
     }
-    private PBlacklistID(
+    private PReadNameAuthInfoList(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
       this();
@@ -16508,25 +20969,12 @@ public final class AccountProtos {
               }
               break;
             }
-            case 8: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                list_ = new java.util.ArrayList<java.lang.Long>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              list_.add(input.readInt64());
-              break;
-            }
             case 10: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001) && input.getBytesUntilLimit() > 0) {
-                list_ = new java.util.ArrayList<java.lang.Long>();
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                list_ = new java.util.ArrayList<com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              while (input.getBytesUntilLimit() > 0) {
-                list_.add(input.readInt64());
-              }
-              input.popLimit(limit);
+              list_.add(input.readMessage(com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo.PARSER, extensionRegistry));
               break;
             }
           }
@@ -16546,50 +20994,50 @@ public final class AccountProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistID_descriptor;
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PReadNameAuthInfoList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistID_fieldAccessorTable
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PReadNameAuthInfoList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.AccountProtos.PBlacklistID.class, com.blemobi.sep.probuf.AccountProtos.PBlacklistID.Builder.class);
+              com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList.class, com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList.Builder.class);
     }
 
     public static final int LIST_FIELD_NUMBER = 1;
-    private java.util.List<java.lang.Long> list_;
+    private java.util.List<com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo> list_;
     /**
-     * <code>repeated int64 list = 1;</code>
-     *
-     * <pre>
-     *黑名单ID列表
-     * </pre>
+     * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
      */
-    public java.util.List<java.lang.Long>
-        getListList() {
+    public java.util.List<com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo> getListList() {
       return list_;
     }
     /**
-     * <code>repeated int64 list = 1;</code>
-     *
-     * <pre>
-     *黑名单ID列表
-     * </pre>
+     * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
+     */
+    public java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoOrBuilder> 
+        getListOrBuilderList() {
+      return list_;
+    }
+    /**
+     * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
      */
     public int getListCount() {
       return list_.size();
     }
     /**
-     * <code>repeated int64 list = 1;</code>
-     *
-     * <pre>
-     *黑名单ID列表
-     * </pre>
+     * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
      */
-    public long getList(int index) {
+    public com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo getList(int index) {
       return list_.get(index);
     }
-    private int listMemoizedSerializedSize = -1;
+    /**
+     * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
+     */
+    public com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoOrBuilder getListOrBuilder(
+        int index) {
+      return list_.get(index);
+    }
 
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -16603,13 +21051,8 @@ public final class AccountProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      getSerializedSize();
-      if (getListList().size() > 0) {
-        output.writeRawVarint32(10);
-        output.writeRawVarint32(listMemoizedSerializedSize);
-      }
       for (int i = 0; i < list_.size(); i++) {
-        output.writeInt64NoTag(list_.get(i));
+        output.writeMessage(1, list_.get(i));
       }
     }
 
@@ -16619,72 +21062,62 @@ public final class AccountProtos {
       if (size != -1) return size;
 
       size = 0;
-      {
-        int dataSize = 0;
-        for (int i = 0; i < list_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeInt64SizeNoTag(list_.get(i));
-        }
-        size += dataSize;
-        if (!getListList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        listMemoizedSerializedSize = dataSize;
+      for (int i = 0; i < list_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, list_.get(i));
       }
       memoizedSerializedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistID parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistID parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistID parseFrom(byte[] data)
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistID parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistID parseFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistID parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistID parseDelimitedFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistID parseDelimitedFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistID parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistID parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -16695,7 +21128,7 @@ public final class AccountProtos {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.blemobi.sep.probuf.AccountProtos.PBlacklistID prototype) {
+    public static Builder newBuilder(com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -16710,29 +21143,29 @@ public final class AccountProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PBlacklistID}
+     * Protobuf type {@code common.PReadNameAuthInfoList}
      *
      * <pre>
-     *黑名单ID列表
+     * 实名认证信息列表
      * </pre>
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PBlacklistID)
-        com.blemobi.sep.probuf.AccountProtos.PBlacklistIDOrBuilder {
+        // @@protoc_insertion_point(builder_implements:common.PReadNameAuthInfoList)
+        com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistID_descriptor;
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PReadNameAuthInfoList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistID_fieldAccessorTable
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PReadNameAuthInfoList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.AccountProtos.PBlacklistID.class, com.blemobi.sep.probuf.AccountProtos.PBlacklistID.Builder.class);
+                com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList.class, com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList.Builder.class);
       }
 
-      // Construct using com.blemobi.sep.probuf.AccountProtos.PBlacklistID.newBuilder()
+      // Construct using com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -16744,64 +21177,89 @@ public final class AccountProtos {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getListFieldBuilder();
         }
       }
       public Builder clear() {
         super.clear();
-        list_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        if (listBuilder_ == null) {
+          list_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          listBuilder_.clear();
+        }
         return this;
       }
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistID_descriptor;
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PReadNameAuthInfoList_descriptor;
       }
 
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklistID getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.AccountProtos.PBlacklistID.getDefaultInstance();
+      public com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList.getDefaultInstance();
       }
 
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklistID build() {
-        com.blemobi.sep.probuf.AccountProtos.PBlacklistID result = buildPartial();
+      public com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList build() {
+        com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklistID buildPartial() {
-        com.blemobi.sep.probuf.AccountProtos.PBlacklistID result = new com.blemobi.sep.probuf.AccountProtos.PBlacklistID(this);
+      public com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList buildPartial() {
+        com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList result = new com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList(this);
         int from_bitField0_ = bitField0_;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          list_ = java.util.Collections.unmodifiableList(list_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+        if (listBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            list_ = java.util.Collections.unmodifiableList(list_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.list_ = list_;
+        } else {
+          result.list_ = listBuilder_.build();
         }
-        result.list_ = list_;
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.AccountProtos.PBlacklistID) {
-          return mergeFrom((com.blemobi.sep.probuf.AccountProtos.PBlacklistID)other);
+        if (other instanceof com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList) {
+          return mergeFrom((com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.blemobi.sep.probuf.AccountProtos.PBlacklistID other) {
-        if (other == com.blemobi.sep.probuf.AccountProtos.PBlacklistID.getDefaultInstance()) return this;
-        if (!other.list_.isEmpty()) {
-          if (list_.isEmpty()) {
-            list_ = other.list_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureListIsMutable();
-            list_.addAll(other.list_);
+      public Builder mergeFrom(com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList other) {
+        if (other == com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList.getDefaultInstance()) return this;
+        if (listBuilder_ == null) {
+          if (!other.list_.isEmpty()) {
+            if (list_.isEmpty()) {
+              list_ = other.list_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureListIsMutable();
+              list_.addAll(other.list_);
+            }
+            onChanged();
           }
-          onChanged();
+        } else {
+          if (!other.list_.isEmpty()) {
+            if (listBuilder_.isEmpty()) {
+              listBuilder_.dispose();
+              listBuilder_ = null;
+              list_ = other.list_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              listBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getListFieldBuilder() : null;
+            } else {
+              listBuilder_.addAllMessages(other.list_);
+            }
+          }
         }
         onChanged();
         return this;
@@ -16815,11 +21273,11 @@ public final class AccountProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.blemobi.sep.probuf.AccountProtos.PBlacklistID parsedMessage = null;
+        com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.AccountProtos.PBlacklistID) e.getUnfinishedMessage();
+          parsedMessage = (com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -16830,2374 +21288,244 @@ public final class AccountProtos {
       }
       private int bitField0_;
 
-      private java.util.List<java.lang.Long> list_ = java.util.Collections.emptyList();
+      private java.util.List<com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo> list_ =
+        java.util.Collections.emptyList();
       private void ensureListIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          list_ = new java.util.ArrayList<java.lang.Long>(list_);
+          list_ = new java.util.ArrayList<com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo>(list_);
           bitField0_ |= 0x00000001;
          }
       }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo, com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo.Builder, com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoOrBuilder> listBuilder_;
+
       /**
-       * <code>repeated int64 list = 1;</code>
-       *
-       * <pre>
-       *黑名单ID列表
-       * </pre>
+       * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
        */
-      public java.util.List<java.lang.Long>
-          getListList() {
-        return java.util.Collections.unmodifiableList(list_);
+      public java.util.List<com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo> getListList() {
+        if (listBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(list_);
+        } else {
+          return listBuilder_.getMessageList();
+        }
       }
       /**
-       * <code>repeated int64 list = 1;</code>
-       *
-       * <pre>
-       *黑名单ID列表
-       * </pre>
+       * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
        */
       public int getListCount() {
-        return list_.size();
+        if (listBuilder_ == null) {
+          return list_.size();
+        } else {
+          return listBuilder_.getCount();
+        }
       }
       /**
-       * <code>repeated int64 list = 1;</code>
-       *
-       * <pre>
-       *黑名单ID列表
-       * </pre>
+       * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
        */
-      public long getList(int index) {
-        return list_.get(index);
+      public com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo getList(int index) {
+        if (listBuilder_ == null) {
+          return list_.get(index);
+        } else {
+          return listBuilder_.getMessage(index);
+        }
       }
       /**
-       * <code>repeated int64 list = 1;</code>
-       *
-       * <pre>
-       *黑名单ID列表
-       * </pre>
+       * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
        */
       public Builder setList(
-          int index, long value) {
-        ensureListIsMutable();
-        list_.set(index, value);
-        onChanged();
+          int index, com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo value) {
+        if (listBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureListIsMutable();
+          list_.set(index, value);
+          onChanged();
+        } else {
+          listBuilder_.setMessage(index, value);
+        }
         return this;
       }
       /**
-       * <code>repeated int64 list = 1;</code>
-       *
-       * <pre>
-       *黑名单ID列表
-       * </pre>
+       * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
        */
-      public Builder addList(long value) {
-        ensureListIsMutable();
-        list_.add(value);
-        onChanged();
+      public Builder setList(
+          int index, com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo.Builder builderForValue) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          list_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          listBuilder_.setMessage(index, builderForValue.build());
+        }
         return this;
       }
       /**
-       * <code>repeated int64 list = 1;</code>
-       *
-       * <pre>
-       *黑名单ID列表
-       * </pre>
+       * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
+       */
+      public Builder addList(com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo value) {
+        if (listBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureListIsMutable();
+          list_.add(value);
+          onChanged();
+        } else {
+          listBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
+       */
+      public Builder addList(
+          int index, com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo value) {
+        if (listBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureListIsMutable();
+          list_.add(index, value);
+          onChanged();
+        } else {
+          listBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
+       */
+      public Builder addList(
+          com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo.Builder builderForValue) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          list_.add(builderForValue.build());
+          onChanged();
+        } else {
+          listBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
+       */
+      public Builder addList(
+          int index, com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo.Builder builderForValue) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          list_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          listBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
        */
       public Builder addAllList(
-          java.lang.Iterable<? extends java.lang.Long> values) {
-        ensureListIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, list_);
-        onChanged();
+          java.lang.Iterable<? extends com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo> values) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, list_);
+          onChanged();
+        } else {
+          listBuilder_.addAllMessages(values);
+        }
         return this;
       }
       /**
-       * <code>repeated int64 list = 1;</code>
-       *
-       * <pre>
-       *黑名单ID列表
-       * </pre>
+       * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
        */
       public Builder clearList() {
-        list_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:common.PBlacklistID)
-    }
-
-    // @@protoc_insertion_point(class_scope:common.PBlacklistID)
-    private static final com.blemobi.sep.probuf.AccountProtos.PBlacklistID DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.AccountProtos.PBlacklistID();
-    }
-
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistID getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    public static final com.google.protobuf.Parser<PBlacklistID> PARSER =
-        new com.google.protobuf.AbstractParser<PBlacklistID>() {
-      public PBlacklistID parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
-          return new PBlacklistID(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PBlacklistID> getParserForType() {
-      return PARSER;
-    }
-
-    public com.blemobi.sep.probuf.AccountProtos.PBlacklistID getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface PBlacklistRetOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PBlacklistRet)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>repeated int64 succList = 1;</code>
-     *
-     * <pre>
-     *成功的列表
-     * </pre>
-     */
-    java.util.List<java.lang.Long> getSuccListList();
-    /**
-     * <code>repeated int64 succList = 1;</code>
-     *
-     * <pre>
-     *成功的列表
-     * </pre>
-     */
-    int getSuccListCount();
-    /**
-     * <code>repeated int64 succList = 1;</code>
-     *
-     * <pre>
-     *成功的列表
-     * </pre>
-     */
-    long getSuccList(int index);
-
-    /**
-     * <code>repeated int64 failList = 2;</code>
-     *
-     * <pre>
-     *失败的列表
-     * </pre>
-     */
-    java.util.List<java.lang.Long> getFailListList();
-    /**
-     * <code>repeated int64 failList = 2;</code>
-     *
-     * <pre>
-     *失败的列表
-     * </pre>
-     */
-    int getFailListCount();
-    /**
-     * <code>repeated int64 failList = 2;</code>
-     *
-     * <pre>
-     *失败的列表
-     * </pre>
-     */
-    long getFailList(int index);
-  }
-  /**
-   * Protobuf type {@code common.PBlacklistRet}
-   *
-   * <pre>
-   *黑名单列表返回
-   * </pre>
-   */
-  public  static final class PBlacklistRet extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PBlacklistRet)
-      PBlacklistRetOrBuilder {
-    // Use PBlacklistRet.newBuilder() to construct.
-    private PBlacklistRet(com.google.protobuf.GeneratedMessage.Builder builder) {
-      super(builder);
-    }
-    private PBlacklistRet() {
-      succList_ = java.util.Collections.emptyList();
-      failList_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-    }
-    private PBlacklistRet(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
-      this();
-      int mutable_bitField0_ = 0;
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 8: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                succList_ = new java.util.ArrayList<java.lang.Long>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              succList_.add(input.readInt64());
-              break;
-            }
-            case 10: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001) && input.getBytesUntilLimit() > 0) {
-                succList_ = new java.util.ArrayList<java.lang.Long>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                succList_.add(input.readInt64());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 16: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                failList_ = new java.util.ArrayList<java.lang.Long>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              failList_.add(input.readInt64());
-              break;
-            }
-            case 18: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002) && input.getBytesUntilLimit() > 0) {
-                failList_ = new java.util.ArrayList<java.lang.Long>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                failList_.add(input.readInt64());
-              }
-              input.popLimit(limit);
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
-      } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-          succList_ = java.util.Collections.unmodifiableList(succList_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          failList_ = java.util.Collections.unmodifiableList(failList_);
-        }
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistRet_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistRet_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.AccountProtos.PBlacklistRet.class, com.blemobi.sep.probuf.AccountProtos.PBlacklistRet.Builder.class);
-    }
-
-    public static final int SUCCLIST_FIELD_NUMBER = 1;
-    private java.util.List<java.lang.Long> succList_;
-    /**
-     * <code>repeated int64 succList = 1;</code>
-     *
-     * <pre>
-     *成功的列表
-     * </pre>
-     */
-    public java.util.List<java.lang.Long>
-        getSuccListList() {
-      return succList_;
-    }
-    /**
-     * <code>repeated int64 succList = 1;</code>
-     *
-     * <pre>
-     *成功的列表
-     * </pre>
-     */
-    public int getSuccListCount() {
-      return succList_.size();
-    }
-    /**
-     * <code>repeated int64 succList = 1;</code>
-     *
-     * <pre>
-     *成功的列表
-     * </pre>
-     */
-    public long getSuccList(int index) {
-      return succList_.get(index);
-    }
-    private int succListMemoizedSerializedSize = -1;
-
-    public static final int FAILLIST_FIELD_NUMBER = 2;
-    private java.util.List<java.lang.Long> failList_;
-    /**
-     * <code>repeated int64 failList = 2;</code>
-     *
-     * <pre>
-     *失败的列表
-     * </pre>
-     */
-    public java.util.List<java.lang.Long>
-        getFailListList() {
-      return failList_;
-    }
-    /**
-     * <code>repeated int64 failList = 2;</code>
-     *
-     * <pre>
-     *失败的列表
-     * </pre>
-     */
-    public int getFailListCount() {
-      return failList_.size();
-    }
-    /**
-     * <code>repeated int64 failList = 2;</code>
-     *
-     * <pre>
-     *失败的列表
-     * </pre>
-     */
-    public long getFailList(int index) {
-      return failList_.get(index);
-    }
-    private int failListMemoizedSerializedSize = -1;
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (getSuccListList().size() > 0) {
-        output.writeRawVarint32(10);
-        output.writeRawVarint32(succListMemoizedSerializedSize);
-      }
-      for (int i = 0; i < succList_.size(); i++) {
-        output.writeInt64NoTag(succList_.get(i));
-      }
-      if (getFailListList().size() > 0) {
-        output.writeRawVarint32(18);
-        output.writeRawVarint32(failListMemoizedSerializedSize);
-      }
-      for (int i = 0; i < failList_.size(); i++) {
-        output.writeInt64NoTag(failList_.get(i));
-      }
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      {
-        int dataSize = 0;
-        for (int i = 0; i < succList_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeInt64SizeNoTag(succList_.get(i));
-        }
-        size += dataSize;
-        if (!getSuccListList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        succListMemoizedSerializedSize = dataSize;
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < failList_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeInt64SizeNoTag(failList_.get(i));
-        }
-        size += dataSize;
-        if (!getFailListList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        failListMemoizedSerializedSize = dataSize;
-      }
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistRet parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistRet parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistRet parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistRet parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistRet parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistRet parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistRet parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistRet parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistRet parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistRet parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.blemobi.sep.probuf.AccountProtos.PBlacklistRet prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code common.PBlacklistRet}
-     *
-     * <pre>
-     *黑名单列表返回
-     * </pre>
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PBlacklistRet)
-        com.blemobi.sep.probuf.AccountProtos.PBlacklistRetOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistRet_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistRet_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.AccountProtos.PBlacklistRet.class, com.blemobi.sep.probuf.AccountProtos.PBlacklistRet.Builder.class);
-      }
-
-      // Construct using com.blemobi.sep.probuf.AccountProtos.PBlacklistRet.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        succList_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        failList_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistRet_descriptor;
-      }
-
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklistRet getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.AccountProtos.PBlacklistRet.getDefaultInstance();
-      }
-
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklistRet build() {
-        com.blemobi.sep.probuf.AccountProtos.PBlacklistRet result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklistRet buildPartial() {
-        com.blemobi.sep.probuf.AccountProtos.PBlacklistRet result = new com.blemobi.sep.probuf.AccountProtos.PBlacklistRet(this);
-        int from_bitField0_ = bitField0_;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          succList_ = java.util.Collections.unmodifiableList(succList_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.succList_ = succList_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          failList_ = java.util.Collections.unmodifiableList(failList_);
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.failList_ = failList_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.AccountProtos.PBlacklistRet) {
-          return mergeFrom((com.blemobi.sep.probuf.AccountProtos.PBlacklistRet)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.blemobi.sep.probuf.AccountProtos.PBlacklistRet other) {
-        if (other == com.blemobi.sep.probuf.AccountProtos.PBlacklistRet.getDefaultInstance()) return this;
-        if (!other.succList_.isEmpty()) {
-          if (succList_.isEmpty()) {
-            succList_ = other.succList_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureSuccListIsMutable();
-            succList_.addAll(other.succList_);
-          }
-          onChanged();
-        }
-        if (!other.failList_.isEmpty()) {
-          if (failList_.isEmpty()) {
-            failList_ = other.failList_;
-            bitField0_ = (bitField0_ & ~0x00000002);
-          } else {
-            ensureFailListIsMutable();
-            failList_.addAll(other.failList_);
-          }
-          onChanged();
-        }
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.blemobi.sep.probuf.AccountProtos.PBlacklistRet parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.AccountProtos.PBlacklistRet) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<java.lang.Long> succList_ = java.util.Collections.emptyList();
-      private void ensureSuccListIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          succList_ = new java.util.ArrayList<java.lang.Long>(succList_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <code>repeated int64 succList = 1;</code>
-       *
-       * <pre>
-       *成功的列表
-       * </pre>
-       */
-      public java.util.List<java.lang.Long>
-          getSuccListList() {
-        return java.util.Collections.unmodifiableList(succList_);
-      }
-      /**
-       * <code>repeated int64 succList = 1;</code>
-       *
-       * <pre>
-       *成功的列表
-       * </pre>
-       */
-      public int getSuccListCount() {
-        return succList_.size();
-      }
-      /**
-       * <code>repeated int64 succList = 1;</code>
-       *
-       * <pre>
-       *成功的列表
-       * </pre>
-       */
-      public long getSuccList(int index) {
-        return succList_.get(index);
-      }
-      /**
-       * <code>repeated int64 succList = 1;</code>
-       *
-       * <pre>
-       *成功的列表
-       * </pre>
-       */
-      public Builder setSuccList(
-          int index, long value) {
-        ensureSuccListIsMutable();
-        succList_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated int64 succList = 1;</code>
-       *
-       * <pre>
-       *成功的列表
-       * </pre>
-       */
-      public Builder addSuccList(long value) {
-        ensureSuccListIsMutable();
-        succList_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated int64 succList = 1;</code>
-       *
-       * <pre>
-       *成功的列表
-       * </pre>
-       */
-      public Builder addAllSuccList(
-          java.lang.Iterable<? extends java.lang.Long> values) {
-        ensureSuccListIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, succList_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated int64 succList = 1;</code>
-       *
-       * <pre>
-       *成功的列表
-       * </pre>
-       */
-      public Builder clearSuccList() {
-        succList_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-
-      private java.util.List<java.lang.Long> failList_ = java.util.Collections.emptyList();
-      private void ensureFailListIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          failList_ = new java.util.ArrayList<java.lang.Long>(failList_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-      /**
-       * <code>repeated int64 failList = 2;</code>
-       *
-       * <pre>
-       *失败的列表
-       * </pre>
-       */
-      public java.util.List<java.lang.Long>
-          getFailListList() {
-        return java.util.Collections.unmodifiableList(failList_);
-      }
-      /**
-       * <code>repeated int64 failList = 2;</code>
-       *
-       * <pre>
-       *失败的列表
-       * </pre>
-       */
-      public int getFailListCount() {
-        return failList_.size();
-      }
-      /**
-       * <code>repeated int64 failList = 2;</code>
-       *
-       * <pre>
-       *失败的列表
-       * </pre>
-       */
-      public long getFailList(int index) {
-        return failList_.get(index);
-      }
-      /**
-       * <code>repeated int64 failList = 2;</code>
-       *
-       * <pre>
-       *失败的列表
-       * </pre>
-       */
-      public Builder setFailList(
-          int index, long value) {
-        ensureFailListIsMutable();
-        failList_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated int64 failList = 2;</code>
-       *
-       * <pre>
-       *失败的列表
-       * </pre>
-       */
-      public Builder addFailList(long value) {
-        ensureFailListIsMutable();
-        failList_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated int64 failList = 2;</code>
-       *
-       * <pre>
-       *失败的列表
-       * </pre>
-       */
-      public Builder addAllFailList(
-          java.lang.Iterable<? extends java.lang.Long> values) {
-        ensureFailListIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, failList_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated int64 failList = 2;</code>
-       *
-       * <pre>
-       *失败的列表
-       * </pre>
-       */
-      public Builder clearFailList() {
-        failList_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:common.PBlacklistRet)
-    }
-
-    // @@protoc_insertion_point(class_scope:common.PBlacklistRet)
-    private static final com.blemobi.sep.probuf.AccountProtos.PBlacklistRet DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.AccountProtos.PBlacklistRet();
-    }
-
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistRet getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    public static final com.google.protobuf.Parser<PBlacklistRet> PARSER =
-        new com.google.protobuf.AbstractParser<PBlacklistRet>() {
-      public PBlacklistRet parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
-          return new PBlacklistRet(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PBlacklistRet> getParserForType() {
-      return PARSER;
-    }
-
-    public com.blemobi.sep.probuf.AccountProtos.PBlacklistRet getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface PBlacklistExRetOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PBlacklistExRet)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>repeated .common.PBlacklist succList = 1;</code>
-     *
-     * <pre>
-     *成功的黑名单列表
-     * </pre>
-     */
-    java.util.List<com.blemobi.sep.probuf.AccountProtos.PBlacklist> 
-        getSuccListList();
-    /**
-     * <code>repeated .common.PBlacklist succList = 1;</code>
-     *
-     * <pre>
-     *成功的黑名单列表
-     * </pre>
-     */
-    com.blemobi.sep.probuf.AccountProtos.PBlacklist getSuccList(int index);
-    /**
-     * <code>repeated .common.PBlacklist succList = 1;</code>
-     *
-     * <pre>
-     *成功的黑名单列表
-     * </pre>
-     */
-    int getSuccListCount();
-    /**
-     * <code>repeated .common.PBlacklist succList = 1;</code>
-     *
-     * <pre>
-     *成功的黑名单列表
-     * </pre>
-     */
-    java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder> 
-        getSuccListOrBuilderList();
-    /**
-     * <code>repeated .common.PBlacklist succList = 1;</code>
-     *
-     * <pre>
-     *成功的黑名单列表
-     * </pre>
-     */
-    com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder getSuccListOrBuilder(
-        int index);
-
-    /**
-     * <code>repeated .common.PBlacklist existList = 2;</code>
-     *
-     * <pre>
-     *已经存在的黑名单列表
-     * </pre>
-     */
-    java.util.List<com.blemobi.sep.probuf.AccountProtos.PBlacklist> 
-        getExistListList();
-    /**
-     * <code>repeated .common.PBlacklist existList = 2;</code>
-     *
-     * <pre>
-     *已经存在的黑名单列表
-     * </pre>
-     */
-    com.blemobi.sep.probuf.AccountProtos.PBlacklist getExistList(int index);
-    /**
-     * <code>repeated .common.PBlacklist existList = 2;</code>
-     *
-     * <pre>
-     *已经存在的黑名单列表
-     * </pre>
-     */
-    int getExistListCount();
-    /**
-     * <code>repeated .common.PBlacklist existList = 2;</code>
-     *
-     * <pre>
-     *已经存在的黑名单列表
-     * </pre>
-     */
-    java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder> 
-        getExistListOrBuilderList();
-    /**
-     * <code>repeated .common.PBlacklist existList = 2;</code>
-     *
-     * <pre>
-     *已经存在的黑名单列表
-     * </pre>
-     */
-    com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder getExistListOrBuilder(
-        int index);
-
-    /**
-     * <code>repeated string failList = 3;</code>
-     *
-     * <pre>
-     *失败的列表
-     * </pre>
-     */
-    com.google.protobuf.ProtocolStringList
-        getFailListList();
-    /**
-     * <code>repeated string failList = 3;</code>
-     *
-     * <pre>
-     *失败的列表
-     * </pre>
-     */
-    int getFailListCount();
-    /**
-     * <code>repeated string failList = 3;</code>
-     *
-     * <pre>
-     *失败的列表
-     * </pre>
-     */
-    java.lang.String getFailList(int index);
-    /**
-     * <code>repeated string failList = 3;</code>
-     *
-     * <pre>
-     *失败的列表
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getFailListBytes(int index);
-  }
-  /**
-   * Protobuf type {@code common.PBlacklistExRet}
-   *
-   * <pre>
-   *黑名单列表返回
-   * </pre>
-   */
-  public  static final class PBlacklistExRet extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PBlacklistExRet)
-      PBlacklistExRetOrBuilder {
-    // Use PBlacklistExRet.newBuilder() to construct.
-    private PBlacklistExRet(com.google.protobuf.GeneratedMessage.Builder builder) {
-      super(builder);
-    }
-    private PBlacklistExRet() {
-      succList_ = java.util.Collections.emptyList();
-      existList_ = java.util.Collections.emptyList();
-      failList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-    }
-    private PBlacklistExRet(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
-      this();
-      int mutable_bitField0_ = 0;
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                succList_ = new java.util.ArrayList<com.blemobi.sep.probuf.AccountProtos.PBlacklist>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              succList_.add(input.readMessage(com.blemobi.sep.probuf.AccountProtos.PBlacklist.PARSER, extensionRegistry));
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                existList_ = new java.util.ArrayList<com.blemobi.sep.probuf.AccountProtos.PBlacklist>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              existList_.add(input.readMessage(com.blemobi.sep.probuf.AccountProtos.PBlacklist.PARSER, extensionRegistry));
-              break;
-            }
-            case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                failList_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              failList_.add(bs);
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
-      } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-          succList_ = java.util.Collections.unmodifiableList(succList_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          existList_ = java.util.Collections.unmodifiableList(existList_);
-        }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-          failList_ = failList_.getUnmodifiableView();
-        }
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistExRet_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistExRet_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet.class, com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet.Builder.class);
-    }
-
-    public static final int SUCCLIST_FIELD_NUMBER = 1;
-    private java.util.List<com.blemobi.sep.probuf.AccountProtos.PBlacklist> succList_;
-    /**
-     * <code>repeated .common.PBlacklist succList = 1;</code>
-     *
-     * <pre>
-     *成功的黑名单列表
-     * </pre>
-     */
-    public java.util.List<com.blemobi.sep.probuf.AccountProtos.PBlacklist> getSuccListList() {
-      return succList_;
-    }
-    /**
-     * <code>repeated .common.PBlacklist succList = 1;</code>
-     *
-     * <pre>
-     *成功的黑名单列表
-     * </pre>
-     */
-    public java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder> 
-        getSuccListOrBuilderList() {
-      return succList_;
-    }
-    /**
-     * <code>repeated .common.PBlacklist succList = 1;</code>
-     *
-     * <pre>
-     *成功的黑名单列表
-     * </pre>
-     */
-    public int getSuccListCount() {
-      return succList_.size();
-    }
-    /**
-     * <code>repeated .common.PBlacklist succList = 1;</code>
-     *
-     * <pre>
-     *成功的黑名单列表
-     * </pre>
-     */
-    public com.blemobi.sep.probuf.AccountProtos.PBlacklist getSuccList(int index) {
-      return succList_.get(index);
-    }
-    /**
-     * <code>repeated .common.PBlacklist succList = 1;</code>
-     *
-     * <pre>
-     *成功的黑名单列表
-     * </pre>
-     */
-    public com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder getSuccListOrBuilder(
-        int index) {
-      return succList_.get(index);
-    }
-
-    public static final int EXISTLIST_FIELD_NUMBER = 2;
-    private java.util.List<com.blemobi.sep.probuf.AccountProtos.PBlacklist> existList_;
-    /**
-     * <code>repeated .common.PBlacklist existList = 2;</code>
-     *
-     * <pre>
-     *已经存在的黑名单列表
-     * </pre>
-     */
-    public java.util.List<com.blemobi.sep.probuf.AccountProtos.PBlacklist> getExistListList() {
-      return existList_;
-    }
-    /**
-     * <code>repeated .common.PBlacklist existList = 2;</code>
-     *
-     * <pre>
-     *已经存在的黑名单列表
-     * </pre>
-     */
-    public java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder> 
-        getExistListOrBuilderList() {
-      return existList_;
-    }
-    /**
-     * <code>repeated .common.PBlacklist existList = 2;</code>
-     *
-     * <pre>
-     *已经存在的黑名单列表
-     * </pre>
-     */
-    public int getExistListCount() {
-      return existList_.size();
-    }
-    /**
-     * <code>repeated .common.PBlacklist existList = 2;</code>
-     *
-     * <pre>
-     *已经存在的黑名单列表
-     * </pre>
-     */
-    public com.blemobi.sep.probuf.AccountProtos.PBlacklist getExistList(int index) {
-      return existList_.get(index);
-    }
-    /**
-     * <code>repeated .common.PBlacklist existList = 2;</code>
-     *
-     * <pre>
-     *已经存在的黑名单列表
-     * </pre>
-     */
-    public com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder getExistListOrBuilder(
-        int index) {
-      return existList_.get(index);
-    }
-
-    public static final int FAILLIST_FIELD_NUMBER = 3;
-    private com.google.protobuf.LazyStringList failList_;
-    /**
-     * <code>repeated string failList = 3;</code>
-     *
-     * <pre>
-     *失败的列表
-     * </pre>
-     */
-    public com.google.protobuf.ProtocolStringList
-        getFailListList() {
-      return failList_;
-    }
-    /**
-     * <code>repeated string failList = 3;</code>
-     *
-     * <pre>
-     *失败的列表
-     * </pre>
-     */
-    public int getFailListCount() {
-      return failList_.size();
-    }
-    /**
-     * <code>repeated string failList = 3;</code>
-     *
-     * <pre>
-     *失败的列表
-     * </pre>
-     */
-    public java.lang.String getFailList(int index) {
-      return failList_.get(index);
-    }
-    /**
-     * <code>repeated string failList = 3;</code>
-     *
-     * <pre>
-     *失败的列表
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getFailListBytes(int index) {
-      return failList_.getByteString(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < succList_.size(); i++) {
-        output.writeMessage(1, succList_.get(i));
-      }
-      for (int i = 0; i < existList_.size(); i++) {
-        output.writeMessage(2, existList_.get(i));
-      }
-      for (int i = 0; i < failList_.size(); i++) {
-        output.writeBytes(3, failList_.getByteString(i));
-      }
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < succList_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, succList_.get(i));
-      }
-      for (int i = 0; i < existList_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, existList_.get(i));
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < failList_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(failList_.getByteString(i));
-        }
-        size += dataSize;
-        size += 1 * getFailListList().size();
-      }
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code common.PBlacklistExRet}
-     *
-     * <pre>
-     *黑名单列表返回
-     * </pre>
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PBlacklistExRet)
-        com.blemobi.sep.probuf.AccountProtos.PBlacklistExRetOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistExRet_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistExRet_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet.class, com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet.Builder.class);
-      }
-
-      // Construct using com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getSuccListFieldBuilder();
-          getExistListFieldBuilder();
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        if (succListBuilder_ == null) {
-          succList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          succListBuilder_.clear();
-        }
-        if (existListBuilder_ == null) {
-          existList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        } else {
-          existListBuilder_.clear();
-        }
-        failList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistExRet_descriptor;
-      }
-
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet.getDefaultInstance();
-      }
-
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet build() {
-        com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet buildPartial() {
-        com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet result = new com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet(this);
-        int from_bitField0_ = bitField0_;
-        if (succListBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
-            succList_ = java.util.Collections.unmodifiableList(succList_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.succList_ = succList_;
-        } else {
-          result.succList_ = succListBuilder_.build();
-        }
-        if (existListBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            existList_ = java.util.Collections.unmodifiableList(existList_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.existList_ = existList_;
-        } else {
-          result.existList_ = existListBuilder_.build();
-        }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          failList_ = failList_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        }
-        result.failList_ = failList_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet) {
-          return mergeFrom((com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet other) {
-        if (other == com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet.getDefaultInstance()) return this;
-        if (succListBuilder_ == null) {
-          if (!other.succList_.isEmpty()) {
-            if (succList_.isEmpty()) {
-              succList_ = other.succList_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureSuccListIsMutable();
-              succList_.addAll(other.succList_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.succList_.isEmpty()) {
-            if (succListBuilder_.isEmpty()) {
-              succListBuilder_.dispose();
-              succListBuilder_ = null;
-              succList_ = other.succList_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              succListBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getSuccListFieldBuilder() : null;
-            } else {
-              succListBuilder_.addAllMessages(other.succList_);
-            }
-          }
-        }
-        if (existListBuilder_ == null) {
-          if (!other.existList_.isEmpty()) {
-            if (existList_.isEmpty()) {
-              existList_ = other.existList_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureExistListIsMutable();
-              existList_.addAll(other.existList_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.existList_.isEmpty()) {
-            if (existListBuilder_.isEmpty()) {
-              existListBuilder_.dispose();
-              existListBuilder_ = null;
-              existList_ = other.existList_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              existListBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getExistListFieldBuilder() : null;
-            } else {
-              existListBuilder_.addAllMessages(other.existList_);
-            }
-          }
-        }
-        if (!other.failList_.isEmpty()) {
-          if (failList_.isEmpty()) {
-            failList_ = other.failList_;
-            bitField0_ = (bitField0_ & ~0x00000004);
-          } else {
-            ensureFailListIsMutable();
-            failList_.addAll(other.failList_);
-          }
-          onChanged();
-        }
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<com.blemobi.sep.probuf.AccountProtos.PBlacklist> succList_ =
-        java.util.Collections.emptyList();
-      private void ensureSuccListIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          succList_ = new java.util.ArrayList<com.blemobi.sep.probuf.AccountProtos.PBlacklist>(succList_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.AccountProtos.PBlacklist, com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder, com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder> succListBuilder_;
-
-      /**
-       * <code>repeated .common.PBlacklist succList = 1;</code>
-       *
-       * <pre>
-       *成功的黑名单列表
-       * </pre>
-       */
-      public java.util.List<com.blemobi.sep.probuf.AccountProtos.PBlacklist> getSuccListList() {
-        if (succListBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(succList_);
-        } else {
-          return succListBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .common.PBlacklist succList = 1;</code>
-       *
-       * <pre>
-       *成功的黑名单列表
-       * </pre>
-       */
-      public int getSuccListCount() {
-        if (succListBuilder_ == null) {
-          return succList_.size();
-        } else {
-          return succListBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .common.PBlacklist succList = 1;</code>
-       *
-       * <pre>
-       *成功的黑名单列表
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklist getSuccList(int index) {
-        if (succListBuilder_ == null) {
-          return succList_.get(index);
-        } else {
-          return succListBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .common.PBlacklist succList = 1;</code>
-       *
-       * <pre>
-       *成功的黑名单列表
-       * </pre>
-       */
-      public Builder setSuccList(
-          int index, com.blemobi.sep.probuf.AccountProtos.PBlacklist value) {
-        if (succListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSuccListIsMutable();
-          succList_.set(index, value);
-          onChanged();
-        } else {
-          succListBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .common.PBlacklist succList = 1;</code>
-       *
-       * <pre>
-       *成功的黑名单列表
-       * </pre>
-       */
-      public Builder setSuccList(
-          int index, com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder builderForValue) {
-        if (succListBuilder_ == null) {
-          ensureSuccListIsMutable();
-          succList_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          succListBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .common.PBlacklist succList = 1;</code>
-       *
-       * <pre>
-       *成功的黑名单列表
-       * </pre>
-       */
-      public Builder addSuccList(com.blemobi.sep.probuf.AccountProtos.PBlacklist value) {
-        if (succListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSuccListIsMutable();
-          succList_.add(value);
-          onChanged();
-        } else {
-          succListBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .common.PBlacklist succList = 1;</code>
-       *
-       * <pre>
-       *成功的黑名单列表
-       * </pre>
-       */
-      public Builder addSuccList(
-          int index, com.blemobi.sep.probuf.AccountProtos.PBlacklist value) {
-        if (succListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSuccListIsMutable();
-          succList_.add(index, value);
-          onChanged();
-        } else {
-          succListBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .common.PBlacklist succList = 1;</code>
-       *
-       * <pre>
-       *成功的黑名单列表
-       * </pre>
-       */
-      public Builder addSuccList(
-          com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder builderForValue) {
-        if (succListBuilder_ == null) {
-          ensureSuccListIsMutable();
-          succList_.add(builderForValue.build());
-          onChanged();
-        } else {
-          succListBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .common.PBlacklist succList = 1;</code>
-       *
-       * <pre>
-       *成功的黑名单列表
-       * </pre>
-       */
-      public Builder addSuccList(
-          int index, com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder builderForValue) {
-        if (succListBuilder_ == null) {
-          ensureSuccListIsMutable();
-          succList_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          succListBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .common.PBlacklist succList = 1;</code>
-       *
-       * <pre>
-       *成功的黑名单列表
-       * </pre>
-       */
-      public Builder addAllSuccList(
-          java.lang.Iterable<? extends com.blemobi.sep.probuf.AccountProtos.PBlacklist> values) {
-        if (succListBuilder_ == null) {
-          ensureSuccListIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, succList_);
-          onChanged();
-        } else {
-          succListBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .common.PBlacklist succList = 1;</code>
-       *
-       * <pre>
-       *成功的黑名单列表
-       * </pre>
-       */
-      public Builder clearSuccList() {
-        if (succListBuilder_ == null) {
-          succList_ = java.util.Collections.emptyList();
+        if (listBuilder_ == null) {
+          list_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
-          succListBuilder_.clear();
+          listBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .common.PBlacklist succList = 1;</code>
-       *
-       * <pre>
-       *成功的黑名单列表
-       * </pre>
+       * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
        */
-      public Builder removeSuccList(int index) {
-        if (succListBuilder_ == null) {
-          ensureSuccListIsMutable();
-          succList_.remove(index);
+      public Builder removeList(int index) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          list_.remove(index);
           onChanged();
         } else {
-          succListBuilder_.remove(index);
+          listBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .common.PBlacklist succList = 1;</code>
-       *
-       * <pre>
-       *成功的黑名单列表
-       * </pre>
+       * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
        */
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder getSuccListBuilder(
+      public com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo.Builder getListBuilder(
           int index) {
-        return getSuccListFieldBuilder().getBuilder(index);
+        return getListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PBlacklist succList = 1;</code>
-       *
-       * <pre>
-       *成功的黑名单列表
-       * </pre>
+       * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
        */
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder getSuccListOrBuilder(
+      public com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoOrBuilder getListOrBuilder(
           int index) {
-        if (succListBuilder_ == null) {
-          return succList_.get(index);  } else {
-          return succListBuilder_.getMessageOrBuilder(index);
+        if (listBuilder_ == null) {
+          return list_.get(index);  } else {
+          return listBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .common.PBlacklist succList = 1;</code>
-       *
-       * <pre>
-       *成功的黑名单列表
-       * </pre>
+       * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
        */
-      public java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder> 
-           getSuccListOrBuilderList() {
-        if (succListBuilder_ != null) {
-          return succListBuilder_.getMessageOrBuilderList();
+      public java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoOrBuilder> 
+           getListOrBuilderList() {
+        if (listBuilder_ != null) {
+          return listBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(succList_);
+          return java.util.Collections.unmodifiableList(list_);
         }
       }
       /**
-       * <code>repeated .common.PBlacklist succList = 1;</code>
-       *
-       * <pre>
-       *成功的黑名单列表
-       * </pre>
+       * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
        */
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder addSuccListBuilder() {
-        return getSuccListFieldBuilder().addBuilder(
-            com.blemobi.sep.probuf.AccountProtos.PBlacklist.getDefaultInstance());
+      public com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo.Builder addListBuilder() {
+        return getListFieldBuilder().addBuilder(
+            com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PBlacklist succList = 1;</code>
-       *
-       * <pre>
-       *成功的黑名单列表
-       * </pre>
+       * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
        */
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder addSuccListBuilder(
+      public com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo.Builder addListBuilder(
           int index) {
-        return getSuccListFieldBuilder().addBuilder(
-            index, com.blemobi.sep.probuf.AccountProtos.PBlacklist.getDefaultInstance());
+        return getListFieldBuilder().addBuilder(
+            index, com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PBlacklist succList = 1;</code>
-       *
-       * <pre>
-       *成功的黑名单列表
-       * </pre>
+       * <code>repeated .common.PReadNameAuthInfo list = 1;</code>
        */
-      public java.util.List<com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder> 
-           getSuccListBuilderList() {
-        return getSuccListFieldBuilder().getBuilderList();
+      public java.util.List<com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo.Builder> 
+           getListBuilderList() {
+        return getListFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.AccountProtos.PBlacklist, com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder, com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder> 
-          getSuccListFieldBuilder() {
-        if (succListBuilder_ == null) {
-          succListBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              com.blemobi.sep.probuf.AccountProtos.PBlacklist, com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder, com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder>(
-                  succList_,
+          com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo, com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo.Builder, com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoOrBuilder> 
+          getListFieldBuilder() {
+        if (listBuilder_ == null) {
+          listBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo, com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfo.Builder, com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoOrBuilder>(
+                  list_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
                   isClean());
-          succList_ = null;
+          list_ = null;
         }
-        return succListBuilder_;
-      }
-
-      private java.util.List<com.blemobi.sep.probuf.AccountProtos.PBlacklist> existList_ =
-        java.util.Collections.emptyList();
-      private void ensureExistListIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          existList_ = new java.util.ArrayList<com.blemobi.sep.probuf.AccountProtos.PBlacklist>(existList_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.AccountProtos.PBlacklist, com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder, com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder> existListBuilder_;
-
-      /**
-       * <code>repeated .common.PBlacklist existList = 2;</code>
-       *
-       * <pre>
-       *已经存在的黑名单列表
-       * </pre>
-       */
-      public java.util.List<com.blemobi.sep.probuf.AccountProtos.PBlacklist> getExistListList() {
-        if (existListBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(existList_);
-        } else {
-          return existListBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .common.PBlacklist existList = 2;</code>
-       *
-       * <pre>
-       *已经存在的黑名单列表
-       * </pre>
-       */
-      public int getExistListCount() {
-        if (existListBuilder_ == null) {
-          return existList_.size();
-        } else {
-          return existListBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .common.PBlacklist existList = 2;</code>
-       *
-       * <pre>
-       *已经存在的黑名单列表
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklist getExistList(int index) {
-        if (existListBuilder_ == null) {
-          return existList_.get(index);
-        } else {
-          return existListBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .common.PBlacklist existList = 2;</code>
-       *
-       * <pre>
-       *已经存在的黑名单列表
-       * </pre>
-       */
-      public Builder setExistList(
-          int index, com.blemobi.sep.probuf.AccountProtos.PBlacklist value) {
-        if (existListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureExistListIsMutable();
-          existList_.set(index, value);
-          onChanged();
-        } else {
-          existListBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .common.PBlacklist existList = 2;</code>
-       *
-       * <pre>
-       *已经存在的黑名单列表
-       * </pre>
-       */
-      public Builder setExistList(
-          int index, com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder builderForValue) {
-        if (existListBuilder_ == null) {
-          ensureExistListIsMutable();
-          existList_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          existListBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .common.PBlacklist existList = 2;</code>
-       *
-       * <pre>
-       *已经存在的黑名单列表
-       * </pre>
-       */
-      public Builder addExistList(com.blemobi.sep.probuf.AccountProtos.PBlacklist value) {
-        if (existListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureExistListIsMutable();
-          existList_.add(value);
-          onChanged();
-        } else {
-          existListBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .common.PBlacklist existList = 2;</code>
-       *
-       * <pre>
-       *已经存在的黑名单列表
-       * </pre>
-       */
-      public Builder addExistList(
-          int index, com.blemobi.sep.probuf.AccountProtos.PBlacklist value) {
-        if (existListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureExistListIsMutable();
-          existList_.add(index, value);
-          onChanged();
-        } else {
-          existListBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .common.PBlacklist existList = 2;</code>
-       *
-       * <pre>
-       *已经存在的黑名单列表
-       * </pre>
-       */
-      public Builder addExistList(
-          com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder builderForValue) {
-        if (existListBuilder_ == null) {
-          ensureExistListIsMutable();
-          existList_.add(builderForValue.build());
-          onChanged();
-        } else {
-          existListBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .common.PBlacklist existList = 2;</code>
-       *
-       * <pre>
-       *已经存在的黑名单列表
-       * </pre>
-       */
-      public Builder addExistList(
-          int index, com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder builderForValue) {
-        if (existListBuilder_ == null) {
-          ensureExistListIsMutable();
-          existList_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          existListBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .common.PBlacklist existList = 2;</code>
-       *
-       * <pre>
-       *已经存在的黑名单列表
-       * </pre>
-       */
-      public Builder addAllExistList(
-          java.lang.Iterable<? extends com.blemobi.sep.probuf.AccountProtos.PBlacklist> values) {
-        if (existListBuilder_ == null) {
-          ensureExistListIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, existList_);
-          onChanged();
-        } else {
-          existListBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .common.PBlacklist existList = 2;</code>
-       *
-       * <pre>
-       *已经存在的黑名单列表
-       * </pre>
-       */
-      public Builder clearExistList() {
-        if (existListBuilder_ == null) {
-          existList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          existListBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .common.PBlacklist existList = 2;</code>
-       *
-       * <pre>
-       *已经存在的黑名单列表
-       * </pre>
-       */
-      public Builder removeExistList(int index) {
-        if (existListBuilder_ == null) {
-          ensureExistListIsMutable();
-          existList_.remove(index);
-          onChanged();
-        } else {
-          existListBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .common.PBlacklist existList = 2;</code>
-       *
-       * <pre>
-       *已经存在的黑名单列表
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder getExistListBuilder(
-          int index) {
-        return getExistListFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .common.PBlacklist existList = 2;</code>
-       *
-       * <pre>
-       *已经存在的黑名单列表
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder getExistListOrBuilder(
-          int index) {
-        if (existListBuilder_ == null) {
-          return existList_.get(index);  } else {
-          return existListBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .common.PBlacklist existList = 2;</code>
-       *
-       * <pre>
-       *已经存在的黑名单列表
-       * </pre>
-       */
-      public java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder> 
-           getExistListOrBuilderList() {
-        if (existListBuilder_ != null) {
-          return existListBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(existList_);
-        }
-      }
-      /**
-       * <code>repeated .common.PBlacklist existList = 2;</code>
-       *
-       * <pre>
-       *已经存在的黑名单列表
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder addExistListBuilder() {
-        return getExistListFieldBuilder().addBuilder(
-            com.blemobi.sep.probuf.AccountProtos.PBlacklist.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .common.PBlacklist existList = 2;</code>
-       *
-       * <pre>
-       *已经存在的黑名单列表
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder addExistListBuilder(
-          int index) {
-        return getExistListFieldBuilder().addBuilder(
-            index, com.blemobi.sep.probuf.AccountProtos.PBlacklist.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .common.PBlacklist existList = 2;</code>
-       *
-       * <pre>
-       *已经存在的黑名单列表
-       * </pre>
-       */
-      public java.util.List<com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder> 
-           getExistListBuilderList() {
-        return getExistListFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.AccountProtos.PBlacklist, com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder, com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder> 
-          getExistListFieldBuilder() {
-        if (existListBuilder_ == null) {
-          existListBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              com.blemobi.sep.probuf.AccountProtos.PBlacklist, com.blemobi.sep.probuf.AccountProtos.PBlacklist.Builder, com.blemobi.sep.probuf.AccountProtos.PBlacklistOrBuilder>(
-                  existList_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
-                  getParentForChildren(),
-                  isClean());
-          existList_ = null;
-        }
-        return existListBuilder_;
-      }
-
-      private com.google.protobuf.LazyStringList failList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureFailListIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          failList_ = new com.google.protobuf.LazyStringArrayList(failList_);
-          bitField0_ |= 0x00000004;
-         }
-      }
-      /**
-       * <code>repeated string failList = 3;</code>
-       *
-       * <pre>
-       *失败的列表
-       * </pre>
-       */
-      public com.google.protobuf.ProtocolStringList
-          getFailListList() {
-        return failList_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string failList = 3;</code>
-       *
-       * <pre>
-       *失败的列表
-       * </pre>
-       */
-      public int getFailListCount() {
-        return failList_.size();
-      }
-      /**
-       * <code>repeated string failList = 3;</code>
-       *
-       * <pre>
-       *失败的列表
-       * </pre>
-       */
-      public java.lang.String getFailList(int index) {
-        return failList_.get(index);
-      }
-      /**
-       * <code>repeated string failList = 3;</code>
-       *
-       * <pre>
-       *失败的列表
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getFailListBytes(int index) {
-        return failList_.getByteString(index);
-      }
-      /**
-       * <code>repeated string failList = 3;</code>
-       *
-       * <pre>
-       *失败的列表
-       * </pre>
-       */
-      public Builder setFailList(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFailListIsMutable();
-        failList_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string failList = 3;</code>
-       *
-       * <pre>
-       *失败的列表
-       * </pre>
-       */
-      public Builder addFailList(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFailListIsMutable();
-        failList_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string failList = 3;</code>
-       *
-       * <pre>
-       *失败的列表
-       * </pre>
-       */
-      public Builder addAllFailList(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureFailListIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, failList_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string failList = 3;</code>
-       *
-       * <pre>
-       *失败的列表
-       * </pre>
-       */
-      public Builder clearFailList() {
-        failList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string failList = 3;</code>
-       *
-       * <pre>
-       *失败的列表
-       * </pre>
-       */
-      public Builder addFailListBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFailListIsMutable();
-        failList_.add(value);
-        onChanged();
-        return this;
+        return listBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -19210,27 +21538,27 @@ public final class AccountProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PBlacklistExRet)
+      // @@protoc_insertion_point(builder_scope:common.PReadNameAuthInfoList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PBlacklistExRet)
-    private static final com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:common.PReadNameAuthInfoList)
+    private static final com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet();
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList();
     }
 
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet getDefaultInstance() {
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PBlacklistExRet> PARSER =
-        new com.google.protobuf.AbstractParser<PBlacklistExRet>() {
-      public PBlacklistExRet parsePartialFrom(
+    public static final com.google.protobuf.Parser<PReadNameAuthInfoList> PARSER =
+        new com.google.protobuf.AbstractParser<PReadNameAuthInfoList>() {
+      public PReadNameAuthInfoList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         try {
-          return new PBlacklistExRet(input, extensionRegistry);
+          return new PReadNameAuthInfoList(input, extensionRegistry);
         } catch (RuntimeException e) {
           if (e.getCause() instanceof
               com.google.protobuf.InvalidProtocolBufferException) {
@@ -19243,45 +21571,41 @@ public final class AccountProtos {
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PBlacklistExRet> getParserForType() {
+    public com.google.protobuf.Parser<PReadNameAuthInfoList> getParserForType() {
       return PARSER;
     }
 
-    public com.blemobi.sep.probuf.AccountProtos.PBlacklistExRet getDefaultInstanceForType() {
+    public com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoList getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface PBlacklistCountOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PBlacklistCount)
+  public interface PReadNameAuthInfoCountOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:common.PReadNameAuthInfoCount)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional int64 count = 1;</code>
-     *
-     * <pre>
-     *黑名单数量
-     * </pre>
      */
     long getCount();
   }
   /**
-   * Protobuf type {@code common.PBlacklistCount}
+   * Protobuf type {@code common.PReadNameAuthInfoCount}
    *
    * <pre>
-   *黑名单列表数量
+   * 实名认证信息数量
    * </pre>
    */
-  public  static final class PBlacklistCount extends
+  public  static final class PReadNameAuthInfoCount extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PBlacklistCount)
-      PBlacklistCountOrBuilder {
-    // Use PBlacklistCount.newBuilder() to construct.
-    private PBlacklistCount(com.google.protobuf.GeneratedMessage.Builder builder) {
+      // @@protoc_insertion_point(message_implements:common.PReadNameAuthInfoCount)
+      PReadNameAuthInfoCountOrBuilder {
+    // Use PReadNameAuthInfoCount.newBuilder() to construct.
+    private PReadNameAuthInfoCount(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
-    private PBlacklistCount() {
+    private PReadNameAuthInfoCount() {
       count_ = 0L;
     }
 
@@ -19290,7 +21614,7 @@ public final class AccountProtos {
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
     }
-    private PBlacklistCount(
+    private PReadNameAuthInfoCount(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
       this();
@@ -19328,24 +21652,20 @@ public final class AccountProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistCount_descriptor;
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PReadNameAuthInfoCount_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistCount_fieldAccessorTable
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PReadNameAuthInfoCount_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.AccountProtos.PBlacklistCount.class, com.blemobi.sep.probuf.AccountProtos.PBlacklistCount.Builder.class);
+              com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount.class, com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount.Builder.class);
     }
 
     public static final int COUNT_FIELD_NUMBER = 1;
     private long count_;
     /**
      * <code>optional int64 count = 1;</code>
-     *
-     * <pre>
-     *黑名单数量
-     * </pre>
      */
     public long getCount() {
       return count_;
@@ -19383,53 +21703,53 @@ public final class AccountProtos {
     }
 
     private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistCount parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistCount parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistCount parseFrom(byte[] data)
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistCount parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistCount parseFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistCount parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistCount parseDelimitedFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistCount parseDelimitedFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistCount parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistCount parseFrom(
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -19440,7 +21760,7 @@ public final class AccountProtos {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.blemobi.sep.probuf.AccountProtos.PBlacklistCount prototype) {
+    public static Builder newBuilder(com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -19455,29 +21775,29 @@ public final class AccountProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PBlacklistCount}
+     * Protobuf type {@code common.PReadNameAuthInfoCount}
      *
      * <pre>
-     *黑名单列表数量
+     * 实名认证信息数量
      * </pre>
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PBlacklistCount)
-        com.blemobi.sep.probuf.AccountProtos.PBlacklistCountOrBuilder {
+        // @@protoc_insertion_point(builder_implements:common.PReadNameAuthInfoCount)
+        com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCountOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistCount_descriptor;
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PReadNameAuthInfoCount_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistCount_fieldAccessorTable
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PReadNameAuthInfoCount_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.AccountProtos.PBlacklistCount.class, com.blemobi.sep.probuf.AccountProtos.PBlacklistCount.Builder.class);
+                com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount.class, com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount.Builder.class);
       }
 
-      // Construct using com.blemobi.sep.probuf.AccountProtos.PBlacklistCount.newBuilder()
+      // Construct using com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -19500,39 +21820,39 @@ public final class AccountProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PBlacklistCount_descriptor;
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PReadNameAuthInfoCount_descriptor;
       }
 
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklistCount getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.AccountProtos.PBlacklistCount.getDefaultInstance();
+      public com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount.getDefaultInstance();
       }
 
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklistCount build() {
-        com.blemobi.sep.probuf.AccountProtos.PBlacklistCount result = buildPartial();
+      public com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount build() {
+        com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.blemobi.sep.probuf.AccountProtos.PBlacklistCount buildPartial() {
-        com.blemobi.sep.probuf.AccountProtos.PBlacklistCount result = new com.blemobi.sep.probuf.AccountProtos.PBlacklistCount(this);
+      public com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount buildPartial() {
+        com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount result = new com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount(this);
         result.count_ = count_;
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.AccountProtos.PBlacklistCount) {
-          return mergeFrom((com.blemobi.sep.probuf.AccountProtos.PBlacklistCount)other);
+        if (other instanceof com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount) {
+          return mergeFrom((com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.blemobi.sep.probuf.AccountProtos.PBlacklistCount other) {
-        if (other == com.blemobi.sep.probuf.AccountProtos.PBlacklistCount.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount other) {
+        if (other == com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount.getDefaultInstance()) return this;
         if (other.getCount() != 0L) {
           setCount(other.getCount());
         }
@@ -19548,11 +21868,11 @@ public final class AccountProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.blemobi.sep.probuf.AccountProtos.PBlacklistCount parsedMessage = null;
+        com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.AccountProtos.PBlacklistCount) e.getUnfinishedMessage();
+          parsedMessage = (com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -19565,20 +21885,12 @@ public final class AccountProtos {
       private long count_ ;
       /**
        * <code>optional int64 count = 1;</code>
-       *
-       * <pre>
-       *黑名单数量
-       * </pre>
        */
       public long getCount() {
         return count_;
       }
       /**
        * <code>optional int64 count = 1;</code>
-       *
-       * <pre>
-       *黑名单数量
-       * </pre>
        */
       public Builder setCount(long value) {
         
@@ -19588,10 +21900,6 @@ public final class AccountProtos {
       }
       /**
        * <code>optional int64 count = 1;</code>
-       *
-       * <pre>
-       *黑名单数量
-       * </pre>
        */
       public Builder clearCount() {
         
@@ -19610,27 +21918,27 @@ public final class AccountProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PBlacklistCount)
+      // @@protoc_insertion_point(builder_scope:common.PReadNameAuthInfoCount)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PBlacklistCount)
-    private static final com.blemobi.sep.probuf.AccountProtos.PBlacklistCount DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:common.PReadNameAuthInfoCount)
+    private static final com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.AccountProtos.PBlacklistCount();
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount();
     }
 
-    public static com.blemobi.sep.probuf.AccountProtos.PBlacklistCount getDefaultInstance() {
+    public static com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PBlacklistCount> PARSER =
-        new com.google.protobuf.AbstractParser<PBlacklistCount>() {
-      public PBlacklistCount parsePartialFrom(
+    public static final com.google.protobuf.Parser<PReadNameAuthInfoCount> PARSER =
+        new com.google.protobuf.AbstractParser<PReadNameAuthInfoCount>() {
+      public PReadNameAuthInfoCount parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         try {
-          return new PBlacklistCount(input, extensionRegistry);
+          return new PReadNameAuthInfoCount(input, extensionRegistry);
         } catch (RuntimeException e) {
           if (e.getCause() instanceof
               com.google.protobuf.InvalidProtocolBufferException) {
@@ -19643,11 +21951,5037 @@ public final class AccountProtos {
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PBlacklistCount> getParserForType() {
+    public com.google.protobuf.Parser<PReadNameAuthInfoCount> getParserForType() {
       return PARSER;
     }
 
-    public com.blemobi.sep.probuf.AccountProtos.PBlacklistCount getDefaultInstanceForType() {
+    public com.blemobi.sep.probuf.AccountProtos.PReadNameAuthInfoCount getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PPrivacyInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:common.PPrivacyInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional bool myFans = 1;</code>
+     *
+     * <pre>
+     *我的粉丝(不让他(她)看我的贴子)
+     * </pre>
+     */
+    boolean getMyFans();
+
+    /**
+     * <code>optional bool myAttention = 2;</code>
+     *
+     * <pre>
+     *我关注的人(不看他(她)的贴子)
+     * </pre>
+     */
+    boolean getMyAttention();
+  }
+  /**
+   * Protobuf type {@code common.PPrivacyInfo}
+   *
+   * <pre>
+   * 隐私信息
+   * </pre>
+   */
+  public  static final class PPrivacyInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:common.PPrivacyInfo)
+      PPrivacyInfoOrBuilder {
+    // Use PPrivacyInfo.newBuilder() to construct.
+    private PPrivacyInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PPrivacyInfo() {
+      myFans_ = false;
+      myAttention_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PPrivacyInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              myFans_ = input.readBool();
+              break;
+            }
+            case 16: {
+
+              myAttention_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PPrivacyInfo_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PPrivacyInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo.class, com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo.Builder.class);
+    }
+
+    public static final int MYFANS_FIELD_NUMBER = 1;
+    private boolean myFans_;
+    /**
+     * <code>optional bool myFans = 1;</code>
+     *
+     * <pre>
+     *我的粉丝(不让他(她)看我的贴子)
+     * </pre>
+     */
+    public boolean getMyFans() {
+      return myFans_;
+    }
+
+    public static final int MYATTENTION_FIELD_NUMBER = 2;
+    private boolean myAttention_;
+    /**
+     * <code>optional bool myAttention = 2;</code>
+     *
+     * <pre>
+     *我关注的人(不看他(她)的贴子)
+     * </pre>
+     */
+    public boolean getMyAttention() {
+      return myAttention_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (myFans_ != false) {
+        output.writeBool(1, myFans_);
+      }
+      if (myAttention_ != false) {
+        output.writeBool(2, myAttention_);
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (myFans_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, myFans_);
+      }
+      if (myAttention_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, myAttention_);
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code common.PPrivacyInfo}
+     *
+     * <pre>
+     * 隐私信息
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:common.PPrivacyInfo)
+        com.blemobi.sep.probuf.AccountProtos.PPrivacyInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PPrivacyInfo_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PPrivacyInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo.class, com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        myFans_ = false;
+
+        myAttention_ = false;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PPrivacyInfo_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo build() {
+        com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo buildPartial() {
+        com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo result = new com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo(this);
+        result.myFans_ = myFans_;
+        result.myAttention_ = myAttention_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo) {
+          return mergeFrom((com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo other) {
+        if (other == com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo.getDefaultInstance()) return this;
+        if (other.getMyFans() != false) {
+          setMyFans(other.getMyFans());
+        }
+        if (other.getMyAttention() != false) {
+          setMyAttention(other.getMyAttention());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean myFans_ ;
+      /**
+       * <code>optional bool myFans = 1;</code>
+       *
+       * <pre>
+       *我的粉丝(不让他(她)看我的贴子)
+       * </pre>
+       */
+      public boolean getMyFans() {
+        return myFans_;
+      }
+      /**
+       * <code>optional bool myFans = 1;</code>
+       *
+       * <pre>
+       *我的粉丝(不让他(她)看我的贴子)
+       * </pre>
+       */
+      public Builder setMyFans(boolean value) {
+        
+        myFans_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool myFans = 1;</code>
+       *
+       * <pre>
+       *我的粉丝(不让他(她)看我的贴子)
+       * </pre>
+       */
+      public Builder clearMyFans() {
+        
+        myFans_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean myAttention_ ;
+      /**
+       * <code>optional bool myAttention = 2;</code>
+       *
+       * <pre>
+       *我关注的人(不看他(她)的贴子)
+       * </pre>
+       */
+      public boolean getMyAttention() {
+        return myAttention_;
+      }
+      /**
+       * <code>optional bool myAttention = 2;</code>
+       *
+       * <pre>
+       *我关注的人(不看他(她)的贴子)
+       * </pre>
+       */
+      public Builder setMyAttention(boolean value) {
+        
+        myAttention_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool myAttention = 2;</code>
+       *
+       * <pre>
+       *我关注的人(不看他(她)的贴子)
+       * </pre>
+       */
+      public Builder clearMyAttention() {
+        
+        myAttention_ = false;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:common.PPrivacyInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:common.PPrivacyInfo)
+    private static final com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo();
+    }
+
+    public static com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PPrivacyInfo> PARSER =
+        new com.google.protobuf.AbstractParser<PPrivacyInfo>() {
+      public PPrivacyInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PPrivacyInfo(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PPrivacyInfo> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.AccountProtos.PPrivacyInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PLanguageInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:common.PLanguageInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string language = 1;</code>
+     *
+     * <pre>
+     *语言
+     * </pre>
+     */
+    java.lang.String getLanguage();
+    /**
+     * <code>optional string language = 1;</code>
+     *
+     * <pre>
+     *语言
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getLanguageBytes();
+  }
+  /**
+   * Protobuf type {@code common.PLanguageInfo}
+   *
+   * <pre>
+   * 语言信息
+   * </pre>
+   */
+  public  static final class PLanguageInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:common.PLanguageInfo)
+      PLanguageInfoOrBuilder {
+    // Use PLanguageInfo.newBuilder() to construct.
+    private PLanguageInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PLanguageInfo() {
+      language_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PLanguageInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              language_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLanguageInfo_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLanguageInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.AccountProtos.PLanguageInfo.class, com.blemobi.sep.probuf.AccountProtos.PLanguageInfo.Builder.class);
+    }
+
+    public static final int LANGUAGE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object language_;
+    /**
+     * <code>optional string language = 1;</code>
+     *
+     * <pre>
+     *语言
+     * </pre>
+     */
+    public java.lang.String getLanguage() {
+      java.lang.Object ref = language_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          language_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string language = 1;</code>
+     *
+     * <pre>
+     *语言
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getLanguageBytes() {
+      java.lang.Object ref = language_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        language_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getLanguageBytes().isEmpty()) {
+        output.writeBytes(1, getLanguageBytes());
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getLanguageBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getLanguageBytes());
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.AccountProtos.PLanguageInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLanguageInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLanguageInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLanguageInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLanguageInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLanguageInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLanguageInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLanguageInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLanguageInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLanguageInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.AccountProtos.PLanguageInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code common.PLanguageInfo}
+     *
+     * <pre>
+     * 语言信息
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:common.PLanguageInfo)
+        com.blemobi.sep.probuf.AccountProtos.PLanguageInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLanguageInfo_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLanguageInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.AccountProtos.PLanguageInfo.class, com.blemobi.sep.probuf.AccountProtos.PLanguageInfo.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.AccountProtos.PLanguageInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        language_ = "";
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLanguageInfo_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PLanguageInfo getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.AccountProtos.PLanguageInfo.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PLanguageInfo build() {
+        com.blemobi.sep.probuf.AccountProtos.PLanguageInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PLanguageInfo buildPartial() {
+        com.blemobi.sep.probuf.AccountProtos.PLanguageInfo result = new com.blemobi.sep.probuf.AccountProtos.PLanguageInfo(this);
+        result.language_ = language_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.AccountProtos.PLanguageInfo) {
+          return mergeFrom((com.blemobi.sep.probuf.AccountProtos.PLanguageInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.AccountProtos.PLanguageInfo other) {
+        if (other == com.blemobi.sep.probuf.AccountProtos.PLanguageInfo.getDefaultInstance()) return this;
+        if (!other.getLanguage().isEmpty()) {
+          language_ = other.language_;
+          onChanged();
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.AccountProtos.PLanguageInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.AccountProtos.PLanguageInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object language_ = "";
+      /**
+       * <code>optional string language = 1;</code>
+       *
+       * <pre>
+       *语言
+       * </pre>
+       */
+      public java.lang.String getLanguage() {
+        java.lang.Object ref = language_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            language_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string language = 1;</code>
+       *
+       * <pre>
+       *语言
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getLanguageBytes() {
+        java.lang.Object ref = language_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          language_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string language = 1;</code>
+       *
+       * <pre>
+       *语言
+       * </pre>
+       */
+      public Builder setLanguage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        language_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string language = 1;</code>
+       *
+       * <pre>
+       *语言
+       * </pre>
+       */
+      public Builder clearLanguage() {
+        
+        language_ = getDefaultInstance().getLanguage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string language = 1;</code>
+       *
+       * <pre>
+       *语言
+       * </pre>
+       */
+      public Builder setLanguageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        language_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:common.PLanguageInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:common.PLanguageInfo)
+    private static final com.blemobi.sep.probuf.AccountProtos.PLanguageInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.AccountProtos.PLanguageInfo();
+    }
+
+    public static com.blemobi.sep.probuf.AccountProtos.PLanguageInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PLanguageInfo> PARSER =
+        new com.google.protobuf.AbstractParser<PLanguageInfo>() {
+      public PLanguageInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PLanguageInfo(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PLanguageInfo> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.AccountProtos.PLanguageInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PLinkInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:common.PLinkInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 type = 1;</code>
+     *
+     * <pre>
+     *ELinkType类型
+     * </pre>
+     */
+    int getType();
+
+    /**
+     * <code>optional string url = 2;</code>
+     *
+     * <pre>
+     *超链接地址
+     * </pre>
+     */
+    java.lang.String getUrl();
+    /**
+     * <code>optional string url = 2;</code>
+     *
+     * <pre>
+     *超链接地址
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUrlBytes();
+  }
+  /**
+   * Protobuf type {@code common.PLinkInfo}
+   *
+   * <pre>
+   * 超链接信息
+   * </pre>
+   */
+  public  static final class PLinkInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:common.PLinkInfo)
+      PLinkInfoOrBuilder {
+    // Use PLinkInfo.newBuilder() to construct.
+    private PLinkInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PLinkInfo() {
+      type_ = 0;
+      url_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PLinkInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              type_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              url_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLinkInfo_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLinkInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.AccountProtos.PLinkInfo.class, com.blemobi.sep.probuf.AccountProtos.PLinkInfo.Builder.class);
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private int type_;
+    /**
+     * <code>optional int32 type = 1;</code>
+     *
+     * <pre>
+     *ELinkType类型
+     * </pre>
+     */
+    public int getType() {
+      return type_;
+    }
+
+    public static final int URL_FIELD_NUMBER = 2;
+    private volatile java.lang.Object url_;
+    /**
+     * <code>optional string url = 2;</code>
+     *
+     * <pre>
+     *超链接地址
+     * </pre>
+     */
+    public java.lang.String getUrl() {
+      java.lang.Object ref = url_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          url_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string url = 2;</code>
+     *
+     * <pre>
+     *超链接地址
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUrlBytes() {
+      java.lang.Object ref = url_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        url_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (type_ != 0) {
+        output.writeInt32(1, type_);
+      }
+      if (!getUrlBytes().isEmpty()) {
+        output.writeBytes(2, getUrlBytes());
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (type_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, type_);
+      }
+      if (!getUrlBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getUrlBytes());
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.AccountProtos.PLinkInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLinkInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLinkInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLinkInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLinkInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLinkInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLinkInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLinkInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLinkInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLinkInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.AccountProtos.PLinkInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code common.PLinkInfo}
+     *
+     * <pre>
+     * 超链接信息
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:common.PLinkInfo)
+        com.blemobi.sep.probuf.AccountProtos.PLinkInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLinkInfo_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLinkInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.AccountProtos.PLinkInfo.class, com.blemobi.sep.probuf.AccountProtos.PLinkInfo.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.AccountProtos.PLinkInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        type_ = 0;
+
+        url_ = "";
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLinkInfo_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PLinkInfo getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.AccountProtos.PLinkInfo.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PLinkInfo build() {
+        com.blemobi.sep.probuf.AccountProtos.PLinkInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PLinkInfo buildPartial() {
+        com.blemobi.sep.probuf.AccountProtos.PLinkInfo result = new com.blemobi.sep.probuf.AccountProtos.PLinkInfo(this);
+        result.type_ = type_;
+        result.url_ = url_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.AccountProtos.PLinkInfo) {
+          return mergeFrom((com.blemobi.sep.probuf.AccountProtos.PLinkInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.AccountProtos.PLinkInfo other) {
+        if (other == com.blemobi.sep.probuf.AccountProtos.PLinkInfo.getDefaultInstance()) return this;
+        if (other.getType() != 0) {
+          setType(other.getType());
+        }
+        if (!other.getUrl().isEmpty()) {
+          url_ = other.url_;
+          onChanged();
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.AccountProtos.PLinkInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.AccountProtos.PLinkInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int type_ ;
+      /**
+       * <code>optional int32 type = 1;</code>
+       *
+       * <pre>
+       *ELinkType类型
+       * </pre>
+       */
+      public int getType() {
+        return type_;
+      }
+      /**
+       * <code>optional int32 type = 1;</code>
+       *
+       * <pre>
+       *ELinkType类型
+       * </pre>
+       */
+      public Builder setType(int value) {
+        
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 type = 1;</code>
+       *
+       * <pre>
+       *ELinkType类型
+       * </pre>
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object url_ = "";
+      /**
+       * <code>optional string url = 2;</code>
+       *
+       * <pre>
+       *超链接地址
+       * </pre>
+       */
+      public java.lang.String getUrl() {
+        java.lang.Object ref = url_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            url_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string url = 2;</code>
+       *
+       * <pre>
+       *超链接地址
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUrlBytes() {
+        java.lang.Object ref = url_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          url_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string url = 2;</code>
+       *
+       * <pre>
+       *超链接地址
+       * </pre>
+       */
+      public Builder setUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        url_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string url = 2;</code>
+       *
+       * <pre>
+       *超链接地址
+       * </pre>
+       */
+      public Builder clearUrl() {
+        
+        url_ = getDefaultInstance().getUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string url = 2;</code>
+       *
+       * <pre>
+       *超链接地址
+       * </pre>
+       */
+      public Builder setUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        url_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:common.PLinkInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:common.PLinkInfo)
+    private static final com.blemobi.sep.probuf.AccountProtos.PLinkInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.AccountProtos.PLinkInfo();
+    }
+
+    public static com.blemobi.sep.probuf.AccountProtos.PLinkInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PLinkInfo> PARSER =
+        new com.google.protobuf.AbstractParser<PLinkInfo>() {
+      public PLinkInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PLinkInfo(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PLinkInfo> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.AccountProtos.PLinkInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PLinkInfoListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:common.PLinkInfoList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .common.PLinkInfo list = 1;</code>
+     */
+    java.util.List<com.blemobi.sep.probuf.AccountProtos.PLinkInfo> 
+        getListList();
+    /**
+     * <code>repeated .common.PLinkInfo list = 1;</code>
+     */
+    com.blemobi.sep.probuf.AccountProtos.PLinkInfo getList(int index);
+    /**
+     * <code>repeated .common.PLinkInfo list = 1;</code>
+     */
+    int getListCount();
+    /**
+     * <code>repeated .common.PLinkInfo list = 1;</code>
+     */
+    java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PLinkInfoOrBuilder> 
+        getListOrBuilderList();
+    /**
+     * <code>repeated .common.PLinkInfo list = 1;</code>
+     */
+    com.blemobi.sep.probuf.AccountProtos.PLinkInfoOrBuilder getListOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code common.PLinkInfoList}
+   *
+   * <pre>
+   * 超链接信息列表
+   * </pre>
+   */
+  public  static final class PLinkInfoList extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:common.PLinkInfoList)
+      PLinkInfoListOrBuilder {
+    // Use PLinkInfoList.newBuilder() to construct.
+    private PLinkInfoList(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PLinkInfoList() {
+      list_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PLinkInfoList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                list_ = new java.util.ArrayList<com.blemobi.sep.probuf.AccountProtos.PLinkInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              list_.add(input.readMessage(com.blemobi.sep.probuf.AccountProtos.PLinkInfo.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          list_ = java.util.Collections.unmodifiableList(list_);
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLinkInfoList_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLinkInfoList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.AccountProtos.PLinkInfoList.class, com.blemobi.sep.probuf.AccountProtos.PLinkInfoList.Builder.class);
+    }
+
+    public static final int LIST_FIELD_NUMBER = 1;
+    private java.util.List<com.blemobi.sep.probuf.AccountProtos.PLinkInfo> list_;
+    /**
+     * <code>repeated .common.PLinkInfo list = 1;</code>
+     */
+    public java.util.List<com.blemobi.sep.probuf.AccountProtos.PLinkInfo> getListList() {
+      return list_;
+    }
+    /**
+     * <code>repeated .common.PLinkInfo list = 1;</code>
+     */
+    public java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PLinkInfoOrBuilder> 
+        getListOrBuilderList() {
+      return list_;
+    }
+    /**
+     * <code>repeated .common.PLinkInfo list = 1;</code>
+     */
+    public int getListCount() {
+      return list_.size();
+    }
+    /**
+     * <code>repeated .common.PLinkInfo list = 1;</code>
+     */
+    public com.blemobi.sep.probuf.AccountProtos.PLinkInfo getList(int index) {
+      return list_.get(index);
+    }
+    /**
+     * <code>repeated .common.PLinkInfo list = 1;</code>
+     */
+    public com.blemobi.sep.probuf.AccountProtos.PLinkInfoOrBuilder getListOrBuilder(
+        int index) {
+      return list_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < list_.size(); i++) {
+        output.writeMessage(1, list_.get(i));
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < list_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, list_.get(i));
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.AccountProtos.PLinkInfoList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLinkInfoList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLinkInfoList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLinkInfoList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLinkInfoList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLinkInfoList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLinkInfoList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLinkInfoList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLinkInfoList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PLinkInfoList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.AccountProtos.PLinkInfoList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code common.PLinkInfoList}
+     *
+     * <pre>
+     * 超链接信息列表
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:common.PLinkInfoList)
+        com.blemobi.sep.probuf.AccountProtos.PLinkInfoListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLinkInfoList_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLinkInfoList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.AccountProtos.PLinkInfoList.class, com.blemobi.sep.probuf.AccountProtos.PLinkInfoList.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.AccountProtos.PLinkInfoList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getListFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (listBuilder_ == null) {
+          list_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          listBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PLinkInfoList_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PLinkInfoList getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.AccountProtos.PLinkInfoList.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PLinkInfoList build() {
+        com.blemobi.sep.probuf.AccountProtos.PLinkInfoList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PLinkInfoList buildPartial() {
+        com.blemobi.sep.probuf.AccountProtos.PLinkInfoList result = new com.blemobi.sep.probuf.AccountProtos.PLinkInfoList(this);
+        int from_bitField0_ = bitField0_;
+        if (listBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            list_ = java.util.Collections.unmodifiableList(list_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.list_ = list_;
+        } else {
+          result.list_ = listBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.AccountProtos.PLinkInfoList) {
+          return mergeFrom((com.blemobi.sep.probuf.AccountProtos.PLinkInfoList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.AccountProtos.PLinkInfoList other) {
+        if (other == com.blemobi.sep.probuf.AccountProtos.PLinkInfoList.getDefaultInstance()) return this;
+        if (listBuilder_ == null) {
+          if (!other.list_.isEmpty()) {
+            if (list_.isEmpty()) {
+              list_ = other.list_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureListIsMutable();
+              list_.addAll(other.list_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.list_.isEmpty()) {
+            if (listBuilder_.isEmpty()) {
+              listBuilder_.dispose();
+              listBuilder_ = null;
+              list_ = other.list_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              listBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getListFieldBuilder() : null;
+            } else {
+              listBuilder_.addAllMessages(other.list_);
+            }
+          }
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.AccountProtos.PLinkInfoList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.AccountProtos.PLinkInfoList) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.blemobi.sep.probuf.AccountProtos.PLinkInfo> list_ =
+        java.util.Collections.emptyList();
+      private void ensureListIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          list_ = new java.util.ArrayList<com.blemobi.sep.probuf.AccountProtos.PLinkInfo>(list_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.AccountProtos.PLinkInfo, com.blemobi.sep.probuf.AccountProtos.PLinkInfo.Builder, com.blemobi.sep.probuf.AccountProtos.PLinkInfoOrBuilder> listBuilder_;
+
+      /**
+       * <code>repeated .common.PLinkInfo list = 1;</code>
+       */
+      public java.util.List<com.blemobi.sep.probuf.AccountProtos.PLinkInfo> getListList() {
+        if (listBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(list_);
+        } else {
+          return listBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .common.PLinkInfo list = 1;</code>
+       */
+      public int getListCount() {
+        if (listBuilder_ == null) {
+          return list_.size();
+        } else {
+          return listBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .common.PLinkInfo list = 1;</code>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PLinkInfo getList(int index) {
+        if (listBuilder_ == null) {
+          return list_.get(index);
+        } else {
+          return listBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .common.PLinkInfo list = 1;</code>
+       */
+      public Builder setList(
+          int index, com.blemobi.sep.probuf.AccountProtos.PLinkInfo value) {
+        if (listBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureListIsMutable();
+          list_.set(index, value);
+          onChanged();
+        } else {
+          listBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PLinkInfo list = 1;</code>
+       */
+      public Builder setList(
+          int index, com.blemobi.sep.probuf.AccountProtos.PLinkInfo.Builder builderForValue) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          list_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          listBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PLinkInfo list = 1;</code>
+       */
+      public Builder addList(com.blemobi.sep.probuf.AccountProtos.PLinkInfo value) {
+        if (listBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureListIsMutable();
+          list_.add(value);
+          onChanged();
+        } else {
+          listBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PLinkInfo list = 1;</code>
+       */
+      public Builder addList(
+          int index, com.blemobi.sep.probuf.AccountProtos.PLinkInfo value) {
+        if (listBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureListIsMutable();
+          list_.add(index, value);
+          onChanged();
+        } else {
+          listBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PLinkInfo list = 1;</code>
+       */
+      public Builder addList(
+          com.blemobi.sep.probuf.AccountProtos.PLinkInfo.Builder builderForValue) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          list_.add(builderForValue.build());
+          onChanged();
+        } else {
+          listBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PLinkInfo list = 1;</code>
+       */
+      public Builder addList(
+          int index, com.blemobi.sep.probuf.AccountProtos.PLinkInfo.Builder builderForValue) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          list_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          listBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PLinkInfo list = 1;</code>
+       */
+      public Builder addAllList(
+          java.lang.Iterable<? extends com.blemobi.sep.probuf.AccountProtos.PLinkInfo> values) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, list_);
+          onChanged();
+        } else {
+          listBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PLinkInfo list = 1;</code>
+       */
+      public Builder clearList() {
+        if (listBuilder_ == null) {
+          list_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          listBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PLinkInfo list = 1;</code>
+       */
+      public Builder removeList(int index) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          list_.remove(index);
+          onChanged();
+        } else {
+          listBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PLinkInfo list = 1;</code>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PLinkInfo.Builder getListBuilder(
+          int index) {
+        return getListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .common.PLinkInfo list = 1;</code>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PLinkInfoOrBuilder getListOrBuilder(
+          int index) {
+        if (listBuilder_ == null) {
+          return list_.get(index);  } else {
+          return listBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .common.PLinkInfo list = 1;</code>
+       */
+      public java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PLinkInfoOrBuilder> 
+           getListOrBuilderList() {
+        if (listBuilder_ != null) {
+          return listBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(list_);
+        }
+      }
+      /**
+       * <code>repeated .common.PLinkInfo list = 1;</code>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PLinkInfo.Builder addListBuilder() {
+        return getListFieldBuilder().addBuilder(
+            com.blemobi.sep.probuf.AccountProtos.PLinkInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .common.PLinkInfo list = 1;</code>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PLinkInfo.Builder addListBuilder(
+          int index) {
+        return getListFieldBuilder().addBuilder(
+            index, com.blemobi.sep.probuf.AccountProtos.PLinkInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .common.PLinkInfo list = 1;</code>
+       */
+      public java.util.List<com.blemobi.sep.probuf.AccountProtos.PLinkInfo.Builder> 
+           getListBuilderList() {
+        return getListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.AccountProtos.PLinkInfo, com.blemobi.sep.probuf.AccountProtos.PLinkInfo.Builder, com.blemobi.sep.probuf.AccountProtos.PLinkInfoOrBuilder> 
+          getListFieldBuilder() {
+        if (listBuilder_ == null) {
+          listBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.blemobi.sep.probuf.AccountProtos.PLinkInfo, com.blemobi.sep.probuf.AccountProtos.PLinkInfo.Builder, com.blemobi.sep.probuf.AccountProtos.PLinkInfoOrBuilder>(
+                  list_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          list_ = null;
+        }
+        return listBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:common.PLinkInfoList)
+    }
+
+    // @@protoc_insertion_point(class_scope:common.PLinkInfoList)
+    private static final com.blemobi.sep.probuf.AccountProtos.PLinkInfoList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.AccountProtos.PLinkInfoList();
+    }
+
+    public static com.blemobi.sep.probuf.AccountProtos.PLinkInfoList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PLinkInfoList> PARSER =
+        new com.google.protobuf.AbstractParser<PLinkInfoList>() {
+      public PLinkInfoList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PLinkInfoList(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PLinkInfoList> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.AccountProtos.PLinkInfoList getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PAccountNewsPersonInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:common.PAccountNewsPersonInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 friendCnt = 1;</code>
+     *
+     * <pre>
+     *朋友个数
+     * </pre>
+     */
+    int getFriendCnt();
+
+    /**
+     * <code>optional int32 followCnt = 2;</code>
+     *
+     * <pre>
+     *follow人数
+     * </pre>
+     */
+    int getFollowCnt();
+
+    /**
+     * <code>optional int32 fansCnt = 3;</code>
+     *
+     * <pre>
+     *fans个数
+     * </pre>
+     */
+    int getFansCnt();
+
+    /**
+     * <code>optional int32 textCnt = 4;</code>
+     *
+     * <pre>
+     *发表的文字帖个数
+     * </pre>
+     */
+    int getTextCnt();
+
+    /**
+     * <code>optional int32 imageCnt = 5;</code>
+     */
+    int getImageCnt();
+
+    /**
+     * <code>optional int32 audioCnt = 6;</code>
+     */
+    int getAudioCnt();
+
+    /**
+     * <code>optional int32 videoCnt = 7;</code>
+     */
+    int getVideoCnt();
+
+    /**
+     * <code>optional string CommunityID = 8;</code>
+     */
+    java.lang.String getCommunityID();
+    /**
+     * <code>optional string CommunityID = 8;</code>
+     */
+    com.google.protobuf.ByteString
+        getCommunityIDBytes();
+
+    /**
+     * <code>optional .common.PUser user = 9;</code>
+     */
+    boolean hasUser();
+    /**
+     * <code>optional .common.PUser user = 9;</code>
+     */
+    com.blemobi.sep.probuf.AccountProtos.PUser getUser();
+    /**
+     * <code>optional .common.PUser user = 9;</code>
+     */
+    com.blemobi.sep.probuf.AccountProtos.PUserOrBuilder getUserOrBuilder();
+
+    /**
+     * <code>optional int32 followship = 10;</code>
+     *
+     * <pre>
+     *两用户间的关系、0:无关系，1,：是粉丝，2：已关注，3：相互关注
+     * </pre>
+     */
+    int getFollowship();
+
+    /**
+     * <code>optional bool friend = 11;</code>
+     *
+     * <pre>
+     *是否是好友，是：true
+     * </pre>
+     */
+    boolean getFriend();
+
+    /**
+     * <code>optional .common.PLinkInfoList linkInfos = 12;</code>
+     *
+     * <pre>
+     *超链接列表
+     * </pre>
+     */
+    boolean hasLinkInfos();
+    /**
+     * <code>optional .common.PLinkInfoList linkInfos = 12;</code>
+     *
+     * <pre>
+     *超链接列表
+     * </pre>
+     */
+    com.blemobi.sep.probuf.AccountProtos.PLinkInfoList getLinkInfos();
+    /**
+     * <code>optional .common.PLinkInfoList linkInfos = 12;</code>
+     *
+     * <pre>
+     *超链接列表
+     * </pre>
+     */
+    com.blemobi.sep.probuf.AccountProtos.PLinkInfoListOrBuilder getLinkInfosOrBuilder();
+  }
+  /**
+   * Protobuf type {@code common.PAccountNewsPersonInfo}
+   *
+   * <pre>
+   * 显示贴子的个人档案信息
+   * </pre>
+   */
+  public  static final class PAccountNewsPersonInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:common.PAccountNewsPersonInfo)
+      PAccountNewsPersonInfoOrBuilder {
+    // Use PAccountNewsPersonInfo.newBuilder() to construct.
+    private PAccountNewsPersonInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PAccountNewsPersonInfo() {
+      friendCnt_ = 0;
+      followCnt_ = 0;
+      fansCnt_ = 0;
+      textCnt_ = 0;
+      imageCnt_ = 0;
+      audioCnt_ = 0;
+      videoCnt_ = 0;
+      communityID_ = "";
+      followship_ = 0;
+      friend_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PAccountNewsPersonInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              friendCnt_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              followCnt_ = input.readInt32();
+              break;
+            }
+            case 24: {
+
+              fansCnt_ = input.readInt32();
+              break;
+            }
+            case 32: {
+
+              textCnt_ = input.readInt32();
+              break;
+            }
+            case 40: {
+
+              imageCnt_ = input.readInt32();
+              break;
+            }
+            case 48: {
+
+              audioCnt_ = input.readInt32();
+              break;
+            }
+            case 56: {
+
+              videoCnt_ = input.readInt32();
+              break;
+            }
+            case 66: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              communityID_ = bs;
+              break;
+            }
+            case 74: {
+              com.blemobi.sep.probuf.AccountProtos.PUser.Builder subBuilder = null;
+              if (user_ != null) {
+                subBuilder = user_.toBuilder();
+              }
+              user_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUser.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(user_);
+                user_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 80: {
+
+              followship_ = input.readInt32();
+              break;
+            }
+            case 88: {
+
+              friend_ = input.readBool();
+              break;
+            }
+            case 98: {
+              com.blemobi.sep.probuf.AccountProtos.PLinkInfoList.Builder subBuilder = null;
+              if (linkInfos_ != null) {
+                subBuilder = linkInfos_.toBuilder();
+              }
+              linkInfos_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PLinkInfoList.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(linkInfos_);
+                linkInfos_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PAccountNewsPersonInfo_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PAccountNewsPersonInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo.class, com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo.Builder.class);
+    }
+
+    public static final int FRIENDCNT_FIELD_NUMBER = 1;
+    private int friendCnt_;
+    /**
+     * <code>optional int32 friendCnt = 1;</code>
+     *
+     * <pre>
+     *朋友个数
+     * </pre>
+     */
+    public int getFriendCnt() {
+      return friendCnt_;
+    }
+
+    public static final int FOLLOWCNT_FIELD_NUMBER = 2;
+    private int followCnt_;
+    /**
+     * <code>optional int32 followCnt = 2;</code>
+     *
+     * <pre>
+     *follow人数
+     * </pre>
+     */
+    public int getFollowCnt() {
+      return followCnt_;
+    }
+
+    public static final int FANSCNT_FIELD_NUMBER = 3;
+    private int fansCnt_;
+    /**
+     * <code>optional int32 fansCnt = 3;</code>
+     *
+     * <pre>
+     *fans个数
+     * </pre>
+     */
+    public int getFansCnt() {
+      return fansCnt_;
+    }
+
+    public static final int TEXTCNT_FIELD_NUMBER = 4;
+    private int textCnt_;
+    /**
+     * <code>optional int32 textCnt = 4;</code>
+     *
+     * <pre>
+     *发表的文字帖个数
+     * </pre>
+     */
+    public int getTextCnt() {
+      return textCnt_;
+    }
+
+    public static final int IMAGECNT_FIELD_NUMBER = 5;
+    private int imageCnt_;
+    /**
+     * <code>optional int32 imageCnt = 5;</code>
+     */
+    public int getImageCnt() {
+      return imageCnt_;
+    }
+
+    public static final int AUDIOCNT_FIELD_NUMBER = 6;
+    private int audioCnt_;
+    /**
+     * <code>optional int32 audioCnt = 6;</code>
+     */
+    public int getAudioCnt() {
+      return audioCnt_;
+    }
+
+    public static final int VIDEOCNT_FIELD_NUMBER = 7;
+    private int videoCnt_;
+    /**
+     * <code>optional int32 videoCnt = 7;</code>
+     */
+    public int getVideoCnt() {
+      return videoCnt_;
+    }
+
+    public static final int COMMUNITYID_FIELD_NUMBER = 8;
+    private volatile java.lang.Object communityID_;
+    /**
+     * <code>optional string CommunityID = 8;</code>
+     */
+    public java.lang.String getCommunityID() {
+      java.lang.Object ref = communityID_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          communityID_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string CommunityID = 8;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCommunityIDBytes() {
+      java.lang.Object ref = communityID_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        communityID_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int USER_FIELD_NUMBER = 9;
+    private com.blemobi.sep.probuf.AccountProtos.PUser user_;
+    /**
+     * <code>optional .common.PUser user = 9;</code>
+     */
+    public boolean hasUser() {
+      return user_ != null;
+    }
+    /**
+     * <code>optional .common.PUser user = 9;</code>
+     */
+    public com.blemobi.sep.probuf.AccountProtos.PUser getUser() {
+      return user_ == null ? com.blemobi.sep.probuf.AccountProtos.PUser.getDefaultInstance() : user_;
+    }
+    /**
+     * <code>optional .common.PUser user = 9;</code>
+     */
+    public com.blemobi.sep.probuf.AccountProtos.PUserOrBuilder getUserOrBuilder() {
+      return getUser();
+    }
+
+    public static final int FOLLOWSHIP_FIELD_NUMBER = 10;
+    private int followship_;
+    /**
+     * <code>optional int32 followship = 10;</code>
+     *
+     * <pre>
+     *两用户间的关系、0:无关系，1,：是粉丝，2：已关注，3：相互关注
+     * </pre>
+     */
+    public int getFollowship() {
+      return followship_;
+    }
+
+    public static final int FRIEND_FIELD_NUMBER = 11;
+    private boolean friend_;
+    /**
+     * <code>optional bool friend = 11;</code>
+     *
+     * <pre>
+     *是否是好友，是：true
+     * </pre>
+     */
+    public boolean getFriend() {
+      return friend_;
+    }
+
+    public static final int LINKINFOS_FIELD_NUMBER = 12;
+    private com.blemobi.sep.probuf.AccountProtos.PLinkInfoList linkInfos_;
+    /**
+     * <code>optional .common.PLinkInfoList linkInfos = 12;</code>
+     *
+     * <pre>
+     *超链接列表
+     * </pre>
+     */
+    public boolean hasLinkInfos() {
+      return linkInfos_ != null;
+    }
+    /**
+     * <code>optional .common.PLinkInfoList linkInfos = 12;</code>
+     *
+     * <pre>
+     *超链接列表
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.AccountProtos.PLinkInfoList getLinkInfos() {
+      return linkInfos_ == null ? com.blemobi.sep.probuf.AccountProtos.PLinkInfoList.getDefaultInstance() : linkInfos_;
+    }
+    /**
+     * <code>optional .common.PLinkInfoList linkInfos = 12;</code>
+     *
+     * <pre>
+     *超链接列表
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.AccountProtos.PLinkInfoListOrBuilder getLinkInfosOrBuilder() {
+      return getLinkInfos();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (friendCnt_ != 0) {
+        output.writeInt32(1, friendCnt_);
+      }
+      if (followCnt_ != 0) {
+        output.writeInt32(2, followCnt_);
+      }
+      if (fansCnt_ != 0) {
+        output.writeInt32(3, fansCnt_);
+      }
+      if (textCnt_ != 0) {
+        output.writeInt32(4, textCnt_);
+      }
+      if (imageCnt_ != 0) {
+        output.writeInt32(5, imageCnt_);
+      }
+      if (audioCnt_ != 0) {
+        output.writeInt32(6, audioCnt_);
+      }
+      if (videoCnt_ != 0) {
+        output.writeInt32(7, videoCnt_);
+      }
+      if (!getCommunityIDBytes().isEmpty()) {
+        output.writeBytes(8, getCommunityIDBytes());
+      }
+      if (user_ != null) {
+        output.writeMessage(9, getUser());
+      }
+      if (followship_ != 0) {
+        output.writeInt32(10, followship_);
+      }
+      if (friend_ != false) {
+        output.writeBool(11, friend_);
+      }
+      if (linkInfos_ != null) {
+        output.writeMessage(12, getLinkInfos());
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (friendCnt_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, friendCnt_);
+      }
+      if (followCnt_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, followCnt_);
+      }
+      if (fansCnt_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, fansCnt_);
+      }
+      if (textCnt_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, textCnt_);
+      }
+      if (imageCnt_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, imageCnt_);
+      }
+      if (audioCnt_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(6, audioCnt_);
+      }
+      if (videoCnt_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(7, videoCnt_);
+      }
+      if (!getCommunityIDBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(8, getCommunityIDBytes());
+      }
+      if (user_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getUser());
+      }
+      if (followship_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(10, followship_);
+      }
+      if (friend_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(11, friend_);
+      }
+      if (linkInfos_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getLinkInfos());
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code common.PAccountNewsPersonInfo}
+     *
+     * <pre>
+     * 显示贴子的个人档案信息
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:common.PAccountNewsPersonInfo)
+        com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PAccountNewsPersonInfo_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PAccountNewsPersonInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo.class, com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        friendCnt_ = 0;
+
+        followCnt_ = 0;
+
+        fansCnt_ = 0;
+
+        textCnt_ = 0;
+
+        imageCnt_ = 0;
+
+        audioCnt_ = 0;
+
+        videoCnt_ = 0;
+
+        communityID_ = "";
+
+        if (userBuilder_ == null) {
+          user_ = null;
+        } else {
+          user_ = null;
+          userBuilder_ = null;
+        }
+        followship_ = 0;
+
+        friend_ = false;
+
+        if (linkInfosBuilder_ == null) {
+          linkInfos_ = null;
+        } else {
+          linkInfos_ = null;
+          linkInfosBuilder_ = null;
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PAccountNewsPersonInfo_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo build() {
+        com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo buildPartial() {
+        com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo result = new com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo(this);
+        result.friendCnt_ = friendCnt_;
+        result.followCnt_ = followCnt_;
+        result.fansCnt_ = fansCnt_;
+        result.textCnt_ = textCnt_;
+        result.imageCnt_ = imageCnt_;
+        result.audioCnt_ = audioCnt_;
+        result.videoCnt_ = videoCnt_;
+        result.communityID_ = communityID_;
+        if (userBuilder_ == null) {
+          result.user_ = user_;
+        } else {
+          result.user_ = userBuilder_.build();
+        }
+        result.followship_ = followship_;
+        result.friend_ = friend_;
+        if (linkInfosBuilder_ == null) {
+          result.linkInfos_ = linkInfos_;
+        } else {
+          result.linkInfos_ = linkInfosBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo) {
+          return mergeFrom((com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo other) {
+        if (other == com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo.getDefaultInstance()) return this;
+        if (other.getFriendCnt() != 0) {
+          setFriendCnt(other.getFriendCnt());
+        }
+        if (other.getFollowCnt() != 0) {
+          setFollowCnt(other.getFollowCnt());
+        }
+        if (other.getFansCnt() != 0) {
+          setFansCnt(other.getFansCnt());
+        }
+        if (other.getTextCnt() != 0) {
+          setTextCnt(other.getTextCnt());
+        }
+        if (other.getImageCnt() != 0) {
+          setImageCnt(other.getImageCnt());
+        }
+        if (other.getAudioCnt() != 0) {
+          setAudioCnt(other.getAudioCnt());
+        }
+        if (other.getVideoCnt() != 0) {
+          setVideoCnt(other.getVideoCnt());
+        }
+        if (!other.getCommunityID().isEmpty()) {
+          communityID_ = other.communityID_;
+          onChanged();
+        }
+        if (other.hasUser()) {
+          mergeUser(other.getUser());
+        }
+        if (other.getFollowship() != 0) {
+          setFollowship(other.getFollowship());
+        }
+        if (other.getFriend() != false) {
+          setFriend(other.getFriend());
+        }
+        if (other.hasLinkInfos()) {
+          mergeLinkInfos(other.getLinkInfos());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int friendCnt_ ;
+      /**
+       * <code>optional int32 friendCnt = 1;</code>
+       *
+       * <pre>
+       *朋友个数
+       * </pre>
+       */
+      public int getFriendCnt() {
+        return friendCnt_;
+      }
+      /**
+       * <code>optional int32 friendCnt = 1;</code>
+       *
+       * <pre>
+       *朋友个数
+       * </pre>
+       */
+      public Builder setFriendCnt(int value) {
+        
+        friendCnt_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 friendCnt = 1;</code>
+       *
+       * <pre>
+       *朋友个数
+       * </pre>
+       */
+      public Builder clearFriendCnt() {
+        
+        friendCnt_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int followCnt_ ;
+      /**
+       * <code>optional int32 followCnt = 2;</code>
+       *
+       * <pre>
+       *follow人数
+       * </pre>
+       */
+      public int getFollowCnt() {
+        return followCnt_;
+      }
+      /**
+       * <code>optional int32 followCnt = 2;</code>
+       *
+       * <pre>
+       *follow人数
+       * </pre>
+       */
+      public Builder setFollowCnt(int value) {
+        
+        followCnt_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 followCnt = 2;</code>
+       *
+       * <pre>
+       *follow人数
+       * </pre>
+       */
+      public Builder clearFollowCnt() {
+        
+        followCnt_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int fansCnt_ ;
+      /**
+       * <code>optional int32 fansCnt = 3;</code>
+       *
+       * <pre>
+       *fans个数
+       * </pre>
+       */
+      public int getFansCnt() {
+        return fansCnt_;
+      }
+      /**
+       * <code>optional int32 fansCnt = 3;</code>
+       *
+       * <pre>
+       *fans个数
+       * </pre>
+       */
+      public Builder setFansCnt(int value) {
+        
+        fansCnt_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 fansCnt = 3;</code>
+       *
+       * <pre>
+       *fans个数
+       * </pre>
+       */
+      public Builder clearFansCnt() {
+        
+        fansCnt_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int textCnt_ ;
+      /**
+       * <code>optional int32 textCnt = 4;</code>
+       *
+       * <pre>
+       *发表的文字帖个数
+       * </pre>
+       */
+      public int getTextCnt() {
+        return textCnt_;
+      }
+      /**
+       * <code>optional int32 textCnt = 4;</code>
+       *
+       * <pre>
+       *发表的文字帖个数
+       * </pre>
+       */
+      public Builder setTextCnt(int value) {
+        
+        textCnt_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 textCnt = 4;</code>
+       *
+       * <pre>
+       *发表的文字帖个数
+       * </pre>
+       */
+      public Builder clearTextCnt() {
+        
+        textCnt_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int imageCnt_ ;
+      /**
+       * <code>optional int32 imageCnt = 5;</code>
+       */
+      public int getImageCnt() {
+        return imageCnt_;
+      }
+      /**
+       * <code>optional int32 imageCnt = 5;</code>
+       */
+      public Builder setImageCnt(int value) {
+        
+        imageCnt_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 imageCnt = 5;</code>
+       */
+      public Builder clearImageCnt() {
+        
+        imageCnt_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int audioCnt_ ;
+      /**
+       * <code>optional int32 audioCnt = 6;</code>
+       */
+      public int getAudioCnt() {
+        return audioCnt_;
+      }
+      /**
+       * <code>optional int32 audioCnt = 6;</code>
+       */
+      public Builder setAudioCnt(int value) {
+        
+        audioCnt_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 audioCnt = 6;</code>
+       */
+      public Builder clearAudioCnt() {
+        
+        audioCnt_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int videoCnt_ ;
+      /**
+       * <code>optional int32 videoCnt = 7;</code>
+       */
+      public int getVideoCnt() {
+        return videoCnt_;
+      }
+      /**
+       * <code>optional int32 videoCnt = 7;</code>
+       */
+      public Builder setVideoCnt(int value) {
+        
+        videoCnt_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 videoCnt = 7;</code>
+       */
+      public Builder clearVideoCnt() {
+        
+        videoCnt_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object communityID_ = "";
+      /**
+       * <code>optional string CommunityID = 8;</code>
+       */
+      public java.lang.String getCommunityID() {
+        java.lang.Object ref = communityID_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            communityID_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string CommunityID = 8;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCommunityIDBytes() {
+        java.lang.Object ref = communityID_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          communityID_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string CommunityID = 8;</code>
+       */
+      public Builder setCommunityID(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        communityID_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string CommunityID = 8;</code>
+       */
+      public Builder clearCommunityID() {
+        
+        communityID_ = getDefaultInstance().getCommunityID();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string CommunityID = 8;</code>
+       */
+      public Builder setCommunityIDBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        communityID_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.blemobi.sep.probuf.AccountProtos.PUser user_ = null;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.AccountProtos.PUser, com.blemobi.sep.probuf.AccountProtos.PUser.Builder, com.blemobi.sep.probuf.AccountProtos.PUserOrBuilder> userBuilder_;
+      /**
+       * <code>optional .common.PUser user = 9;</code>
+       */
+      public boolean hasUser() {
+        return userBuilder_ != null || user_ != null;
+      }
+      /**
+       * <code>optional .common.PUser user = 9;</code>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUser getUser() {
+        if (userBuilder_ == null) {
+          return user_ == null ? com.blemobi.sep.probuf.AccountProtos.PUser.getDefaultInstance() : user_;
+        } else {
+          return userBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .common.PUser user = 9;</code>
+       */
+      public Builder setUser(com.blemobi.sep.probuf.AccountProtos.PUser value) {
+        if (userBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          user_ = value;
+          onChanged();
+        } else {
+          userBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .common.PUser user = 9;</code>
+       */
+      public Builder setUser(
+          com.blemobi.sep.probuf.AccountProtos.PUser.Builder builderForValue) {
+        if (userBuilder_ == null) {
+          user_ = builderForValue.build();
+          onChanged();
+        } else {
+          userBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .common.PUser user = 9;</code>
+       */
+      public Builder mergeUser(com.blemobi.sep.probuf.AccountProtos.PUser value) {
+        if (userBuilder_ == null) {
+          if (user_ != null) {
+            user_ =
+              com.blemobi.sep.probuf.AccountProtos.PUser.newBuilder(user_).mergeFrom(value).buildPartial();
+          } else {
+            user_ = value;
+          }
+          onChanged();
+        } else {
+          userBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .common.PUser user = 9;</code>
+       */
+      public Builder clearUser() {
+        if (userBuilder_ == null) {
+          user_ = null;
+          onChanged();
+        } else {
+          user_ = null;
+          userBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .common.PUser user = 9;</code>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUser.Builder getUserBuilder() {
+        
+        onChanged();
+        return getUserFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .common.PUser user = 9;</code>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUserOrBuilder getUserOrBuilder() {
+        if (userBuilder_ != null) {
+          return userBuilder_.getMessageOrBuilder();
+        } else {
+          return user_ == null ?
+              com.blemobi.sep.probuf.AccountProtos.PUser.getDefaultInstance() : user_;
+        }
+      }
+      /**
+       * <code>optional .common.PUser user = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.AccountProtos.PUser, com.blemobi.sep.probuf.AccountProtos.PUser.Builder, com.blemobi.sep.probuf.AccountProtos.PUserOrBuilder> 
+          getUserFieldBuilder() {
+        if (userBuilder_ == null) {
+          userBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.blemobi.sep.probuf.AccountProtos.PUser, com.blemobi.sep.probuf.AccountProtos.PUser.Builder, com.blemobi.sep.probuf.AccountProtos.PUserOrBuilder>(
+                  getUser(),
+                  getParentForChildren(),
+                  isClean());
+          user_ = null;
+        }
+        return userBuilder_;
+      }
+
+      private int followship_ ;
+      /**
+       * <code>optional int32 followship = 10;</code>
+       *
+       * <pre>
+       *两用户间的关系、0:无关系，1,：是粉丝，2：已关注，3：相互关注
+       * </pre>
+       */
+      public int getFollowship() {
+        return followship_;
+      }
+      /**
+       * <code>optional int32 followship = 10;</code>
+       *
+       * <pre>
+       *两用户间的关系、0:无关系，1,：是粉丝，2：已关注，3：相互关注
+       * </pre>
+       */
+      public Builder setFollowship(int value) {
+        
+        followship_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 followship = 10;</code>
+       *
+       * <pre>
+       *两用户间的关系、0:无关系，1,：是粉丝，2：已关注，3：相互关注
+       * </pre>
+       */
+      public Builder clearFollowship() {
+        
+        followship_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean friend_ ;
+      /**
+       * <code>optional bool friend = 11;</code>
+       *
+       * <pre>
+       *是否是好友，是：true
+       * </pre>
+       */
+      public boolean getFriend() {
+        return friend_;
+      }
+      /**
+       * <code>optional bool friend = 11;</code>
+       *
+       * <pre>
+       *是否是好友，是：true
+       * </pre>
+       */
+      public Builder setFriend(boolean value) {
+        
+        friend_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool friend = 11;</code>
+       *
+       * <pre>
+       *是否是好友，是：true
+       * </pre>
+       */
+      public Builder clearFriend() {
+        
+        friend_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.blemobi.sep.probuf.AccountProtos.PLinkInfoList linkInfos_ = null;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.AccountProtos.PLinkInfoList, com.blemobi.sep.probuf.AccountProtos.PLinkInfoList.Builder, com.blemobi.sep.probuf.AccountProtos.PLinkInfoListOrBuilder> linkInfosBuilder_;
+      /**
+       * <code>optional .common.PLinkInfoList linkInfos = 12;</code>
+       *
+       * <pre>
+       *超链接列表
+       * </pre>
+       */
+      public boolean hasLinkInfos() {
+        return linkInfosBuilder_ != null || linkInfos_ != null;
+      }
+      /**
+       * <code>optional .common.PLinkInfoList linkInfos = 12;</code>
+       *
+       * <pre>
+       *超链接列表
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PLinkInfoList getLinkInfos() {
+        if (linkInfosBuilder_ == null) {
+          return linkInfos_ == null ? com.blemobi.sep.probuf.AccountProtos.PLinkInfoList.getDefaultInstance() : linkInfos_;
+        } else {
+          return linkInfosBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .common.PLinkInfoList linkInfos = 12;</code>
+       *
+       * <pre>
+       *超链接列表
+       * </pre>
+       */
+      public Builder setLinkInfos(com.blemobi.sep.probuf.AccountProtos.PLinkInfoList value) {
+        if (linkInfosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          linkInfos_ = value;
+          onChanged();
+        } else {
+          linkInfosBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .common.PLinkInfoList linkInfos = 12;</code>
+       *
+       * <pre>
+       *超链接列表
+       * </pre>
+       */
+      public Builder setLinkInfos(
+          com.blemobi.sep.probuf.AccountProtos.PLinkInfoList.Builder builderForValue) {
+        if (linkInfosBuilder_ == null) {
+          linkInfos_ = builderForValue.build();
+          onChanged();
+        } else {
+          linkInfosBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .common.PLinkInfoList linkInfos = 12;</code>
+       *
+       * <pre>
+       *超链接列表
+       * </pre>
+       */
+      public Builder mergeLinkInfos(com.blemobi.sep.probuf.AccountProtos.PLinkInfoList value) {
+        if (linkInfosBuilder_ == null) {
+          if (linkInfos_ != null) {
+            linkInfos_ =
+              com.blemobi.sep.probuf.AccountProtos.PLinkInfoList.newBuilder(linkInfos_).mergeFrom(value).buildPartial();
+          } else {
+            linkInfos_ = value;
+          }
+          onChanged();
+        } else {
+          linkInfosBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .common.PLinkInfoList linkInfos = 12;</code>
+       *
+       * <pre>
+       *超链接列表
+       * </pre>
+       */
+      public Builder clearLinkInfos() {
+        if (linkInfosBuilder_ == null) {
+          linkInfos_ = null;
+          onChanged();
+        } else {
+          linkInfos_ = null;
+          linkInfosBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .common.PLinkInfoList linkInfos = 12;</code>
+       *
+       * <pre>
+       *超链接列表
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PLinkInfoList.Builder getLinkInfosBuilder() {
+        
+        onChanged();
+        return getLinkInfosFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .common.PLinkInfoList linkInfos = 12;</code>
+       *
+       * <pre>
+       *超链接列表
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PLinkInfoListOrBuilder getLinkInfosOrBuilder() {
+        if (linkInfosBuilder_ != null) {
+          return linkInfosBuilder_.getMessageOrBuilder();
+        } else {
+          return linkInfos_ == null ?
+              com.blemobi.sep.probuf.AccountProtos.PLinkInfoList.getDefaultInstance() : linkInfos_;
+        }
+      }
+      /**
+       * <code>optional .common.PLinkInfoList linkInfos = 12;</code>
+       *
+       * <pre>
+       *超链接列表
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.AccountProtos.PLinkInfoList, com.blemobi.sep.probuf.AccountProtos.PLinkInfoList.Builder, com.blemobi.sep.probuf.AccountProtos.PLinkInfoListOrBuilder> 
+          getLinkInfosFieldBuilder() {
+        if (linkInfosBuilder_ == null) {
+          linkInfosBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.blemobi.sep.probuf.AccountProtos.PLinkInfoList, com.blemobi.sep.probuf.AccountProtos.PLinkInfoList.Builder, com.blemobi.sep.probuf.AccountProtos.PLinkInfoListOrBuilder>(
+                  getLinkInfos(),
+                  getParentForChildren(),
+                  isClean());
+          linkInfos_ = null;
+        }
+        return linkInfosBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:common.PAccountNewsPersonInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:common.PAccountNewsPersonInfo)
+    private static final com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo();
+    }
+
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PAccountNewsPersonInfo> PARSER =
+        new com.google.protobuf.AbstractParser<PAccountNewsPersonInfo>() {
+      public PAccountNewsPersonInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PAccountNewsPersonInfo(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PAccountNewsPersonInfo> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.AccountProtos.PAccountNewsPersonInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PAccountChatPersonInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:common.PAccountChatPersonInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string communityId = 1;</code>
+     *
+     * <pre>
+     *社区ID
+     * </pre>
+     */
+    java.lang.String getCommunityId();
+    /**
+     * <code>optional string communityId = 1;</code>
+     *
+     * <pre>
+     *社区ID
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getCommunityIdBytes();
+
+    /**
+     * <code>optional string communityName = 2;</code>
+     *
+     * <pre>
+     *社区名称
+     * </pre>
+     */
+    java.lang.String getCommunityName();
+    /**
+     * <code>optional string communityName = 2;</code>
+     *
+     * <pre>
+     *社区名称
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getCommunityNameBytes();
+
+    /**
+     * <code>optional string communityIcon = 3;</code>
+     *
+     * <pre>
+     *社区图片
+     * </pre>
+     */
+    java.lang.String getCommunityIcon();
+    /**
+     * <code>optional string communityIcon = 3;</code>
+     *
+     * <pre>
+     *社区图片
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getCommunityIconBytes();
+
+    /**
+     * <code>optional string Introduce = 4;</code>
+     *
+     * <pre>
+     *社区介绍
+     * </pre>
+     */
+    java.lang.String getIntroduce();
+    /**
+     * <code>optional string Introduce = 4;</code>
+     *
+     * <pre>
+     *社区介绍
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getIntroduceBytes();
+
+    /**
+     * <code>optional .common.PUser user = 5;</code>
+     *
+     * <pre>
+     *用户信息
+     * </pre>
+     */
+    boolean hasUser();
+    /**
+     * <code>optional .common.PUser user = 5;</code>
+     *
+     * <pre>
+     *用户信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.AccountProtos.PUser getUser();
+    /**
+     * <code>optional .common.PUser user = 5;</code>
+     *
+     * <pre>
+     *用户信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.AccountProtos.PUserOrBuilder getUserOrBuilder();
+  }
+  /**
+   * Protobuf type {@code common.PAccountChatPersonInfo}
+   *
+   * <pre>
+   * 显示聊天的个人档案信息
+   * </pre>
+   */
+  public  static final class PAccountChatPersonInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:common.PAccountChatPersonInfo)
+      PAccountChatPersonInfoOrBuilder {
+    // Use PAccountChatPersonInfo.newBuilder() to construct.
+    private PAccountChatPersonInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PAccountChatPersonInfo() {
+      communityId_ = "";
+      communityName_ = "";
+      communityIcon_ = "";
+      introduce_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PAccountChatPersonInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              communityId_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              communityName_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              communityIcon_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              introduce_ = bs;
+              break;
+            }
+            case 42: {
+              com.blemobi.sep.probuf.AccountProtos.PUser.Builder subBuilder = null;
+              if (user_ != null) {
+                subBuilder = user_.toBuilder();
+              }
+              user_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUser.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(user_);
+                user_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PAccountChatPersonInfo_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PAccountChatPersonInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo.class, com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo.Builder.class);
+    }
+
+    public static final int COMMUNITYID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object communityId_;
+    /**
+     * <code>optional string communityId = 1;</code>
+     *
+     * <pre>
+     *社区ID
+     * </pre>
+     */
+    public java.lang.String getCommunityId() {
+      java.lang.Object ref = communityId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          communityId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string communityId = 1;</code>
+     *
+     * <pre>
+     *社区ID
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getCommunityIdBytes() {
+      java.lang.Object ref = communityId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        communityId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COMMUNITYNAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object communityName_;
+    /**
+     * <code>optional string communityName = 2;</code>
+     *
+     * <pre>
+     *社区名称
+     * </pre>
+     */
+    public java.lang.String getCommunityName() {
+      java.lang.Object ref = communityName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          communityName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string communityName = 2;</code>
+     *
+     * <pre>
+     *社区名称
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getCommunityNameBytes() {
+      java.lang.Object ref = communityName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        communityName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COMMUNITYICON_FIELD_NUMBER = 3;
+    private volatile java.lang.Object communityIcon_;
+    /**
+     * <code>optional string communityIcon = 3;</code>
+     *
+     * <pre>
+     *社区图片
+     * </pre>
+     */
+    public java.lang.String getCommunityIcon() {
+      java.lang.Object ref = communityIcon_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          communityIcon_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string communityIcon = 3;</code>
+     *
+     * <pre>
+     *社区图片
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getCommunityIconBytes() {
+      java.lang.Object ref = communityIcon_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        communityIcon_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INTRODUCE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object introduce_;
+    /**
+     * <code>optional string Introduce = 4;</code>
+     *
+     * <pre>
+     *社区介绍
+     * </pre>
+     */
+    public java.lang.String getIntroduce() {
+      java.lang.Object ref = introduce_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          introduce_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string Introduce = 4;</code>
+     *
+     * <pre>
+     *社区介绍
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getIntroduceBytes() {
+      java.lang.Object ref = introduce_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        introduce_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int USER_FIELD_NUMBER = 5;
+    private com.blemobi.sep.probuf.AccountProtos.PUser user_;
+    /**
+     * <code>optional .common.PUser user = 5;</code>
+     *
+     * <pre>
+     *用户信息
+     * </pre>
+     */
+    public boolean hasUser() {
+      return user_ != null;
+    }
+    /**
+     * <code>optional .common.PUser user = 5;</code>
+     *
+     * <pre>
+     *用户信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.AccountProtos.PUser getUser() {
+      return user_ == null ? com.blemobi.sep.probuf.AccountProtos.PUser.getDefaultInstance() : user_;
+    }
+    /**
+     * <code>optional .common.PUser user = 5;</code>
+     *
+     * <pre>
+     *用户信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.AccountProtos.PUserOrBuilder getUserOrBuilder() {
+      return getUser();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getCommunityIdBytes().isEmpty()) {
+        output.writeBytes(1, getCommunityIdBytes());
+      }
+      if (!getCommunityNameBytes().isEmpty()) {
+        output.writeBytes(2, getCommunityNameBytes());
+      }
+      if (!getCommunityIconBytes().isEmpty()) {
+        output.writeBytes(3, getCommunityIconBytes());
+      }
+      if (!getIntroduceBytes().isEmpty()) {
+        output.writeBytes(4, getIntroduceBytes());
+      }
+      if (user_ != null) {
+        output.writeMessage(5, getUser());
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getCommunityIdBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getCommunityIdBytes());
+      }
+      if (!getCommunityNameBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getCommunityNameBytes());
+      }
+      if (!getCommunityIconBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getCommunityIconBytes());
+      }
+      if (!getIntroduceBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getIntroduceBytes());
+      }
+      if (user_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getUser());
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code common.PAccountChatPersonInfo}
+     *
+     * <pre>
+     * 显示聊天的个人档案信息
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:common.PAccountChatPersonInfo)
+        com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PAccountChatPersonInfo_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PAccountChatPersonInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo.class, com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        communityId_ = "";
+
+        communityName_ = "";
+
+        communityIcon_ = "";
+
+        introduce_ = "";
+
+        if (userBuilder_ == null) {
+          user_ = null;
+        } else {
+          user_ = null;
+          userBuilder_ = null;
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.AccountProtos.internal_static_common_PAccountChatPersonInfo_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo build() {
+        com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo buildPartial() {
+        com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo result = new com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo(this);
+        result.communityId_ = communityId_;
+        result.communityName_ = communityName_;
+        result.communityIcon_ = communityIcon_;
+        result.introduce_ = introduce_;
+        if (userBuilder_ == null) {
+          result.user_ = user_;
+        } else {
+          result.user_ = userBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo) {
+          return mergeFrom((com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo other) {
+        if (other == com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo.getDefaultInstance()) return this;
+        if (!other.getCommunityId().isEmpty()) {
+          communityId_ = other.communityId_;
+          onChanged();
+        }
+        if (!other.getCommunityName().isEmpty()) {
+          communityName_ = other.communityName_;
+          onChanged();
+        }
+        if (!other.getCommunityIcon().isEmpty()) {
+          communityIcon_ = other.communityIcon_;
+          onChanged();
+        }
+        if (!other.getIntroduce().isEmpty()) {
+          introduce_ = other.introduce_;
+          onChanged();
+        }
+        if (other.hasUser()) {
+          mergeUser(other.getUser());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object communityId_ = "";
+      /**
+       * <code>optional string communityId = 1;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public java.lang.String getCommunityId() {
+        java.lang.Object ref = communityId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            communityId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string communityId = 1;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getCommunityIdBytes() {
+        java.lang.Object ref = communityId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          communityId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string communityId = 1;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public Builder setCommunityId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        communityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string communityId = 1;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public Builder clearCommunityId() {
+        
+        communityId_ = getDefaultInstance().getCommunityId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string communityId = 1;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public Builder setCommunityIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        communityId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object communityName_ = "";
+      /**
+       * <code>optional string communityName = 2;</code>
+       *
+       * <pre>
+       *社区名称
+       * </pre>
+       */
+      public java.lang.String getCommunityName() {
+        java.lang.Object ref = communityName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            communityName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string communityName = 2;</code>
+       *
+       * <pre>
+       *社区名称
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getCommunityNameBytes() {
+        java.lang.Object ref = communityName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          communityName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string communityName = 2;</code>
+       *
+       * <pre>
+       *社区名称
+       * </pre>
+       */
+      public Builder setCommunityName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        communityName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string communityName = 2;</code>
+       *
+       * <pre>
+       *社区名称
+       * </pre>
+       */
+      public Builder clearCommunityName() {
+        
+        communityName_ = getDefaultInstance().getCommunityName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string communityName = 2;</code>
+       *
+       * <pre>
+       *社区名称
+       * </pre>
+       */
+      public Builder setCommunityNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        communityName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object communityIcon_ = "";
+      /**
+       * <code>optional string communityIcon = 3;</code>
+       *
+       * <pre>
+       *社区图片
+       * </pre>
+       */
+      public java.lang.String getCommunityIcon() {
+        java.lang.Object ref = communityIcon_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            communityIcon_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string communityIcon = 3;</code>
+       *
+       * <pre>
+       *社区图片
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getCommunityIconBytes() {
+        java.lang.Object ref = communityIcon_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          communityIcon_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string communityIcon = 3;</code>
+       *
+       * <pre>
+       *社区图片
+       * </pre>
+       */
+      public Builder setCommunityIcon(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        communityIcon_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string communityIcon = 3;</code>
+       *
+       * <pre>
+       *社区图片
+       * </pre>
+       */
+      public Builder clearCommunityIcon() {
+        
+        communityIcon_ = getDefaultInstance().getCommunityIcon();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string communityIcon = 3;</code>
+       *
+       * <pre>
+       *社区图片
+       * </pre>
+       */
+      public Builder setCommunityIconBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        communityIcon_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object introduce_ = "";
+      /**
+       * <code>optional string Introduce = 4;</code>
+       *
+       * <pre>
+       *社区介绍
+       * </pre>
+       */
+      public java.lang.String getIntroduce() {
+        java.lang.Object ref = introduce_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            introduce_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string Introduce = 4;</code>
+       *
+       * <pre>
+       *社区介绍
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getIntroduceBytes() {
+        java.lang.Object ref = introduce_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          introduce_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string Introduce = 4;</code>
+       *
+       * <pre>
+       *社区介绍
+       * </pre>
+       */
+      public Builder setIntroduce(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        introduce_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Introduce = 4;</code>
+       *
+       * <pre>
+       *社区介绍
+       * </pre>
+       */
+      public Builder clearIntroduce() {
+        
+        introduce_ = getDefaultInstance().getIntroduce();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string Introduce = 4;</code>
+       *
+       * <pre>
+       *社区介绍
+       * </pre>
+       */
+      public Builder setIntroduceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        introduce_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.blemobi.sep.probuf.AccountProtos.PUser user_ = null;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.AccountProtos.PUser, com.blemobi.sep.probuf.AccountProtos.PUser.Builder, com.blemobi.sep.probuf.AccountProtos.PUserOrBuilder> userBuilder_;
+      /**
+       * <code>optional .common.PUser user = 5;</code>
+       *
+       * <pre>
+       *用户信息
+       * </pre>
+       */
+      public boolean hasUser() {
+        return userBuilder_ != null || user_ != null;
+      }
+      /**
+       * <code>optional .common.PUser user = 5;</code>
+       *
+       * <pre>
+       *用户信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUser getUser() {
+        if (userBuilder_ == null) {
+          return user_ == null ? com.blemobi.sep.probuf.AccountProtos.PUser.getDefaultInstance() : user_;
+        } else {
+          return userBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .common.PUser user = 5;</code>
+       *
+       * <pre>
+       *用户信息
+       * </pre>
+       */
+      public Builder setUser(com.blemobi.sep.probuf.AccountProtos.PUser value) {
+        if (userBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          user_ = value;
+          onChanged();
+        } else {
+          userBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .common.PUser user = 5;</code>
+       *
+       * <pre>
+       *用户信息
+       * </pre>
+       */
+      public Builder setUser(
+          com.blemobi.sep.probuf.AccountProtos.PUser.Builder builderForValue) {
+        if (userBuilder_ == null) {
+          user_ = builderForValue.build();
+          onChanged();
+        } else {
+          userBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .common.PUser user = 5;</code>
+       *
+       * <pre>
+       *用户信息
+       * </pre>
+       */
+      public Builder mergeUser(com.blemobi.sep.probuf.AccountProtos.PUser value) {
+        if (userBuilder_ == null) {
+          if (user_ != null) {
+            user_ =
+              com.blemobi.sep.probuf.AccountProtos.PUser.newBuilder(user_).mergeFrom(value).buildPartial();
+          } else {
+            user_ = value;
+          }
+          onChanged();
+        } else {
+          userBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .common.PUser user = 5;</code>
+       *
+       * <pre>
+       *用户信息
+       * </pre>
+       */
+      public Builder clearUser() {
+        if (userBuilder_ == null) {
+          user_ = null;
+          onChanged();
+        } else {
+          user_ = null;
+          userBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .common.PUser user = 5;</code>
+       *
+       * <pre>
+       *用户信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUser.Builder getUserBuilder() {
+        
+        onChanged();
+        return getUserFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .common.PUser user = 5;</code>
+       *
+       * <pre>
+       *用户信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUserOrBuilder getUserOrBuilder() {
+        if (userBuilder_ != null) {
+          return userBuilder_.getMessageOrBuilder();
+        } else {
+          return user_ == null ?
+              com.blemobi.sep.probuf.AccountProtos.PUser.getDefaultInstance() : user_;
+        }
+      }
+      /**
+       * <code>optional .common.PUser user = 5;</code>
+       *
+       * <pre>
+       *用户信息
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.AccountProtos.PUser, com.blemobi.sep.probuf.AccountProtos.PUser.Builder, com.blemobi.sep.probuf.AccountProtos.PUserOrBuilder> 
+          getUserFieldBuilder() {
+        if (userBuilder_ == null) {
+          userBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.blemobi.sep.probuf.AccountProtos.PUser, com.blemobi.sep.probuf.AccountProtos.PUser.Builder, com.blemobi.sep.probuf.AccountProtos.PUserOrBuilder>(
+                  getUser(),
+                  getParentForChildren(),
+                  isClean());
+          user_ = null;
+        }
+        return userBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:common.PAccountChatPersonInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:common.PAccountChatPersonInfo)
+    private static final com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo();
+    }
+
+    public static com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PAccountChatPersonInfo> PARSER =
+        new com.google.protobuf.AbstractParser<PAccountChatPersonInfo>() {
+      public PAccountChatPersonInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PAccountChatPersonInfo(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PAccountChatPersonInfo> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.AccountProtos.PAccountChatPersonInfo getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -19658,6 +26992,16 @@ public final class AccountProtos {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_common_PUserList_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_common_PLiveInfo_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_common_PLiveInfo_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_common_PLiveInfoList_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_common_PLiveInfoList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_common_PUser_descriptor;
   private static
@@ -19724,40 +27068,70 @@ public final class AccountProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_common_PLevelInfos_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PBlacklist_descriptor;
+    internal_static_common_PLiveRemind_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PBlacklist_fieldAccessorTable;
+      internal_static_common_PLiveRemind_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PBlacklistList_descriptor;
+    internal_static_common_PAccountInitInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PBlacklistList_fieldAccessorTable;
+      internal_static_common_PAccountInitInfo_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PBlacklistVal_descriptor;
+    internal_static_common_PBackImage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PBlacklistVal_fieldAccessorTable;
+      internal_static_common_PBackImage_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PBlacklistID_descriptor;
+    internal_static_common_PBackThumbImageList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PBlacklistID_fieldAccessorTable;
+      internal_static_common_PBackThumbImageList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PBlacklistRet_descriptor;
+    internal_static_common_PReadNameAuthInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PBlacklistRet_fieldAccessorTable;
+      internal_static_common_PReadNameAuthInfo_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PBlacklistExRet_descriptor;
+    internal_static_common_PReadNameAuthInfoList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PBlacklistExRet_fieldAccessorTable;
+      internal_static_common_PReadNameAuthInfoList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PBlacklistCount_descriptor;
+    internal_static_common_PReadNameAuthInfoCount_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PBlacklistCount_fieldAccessorTable;
+      internal_static_common_PReadNameAuthInfoCount_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_common_PPrivacyInfo_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_common_PPrivacyInfo_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_common_PLanguageInfo_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_common_PLanguageInfo_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_common_PLinkInfo_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_common_PLinkInfo_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_common_PLinkInfoList_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_common_PLinkInfoList_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_common_PAccountNewsPersonInfo_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_common_PAccountNewsPersonInfo_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_common_PAccountChatPersonInfo_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_common_PAccountChatPersonInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -19768,75 +27142,102 @@ public final class AccountProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\raccount.proto\022\006common\"(\n\tPUserList\022\033\n\004" +
-      "list\030\001 \003(\0132\r.common.PUser\"\362\003\n\005PUser\022\014\n\004u" +
-      "uid\030\006 \001(\t\022\020\n\010password\030\007 \001(\t\022\020\n\010username\030" +
-      "\010 \001(\t\022\020\n\010nickname\030\t \001(\t\022\022\n\nheadImgURL\030\n " +
-      "\001(\t\022\020\n\010realname\030\013 \001(\t\022\016\n\006gender\030\014 \001(\005\022\r\n" +
-      "\005email\030\r \001(\t\022\020\n\010birthday\030\016 \001(\t\022\021\n\tcellph" +
-      "one\030\017 \001(\t\022\020\n\010timeZone\030\020 \001(\005\022\016\n\006locale\030\021 " +
-      "\001(\t\022\027\n\017membershipLevel\030\022 \001(\005\022\026\n\016lastUpda" +
-      "teTime\030\023 \001(\003\022\025\n\rlastLoginTime\030\024 \001(\003\022\022\n\nu" +
-      "serResume\030\025 \001(\t\022\r\n\005link1\030\026 \001(\t\022\r\n\005link2\030",
-      "\027 \001(\t\022\r\n\005link3\030\030 \001(\t\022\016\n\006chatId\030\031 \001(\003\022%\n\t" +
-      "levelInfo\030\032 \001(\0132\022.common.PLevelInfo\022\017\n\007d" +
-      "isable\030\033 \001(\010\022\014\n\004isAI\030\034 \001(\010\022\026\n\016forceChang" +
-      "ePwd\030\035 \001(\010\022\020\n\010areaCode\030\036 \001(\t\022\020\n\010areaName" +
-      "\030\037 \001(\t\",\n\013PUserListEx\022\035\n\004list\030\001 \003(\0132\017.co" +
-      "mmon.PUserEx\"\217\003\n\007PUserEx\022\014\n\004uuid\030\006 \001(\t\022\017" +
-      "\n\007project\030\007 \001(\t\022\020\n\010username\030\010 \001(\t\022\020\n\010pas" +
-      "sword\030\t \001(\t\022\020\n\010nickname\030\n \001(\t\022\020\n\010realnam" +
-      "e\030\013 \001(\t\022\016\n\006gender\030\014 \001(\005\022\020\n\010birthday\030\r \001(" +
-      "\t\022\r\n\005email\030\016 \001(\t\022\021\n\tcellphone\030\017 \001(\t\022\020\n\010t",
-      "imeZone\030\020 \001(\005\022\022\n\nheadImgURL\030\021 \001(\t\022\016\n\006loc" +
-      "ale\030\022 \001(\t\022\022\n\nuserResume\030\023 \001(\t\022\026\n\016lastUpd" +
-      "ateTime\030\024 \001(\003\022\025\n\rlastLoginTime\030\025 \001(\003\022/\n\010" +
-      "userData\030\026 \003(\0132\035.common.PUserEx.UserData" +
-      "Entry\032/\n\rUserDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001\"`\n\tPUserBase\022\r\n\005Level\030\002 \001" +
-      "(\005\022\014\n\004UUID\030\006 \001(\t\022\020\n\010UserName\030\007 \001(\t\022\020\n\010Ni" +
-      "ckname\030\010 \001(\t\022\022\n\nHeadImgURL\030\t \001(\t\"0\n\rPUse" +
-      "rBaseList\022\037\n\004list\030\001 \003(\0132\021.common.PUserBa" +
-      "se\"c\n\tPPhoneMap\022)\n\004list\030\001 \003(\0132\033.common.P",
-      "PhoneMap.ListEntry\032+\n\tListEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"^\n\010PAccount\022\021\n\tc" +
-      "ellphone\030\002 \001(\010\022\016\n\006wechat\030\003 \001(\010\022\r\n\005weibo\030" +
-      "\004 \001(\010\022\020\n\010facebook\030\005 \001(\010\022\016\n\006google\030\006 \001(\010\"" +
-      "\204\001\n\nPLevelInfo\022\021\n\tlevelType\030\001 \001(\005\0222\n\010map" +
-      "Right\030\002 \003(\0132 .common.PLevelInfo.MapRight" +
-      "Entry\032/\n\rMapRightEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\010:\0028\001\"C\n\014PLevelInfoEx\022\014\n\004uuid\030\001" +
-      " \001(\t\022%\n\tlevelInfo\030\002 \001(\0132\022.common.PLevelI" +
-      "nfo\"C\n\013PLevelInfos\022\"\n\004list\030\001 \003(\0132\024.commo",
-      "n.PLevelInfoEx\022\020\n\010failUuid\030\002 \003(\t\"%\n\nPBla" +
-      "cklist\022\n\n\002id\030\001 \001(\003\022\013\n\003val\030\002 \001(\t\"2\n\016PBlac" +
-      "klistList\022 \n\004list\030\001 \003(\0132\022.common.PBlackl" +
-      "ist\"\035\n\rPBlacklistVal\022\014\n\004list\030\001 \003(\t\"\034\n\014PB" +
-      "lacklistID\022\014\n\004list\030\001 \003(\003\"3\n\rPBlacklistRe" +
-      "t\022\020\n\010succList\030\001 \003(\003\022\020\n\010failList\030\002 \003(\003\"p\n" +
-      "\017PBlacklistExRet\022$\n\010succList\030\001 \003(\0132\022.com" +
-      "mon.PBlacklist\022%\n\texistList\030\002 \003(\0132\022.comm" +
-      "on.PBlacklist\022\020\n\010failList\030\003 \003(\t\" \n\017PBlac" +
-      "klistCount\022\r\n\005count\030\001 \001(\003*>\n\nELevelType\022",
-      "\010\n\004User\020\000\022\007\n\003Vip\020\001\022\010\n\004Vipp\020\002\022\006\n\002Vo\020\003\022\013\n\007" +
-      "Tourist\020\004*\266\005\n\010ERightId\022\033\n\027weibo_show_lef" +
-      "t_catalog\020\000\022\033\n\027weibo_show_top_dropdown\020\001" +
-      "\022\023\n\017weibo_show_icon\020\002\022\026\n\022weibo_show_comm" +
-      "ent\020\003\022\026\n\022weibo_show_collect\020\004\022\023\n\017weibo_s" +
-      "how_more\020\005\022\033\n\027weibo_show_view_details\020\006\022" +
-      "\026\n\022weibo_comment_text\020\007\022\027\n\023weibo_comment" +
-      "_audio\020\010\022\023\n\017weibo_post_text\020\t\022\024\n\020weibo_p" +
-      "ost_image\020\n\022\024\n\020weibo_post_video\020\013\022\024\n\020wei" +
-      "bo_post_audio\020\014\022\"\n\036personal_record_exter",
-      "nal_links\020\r\022\030\n\024personal_record_icon\020\016\022\035\n" +
-      "\031personal_record_community\020\017\022\'\n#personal" +
-      "_record_video_classify_page\020\020\022\'\n#persona" +
-      "l_record_audio_classify_page\020\021\022\033\n\027friend" +
-      "_system_recommend\020\022\022\030\n\024friend_system_sea" +
-      "rch\020\023\022\"\n\036friend_system_friend_apply_for\020" +
-      "\024\022\036\n\032friend_system_address_book\020\025\022\030\n\024fri" +
-      "end_system_friend\020\026\022\036\n\032friend_system_my_" +
-      "apply_for\020\027\022\r\n\treal_name\020\030B\'\n\026com.blemob" +
-      "i.sep.probufB\rAccountProtosb\006proto3"
+      "list\030\001 \003(\0132\r.common.PUser\")\n\tPLiveInfo\022\017" +
+      "\n\007website\030\001 \001(\t\022\013\n\003url\030\002 \001(\t\"0\n\rPLiveInf" +
+      "oList\022\037\n\004list\030\001 \003(\0132\021.common.PLiveInfo\"\362" +
+      "\004\n\005PUser\022\014\n\004uuid\030\006 \001(\t\022\020\n\010password\030\007 \001(\t" +
+      "\022\020\n\010username\030\010 \001(\t\022\020\n\010nickname\030\t \001(\t\022\022\n\n" +
+      "headImgURL\030\n \001(\t\022\020\n\010realname\030\013 \001(\t\022\016\n\006ge" +
+      "nder\030\014 \001(\005\022\r\n\005email\030\r \001(\t\022\020\n\010birthday\030\016 " +
+      "\001(\t\022\021\n\tcellphone\030\017 \001(\t\022\020\n\010timeZone\030\020 \001(\005" +
+      "\022\016\n\006locale\030\021 \001(\t\022\027\n\017membershipLevel\030\022 \001(",
+      "\005\022\026\n\016lastUpdateTime\030\023 \001(\003\022\025\n\rlastLoginTi" +
+      "me\030\024 \001(\003\022\022\n\nuserResume\030\025 \001(\t\022\r\n\005link1\030\026 " +
+      "\001(\t\022\r\n\005link2\030\027 \001(\t\022\r\n\005link3\030\030 \001(\t\022\016\n\006cha" +
+      "tId\030\031 \001(\003\022%\n\tlevelInfo\030\032 \001(\0132\022.common.PL" +
+      "evelInfo\022\017\n\007disable\030\033 \001(\010\022\014\n\004isAI\030\034 \001(\010\022" +
+      "\026\n\016forceChangePwd\030\035 \001(\010\022\020\n\010areaCode\030\036 \001(" +
+      "\t\022\020\n\010areaName\030\037 \001(\t\022\022\n\nliveRemind\030  \001(\010\022" +
+      "\'\n\010liveInfo\030! \001(\0132\025.common.PLiveInfoList" +
+      "\022\026\n\016thumbBackImage\030\" \001(\t\022\024\n\014bigBackImage" +
+      "\030# \001(\t\022\023\n\013isFollowing\030$ \001(\010\",\n\013PUserList",
+      "Ex\022\035\n\004list\030\001 \003(\0132\017.common.PUserEx\"\217\003\n\007PU" +
+      "serEx\022\014\n\004uuid\030\006 \001(\t\022\017\n\007project\030\007 \001(\t\022\020\n\010" +
+      "username\030\010 \001(\t\022\020\n\010password\030\t \001(\t\022\020\n\010nick" +
+      "name\030\n \001(\t\022\020\n\010realname\030\013 \001(\t\022\016\n\006gender\030\014" +
+      " \001(\005\022\020\n\010birthday\030\r \001(\t\022\r\n\005email\030\016 \001(\t\022\021\n" +
+      "\tcellphone\030\017 \001(\t\022\020\n\010timeZone\030\020 \001(\005\022\022\n\nhe" +
+      "adImgURL\030\021 \001(\t\022\016\n\006locale\030\022 \001(\t\022\022\n\nuserRe" +
+      "sume\030\023 \001(\t\022\026\n\016lastUpdateTime\030\024 \001(\003\022\025\n\rla" +
+      "stLoginTime\030\025 \001(\003\022/\n\010userData\030\026 \003(\0132\035.co" +
+      "mmon.PUserEx.UserDataEntry\032/\n\rUserDataEn",
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\206\001\n\t" +
+      "PUserBase\022\r\n\005Level\030\002 \001(\005\022\014\n\004UUID\030\006 \001(\t\022\020" +
+      "\n\010UserName\030\007 \001(\t\022\020\n\010Nickname\030\010 \001(\t\022\020\n\010Re" +
+      "alName\030\t \001(\t\022\022\n\nHeadImgURL\030\n \001(\t\022\022\n\nUser" +
+      "Resume\030\013 \001(\t\"0\n\rPUserBaseList\022\037\n\004list\030\001 " +
+      "\003(\0132\021.common.PUserBase\"c\n\tPPhoneMap\022)\n\004l" +
+      "ist\030\001 \003(\0132\033.common.PPhoneMap.ListEntry\032+" +
+      "\n\tListEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001\"^\n\010PAccount\022\021\n\tcellphone\030\002 \001(\010\022\016\n\006we" +
+      "chat\030\003 \001(\010\022\r\n\005weibo\030\004 \001(\010\022\020\n\010facebook\030\005 ",
+      "\001(\010\022\016\n\006google\030\006 \001(\010\"\204\001\n\nPLevelInfo\022\021\n\tle" +
+      "velType\030\001 \001(\005\0222\n\010mapRight\030\002 \003(\0132 .common" +
+      ".PLevelInfo.MapRightEntry\032/\n\rMapRightEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028\001\"C\n\014PL" +
+      "evelInfoEx\022\014\n\004uuid\030\001 \001(\t\022%\n\tlevelInfo\030\002 " +
+      "\001(\0132\022.common.PLevelInfo\"C\n\013PLevelInfos\022\"" +
+      "\n\004list\030\001 \003(\0132\024.common.PLevelInfoEx\022\020\n\010fa" +
+      "ilUuid\030\002 \003(\t\"\034\n\013PLiveRemind\022\r\n\005offOn\030\001 \001" +
+      "(\010\"9\n\020PAccountInitInfo\022\022\n\nauthStatus\030\001 \001" +
+      "(\005\022\021\n\tcellphone\030\002 \001(\t\",\n\nPBackImage\022\021\n\to",
+      "bjectKey\030\001 \001(\t\022\013\n\003url\030\002 \001(\t\"7\n\023PBackThum" +
+      "bImageList\022 \n\004list\030\001 \003(\0132\022.common.PBackI" +
+      "mage\"\220\001\n\021PReadNameAuthInfo\022\014\n\004uuid\030\001 \001(\t" +
+      "\022\022\n\nauthStatus\030\002 \001(\005\022\020\n\010readName\030\003 \001(\t\022\020" +
+      "\n\010birthday\030\004 \001(\t\022\020\n\010idCardNo\030\005 \001(\t\022\021\n\tid" +
+      "CardImg\030\006 \001(\t\022\020\n\010authTime\030\007 \001(\005\"@\n\025PRead" +
+      "NameAuthInfoList\022\'\n\004list\030\001 \003(\0132\031.common." +
+      "PReadNameAuthInfo\"\'\n\026PReadNameAuthInfoCo" +
+      "unt\022\r\n\005count\030\001 \001(\003\"3\n\014PPrivacyInfo\022\016\n\006my" +
+      "Fans\030\001 \001(\010\022\023\n\013myAttention\030\002 \001(\010\"!\n\rPLang",
+      "uageInfo\022\020\n\010language\030\001 \001(\t\"&\n\tPLinkInfo\022" +
+      "\014\n\004type\030\001 \001(\005\022\013\n\003url\030\002 \001(\t\"0\n\rPLinkInfoL" +
+      "ist\022\037\n\004list\030\001 \003(\0132\021.common.PLinkInfo\"\226\002\n" +
+      "\026PAccountNewsPersonInfo\022\021\n\tfriendCnt\030\001 \001" +
+      "(\005\022\021\n\tfollowCnt\030\002 \001(\005\022\017\n\007fansCnt\030\003 \001(\005\022\017" +
+      "\n\007textCnt\030\004 \001(\005\022\020\n\010imageCnt\030\005 \001(\005\022\020\n\010aud" +
+      "ioCnt\030\006 \001(\005\022\020\n\010videoCnt\030\007 \001(\005\022\023\n\013Communi" +
+      "tyID\030\010 \001(\t\022\033\n\004user\030\t \001(\0132\r.common.PUser\022" +
+      "\022\n\nfollowship\030\n \001(\005\022\016\n\006friend\030\013 \001(\010\022(\n\tl" +
+      "inkInfos\030\014 \001(\0132\025.common.PLinkInfoList\"\213\001",
+      "\n\026PAccountChatPersonInfo\022\023\n\013communityId\030" +
+      "\001 \001(\t\022\025\n\rcommunityName\030\002 \001(\t\022\025\n\rcommunit" +
+      "yIcon\030\003 \001(\t\022\021\n\tIntroduce\030\004 \001(\t\022\033\n\004user\030\005" +
+      " \001(\0132\r.common.PUser*>\n\nELevelType\022\010\n\004Use" +
+      "r\020\000\022\007\n\003Vip\020\001\022\010\n\004Vipp\020\002\022\006\n\002Vo\020\003\022\013\n\007Touris" +
+      "t\020\004*\266\005\n\010ERightId\022\033\n\027weibo_show_left_cata" +
+      "log\020\000\022\033\n\027weibo_show_top_dropdown\020\001\022\023\n\017we" +
+      "ibo_show_icon\020\002\022\026\n\022weibo_show_comment\020\003\022" +
+      "\026\n\022weibo_show_collect\020\004\022\023\n\017weibo_show_mo" +
+      "re\020\005\022\033\n\027weibo_show_view_details\020\006\022\026\n\022wei",
+      "bo_comment_text\020\007\022\027\n\023weibo_comment_audio" +
+      "\020\010\022\023\n\017weibo_post_text\020\t\022\024\n\020weibo_post_im" +
+      "age\020\n\022\024\n\020weibo_post_video\020\013\022\024\n\020weibo_pos" +
+      "t_audio\020\014\022\"\n\036personal_record_external_li" +
+      "nks\020\r\022\030\n\024personal_record_icon\020\016\022\035\n\031perso" +
+      "nal_record_community\020\017\022\'\n#personal_recor" +
+      "d_video_classify_page\020\020\022\'\n#personal_reco" +
+      "rd_audio_classify_page\020\021\022\033\n\027friend_syste" +
+      "m_recommend\020\022\022\030\n\024friend_system_search\020\023\022" +
+      "\"\n\036friend_system_friend_apply_for\020\024\022\036\n\032f",
+      "riend_system_address_book\020\025\022\030\n\024friend_sy" +
+      "stem_friend\020\026\022\036\n\032friend_system_my_apply_" +
+      "for\020\027\022\r\n\treal_name\020\030*v\n\tELinkType\022\n\n\006tao" +
+      "bao\020\000\022\006\n\002jd\020\001\022\006\n\002yy\020\002\022\010\n\004huya\020\003\022\t\n\005douyu" +
+      "\020\004\022\t\n\005panda\020\005\022\n\n\006zhanqi\020\006\022\013\n\007quanmin\020\007\022\t" +
+      "\n\005weibo\020\010\022\t\n\005qzone\020\tB\'\n\026com.blemobi.sep." +
+      "probufB\rAccountProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -19856,20 +27257,32 @@ public final class AccountProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_common_PUserList_descriptor,
         new java.lang.String[] { "List", });
-    internal_static_common_PUser_descriptor =
+    internal_static_common_PLiveInfo_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_common_PLiveInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_common_PLiveInfo_descriptor,
+        new java.lang.String[] { "Website", "Url", });
+    internal_static_common_PLiveInfoList_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_common_PLiveInfoList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_common_PLiveInfoList_descriptor,
+        new java.lang.String[] { "List", });
+    internal_static_common_PUser_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_common_PUser_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_common_PUser_descriptor,
-        new java.lang.String[] { "Uuid", "Password", "Username", "Nickname", "HeadImgURL", "Realname", "Gender", "Email", "Birthday", "Cellphone", "TimeZone", "Locale", "MembershipLevel", "LastUpdateTime", "LastLoginTime", "UserResume", "Link1", "Link2", "Link3", "ChatId", "LevelInfo", "Disable", "IsAI", "ForceChangePwd", "AreaCode", "AreaName", });
+        new java.lang.String[] { "Uuid", "Password", "Username", "Nickname", "HeadImgURL", "Realname", "Gender", "Email", "Birthday", "Cellphone", "TimeZone", "Locale", "MembershipLevel", "LastUpdateTime", "LastLoginTime", "UserResume", "Link1", "Link2", "Link3", "ChatId", "LevelInfo", "Disable", "IsAI", "ForceChangePwd", "AreaCode", "AreaName", "LiveRemind", "LiveInfo", "ThumbBackImage", "BigBackImage", "IsFollowing", });
     internal_static_common_PUserListEx_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_common_PUserListEx_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_common_PUserListEx_descriptor,
         new java.lang.String[] { "List", });
     internal_static_common_PUserEx_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_common_PUserEx_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_common_PUserEx_descriptor,
@@ -19881,19 +27294,19 @@ public final class AccountProtos {
         internal_static_common_PUserEx_UserDataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_common_PUserBase_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_common_PUserBase_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_common_PUserBase_descriptor,
-        new java.lang.String[] { "Level", "UUID", "UserName", "Nickname", "HeadImgURL", });
+        new java.lang.String[] { "Level", "UUID", "UserName", "Nickname", "RealName", "HeadImgURL", "UserResume", });
     internal_static_common_PUserBaseList_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_common_PUserBaseList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_common_PUserBaseList_descriptor,
         new java.lang.String[] { "List", });
     internal_static_common_PPhoneMap_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_common_PPhoneMap_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_common_PPhoneMap_descriptor,
@@ -19905,13 +27318,13 @@ public final class AccountProtos {
         internal_static_common_PPhoneMap_ListEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_common_PAccount_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_common_PAccount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_common_PAccount_descriptor,
         new java.lang.String[] { "Cellphone", "Wechat", "Weibo", "Facebook", "Google", });
     internal_static_common_PLevelInfo_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_common_PLevelInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_common_PLevelInfo_descriptor,
@@ -19923,59 +27336,95 @@ public final class AccountProtos {
         internal_static_common_PLevelInfo_MapRightEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_common_PLevelInfoEx_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_common_PLevelInfoEx_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_common_PLevelInfoEx_descriptor,
         new java.lang.String[] { "Uuid", "LevelInfo", });
     internal_static_common_PLevelInfos_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_common_PLevelInfos_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_common_PLevelInfos_descriptor,
         new java.lang.String[] { "List", "FailUuid", });
-    internal_static_common_PBlacklist_descriptor =
-      getDescriptor().getMessageTypes().get(11);
-    internal_static_common_PBlacklist_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PBlacklist_descriptor,
-        new java.lang.String[] { "Id", "Val", });
-    internal_static_common_PBlacklistList_descriptor =
-      getDescriptor().getMessageTypes().get(12);
-    internal_static_common_PBlacklistList_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PBlacklistList_descriptor,
-        new java.lang.String[] { "List", });
-    internal_static_common_PBlacklistVal_descriptor =
+    internal_static_common_PLiveRemind_descriptor =
       getDescriptor().getMessageTypes().get(13);
-    internal_static_common_PBlacklistVal_fieldAccessorTable = new
+    internal_static_common_PLiveRemind_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PBlacklistVal_descriptor,
-        new java.lang.String[] { "List", });
-    internal_static_common_PBlacklistID_descriptor =
+        internal_static_common_PLiveRemind_descriptor,
+        new java.lang.String[] { "OffOn", });
+    internal_static_common_PAccountInitInfo_descriptor =
       getDescriptor().getMessageTypes().get(14);
-    internal_static_common_PBlacklistID_fieldAccessorTable = new
+    internal_static_common_PAccountInitInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PBlacklistID_descriptor,
-        new java.lang.String[] { "List", });
-    internal_static_common_PBlacklistRet_descriptor =
+        internal_static_common_PAccountInitInfo_descriptor,
+        new java.lang.String[] { "AuthStatus", "Cellphone", });
+    internal_static_common_PBackImage_descriptor =
       getDescriptor().getMessageTypes().get(15);
-    internal_static_common_PBlacklistRet_fieldAccessorTable = new
+    internal_static_common_PBackImage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PBlacklistRet_descriptor,
-        new java.lang.String[] { "SuccList", "FailList", });
-    internal_static_common_PBlacklistExRet_descriptor =
+        internal_static_common_PBackImage_descriptor,
+        new java.lang.String[] { "ObjectKey", "Url", });
+    internal_static_common_PBackThumbImageList_descriptor =
       getDescriptor().getMessageTypes().get(16);
-    internal_static_common_PBlacklistExRet_fieldAccessorTable = new
+    internal_static_common_PBackThumbImageList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PBlacklistExRet_descriptor,
-        new java.lang.String[] { "SuccList", "ExistList", "FailList", });
-    internal_static_common_PBlacklistCount_descriptor =
+        internal_static_common_PBackThumbImageList_descriptor,
+        new java.lang.String[] { "List", });
+    internal_static_common_PReadNameAuthInfo_descriptor =
       getDescriptor().getMessageTypes().get(17);
-    internal_static_common_PBlacklistCount_fieldAccessorTable = new
+    internal_static_common_PReadNameAuthInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PBlacklistCount_descriptor,
+        internal_static_common_PReadNameAuthInfo_descriptor,
+        new java.lang.String[] { "Uuid", "AuthStatus", "ReadName", "Birthday", "IdCardNo", "IdCardImg", "AuthTime", });
+    internal_static_common_PReadNameAuthInfoList_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_common_PReadNameAuthInfoList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_common_PReadNameAuthInfoList_descriptor,
+        new java.lang.String[] { "List", });
+    internal_static_common_PReadNameAuthInfoCount_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_common_PReadNameAuthInfoCount_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_common_PReadNameAuthInfoCount_descriptor,
         new java.lang.String[] { "Count", });
+    internal_static_common_PPrivacyInfo_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_common_PPrivacyInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_common_PPrivacyInfo_descriptor,
+        new java.lang.String[] { "MyFans", "MyAttention", });
+    internal_static_common_PLanguageInfo_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_common_PLanguageInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_common_PLanguageInfo_descriptor,
+        new java.lang.String[] { "Language", });
+    internal_static_common_PLinkInfo_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_common_PLinkInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_common_PLinkInfo_descriptor,
+        new java.lang.String[] { "Type", "Url", });
+    internal_static_common_PLinkInfoList_descriptor =
+      getDescriptor().getMessageTypes().get(23);
+    internal_static_common_PLinkInfoList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_common_PLinkInfoList_descriptor,
+        new java.lang.String[] { "List", });
+    internal_static_common_PAccountNewsPersonInfo_descriptor =
+      getDescriptor().getMessageTypes().get(24);
+    internal_static_common_PAccountNewsPersonInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_common_PAccountNewsPersonInfo_descriptor,
+        new java.lang.String[] { "FriendCnt", "FollowCnt", "FansCnt", "TextCnt", "ImageCnt", "AudioCnt", "VideoCnt", "CommunityID", "User", "Followship", "Friend", "LinkInfos", });
+    internal_static_common_PAccountChatPersonInfo_descriptor =
+      getDescriptor().getMessageTypes().get(25);
+    internal_static_common_PAccountChatPersonInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_common_PAccountChatPersonInfo_descriptor,
+        new java.lang.String[] { "CommunityId", "CommunityName", "CommunityIcon", "Introduce", "User", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

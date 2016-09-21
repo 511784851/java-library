@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
@@ -17,6 +18,30 @@ import com.alibaba.fastjson.JSONArray;
  * @author 赵勇<andy.zhao@blemobi.com> 常用函数定义
  */
 public class CommonUtil {
+	/**
+	 * 从cookie中获取参数值
+	 * 
+	 * @param request
+	 *            request对象
+	 * @param key
+	 *            参数名称
+	 * @return String 参数值
+	 */
+	public static String getCookieParam(HttpServletRequest request, String key) {
+		String value = "";
+		Cookie[] cookies = request.getCookies();
+		if (cookies != null && cookies.length > 0) {
+			for (int i = 0; i < cookies.length; i++) {
+				Cookie cookie = cookies[i];
+				if (cookie.getName().equals(key)) {
+					value = cookie.getValue();
+					break;
+				}
+			}
+		}
+		return value;
+	}
+
 	/**
 	 * 生成请求uuid和token参数
 	 * 

@@ -29,7 +29,7 @@ public class LocalProp {
 		Properties fileProp = new Properties();
 		fileProp.load(in);
 		
-		log.info("--- Start listing properties ---");
+		log.info("--- Start list properties ---");
 
 		String prefix = "service_";
 		String postfix_addr = "_addr";

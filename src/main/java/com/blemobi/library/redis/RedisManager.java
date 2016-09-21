@@ -3,15 +3,19 @@ package com.blemobi.library.redis;
 import com.blemobi.library.consul.BaseService;
 import com.google.common.base.Strings;
 
+import lombok.extern.log4j.Log4j;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
+@Log4j
 public class RedisManager {
 	/*
 	 * 获得Redis连接
 	 */
 	public static Jedis getRedis() {
 		JedisPool jedisPool = getJedisPool();
+		log.debug("Redis Pool Info -> NumActive=[" + jedisPool.getNumActive() + "],NumIdle=[" + jedisPool.getNumIdle()
+				+ "]");
 		Jedis jedis = jedisPool.getResource();
 
 		String auth = BaseService.getProperty("redis_user_auth");
@@ -19,6 +23,7 @@ public class RedisManager {
 			jedis.auth(auth);
 		}
 
+		AutoReturnRedis.putJedis(jedis);
 		return jedis;
 	}
 
@@ -30,6 +35,7 @@ public class RedisManager {
 		JedisPool jedisPool = getJedisPool();
 		for (Jedis jedis : jediss) {
 			jedisPool.returnResource(jedis);
+			AutoReturnRedis.remJedis(jedis);
 		}
 	}
 

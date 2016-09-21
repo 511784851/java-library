@@ -56,7 +56,7 @@ public class ListParamFilter implements Filter {
 		}
 		
 		sb.append("-------------Print Param End---------------\r\n");
-		log.info(sb.toString());
+		log.debug(sb.toString());
 	}
 	
 }

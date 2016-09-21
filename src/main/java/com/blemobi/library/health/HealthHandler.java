@@ -15,10 +15,10 @@ import com.sun.net.httpserver.HttpHandler;
 
 public class HealthHandler implements HttpHandler {
 
-	private String path = "";
+	private String serviceName = "";
 
-	public HealthHandler(String path) {
-		this.path = path;
+	public HealthHandler(String serviceName) {
+		this.serviceName = serviceName;
 	}
 
 	public void handle(HttpExchange t) throws IOException {
@@ -35,6 +35,6 @@ public class HealthHandler implements HttpHandler {
 
 	// 根据系统管理员的要求，返回固定的json格式内容。
 	private String readRespData() {
-		return "{\"serviceName\" : \"" + this.path + "\",\"isHealthy\" : true } ";
+		return "{\"serviceName\" : \"" + this.serviceName + "\",\"isHealthy\" : true } ";
 	}
 }

@@ -12,16 +12,17 @@ import redis.clients.jedis.JedisPoolConfig;
 @Log4j
 public class RedisPoolSingleton {
 
-	private final int maxTotal = 100;
 	private final int maxIdle = 3;
-	private final int maxWaitMillis = 10 * 1000;
+	private final int maxWaitMillis = 30 * 1000;
 	private JedisPool jedisPool;
 
 	/*
-	 * 私有构造方法s
+	 * 私有构造方法
 	 */
 	private RedisPoolSingleton() {
 		log.info("初始化Redis连接池...");
+
+		int maxTotal = Integer.parseInt(BaseService.getProperty("redis_max_connect_num"));
 		String[] redisInfo = BaseService.getProperty("redis_user_addr").split(":");
 		String address = redisInfo[0];
 		int port = Integer.parseInt(redisInfo[1]);
@@ -31,6 +32,7 @@ public class RedisPoolSingleton {
 		config.setMaxIdle(maxIdle);
 		config.setMaxWaitMillis(maxWaitMillis);
 		this.jedisPool = new JedisPool(config, address, port);
+		log.info("完成Redis连接池的初始化工作.");
 	}
 
 	/*
