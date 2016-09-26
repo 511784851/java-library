@@ -15,7 +15,7 @@ public class BaseService {
 	private static  Map<String, ServiceInfo> sis = new HashMap<String, ServiceInfo>();
 	private static  Map<String, String> env = new HashMap<String, String>();
 	private static  String logLevel = null;
-
+	
 	/**
 	 * 从某个服务的consul服务器列表。
 	 * @param serviceName 某个服务的名称。
@@ -136,20 +136,17 @@ public class BaseService {
 	public static ConsulChangeListener adapter = new ConsulChangeListener() {
 
 		public void onEnvChange(Map<String, String> prop) {
-			log.debug("----------------onEnvChange-----------");
+			//log.debug("----------------onEnvChange-----------");
 			synchronized(env){
 				env.clear();
 				for(Entry<String, String> kv:prop.entrySet()){
-					log.debug("consul "+kv.getKey()+" = ["+kv.getValue()+"]");
+					//log.debug("consul "+kv.getKey()+" = ["+kv.getValue()+"]");
 				}
 				
 				for(Entry<String, String> kv:prop.entrySet()){
 					env.put(kv.getKey(), kv.getValue());
-				}				
+				}
 			}
-			String logLevel = env.get("log_level");
-			setLogLevel(logLevel);
-			
 		}
 
 		public void onServiceChange(String serviceName, SocketInfo[] socketInfo) {
@@ -171,10 +168,7 @@ public class BaseService {
 		}
 
 	};
-	static{
-		ConsulManager.addConsulChangeListener(adapter);
-	}
-	protected static void setLogLevel(String level) {
+	private static void setLogLevel(String level) {
 		if(level==null) level = "";
 		if(!level.equals(logLevel)){
 			logLevel = level;
@@ -189,4 +183,8 @@ public class BaseService {
 			}
 		}
 	}
+	static{
+		ConsulManager.addConsulChangeListener(adapter);
+	}
+	
 }

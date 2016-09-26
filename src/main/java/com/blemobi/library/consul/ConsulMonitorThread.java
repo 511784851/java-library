@@ -98,11 +98,11 @@ public class ConsulMonitorThread extends Thread {
 			propInfo.put(kv.getKey(), kv.getValue());
 		}
 		
-		for(String serviceName:allServiceName){ 
-			SocketInfo[] info = getServiceInfo(consulClient,serviceName); 
-			allService.put(serviceName, info);//有变化时则更新
-			
-
+		for(String serviceName:allServiceName){
+			if(!Strings.isNullOrEmpty(serviceName)){
+				SocketInfo[] info = getServiceInfo(consulClient,serviceName); 
+				allService.put(serviceName, info);//有变化时则更新
+			}
 		}
 		
 		for(ConsulChangeListener listener:allListener){
@@ -291,7 +291,7 @@ public class ConsulMonitorThread extends Thread {
 				rtn[i] = new SocketInfo(service[i].getServiceAddress(),service[i].getServicePort());
 			}
 		} else {
-			log.error("Please Notice！  Consul Serivie["+name+ "] Count = 0");
+			log.error("Please Notice！  Consul Service["+name+ "] Count = 0");
 		}
 		return rtn;
 	}
