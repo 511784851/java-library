@@ -11,6 +11,7 @@ import org.eclipse.jetty.servlet.ServletHolder;
 import org.glassfish.jersey.server.ServerProperties;
 import org.glassfish.jersey.servlet.ServletContainer;
 
+import com.blemobi.library.filter.GzipCompressFilter;
 import com.blemobi.library.filter.ListParamFilter;
 
 /*
@@ -47,6 +48,7 @@ public class JettyServer {
 
 			// 添加需要过滤的PATH
 			context.addFilter(ListParamFilter.class, "/*", enumSet);
+			context.addFilter(GzipCompressFilter.class, "/*", enumSet);
 			for (ServerFilter serverFilter : serverFilterList) {
 				for (String path : serverFilter.getPathList()) {
 					context.addFilter(serverFilter.getFilter().getClass(), path, enumSet);

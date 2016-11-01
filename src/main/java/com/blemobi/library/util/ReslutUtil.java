@@ -77,10 +77,23 @@ public class ReslutUtil {
 	}
 
 	public static PMessage createErrorMessage(int errorCode, String errorMsg, String extraInfo) {
+		PResult result = createPResultMessage(errorCode, errorMsg, extraInfo);
+		return ReslutUtil.createReslutMessage(errorType, result);
+	}
+
+	public static PResult createPResultMessage() {
+		return createPResultMessage(0, "success", "");
+	}
+
+	public static PResult createPResultMessage(int errorCode, String errorMsg) {
+		return createPResultMessage(errorCode, errorMsg, "");
+	}
+
+	public static PResult createPResultMessage(int errorCode, String errorMsg, String extraInfo) {
 		PResult result = PResult.newBuilder().setErrorCode(errorCode).setErrorMsg(errorMsg).setExtraInfo(extraInfo)
 				.build();
-
-		return ReslutUtil.createReslutMessage(errorType, result);
+		log.debug("json：" + result);
+		return result;
 	}
 
 	/**

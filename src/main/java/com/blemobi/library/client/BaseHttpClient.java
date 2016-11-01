@@ -1,15 +1,10 @@
 package com.blemobi.library.client;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.List;
 
 import javax.servlet.http.Cookie;
 
-import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -19,7 +14,9 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpRequestBase;
-import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.entity.ByteArrayEntity;
+import org.apache.http.entity.ContentType;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
 import com.blemobi.library.consul.SocketInfo;
@@ -97,34 +94,49 @@ public abstract class BaseHttpClient {
 	 * @throws IOException
 	 * @throws ClientProtocolException
 	 */
+//	public PMessage postBodyMethod(byte[] body) throws IOException {
+//		URL httpUrl = new URL(url.toString());
+//		HttpURLConnection urlConnection = (HttpURLConnection) httpUrl.openConnection();
+//
+//		urlConnection.setDoInput(true);
+//		urlConnection.setDoOutput(true);
+//		urlConnection.setUseCaches(false);
+//
+//		urlConnection.setRequestProperty("Content-type", "form-data");
+//		urlConnection.setRequestProperty("accept", "application/x-protobuf");
+//		urlConnection.setRequestMethod("POST");
+//
+//		if (cookies != null) {
+//			urlConnection.setRequestProperty("Cookie", getCookie());
+//		}
+//
+//		OutputStream out = urlConnection.getOutputStream();
+//		out.write(body);
+//		out.flush();
+//		out.close();
+//
+//		InputStream inputStream = urlConnection.getInputStream();
+//		String encoding = urlConnection.getContentEncoding();
+//		String bodyString = IOUtils.toString(inputStream, encoding);
+//
+//		ResultProtos.PMessage message = ResultProtos.PMessage.parseFrom(bodyString.getBytes());
+//		return message;
+//	}
 	public PMessage postBodyMethod(byte[] body) throws IOException {
-		URL httpUrl = new URL(url.toString());
-		HttpURLConnection urlConnection = (HttpURLConnection) httpUrl.openConnection();
-
-		urlConnection.setDoInput(true);
-		urlConnection.setDoOutput(true);
-		urlConnection.setUseCaches(false);
-
-		urlConnection.setRequestProperty("Content-type", "form-data");
-		urlConnection.setRequestProperty("accept", "application/x-protobuf");
-		urlConnection.setRequestMethod("POST");
-
-		if (cookies != null) {
-			urlConnection.setRequestProperty("Cookie", getCookie());
-		}
-
-		OutputStream out = urlConnection.getOutputStream();
-		out.write(body);
-		out.flush();
-		out.close();
-
-		InputStream inputStream = urlConnection.getInputStream();
-		String encoding = urlConnection.getContentEncoding();
-		String bodyString = IOUtils.toString(inputStream, encoding);
-
-		ResultProtos.PMessage message = ResultProtos.PMessage.parseFrom(bodyString.getBytes());
-		return message;
+		return postBodyMethod(body,"form-data");
 	}
+	
+	public PMessage postBodyMethod(byte[] body,String contentType) throws IOException {
+		HttpPost httpPost = new HttpPost(url.toString());
+		if ((body != null) && (body.length >0)) {
+			ByteArrayEntity entity = new ByteArrayEntity(body, ContentType.create(contentType));
+			httpPost.setEntity(entity);// 设置参数
+		}
+		return execute(httpPost);
+	}
+	
+	
+	
 
 	/**
 	 * 调用
@@ -139,7 +151,7 @@ public abstract class BaseHttpClient {
 		if (cookies != null) {
 			httpRequestBase.setHeader("Cookie", getCookie());
 		}
-		HttpClient client = HttpClientBuilder.create().build();
+		HttpClient client = HttpClients.custom().setConnectionManager(HttpClientPool.getManager()).build();
 		HttpResponse response = client.execute(httpRequestBase);
 		HttpEntity entity = response.getEntity();
 		byte[] data = EntityUtils.toByteArray(entity);

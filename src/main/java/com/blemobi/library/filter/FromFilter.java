@@ -46,8 +46,8 @@ public class FromFilter implements Filter {
 		if (bool) {
 			chain.doFilter(request, response);
 		} else {
-			ReslutUtil.createResponse(response, 1901011, "from service error");
-			log.warn("from service error");
+			ReslutUtil.createResponse(response, 1001005, "服务校验失败");
+			log.warn("服务校验失败");
 		}
 	}
 
