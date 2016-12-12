@@ -41,8 +41,7 @@ public class JettyServer {
 	public void start() throws Exception {
 		if (server == null) {
 			ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
-			context.setContextPath("/"+contextPath);
-
+			context.setContextPath("/" + contextPath);
 			EnumSet<DispatcherType> enumSet = EnumSet.allOf(DispatcherType.class);
 			enumSet.add(DispatcherType.REQUEST);
 

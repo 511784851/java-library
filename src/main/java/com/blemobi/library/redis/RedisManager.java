@@ -3,14 +3,15 @@ package com.blemobi.library.redis;
 import com.blemobi.library.consul.BaseService;
 import com.google.common.base.Strings;
 
-import lombok.extern.log4j.Log4j;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
-@Log4j
+/*
+ * Redis连接管理
+ */
 public class RedisManager {
 	/*
-	 * 获得Redis连接
+	 * 获得Redis连接（超时自动释放连接）
 	 */
 	public static Jedis getRedis() {
 		Jedis jedis = getLongRedis();
@@ -18,10 +19,11 @@ public class RedisManager {
 		return jedis;
 	}
 
+	/*
+	 * 获得Redis连接（不会自动释放连接）
+	 */
 	public static Jedis getLongRedis() {
 		JedisPool jedisPool = getJedisPool();
-		log.debug("Redis Pool Info -> NumActive=[" + jedisPool.getNumActive() + "],NumIdle=[" + jedisPool.getNumIdle()
-				+ "]");
 		Jedis jedis = jedisPool.getResource();
 
 		String auth = BaseService.getProperty("redis_user_auth");
@@ -29,12 +31,11 @@ public class RedisManager {
 			jedis.auth(auth);
 		}
 
-		AutoReturnRedis.putJedis(jedis);
 		return jedis;
 	}
 
 	/*
-	 * 释放Redis连接
+	 * 释放连接
 	 */
 	@SuppressWarnings("deprecation")
 	public static void returnResource(Jedis... jediss) {
@@ -45,6 +46,9 @@ public class RedisManager {
 		}
 	}
 
+	/*
+	 * 连接池中获取一个 连接
+	 */
 	private static JedisPool getJedisPool() {
 		RedisPoolSingleton redisPool = RedisPoolSingleton.getInstance();
 		JedisPool jedisPool = redisPool.getJedisPool();

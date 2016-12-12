@@ -31,7 +31,7 @@ public class RedisPoolSingleton {
 		config.setMaxTotal(maxTotal);
 		config.setMaxIdle(maxIdle);
 		config.setMaxWaitMillis(maxWaitMillis);
-		this.jedisPool = new JedisPool(config, address, port);
+		jedisPool = new JedisPool(config, address, port);
 		log.info("完成Redis连接池的初始化工作.");
 	}
 

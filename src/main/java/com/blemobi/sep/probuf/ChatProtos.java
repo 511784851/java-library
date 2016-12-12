@@ -11475,6 +11475,1452 @@ public final class ChatProtos {
 
   }
 
+  public interface PFriendRemarkOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:common.PFriendRemark)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string uuid = 1;</code>
+     *
+     * <pre>
+     * 好友的uuid
+     * </pre>
+     */
+    java.lang.String getUuid();
+    /**
+     * <code>optional string uuid = 1;</code>
+     *
+     * <pre>
+     * 好友的uuid
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUuidBytes();
+
+    /**
+     * <code>optional string remark = 2;</code>
+     *
+     * <pre>
+     * 好友名称的备注
+     * </pre>
+     */
+    java.lang.String getRemark();
+    /**
+     * <code>optional string remark = 2;</code>
+     *
+     * <pre>
+     * 好友名称的备注
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getRemarkBytes();
+  }
+  /**
+   * Protobuf type {@code common.PFriendRemark}
+   */
+  public  static final class PFriendRemark extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:common.PFriendRemark)
+      PFriendRemarkOrBuilder {
+    // Use PFriendRemark.newBuilder() to construct.
+    private PFriendRemark(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PFriendRemark() {
+      uuid_ = "";
+      remark_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PFriendRemark(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              uuid_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              remark_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PFriendRemark_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PFriendRemark_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.ChatProtos.PFriendRemark.class, com.blemobi.sep.probuf.ChatProtos.PFriendRemark.Builder.class);
+    }
+
+    public static final int UUID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object uuid_;
+    /**
+     * <code>optional string uuid = 1;</code>
+     *
+     * <pre>
+     * 好友的uuid
+     * </pre>
+     */
+    public java.lang.String getUuid() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          uuid_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string uuid = 1;</code>
+     *
+     * <pre>
+     * 好友的uuid
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUuidBytes() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REMARK_FIELD_NUMBER = 2;
+    private volatile java.lang.Object remark_;
+    /**
+     * <code>optional string remark = 2;</code>
+     *
+     * <pre>
+     * 好友名称的备注
+     * </pre>
+     */
+    public java.lang.String getRemark() {
+      java.lang.Object ref = remark_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          remark_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string remark = 2;</code>
+     *
+     * <pre>
+     * 好友名称的备注
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getRemarkBytes() {
+      java.lang.Object ref = remark_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        remark_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getUuidBytes().isEmpty()) {
+        output.writeBytes(1, getUuidBytes());
+      }
+      if (!getRemarkBytes().isEmpty()) {
+        output.writeBytes(2, getRemarkBytes());
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getUuidBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getUuidBytes());
+      }
+      if (!getRemarkBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getRemarkBytes());
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.ChatProtos.PFriendRemark parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.ChatProtos.PFriendRemark parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ChatProtos.PFriendRemark parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.ChatProtos.PFriendRemark parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ChatProtos.PFriendRemark parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.ChatProtos.PFriendRemark parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ChatProtos.PFriendRemark parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.ChatProtos.PFriendRemark parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ChatProtos.PFriendRemark parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.ChatProtos.PFriendRemark parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.ChatProtos.PFriendRemark prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code common.PFriendRemark}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:common.PFriendRemark)
+        com.blemobi.sep.probuf.ChatProtos.PFriendRemarkOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PFriendRemark_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PFriendRemark_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.ChatProtos.PFriendRemark.class, com.blemobi.sep.probuf.ChatProtos.PFriendRemark.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.ChatProtos.PFriendRemark.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        uuid_ = "";
+
+        remark_ = "";
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PFriendRemark_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.ChatProtos.PFriendRemark getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.ChatProtos.PFriendRemark.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.ChatProtos.PFriendRemark build() {
+        com.blemobi.sep.probuf.ChatProtos.PFriendRemark result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.ChatProtos.PFriendRemark buildPartial() {
+        com.blemobi.sep.probuf.ChatProtos.PFriendRemark result = new com.blemobi.sep.probuf.ChatProtos.PFriendRemark(this);
+        result.uuid_ = uuid_;
+        result.remark_ = remark_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.ChatProtos.PFriendRemark) {
+          return mergeFrom((com.blemobi.sep.probuf.ChatProtos.PFriendRemark)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.ChatProtos.PFriendRemark other) {
+        if (other == com.blemobi.sep.probuf.ChatProtos.PFriendRemark.getDefaultInstance()) return this;
+        if (!other.getUuid().isEmpty()) {
+          uuid_ = other.uuid_;
+          onChanged();
+        }
+        if (!other.getRemark().isEmpty()) {
+          remark_ = other.remark_;
+          onChanged();
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.ChatProtos.PFriendRemark parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.ChatProtos.PFriendRemark) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object uuid_ = "";
+      /**
+       * <code>optional string uuid = 1;</code>
+       *
+       * <pre>
+       * 好友的uuid
+       * </pre>
+       */
+      public java.lang.String getUuid() {
+        java.lang.Object ref = uuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            uuid_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string uuid = 1;</code>
+       *
+       * <pre>
+       * 好友的uuid
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUuidBytes() {
+        java.lang.Object ref = uuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string uuid = 1;</code>
+       *
+       * <pre>
+       * 好友的uuid
+       * </pre>
+       */
+      public Builder setUuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uuid = 1;</code>
+       *
+       * <pre>
+       * 好友的uuid
+       * </pre>
+       */
+      public Builder clearUuid() {
+        
+        uuid_ = getDefaultInstance().getUuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uuid = 1;</code>
+       *
+       * <pre>
+       * 好友的uuid
+       * </pre>
+       */
+      public Builder setUuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object remark_ = "";
+      /**
+       * <code>optional string remark = 2;</code>
+       *
+       * <pre>
+       * 好友名称的备注
+       * </pre>
+       */
+      public java.lang.String getRemark() {
+        java.lang.Object ref = remark_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            remark_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string remark = 2;</code>
+       *
+       * <pre>
+       * 好友名称的备注
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getRemarkBytes() {
+        java.lang.Object ref = remark_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          remark_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string remark = 2;</code>
+       *
+       * <pre>
+       * 好友名称的备注
+       * </pre>
+       */
+      public Builder setRemark(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        remark_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string remark = 2;</code>
+       *
+       * <pre>
+       * 好友名称的备注
+       * </pre>
+       */
+      public Builder clearRemark() {
+        
+        remark_ = getDefaultInstance().getRemark();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string remark = 2;</code>
+       *
+       * <pre>
+       * 好友名称的备注
+       * </pre>
+       */
+      public Builder setRemarkBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        remark_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:common.PFriendRemark)
+    }
+
+    // @@protoc_insertion_point(class_scope:common.PFriendRemark)
+    private static final com.blemobi.sep.probuf.ChatProtos.PFriendRemark DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ChatProtos.PFriendRemark();
+    }
+
+    public static com.blemobi.sep.probuf.ChatProtos.PFriendRemark getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PFriendRemark> PARSER =
+        new com.google.protobuf.AbstractParser<PFriendRemark>() {
+      public PFriendRemark parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PFriendRemark(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PFriendRemark> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.ChatProtos.PFriendRemark getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PFriendRemarkListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:common.PFriendRemarkList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .common.PFriendRemark friends = 1;</code>
+     *
+     * <pre>
+     * 好友名称备注列表
+     * </pre>
+     */
+    java.util.List<com.blemobi.sep.probuf.ChatProtos.PFriendRemark> 
+        getFriendsList();
+    /**
+     * <code>repeated .common.PFriendRemark friends = 1;</code>
+     *
+     * <pre>
+     * 好友名称备注列表
+     * </pre>
+     */
+    com.blemobi.sep.probuf.ChatProtos.PFriendRemark getFriends(int index);
+    /**
+     * <code>repeated .common.PFriendRemark friends = 1;</code>
+     *
+     * <pre>
+     * 好友名称备注列表
+     * </pre>
+     */
+    int getFriendsCount();
+    /**
+     * <code>repeated .common.PFriendRemark friends = 1;</code>
+     *
+     * <pre>
+     * 好友名称备注列表
+     * </pre>
+     */
+    java.util.List<? extends com.blemobi.sep.probuf.ChatProtos.PFriendRemarkOrBuilder> 
+        getFriendsOrBuilderList();
+    /**
+     * <code>repeated .common.PFriendRemark friends = 1;</code>
+     *
+     * <pre>
+     * 好友名称备注列表
+     * </pre>
+     */
+    com.blemobi.sep.probuf.ChatProtos.PFriendRemarkOrBuilder getFriendsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code common.PFriendRemarkList}
+   */
+  public  static final class PFriendRemarkList extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:common.PFriendRemarkList)
+      PFriendRemarkListOrBuilder {
+    // Use PFriendRemarkList.newBuilder() to construct.
+    private PFriendRemarkList(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PFriendRemarkList() {
+      friends_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PFriendRemarkList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                friends_ = new java.util.ArrayList<com.blemobi.sep.probuf.ChatProtos.PFriendRemark>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              friends_.add(input.readMessage(com.blemobi.sep.probuf.ChatProtos.PFriendRemark.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          friends_ = java.util.Collections.unmodifiableList(friends_);
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PFriendRemarkList_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PFriendRemarkList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList.class, com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList.Builder.class);
+    }
+
+    public static final int FRIENDS_FIELD_NUMBER = 1;
+    private java.util.List<com.blemobi.sep.probuf.ChatProtos.PFriendRemark> friends_;
+    /**
+     * <code>repeated .common.PFriendRemark friends = 1;</code>
+     *
+     * <pre>
+     * 好友名称备注列表
+     * </pre>
+     */
+    public java.util.List<com.blemobi.sep.probuf.ChatProtos.PFriendRemark> getFriendsList() {
+      return friends_;
+    }
+    /**
+     * <code>repeated .common.PFriendRemark friends = 1;</code>
+     *
+     * <pre>
+     * 好友名称备注列表
+     * </pre>
+     */
+    public java.util.List<? extends com.blemobi.sep.probuf.ChatProtos.PFriendRemarkOrBuilder> 
+        getFriendsOrBuilderList() {
+      return friends_;
+    }
+    /**
+     * <code>repeated .common.PFriendRemark friends = 1;</code>
+     *
+     * <pre>
+     * 好友名称备注列表
+     * </pre>
+     */
+    public int getFriendsCount() {
+      return friends_.size();
+    }
+    /**
+     * <code>repeated .common.PFriendRemark friends = 1;</code>
+     *
+     * <pre>
+     * 好友名称备注列表
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.ChatProtos.PFriendRemark getFriends(int index) {
+      return friends_.get(index);
+    }
+    /**
+     * <code>repeated .common.PFriendRemark friends = 1;</code>
+     *
+     * <pre>
+     * 好友名称备注列表
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.ChatProtos.PFriendRemarkOrBuilder getFriendsOrBuilder(
+        int index) {
+      return friends_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < friends_.size(); i++) {
+        output.writeMessage(1, friends_.get(i));
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < friends_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, friends_.get(i));
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code common.PFriendRemarkList}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:common.PFriendRemarkList)
+        com.blemobi.sep.probuf.ChatProtos.PFriendRemarkListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PFriendRemarkList_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PFriendRemarkList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList.class, com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getFriendsFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (friendsBuilder_ == null) {
+          friends_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          friendsBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PFriendRemarkList_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList build() {
+        com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList buildPartial() {
+        com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList result = new com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList(this);
+        int from_bitField0_ = bitField0_;
+        if (friendsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            friends_ = java.util.Collections.unmodifiableList(friends_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.friends_ = friends_;
+        } else {
+          result.friends_ = friendsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList) {
+          return mergeFrom((com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList other) {
+        if (other == com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList.getDefaultInstance()) return this;
+        if (friendsBuilder_ == null) {
+          if (!other.friends_.isEmpty()) {
+            if (friends_.isEmpty()) {
+              friends_ = other.friends_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureFriendsIsMutable();
+              friends_.addAll(other.friends_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.friends_.isEmpty()) {
+            if (friendsBuilder_.isEmpty()) {
+              friendsBuilder_.dispose();
+              friendsBuilder_ = null;
+              friends_ = other.friends_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              friendsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getFriendsFieldBuilder() : null;
+            } else {
+              friendsBuilder_.addAllMessages(other.friends_);
+            }
+          }
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.blemobi.sep.probuf.ChatProtos.PFriendRemark> friends_ =
+        java.util.Collections.emptyList();
+      private void ensureFriendsIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          friends_ = new java.util.ArrayList<com.blemobi.sep.probuf.ChatProtos.PFriendRemark>(friends_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.ChatProtos.PFriendRemark, com.blemobi.sep.probuf.ChatProtos.PFriendRemark.Builder, com.blemobi.sep.probuf.ChatProtos.PFriendRemarkOrBuilder> friendsBuilder_;
+
+      /**
+       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       *
+       * <pre>
+       * 好友名称备注列表
+       * </pre>
+       */
+      public java.util.List<com.blemobi.sep.probuf.ChatProtos.PFriendRemark> getFriendsList() {
+        if (friendsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(friends_);
+        } else {
+          return friendsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       *
+       * <pre>
+       * 好友名称备注列表
+       * </pre>
+       */
+      public int getFriendsCount() {
+        if (friendsBuilder_ == null) {
+          return friends_.size();
+        } else {
+          return friendsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       *
+       * <pre>
+       * 好友名称备注列表
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.ChatProtos.PFriendRemark getFriends(int index) {
+        if (friendsBuilder_ == null) {
+          return friends_.get(index);
+        } else {
+          return friendsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       *
+       * <pre>
+       * 好友名称备注列表
+       * </pre>
+       */
+      public Builder setFriends(
+          int index, com.blemobi.sep.probuf.ChatProtos.PFriendRemark value) {
+        if (friendsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFriendsIsMutable();
+          friends_.set(index, value);
+          onChanged();
+        } else {
+          friendsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       *
+       * <pre>
+       * 好友名称备注列表
+       * </pre>
+       */
+      public Builder setFriends(
+          int index, com.blemobi.sep.probuf.ChatProtos.PFriendRemark.Builder builderForValue) {
+        if (friendsBuilder_ == null) {
+          ensureFriendsIsMutable();
+          friends_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          friendsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       *
+       * <pre>
+       * 好友名称备注列表
+       * </pre>
+       */
+      public Builder addFriends(com.blemobi.sep.probuf.ChatProtos.PFriendRemark value) {
+        if (friendsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFriendsIsMutable();
+          friends_.add(value);
+          onChanged();
+        } else {
+          friendsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       *
+       * <pre>
+       * 好友名称备注列表
+       * </pre>
+       */
+      public Builder addFriends(
+          int index, com.blemobi.sep.probuf.ChatProtos.PFriendRemark value) {
+        if (friendsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFriendsIsMutable();
+          friends_.add(index, value);
+          onChanged();
+        } else {
+          friendsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       *
+       * <pre>
+       * 好友名称备注列表
+       * </pre>
+       */
+      public Builder addFriends(
+          com.blemobi.sep.probuf.ChatProtos.PFriendRemark.Builder builderForValue) {
+        if (friendsBuilder_ == null) {
+          ensureFriendsIsMutable();
+          friends_.add(builderForValue.build());
+          onChanged();
+        } else {
+          friendsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       *
+       * <pre>
+       * 好友名称备注列表
+       * </pre>
+       */
+      public Builder addFriends(
+          int index, com.blemobi.sep.probuf.ChatProtos.PFriendRemark.Builder builderForValue) {
+        if (friendsBuilder_ == null) {
+          ensureFriendsIsMutable();
+          friends_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          friendsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       *
+       * <pre>
+       * 好友名称备注列表
+       * </pre>
+       */
+      public Builder addAllFriends(
+          java.lang.Iterable<? extends com.blemobi.sep.probuf.ChatProtos.PFriendRemark> values) {
+        if (friendsBuilder_ == null) {
+          ensureFriendsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, friends_);
+          onChanged();
+        } else {
+          friendsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       *
+       * <pre>
+       * 好友名称备注列表
+       * </pre>
+       */
+      public Builder clearFriends() {
+        if (friendsBuilder_ == null) {
+          friends_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          friendsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       *
+       * <pre>
+       * 好友名称备注列表
+       * </pre>
+       */
+      public Builder removeFriends(int index) {
+        if (friendsBuilder_ == null) {
+          ensureFriendsIsMutable();
+          friends_.remove(index);
+          onChanged();
+        } else {
+          friendsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       *
+       * <pre>
+       * 好友名称备注列表
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.ChatProtos.PFriendRemark.Builder getFriendsBuilder(
+          int index) {
+        return getFriendsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       *
+       * <pre>
+       * 好友名称备注列表
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.ChatProtos.PFriendRemarkOrBuilder getFriendsOrBuilder(
+          int index) {
+        if (friendsBuilder_ == null) {
+          return friends_.get(index);  } else {
+          return friendsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       *
+       * <pre>
+       * 好友名称备注列表
+       * </pre>
+       */
+      public java.util.List<? extends com.blemobi.sep.probuf.ChatProtos.PFriendRemarkOrBuilder> 
+           getFriendsOrBuilderList() {
+        if (friendsBuilder_ != null) {
+          return friendsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(friends_);
+        }
+      }
+      /**
+       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       *
+       * <pre>
+       * 好友名称备注列表
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.ChatProtos.PFriendRemark.Builder addFriendsBuilder() {
+        return getFriendsFieldBuilder().addBuilder(
+            com.blemobi.sep.probuf.ChatProtos.PFriendRemark.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       *
+       * <pre>
+       * 好友名称备注列表
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.ChatProtos.PFriendRemark.Builder addFriendsBuilder(
+          int index) {
+        return getFriendsFieldBuilder().addBuilder(
+            index, com.blemobi.sep.probuf.ChatProtos.PFriendRemark.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       *
+       * <pre>
+       * 好友名称备注列表
+       * </pre>
+       */
+      public java.util.List<com.blemobi.sep.probuf.ChatProtos.PFriendRemark.Builder> 
+           getFriendsBuilderList() {
+        return getFriendsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.ChatProtos.PFriendRemark, com.blemobi.sep.probuf.ChatProtos.PFriendRemark.Builder, com.blemobi.sep.probuf.ChatProtos.PFriendRemarkOrBuilder> 
+          getFriendsFieldBuilder() {
+        if (friendsBuilder_ == null) {
+          friendsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.blemobi.sep.probuf.ChatProtos.PFriendRemark, com.blemobi.sep.probuf.ChatProtos.PFriendRemark.Builder, com.blemobi.sep.probuf.ChatProtos.PFriendRemarkOrBuilder>(
+                  friends_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          friends_ = null;
+        }
+        return friendsBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:common.PFriendRemarkList)
+    }
+
+    // @@protoc_insertion_point(class_scope:common.PFriendRemarkList)
+    private static final com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList();
+    }
+
+    public static com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PFriendRemarkList> PARSER =
+        new com.google.protobuf.AbstractParser<PFriendRemarkList>() {
+      public PFriendRemarkList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PFriendRemarkList(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PFriendRemarkList> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_common_PWkToken_descriptor;
   private static
@@ -11530,6 +12976,16 @@ public final class ChatProtos {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_common_PRole_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_common_PFriendRemark_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_common_PFriendRemark_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_common_PFriendRemarkList_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_common_PFriendRemarkList_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -11568,8 +13024,11 @@ public final class ChatProtos {
       "MemberServ\022\037\n\004user\030\001 \001(\0132\021.common.PUserB" +
       "ase\022\014\n\004spot\030\002 \001(\005\022\014\n\004time\030\003 \001(\003\022\021\n\tisMan" +
       "ager\030\004 \001(\005\"*\n\005PRole\022\014\n\004role\030\001 \001(\005\022\023\n\013com" +
-      "munityId\030\002 \001(\tB$\n\026com.blemobi.sep.probuf",
-      "B\nChatProtosb\006proto3"
+      "munityId\030\002 \001(\t\"-\n\rPFriendRemark\022\014\n\004uuid\030",
+      "\001 \001(\t\022\016\n\006remark\030\002 \001(\t\";\n\021PFriendRemarkLi" +
+      "st\022&\n\007friends\030\001 \003(\0132\025.common.PFriendRema" +
+      "rkB$\n\026com.blemobi.sep.probufB\nChatProtos" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11650,6 +13109,18 @@ public final class ChatProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_common_PRole_descriptor,
         new java.lang.String[] { "Role", "CommunityId", });
+    internal_static_common_PFriendRemark_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_common_PFriendRemark_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_common_PFriendRemark_descriptor,
+        new java.lang.String[] { "Uuid", "Remark", });
+    internal_static_common_PFriendRemarkList_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_common_PFriendRemarkList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_common_PFriendRemarkList_descriptor,
+        new java.lang.String[] { "Friends", });
     com.blemobi.sep.probuf.AccountProtos.getDescriptor();
   }
 

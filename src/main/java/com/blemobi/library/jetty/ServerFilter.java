@@ -20,5 +20,4 @@ public class ServerFilter {
 	public List<String> getPathList() {
 		return pathList;
 	}
-
 }

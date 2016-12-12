@@ -6,6 +6,7 @@ import com.sun.net.httpserver.HttpServer;
 
 import lombok.extern.log4j.Log4j;
 
+@SuppressWarnings("restriction")
 @Log4j
 public class HealthManager {
 	/**
