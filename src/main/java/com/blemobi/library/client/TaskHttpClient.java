@@ -1,22 +1,28 @@
 package com.blemobi.library.client;
 
-import java.util.List;
+import java.io.IOException;
 
-import javax.servlet.http.Cookie;
+import com.blemobi.library.jetty.JettyServer;
+import com.blemobi.sep.probuf.ResultProtos.PMessage;
+import com.blemobi.sep.probuf.TaskProtos.PCallbackArray;
 
-import org.apache.http.NameValuePair;
-
-import com.blemobi.library.consul.BaseService;
-import com.blemobi.library.consul.SocketInfo;
-
-/**
- * @author 赵勇<andy.zhao@blemobi.com> 账户系统调用类
+/*
+ * 任务系统调用类
  */
 public class TaskHttpClient extends BaseHttpClient {
-	public TaskHttpClient(String basePath, List<NameValuePair> params, Cookie[] cookies) {
-		super(basePath, params, cookies);
-		SocketInfo socketInfo = BaseService.getActiveServer("task");
-		super.socketInfo = socketInfo;
-		super.createUrl();
+	public TaskHttpClient() {
+		super("task");
+	}
+
+	/*
+	 * 回调
+	 */
+	public PMessage callback(PCallbackArray callbackArray) throws IOException {
+		super.basePath = new StringBuffer("/task/callback/msgid?from=");
+		super.basePath.append(JettyServer.getServerName());
+		super.body = PMessage.newBuilder().setType("PCallbackArray").setData(callbackArray.toByteString()).build()
+				.toByteArray();
+		super.contentType = "application/x-protobuf";
+		return super.postBodyMethod();
 	}
 }

@@ -9,7 +9,7 @@ public final class ChatProtos {
       com.google.protobuf.ExtensionRegistry registry) {
   }
   public interface PWkTokenOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PWkToken)
+      // @@protoc_insertion_point(interface_extends:bbproto.PWkToken)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -121,11 +121,11 @@ public final class ChatProtos {
         getSignatureBytes();
   }
   /**
-   * Protobuf type {@code common.PWkToken}
+   * Protobuf type {@code bbproto.PWkToken}
    */
   public  static final class PWkToken extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PWkToken)
+      // @@protoc_insertion_point(message_implements:bbproto.PWkToken)
       PWkTokenOrBuilder {
     // Use PWkToken.newBuilder() to construct.
     private PWkToken(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -219,12 +219,12 @@ public final class ChatProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PWkToken_descriptor;
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PWkToken_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PWkToken_fieldAccessorTable
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PWkToken_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ChatProtos.PWkToken.class, com.blemobi.sep.probuf.ChatProtos.PWkToken.Builder.class);
     }
@@ -621,20 +621,20 @@ public final class ChatProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PWkToken}
+     * Protobuf type {@code bbproto.PWkToken}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PWkToken)
+        // @@protoc_insertion_point(builder_implements:bbproto.PWkToken)
         com.blemobi.sep.probuf.ChatProtos.PWkTokenOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PWkToken_descriptor;
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PWkToken_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PWkToken_fieldAccessorTable
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PWkToken_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ChatProtos.PWkToken.class, com.blemobi.sep.probuf.ChatProtos.PWkToken.Builder.class);
       }
@@ -674,7 +674,7 @@ public final class ChatProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PWkToken_descriptor;
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PWkToken_descriptor;
       }
 
       public com.blemobi.sep.probuf.ChatProtos.PWkToken getDefaultInstanceForType() {
@@ -1301,10 +1301,10 @@ public final class ChatProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PWkToken)
+      // @@protoc_insertion_point(builder_scope:bbproto.PWkToken)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PWkToken)
+    // @@protoc_insertion_point(class_scope:bbproto.PWkToken)
     private static final com.blemobi.sep.probuf.ChatProtos.PWkToken DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ChatProtos.PWkToken();
@@ -1345,7 +1345,7 @@ public final class ChatProtos {
   }
 
   public interface PConversationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PConversation)
+      // @@protoc_insertion_point(interface_extends:bbproto.PConversation)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1500,11 +1500,11 @@ public final class ChatProtos {
     long getMembers(int index);
   }
   /**
-   * Protobuf type {@code common.PConversation}
+   * Protobuf type {@code bbproto.PConversation}
    */
   public  static final class PConversation extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PConversation)
+      // @@protoc_insertion_point(message_implements:bbproto.PConversation)
       PConversationOrBuilder {
     // Use PConversation.newBuilder() to construct.
     private PConversation(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -1640,12 +1640,12 @@ public final class ChatProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PConversation_descriptor;
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PConversation_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PConversation_fieldAccessorTable
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PConversation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ChatProtos.PConversation.class, com.blemobi.sep.probuf.ChatProtos.PConversation.Builder.class);
     }
@@ -2129,20 +2129,20 @@ public final class ChatProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PConversation}
+     * Protobuf type {@code bbproto.PConversation}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PConversation)
+        // @@protoc_insertion_point(builder_implements:bbproto.PConversation)
         com.blemobi.sep.probuf.ChatProtos.PConversationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PConversation_descriptor;
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PConversation_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PConversation_fieldAccessorTable
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PConversation_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ChatProtos.PConversation.class, com.blemobi.sep.probuf.ChatProtos.PConversation.Builder.class);
       }
@@ -2190,7 +2190,7 @@ public final class ChatProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PConversation_descriptor;
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PConversation_descriptor;
       }
 
       public com.blemobi.sep.probuf.ChatProtos.PConversation getDefaultInstanceForType() {
@@ -3003,10 +3003,10 @@ public final class ChatProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PConversation)
+      // @@protoc_insertion_point(builder_scope:bbproto.PConversation)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PConversation)
+    // @@protoc_insertion_point(class_scope:bbproto.PConversation)
     private static final com.blemobi.sep.probuf.ChatProtos.PConversation DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ChatProtos.PConversation();
@@ -3047,7 +3047,7 @@ public final class ChatProtos {
   }
 
   public interface PJoinRoomOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PJoinRoom)
+      // @@protoc_insertion_point(interface_extends:bbproto.PJoinRoom)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3141,11 +3141,11 @@ public final class ChatProtos {
     int getQueueSize();
   }
   /**
-   * Protobuf type {@code common.PJoinRoom}
+   * Protobuf type {@code bbproto.PJoinRoom}
    */
   public  static final class PJoinRoom extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PJoinRoom)
+      // @@protoc_insertion_point(message_implements:bbproto.PJoinRoom)
       PJoinRoomOrBuilder {
     // Use PJoinRoom.newBuilder() to construct.
     private PJoinRoom(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -3232,12 +3232,12 @@ public final class ChatProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PJoinRoom_descriptor;
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PJoinRoom_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PJoinRoom_fieldAccessorTable
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PJoinRoom_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ChatProtos.PJoinRoom.class, com.blemobi.sep.probuf.ChatProtos.PJoinRoom.Builder.class);
     }
@@ -3583,20 +3583,20 @@ public final class ChatProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PJoinRoom}
+     * Protobuf type {@code bbproto.PJoinRoom}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PJoinRoom)
+        // @@protoc_insertion_point(builder_implements:bbproto.PJoinRoom)
         com.blemobi.sep.probuf.ChatProtos.PJoinRoomOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PJoinRoom_descriptor;
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PJoinRoom_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PJoinRoom_fieldAccessorTable
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PJoinRoom_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ChatProtos.PJoinRoom.class, com.blemobi.sep.probuf.ChatProtos.PJoinRoom.Builder.class);
       }
@@ -3634,7 +3634,7 @@ public final class ChatProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PJoinRoom_descriptor;
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PJoinRoom_descriptor;
       }
 
       public com.blemobi.sep.probuf.ChatProtos.PJoinRoom getDefaultInstanceForType() {
@@ -4166,10 +4166,10 @@ public final class ChatProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PJoinRoom)
+      // @@protoc_insertion_point(builder_scope:bbproto.PJoinRoom)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PJoinRoom)
+    // @@protoc_insertion_point(class_scope:bbproto.PJoinRoom)
     private static final com.blemobi.sep.probuf.ChatProtos.PJoinRoom DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ChatProtos.PJoinRoom();
@@ -4210,7 +4210,7 @@ public final class ChatProtos {
   }
 
   public interface PCommunityOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunity)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunity)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4321,11 +4321,11 @@ public final class ChatProtos {
         getUuidsBytes(int index);
   }
   /**
-   * Protobuf type {@code common.PCommunity}
+   * Protobuf type {@code bbproto.PCommunity}
    */
   public  static final class PCommunity extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunity)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunity)
       PCommunityOrBuilder {
     // Use PCommunity.newBuilder() to construct.
     private PCommunity(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -4413,12 +4413,12 @@ public final class ChatProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PCommunity_descriptor;
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PCommunity_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PCommunity_fieldAccessorTable
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PCommunity_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ChatProtos.PCommunity.class, com.blemobi.sep.probuf.ChatProtos.PCommunity.Builder.class);
     }
@@ -4782,20 +4782,20 @@ public final class ChatProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunity}
+     * Protobuf type {@code bbproto.PCommunity}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunity)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunity)
         com.blemobi.sep.probuf.ChatProtos.PCommunityOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PCommunity_descriptor;
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PCommunity_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PCommunity_fieldAccessorTable
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PCommunity_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ChatProtos.PCommunity.class, com.blemobi.sep.probuf.ChatProtos.PCommunity.Builder.class);
       }
@@ -4831,7 +4831,7 @@ public final class ChatProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PCommunity_descriptor;
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PCommunity_descriptor;
       }
 
       public com.blemobi.sep.probuf.ChatProtos.PCommunity getDefaultInstanceForType() {
@@ -5427,10 +5427,10 @@ public final class ChatProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunity)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunity)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunity)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunity)
     private static final com.blemobi.sep.probuf.ChatProtos.PCommunity DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ChatProtos.PCommunity();
@@ -5471,7 +5471,7 @@ public final class ChatProtos {
   }
 
   public interface PMemberListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PMemberList)
+      // @@protoc_insertion_point(interface_extends:bbproto.PMemberList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -5484,7 +5484,7 @@ public final class ChatProtos {
     int getSize();
 
     /**
-     * <code>repeated .common.PMember list = 2;</code>
+     * <code>repeated .bbproto.PMember list = 2;</code>
      *
      * <pre>
      * 成员信息
@@ -5493,7 +5493,7 @@ public final class ChatProtos {
     java.util.List<com.blemobi.sep.probuf.ChatProtos.PMember> 
         getListList();
     /**
-     * <code>repeated .common.PMember list = 2;</code>
+     * <code>repeated .bbproto.PMember list = 2;</code>
      *
      * <pre>
      * 成员信息
@@ -5501,7 +5501,7 @@ public final class ChatProtos {
      */
     com.blemobi.sep.probuf.ChatProtos.PMember getList(int index);
     /**
-     * <code>repeated .common.PMember list = 2;</code>
+     * <code>repeated .bbproto.PMember list = 2;</code>
      *
      * <pre>
      * 成员信息
@@ -5509,7 +5509,7 @@ public final class ChatProtos {
      */
     int getListCount();
     /**
-     * <code>repeated .common.PMember list = 2;</code>
+     * <code>repeated .bbproto.PMember list = 2;</code>
      *
      * <pre>
      * 成员信息
@@ -5518,7 +5518,7 @@ public final class ChatProtos {
     java.util.List<? extends com.blemobi.sep.probuf.ChatProtos.PMemberOrBuilder> 
         getListOrBuilderList();
     /**
-     * <code>repeated .common.PMember list = 2;</code>
+     * <code>repeated .bbproto.PMember list = 2;</code>
      *
      * <pre>
      * 成员信息
@@ -5528,11 +5528,11 @@ public final class ChatProtos {
         int index);
   }
   /**
-   * Protobuf type {@code common.PMemberList}
+   * Protobuf type {@code bbproto.PMemberList}
    */
   public  static final class PMemberList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PMemberList)
+      // @@protoc_insertion_point(message_implements:bbproto.PMemberList)
       PMemberListOrBuilder {
     // Use PMemberList.newBuilder() to construct.
     private PMemberList(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -5597,12 +5597,12 @@ public final class ChatProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PMemberList_descriptor;
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PMemberList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PMemberList_fieldAccessorTable
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PMemberList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ChatProtos.PMemberList.class, com.blemobi.sep.probuf.ChatProtos.PMemberList.Builder.class);
     }
@@ -5624,7 +5624,7 @@ public final class ChatProtos {
     public static final int LIST_FIELD_NUMBER = 2;
     private java.util.List<com.blemobi.sep.probuf.ChatProtos.PMember> list_;
     /**
-     * <code>repeated .common.PMember list = 2;</code>
+     * <code>repeated .bbproto.PMember list = 2;</code>
      *
      * <pre>
      * 成员信息
@@ -5634,7 +5634,7 @@ public final class ChatProtos {
       return list_;
     }
     /**
-     * <code>repeated .common.PMember list = 2;</code>
+     * <code>repeated .bbproto.PMember list = 2;</code>
      *
      * <pre>
      * 成员信息
@@ -5645,7 +5645,7 @@ public final class ChatProtos {
       return list_;
     }
     /**
-     * <code>repeated .common.PMember list = 2;</code>
+     * <code>repeated .bbproto.PMember list = 2;</code>
      *
      * <pre>
      * 成员信息
@@ -5655,7 +5655,7 @@ public final class ChatProtos {
       return list_.size();
     }
     /**
-     * <code>repeated .common.PMember list = 2;</code>
+     * <code>repeated .bbproto.PMember list = 2;</code>
      *
      * <pre>
      * 成员信息
@@ -5665,7 +5665,7 @@ public final class ChatProtos {
       return list_.get(index);
     }
     /**
-     * <code>repeated .common.PMember list = 2;</code>
+     * <code>repeated .bbproto.PMember list = 2;</code>
      *
      * <pre>
      * 成员信息
@@ -5787,20 +5787,20 @@ public final class ChatProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PMemberList}
+     * Protobuf type {@code bbproto.PMemberList}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PMemberList)
+        // @@protoc_insertion_point(builder_implements:bbproto.PMemberList)
         com.blemobi.sep.probuf.ChatProtos.PMemberListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PMemberList_descriptor;
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PMemberList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PMemberList_fieldAccessorTable
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PMemberList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ChatProtos.PMemberList.class, com.blemobi.sep.probuf.ChatProtos.PMemberList.Builder.class);
       }
@@ -5835,7 +5835,7 @@ public final class ChatProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PMemberList_descriptor;
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PMemberList_descriptor;
       }
 
       public com.blemobi.sep.probuf.ChatProtos.PMemberList getDefaultInstanceForType() {
@@ -5987,7 +5987,7 @@ public final class ChatProtos {
           com.blemobi.sep.probuf.ChatProtos.PMember, com.blemobi.sep.probuf.ChatProtos.PMember.Builder, com.blemobi.sep.probuf.ChatProtos.PMemberOrBuilder> listBuilder_;
 
       /**
-       * <code>repeated .common.PMember list = 2;</code>
+       * <code>repeated .bbproto.PMember list = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -6001,7 +6001,7 @@ public final class ChatProtos {
         }
       }
       /**
-       * <code>repeated .common.PMember list = 2;</code>
+       * <code>repeated .bbproto.PMember list = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -6015,7 +6015,7 @@ public final class ChatProtos {
         }
       }
       /**
-       * <code>repeated .common.PMember list = 2;</code>
+       * <code>repeated .bbproto.PMember list = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -6029,7 +6029,7 @@ public final class ChatProtos {
         }
       }
       /**
-       * <code>repeated .common.PMember list = 2;</code>
+       * <code>repeated .bbproto.PMember list = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -6050,7 +6050,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PMember list = 2;</code>
+       * <code>repeated .bbproto.PMember list = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -6068,7 +6068,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PMember list = 2;</code>
+       * <code>repeated .bbproto.PMember list = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -6088,7 +6088,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PMember list = 2;</code>
+       * <code>repeated .bbproto.PMember list = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -6109,7 +6109,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PMember list = 2;</code>
+       * <code>repeated .bbproto.PMember list = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -6127,7 +6127,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PMember list = 2;</code>
+       * <code>repeated .bbproto.PMember list = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -6145,7 +6145,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PMember list = 2;</code>
+       * <code>repeated .bbproto.PMember list = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -6164,7 +6164,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PMember list = 2;</code>
+       * <code>repeated .bbproto.PMember list = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -6181,7 +6181,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PMember list = 2;</code>
+       * <code>repeated .bbproto.PMember list = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -6198,7 +6198,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PMember list = 2;</code>
+       * <code>repeated .bbproto.PMember list = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -6209,7 +6209,7 @@ public final class ChatProtos {
         return getListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PMember list = 2;</code>
+       * <code>repeated .bbproto.PMember list = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -6223,7 +6223,7 @@ public final class ChatProtos {
         }
       }
       /**
-       * <code>repeated .common.PMember list = 2;</code>
+       * <code>repeated .bbproto.PMember list = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -6238,7 +6238,7 @@ public final class ChatProtos {
         }
       }
       /**
-       * <code>repeated .common.PMember list = 2;</code>
+       * <code>repeated .bbproto.PMember list = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -6249,7 +6249,7 @@ public final class ChatProtos {
             com.blemobi.sep.probuf.ChatProtos.PMember.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PMember list = 2;</code>
+       * <code>repeated .bbproto.PMember list = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -6261,7 +6261,7 @@ public final class ChatProtos {
             index, com.blemobi.sep.probuf.ChatProtos.PMember.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PMember list = 2;</code>
+       * <code>repeated .bbproto.PMember list = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -6296,10 +6296,10 @@ public final class ChatProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PMemberList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PMemberList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PMemberList)
+    // @@protoc_insertion_point(class_scope:bbproto.PMemberList)
     private static final com.blemobi.sep.probuf.ChatProtos.PMemberList DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ChatProtos.PMemberList();
@@ -6340,11 +6340,11 @@ public final class ChatProtos {
   }
 
   public interface PMemberOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PMember)
+      // @@protoc_insertion_point(interface_extends:bbproto.PMember)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .common.PUserBase user = 1;</code>
+     * <code>optional .bbproto.PUserBase user = 1;</code>
      *
      * <pre>
      * 成员信息
@@ -6352,7 +6352,7 @@ public final class ChatProtos {
      */
     boolean hasUser();
     /**
-     * <code>optional .common.PUserBase user = 1;</code>
+     * <code>optional .bbproto.PUserBase user = 1;</code>
      *
      * <pre>
      * 成员信息
@@ -6360,7 +6360,7 @@ public final class ChatProtos {
      */
     com.blemobi.sep.probuf.AccountProtos.PUserBase getUser();
     /**
-     * <code>optional .common.PUserBase user = 1;</code>
+     * <code>optional .bbproto.PUserBase user = 1;</code>
      *
      * <pre>
      * 成员信息
@@ -6405,11 +6405,11 @@ public final class ChatProtos {
     int getGameLevel();
   }
   /**
-   * Protobuf type {@code common.PMember}
+   * Protobuf type {@code bbproto.PMember}
    */
   public  static final class PMember extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PMember)
+      // @@protoc_insertion_point(message_implements:bbproto.PMember)
       PMemberOrBuilder {
     // Use PMember.newBuilder() to construct.
     private PMember(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -6493,12 +6493,12 @@ public final class ChatProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PMember_descriptor;
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PMember_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PMember_fieldAccessorTable
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PMember_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ChatProtos.PMember.class, com.blemobi.sep.probuf.ChatProtos.PMember.Builder.class);
     }
@@ -6506,7 +6506,7 @@ public final class ChatProtos {
     public static final int USER_FIELD_NUMBER = 1;
     private com.blemobi.sep.probuf.AccountProtos.PUserBase user_;
     /**
-     * <code>optional .common.PUserBase user = 1;</code>
+     * <code>optional .bbproto.PUserBase user = 1;</code>
      *
      * <pre>
      * 成员信息
@@ -6516,7 +6516,7 @@ public final class ChatProtos {
       return user_ != null;
     }
     /**
-     * <code>optional .common.PUserBase user = 1;</code>
+     * <code>optional .bbproto.PUserBase user = 1;</code>
      *
      * <pre>
      * 成员信息
@@ -6526,7 +6526,7 @@ public final class ChatProtos {
       return user_ == null ? com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : user_;
     }
     /**
-     * <code>optional .common.PUserBase user = 1;</code>
+     * <code>optional .bbproto.PUserBase user = 1;</code>
      *
      * <pre>
      * 成员信息
@@ -6720,20 +6720,20 @@ public final class ChatProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PMember}
+     * Protobuf type {@code bbproto.PMember}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PMember)
+        // @@protoc_insertion_point(builder_implements:bbproto.PMember)
         com.blemobi.sep.probuf.ChatProtos.PMemberOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PMember_descriptor;
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PMember_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PMember_fieldAccessorTable
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PMember_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ChatProtos.PMember.class, com.blemobi.sep.probuf.ChatProtos.PMember.Builder.class);
       }
@@ -6773,7 +6773,7 @@ public final class ChatProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PMember_descriptor;
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PMember_descriptor;
       }
 
       public com.blemobi.sep.probuf.ChatProtos.PMember getDefaultInstanceForType() {
@@ -6859,7 +6859,7 @@ public final class ChatProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> userBuilder_;
       /**
-       * <code>optional .common.PUserBase user = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 成员信息
@@ -6869,7 +6869,7 @@ public final class ChatProtos {
         return userBuilder_ != null || user_ != null;
       }
       /**
-       * <code>optional .common.PUserBase user = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 成员信息
@@ -6883,7 +6883,7 @@ public final class ChatProtos {
         }
       }
       /**
-       * <code>optional .common.PUserBase user = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 成员信息
@@ -6903,7 +6903,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase user = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 成员信息
@@ -6921,7 +6921,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase user = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 成员信息
@@ -6943,7 +6943,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase user = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 成员信息
@@ -6961,7 +6961,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase user = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 成员信息
@@ -6973,7 +6973,7 @@ public final class ChatProtos {
         return getUserFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PUserBase user = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 成员信息
@@ -6988,7 +6988,7 @@ public final class ChatProtos {
         }
       }
       /**
-       * <code>optional .common.PUserBase user = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 成员信息
@@ -7170,10 +7170,10 @@ public final class ChatProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PMember)
+      // @@protoc_insertion_point(builder_scope:bbproto.PMember)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PMember)
+    // @@protoc_insertion_point(class_scope:bbproto.PMember)
     private static final com.blemobi.sep.probuf.ChatProtos.PMember DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ChatProtos.PMember();
@@ -7214,15 +7214,23 @@ public final class ChatProtos {
   }
 
   public interface PEachMsgOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PEachMsg)
+      // @@protoc_insertion_point(interface_extends:bbproto.PEachMsg)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional string receiverUUID = 1;</code>
+     *
+     * <pre>
+     *指定消息接收的成员uuid列表,成员之间用逗号(,)隔开。
+     * </pre>
      */
     java.lang.String getReceiverUUID();
     /**
      * <code>optional string receiverUUID = 1;</code>
+     *
+     * <pre>
+     *指定消息接收的成员uuid列表,成员之间用逗号(,)隔开。
+     * </pre>
      */
     com.google.protobuf.ByteString
         getReceiverUUIDBytes();
@@ -7248,11 +7256,11 @@ public final class ChatProtos {
         getInfoBytes();
   }
   /**
-   * Protobuf type {@code common.PEachMsg}
+   * Protobuf type {@code bbproto.PEachMsg}
    */
   public  static final class PEachMsg extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PEachMsg)
+      // @@protoc_insertion_point(message_implements:bbproto.PEachMsg)
       PEachMsgOrBuilder {
     // Use PEachMsg.newBuilder() to construct.
     private PEachMsg(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -7320,12 +7328,12 @@ public final class ChatProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PEachMsg_descriptor;
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PEachMsg_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PEachMsg_fieldAccessorTable
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PEachMsg_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ChatProtos.PEachMsg.class, com.blemobi.sep.probuf.ChatProtos.PEachMsg.Builder.class);
     }
@@ -7334,6 +7342,10 @@ public final class ChatProtos {
     private volatile java.lang.Object receiverUUID_;
     /**
      * <code>optional string receiverUUID = 1;</code>
+     *
+     * <pre>
+     *指定消息接收的成员uuid列表,成员之间用逗号(,)隔开。
+     * </pre>
      */
     public java.lang.String getReceiverUUID() {
       java.lang.Object ref = receiverUUID_;
@@ -7351,6 +7363,10 @@ public final class ChatProtos {
     }
     /**
      * <code>optional string receiverUUID = 1;</code>
+     *
+     * <pre>
+     *指定消息接收的成员uuid列表,成员之间用逗号(,)隔开。
+     * </pre>
      */
     public com.google.protobuf.ByteString
         getReceiverUUIDBytes() {
@@ -7556,20 +7572,20 @@ public final class ChatProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PEachMsg}
+     * Protobuf type {@code bbproto.PEachMsg}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PEachMsg)
+        // @@protoc_insertion_point(builder_implements:bbproto.PEachMsg)
         com.blemobi.sep.probuf.ChatProtos.PEachMsgOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PEachMsg_descriptor;
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PEachMsg_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PEachMsg_fieldAccessorTable
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PEachMsg_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ChatProtos.PEachMsg.class, com.blemobi.sep.probuf.ChatProtos.PEachMsg.Builder.class);
       }
@@ -7601,7 +7617,7 @@ public final class ChatProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PEachMsg_descriptor;
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PEachMsg_descriptor;
       }
 
       public com.blemobi.sep.probuf.ChatProtos.PEachMsg getDefaultInstanceForType() {
@@ -7677,6 +7693,10 @@ public final class ChatProtos {
       private java.lang.Object receiverUUID_ = "";
       /**
        * <code>optional string receiverUUID = 1;</code>
+       *
+       * <pre>
+       *指定消息接收的成员uuid列表,成员之间用逗号(,)隔开。
+       * </pre>
        */
       public java.lang.String getReceiverUUID() {
         java.lang.Object ref = receiverUUID_;
@@ -7694,6 +7714,10 @@ public final class ChatProtos {
       }
       /**
        * <code>optional string receiverUUID = 1;</code>
+       *
+       * <pre>
+       *指定消息接收的成员uuid列表,成员之间用逗号(,)隔开。
+       * </pre>
        */
       public com.google.protobuf.ByteString
           getReceiverUUIDBytes() {
@@ -7710,6 +7734,10 @@ public final class ChatProtos {
       }
       /**
        * <code>optional string receiverUUID = 1;</code>
+       *
+       * <pre>
+       *指定消息接收的成员uuid列表,成员之间用逗号(,)隔开。
+       * </pre>
        */
       public Builder setReceiverUUID(
           java.lang.String value) {
@@ -7723,6 +7751,10 @@ public final class ChatProtos {
       }
       /**
        * <code>optional string receiverUUID = 1;</code>
+       *
+       * <pre>
+       *指定消息接收的成员uuid列表,成员之间用逗号(,)隔开。
+       * </pre>
        */
       public Builder clearReceiverUUID() {
         
@@ -7732,6 +7764,10 @@ public final class ChatProtos {
       }
       /**
        * <code>optional string receiverUUID = 1;</code>
+       *
+       * <pre>
+       *指定消息接收的成员uuid列表,成员之间用逗号(,)隔开。
+       * </pre>
        */
       public Builder setReceiverUUIDBytes(
           com.google.protobuf.ByteString value) {
@@ -7894,10 +7930,10 @@ public final class ChatProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PEachMsg)
+      // @@protoc_insertion_point(builder_scope:bbproto.PEachMsg)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PEachMsg)
+    // @@protoc_insertion_point(class_scope:bbproto.PEachMsg)
     private static final com.blemobi.sep.probuf.ChatProtos.PEachMsg DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ChatProtos.PEachMsg();
@@ -7938,7 +7974,7 @@ public final class ChatProtos {
   }
 
   public interface PMoreMsgOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PMoreMsg)
+      // @@protoc_insertion_point(interface_extends:bbproto.PMoreMsg)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -7996,7 +8032,7 @@ public final class ChatProtos {
         getDescriptionBytes();
 
     /**
-     * <code>repeated .common.PEachMsg list = 4;</code>
+     * <code>repeated .bbproto.PEachMsg list = 4;</code>
      *
      * <pre>
      * 成员信息
@@ -8005,7 +8041,7 @@ public final class ChatProtos {
     java.util.List<com.blemobi.sep.probuf.ChatProtos.PEachMsg> 
         getListList();
     /**
-     * <code>repeated .common.PEachMsg list = 4;</code>
+     * <code>repeated .bbproto.PEachMsg list = 4;</code>
      *
      * <pre>
      * 成员信息
@@ -8013,7 +8049,7 @@ public final class ChatProtos {
      */
     com.blemobi.sep.probuf.ChatProtos.PEachMsg getList(int index);
     /**
-     * <code>repeated .common.PEachMsg list = 4;</code>
+     * <code>repeated .bbproto.PEachMsg list = 4;</code>
      *
      * <pre>
      * 成员信息
@@ -8021,7 +8057,7 @@ public final class ChatProtos {
      */
     int getListCount();
     /**
-     * <code>repeated .common.PEachMsg list = 4;</code>
+     * <code>repeated .bbproto.PEachMsg list = 4;</code>
      *
      * <pre>
      * 成员信息
@@ -8030,7 +8066,7 @@ public final class ChatProtos {
     java.util.List<? extends com.blemobi.sep.probuf.ChatProtos.PEachMsgOrBuilder> 
         getListOrBuilderList();
     /**
-     * <code>repeated .common.PEachMsg list = 4;</code>
+     * <code>repeated .bbproto.PEachMsg list = 4;</code>
      *
      * <pre>
      * 成员信息
@@ -8040,11 +8076,11 @@ public final class ChatProtos {
         int index);
   }
   /**
-   * Protobuf type {@code common.PMoreMsg}
+   * Protobuf type {@code bbproto.PMoreMsg}
    */
   public  static final class PMoreMsg extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PMoreMsg)
+      // @@protoc_insertion_point(message_implements:bbproto.PMoreMsg)
       PMoreMsgOrBuilder {
     // Use PMoreMsg.newBuilder() to construct.
     private PMoreMsg(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -8124,12 +8160,12 @@ public final class ChatProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PMoreMsg_descriptor;
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PMoreMsg_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PMoreMsg_fieldAccessorTable
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PMoreMsg_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ChatProtos.PMoreMsg.class, com.blemobi.sep.probuf.ChatProtos.PMoreMsg.Builder.class);
     }
@@ -8270,7 +8306,7 @@ public final class ChatProtos {
     public static final int LIST_FIELD_NUMBER = 4;
     private java.util.List<com.blemobi.sep.probuf.ChatProtos.PEachMsg> list_;
     /**
-     * <code>repeated .common.PEachMsg list = 4;</code>
+     * <code>repeated .bbproto.PEachMsg list = 4;</code>
      *
      * <pre>
      * 成员信息
@@ -8280,7 +8316,7 @@ public final class ChatProtos {
       return list_;
     }
     /**
-     * <code>repeated .common.PEachMsg list = 4;</code>
+     * <code>repeated .bbproto.PEachMsg list = 4;</code>
      *
      * <pre>
      * 成员信息
@@ -8291,7 +8327,7 @@ public final class ChatProtos {
       return list_;
     }
     /**
-     * <code>repeated .common.PEachMsg list = 4;</code>
+     * <code>repeated .bbproto.PEachMsg list = 4;</code>
      *
      * <pre>
      * 成员信息
@@ -8301,7 +8337,7 @@ public final class ChatProtos {
       return list_.size();
     }
     /**
-     * <code>repeated .common.PEachMsg list = 4;</code>
+     * <code>repeated .bbproto.PEachMsg list = 4;</code>
      *
      * <pre>
      * 成员信息
@@ -8311,7 +8347,7 @@ public final class ChatProtos {
       return list_.get(index);
     }
     /**
-     * <code>repeated .common.PEachMsg list = 4;</code>
+     * <code>repeated .bbproto.PEachMsg list = 4;</code>
      *
      * <pre>
      * 成员信息
@@ -8447,20 +8483,20 @@ public final class ChatProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PMoreMsg}
+     * Protobuf type {@code bbproto.PMoreMsg}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PMoreMsg)
+        // @@protoc_insertion_point(builder_implements:bbproto.PMoreMsg)
         com.blemobi.sep.probuf.ChatProtos.PMoreMsgOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PMoreMsg_descriptor;
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PMoreMsg_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PMoreMsg_fieldAccessorTable
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PMoreMsg_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ChatProtos.PMoreMsg.class, com.blemobi.sep.probuf.ChatProtos.PMoreMsg.Builder.class);
       }
@@ -8499,7 +8535,7 @@ public final class ChatProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PMoreMsg_descriptor;
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PMoreMsg_descriptor;
       }
 
       public com.blemobi.sep.probuf.ChatProtos.PMoreMsg getDefaultInstanceForType() {
@@ -8894,7 +8930,7 @@ public final class ChatProtos {
           com.blemobi.sep.probuf.ChatProtos.PEachMsg, com.blemobi.sep.probuf.ChatProtos.PEachMsg.Builder, com.blemobi.sep.probuf.ChatProtos.PEachMsgOrBuilder> listBuilder_;
 
       /**
-       * <code>repeated .common.PEachMsg list = 4;</code>
+       * <code>repeated .bbproto.PEachMsg list = 4;</code>
        *
        * <pre>
        * 成员信息
@@ -8908,7 +8944,7 @@ public final class ChatProtos {
         }
       }
       /**
-       * <code>repeated .common.PEachMsg list = 4;</code>
+       * <code>repeated .bbproto.PEachMsg list = 4;</code>
        *
        * <pre>
        * 成员信息
@@ -8922,7 +8958,7 @@ public final class ChatProtos {
         }
       }
       /**
-       * <code>repeated .common.PEachMsg list = 4;</code>
+       * <code>repeated .bbproto.PEachMsg list = 4;</code>
        *
        * <pre>
        * 成员信息
@@ -8936,7 +8972,7 @@ public final class ChatProtos {
         }
       }
       /**
-       * <code>repeated .common.PEachMsg list = 4;</code>
+       * <code>repeated .bbproto.PEachMsg list = 4;</code>
        *
        * <pre>
        * 成员信息
@@ -8957,7 +8993,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PEachMsg list = 4;</code>
+       * <code>repeated .bbproto.PEachMsg list = 4;</code>
        *
        * <pre>
        * 成员信息
@@ -8975,7 +9011,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PEachMsg list = 4;</code>
+       * <code>repeated .bbproto.PEachMsg list = 4;</code>
        *
        * <pre>
        * 成员信息
@@ -8995,7 +9031,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PEachMsg list = 4;</code>
+       * <code>repeated .bbproto.PEachMsg list = 4;</code>
        *
        * <pre>
        * 成员信息
@@ -9016,7 +9052,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PEachMsg list = 4;</code>
+       * <code>repeated .bbproto.PEachMsg list = 4;</code>
        *
        * <pre>
        * 成员信息
@@ -9034,7 +9070,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PEachMsg list = 4;</code>
+       * <code>repeated .bbproto.PEachMsg list = 4;</code>
        *
        * <pre>
        * 成员信息
@@ -9052,7 +9088,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PEachMsg list = 4;</code>
+       * <code>repeated .bbproto.PEachMsg list = 4;</code>
        *
        * <pre>
        * 成员信息
@@ -9071,7 +9107,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PEachMsg list = 4;</code>
+       * <code>repeated .bbproto.PEachMsg list = 4;</code>
        *
        * <pre>
        * 成员信息
@@ -9088,7 +9124,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PEachMsg list = 4;</code>
+       * <code>repeated .bbproto.PEachMsg list = 4;</code>
        *
        * <pre>
        * 成员信息
@@ -9105,7 +9141,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PEachMsg list = 4;</code>
+       * <code>repeated .bbproto.PEachMsg list = 4;</code>
        *
        * <pre>
        * 成员信息
@@ -9116,7 +9152,7 @@ public final class ChatProtos {
         return getListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PEachMsg list = 4;</code>
+       * <code>repeated .bbproto.PEachMsg list = 4;</code>
        *
        * <pre>
        * 成员信息
@@ -9130,7 +9166,7 @@ public final class ChatProtos {
         }
       }
       /**
-       * <code>repeated .common.PEachMsg list = 4;</code>
+       * <code>repeated .bbproto.PEachMsg list = 4;</code>
        *
        * <pre>
        * 成员信息
@@ -9145,7 +9181,7 @@ public final class ChatProtos {
         }
       }
       /**
-       * <code>repeated .common.PEachMsg list = 4;</code>
+       * <code>repeated .bbproto.PEachMsg list = 4;</code>
        *
        * <pre>
        * 成员信息
@@ -9156,7 +9192,7 @@ public final class ChatProtos {
             com.blemobi.sep.probuf.ChatProtos.PEachMsg.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PEachMsg list = 4;</code>
+       * <code>repeated .bbproto.PEachMsg list = 4;</code>
        *
        * <pre>
        * 成员信息
@@ -9168,7 +9204,7 @@ public final class ChatProtos {
             index, com.blemobi.sep.probuf.ChatProtos.PEachMsg.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PEachMsg list = 4;</code>
+       * <code>repeated .bbproto.PEachMsg list = 4;</code>
        *
        * <pre>
        * 成员信息
@@ -9203,10 +9239,10 @@ public final class ChatProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PMoreMsg)
+      // @@protoc_insertion_point(builder_scope:bbproto.PMoreMsg)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PMoreMsg)
+    // @@protoc_insertion_point(class_scope:bbproto.PMoreMsg)
     private static final com.blemobi.sep.probuf.ChatProtos.PMoreMsg DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ChatProtos.PMoreMsg();
@@ -9247,7 +9283,7 @@ public final class ChatProtos {
   }
 
   public interface PMemberServListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PMemberServList)
+      // @@protoc_insertion_point(interface_extends:bbproto.PMemberServList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -9260,7 +9296,7 @@ public final class ChatProtos {
     int getSize();
 
     /**
-     * <code>repeated .common.PMemberServ member = 2;</code>
+     * <code>repeated .bbproto.PMemberServ member = 2;</code>
      *
      * <pre>
      * 成员信息
@@ -9269,7 +9305,7 @@ public final class ChatProtos {
     java.util.List<com.blemobi.sep.probuf.ChatProtos.PMemberServ> 
         getMemberList();
     /**
-     * <code>repeated .common.PMemberServ member = 2;</code>
+     * <code>repeated .bbproto.PMemberServ member = 2;</code>
      *
      * <pre>
      * 成员信息
@@ -9277,7 +9313,7 @@ public final class ChatProtos {
      */
     com.blemobi.sep.probuf.ChatProtos.PMemberServ getMember(int index);
     /**
-     * <code>repeated .common.PMemberServ member = 2;</code>
+     * <code>repeated .bbproto.PMemberServ member = 2;</code>
      *
      * <pre>
      * 成员信息
@@ -9285,7 +9321,7 @@ public final class ChatProtos {
      */
     int getMemberCount();
     /**
-     * <code>repeated .common.PMemberServ member = 2;</code>
+     * <code>repeated .bbproto.PMemberServ member = 2;</code>
      *
      * <pre>
      * 成员信息
@@ -9294,7 +9330,7 @@ public final class ChatProtos {
     java.util.List<? extends com.blemobi.sep.probuf.ChatProtos.PMemberServOrBuilder> 
         getMemberOrBuilderList();
     /**
-     * <code>repeated .common.PMemberServ member = 2;</code>
+     * <code>repeated .bbproto.PMemberServ member = 2;</code>
      *
      * <pre>
      * 成员信息
@@ -9304,11 +9340,11 @@ public final class ChatProtos {
         int index);
   }
   /**
-   * Protobuf type {@code common.PMemberServList}
+   * Protobuf type {@code bbproto.PMemberServList}
    */
   public  static final class PMemberServList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PMemberServList)
+      // @@protoc_insertion_point(message_implements:bbproto.PMemberServList)
       PMemberServListOrBuilder {
     // Use PMemberServList.newBuilder() to construct.
     private PMemberServList(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -9373,12 +9409,12 @@ public final class ChatProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PMemberServList_descriptor;
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PMemberServList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PMemberServList_fieldAccessorTable
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PMemberServList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ChatProtos.PMemberServList.class, com.blemobi.sep.probuf.ChatProtos.PMemberServList.Builder.class);
     }
@@ -9400,7 +9436,7 @@ public final class ChatProtos {
     public static final int MEMBER_FIELD_NUMBER = 2;
     private java.util.List<com.blemobi.sep.probuf.ChatProtos.PMemberServ> member_;
     /**
-     * <code>repeated .common.PMemberServ member = 2;</code>
+     * <code>repeated .bbproto.PMemberServ member = 2;</code>
      *
      * <pre>
      * 成员信息
@@ -9410,7 +9446,7 @@ public final class ChatProtos {
       return member_;
     }
     /**
-     * <code>repeated .common.PMemberServ member = 2;</code>
+     * <code>repeated .bbproto.PMemberServ member = 2;</code>
      *
      * <pre>
      * 成员信息
@@ -9421,7 +9457,7 @@ public final class ChatProtos {
       return member_;
     }
     /**
-     * <code>repeated .common.PMemberServ member = 2;</code>
+     * <code>repeated .bbproto.PMemberServ member = 2;</code>
      *
      * <pre>
      * 成员信息
@@ -9431,7 +9467,7 @@ public final class ChatProtos {
       return member_.size();
     }
     /**
-     * <code>repeated .common.PMemberServ member = 2;</code>
+     * <code>repeated .bbproto.PMemberServ member = 2;</code>
      *
      * <pre>
      * 成员信息
@@ -9441,7 +9477,7 @@ public final class ChatProtos {
       return member_.get(index);
     }
     /**
-     * <code>repeated .common.PMemberServ member = 2;</code>
+     * <code>repeated .bbproto.PMemberServ member = 2;</code>
      *
      * <pre>
      * 成员信息
@@ -9563,20 +9599,20 @@ public final class ChatProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PMemberServList}
+     * Protobuf type {@code bbproto.PMemberServList}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PMemberServList)
+        // @@protoc_insertion_point(builder_implements:bbproto.PMemberServList)
         com.blemobi.sep.probuf.ChatProtos.PMemberServListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PMemberServList_descriptor;
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PMemberServList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PMemberServList_fieldAccessorTable
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PMemberServList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ChatProtos.PMemberServList.class, com.blemobi.sep.probuf.ChatProtos.PMemberServList.Builder.class);
       }
@@ -9611,7 +9647,7 @@ public final class ChatProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PMemberServList_descriptor;
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PMemberServList_descriptor;
       }
 
       public com.blemobi.sep.probuf.ChatProtos.PMemberServList getDefaultInstanceForType() {
@@ -9763,7 +9799,7 @@ public final class ChatProtos {
           com.blemobi.sep.probuf.ChatProtos.PMemberServ, com.blemobi.sep.probuf.ChatProtos.PMemberServ.Builder, com.blemobi.sep.probuf.ChatProtos.PMemberServOrBuilder> memberBuilder_;
 
       /**
-       * <code>repeated .common.PMemberServ member = 2;</code>
+       * <code>repeated .bbproto.PMemberServ member = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -9777,7 +9813,7 @@ public final class ChatProtos {
         }
       }
       /**
-       * <code>repeated .common.PMemberServ member = 2;</code>
+       * <code>repeated .bbproto.PMemberServ member = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -9791,7 +9827,7 @@ public final class ChatProtos {
         }
       }
       /**
-       * <code>repeated .common.PMemberServ member = 2;</code>
+       * <code>repeated .bbproto.PMemberServ member = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -9805,7 +9841,7 @@ public final class ChatProtos {
         }
       }
       /**
-       * <code>repeated .common.PMemberServ member = 2;</code>
+       * <code>repeated .bbproto.PMemberServ member = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -9826,7 +9862,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PMemberServ member = 2;</code>
+       * <code>repeated .bbproto.PMemberServ member = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -9844,7 +9880,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PMemberServ member = 2;</code>
+       * <code>repeated .bbproto.PMemberServ member = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -9864,7 +9900,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PMemberServ member = 2;</code>
+       * <code>repeated .bbproto.PMemberServ member = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -9885,7 +9921,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PMemberServ member = 2;</code>
+       * <code>repeated .bbproto.PMemberServ member = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -9903,7 +9939,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PMemberServ member = 2;</code>
+       * <code>repeated .bbproto.PMemberServ member = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -9921,7 +9957,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PMemberServ member = 2;</code>
+       * <code>repeated .bbproto.PMemberServ member = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -9940,7 +9976,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PMemberServ member = 2;</code>
+       * <code>repeated .bbproto.PMemberServ member = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -9957,7 +9993,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PMemberServ member = 2;</code>
+       * <code>repeated .bbproto.PMemberServ member = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -9974,7 +10010,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PMemberServ member = 2;</code>
+       * <code>repeated .bbproto.PMemberServ member = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -9985,7 +10021,7 @@ public final class ChatProtos {
         return getMemberFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PMemberServ member = 2;</code>
+       * <code>repeated .bbproto.PMemberServ member = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -9999,7 +10035,7 @@ public final class ChatProtos {
         }
       }
       /**
-       * <code>repeated .common.PMemberServ member = 2;</code>
+       * <code>repeated .bbproto.PMemberServ member = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -10014,7 +10050,7 @@ public final class ChatProtos {
         }
       }
       /**
-       * <code>repeated .common.PMemberServ member = 2;</code>
+       * <code>repeated .bbproto.PMemberServ member = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -10025,7 +10061,7 @@ public final class ChatProtos {
             com.blemobi.sep.probuf.ChatProtos.PMemberServ.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PMemberServ member = 2;</code>
+       * <code>repeated .bbproto.PMemberServ member = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -10037,7 +10073,7 @@ public final class ChatProtos {
             index, com.blemobi.sep.probuf.ChatProtos.PMemberServ.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PMemberServ member = 2;</code>
+       * <code>repeated .bbproto.PMemberServ member = 2;</code>
        *
        * <pre>
        * 成员信息
@@ -10072,10 +10108,10 @@ public final class ChatProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PMemberServList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PMemberServList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PMemberServList)
+    // @@protoc_insertion_point(class_scope:bbproto.PMemberServList)
     private static final com.blemobi.sep.probuf.ChatProtos.PMemberServList DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ChatProtos.PMemberServList();
@@ -10116,11 +10152,11 @@ public final class ChatProtos {
   }
 
   public interface PMemberServOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PMemberServ)
+      // @@protoc_insertion_point(interface_extends:bbproto.PMemberServ)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .common.PUserBase user = 1;</code>
+     * <code>optional .bbproto.PUserBase user = 1;</code>
      *
      * <pre>
      * 成员信息
@@ -10128,7 +10164,7 @@ public final class ChatProtos {
      */
     boolean hasUser();
     /**
-     * <code>optional .common.PUserBase user = 1;</code>
+     * <code>optional .bbproto.PUserBase user = 1;</code>
      *
      * <pre>
      * 成员信息
@@ -10136,7 +10172,7 @@ public final class ChatProtos {
      */
     com.blemobi.sep.probuf.AccountProtos.PUserBase getUser();
     /**
-     * <code>optional .common.PUserBase user = 1;</code>
+     * <code>optional .bbproto.PUserBase user = 1;</code>
      *
      * <pre>
      * 成员信息
@@ -10172,11 +10208,11 @@ public final class ChatProtos {
     int getIsManager();
   }
   /**
-   * Protobuf type {@code common.PMemberServ}
+   * Protobuf type {@code bbproto.PMemberServ}
    */
   public  static final class PMemberServ extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PMemberServ)
+      // @@protoc_insertion_point(message_implements:bbproto.PMemberServ)
       PMemberServOrBuilder {
     // Use PMemberServ.newBuilder() to construct.
     private PMemberServ(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -10254,12 +10290,12 @@ public final class ChatProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PMemberServ_descriptor;
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PMemberServ_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PMemberServ_fieldAccessorTable
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PMemberServ_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ChatProtos.PMemberServ.class, com.blemobi.sep.probuf.ChatProtos.PMemberServ.Builder.class);
     }
@@ -10267,7 +10303,7 @@ public final class ChatProtos {
     public static final int USER_FIELD_NUMBER = 1;
     private com.blemobi.sep.probuf.AccountProtos.PUserBase user_;
     /**
-     * <code>optional .common.PUserBase user = 1;</code>
+     * <code>optional .bbproto.PUserBase user = 1;</code>
      *
      * <pre>
      * 成员信息
@@ -10277,7 +10313,7 @@ public final class ChatProtos {
       return user_ != null;
     }
     /**
-     * <code>optional .common.PUserBase user = 1;</code>
+     * <code>optional .bbproto.PUserBase user = 1;</code>
      *
      * <pre>
      * 成员信息
@@ -10287,7 +10323,7 @@ public final class ChatProtos {
       return user_ == null ? com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : user_;
     }
     /**
-     * <code>optional .common.PUserBase user = 1;</code>
+     * <code>optional .bbproto.PUserBase user = 1;</code>
      *
      * <pre>
      * 成员信息
@@ -10461,20 +10497,20 @@ public final class ChatProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PMemberServ}
+     * Protobuf type {@code bbproto.PMemberServ}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PMemberServ)
+        // @@protoc_insertion_point(builder_implements:bbproto.PMemberServ)
         com.blemobi.sep.probuf.ChatProtos.PMemberServOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PMemberServ_descriptor;
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PMemberServ_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PMemberServ_fieldAccessorTable
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PMemberServ_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ChatProtos.PMemberServ.class, com.blemobi.sep.probuf.ChatProtos.PMemberServ.Builder.class);
       }
@@ -10512,7 +10548,7 @@ public final class ChatProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PMemberServ_descriptor;
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PMemberServ_descriptor;
       }
 
       public com.blemobi.sep.probuf.ChatProtos.PMemberServ getDefaultInstanceForType() {
@@ -10594,7 +10630,7 @@ public final class ChatProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> userBuilder_;
       /**
-       * <code>optional .common.PUserBase user = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 成员信息
@@ -10604,7 +10640,7 @@ public final class ChatProtos {
         return userBuilder_ != null || user_ != null;
       }
       /**
-       * <code>optional .common.PUserBase user = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 成员信息
@@ -10618,7 +10654,7 @@ public final class ChatProtos {
         }
       }
       /**
-       * <code>optional .common.PUserBase user = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 成员信息
@@ -10638,7 +10674,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase user = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 成员信息
@@ -10656,7 +10692,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase user = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 成员信息
@@ -10678,7 +10714,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase user = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 成员信息
@@ -10696,7 +10732,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase user = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 成员信息
@@ -10708,7 +10744,7 @@ public final class ChatProtos {
         return getUserFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PUserBase user = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 成员信息
@@ -10723,7 +10759,7 @@ public final class ChatProtos {
         }
       }
       /**
-       * <code>optional .common.PUserBase user = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 成员信息
@@ -10867,10 +10903,10 @@ public final class ChatProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PMemberServ)
+      // @@protoc_insertion_point(builder_scope:bbproto.PMemberServ)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PMemberServ)
+    // @@protoc_insertion_point(class_scope:bbproto.PMemberServ)
     private static final com.blemobi.sep.probuf.ChatProtos.PMemberServ DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ChatProtos.PMemberServ();
@@ -10911,7 +10947,7 @@ public final class ChatProtos {
   }
 
   public interface PRoleOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PRole)
+      // @@protoc_insertion_point(interface_extends:bbproto.PRole)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -10942,11 +10978,11 @@ public final class ChatProtos {
         getCommunityIdBytes();
   }
   /**
-   * Protobuf type {@code common.PRole}
+   * Protobuf type {@code bbproto.PRole}
    */
   public  static final class PRole extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PRole)
+      // @@protoc_insertion_point(message_implements:bbproto.PRole)
       PRoleOrBuilder {
     // Use PRole.newBuilder() to construct.
     private PRole(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -11006,12 +11042,12 @@ public final class ChatProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PRole_descriptor;
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PRole_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PRole_fieldAccessorTable
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PRole_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ChatProtos.PRole.class, com.blemobi.sep.probuf.ChatProtos.PRole.Builder.class);
     }
@@ -11184,20 +11220,20 @@ public final class ChatProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PRole}
+     * Protobuf type {@code bbproto.PRole}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PRole)
+        // @@protoc_insertion_point(builder_implements:bbproto.PRole)
         com.blemobi.sep.probuf.ChatProtos.PRoleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PRole_descriptor;
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PRole_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PRole_fieldAccessorTable
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PRole_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ChatProtos.PRole.class, com.blemobi.sep.probuf.ChatProtos.PRole.Builder.class);
       }
@@ -11227,7 +11263,7 @@ public final class ChatProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PRole_descriptor;
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PRole_descriptor;
       }
 
       public com.blemobi.sep.probuf.ChatProtos.PRole getDefaultInstanceForType() {
@@ -11432,10 +11468,10 @@ public final class ChatProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PRole)
+      // @@protoc_insertion_point(builder_scope:bbproto.PRole)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PRole)
+    // @@protoc_insertion_point(class_scope:bbproto.PRole)
     private static final com.blemobi.sep.probuf.ChatProtos.PRole DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ChatProtos.PRole();
@@ -11476,7 +11512,7 @@ public final class ChatProtos {
   }
 
   public interface PFriendRemarkOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PFriendRemark)
+      // @@protoc_insertion_point(interface_extends:bbproto.PFriendRemark)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -11516,11 +11552,11 @@ public final class ChatProtos {
         getRemarkBytes();
   }
   /**
-   * Protobuf type {@code common.PFriendRemark}
+   * Protobuf type {@code bbproto.PFriendRemark}
    */
   public  static final class PFriendRemark extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PFriendRemark)
+      // @@protoc_insertion_point(message_implements:bbproto.PFriendRemark)
       PFriendRemarkOrBuilder {
     // Use PFriendRemark.newBuilder() to construct.
     private PFriendRemark(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -11581,12 +11617,12 @@ public final class ChatProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PFriendRemark_descriptor;
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PFriendRemark_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PFriendRemark_fieldAccessorTable
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PFriendRemark_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ChatProtos.PFriendRemark.class, com.blemobi.sep.probuf.ChatProtos.PFriendRemark.Builder.class);
     }
@@ -11790,20 +11826,20 @@ public final class ChatProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PFriendRemark}
+     * Protobuf type {@code bbproto.PFriendRemark}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PFriendRemark)
+        // @@protoc_insertion_point(builder_implements:bbproto.PFriendRemark)
         com.blemobi.sep.probuf.ChatProtos.PFriendRemarkOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PFriendRemark_descriptor;
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PFriendRemark_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PFriendRemark_fieldAccessorTable
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PFriendRemark_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ChatProtos.PFriendRemark.class, com.blemobi.sep.probuf.ChatProtos.PFriendRemark.Builder.class);
       }
@@ -11833,7 +11869,7 @@ public final class ChatProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PFriendRemark_descriptor;
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PFriendRemark_descriptor;
       }
 
       public com.blemobi.sep.probuf.ChatProtos.PFriendRemark getDefaultInstanceForType() {
@@ -12091,10 +12127,10 @@ public final class ChatProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PFriendRemark)
+      // @@protoc_insertion_point(builder_scope:bbproto.PFriendRemark)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PFriendRemark)
+    // @@protoc_insertion_point(class_scope:bbproto.PFriendRemark)
     private static final com.blemobi.sep.probuf.ChatProtos.PFriendRemark DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ChatProtos.PFriendRemark();
@@ -12135,11 +12171,11 @@ public final class ChatProtos {
   }
 
   public interface PFriendRemarkListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PFriendRemarkList)
+      // @@protoc_insertion_point(interface_extends:bbproto.PFriendRemarkList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .common.PFriendRemark friends = 1;</code>
+     * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
      *
      * <pre>
      * 好友名称备注列表
@@ -12148,7 +12184,7 @@ public final class ChatProtos {
     java.util.List<com.blemobi.sep.probuf.ChatProtos.PFriendRemark> 
         getFriendsList();
     /**
-     * <code>repeated .common.PFriendRemark friends = 1;</code>
+     * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
      *
      * <pre>
      * 好友名称备注列表
@@ -12156,7 +12192,7 @@ public final class ChatProtos {
      */
     com.blemobi.sep.probuf.ChatProtos.PFriendRemark getFriends(int index);
     /**
-     * <code>repeated .common.PFriendRemark friends = 1;</code>
+     * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
      *
      * <pre>
      * 好友名称备注列表
@@ -12164,7 +12200,7 @@ public final class ChatProtos {
      */
     int getFriendsCount();
     /**
-     * <code>repeated .common.PFriendRemark friends = 1;</code>
+     * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
      *
      * <pre>
      * 好友名称备注列表
@@ -12173,7 +12209,7 @@ public final class ChatProtos {
     java.util.List<? extends com.blemobi.sep.probuf.ChatProtos.PFriendRemarkOrBuilder> 
         getFriendsOrBuilderList();
     /**
-     * <code>repeated .common.PFriendRemark friends = 1;</code>
+     * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
      *
      * <pre>
      * 好友名称备注列表
@@ -12183,11 +12219,11 @@ public final class ChatProtos {
         int index);
   }
   /**
-   * Protobuf type {@code common.PFriendRemarkList}
+   * Protobuf type {@code bbproto.PFriendRemarkList}
    */
   public  static final class PFriendRemarkList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PFriendRemarkList)
+      // @@protoc_insertion_point(message_implements:bbproto.PFriendRemarkList)
       PFriendRemarkListOrBuilder {
     // Use PFriendRemarkList.newBuilder() to construct.
     private PFriendRemarkList(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -12246,12 +12282,12 @@ public final class ChatProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PFriendRemarkList_descriptor;
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PFriendRemarkList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PFriendRemarkList_fieldAccessorTable
+      return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PFriendRemarkList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList.class, com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList.Builder.class);
     }
@@ -12259,7 +12295,7 @@ public final class ChatProtos {
     public static final int FRIENDS_FIELD_NUMBER = 1;
     private java.util.List<com.blemobi.sep.probuf.ChatProtos.PFriendRemark> friends_;
     /**
-     * <code>repeated .common.PFriendRemark friends = 1;</code>
+     * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
      *
      * <pre>
      * 好友名称备注列表
@@ -12269,7 +12305,7 @@ public final class ChatProtos {
       return friends_;
     }
     /**
-     * <code>repeated .common.PFriendRemark friends = 1;</code>
+     * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
      *
      * <pre>
      * 好友名称备注列表
@@ -12280,7 +12316,7 @@ public final class ChatProtos {
       return friends_;
     }
     /**
-     * <code>repeated .common.PFriendRemark friends = 1;</code>
+     * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
      *
      * <pre>
      * 好友名称备注列表
@@ -12290,7 +12326,7 @@ public final class ChatProtos {
       return friends_.size();
     }
     /**
-     * <code>repeated .common.PFriendRemark friends = 1;</code>
+     * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
      *
      * <pre>
      * 好友名称备注列表
@@ -12300,7 +12336,7 @@ public final class ChatProtos {
       return friends_.get(index);
     }
     /**
-     * <code>repeated .common.PFriendRemark friends = 1;</code>
+     * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
      *
      * <pre>
      * 好友名称备注列表
@@ -12415,20 +12451,20 @@ public final class ChatProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PFriendRemarkList}
+     * Protobuf type {@code bbproto.PFriendRemarkList}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PFriendRemarkList)
+        // @@protoc_insertion_point(builder_implements:bbproto.PFriendRemarkList)
         com.blemobi.sep.probuf.ChatProtos.PFriendRemarkListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PFriendRemarkList_descriptor;
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PFriendRemarkList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PFriendRemarkList_fieldAccessorTable
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PFriendRemarkList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList.class, com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList.Builder.class);
       }
@@ -12461,7 +12497,7 @@ public final class ChatProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ChatProtos.internal_static_common_PFriendRemarkList_descriptor;
+        return com.blemobi.sep.probuf.ChatProtos.internal_static_bbproto_PFriendRemarkList_descriptor;
       }
 
       public com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList getDefaultInstanceForType() {
@@ -12569,7 +12605,7 @@ public final class ChatProtos {
           com.blemobi.sep.probuf.ChatProtos.PFriendRemark, com.blemobi.sep.probuf.ChatProtos.PFriendRemark.Builder, com.blemobi.sep.probuf.ChatProtos.PFriendRemarkOrBuilder> friendsBuilder_;
 
       /**
-       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
        *
        * <pre>
        * 好友名称备注列表
@@ -12583,7 +12619,7 @@ public final class ChatProtos {
         }
       }
       /**
-       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
        *
        * <pre>
        * 好友名称备注列表
@@ -12597,7 +12633,7 @@ public final class ChatProtos {
         }
       }
       /**
-       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
        *
        * <pre>
        * 好友名称备注列表
@@ -12611,7 +12647,7 @@ public final class ChatProtos {
         }
       }
       /**
-       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
        *
        * <pre>
        * 好友名称备注列表
@@ -12632,7 +12668,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
        *
        * <pre>
        * 好友名称备注列表
@@ -12650,7 +12686,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
        *
        * <pre>
        * 好友名称备注列表
@@ -12670,7 +12706,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
        *
        * <pre>
        * 好友名称备注列表
@@ -12691,7 +12727,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
        *
        * <pre>
        * 好友名称备注列表
@@ -12709,7 +12745,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
        *
        * <pre>
        * 好友名称备注列表
@@ -12727,7 +12763,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
        *
        * <pre>
        * 好友名称备注列表
@@ -12746,7 +12782,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
        *
        * <pre>
        * 好友名称备注列表
@@ -12763,7 +12799,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
        *
        * <pre>
        * 好友名称备注列表
@@ -12780,7 +12816,7 @@ public final class ChatProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
        *
        * <pre>
        * 好友名称备注列表
@@ -12791,7 +12827,7 @@ public final class ChatProtos {
         return getFriendsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
        *
        * <pre>
        * 好友名称备注列表
@@ -12805,7 +12841,7 @@ public final class ChatProtos {
         }
       }
       /**
-       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
        *
        * <pre>
        * 好友名称备注列表
@@ -12820,7 +12856,7 @@ public final class ChatProtos {
         }
       }
       /**
-       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
        *
        * <pre>
        * 好友名称备注列表
@@ -12831,7 +12867,7 @@ public final class ChatProtos {
             com.blemobi.sep.probuf.ChatProtos.PFriendRemark.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
        *
        * <pre>
        * 好友名称备注列表
@@ -12843,7 +12879,7 @@ public final class ChatProtos {
             index, com.blemobi.sep.probuf.ChatProtos.PFriendRemark.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PFriendRemark friends = 1;</code>
+       * <code>repeated .bbproto.PFriendRemark friends = 1;</code>
        *
        * <pre>
        * 好友名称备注列表
@@ -12878,10 +12914,10 @@ public final class ChatProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PFriendRemarkList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PFriendRemarkList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PFriendRemarkList)
+    // @@protoc_insertion_point(class_scope:bbproto.PFriendRemarkList)
     private static final com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ChatProtos.PFriendRemarkList();
@@ -12922,70 +12958,70 @@ public final class ChatProtos {
   }
 
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PWkToken_descriptor;
+    internal_static_bbproto_PWkToken_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PWkToken_fieldAccessorTable;
+      internal_static_bbproto_PWkToken_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PConversation_descriptor;
+    internal_static_bbproto_PConversation_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PConversation_fieldAccessorTable;
+      internal_static_bbproto_PConversation_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PJoinRoom_descriptor;
+    internal_static_bbproto_PJoinRoom_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PJoinRoom_fieldAccessorTable;
+      internal_static_bbproto_PJoinRoom_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunity_descriptor;
+    internal_static_bbproto_PCommunity_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunity_fieldAccessorTable;
+      internal_static_bbproto_PCommunity_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PMemberList_descriptor;
+    internal_static_bbproto_PMemberList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PMemberList_fieldAccessorTable;
+      internal_static_bbproto_PMemberList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PMember_descriptor;
+    internal_static_bbproto_PMember_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PMember_fieldAccessorTable;
+      internal_static_bbproto_PMember_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PEachMsg_descriptor;
+    internal_static_bbproto_PEachMsg_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PEachMsg_fieldAccessorTable;
+      internal_static_bbproto_PEachMsg_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PMoreMsg_descriptor;
+    internal_static_bbproto_PMoreMsg_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PMoreMsg_fieldAccessorTable;
+      internal_static_bbproto_PMoreMsg_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PMemberServList_descriptor;
+    internal_static_bbproto_PMemberServList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PMemberServList_fieldAccessorTable;
+      internal_static_bbproto_PMemberServList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PMemberServ_descriptor;
+    internal_static_bbproto_PMemberServ_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PMemberServ_fieldAccessorTable;
+      internal_static_bbproto_PMemberServ_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PRole_descriptor;
+    internal_static_bbproto_PRole_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PRole_fieldAccessorTable;
+      internal_static_bbproto_PRole_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PFriendRemark_descriptor;
+    internal_static_bbproto_PFriendRemark_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PFriendRemark_fieldAccessorTable;
+      internal_static_bbproto_PFriendRemark_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PFriendRemarkList_descriptor;
+    internal_static_bbproto_PFriendRemarkList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PFriendRemarkList_fieldAccessorTable;
+      internal_static_bbproto_PFriendRemarkList_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -12995,40 +13031,40 @@ public final class ChatProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\nchat.proto\022\006common\032\raccount.proto\"\207\001\n\010" +
-      "PWkToken\022\026\n\016appAccessToken\030\001 \001(\t\022\016\n\006doma" +
-      "in\030\002 \001(\t\022\016\n\006appKey\030\003 \001(\t\022\016\n\006openId\030\004 \001(\003" +
-      "\022\r\n\005nonce\030\005 \001(\t\022\021\n\ttimestamp\030\006 \001(\003\022\021\n\tsi" +
-      "gnature\030\007 \001(\t\"\315\001\n\rPConversation\022\026\n\016conve" +
-      "rsationId\030\001 \001(\t\022\016\n\006openId\030\002 \001(\003\022\014\n\004type\030" +
-      "\003 \001(\005\022\014\n\004icon\030\004 \001(\t\022\r\n\005title\030\005 \001(\t\022\013\n\003ta" +
-      "g\030\006 \001(\003\022\023\n\013memberLimit\030\007 \001(\005\022\022\n\nsuperGro" +
-      "up\030\010 \001(\005\022\020\n\010parentId\030\t \001(\t\022\020\n\010nodeType\030\n" +
-      " \001(\005\022\017\n\007members\030\013 \003(\003\"|\n\tPJoinRoom\022\014\n\004co",
-      "de\030\001 \001(\003\022\021\n\toldRoomId\030\002 \001(\t\022\023\n\013oldRoomNa" +
-      "me\030\003 \001(\t\022\021\n\tnewRoomId\030\004 \001(\t\022\023\n\013newRoomNa" +
-      "me\030\005 \001(\t\022\021\n\tqueueSize\030\006 \001(\005\"q\n\nPCommunit" +
-      "y\022\021\n\townerUuid\030\001 \001(\t\022\023\n\013communityId\030\002 \001(" +
-      "\t\022\025\n\rcommunityName\030\003 \001(\t\022\025\n\rcommunityIco" +
-      "n\030\004 \001(\t\022\r\n\005uuids\030\005 \003(\t\":\n\013PMemberList\022\014\n" +
-      "\004size\030\001 \001(\005\022\035\n\004list\030\002 \003(\0132\017.common.PMemb" +
-      "er\"t\n\007PMember\022\037\n\004user\030\001 \001(\0132\021.common.PUs" +
-      "erBase\022\020\n\010IsFriend\030\002 \001(\005\022\020\n\010IsFollow\030\003 \001" +
-      "(\005\022\021\n\tIsManager\030\004 \001(\005\022\021\n\tgameLevel\030\005 \001(\005",
-      "\"D\n\010PEachMsg\022\024\n\014receiverUUID\030\001 \001(\t\022\024\n\014al" +
-      "ertContent\030\002 \001(\t\022\014\n\004info\030\003 \001(\t\"]\n\010PMoreM" +
-      "sg\022\r\n\005title\030\001 \001(\t\022\r\n\005msgid\030\002 \001(\t\022\023\n\013desc" +
-      "ription\030\003 \001(\t\022\036\n\004list\030\004 \003(\0132\020.common.PEa" +
-      "chMsg\"D\n\017PMemberServList\022\014\n\004size\030\001 \001(\005\022#" +
-      "\n\006member\030\002 \003(\0132\023.common.PMemberServ\"]\n\013P" +
-      "MemberServ\022\037\n\004user\030\001 \001(\0132\021.common.PUserB" +
-      "ase\022\014\n\004spot\030\002 \001(\005\022\014\n\004time\030\003 \001(\003\022\021\n\tisMan" +
-      "ager\030\004 \001(\005\"*\n\005PRole\022\014\n\004role\030\001 \001(\005\022\023\n\013com" +
-      "munityId\030\002 \001(\t\"-\n\rPFriendRemark\022\014\n\004uuid\030",
-      "\001 \001(\t\022\016\n\006remark\030\002 \001(\t\";\n\021PFriendRemarkLi" +
-      "st\022&\n\007friends\030\001 \003(\0132\025.common.PFriendRema" +
-      "rkB$\n\026com.blemobi.sep.probufB\nChatProtos" +
-      "b\006proto3"
+      "\n\nchat.proto\022\007bbproto\032\raccount.proto\"\207\001\n" +
+      "\010PWkToken\022\026\n\016appAccessToken\030\001 \001(\t\022\016\n\006dom" +
+      "ain\030\002 \001(\t\022\016\n\006appKey\030\003 \001(\t\022\016\n\006openId\030\004 \001(" +
+      "\003\022\r\n\005nonce\030\005 \001(\t\022\021\n\ttimestamp\030\006 \001(\003\022\021\n\ts" +
+      "ignature\030\007 \001(\t\"\315\001\n\rPConversation\022\026\n\016conv" +
+      "ersationId\030\001 \001(\t\022\016\n\006openId\030\002 \001(\003\022\014\n\004type" +
+      "\030\003 \001(\005\022\014\n\004icon\030\004 \001(\t\022\r\n\005title\030\005 \001(\t\022\013\n\003t" +
+      "ag\030\006 \001(\003\022\023\n\013memberLimit\030\007 \001(\005\022\022\n\nsuperGr" +
+      "oup\030\010 \001(\005\022\020\n\010parentId\030\t \001(\t\022\020\n\010nodeType\030" +
+      "\n \001(\005\022\017\n\007members\030\013 \003(\003\"|\n\tPJoinRoom\022\014\n\004c",
+      "ode\030\001 \001(\003\022\021\n\toldRoomId\030\002 \001(\t\022\023\n\013oldRoomN" +
+      "ame\030\003 \001(\t\022\021\n\tnewRoomId\030\004 \001(\t\022\023\n\013newRoomN" +
+      "ame\030\005 \001(\t\022\021\n\tqueueSize\030\006 \001(\005\"q\n\nPCommuni" +
+      "ty\022\021\n\townerUuid\030\001 \001(\t\022\023\n\013communityId\030\002 \001" +
+      "(\t\022\025\n\rcommunityName\030\003 \001(\t\022\025\n\rcommunityIc" +
+      "on\030\004 \001(\t\022\r\n\005uuids\030\005 \003(\t\";\n\013PMemberList\022\014" +
+      "\n\004size\030\001 \001(\005\022\036\n\004list\030\002 \003(\0132\020.bbproto.PMe" +
+      "mber\"u\n\007PMember\022 \n\004user\030\001 \001(\0132\022.bbproto." +
+      "PUserBase\022\020\n\010IsFriend\030\002 \001(\005\022\020\n\010IsFollow\030" +
+      "\003 \001(\005\022\021\n\tIsManager\030\004 \001(\005\022\021\n\tgameLevel\030\005 ",
+      "\001(\005\"D\n\010PEachMsg\022\024\n\014receiverUUID\030\001 \001(\t\022\024\n" +
+      "\014alertContent\030\002 \001(\t\022\014\n\004info\030\003 \001(\t\"^\n\010PMo" +
+      "reMsg\022\r\n\005title\030\001 \001(\t\022\r\n\005msgid\030\002 \001(\t\022\023\n\013d" +
+      "escription\030\003 \001(\t\022\037\n\004list\030\004 \003(\0132\021.bbproto" +
+      ".PEachMsg\"E\n\017PMemberServList\022\014\n\004size\030\001 \001" +
+      "(\005\022$\n\006member\030\002 \003(\0132\024.bbproto.PMemberServ" +
+      "\"^\n\013PMemberServ\022 \n\004user\030\001 \001(\0132\022.bbproto." +
+      "PUserBase\022\014\n\004spot\030\002 \001(\005\022\014\n\004time\030\003 \001(\003\022\021\n" +
+      "\tisManager\030\004 \001(\005\"*\n\005PRole\022\014\n\004role\030\001 \001(\005\022" +
+      "\023\n\013communityId\030\002 \001(\t\"-\n\rPFriendRemark\022\014\n",
+      "\004uuid\030\001 \001(\t\022\016\n\006remark\030\002 \001(\t\"<\n\021PFriendRe" +
+      "markList\022\'\n\007friends\030\001 \003(\0132\026.bbproto.PFri" +
+      "endRemarkB$\n\026com.blemobi.sep.probufB\nCha" +
+      "tProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13043,83 +13079,83 @@ public final class ChatProtos {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.blemobi.sep.probuf.AccountProtos.getDescriptor(),
         }, assigner);
-    internal_static_common_PWkToken_descriptor =
+    internal_static_bbproto_PWkToken_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_common_PWkToken_fieldAccessorTable = new
+    internal_static_bbproto_PWkToken_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PWkToken_descriptor,
+        internal_static_bbproto_PWkToken_descriptor,
         new java.lang.String[] { "AppAccessToken", "Domain", "AppKey", "OpenId", "Nonce", "Timestamp", "Signature", });
-    internal_static_common_PConversation_descriptor =
+    internal_static_bbproto_PConversation_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_common_PConversation_fieldAccessorTable = new
+    internal_static_bbproto_PConversation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PConversation_descriptor,
+        internal_static_bbproto_PConversation_descriptor,
         new java.lang.String[] { "ConversationId", "OpenId", "Type", "Icon", "Title", "Tag", "MemberLimit", "SuperGroup", "ParentId", "NodeType", "Members", });
-    internal_static_common_PJoinRoom_descriptor =
+    internal_static_bbproto_PJoinRoom_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_common_PJoinRoom_fieldAccessorTable = new
+    internal_static_bbproto_PJoinRoom_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PJoinRoom_descriptor,
+        internal_static_bbproto_PJoinRoom_descriptor,
         new java.lang.String[] { "Code", "OldRoomId", "OldRoomName", "NewRoomId", "NewRoomName", "QueueSize", });
-    internal_static_common_PCommunity_descriptor =
+    internal_static_bbproto_PCommunity_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_common_PCommunity_fieldAccessorTable = new
+    internal_static_bbproto_PCommunity_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunity_descriptor,
+        internal_static_bbproto_PCommunity_descriptor,
         new java.lang.String[] { "OwnerUuid", "CommunityId", "CommunityName", "CommunityIcon", "Uuids", });
-    internal_static_common_PMemberList_descriptor =
+    internal_static_bbproto_PMemberList_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_common_PMemberList_fieldAccessorTable = new
+    internal_static_bbproto_PMemberList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PMemberList_descriptor,
+        internal_static_bbproto_PMemberList_descriptor,
         new java.lang.String[] { "Size", "List", });
-    internal_static_common_PMember_descriptor =
+    internal_static_bbproto_PMember_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_common_PMember_fieldAccessorTable = new
+    internal_static_bbproto_PMember_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PMember_descriptor,
+        internal_static_bbproto_PMember_descriptor,
         new java.lang.String[] { "User", "IsFriend", "IsFollow", "IsManager", "GameLevel", });
-    internal_static_common_PEachMsg_descriptor =
+    internal_static_bbproto_PEachMsg_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_common_PEachMsg_fieldAccessorTable = new
+    internal_static_bbproto_PEachMsg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PEachMsg_descriptor,
+        internal_static_bbproto_PEachMsg_descriptor,
         new java.lang.String[] { "ReceiverUUID", "AlertContent", "Info", });
-    internal_static_common_PMoreMsg_descriptor =
+    internal_static_bbproto_PMoreMsg_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_common_PMoreMsg_fieldAccessorTable = new
+    internal_static_bbproto_PMoreMsg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PMoreMsg_descriptor,
+        internal_static_bbproto_PMoreMsg_descriptor,
         new java.lang.String[] { "Title", "Msgid", "Description", "List", });
-    internal_static_common_PMemberServList_descriptor =
+    internal_static_bbproto_PMemberServList_descriptor =
       getDescriptor().getMessageTypes().get(8);
-    internal_static_common_PMemberServList_fieldAccessorTable = new
+    internal_static_bbproto_PMemberServList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PMemberServList_descriptor,
+        internal_static_bbproto_PMemberServList_descriptor,
         new java.lang.String[] { "Size", "Member", });
-    internal_static_common_PMemberServ_descriptor =
+    internal_static_bbproto_PMemberServ_descriptor =
       getDescriptor().getMessageTypes().get(9);
-    internal_static_common_PMemberServ_fieldAccessorTable = new
+    internal_static_bbproto_PMemberServ_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PMemberServ_descriptor,
+        internal_static_bbproto_PMemberServ_descriptor,
         new java.lang.String[] { "User", "Spot", "Time", "IsManager", });
-    internal_static_common_PRole_descriptor =
+    internal_static_bbproto_PRole_descriptor =
       getDescriptor().getMessageTypes().get(10);
-    internal_static_common_PRole_fieldAccessorTable = new
+    internal_static_bbproto_PRole_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PRole_descriptor,
+        internal_static_bbproto_PRole_descriptor,
         new java.lang.String[] { "Role", "CommunityId", });
-    internal_static_common_PFriendRemark_descriptor =
+    internal_static_bbproto_PFriendRemark_descriptor =
       getDescriptor().getMessageTypes().get(11);
-    internal_static_common_PFriendRemark_fieldAccessorTable = new
+    internal_static_bbproto_PFriendRemark_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PFriendRemark_descriptor,
+        internal_static_bbproto_PFriendRemark_descriptor,
         new java.lang.String[] { "Uuid", "Remark", });
-    internal_static_common_PFriendRemarkList_descriptor =
+    internal_static_bbproto_PFriendRemarkList_descriptor =
       getDescriptor().getMessageTypes().get(12);
-    internal_static_common_PFriendRemarkList_fieldAccessorTable = new
+    internal_static_bbproto_PFriendRemarkList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PFriendRemarkList_descriptor,
+        internal_static_bbproto_PFriendRemarkList_descriptor,
         new java.lang.String[] { "Friends", });
     com.blemobi.sep.probuf.AccountProtos.getDescriptor();
   }

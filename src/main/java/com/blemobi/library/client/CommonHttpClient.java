@@ -1,22 +1,30 @@
 package com.blemobi.library.client;
 
+import java.io.IOException;
 import java.util.List;
 
-import javax.servlet.http.Cookie;
+import com.blemobi.library.jetty.JettyServer;
+import com.blemobi.sep.probuf.ResultProtos.PMessage;
+import com.blemobi.sep.probuf.TaskProtos.PSubscribe;
+import com.blemobi.sep.probuf.TaskProtos.PSubscribeArray;
 
-import org.apache.http.NameValuePair;
-
-import com.blemobi.library.consul.BaseService;
-import com.blemobi.library.consul.SocketInfo;
-
-/**
- * @author 赵勇<andy.zhao@blemobi.com> 账户系统调用类
+/*
+ * 通用调用类
  */
 public class CommonHttpClient extends BaseHttpClient {
-	public CommonHttpClient(String sername, String basePath, List<NameValuePair> params, Cookie[] cookies) {
-		super(basePath, params, cookies);
-		SocketInfo socketInfo = BaseService.getActiveServer(sername);
-		super.socketInfo = socketInfo;
-		super.createUrl();
+	public CommonHttpClient(String sername) {
+		super(sername);
+	}
+
+	/*
+	 * 发送订阅消息给其它服务
+	 */
+	public PMessage subscribe(String basePath, List<PSubscribe> list) throws IOException {
+		PSubscribeArray subscribeArray = PSubscribeArray.newBuilder().addAllSubscribe(list).build();
+		super.basePath = new StringBuffer(basePath);
+		super.basePath.append(JettyServer.getServerName());
+		super.body = subscribeArray.toByteArray();
+		super.contentType = "application/x-protobuf";
+		return super.postBodyMethod();
 	}
 }

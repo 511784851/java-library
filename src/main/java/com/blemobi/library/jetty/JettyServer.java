@@ -20,7 +20,7 @@ import com.blemobi.library.filter.ListParamFilter;
 public class JettyServer {
 
 	private static Server server;
-	private String contextPath;
+	private static String contextPath;
 	private String packages;
 	private int port;
 	private List<ServerFilter> serverFilterList;
@@ -29,19 +29,19 @@ public class JettyServer {
 	 * 构造方法
 	 */
 	public JettyServer(String contextPath, String packages, int port, List<ServerFilter> serverFilterList) {
-		this.contextPath = contextPath;
+		JettyServer.contextPath = contextPath;
 		this.packages = packages;
 		this.port = port;
 		this.serverFilterList = serverFilterList;
 	}
 
-	/**
+	/*
 	 * 启动Jetty Http服务
 	 */
 	public void start() throws Exception {
 		if (server == null) {
 			ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
-			context.setContextPath("/" + contextPath);
+			context.setContextPath("/");
 			EnumSet<DispatcherType> enumSet = EnumSet.allOf(DispatcherType.class);
 			enumSet.add(DispatcherType.REQUEST);
 
@@ -63,5 +63,9 @@ public class JettyServer {
 
 			server.start();
 		}
+	}
+
+	public static String getServerName() {
+		return contextPath;
 	}
 }

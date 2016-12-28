@@ -1,22 +1,24 @@
 package com.blemobi.library.client;
 
-import java.util.List;
+import java.io.IOException;
 
-import javax.servlet.http.Cookie;
+import com.blemobi.library.jetty.JettyServer;
+import com.blemobi.sep.probuf.ResultProtos.PMessage;
 
-import org.apache.http.NameValuePair;
-
-import com.blemobi.library.consul.BaseService;
-import com.blemobi.library.consul.SocketInfo;
-
-/**
- * @author 赵勇<andy.zhao@blemobi.com> 账户系统调用类
+/*
+ * 边缘系统调用类
  */
 public class DatapublishingHttpClient extends BaseHttpClient {
-	public DatapublishingHttpClient(String basePath, List<NameValuePair> params, Cookie[] cookies) {
-		super(basePath, params, cookies);
-		SocketInfo socketInfo = BaseService.getActiveServer("datapublishing");
-		super.socketInfo = socketInfo;
-		super.createUrl();
+	public DatapublishingHttpClient() {
+		super("datapublishing");
+	}
+
+	/*
+	 * 获取用户最后心跳时间
+	 */
+	public PMessage getLastHeartbeat(String uuids) throws IOException {
+		super.basePath = new StringBuffer("/datapublishing/inside/heartbeat/last?from=");
+		super.basePath.append(JettyServer.getServerName()).append("&uuids=").append(uuids);
+		return super.getMethod();
 	}
 }

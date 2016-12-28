@@ -50,12 +50,11 @@ public class AutoReturnRedis {
 						for (Integer hc : map.keySet()) {
 							keys.add(hc);
 						}
-						log.info("系统活跃的Redis连接对象数量：" + keys.size());
 						for (Integer hc : keys) {
 							RedisExpire redisExpire = map.get(hc);
 							if (redisExpire != null && now >= redisExpire.getEndTime()) {
 								RedisManager.returnResource(redisExpire.getJedis());
-								log.warn("系统自动回收了一个Redis Pool连接对象");
+								log.debug("系统自动回收了一个Redis Pool连接对象");
 							}
 						}
 					} catch (Exception e) {

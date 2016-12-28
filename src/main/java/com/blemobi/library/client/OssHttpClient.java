@@ -1,22 +1,44 @@
 package com.blemobi.library.client;
 
-import java.util.List;
+import java.io.IOException;
 
-import javax.servlet.http.Cookie;
+import com.blemobi.library.jetty.JettyServer;
+import com.blemobi.sep.probuf.ResultProtos.PMessage;
 
-import org.apache.http.NameValuePair;
-
-import com.blemobi.library.consul.BaseService;
-import com.blemobi.library.consul.SocketInfo;
-
-/**
- * @author 赵勇<andy.zhao@blemobi.com> oss系统调用类
+/*
+ * OSS系统调用类
  */
 public class OssHttpClient extends BaseHttpClient {
-	public OssHttpClient(String basePath, List<NameValuePair> params, Cookie[] cookies) {
-		super(basePath, params, cookies);
-		SocketInfo socketInfo = BaseService.getActiveServer("oss");
-		super.socketInfo = socketInfo;
-		super.createUrl();
+	public OssHttpClient() {
+		super("oss");
+	}
+
+	/*
+	 * 内网获取多个下载文件的URL
+	 */
+	public PMessage getDownloadurls(String filenames) throws IOException {
+		super.basePath = new StringBuffer("/oss/downloadurls?from=");
+		super.basePath.append(JettyServer.getServerName()).append("&bucket=0").append("&objectkeys=").append(filenames);
+		return super.getMethod();
+	}
+
+	/*
+	 * 内网访问批量获取带签名的文件上传URL
+	 */
+	public PMessage uploadurls(byte[] body) throws IOException {
+		super.basePath = new StringBuffer("/oss/uploadurls?from=");
+		super.basePath.append(JettyServer.getServerName()).append("&bucket=0");
+		super.body = body;
+		super.contentType = "form-data";
+		return super.postBodyMethod();
+	}
+
+	/*
+	 * 获取单个下载文件的URL
+	 */
+	public PMessage getDownloadurl(String objectkey) throws IOException {
+		super.basePath = new StringBuffer("/oss/downloadurl?from=");
+		super.basePath.append(JettyServer.getServerName()).append("&bucket=1").append("&objectkey=").append(objectkey);
+		return super.getMethod();
 	}
 }

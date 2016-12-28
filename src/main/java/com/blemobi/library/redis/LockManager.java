@@ -47,7 +47,7 @@ public class LockManager {
 			}
 		}
 		if (nx != 1) {
-			log.error("获取Redis锁失败");
+			log.warn("获取Redis锁失败");
 		}
 		return nx == 1;
 	}

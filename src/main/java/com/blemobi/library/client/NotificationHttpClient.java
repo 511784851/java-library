@@ -1,22 +1,27 @@
 package com.blemobi.library.client;
 
-import java.util.List;
+import java.io.IOException;
 
-import javax.servlet.http.Cookie;
+import com.blemobi.library.jetty.JettyServer;
+import com.blemobi.sep.probuf.NotificationApiProtos.PPushMsg;
+import com.blemobi.sep.probuf.ResultProtos.PMessage;
 
-import org.apache.http.NameValuePair;
-
-import com.blemobi.library.consul.BaseService;
-import com.blemobi.library.consul.SocketInfo;
-
-/**
- * @author 赵勇<andy.zhao@blemobi.com> 账户系统调用类
+/*
+ * 通知系统调用类
  */
 public class NotificationHttpClient extends BaseHttpClient {
-	public NotificationHttpClient(String basePath, List<NameValuePair> params, Cookie[] cookies) {
-		super(basePath, params, cookies);
-		SocketInfo socketInfo = BaseService.getActiveServer("notification");
-		super.socketInfo = socketInfo;
-		super.createUrl();
+	public NotificationHttpClient() {
+		super("notification");
+	}
+
+	/*
+	 * 通知消息
+	 */
+	public PMessage msg(PPushMsg pushMsg) throws IOException {
+		super.basePath = new StringBuffer("/v1/notification/inside/msg?from=");
+		super.basePath.append(JettyServer.getServerName());
+		super.body = pushMsg.toByteArray();
+		super.contentType = "form-data";
+		return super.postBodyMethod();
 	}
 }

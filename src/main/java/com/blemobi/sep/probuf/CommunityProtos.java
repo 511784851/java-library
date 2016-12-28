@@ -9,7 +9,7 @@ public final class CommunityProtos {
       com.google.protobuf.ExtensionRegistry registry) {
   }
   public interface PCommunityIDOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityID)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityID)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -48,7 +48,7 @@ public final class CommunityProtos {
         getIDBytes(int index);
   }
   /**
-   * Protobuf type {@code common.PCommunityID}
+   * Protobuf type {@code bbproto.PCommunityID}
    *
    * <pre>
    * 社区的id信息，用于批量操作
@@ -56,7 +56,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityID extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityID)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityID)
       PCommunityIDOrBuilder {
     // Use PCommunityID.newBuilder() to construct.
     private PCommunityID(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -116,12 +116,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityID_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityID_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityID_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityID_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityID.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityID.Builder.class);
     }
@@ -280,7 +280,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityID}
+     * Protobuf type {@code bbproto.PCommunityID}
      *
      * <pre>
      * 社区的id信息，用于批量操作
@@ -288,16 +288,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityID)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityID)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityIDOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityID_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityID_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityID_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityID_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityID.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityID.Builder.class);
       }
@@ -325,7 +325,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityID_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityID_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityID getDefaultInstanceForType() {
@@ -539,10 +539,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityID)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityID)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityID)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityID)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityID DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityID();
@@ -583,7 +583,7 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityBaseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityBase)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityBase)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -668,7 +668,7 @@ public final class CommunityProtos {
     int getStatus();
 
     /**
-     * <code>optional .common.PCommunityResourceList IntroduceRes = 7;</code>
+     * <code>optional .bbproto.PCommunityResourceList IntroduceRes = 7;</code>
      *
      * <pre>
      * 社区介绍；图文混排
@@ -676,7 +676,7 @@ public final class CommunityProtos {
      */
     boolean hasIntroduceRes();
     /**
-     * <code>optional .common.PCommunityResourceList IntroduceRes = 7;</code>
+     * <code>optional .bbproto.PCommunityResourceList IntroduceRes = 7;</code>
      *
      * <pre>
      * 社区介绍；图文混排
@@ -684,7 +684,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList getIntroduceRes();
     /**
-     * <code>optional .common.PCommunityResourceList IntroduceRes = 7;</code>
+     * <code>optional .bbproto.PCommunityResourceList IntroduceRes = 7;</code>
      *
      * <pre>
      * 社区介绍；图文混排
@@ -693,7 +693,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceListOrBuilder getIntroduceResOrBuilder();
   }
   /**
-   * Protobuf type {@code common.PCommunityBase}
+   * Protobuf type {@code bbproto.PCommunityBase}
    *
    * <pre>
    * 社区基础信息
@@ -701,7 +701,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityBase extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityBase)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityBase)
       PCommunityBaseOrBuilder {
     // Use PCommunityBase.newBuilder() to construct.
     private PCommunityBase(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -795,12 +795,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityBase_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityBase_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityBase_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityBase_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityBase.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityBase.Builder.class);
     }
@@ -997,7 +997,7 @@ public final class CommunityProtos {
     public static final int INTRODUCERES_FIELD_NUMBER = 7;
     private com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList introduceRes_;
     /**
-     * <code>optional .common.PCommunityResourceList IntroduceRes = 7;</code>
+     * <code>optional .bbproto.PCommunityResourceList IntroduceRes = 7;</code>
      *
      * <pre>
      * 社区介绍；图文混排
@@ -1007,7 +1007,7 @@ public final class CommunityProtos {
       return introduceRes_ != null;
     }
     /**
-     * <code>optional .common.PCommunityResourceList IntroduceRes = 7;</code>
+     * <code>optional .bbproto.PCommunityResourceList IntroduceRes = 7;</code>
      *
      * <pre>
      * 社区介绍；图文混排
@@ -1017,7 +1017,7 @@ public final class CommunityProtos {
       return introduceRes_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList.getDefaultInstance() : introduceRes_;
     }
     /**
-     * <code>optional .common.PCommunityResourceList IntroduceRes = 7;</code>
+     * <code>optional .bbproto.PCommunityResourceList IntroduceRes = 7;</code>
      *
      * <pre>
      * 社区介绍；图文混排
@@ -1166,7 +1166,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityBase}
+     * Protobuf type {@code bbproto.PCommunityBase}
      *
      * <pre>
      * 社区基础信息
@@ -1174,16 +1174,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityBase)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityBase)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityBase_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityBase_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityBase_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityBase_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityBase.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityBase.Builder.class);
       }
@@ -1225,7 +1225,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityBase_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityBase_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityBase getDefaultInstanceForType() {
@@ -1717,7 +1717,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList, com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceListOrBuilder> introduceResBuilder_;
       /**
-       * <code>optional .common.PCommunityResourceList IntroduceRes = 7;</code>
+       * <code>optional .bbproto.PCommunityResourceList IntroduceRes = 7;</code>
        *
        * <pre>
        * 社区介绍；图文混排
@@ -1727,7 +1727,7 @@ public final class CommunityProtos {
         return introduceResBuilder_ != null || introduceRes_ != null;
       }
       /**
-       * <code>optional .common.PCommunityResourceList IntroduceRes = 7;</code>
+       * <code>optional .bbproto.PCommunityResourceList IntroduceRes = 7;</code>
        *
        * <pre>
        * 社区介绍；图文混排
@@ -1741,7 +1741,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityResourceList IntroduceRes = 7;</code>
+       * <code>optional .bbproto.PCommunityResourceList IntroduceRes = 7;</code>
        *
        * <pre>
        * 社区介绍；图文混排
@@ -1761,7 +1761,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResourceList IntroduceRes = 7;</code>
+       * <code>optional .bbproto.PCommunityResourceList IntroduceRes = 7;</code>
        *
        * <pre>
        * 社区介绍；图文混排
@@ -1779,7 +1779,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResourceList IntroduceRes = 7;</code>
+       * <code>optional .bbproto.PCommunityResourceList IntroduceRes = 7;</code>
        *
        * <pre>
        * 社区介绍；图文混排
@@ -1801,7 +1801,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResourceList IntroduceRes = 7;</code>
+       * <code>optional .bbproto.PCommunityResourceList IntroduceRes = 7;</code>
        *
        * <pre>
        * 社区介绍；图文混排
@@ -1819,7 +1819,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResourceList IntroduceRes = 7;</code>
+       * <code>optional .bbproto.PCommunityResourceList IntroduceRes = 7;</code>
        *
        * <pre>
        * 社区介绍；图文混排
@@ -1831,7 +1831,7 @@ public final class CommunityProtos {
         return getIntroduceResFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PCommunityResourceList IntroduceRes = 7;</code>
+       * <code>optional .bbproto.PCommunityResourceList IntroduceRes = 7;</code>
        *
        * <pre>
        * 社区介绍；图文混排
@@ -1846,7 +1846,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityResourceList IntroduceRes = 7;</code>
+       * <code>optional .bbproto.PCommunityResourceList IntroduceRes = 7;</code>
        *
        * <pre>
        * 社区介绍；图文混排
@@ -1876,10 +1876,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityBase)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityBase)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityBase)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityBase)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityBase DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityBase();
@@ -1920,11 +1920,11 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityBaseListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityBaseList)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityBaseList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .common.PCommunityBase List = 2;</code>
+     * <code>repeated .bbproto.PCommunityBase List = 2;</code>
      *
      * <pre>
      * 我关注的社区
@@ -1933,7 +1933,7 @@ public final class CommunityProtos {
     java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityBase> 
         getListList();
     /**
-     * <code>repeated .common.PCommunityBase List = 2;</code>
+     * <code>repeated .bbproto.PCommunityBase List = 2;</code>
      *
      * <pre>
      * 我关注的社区
@@ -1941,7 +1941,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityBase getList(int index);
     /**
-     * <code>repeated .common.PCommunityBase List = 2;</code>
+     * <code>repeated .bbproto.PCommunityBase List = 2;</code>
      *
      * <pre>
      * 我关注的社区
@@ -1949,7 +1949,7 @@ public final class CommunityProtos {
      */
     int getListCount();
     /**
-     * <code>repeated .common.PCommunityBase List = 2;</code>
+     * <code>repeated .bbproto.PCommunityBase List = 2;</code>
      *
      * <pre>
      * 我关注的社区
@@ -1958,7 +1958,7 @@ public final class CommunityProtos {
     java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseOrBuilder> 
         getListOrBuilderList();
     /**
-     * <code>repeated .common.PCommunityBase List = 2;</code>
+     * <code>repeated .bbproto.PCommunityBase List = 2;</code>
      *
      * <pre>
      * 我关注的社区
@@ -1968,7 +1968,7 @@ public final class CommunityProtos {
         int index);
   }
   /**
-   * Protobuf type {@code common.PCommunityBaseList}
+   * Protobuf type {@code bbproto.PCommunityBaseList}
    *
    * <pre>
    * 社区基础信息列表
@@ -1976,7 +1976,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityBaseList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityBaseList)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityBaseList)
       PCommunityBaseListOrBuilder {
     // Use PCommunityBaseList.newBuilder() to construct.
     private PCommunityBaseList(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -2035,12 +2035,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityBaseList_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityBaseList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityBaseList_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityBaseList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList.Builder.class);
     }
@@ -2048,7 +2048,7 @@ public final class CommunityProtos {
     public static final int LIST_FIELD_NUMBER = 2;
     private java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityBase> list_;
     /**
-     * <code>repeated .common.PCommunityBase List = 2;</code>
+     * <code>repeated .bbproto.PCommunityBase List = 2;</code>
      *
      * <pre>
      * 我关注的社区
@@ -2058,7 +2058,7 @@ public final class CommunityProtos {
       return list_;
     }
     /**
-     * <code>repeated .common.PCommunityBase List = 2;</code>
+     * <code>repeated .bbproto.PCommunityBase List = 2;</code>
      *
      * <pre>
      * 我关注的社区
@@ -2069,7 +2069,7 @@ public final class CommunityProtos {
       return list_;
     }
     /**
-     * <code>repeated .common.PCommunityBase List = 2;</code>
+     * <code>repeated .bbproto.PCommunityBase List = 2;</code>
      *
      * <pre>
      * 我关注的社区
@@ -2079,7 +2079,7 @@ public final class CommunityProtos {
       return list_.size();
     }
     /**
-     * <code>repeated .common.PCommunityBase List = 2;</code>
+     * <code>repeated .bbproto.PCommunityBase List = 2;</code>
      *
      * <pre>
      * 我关注的社区
@@ -2089,7 +2089,7 @@ public final class CommunityProtos {
       return list_.get(index);
     }
     /**
-     * <code>repeated .common.PCommunityBase List = 2;</code>
+     * <code>repeated .bbproto.PCommunityBase List = 2;</code>
      *
      * <pre>
      * 我关注的社区
@@ -2204,7 +2204,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityBaseList}
+     * Protobuf type {@code bbproto.PCommunityBaseList}
      *
      * <pre>
      * 社区基础信息列表
@@ -2212,16 +2212,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityBaseList)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityBaseList)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityBaseList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityBaseList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityBaseList_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityBaseList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList.Builder.class);
       }
@@ -2254,7 +2254,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityBaseList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityBaseList_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList getDefaultInstanceForType() {
@@ -2362,7 +2362,7 @@ public final class CommunityProtos {
           com.blemobi.sep.probuf.CommunityProtos.PCommunityBase, com.blemobi.sep.probuf.CommunityProtos.PCommunityBase.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseOrBuilder> listBuilder_;
 
       /**
-       * <code>repeated .common.PCommunityBase List = 2;</code>
+       * <code>repeated .bbproto.PCommunityBase List = 2;</code>
        *
        * <pre>
        * 我关注的社区
@@ -2376,7 +2376,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityBase List = 2;</code>
+       * <code>repeated .bbproto.PCommunityBase List = 2;</code>
        *
        * <pre>
        * 我关注的社区
@@ -2390,7 +2390,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityBase List = 2;</code>
+       * <code>repeated .bbproto.PCommunityBase List = 2;</code>
        *
        * <pre>
        * 我关注的社区
@@ -2404,7 +2404,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityBase List = 2;</code>
+       * <code>repeated .bbproto.PCommunityBase List = 2;</code>
        *
        * <pre>
        * 我关注的社区
@@ -2425,7 +2425,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityBase List = 2;</code>
+       * <code>repeated .bbproto.PCommunityBase List = 2;</code>
        *
        * <pre>
        * 我关注的社区
@@ -2443,7 +2443,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityBase List = 2;</code>
+       * <code>repeated .bbproto.PCommunityBase List = 2;</code>
        *
        * <pre>
        * 我关注的社区
@@ -2463,7 +2463,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityBase List = 2;</code>
+       * <code>repeated .bbproto.PCommunityBase List = 2;</code>
        *
        * <pre>
        * 我关注的社区
@@ -2484,7 +2484,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityBase List = 2;</code>
+       * <code>repeated .bbproto.PCommunityBase List = 2;</code>
        *
        * <pre>
        * 我关注的社区
@@ -2502,7 +2502,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityBase List = 2;</code>
+       * <code>repeated .bbproto.PCommunityBase List = 2;</code>
        *
        * <pre>
        * 我关注的社区
@@ -2520,7 +2520,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityBase List = 2;</code>
+       * <code>repeated .bbproto.PCommunityBase List = 2;</code>
        *
        * <pre>
        * 我关注的社区
@@ -2539,7 +2539,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityBase List = 2;</code>
+       * <code>repeated .bbproto.PCommunityBase List = 2;</code>
        *
        * <pre>
        * 我关注的社区
@@ -2556,7 +2556,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityBase List = 2;</code>
+       * <code>repeated .bbproto.PCommunityBase List = 2;</code>
        *
        * <pre>
        * 我关注的社区
@@ -2573,7 +2573,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityBase List = 2;</code>
+       * <code>repeated .bbproto.PCommunityBase List = 2;</code>
        *
        * <pre>
        * 我关注的社区
@@ -2584,7 +2584,7 @@ public final class CommunityProtos {
         return getListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PCommunityBase List = 2;</code>
+       * <code>repeated .bbproto.PCommunityBase List = 2;</code>
        *
        * <pre>
        * 我关注的社区
@@ -2598,7 +2598,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityBase List = 2;</code>
+       * <code>repeated .bbproto.PCommunityBase List = 2;</code>
        *
        * <pre>
        * 我关注的社区
@@ -2613,7 +2613,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityBase List = 2;</code>
+       * <code>repeated .bbproto.PCommunityBase List = 2;</code>
        *
        * <pre>
        * 我关注的社区
@@ -2624,7 +2624,7 @@ public final class CommunityProtos {
             com.blemobi.sep.probuf.CommunityProtos.PCommunityBase.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityBase List = 2;</code>
+       * <code>repeated .bbproto.PCommunityBase List = 2;</code>
        *
        * <pre>
        * 我关注的社区
@@ -2636,7 +2636,7 @@ public final class CommunityProtos {
             index, com.blemobi.sep.probuf.CommunityProtos.PCommunityBase.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityBase List = 2;</code>
+       * <code>repeated .bbproto.PCommunityBase List = 2;</code>
        *
        * <pre>
        * 我关注的社区
@@ -2671,10 +2671,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityBaseList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityBaseList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityBaseList)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityBaseList)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList();
@@ -2715,7 +2715,7 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityInfo)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2962,7 +2962,7 @@ public final class CommunityProtos {
         getManagerListBytes();
   }
   /**
-   * Protobuf type {@code common.PCommunityInfo}
+   * Protobuf type {@code bbproto.PCommunityInfo}
    *
    * <pre>
    * 社区信息
@@ -2970,7 +2970,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityInfo)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityInfo)
       PCommunityInfoOrBuilder {
     // Use PCommunityInfo.newBuilder() to construct.
     private PCommunityInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -3124,12 +3124,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityInfo_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityInfo_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityInfo.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityInfo.Builder.class);
     }
@@ -3892,7 +3892,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityInfo}
+     * Protobuf type {@code bbproto.PCommunityInfo}
      *
      * <pre>
      * 社区信息
@@ -3900,16 +3900,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityInfo)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityInfo)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityInfo_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityInfo_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityInfo.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityInfo.Builder.class);
       }
@@ -3967,7 +3967,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityInfo_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityInfo_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityInfo getDefaultInstanceForType() {
@@ -5290,10 +5290,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityInfo)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityInfo)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityInfo)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityInfo)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityInfo DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityInfo();
@@ -5334,11 +5334,11 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityMeOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityMe)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityMe)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .common.PCommunityInfo Info = 2;</code>
+     * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
      *
      * <pre>
      * 我的社区信息
@@ -5346,7 +5346,7 @@ public final class CommunityProtos {
      */
     boolean hasInfo();
     /**
-     * <code>optional .common.PCommunityInfo Info = 2;</code>
+     * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
      *
      * <pre>
      * 我的社区信息
@@ -5354,7 +5354,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityInfo getInfo();
     /**
-     * <code>optional .common.PCommunityInfo Info = 2;</code>
+     * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
      *
      * <pre>
      * 我的社区信息
@@ -5363,7 +5363,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.CommunityProtos.PCommunityInfoOrBuilder getInfoOrBuilder();
 
     /**
-     * <code>optional .common.PCommunityBaseList List = 3;</code>
+     * <code>optional .bbproto.PCommunityBaseList List = 3;</code>
      *
      * <pre>
      * 我关注的社区，默认显示20条
@@ -5371,7 +5371,7 @@ public final class CommunityProtos {
      */
     boolean hasList();
     /**
-     * <code>optional .common.PCommunityBaseList List = 3;</code>
+     * <code>optional .bbproto.PCommunityBaseList List = 3;</code>
      *
      * <pre>
      * 我关注的社区，默认显示20条
@@ -5379,7 +5379,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList getList();
     /**
-     * <code>optional .common.PCommunityBaseList List = 3;</code>
+     * <code>optional .bbproto.PCommunityBaseList List = 3;</code>
      *
      * <pre>
      * 我关注的社区，默认显示20条
@@ -5388,7 +5388,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseListOrBuilder getListOrBuilder();
   }
   /**
-   * Protobuf type {@code common.PCommunityMe}
+   * Protobuf type {@code bbproto.PCommunityMe}
    *
    * <pre>
    * ‘我的社区’返回的信息
@@ -5396,7 +5396,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityMe extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityMe)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityMe)
       PCommunityMeOrBuilder {
     // Use PCommunityMe.newBuilder() to construct.
     private PCommunityMe(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -5469,12 +5469,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMe_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMe_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMe_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMe_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityMe.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityMe.Builder.class);
     }
@@ -5482,7 +5482,7 @@ public final class CommunityProtos {
     public static final int INFO_FIELD_NUMBER = 2;
     private com.blemobi.sep.probuf.CommunityProtos.PCommunityInfo info_;
     /**
-     * <code>optional .common.PCommunityInfo Info = 2;</code>
+     * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
      *
      * <pre>
      * 我的社区信息
@@ -5492,7 +5492,7 @@ public final class CommunityProtos {
       return info_ != null;
     }
     /**
-     * <code>optional .common.PCommunityInfo Info = 2;</code>
+     * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
      *
      * <pre>
      * 我的社区信息
@@ -5502,7 +5502,7 @@ public final class CommunityProtos {
       return info_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityInfo.getDefaultInstance() : info_;
     }
     /**
-     * <code>optional .common.PCommunityInfo Info = 2;</code>
+     * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
      *
      * <pre>
      * 我的社区信息
@@ -5515,7 +5515,7 @@ public final class CommunityProtos {
     public static final int LIST_FIELD_NUMBER = 3;
     private com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList list_;
     /**
-     * <code>optional .common.PCommunityBaseList List = 3;</code>
+     * <code>optional .bbproto.PCommunityBaseList List = 3;</code>
      *
      * <pre>
      * 我关注的社区，默认显示20条
@@ -5525,7 +5525,7 @@ public final class CommunityProtos {
       return list_ != null;
     }
     /**
-     * <code>optional .common.PCommunityBaseList List = 3;</code>
+     * <code>optional .bbproto.PCommunityBaseList List = 3;</code>
      *
      * <pre>
      * 我关注的社区，默认显示20条
@@ -5535,7 +5535,7 @@ public final class CommunityProtos {
       return list_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList.getDefaultInstance() : list_;
     }
     /**
-     * <code>optional .common.PCommunityBaseList List = 3;</code>
+     * <code>optional .bbproto.PCommunityBaseList List = 3;</code>
      *
      * <pre>
      * 我关注的社区，默认显示20条
@@ -5656,7 +5656,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityMe}
+     * Protobuf type {@code bbproto.PCommunityMe}
      *
      * <pre>
      * ‘我的社区’返回的信息
@@ -5664,16 +5664,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityMe)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityMe)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityMeOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMe_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMe_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMe_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMe_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityMe.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityMe.Builder.class);
       }
@@ -5711,7 +5711,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMe_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMe_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityMe getDefaultInstanceForType() {
@@ -5789,7 +5789,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.CommunityProtos.PCommunityInfo, com.blemobi.sep.probuf.CommunityProtos.PCommunityInfo.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityInfoOrBuilder> infoBuilder_;
       /**
-       * <code>optional .common.PCommunityInfo Info = 2;</code>
+       * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
        *
        * <pre>
        * 我的社区信息
@@ -5799,7 +5799,7 @@ public final class CommunityProtos {
         return infoBuilder_ != null || info_ != null;
       }
       /**
-       * <code>optional .common.PCommunityInfo Info = 2;</code>
+       * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
        *
        * <pre>
        * 我的社区信息
@@ -5813,7 +5813,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityInfo Info = 2;</code>
+       * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
        *
        * <pre>
        * 我的社区信息
@@ -5833,7 +5833,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityInfo Info = 2;</code>
+       * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
        *
        * <pre>
        * 我的社区信息
@@ -5851,7 +5851,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityInfo Info = 2;</code>
+       * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
        *
        * <pre>
        * 我的社区信息
@@ -5873,7 +5873,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityInfo Info = 2;</code>
+       * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
        *
        * <pre>
        * 我的社区信息
@@ -5891,7 +5891,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityInfo Info = 2;</code>
+       * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
        *
        * <pre>
        * 我的社区信息
@@ -5903,7 +5903,7 @@ public final class CommunityProtos {
         return getInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PCommunityInfo Info = 2;</code>
+       * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
        *
        * <pre>
        * 我的社区信息
@@ -5918,7 +5918,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityInfo Info = 2;</code>
+       * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
        *
        * <pre>
        * 我的社区信息
@@ -5942,7 +5942,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList, com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseListOrBuilder> listBuilder_;
       /**
-       * <code>optional .common.PCommunityBaseList List = 3;</code>
+       * <code>optional .bbproto.PCommunityBaseList List = 3;</code>
        *
        * <pre>
        * 我关注的社区，默认显示20条
@@ -5952,7 +5952,7 @@ public final class CommunityProtos {
         return listBuilder_ != null || list_ != null;
       }
       /**
-       * <code>optional .common.PCommunityBaseList List = 3;</code>
+       * <code>optional .bbproto.PCommunityBaseList List = 3;</code>
        *
        * <pre>
        * 我关注的社区，默认显示20条
@@ -5966,7 +5966,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityBaseList List = 3;</code>
+       * <code>optional .bbproto.PCommunityBaseList List = 3;</code>
        *
        * <pre>
        * 我关注的社区，默认显示20条
@@ -5986,7 +5986,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityBaseList List = 3;</code>
+       * <code>optional .bbproto.PCommunityBaseList List = 3;</code>
        *
        * <pre>
        * 我关注的社区，默认显示20条
@@ -6004,7 +6004,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityBaseList List = 3;</code>
+       * <code>optional .bbproto.PCommunityBaseList List = 3;</code>
        *
        * <pre>
        * 我关注的社区，默认显示20条
@@ -6026,7 +6026,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityBaseList List = 3;</code>
+       * <code>optional .bbproto.PCommunityBaseList List = 3;</code>
        *
        * <pre>
        * 我关注的社区，默认显示20条
@@ -6044,7 +6044,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityBaseList List = 3;</code>
+       * <code>optional .bbproto.PCommunityBaseList List = 3;</code>
        *
        * <pre>
        * 我关注的社区，默认显示20条
@@ -6056,7 +6056,7 @@ public final class CommunityProtos {
         return getListFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PCommunityBaseList List = 3;</code>
+       * <code>optional .bbproto.PCommunityBaseList List = 3;</code>
        *
        * <pre>
        * 我关注的社区，默认显示20条
@@ -6071,7 +6071,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityBaseList List = 3;</code>
+       * <code>optional .bbproto.PCommunityBaseList List = 3;</code>
        *
        * <pre>
        * 我关注的社区，默认显示20条
@@ -6101,10 +6101,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityMe)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityMe)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityMe)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityMe)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityMe DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityMe();
@@ -6145,7 +6145,7 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityResourceOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityResource)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityResource)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -6221,7 +6221,7 @@ public final class CommunityProtos {
         getSizeBytes();
   }
   /**
-   * Protobuf type {@code common.PCommunityResource}
+   * Protobuf type {@code bbproto.PCommunityResource}
    *
    * <pre>
    * 社区资源信息
@@ -6229,7 +6229,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityResource extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityResource)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityResource)
       PCommunityResourceOrBuilder {
     // Use PCommunityResource.newBuilder() to construct.
     private PCommunityResource(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -6304,12 +6304,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityResource_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityResource_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityResource_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityResource_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityResource.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityResource.Builder.class);
     }
@@ -6615,7 +6615,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityResource}
+     * Protobuf type {@code bbproto.PCommunityResource}
      *
      * <pre>
      * 社区资源信息
@@ -6623,16 +6623,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityResource)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityResource)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityResource_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityResource_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityResource_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityResource_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityResource.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityResource.Builder.class);
       }
@@ -6666,7 +6666,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityResource_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityResource_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityResource getDefaultInstanceForType() {
@@ -7114,10 +7114,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityResource)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityResource)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityResource)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityResource)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityResource DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityResource();
@@ -7158,35 +7158,35 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityResourceListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityResourceList)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityResourceList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .common.PCommunityResource Resource = 2;</code>
+     * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
      */
     java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityResource> 
         getResourceList();
     /**
-     * <code>repeated .common.PCommunityResource Resource = 2;</code>
+     * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityResource getResource(int index);
     /**
-     * <code>repeated .common.PCommunityResource Resource = 2;</code>
+     * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
      */
     int getResourceCount();
     /**
-     * <code>repeated .common.PCommunityResource Resource = 2;</code>
+     * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
      */
     java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceOrBuilder> 
         getResourceOrBuilderList();
     /**
-     * <code>repeated .common.PCommunityResource Resource = 2;</code>
+     * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceOrBuilder getResourceOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code common.PCommunityResourceList}
+   * Protobuf type {@code bbproto.PCommunityResourceList}
    *
    * <pre>
    * 社区资源信息列表
@@ -7194,7 +7194,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityResourceList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityResourceList)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityResourceList)
       PCommunityResourceListOrBuilder {
     // Use PCommunityResourceList.newBuilder() to construct.
     private PCommunityResourceList(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -7253,12 +7253,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityResourceList_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityResourceList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityResourceList_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityResourceList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList.Builder.class);
     }
@@ -7266,32 +7266,32 @@ public final class CommunityProtos {
     public static final int RESOURCE_FIELD_NUMBER = 2;
     private java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityResource> resource_;
     /**
-     * <code>repeated .common.PCommunityResource Resource = 2;</code>
+     * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
      */
     public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityResource> getResourceList() {
       return resource_;
     }
     /**
-     * <code>repeated .common.PCommunityResource Resource = 2;</code>
+     * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
      */
     public java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceOrBuilder> 
         getResourceOrBuilderList() {
       return resource_;
     }
     /**
-     * <code>repeated .common.PCommunityResource Resource = 2;</code>
+     * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
      */
     public int getResourceCount() {
       return resource_.size();
     }
     /**
-     * <code>repeated .common.PCommunityResource Resource = 2;</code>
+     * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
      */
     public com.blemobi.sep.probuf.CommunityProtos.PCommunityResource getResource(int index) {
       return resource_.get(index);
     }
     /**
-     * <code>repeated .common.PCommunityResource Resource = 2;</code>
+     * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
      */
     public com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceOrBuilder getResourceOrBuilder(
         int index) {
@@ -7402,7 +7402,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityResourceList}
+     * Protobuf type {@code bbproto.PCommunityResourceList}
      *
      * <pre>
      * 社区资源信息列表
@@ -7410,16 +7410,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityResourceList)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityResourceList)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityResourceList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityResourceList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityResourceList_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityResourceList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList.Builder.class);
       }
@@ -7452,7 +7452,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityResourceList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityResourceList_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList getDefaultInstanceForType() {
@@ -7560,7 +7560,7 @@ public final class CommunityProtos {
           com.blemobi.sep.probuf.CommunityProtos.PCommunityResource, com.blemobi.sep.probuf.CommunityProtos.PCommunityResource.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceOrBuilder> resourceBuilder_;
 
       /**
-       * <code>repeated .common.PCommunityResource Resource = 2;</code>
+       * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityResource> getResourceList() {
         if (resourceBuilder_ == null) {
@@ -7570,7 +7570,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityResource Resource = 2;</code>
+       * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
        */
       public int getResourceCount() {
         if (resourceBuilder_ == null) {
@@ -7580,7 +7580,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityResource Resource = 2;</code>
+       * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityResource getResource(int index) {
         if (resourceBuilder_ == null) {
@@ -7590,7 +7590,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityResource Resource = 2;</code>
+       * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
        */
       public Builder setResource(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityResource value) {
@@ -7607,7 +7607,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityResource Resource = 2;</code>
+       * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
        */
       public Builder setResource(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityResource.Builder builderForValue) {
@@ -7621,7 +7621,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityResource Resource = 2;</code>
+       * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
        */
       public Builder addResource(com.blemobi.sep.probuf.CommunityProtos.PCommunityResource value) {
         if (resourceBuilder_ == null) {
@@ -7637,7 +7637,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityResource Resource = 2;</code>
+       * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
        */
       public Builder addResource(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityResource value) {
@@ -7654,7 +7654,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityResource Resource = 2;</code>
+       * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
        */
       public Builder addResource(
           com.blemobi.sep.probuf.CommunityProtos.PCommunityResource.Builder builderForValue) {
@@ -7668,7 +7668,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityResource Resource = 2;</code>
+       * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
        */
       public Builder addResource(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityResource.Builder builderForValue) {
@@ -7682,7 +7682,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityResource Resource = 2;</code>
+       * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
        */
       public Builder addAllResource(
           java.lang.Iterable<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityResource> values) {
@@ -7697,7 +7697,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityResource Resource = 2;</code>
+       * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
        */
       public Builder clearResource() {
         if (resourceBuilder_ == null) {
@@ -7710,7 +7710,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityResource Resource = 2;</code>
+       * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
        */
       public Builder removeResource(int index) {
         if (resourceBuilder_ == null) {
@@ -7723,14 +7723,14 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityResource Resource = 2;</code>
+       * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityResource.Builder getResourceBuilder(
           int index) {
         return getResourceFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PCommunityResource Resource = 2;</code>
+       * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceOrBuilder getResourceOrBuilder(
           int index) {
@@ -7740,7 +7740,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityResource Resource = 2;</code>
+       * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
        */
       public java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceOrBuilder> 
            getResourceOrBuilderList() {
@@ -7751,14 +7751,14 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityResource Resource = 2;</code>
+       * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityResource.Builder addResourceBuilder() {
         return getResourceFieldBuilder().addBuilder(
             com.blemobi.sep.probuf.CommunityProtos.PCommunityResource.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityResource Resource = 2;</code>
+       * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityResource.Builder addResourceBuilder(
           int index) {
@@ -7766,7 +7766,7 @@ public final class CommunityProtos {
             index, com.blemobi.sep.probuf.CommunityProtos.PCommunityResource.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityResource Resource = 2;</code>
+       * <code>repeated .bbproto.PCommunityResource Resource = 2;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityResource.Builder> 
            getResourceBuilderList() {
@@ -7797,10 +7797,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityResourceList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityResourceList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityResourceList)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityResourceList)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList();
@@ -7841,7 +7841,7 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityPostUploadOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityPostUpload)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityPostUpload)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -7899,7 +7899,7 @@ public final class CommunityProtos {
         getBannerImgBytes();
 
     /**
-     * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+     * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
      *
      * <pre>
      * 帖子正文引用到的资源信息
@@ -7907,7 +7907,7 @@ public final class CommunityProtos {
      */
     boolean hasResourcesList();
     /**
-     * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+     * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
      *
      * <pre>
      * 帖子正文引用到的资源信息
@@ -7915,7 +7915,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList getResourcesList();
     /**
-     * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+     * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
      *
      * <pre>
      * 帖子正文引用到的资源信息
@@ -7924,7 +7924,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceListOrBuilder getResourcesListOrBuilder();
   }
   /**
-   * Protobuf type {@code common.PCommunityPostUpload}
+   * Protobuf type {@code bbproto.PCommunityPostUpload}
    *
    * <pre>
    * 发布帖子的信息
@@ -7932,7 +7932,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityPostUpload extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityPostUpload)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityPostUpload)
       PCommunityPostUploadOrBuilder {
     // Use PCommunityPostUpload.newBuilder() to construct.
     private PCommunityPostUpload(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -8013,12 +8013,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPostUpload_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPostUpload_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPostUpload_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPostUpload_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityPostUpload.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostUpload.Builder.class);
     }
@@ -8158,7 +8158,7 @@ public final class CommunityProtos {
     public static final int RESOURCESLIST_FIELD_NUMBER = 10;
     private com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList resourcesList_;
     /**
-     * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+     * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
      *
      * <pre>
      * 帖子正文引用到的资源信息
@@ -8168,7 +8168,7 @@ public final class CommunityProtos {
       return resourcesList_ != null;
     }
     /**
-     * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+     * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
      *
      * <pre>
      * 帖子正文引用到的资源信息
@@ -8178,7 +8178,7 @@ public final class CommunityProtos {
       return resourcesList_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList.getDefaultInstance() : resourcesList_;
     }
     /**
-     * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+     * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
      *
      * <pre>
      * 帖子正文引用到的资源信息
@@ -8313,7 +8313,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityPostUpload}
+     * Protobuf type {@code bbproto.PCommunityPostUpload}
      *
      * <pre>
      * 发布帖子的信息
@@ -8321,16 +8321,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityPostUpload)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityPostUpload)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityPostUploadOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPostUpload_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPostUpload_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPostUpload_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPostUpload_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityPostUpload.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostUpload.Builder.class);
       }
@@ -8368,7 +8368,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPostUpload_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPostUpload_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostUpload getDefaultInstanceForType() {
@@ -8723,7 +8723,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList, com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceListOrBuilder> resourcesListBuilder_;
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
        *
        * <pre>
        * 帖子正文引用到的资源信息
@@ -8733,7 +8733,7 @@ public final class CommunityProtos {
         return resourcesListBuilder_ != null || resourcesList_ != null;
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
        *
        * <pre>
        * 帖子正文引用到的资源信息
@@ -8747,7 +8747,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
        *
        * <pre>
        * 帖子正文引用到的资源信息
@@ -8767,7 +8767,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
        *
        * <pre>
        * 帖子正文引用到的资源信息
@@ -8785,7 +8785,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
        *
        * <pre>
        * 帖子正文引用到的资源信息
@@ -8807,7 +8807,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
        *
        * <pre>
        * 帖子正文引用到的资源信息
@@ -8825,7 +8825,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
        *
        * <pre>
        * 帖子正文引用到的资源信息
@@ -8837,7 +8837,7 @@ public final class CommunityProtos {
         return getResourcesListFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
        *
        * <pre>
        * 帖子正文引用到的资源信息
@@ -8852,7 +8852,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
        *
        * <pre>
        * 帖子正文引用到的资源信息
@@ -8882,10 +8882,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityPostUpload)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityPostUpload)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityPostUpload)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityPostUpload)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityPostUpload DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityPostUpload();
@@ -8926,37 +8926,37 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityRedpacketUploadOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityRedpacketUpload)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityRedpacketUpload)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .common.PCommunityPostUpload Post = 2;</code>
+     * <code>optional .bbproto.PCommunityPostUpload Post = 2;</code>
      */
     boolean hasPost();
     /**
-     * <code>optional .common.PCommunityPostUpload Post = 2;</code>
+     * <code>optional .bbproto.PCommunityPostUpload Post = 2;</code>
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityPostUpload getPost();
     /**
-     * <code>optional .common.PCommunityPostUpload Post = 2;</code>
+     * <code>optional .bbproto.PCommunityPostUpload Post = 2;</code>
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityPostUploadOrBuilder getPostOrBuilder();
 
     /**
-     * <code>optional .common.PSendRedPacket Redpacket = 3;</code>
+     * <code>optional .bbproto.PSendRedPacket Redpacket = 3;</code>
      */
     boolean hasRedpacket();
     /**
-     * <code>optional .common.PSendRedPacket Redpacket = 3;</code>
+     * <code>optional .bbproto.PSendRedPacket Redpacket = 3;</code>
      */
     com.blemobi.sep.probuf.WalletProtos.PSendRedPacket getRedpacket();
     /**
-     * <code>optional .common.PSendRedPacket Redpacket = 3;</code>
+     * <code>optional .bbproto.PSendRedPacket Redpacket = 3;</code>
      */
     com.blemobi.sep.probuf.WalletProtos.PSendRedPacketOrBuilder getRedpacketOrBuilder();
   }
   /**
-   * Protobuf type {@code common.PCommunityRedpacketUpload}
+   * Protobuf type {@code bbproto.PCommunityRedpacketUpload}
    *
    * <pre>
    * 发布红包帖子的信息
@@ -8964,7 +8964,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityRedpacketUpload extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityRedpacketUpload)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityRedpacketUpload)
       PCommunityRedpacketUploadOrBuilder {
     // Use PCommunityRedpacketUpload.newBuilder() to construct.
     private PCommunityRedpacketUpload(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -9037,12 +9037,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityRedpacketUpload_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityRedpacketUpload_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityRedpacketUpload_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityRedpacketUpload_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityRedpacketUpload.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityRedpacketUpload.Builder.class);
     }
@@ -9050,19 +9050,19 @@ public final class CommunityProtos {
     public static final int POST_FIELD_NUMBER = 2;
     private com.blemobi.sep.probuf.CommunityProtos.PCommunityPostUpload post_;
     /**
-     * <code>optional .common.PCommunityPostUpload Post = 2;</code>
+     * <code>optional .bbproto.PCommunityPostUpload Post = 2;</code>
      */
     public boolean hasPost() {
       return post_ != null;
     }
     /**
-     * <code>optional .common.PCommunityPostUpload Post = 2;</code>
+     * <code>optional .bbproto.PCommunityPostUpload Post = 2;</code>
      */
     public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostUpload getPost() {
       return post_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityPostUpload.getDefaultInstance() : post_;
     }
     /**
-     * <code>optional .common.PCommunityPostUpload Post = 2;</code>
+     * <code>optional .bbproto.PCommunityPostUpload Post = 2;</code>
      */
     public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostUploadOrBuilder getPostOrBuilder() {
       return getPost();
@@ -9071,19 +9071,19 @@ public final class CommunityProtos {
     public static final int REDPACKET_FIELD_NUMBER = 3;
     private com.blemobi.sep.probuf.WalletProtos.PSendRedPacket redpacket_;
     /**
-     * <code>optional .common.PSendRedPacket Redpacket = 3;</code>
+     * <code>optional .bbproto.PSendRedPacket Redpacket = 3;</code>
      */
     public boolean hasRedpacket() {
       return redpacket_ != null;
     }
     /**
-     * <code>optional .common.PSendRedPacket Redpacket = 3;</code>
+     * <code>optional .bbproto.PSendRedPacket Redpacket = 3;</code>
      */
     public com.blemobi.sep.probuf.WalletProtos.PSendRedPacket getRedpacket() {
       return redpacket_ == null ? com.blemobi.sep.probuf.WalletProtos.PSendRedPacket.getDefaultInstance() : redpacket_;
     }
     /**
-     * <code>optional .common.PSendRedPacket Redpacket = 3;</code>
+     * <code>optional .bbproto.PSendRedPacket Redpacket = 3;</code>
      */
     public com.blemobi.sep.probuf.WalletProtos.PSendRedPacketOrBuilder getRedpacketOrBuilder() {
       return getRedpacket();
@@ -9200,7 +9200,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityRedpacketUpload}
+     * Protobuf type {@code bbproto.PCommunityRedpacketUpload}
      *
      * <pre>
      * 发布红包帖子的信息
@@ -9208,16 +9208,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityRedpacketUpload)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityRedpacketUpload)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityRedpacketUploadOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityRedpacketUpload_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityRedpacketUpload_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityRedpacketUpload_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityRedpacketUpload_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityRedpacketUpload.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityRedpacketUpload.Builder.class);
       }
@@ -9255,7 +9255,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityRedpacketUpload_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityRedpacketUpload_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityRedpacketUpload getDefaultInstanceForType() {
@@ -9333,13 +9333,13 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.CommunityProtos.PCommunityPostUpload, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostUpload.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostUploadOrBuilder> postBuilder_;
       /**
-       * <code>optional .common.PCommunityPostUpload Post = 2;</code>
+       * <code>optional .bbproto.PCommunityPostUpload Post = 2;</code>
        */
       public boolean hasPost() {
         return postBuilder_ != null || post_ != null;
       }
       /**
-       * <code>optional .common.PCommunityPostUpload Post = 2;</code>
+       * <code>optional .bbproto.PCommunityPostUpload Post = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostUpload getPost() {
         if (postBuilder_ == null) {
@@ -9349,7 +9349,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityPostUpload Post = 2;</code>
+       * <code>optional .bbproto.PCommunityPostUpload Post = 2;</code>
        */
       public Builder setPost(com.blemobi.sep.probuf.CommunityProtos.PCommunityPostUpload value) {
         if (postBuilder_ == null) {
@@ -9365,7 +9365,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityPostUpload Post = 2;</code>
+       * <code>optional .bbproto.PCommunityPostUpload Post = 2;</code>
        */
       public Builder setPost(
           com.blemobi.sep.probuf.CommunityProtos.PCommunityPostUpload.Builder builderForValue) {
@@ -9379,7 +9379,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityPostUpload Post = 2;</code>
+       * <code>optional .bbproto.PCommunityPostUpload Post = 2;</code>
        */
       public Builder mergePost(com.blemobi.sep.probuf.CommunityProtos.PCommunityPostUpload value) {
         if (postBuilder_ == null) {
@@ -9397,7 +9397,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityPostUpload Post = 2;</code>
+       * <code>optional .bbproto.PCommunityPostUpload Post = 2;</code>
        */
       public Builder clearPost() {
         if (postBuilder_ == null) {
@@ -9411,7 +9411,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityPostUpload Post = 2;</code>
+       * <code>optional .bbproto.PCommunityPostUpload Post = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostUpload.Builder getPostBuilder() {
         
@@ -9419,7 +9419,7 @@ public final class CommunityProtos {
         return getPostFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PCommunityPostUpload Post = 2;</code>
+       * <code>optional .bbproto.PCommunityPostUpload Post = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostUploadOrBuilder getPostOrBuilder() {
         if (postBuilder_ != null) {
@@ -9430,7 +9430,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityPostUpload Post = 2;</code>
+       * <code>optional .bbproto.PCommunityPostUpload Post = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.CommunityProtos.PCommunityPostUpload, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostUpload.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostUploadOrBuilder> 
@@ -9450,13 +9450,13 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.WalletProtos.PSendRedPacket, com.blemobi.sep.probuf.WalletProtos.PSendRedPacket.Builder, com.blemobi.sep.probuf.WalletProtos.PSendRedPacketOrBuilder> redpacketBuilder_;
       /**
-       * <code>optional .common.PSendRedPacket Redpacket = 3;</code>
+       * <code>optional .bbproto.PSendRedPacket Redpacket = 3;</code>
        */
       public boolean hasRedpacket() {
         return redpacketBuilder_ != null || redpacket_ != null;
       }
       /**
-       * <code>optional .common.PSendRedPacket Redpacket = 3;</code>
+       * <code>optional .bbproto.PSendRedPacket Redpacket = 3;</code>
        */
       public com.blemobi.sep.probuf.WalletProtos.PSendRedPacket getRedpacket() {
         if (redpacketBuilder_ == null) {
@@ -9466,7 +9466,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PSendRedPacket Redpacket = 3;</code>
+       * <code>optional .bbproto.PSendRedPacket Redpacket = 3;</code>
        */
       public Builder setRedpacket(com.blemobi.sep.probuf.WalletProtos.PSendRedPacket value) {
         if (redpacketBuilder_ == null) {
@@ -9482,7 +9482,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PSendRedPacket Redpacket = 3;</code>
+       * <code>optional .bbproto.PSendRedPacket Redpacket = 3;</code>
        */
       public Builder setRedpacket(
           com.blemobi.sep.probuf.WalletProtos.PSendRedPacket.Builder builderForValue) {
@@ -9496,7 +9496,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PSendRedPacket Redpacket = 3;</code>
+       * <code>optional .bbproto.PSendRedPacket Redpacket = 3;</code>
        */
       public Builder mergeRedpacket(com.blemobi.sep.probuf.WalletProtos.PSendRedPacket value) {
         if (redpacketBuilder_ == null) {
@@ -9514,7 +9514,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PSendRedPacket Redpacket = 3;</code>
+       * <code>optional .bbproto.PSendRedPacket Redpacket = 3;</code>
        */
       public Builder clearRedpacket() {
         if (redpacketBuilder_ == null) {
@@ -9528,7 +9528,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PSendRedPacket Redpacket = 3;</code>
+       * <code>optional .bbproto.PSendRedPacket Redpacket = 3;</code>
        */
       public com.blemobi.sep.probuf.WalletProtos.PSendRedPacket.Builder getRedpacketBuilder() {
         
@@ -9536,7 +9536,7 @@ public final class CommunityProtos {
         return getRedpacketFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PSendRedPacket Redpacket = 3;</code>
+       * <code>optional .bbproto.PSendRedPacket Redpacket = 3;</code>
        */
       public com.blemobi.sep.probuf.WalletProtos.PSendRedPacketOrBuilder getRedpacketOrBuilder() {
         if (redpacketBuilder_ != null) {
@@ -9547,7 +9547,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PSendRedPacket Redpacket = 3;</code>
+       * <code>optional .bbproto.PSendRedPacket Redpacket = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.WalletProtos.PSendRedPacket, com.blemobi.sep.probuf.WalletProtos.PSendRedPacket.Builder, com.blemobi.sep.probuf.WalletProtos.PSendRedPacketOrBuilder> 
@@ -9573,10 +9573,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityRedpacketUpload)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityRedpacketUpload)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityRedpacketUpload)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityRedpacketUpload)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityRedpacketUpload DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityRedpacketUpload();
@@ -9617,7 +9617,7 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityPostInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityPostInfo)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityPostInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -9729,7 +9729,7 @@ public final class CommunityProtos {
     long getCommentCount();
 
     /**
-     * <code>optional .common.PUserBase User = 10;</code>
+     * <code>optional .bbproto.PUserBase User = 10;</code>
      *
      * <pre>
      * 用户基础信息
@@ -9737,7 +9737,7 @@ public final class CommunityProtos {
      */
     boolean hasUser();
     /**
-     * <code>optional .common.PUserBase User = 10;</code>
+     * <code>optional .bbproto.PUserBase User = 10;</code>
      *
      * <pre>
      * 用户基础信息
@@ -9745,7 +9745,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.AccountProtos.PUserBase getUser();
     /**
-     * <code>optional .common.PUserBase User = 10;</code>
+     * <code>optional .bbproto.PUserBase User = 10;</code>
      *
      * <pre>
      * 用户基础信息
@@ -9754,7 +9754,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserOrBuilder();
 
     /**
-     * <code>optional .common.PCommunityResourceList ResourcesList = 11;</code>
+     * <code>optional .bbproto.PCommunityResourceList ResourcesList = 11;</code>
      *
      * <pre>
      * 帖子正文引用到的资源信息
@@ -9762,7 +9762,7 @@ public final class CommunityProtos {
      */
     boolean hasResourcesList();
     /**
-     * <code>optional .common.PCommunityResourceList ResourcesList = 11;</code>
+     * <code>optional .bbproto.PCommunityResourceList ResourcesList = 11;</code>
      *
      * <pre>
      * 帖子正文引用到的资源信息
@@ -9770,7 +9770,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList getResourcesList();
     /**
-     * <code>optional .common.PCommunityResourceList ResourcesList = 11;</code>
+     * <code>optional .bbproto.PCommunityResourceList ResourcesList = 11;</code>
      *
      * <pre>
      * 帖子正文引用到的资源信息
@@ -9779,7 +9779,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceListOrBuilder getResourcesListOrBuilder();
 
     /**
-     * <code>optional .common.PRedPacketInfo Redpacket = 12;</code>
+     * <code>optional .bbproto.PRedPacketInfo Redpacket = 12;</code>
      *
      * <pre>
      * 红包信息
@@ -9787,7 +9787,7 @@ public final class CommunityProtos {
      */
     boolean hasRedpacket();
     /**
-     * <code>optional .common.PRedPacketInfo Redpacket = 12;</code>
+     * <code>optional .bbproto.PRedPacketInfo Redpacket = 12;</code>
      *
      * <pre>
      * 红包信息
@@ -9795,7 +9795,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.WalletProtos.PRedPacketInfo getRedpacket();
     /**
-     * <code>optional .common.PRedPacketInfo Redpacket = 12;</code>
+     * <code>optional .bbproto.PRedPacketInfo Redpacket = 12;</code>
      *
      * <pre>
      * 红包信息
@@ -9804,7 +9804,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.WalletProtos.PRedPacketInfoOrBuilder getRedpacketOrBuilder();
 
     /**
-     * <code>optional .common.PCommunityResource BannerImg = 13;</code>
+     * <code>optional .bbproto.PCommunityResource BannerImg = 13;</code>
      *
      * <pre>
      * 公告帖子的轮播图
@@ -9812,7 +9812,7 @@ public final class CommunityProtos {
      */
     boolean hasBannerImg();
     /**
-     * <code>optional .common.PCommunityResource BannerImg = 13;</code>
+     * <code>optional .bbproto.PCommunityResource BannerImg = 13;</code>
      *
      * <pre>
      * 公告帖子的轮播图
@@ -9820,7 +9820,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityResource getBannerImg();
     /**
-     * <code>optional .common.PCommunityResource BannerImg = 13;</code>
+     * <code>optional .bbproto.PCommunityResource BannerImg = 13;</code>
      *
      * <pre>
      * 公告帖子的轮播图
@@ -9847,7 +9847,7 @@ public final class CommunityProtos {
     boolean getIsDel();
   }
   /**
-   * Protobuf type {@code common.PCommunityPostInfo}
+   * Protobuf type {@code bbproto.PCommunityPostInfo}
    *
    * <pre>
    * 帖子信息
@@ -9855,7 +9855,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityPostInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityPostInfo)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityPostInfo)
       PCommunityPostInfoOrBuilder {
     // Use PCommunityPostInfo.newBuilder() to construct.
     private PCommunityPostInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -10018,12 +10018,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPostInfo_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPostInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPostInfo_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPostInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.Builder.class);
     }
@@ -10259,7 +10259,7 @@ public final class CommunityProtos {
     public static final int USER_FIELD_NUMBER = 10;
     private com.blemobi.sep.probuf.AccountProtos.PUserBase user_;
     /**
-     * <code>optional .common.PUserBase User = 10;</code>
+     * <code>optional .bbproto.PUserBase User = 10;</code>
      *
      * <pre>
      * 用户基础信息
@@ -10269,7 +10269,7 @@ public final class CommunityProtos {
       return user_ != null;
     }
     /**
-     * <code>optional .common.PUserBase User = 10;</code>
+     * <code>optional .bbproto.PUserBase User = 10;</code>
      *
      * <pre>
      * 用户基础信息
@@ -10279,7 +10279,7 @@ public final class CommunityProtos {
       return user_ == null ? com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : user_;
     }
     /**
-     * <code>optional .common.PUserBase User = 10;</code>
+     * <code>optional .bbproto.PUserBase User = 10;</code>
      *
      * <pre>
      * 用户基础信息
@@ -10292,7 +10292,7 @@ public final class CommunityProtos {
     public static final int RESOURCESLIST_FIELD_NUMBER = 11;
     private com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList resourcesList_;
     /**
-     * <code>optional .common.PCommunityResourceList ResourcesList = 11;</code>
+     * <code>optional .bbproto.PCommunityResourceList ResourcesList = 11;</code>
      *
      * <pre>
      * 帖子正文引用到的资源信息
@@ -10302,7 +10302,7 @@ public final class CommunityProtos {
       return resourcesList_ != null;
     }
     /**
-     * <code>optional .common.PCommunityResourceList ResourcesList = 11;</code>
+     * <code>optional .bbproto.PCommunityResourceList ResourcesList = 11;</code>
      *
      * <pre>
      * 帖子正文引用到的资源信息
@@ -10312,7 +10312,7 @@ public final class CommunityProtos {
       return resourcesList_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList.getDefaultInstance() : resourcesList_;
     }
     /**
-     * <code>optional .common.PCommunityResourceList ResourcesList = 11;</code>
+     * <code>optional .bbproto.PCommunityResourceList ResourcesList = 11;</code>
      *
      * <pre>
      * 帖子正文引用到的资源信息
@@ -10325,7 +10325,7 @@ public final class CommunityProtos {
     public static final int REDPACKET_FIELD_NUMBER = 12;
     private com.blemobi.sep.probuf.WalletProtos.PRedPacketInfo redpacket_;
     /**
-     * <code>optional .common.PRedPacketInfo Redpacket = 12;</code>
+     * <code>optional .bbproto.PRedPacketInfo Redpacket = 12;</code>
      *
      * <pre>
      * 红包信息
@@ -10335,7 +10335,7 @@ public final class CommunityProtos {
       return redpacket_ != null;
     }
     /**
-     * <code>optional .common.PRedPacketInfo Redpacket = 12;</code>
+     * <code>optional .bbproto.PRedPacketInfo Redpacket = 12;</code>
      *
      * <pre>
      * 红包信息
@@ -10345,7 +10345,7 @@ public final class CommunityProtos {
       return redpacket_ == null ? com.blemobi.sep.probuf.WalletProtos.PRedPacketInfo.getDefaultInstance() : redpacket_;
     }
     /**
-     * <code>optional .common.PRedPacketInfo Redpacket = 12;</code>
+     * <code>optional .bbproto.PRedPacketInfo Redpacket = 12;</code>
      *
      * <pre>
      * 红包信息
@@ -10358,7 +10358,7 @@ public final class CommunityProtos {
     public static final int BANNERIMG_FIELD_NUMBER = 13;
     private com.blemobi.sep.probuf.CommunityProtos.PCommunityResource bannerImg_;
     /**
-     * <code>optional .common.PCommunityResource BannerImg = 13;</code>
+     * <code>optional .bbproto.PCommunityResource BannerImg = 13;</code>
      *
      * <pre>
      * 公告帖子的轮播图
@@ -10368,7 +10368,7 @@ public final class CommunityProtos {
       return bannerImg_ != null;
     }
     /**
-     * <code>optional .common.PCommunityResource BannerImg = 13;</code>
+     * <code>optional .bbproto.PCommunityResource BannerImg = 13;</code>
      *
      * <pre>
      * 公告帖子的轮播图
@@ -10378,7 +10378,7 @@ public final class CommunityProtos {
       return bannerImg_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityResource.getDefaultInstance() : bannerImg_;
     }
     /**
-     * <code>optional .common.PCommunityResource BannerImg = 13;</code>
+     * <code>optional .bbproto.PCommunityResource BannerImg = 13;</code>
      *
      * <pre>
      * 公告帖子的轮播图
@@ -10609,7 +10609,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityPostInfo}
+     * Protobuf type {@code bbproto.PCommunityPostInfo}
      *
      * <pre>
      * 帖子信息
@@ -10617,16 +10617,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityPostInfo)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityPostInfo)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPostInfo_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPostInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPostInfo_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPostInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.Builder.class);
       }
@@ -10696,7 +10696,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPostInfo_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPostInfo_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo getDefaultInstanceForType() {
@@ -11346,7 +11346,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> userBuilder_;
       /**
-       * <code>optional .common.PUserBase User = 10;</code>
+       * <code>optional .bbproto.PUserBase User = 10;</code>
        *
        * <pre>
        * 用户基础信息
@@ -11356,7 +11356,7 @@ public final class CommunityProtos {
         return userBuilder_ != null || user_ != null;
       }
       /**
-       * <code>optional .common.PUserBase User = 10;</code>
+       * <code>optional .bbproto.PUserBase User = 10;</code>
        *
        * <pre>
        * 用户基础信息
@@ -11370,7 +11370,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PUserBase User = 10;</code>
+       * <code>optional .bbproto.PUserBase User = 10;</code>
        *
        * <pre>
        * 用户基础信息
@@ -11390,7 +11390,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 10;</code>
+       * <code>optional .bbproto.PUserBase User = 10;</code>
        *
        * <pre>
        * 用户基础信息
@@ -11408,7 +11408,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 10;</code>
+       * <code>optional .bbproto.PUserBase User = 10;</code>
        *
        * <pre>
        * 用户基础信息
@@ -11430,7 +11430,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 10;</code>
+       * <code>optional .bbproto.PUserBase User = 10;</code>
        *
        * <pre>
        * 用户基础信息
@@ -11448,7 +11448,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 10;</code>
+       * <code>optional .bbproto.PUserBase User = 10;</code>
        *
        * <pre>
        * 用户基础信息
@@ -11460,7 +11460,7 @@ public final class CommunityProtos {
         return getUserFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PUserBase User = 10;</code>
+       * <code>optional .bbproto.PUserBase User = 10;</code>
        *
        * <pre>
        * 用户基础信息
@@ -11475,7 +11475,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PUserBase User = 10;</code>
+       * <code>optional .bbproto.PUserBase User = 10;</code>
        *
        * <pre>
        * 用户基础信息
@@ -11499,7 +11499,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList, com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceListOrBuilder> resourcesListBuilder_;
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 11;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 11;</code>
        *
        * <pre>
        * 帖子正文引用到的资源信息
@@ -11509,7 +11509,7 @@ public final class CommunityProtos {
         return resourcesListBuilder_ != null || resourcesList_ != null;
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 11;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 11;</code>
        *
        * <pre>
        * 帖子正文引用到的资源信息
@@ -11523,7 +11523,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 11;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 11;</code>
        *
        * <pre>
        * 帖子正文引用到的资源信息
@@ -11543,7 +11543,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 11;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 11;</code>
        *
        * <pre>
        * 帖子正文引用到的资源信息
@@ -11561,7 +11561,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 11;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 11;</code>
        *
        * <pre>
        * 帖子正文引用到的资源信息
@@ -11583,7 +11583,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 11;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 11;</code>
        *
        * <pre>
        * 帖子正文引用到的资源信息
@@ -11601,7 +11601,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 11;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 11;</code>
        *
        * <pre>
        * 帖子正文引用到的资源信息
@@ -11613,7 +11613,7 @@ public final class CommunityProtos {
         return getResourcesListFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 11;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 11;</code>
        *
        * <pre>
        * 帖子正文引用到的资源信息
@@ -11628,7 +11628,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 11;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 11;</code>
        *
        * <pre>
        * 帖子正文引用到的资源信息
@@ -11652,7 +11652,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.WalletProtos.PRedPacketInfo, com.blemobi.sep.probuf.WalletProtos.PRedPacketInfo.Builder, com.blemobi.sep.probuf.WalletProtos.PRedPacketInfoOrBuilder> redpacketBuilder_;
       /**
-       * <code>optional .common.PRedPacketInfo Redpacket = 12;</code>
+       * <code>optional .bbproto.PRedPacketInfo Redpacket = 12;</code>
        *
        * <pre>
        * 红包信息
@@ -11662,7 +11662,7 @@ public final class CommunityProtos {
         return redpacketBuilder_ != null || redpacket_ != null;
       }
       /**
-       * <code>optional .common.PRedPacketInfo Redpacket = 12;</code>
+       * <code>optional .bbproto.PRedPacketInfo Redpacket = 12;</code>
        *
        * <pre>
        * 红包信息
@@ -11676,7 +11676,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PRedPacketInfo Redpacket = 12;</code>
+       * <code>optional .bbproto.PRedPacketInfo Redpacket = 12;</code>
        *
        * <pre>
        * 红包信息
@@ -11696,7 +11696,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PRedPacketInfo Redpacket = 12;</code>
+       * <code>optional .bbproto.PRedPacketInfo Redpacket = 12;</code>
        *
        * <pre>
        * 红包信息
@@ -11714,7 +11714,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PRedPacketInfo Redpacket = 12;</code>
+       * <code>optional .bbproto.PRedPacketInfo Redpacket = 12;</code>
        *
        * <pre>
        * 红包信息
@@ -11736,7 +11736,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PRedPacketInfo Redpacket = 12;</code>
+       * <code>optional .bbproto.PRedPacketInfo Redpacket = 12;</code>
        *
        * <pre>
        * 红包信息
@@ -11754,7 +11754,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PRedPacketInfo Redpacket = 12;</code>
+       * <code>optional .bbproto.PRedPacketInfo Redpacket = 12;</code>
        *
        * <pre>
        * 红包信息
@@ -11766,7 +11766,7 @@ public final class CommunityProtos {
         return getRedpacketFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PRedPacketInfo Redpacket = 12;</code>
+       * <code>optional .bbproto.PRedPacketInfo Redpacket = 12;</code>
        *
        * <pre>
        * 红包信息
@@ -11781,7 +11781,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PRedPacketInfo Redpacket = 12;</code>
+       * <code>optional .bbproto.PRedPacketInfo Redpacket = 12;</code>
        *
        * <pre>
        * 红包信息
@@ -11805,7 +11805,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.CommunityProtos.PCommunityResource, com.blemobi.sep.probuf.CommunityProtos.PCommunityResource.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceOrBuilder> bannerImgBuilder_;
       /**
-       * <code>optional .common.PCommunityResource BannerImg = 13;</code>
+       * <code>optional .bbproto.PCommunityResource BannerImg = 13;</code>
        *
        * <pre>
        * 公告帖子的轮播图
@@ -11815,7 +11815,7 @@ public final class CommunityProtos {
         return bannerImgBuilder_ != null || bannerImg_ != null;
       }
       /**
-       * <code>optional .common.PCommunityResource BannerImg = 13;</code>
+       * <code>optional .bbproto.PCommunityResource BannerImg = 13;</code>
        *
        * <pre>
        * 公告帖子的轮播图
@@ -11829,7 +11829,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityResource BannerImg = 13;</code>
+       * <code>optional .bbproto.PCommunityResource BannerImg = 13;</code>
        *
        * <pre>
        * 公告帖子的轮播图
@@ -11849,7 +11849,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResource BannerImg = 13;</code>
+       * <code>optional .bbproto.PCommunityResource BannerImg = 13;</code>
        *
        * <pre>
        * 公告帖子的轮播图
@@ -11867,7 +11867,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResource BannerImg = 13;</code>
+       * <code>optional .bbproto.PCommunityResource BannerImg = 13;</code>
        *
        * <pre>
        * 公告帖子的轮播图
@@ -11889,7 +11889,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResource BannerImg = 13;</code>
+       * <code>optional .bbproto.PCommunityResource BannerImg = 13;</code>
        *
        * <pre>
        * 公告帖子的轮播图
@@ -11907,7 +11907,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResource BannerImg = 13;</code>
+       * <code>optional .bbproto.PCommunityResource BannerImg = 13;</code>
        *
        * <pre>
        * 公告帖子的轮播图
@@ -11919,7 +11919,7 @@ public final class CommunityProtos {
         return getBannerImgFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PCommunityResource BannerImg = 13;</code>
+       * <code>optional .bbproto.PCommunityResource BannerImg = 13;</code>
        *
        * <pre>
        * 公告帖子的轮播图
@@ -11934,7 +11934,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityResource BannerImg = 13;</code>
+       * <code>optional .bbproto.PCommunityResource BannerImg = 13;</code>
        *
        * <pre>
        * 公告帖子的轮播图
@@ -12040,10 +12040,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityPostInfo)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityPostInfo)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityPostInfo)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityPostInfo)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo();
@@ -12084,35 +12084,35 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityPostListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityPostList)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityPostList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+     * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
      */
     java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo> 
         getPostInfoList();
     /**
-     * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+     * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo getPostInfo(int index);
     /**
-     * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+     * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
      */
     int getPostInfoCount();
     /**
-     * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+     * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
      */
     java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfoOrBuilder> 
         getPostInfoOrBuilderList();
     /**
-     * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+     * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfoOrBuilder getPostInfoOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code common.PCommunityPostList}
+   * Protobuf type {@code bbproto.PCommunityPostList}
    *
    * <pre>
    * 帖子信息列表
@@ -12120,7 +12120,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityPostList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityPostList)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityPostList)
       PCommunityPostListOrBuilder {
     // Use PCommunityPostList.newBuilder() to construct.
     private PCommunityPostList(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -12179,12 +12179,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPostList_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPostList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPostList_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPostList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityPostList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostList.Builder.class);
     }
@@ -12192,32 +12192,32 @@ public final class CommunityProtos {
     public static final int POSTINFO_FIELD_NUMBER = 2;
     private java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo> postInfo_;
     /**
-     * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+     * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
      */
     public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo> getPostInfoList() {
       return postInfo_;
     }
     /**
-     * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+     * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
      */
     public java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfoOrBuilder> 
         getPostInfoOrBuilderList() {
       return postInfo_;
     }
     /**
-     * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+     * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
      */
     public int getPostInfoCount() {
       return postInfo_.size();
     }
     /**
-     * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+     * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
      */
     public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo getPostInfo(int index) {
       return postInfo_.get(index);
     }
     /**
-     * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+     * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
      */
     public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfoOrBuilder getPostInfoOrBuilder(
         int index) {
@@ -12328,7 +12328,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityPostList}
+     * Protobuf type {@code bbproto.PCommunityPostList}
      *
      * <pre>
      * 帖子信息列表
@@ -12336,16 +12336,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityPostList)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityPostList)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityPostListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPostList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPostList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPostList_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPostList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityPostList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostList.Builder.class);
       }
@@ -12378,7 +12378,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPostList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPostList_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostList getDefaultInstanceForType() {
@@ -12486,7 +12486,7 @@ public final class CommunityProtos {
           com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfoOrBuilder> postInfoBuilder_;
 
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo> getPostInfoList() {
         if (postInfoBuilder_ == null) {
@@ -12496,7 +12496,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
        */
       public int getPostInfoCount() {
         if (postInfoBuilder_ == null) {
@@ -12506,7 +12506,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo getPostInfo(int index) {
         if (postInfoBuilder_ == null) {
@@ -12516,7 +12516,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
        */
       public Builder setPostInfo(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo value) {
@@ -12533,7 +12533,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
        */
       public Builder setPostInfo(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.Builder builderForValue) {
@@ -12547,7 +12547,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
        */
       public Builder addPostInfo(com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo value) {
         if (postInfoBuilder_ == null) {
@@ -12563,7 +12563,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
        */
       public Builder addPostInfo(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo value) {
@@ -12580,7 +12580,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
        */
       public Builder addPostInfo(
           com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.Builder builderForValue) {
@@ -12594,7 +12594,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
        */
       public Builder addPostInfo(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.Builder builderForValue) {
@@ -12608,7 +12608,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
        */
       public Builder addAllPostInfo(
           java.lang.Iterable<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo> values) {
@@ -12623,7 +12623,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
        */
       public Builder clearPostInfo() {
         if (postInfoBuilder_ == null) {
@@ -12636,7 +12636,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
        */
       public Builder removePostInfo(int index) {
         if (postInfoBuilder_ == null) {
@@ -12649,14 +12649,14 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.Builder getPostInfoBuilder(
           int index) {
         return getPostInfoFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfoOrBuilder getPostInfoOrBuilder(
           int index) {
@@ -12666,7 +12666,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
        */
       public java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfoOrBuilder> 
            getPostInfoOrBuilderList() {
@@ -12677,14 +12677,14 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.Builder addPostInfoBuilder() {
         return getPostInfoFieldBuilder().addBuilder(
             com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.Builder addPostInfoBuilder(
           int index) {
@@ -12692,7 +12692,7 @@ public final class CommunityProtos {
             index, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 2;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 2;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.Builder> 
            getPostInfoBuilderList() {
@@ -12723,10 +12723,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityPostList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityPostList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityPostList)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityPostList)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityPostList DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityPostList();
@@ -12767,7 +12767,7 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityFlagPostListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityFlagPostList)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityFlagPostList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -12784,31 +12784,31 @@ public final class CommunityProtos {
     int getFlagCount(int index);
 
     /**
-     * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+     * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
      */
     java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo> 
         getPostInfoList();
     /**
-     * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+     * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo getPostInfo(int index);
     /**
-     * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+     * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
      */
     int getPostInfoCount();
     /**
-     * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+     * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
      */
     java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfoOrBuilder> 
         getPostInfoOrBuilderList();
     /**
-     * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+     * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfoOrBuilder getPostInfoOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code common.PCommunityFlagPostList}
+   * Protobuf type {@code bbproto.PCommunityFlagPostList}
    *
    * <pre>
    * 帖子信息列表，包含被标旗数量
@@ -12816,7 +12816,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityFlagPostList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityFlagPostList)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityFlagPostList)
       PCommunityFlagPostListOrBuilder {
     // Use PCommunityFlagPostList.newBuilder() to construct.
     private PCommunityFlagPostList(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -12900,12 +12900,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityFlagPostList_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityFlagPostList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityFlagPostList_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityFlagPostList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityFlagPostList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityFlagPostList.Builder.class);
     }
@@ -12936,32 +12936,32 @@ public final class CommunityProtos {
     public static final int POSTINFO_FIELD_NUMBER = 3;
     private java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo> postInfo_;
     /**
-     * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+     * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
      */
     public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo> getPostInfoList() {
       return postInfo_;
     }
     /**
-     * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+     * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
      */
     public java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfoOrBuilder> 
         getPostInfoOrBuilderList() {
       return postInfo_;
     }
     /**
-     * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+     * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
      */
     public int getPostInfoCount() {
       return postInfo_.size();
     }
     /**
-     * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+     * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
      */
     public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo getPostInfo(int index) {
       return postInfo_.get(index);
     }
     /**
-     * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+     * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
      */
     public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfoOrBuilder getPostInfoOrBuilder(
         int index) {
@@ -13094,7 +13094,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityFlagPostList}
+     * Protobuf type {@code bbproto.PCommunityFlagPostList}
      *
      * <pre>
      * 帖子信息列表，包含被标旗数量
@@ -13102,16 +13102,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityFlagPostList)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityFlagPostList)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityFlagPostListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityFlagPostList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityFlagPostList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityFlagPostList_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityFlagPostList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityFlagPostList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityFlagPostList.Builder.class);
       }
@@ -13146,7 +13146,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityFlagPostList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityFlagPostList_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityFlagPostList getDefaultInstanceForType() {
@@ -13335,7 +13335,7 @@ public final class CommunityProtos {
           com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfoOrBuilder> postInfoBuilder_;
 
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo> getPostInfoList() {
         if (postInfoBuilder_ == null) {
@@ -13345,7 +13345,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
        */
       public int getPostInfoCount() {
         if (postInfoBuilder_ == null) {
@@ -13355,7 +13355,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo getPostInfo(int index) {
         if (postInfoBuilder_ == null) {
@@ -13365,7 +13365,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
        */
       public Builder setPostInfo(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo value) {
@@ -13382,7 +13382,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
        */
       public Builder setPostInfo(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.Builder builderForValue) {
@@ -13396,7 +13396,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
        */
       public Builder addPostInfo(com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo value) {
         if (postInfoBuilder_ == null) {
@@ -13412,7 +13412,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
        */
       public Builder addPostInfo(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo value) {
@@ -13429,7 +13429,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
        */
       public Builder addPostInfo(
           com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.Builder builderForValue) {
@@ -13443,7 +13443,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
        */
       public Builder addPostInfo(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.Builder builderForValue) {
@@ -13457,7 +13457,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
        */
       public Builder addAllPostInfo(
           java.lang.Iterable<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo> values) {
@@ -13472,7 +13472,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
        */
       public Builder clearPostInfo() {
         if (postInfoBuilder_ == null) {
@@ -13485,7 +13485,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
        */
       public Builder removePostInfo(int index) {
         if (postInfoBuilder_ == null) {
@@ -13498,14 +13498,14 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.Builder getPostInfoBuilder(
           int index) {
         return getPostInfoFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfoOrBuilder getPostInfoOrBuilder(
           int index) {
@@ -13515,7 +13515,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
        */
       public java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfoOrBuilder> 
            getPostInfoOrBuilderList() {
@@ -13526,14 +13526,14 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.Builder addPostInfoBuilder() {
         return getPostInfoFieldBuilder().addBuilder(
             com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.Builder addPostInfoBuilder(
           int index) {
@@ -13541,7 +13541,7 @@ public final class CommunityProtos {
             index, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityPostInfo PostInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityPostInfo PostInfo = 3;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.Builder> 
            getPostInfoBuilderList() {
@@ -13572,10 +13572,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityFlagPostList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityFlagPostList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityFlagPostList)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityFlagPostList)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityFlagPostList DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityFlagPostList();
@@ -13616,11 +13616,11 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityHomeOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityHome)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityHome)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .common.PCommunityInfo Info = 2;</code>
+     * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
      *
      * <pre>
      * 我的社区信息
@@ -13628,7 +13628,7 @@ public final class CommunityProtos {
      */
     boolean hasInfo();
     /**
-     * <code>optional .common.PCommunityInfo Info = 2;</code>
+     * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
      *
      * <pre>
      * 我的社区信息
@@ -13636,7 +13636,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityInfo getInfo();
     /**
-     * <code>optional .common.PCommunityInfo Info = 2;</code>
+     * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
      *
      * <pre>
      * 我的社区信息
@@ -13645,7 +13645,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.CommunityProtos.PCommunityInfoOrBuilder getInfoOrBuilder();
 
     /**
-     * <code>optional .common.PUserBaseList List = 3;</code>
+     * <code>optional .bbproto.PUserBaseList List = 3;</code>
      *
      * <pre>
      * 社区前五名成员列表
@@ -13653,7 +13653,7 @@ public final class CommunityProtos {
      */
     boolean hasList();
     /**
-     * <code>optional .common.PUserBaseList List = 3;</code>
+     * <code>optional .bbproto.PUserBaseList List = 3;</code>
      *
      * <pre>
      * 社区前五名成员列表
@@ -13661,7 +13661,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.AccountProtos.PUserBaseList getList();
     /**
-     * <code>optional .common.PUserBaseList List = 3;</code>
+     * <code>optional .bbproto.PUserBaseList List = 3;</code>
      *
      * <pre>
      * 社区前五名成员列表
@@ -13670,7 +13670,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.AccountProtos.PUserBaseListOrBuilder getListOrBuilder();
 
     /**
-     * <code>optional .common.PCommunityPostInfo BottomBackgroundPost = 4;</code>
+     * <code>optional .bbproto.PCommunityPostInfo BottomBackgroundPost = 4;</code>
      *
      * <pre>
      * 底部的背景介绍
@@ -13678,7 +13678,7 @@ public final class CommunityProtos {
      */
     boolean hasBottomBackgroundPost();
     /**
-     * <code>optional .common.PCommunityPostInfo BottomBackgroundPost = 4;</code>
+     * <code>optional .bbproto.PCommunityPostInfo BottomBackgroundPost = 4;</code>
      *
      * <pre>
      * 底部的背景介绍
@@ -13686,7 +13686,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo getBottomBackgroundPost();
     /**
-     * <code>optional .common.PCommunityPostInfo BottomBackgroundPost = 4;</code>
+     * <code>optional .bbproto.PCommunityPostInfo BottomBackgroundPost = 4;</code>
      *
      * <pre>
      * 底部的背景介绍
@@ -13695,7 +13695,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfoOrBuilder getBottomBackgroundPostOrBuilder();
   }
   /**
-   * Protobuf type {@code common.PCommunityHome}
+   * Protobuf type {@code bbproto.PCommunityHome}
    *
    * <pre>
    * ‘社区首页’返回的信息
@@ -13703,7 +13703,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityHome extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityHome)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityHome)
       PCommunityHomeOrBuilder {
     // Use PCommunityHome.newBuilder() to construct.
     private PCommunityHome(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -13789,12 +13789,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityHome_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityHome_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityHome_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityHome_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityHome.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityHome.Builder.class);
     }
@@ -13802,7 +13802,7 @@ public final class CommunityProtos {
     public static final int INFO_FIELD_NUMBER = 2;
     private com.blemobi.sep.probuf.CommunityProtos.PCommunityInfo info_;
     /**
-     * <code>optional .common.PCommunityInfo Info = 2;</code>
+     * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
      *
      * <pre>
      * 我的社区信息
@@ -13812,7 +13812,7 @@ public final class CommunityProtos {
       return info_ != null;
     }
     /**
-     * <code>optional .common.PCommunityInfo Info = 2;</code>
+     * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
      *
      * <pre>
      * 我的社区信息
@@ -13822,7 +13822,7 @@ public final class CommunityProtos {
       return info_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityInfo.getDefaultInstance() : info_;
     }
     /**
-     * <code>optional .common.PCommunityInfo Info = 2;</code>
+     * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
      *
      * <pre>
      * 我的社区信息
@@ -13835,7 +13835,7 @@ public final class CommunityProtos {
     public static final int LIST_FIELD_NUMBER = 3;
     private com.blemobi.sep.probuf.AccountProtos.PUserBaseList list_;
     /**
-     * <code>optional .common.PUserBaseList List = 3;</code>
+     * <code>optional .bbproto.PUserBaseList List = 3;</code>
      *
      * <pre>
      * 社区前五名成员列表
@@ -13845,7 +13845,7 @@ public final class CommunityProtos {
       return list_ != null;
     }
     /**
-     * <code>optional .common.PUserBaseList List = 3;</code>
+     * <code>optional .bbproto.PUserBaseList List = 3;</code>
      *
      * <pre>
      * 社区前五名成员列表
@@ -13855,7 +13855,7 @@ public final class CommunityProtos {
       return list_ == null ? com.blemobi.sep.probuf.AccountProtos.PUserBaseList.getDefaultInstance() : list_;
     }
     /**
-     * <code>optional .common.PUserBaseList List = 3;</code>
+     * <code>optional .bbproto.PUserBaseList List = 3;</code>
      *
      * <pre>
      * 社区前五名成员列表
@@ -13868,7 +13868,7 @@ public final class CommunityProtos {
     public static final int BOTTOMBACKGROUNDPOST_FIELD_NUMBER = 4;
     private com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo bottomBackgroundPost_;
     /**
-     * <code>optional .common.PCommunityPostInfo BottomBackgroundPost = 4;</code>
+     * <code>optional .bbproto.PCommunityPostInfo BottomBackgroundPost = 4;</code>
      *
      * <pre>
      * 底部的背景介绍
@@ -13878,7 +13878,7 @@ public final class CommunityProtos {
       return bottomBackgroundPost_ != null;
     }
     /**
-     * <code>optional .common.PCommunityPostInfo BottomBackgroundPost = 4;</code>
+     * <code>optional .bbproto.PCommunityPostInfo BottomBackgroundPost = 4;</code>
      *
      * <pre>
      * 底部的背景介绍
@@ -13888,7 +13888,7 @@ public final class CommunityProtos {
       return bottomBackgroundPost_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.getDefaultInstance() : bottomBackgroundPost_;
     }
     /**
-     * <code>optional .common.PCommunityPostInfo BottomBackgroundPost = 4;</code>
+     * <code>optional .bbproto.PCommunityPostInfo BottomBackgroundPost = 4;</code>
      *
      * <pre>
      * 底部的背景介绍
@@ -14016,7 +14016,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityHome}
+     * Protobuf type {@code bbproto.PCommunityHome}
      *
      * <pre>
      * ‘社区首页’返回的信息
@@ -14024,16 +14024,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityHome)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityHome)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityHomeOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityHome_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityHome_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityHome_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityHome_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityHome.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityHome.Builder.class);
       }
@@ -14077,7 +14077,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityHome_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityHome_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityHome getDefaultInstanceForType() {
@@ -14163,7 +14163,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.CommunityProtos.PCommunityInfo, com.blemobi.sep.probuf.CommunityProtos.PCommunityInfo.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityInfoOrBuilder> infoBuilder_;
       /**
-       * <code>optional .common.PCommunityInfo Info = 2;</code>
+       * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
        *
        * <pre>
        * 我的社区信息
@@ -14173,7 +14173,7 @@ public final class CommunityProtos {
         return infoBuilder_ != null || info_ != null;
       }
       /**
-       * <code>optional .common.PCommunityInfo Info = 2;</code>
+       * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
        *
        * <pre>
        * 我的社区信息
@@ -14187,7 +14187,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityInfo Info = 2;</code>
+       * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
        *
        * <pre>
        * 我的社区信息
@@ -14207,7 +14207,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityInfo Info = 2;</code>
+       * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
        *
        * <pre>
        * 我的社区信息
@@ -14225,7 +14225,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityInfo Info = 2;</code>
+       * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
        *
        * <pre>
        * 我的社区信息
@@ -14247,7 +14247,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityInfo Info = 2;</code>
+       * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
        *
        * <pre>
        * 我的社区信息
@@ -14265,7 +14265,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityInfo Info = 2;</code>
+       * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
        *
        * <pre>
        * 我的社区信息
@@ -14277,7 +14277,7 @@ public final class CommunityProtos {
         return getInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PCommunityInfo Info = 2;</code>
+       * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
        *
        * <pre>
        * 我的社区信息
@@ -14292,7 +14292,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityInfo Info = 2;</code>
+       * <code>optional .bbproto.PCommunityInfo Info = 2;</code>
        *
        * <pre>
        * 我的社区信息
@@ -14316,7 +14316,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.AccountProtos.PUserBaseList, com.blemobi.sep.probuf.AccountProtos.PUserBaseList.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseListOrBuilder> listBuilder_;
       /**
-       * <code>optional .common.PUserBaseList List = 3;</code>
+       * <code>optional .bbproto.PUserBaseList List = 3;</code>
        *
        * <pre>
        * 社区前五名成员列表
@@ -14326,7 +14326,7 @@ public final class CommunityProtos {
         return listBuilder_ != null || list_ != null;
       }
       /**
-       * <code>optional .common.PUserBaseList List = 3;</code>
+       * <code>optional .bbproto.PUserBaseList List = 3;</code>
        *
        * <pre>
        * 社区前五名成员列表
@@ -14340,7 +14340,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PUserBaseList List = 3;</code>
+       * <code>optional .bbproto.PUserBaseList List = 3;</code>
        *
        * <pre>
        * 社区前五名成员列表
@@ -14360,7 +14360,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBaseList List = 3;</code>
+       * <code>optional .bbproto.PUserBaseList List = 3;</code>
        *
        * <pre>
        * 社区前五名成员列表
@@ -14378,7 +14378,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBaseList List = 3;</code>
+       * <code>optional .bbproto.PUserBaseList List = 3;</code>
        *
        * <pre>
        * 社区前五名成员列表
@@ -14400,7 +14400,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBaseList List = 3;</code>
+       * <code>optional .bbproto.PUserBaseList List = 3;</code>
        *
        * <pre>
        * 社区前五名成员列表
@@ -14418,7 +14418,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBaseList List = 3;</code>
+       * <code>optional .bbproto.PUserBaseList List = 3;</code>
        *
        * <pre>
        * 社区前五名成员列表
@@ -14430,7 +14430,7 @@ public final class CommunityProtos {
         return getListFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PUserBaseList List = 3;</code>
+       * <code>optional .bbproto.PUserBaseList List = 3;</code>
        *
        * <pre>
        * 社区前五名成员列表
@@ -14445,7 +14445,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PUserBaseList List = 3;</code>
+       * <code>optional .bbproto.PUserBaseList List = 3;</code>
        *
        * <pre>
        * 社区前五名成员列表
@@ -14469,7 +14469,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfoOrBuilder> bottomBackgroundPostBuilder_;
       /**
-       * <code>optional .common.PCommunityPostInfo BottomBackgroundPost = 4;</code>
+       * <code>optional .bbproto.PCommunityPostInfo BottomBackgroundPost = 4;</code>
        *
        * <pre>
        * 底部的背景介绍
@@ -14479,7 +14479,7 @@ public final class CommunityProtos {
         return bottomBackgroundPostBuilder_ != null || bottomBackgroundPost_ != null;
       }
       /**
-       * <code>optional .common.PCommunityPostInfo BottomBackgroundPost = 4;</code>
+       * <code>optional .bbproto.PCommunityPostInfo BottomBackgroundPost = 4;</code>
        *
        * <pre>
        * 底部的背景介绍
@@ -14493,7 +14493,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityPostInfo BottomBackgroundPost = 4;</code>
+       * <code>optional .bbproto.PCommunityPostInfo BottomBackgroundPost = 4;</code>
        *
        * <pre>
        * 底部的背景介绍
@@ -14513,7 +14513,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityPostInfo BottomBackgroundPost = 4;</code>
+       * <code>optional .bbproto.PCommunityPostInfo BottomBackgroundPost = 4;</code>
        *
        * <pre>
        * 底部的背景介绍
@@ -14531,7 +14531,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityPostInfo BottomBackgroundPost = 4;</code>
+       * <code>optional .bbproto.PCommunityPostInfo BottomBackgroundPost = 4;</code>
        *
        * <pre>
        * 底部的背景介绍
@@ -14553,7 +14553,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityPostInfo BottomBackgroundPost = 4;</code>
+       * <code>optional .bbproto.PCommunityPostInfo BottomBackgroundPost = 4;</code>
        *
        * <pre>
        * 底部的背景介绍
@@ -14571,7 +14571,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityPostInfo BottomBackgroundPost = 4;</code>
+       * <code>optional .bbproto.PCommunityPostInfo BottomBackgroundPost = 4;</code>
        *
        * <pre>
        * 底部的背景介绍
@@ -14583,7 +14583,7 @@ public final class CommunityProtos {
         return getBottomBackgroundPostFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PCommunityPostInfo BottomBackgroundPost = 4;</code>
+       * <code>optional .bbproto.PCommunityPostInfo BottomBackgroundPost = 4;</code>
        *
        * <pre>
        * 底部的背景介绍
@@ -14598,7 +14598,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityPostInfo BottomBackgroundPost = 4;</code>
+       * <code>optional .bbproto.PCommunityPostInfo BottomBackgroundPost = 4;</code>
        *
        * <pre>
        * 底部的背景介绍
@@ -14628,10 +14628,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityHome)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityHome)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityHome)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityHome)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityHome DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityHome();
@@ -14672,7 +14672,7 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityPostCommentOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityPostComment)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityPostComment)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -14712,7 +14712,7 @@ public final class CommunityProtos {
         getContentBytes();
   }
   /**
-   * Protobuf type {@code common.PCommunityPostComment}
+   * Protobuf type {@code bbproto.PCommunityPostComment}
    *
    * <pre>
    * ---评论信息
@@ -14721,7 +14721,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityPostComment extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityPostComment)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityPostComment)
       PCommunityPostCommentOrBuilder {
     // Use PCommunityPostComment.newBuilder() to construct.
     private PCommunityPostComment(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -14782,12 +14782,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPostComment_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPostComment_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPostComment_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPostComment_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityPostComment.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostComment.Builder.class);
     }
@@ -14991,7 +14991,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityPostComment}
+     * Protobuf type {@code bbproto.PCommunityPostComment}
      *
      * <pre>
      * ---评论信息
@@ -15000,16 +15000,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityPostComment)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityPostComment)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityPostCommentOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPostComment_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPostComment_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPostComment_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPostComment_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityPostComment.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostComment.Builder.class);
       }
@@ -15039,7 +15039,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPostComment_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPostComment_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostComment getDefaultInstanceForType() {
@@ -15297,10 +15297,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityPostComment)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityPostComment)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityPostComment)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityPostComment)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityPostComment DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityPostComment();
@@ -15341,7 +15341,7 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityCommentInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityCommentInfo)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityCommentInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -15426,7 +15426,7 @@ public final class CommunityProtos {
         getContentBytes();
 
     /**
-     * <code>optional .common.PUserBase User = 9;</code>
+     * <code>optional .bbproto.PUserBase User = 9;</code>
      *
      * <pre>
      * 发表评论的用户
@@ -15434,7 +15434,7 @@ public final class CommunityProtos {
      */
     boolean hasUser();
     /**
-     * <code>optional .common.PUserBase User = 9;</code>
+     * <code>optional .bbproto.PUserBase User = 9;</code>
      *
      * <pre>
      * 发表评论的用户
@@ -15442,7 +15442,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.AccountProtos.PUserBase getUser();
     /**
-     * <code>optional .common.PUserBase User = 9;</code>
+     * <code>optional .bbproto.PUserBase User = 9;</code>
      *
      * <pre>
      * 发表评论的用户
@@ -15451,7 +15451,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserOrBuilder();
 
     /**
-     * <code>optional .common.PCommunityCommentInfo QuoteInfo = 10;</code>
+     * <code>optional .bbproto.PCommunityCommentInfo QuoteInfo = 10;</code>
      *
      * <pre>
      * 引用的评论信息
@@ -15459,7 +15459,7 @@ public final class CommunityProtos {
      */
     boolean hasQuoteInfo();
     /**
-     * <code>optional .common.PCommunityCommentInfo QuoteInfo = 10;</code>
+     * <code>optional .bbproto.PCommunityCommentInfo QuoteInfo = 10;</code>
      *
      * <pre>
      * 引用的评论信息
@@ -15467,7 +15467,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo getQuoteInfo();
     /**
-     * <code>optional .common.PCommunityCommentInfo QuoteInfo = 10;</code>
+     * <code>optional .bbproto.PCommunityCommentInfo QuoteInfo = 10;</code>
      *
      * <pre>
      * 引用的评论信息
@@ -15485,7 +15485,7 @@ public final class CommunityProtos {
     boolean getIsDelete();
   }
   /**
-   * Protobuf type {@code common.PCommunityCommentInfo}
+   * Protobuf type {@code bbproto.PCommunityCommentInfo}
    *
    * <pre>
    * 评论详情
@@ -15493,7 +15493,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityCommentInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityCommentInfo)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityCommentInfo)
       PCommunityCommentInfoOrBuilder {
     // Use PCommunityCommentInfo.newBuilder() to construct.
     private PCommunityCommentInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -15616,12 +15616,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityCommentInfo_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityCommentInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityCommentInfo_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityCommentInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo.Builder.class);
     }
@@ -15782,7 +15782,7 @@ public final class CommunityProtos {
     public static final int USER_FIELD_NUMBER = 9;
     private com.blemobi.sep.probuf.AccountProtos.PUserBase user_;
     /**
-     * <code>optional .common.PUserBase User = 9;</code>
+     * <code>optional .bbproto.PUserBase User = 9;</code>
      *
      * <pre>
      * 发表评论的用户
@@ -15792,7 +15792,7 @@ public final class CommunityProtos {
       return user_ != null;
     }
     /**
-     * <code>optional .common.PUserBase User = 9;</code>
+     * <code>optional .bbproto.PUserBase User = 9;</code>
      *
      * <pre>
      * 发表评论的用户
@@ -15802,7 +15802,7 @@ public final class CommunityProtos {
       return user_ == null ? com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : user_;
     }
     /**
-     * <code>optional .common.PUserBase User = 9;</code>
+     * <code>optional .bbproto.PUserBase User = 9;</code>
      *
      * <pre>
      * 发表评论的用户
@@ -15815,7 +15815,7 @@ public final class CommunityProtos {
     public static final int QUOTEINFO_FIELD_NUMBER = 10;
     private com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo quoteInfo_;
     /**
-     * <code>optional .common.PCommunityCommentInfo QuoteInfo = 10;</code>
+     * <code>optional .bbproto.PCommunityCommentInfo QuoteInfo = 10;</code>
      *
      * <pre>
      * 引用的评论信息
@@ -15825,7 +15825,7 @@ public final class CommunityProtos {
       return quoteInfo_ != null;
     }
     /**
-     * <code>optional .common.PCommunityCommentInfo QuoteInfo = 10;</code>
+     * <code>optional .bbproto.PCommunityCommentInfo QuoteInfo = 10;</code>
      *
      * <pre>
      * 引用的评论信息
@@ -15835,7 +15835,7 @@ public final class CommunityProtos {
       return quoteInfo_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo.getDefaultInstance() : quoteInfo_;
     }
     /**
-     * <code>optional .common.PCommunityCommentInfo QuoteInfo = 10;</code>
+     * <code>optional .bbproto.PCommunityCommentInfo QuoteInfo = 10;</code>
      *
      * <pre>
      * 引用的评论信息
@@ -16025,7 +16025,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityCommentInfo}
+     * Protobuf type {@code bbproto.PCommunityCommentInfo}
      *
      * <pre>
      * 评论详情
@@ -16033,16 +16033,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityCommentInfo)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityCommentInfo)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityCommentInfo_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityCommentInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityCommentInfo_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityCommentInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo.Builder.class);
       }
@@ -16096,7 +16096,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityCommentInfo_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityCommentInfo_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo getDefaultInstanceForType() {
@@ -16578,7 +16578,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> userBuilder_;
       /**
-       * <code>optional .common.PUserBase User = 9;</code>
+       * <code>optional .bbproto.PUserBase User = 9;</code>
        *
        * <pre>
        * 发表评论的用户
@@ -16588,7 +16588,7 @@ public final class CommunityProtos {
         return userBuilder_ != null || user_ != null;
       }
       /**
-       * <code>optional .common.PUserBase User = 9;</code>
+       * <code>optional .bbproto.PUserBase User = 9;</code>
        *
        * <pre>
        * 发表评论的用户
@@ -16602,7 +16602,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PUserBase User = 9;</code>
+       * <code>optional .bbproto.PUserBase User = 9;</code>
        *
        * <pre>
        * 发表评论的用户
@@ -16622,7 +16622,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 9;</code>
+       * <code>optional .bbproto.PUserBase User = 9;</code>
        *
        * <pre>
        * 发表评论的用户
@@ -16640,7 +16640,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 9;</code>
+       * <code>optional .bbproto.PUserBase User = 9;</code>
        *
        * <pre>
        * 发表评论的用户
@@ -16662,7 +16662,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 9;</code>
+       * <code>optional .bbproto.PUserBase User = 9;</code>
        *
        * <pre>
        * 发表评论的用户
@@ -16680,7 +16680,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 9;</code>
+       * <code>optional .bbproto.PUserBase User = 9;</code>
        *
        * <pre>
        * 发表评论的用户
@@ -16692,7 +16692,7 @@ public final class CommunityProtos {
         return getUserFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PUserBase User = 9;</code>
+       * <code>optional .bbproto.PUserBase User = 9;</code>
        *
        * <pre>
        * 发表评论的用户
@@ -16707,7 +16707,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PUserBase User = 9;</code>
+       * <code>optional .bbproto.PUserBase User = 9;</code>
        *
        * <pre>
        * 发表评论的用户
@@ -16731,7 +16731,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo, com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfoOrBuilder> quoteInfoBuilder_;
       /**
-       * <code>optional .common.PCommunityCommentInfo QuoteInfo = 10;</code>
+       * <code>optional .bbproto.PCommunityCommentInfo QuoteInfo = 10;</code>
        *
        * <pre>
        * 引用的评论信息
@@ -16741,7 +16741,7 @@ public final class CommunityProtos {
         return quoteInfoBuilder_ != null || quoteInfo_ != null;
       }
       /**
-       * <code>optional .common.PCommunityCommentInfo QuoteInfo = 10;</code>
+       * <code>optional .bbproto.PCommunityCommentInfo QuoteInfo = 10;</code>
        *
        * <pre>
        * 引用的评论信息
@@ -16755,7 +16755,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityCommentInfo QuoteInfo = 10;</code>
+       * <code>optional .bbproto.PCommunityCommentInfo QuoteInfo = 10;</code>
        *
        * <pre>
        * 引用的评论信息
@@ -16775,7 +16775,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityCommentInfo QuoteInfo = 10;</code>
+       * <code>optional .bbproto.PCommunityCommentInfo QuoteInfo = 10;</code>
        *
        * <pre>
        * 引用的评论信息
@@ -16793,7 +16793,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityCommentInfo QuoteInfo = 10;</code>
+       * <code>optional .bbproto.PCommunityCommentInfo QuoteInfo = 10;</code>
        *
        * <pre>
        * 引用的评论信息
@@ -16815,7 +16815,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityCommentInfo QuoteInfo = 10;</code>
+       * <code>optional .bbproto.PCommunityCommentInfo QuoteInfo = 10;</code>
        *
        * <pre>
        * 引用的评论信息
@@ -16833,7 +16833,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityCommentInfo QuoteInfo = 10;</code>
+       * <code>optional .bbproto.PCommunityCommentInfo QuoteInfo = 10;</code>
        *
        * <pre>
        * 引用的评论信息
@@ -16845,7 +16845,7 @@ public final class CommunityProtos {
         return getQuoteInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PCommunityCommentInfo QuoteInfo = 10;</code>
+       * <code>optional .bbproto.PCommunityCommentInfo QuoteInfo = 10;</code>
        *
        * <pre>
        * 引用的评论信息
@@ -16860,7 +16860,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityCommentInfo QuoteInfo = 10;</code>
+       * <code>optional .bbproto.PCommunityCommentInfo QuoteInfo = 10;</code>
        *
        * <pre>
        * 引用的评论信息
@@ -16928,10 +16928,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityCommentInfo)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityCommentInfo)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityCommentInfo)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityCommentInfo)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo();
@@ -16972,35 +16972,35 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityCommentInfoListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityCommentInfoList)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityCommentInfoList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+     * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
      */
     java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo> 
         getListList();
     /**
-     * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+     * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo getList(int index);
     /**
-     * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+     * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
      */
     int getListCount();
     /**
-     * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+     * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
      */
     java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfoOrBuilder> 
         getListOrBuilderList();
     /**
-     * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+     * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfoOrBuilder getListOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code common.PCommunityCommentInfoList}
+   * Protobuf type {@code bbproto.PCommunityCommentInfoList}
    *
    * <pre>
    * 评论详情列表
@@ -17008,7 +17008,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityCommentInfoList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityCommentInfoList)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityCommentInfoList)
       PCommunityCommentInfoListOrBuilder {
     // Use PCommunityCommentInfoList.newBuilder() to construct.
     private PCommunityCommentInfoList(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -17067,12 +17067,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityCommentInfoList_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityCommentInfoList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityCommentInfoList_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityCommentInfoList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfoList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfoList.Builder.class);
     }
@@ -17080,32 +17080,32 @@ public final class CommunityProtos {
     public static final int LIST_FIELD_NUMBER = 2;
     private java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo> list_;
     /**
-     * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+     * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
      */
     public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo> getListList() {
       return list_;
     }
     /**
-     * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+     * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
      */
     public java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfoOrBuilder> 
         getListOrBuilderList() {
       return list_;
     }
     /**
-     * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+     * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
      */
     public int getListCount() {
       return list_.size();
     }
     /**
-     * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+     * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
      */
     public com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo getList(int index) {
       return list_.get(index);
     }
     /**
-     * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+     * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
      */
     public com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfoOrBuilder getListOrBuilder(
         int index) {
@@ -17216,7 +17216,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityCommentInfoList}
+     * Protobuf type {@code bbproto.PCommunityCommentInfoList}
      *
      * <pre>
      * 评论详情列表
@@ -17224,16 +17224,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityCommentInfoList)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityCommentInfoList)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfoListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityCommentInfoList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityCommentInfoList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityCommentInfoList_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityCommentInfoList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfoList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfoList.Builder.class);
       }
@@ -17266,7 +17266,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityCommentInfoList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityCommentInfoList_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfoList getDefaultInstanceForType() {
@@ -17374,7 +17374,7 @@ public final class CommunityProtos {
           com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo, com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfoOrBuilder> listBuilder_;
 
       /**
-       * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+       * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo> getListList() {
         if (listBuilder_ == null) {
@@ -17384,7 +17384,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+       * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
        */
       public int getListCount() {
         if (listBuilder_ == null) {
@@ -17394,7 +17394,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+       * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo getList(int index) {
         if (listBuilder_ == null) {
@@ -17404,7 +17404,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+       * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
        */
       public Builder setList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo value) {
@@ -17421,7 +17421,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+       * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
        */
       public Builder setList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo.Builder builderForValue) {
@@ -17435,7 +17435,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+       * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
        */
       public Builder addList(com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo value) {
         if (listBuilder_ == null) {
@@ -17451,7 +17451,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+       * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
        */
       public Builder addList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo value) {
@@ -17468,7 +17468,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+       * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
        */
       public Builder addList(
           com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo.Builder builderForValue) {
@@ -17482,7 +17482,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+       * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
        */
       public Builder addList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo.Builder builderForValue) {
@@ -17496,7 +17496,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+       * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
        */
       public Builder addAllList(
           java.lang.Iterable<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo> values) {
@@ -17511,7 +17511,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+       * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
        */
       public Builder clearList() {
         if (listBuilder_ == null) {
@@ -17524,7 +17524,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+       * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
        */
       public Builder removeList(int index) {
         if (listBuilder_ == null) {
@@ -17537,14 +17537,14 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+       * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo.Builder getListBuilder(
           int index) {
         return getListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+       * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfoOrBuilder getListOrBuilder(
           int index) {
@@ -17554,7 +17554,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+       * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
        */
       public java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfoOrBuilder> 
            getListOrBuilderList() {
@@ -17565,14 +17565,14 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+       * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo.Builder addListBuilder() {
         return getListFieldBuilder().addBuilder(
             com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+       * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo.Builder addListBuilder(
           int index) {
@@ -17580,7 +17580,7 @@ public final class CommunityProtos {
             index, com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityCommentInfo List = 2;</code>
+       * <code>repeated .bbproto.PCommunityCommentInfo List = 2;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfo.Builder> 
            getListBuilderList() {
@@ -17611,10 +17611,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityCommentInfoList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityCommentInfoList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityCommentInfoList)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityCommentInfoList)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfoList DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityCommentInfoList();
@@ -17655,7 +17655,7 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityMailUploadOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityMailUpload)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityMailUpload)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -17686,7 +17686,7 @@ public final class CommunityProtos {
     boolean getIsView();
 
     /**
-     * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+     * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
      *
      * <pre>
      * 信件正文引用到的资源信息
@@ -17694,7 +17694,7 @@ public final class CommunityProtos {
      */
     boolean hasResourcesList();
     /**
-     * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+     * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
      *
      * <pre>
      * 信件正文引用到的资源信息
@@ -17702,7 +17702,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList getResourcesList();
     /**
-     * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+     * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
      *
      * <pre>
      * 信件正文引用到的资源信息
@@ -17711,7 +17711,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceListOrBuilder getResourcesListOrBuilder();
   }
   /**
-   * Protobuf type {@code common.PCommunityMailUpload}
+   * Protobuf type {@code bbproto.PCommunityMailUpload}
    *
    * <pre>
    * ---社区信件
@@ -17720,7 +17720,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityMailUpload extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityMailUpload)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityMailUpload)
       PCommunityMailUploadOrBuilder {
     // Use PCommunityMailUpload.newBuilder() to construct.
     private PCommunityMailUpload(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -17793,12 +17793,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMailUpload_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMailUpload_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMailUpload_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMailUpload_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityMailUpload.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityMailUpload.Builder.class);
     }
@@ -17863,7 +17863,7 @@ public final class CommunityProtos {
     public static final int RESOURCESLIST_FIELD_NUMBER = 10;
     private com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList resourcesList_;
     /**
-     * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+     * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
      *
      * <pre>
      * 信件正文引用到的资源信息
@@ -17873,7 +17873,7 @@ public final class CommunityProtos {
       return resourcesList_ != null;
     }
     /**
-     * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+     * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
      *
      * <pre>
      * 信件正文引用到的资源信息
@@ -17883,7 +17883,7 @@ public final class CommunityProtos {
       return resourcesList_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList.getDefaultInstance() : resourcesList_;
     }
     /**
-     * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+     * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
      *
      * <pre>
      * 信件正文引用到的资源信息
@@ -18011,7 +18011,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityMailUpload}
+     * Protobuf type {@code bbproto.PCommunityMailUpload}
      *
      * <pre>
      * ---社区信件
@@ -18020,16 +18020,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityMailUpload)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityMailUpload)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityMailUploadOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMailUpload_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMailUpload_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMailUpload_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMailUpload_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityMailUpload.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityMailUpload.Builder.class);
       }
@@ -18065,7 +18065,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMailUpload_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMailUpload_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityMailUpload getDefaultInstanceForType() {
@@ -18272,7 +18272,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList, com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceListOrBuilder> resourcesListBuilder_;
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
        *
        * <pre>
        * 信件正文引用到的资源信息
@@ -18282,7 +18282,7 @@ public final class CommunityProtos {
         return resourcesListBuilder_ != null || resourcesList_ != null;
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
        *
        * <pre>
        * 信件正文引用到的资源信息
@@ -18296,7 +18296,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
        *
        * <pre>
        * 信件正文引用到的资源信息
@@ -18316,7 +18316,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
        *
        * <pre>
        * 信件正文引用到的资源信息
@@ -18334,7 +18334,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
        *
        * <pre>
        * 信件正文引用到的资源信息
@@ -18356,7 +18356,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
        *
        * <pre>
        * 信件正文引用到的资源信息
@@ -18374,7 +18374,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
        *
        * <pre>
        * 信件正文引用到的资源信息
@@ -18386,7 +18386,7 @@ public final class CommunityProtos {
         return getResourcesListFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
        *
        * <pre>
        * 信件正文引用到的资源信息
@@ -18401,7 +18401,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 10;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 10;</code>
        *
        * <pre>
        * 信件正文引用到的资源信息
@@ -18431,10 +18431,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityMailUpload)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityMailUpload)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityMailUpload)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityMailUpload)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityMailUpload DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityMailUpload();
@@ -18475,7 +18475,7 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityMailInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityMailInfo)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityMailInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -18542,7 +18542,7 @@ public final class CommunityProtos {
         getContentBytes();
 
     /**
-     * <code>optional .common.PUserBase User = 7;</code>
+     * <code>optional .bbproto.PUserBase User = 7;</code>
      *
      * <pre>
      * 发信用户基础信息
@@ -18550,7 +18550,7 @@ public final class CommunityProtos {
      */
     boolean hasUser();
     /**
-     * <code>optional .common.PUserBase User = 7;</code>
+     * <code>optional .bbproto.PUserBase User = 7;</code>
      *
      * <pre>
      * 发信用户基础信息
@@ -18558,7 +18558,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.AccountProtos.PUserBase getUser();
     /**
-     * <code>optional .common.PUserBase User = 7;</code>
+     * <code>optional .bbproto.PUserBase User = 7;</code>
      *
      * <pre>
      * 发信用户基础信息
@@ -18567,7 +18567,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserOrBuilder();
 
     /**
-     * <code>optional .common.PCommunityResourceList ResourcesList = 8;</code>
+     * <code>optional .bbproto.PCommunityResourceList ResourcesList = 8;</code>
      *
      * <pre>
      * 信件引用到的资源信息
@@ -18575,7 +18575,7 @@ public final class CommunityProtos {
      */
     boolean hasResourcesList();
     /**
-     * <code>optional .common.PCommunityResourceList ResourcesList = 8;</code>
+     * <code>optional .bbproto.PCommunityResourceList ResourcesList = 8;</code>
      *
      * <pre>
      * 信件引用到的资源信息
@@ -18583,7 +18583,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList getResourcesList();
     /**
-     * <code>optional .common.PCommunityResourceList ResourcesList = 8;</code>
+     * <code>optional .bbproto.PCommunityResourceList ResourcesList = 8;</code>
      *
      * <pre>
      * 信件引用到的资源信息
@@ -18592,7 +18592,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceListOrBuilder getResourcesListOrBuilder();
 
     /**
-     * <code>optional .common.PCommunityMailInfo ReplyInfo = 9;</code>
+     * <code>optional .bbproto.PCommunityMailInfo ReplyInfo = 9;</code>
      *
      * <pre>
      * 回复的信件
@@ -18600,7 +18600,7 @@ public final class CommunityProtos {
      */
     boolean hasReplyInfo();
     /**
-     * <code>optional .common.PCommunityMailInfo ReplyInfo = 9;</code>
+     * <code>optional .bbproto.PCommunityMailInfo ReplyInfo = 9;</code>
      *
      * <pre>
      * 回复的信件
@@ -18608,7 +18608,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo getReplyInfo();
     /**
-     * <code>optional .common.PCommunityMailInfo ReplyInfo = 9;</code>
+     * <code>optional .bbproto.PCommunityMailInfo ReplyInfo = 9;</code>
      *
      * <pre>
      * 回复的信件
@@ -18617,7 +18617,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfoOrBuilder getReplyInfoOrBuilder();
   }
   /**
-   * Protobuf type {@code common.PCommunityMailInfo}
+   * Protobuf type {@code bbproto.PCommunityMailInfo}
    *
    * <pre>
    * 论坛信件信息
@@ -18625,7 +18625,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityMailInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityMailInfo)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityMailInfo)
       PCommunityMailInfoOrBuilder {
     // Use PCommunityMailInfo.newBuilder() to construct.
     private PCommunityMailInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -18743,12 +18743,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMailInfo_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMailInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMailInfo_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMailInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo.Builder.class);
     }
@@ -18883,7 +18883,7 @@ public final class CommunityProtos {
     public static final int USER_FIELD_NUMBER = 7;
     private com.blemobi.sep.probuf.AccountProtos.PUserBase user_;
     /**
-     * <code>optional .common.PUserBase User = 7;</code>
+     * <code>optional .bbproto.PUserBase User = 7;</code>
      *
      * <pre>
      * 发信用户基础信息
@@ -18893,7 +18893,7 @@ public final class CommunityProtos {
       return user_ != null;
     }
     /**
-     * <code>optional .common.PUserBase User = 7;</code>
+     * <code>optional .bbproto.PUserBase User = 7;</code>
      *
      * <pre>
      * 发信用户基础信息
@@ -18903,7 +18903,7 @@ public final class CommunityProtos {
       return user_ == null ? com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : user_;
     }
     /**
-     * <code>optional .common.PUserBase User = 7;</code>
+     * <code>optional .bbproto.PUserBase User = 7;</code>
      *
      * <pre>
      * 发信用户基础信息
@@ -18916,7 +18916,7 @@ public final class CommunityProtos {
     public static final int RESOURCESLIST_FIELD_NUMBER = 8;
     private com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList resourcesList_;
     /**
-     * <code>optional .common.PCommunityResourceList ResourcesList = 8;</code>
+     * <code>optional .bbproto.PCommunityResourceList ResourcesList = 8;</code>
      *
      * <pre>
      * 信件引用到的资源信息
@@ -18926,7 +18926,7 @@ public final class CommunityProtos {
       return resourcesList_ != null;
     }
     /**
-     * <code>optional .common.PCommunityResourceList ResourcesList = 8;</code>
+     * <code>optional .bbproto.PCommunityResourceList ResourcesList = 8;</code>
      *
      * <pre>
      * 信件引用到的资源信息
@@ -18936,7 +18936,7 @@ public final class CommunityProtos {
       return resourcesList_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList.getDefaultInstance() : resourcesList_;
     }
     /**
-     * <code>optional .common.PCommunityResourceList ResourcesList = 8;</code>
+     * <code>optional .bbproto.PCommunityResourceList ResourcesList = 8;</code>
      *
      * <pre>
      * 信件引用到的资源信息
@@ -18949,7 +18949,7 @@ public final class CommunityProtos {
     public static final int REPLYINFO_FIELD_NUMBER = 9;
     private com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo replyInfo_;
     /**
-     * <code>optional .common.PCommunityMailInfo ReplyInfo = 9;</code>
+     * <code>optional .bbproto.PCommunityMailInfo ReplyInfo = 9;</code>
      *
      * <pre>
      * 回复的信件
@@ -18959,7 +18959,7 @@ public final class CommunityProtos {
       return replyInfo_ != null;
     }
     /**
-     * <code>optional .common.PCommunityMailInfo ReplyInfo = 9;</code>
+     * <code>optional .bbproto.PCommunityMailInfo ReplyInfo = 9;</code>
      *
      * <pre>
      * 回复的信件
@@ -18969,7 +18969,7 @@ public final class CommunityProtos {
       return replyInfo_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo.getDefaultInstance() : replyInfo_;
     }
     /**
-     * <code>optional .common.PCommunityMailInfo ReplyInfo = 9;</code>
+     * <code>optional .bbproto.PCommunityMailInfo ReplyInfo = 9;</code>
      *
      * <pre>
      * 回复的信件
@@ -19132,7 +19132,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityMailInfo}
+     * Protobuf type {@code bbproto.PCommunityMailInfo}
      *
      * <pre>
      * 论坛信件信息
@@ -19140,16 +19140,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityMailInfo)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityMailInfo)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMailInfo_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMailInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMailInfo_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMailInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo.Builder.class);
       }
@@ -19203,7 +19203,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMailInfo_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMailInfo_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo getDefaultInstanceForType() {
@@ -19605,7 +19605,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> userBuilder_;
       /**
-       * <code>optional .common.PUserBase User = 7;</code>
+       * <code>optional .bbproto.PUserBase User = 7;</code>
        *
        * <pre>
        * 发信用户基础信息
@@ -19615,7 +19615,7 @@ public final class CommunityProtos {
         return userBuilder_ != null || user_ != null;
       }
       /**
-       * <code>optional .common.PUserBase User = 7;</code>
+       * <code>optional .bbproto.PUserBase User = 7;</code>
        *
        * <pre>
        * 发信用户基础信息
@@ -19629,7 +19629,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PUserBase User = 7;</code>
+       * <code>optional .bbproto.PUserBase User = 7;</code>
        *
        * <pre>
        * 发信用户基础信息
@@ -19649,7 +19649,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 7;</code>
+       * <code>optional .bbproto.PUserBase User = 7;</code>
        *
        * <pre>
        * 发信用户基础信息
@@ -19667,7 +19667,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 7;</code>
+       * <code>optional .bbproto.PUserBase User = 7;</code>
        *
        * <pre>
        * 发信用户基础信息
@@ -19689,7 +19689,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 7;</code>
+       * <code>optional .bbproto.PUserBase User = 7;</code>
        *
        * <pre>
        * 发信用户基础信息
@@ -19707,7 +19707,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 7;</code>
+       * <code>optional .bbproto.PUserBase User = 7;</code>
        *
        * <pre>
        * 发信用户基础信息
@@ -19719,7 +19719,7 @@ public final class CommunityProtos {
         return getUserFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PUserBase User = 7;</code>
+       * <code>optional .bbproto.PUserBase User = 7;</code>
        *
        * <pre>
        * 发信用户基础信息
@@ -19734,7 +19734,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PUserBase User = 7;</code>
+       * <code>optional .bbproto.PUserBase User = 7;</code>
        *
        * <pre>
        * 发信用户基础信息
@@ -19758,7 +19758,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList, com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceList.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceListOrBuilder> resourcesListBuilder_;
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 8;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 8;</code>
        *
        * <pre>
        * 信件引用到的资源信息
@@ -19768,7 +19768,7 @@ public final class CommunityProtos {
         return resourcesListBuilder_ != null || resourcesList_ != null;
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 8;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 8;</code>
        *
        * <pre>
        * 信件引用到的资源信息
@@ -19782,7 +19782,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 8;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 8;</code>
        *
        * <pre>
        * 信件引用到的资源信息
@@ -19802,7 +19802,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 8;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 8;</code>
        *
        * <pre>
        * 信件引用到的资源信息
@@ -19820,7 +19820,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 8;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 8;</code>
        *
        * <pre>
        * 信件引用到的资源信息
@@ -19842,7 +19842,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 8;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 8;</code>
        *
        * <pre>
        * 信件引用到的资源信息
@@ -19860,7 +19860,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 8;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 8;</code>
        *
        * <pre>
        * 信件引用到的资源信息
@@ -19872,7 +19872,7 @@ public final class CommunityProtos {
         return getResourcesListFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 8;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 8;</code>
        *
        * <pre>
        * 信件引用到的资源信息
@@ -19887,7 +19887,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityResourceList ResourcesList = 8;</code>
+       * <code>optional .bbproto.PCommunityResourceList ResourcesList = 8;</code>
        *
        * <pre>
        * 信件引用到的资源信息
@@ -19911,7 +19911,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo, com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfoOrBuilder> replyInfoBuilder_;
       /**
-       * <code>optional .common.PCommunityMailInfo ReplyInfo = 9;</code>
+       * <code>optional .bbproto.PCommunityMailInfo ReplyInfo = 9;</code>
        *
        * <pre>
        * 回复的信件
@@ -19921,7 +19921,7 @@ public final class CommunityProtos {
         return replyInfoBuilder_ != null || replyInfo_ != null;
       }
       /**
-       * <code>optional .common.PCommunityMailInfo ReplyInfo = 9;</code>
+       * <code>optional .bbproto.PCommunityMailInfo ReplyInfo = 9;</code>
        *
        * <pre>
        * 回复的信件
@@ -19935,7 +19935,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityMailInfo ReplyInfo = 9;</code>
+       * <code>optional .bbproto.PCommunityMailInfo ReplyInfo = 9;</code>
        *
        * <pre>
        * 回复的信件
@@ -19955,7 +19955,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityMailInfo ReplyInfo = 9;</code>
+       * <code>optional .bbproto.PCommunityMailInfo ReplyInfo = 9;</code>
        *
        * <pre>
        * 回复的信件
@@ -19973,7 +19973,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityMailInfo ReplyInfo = 9;</code>
+       * <code>optional .bbproto.PCommunityMailInfo ReplyInfo = 9;</code>
        *
        * <pre>
        * 回复的信件
@@ -19995,7 +19995,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityMailInfo ReplyInfo = 9;</code>
+       * <code>optional .bbproto.PCommunityMailInfo ReplyInfo = 9;</code>
        *
        * <pre>
        * 回复的信件
@@ -20013,7 +20013,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityMailInfo ReplyInfo = 9;</code>
+       * <code>optional .bbproto.PCommunityMailInfo ReplyInfo = 9;</code>
        *
        * <pre>
        * 回复的信件
@@ -20025,7 +20025,7 @@ public final class CommunityProtos {
         return getReplyInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PCommunityMailInfo ReplyInfo = 9;</code>
+       * <code>optional .bbproto.PCommunityMailInfo ReplyInfo = 9;</code>
        *
        * <pre>
        * 回复的信件
@@ -20040,7 +20040,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityMailInfo ReplyInfo = 9;</code>
+       * <code>optional .bbproto.PCommunityMailInfo ReplyInfo = 9;</code>
        *
        * <pre>
        * 回复的信件
@@ -20070,10 +20070,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityMailInfo)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityMailInfo)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityMailInfo)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityMailInfo)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo();
@@ -20114,7 +20114,7 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityMailListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityMailList)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityMailList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -20123,31 +20123,31 @@ public final class CommunityProtos {
     long getUnread();
 
     /**
-     * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+     * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
      */
     java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo> 
         getMailInfoList();
     /**
-     * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+     * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo getMailInfo(int index);
     /**
-     * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+     * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
      */
     int getMailInfoCount();
     /**
-     * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+     * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
      */
     java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfoOrBuilder> 
         getMailInfoOrBuilderList();
     /**
-     * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+     * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfoOrBuilder getMailInfoOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code common.PCommunityMailList}
+   * Protobuf type {@code bbproto.PCommunityMailList}
    *
    * <pre>
    * 论坛信件列表
@@ -20155,7 +20155,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityMailList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityMailList)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityMailList)
       PCommunityMailListOrBuilder {
     // Use PCommunityMailList.newBuilder() to construct.
     private PCommunityMailList(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -20220,12 +20220,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMailList_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMailList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMailList_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMailList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityMailList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityMailList.Builder.class);
     }
@@ -20243,32 +20243,32 @@ public final class CommunityProtos {
     public static final int MAILINFO_FIELD_NUMBER = 3;
     private java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo> mailInfo_;
     /**
-     * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+     * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
      */
     public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo> getMailInfoList() {
       return mailInfo_;
     }
     /**
-     * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+     * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
      */
     public java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfoOrBuilder> 
         getMailInfoOrBuilderList() {
       return mailInfo_;
     }
     /**
-     * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+     * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
      */
     public int getMailInfoCount() {
       return mailInfo_.size();
     }
     /**
-     * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+     * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
      */
     public com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo getMailInfo(int index) {
       return mailInfo_.get(index);
     }
     /**
-     * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+     * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
      */
     public com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfoOrBuilder getMailInfoOrBuilder(
         int index) {
@@ -20386,7 +20386,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityMailList}
+     * Protobuf type {@code bbproto.PCommunityMailList}
      *
      * <pre>
      * 论坛信件列表
@@ -20394,16 +20394,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityMailList)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityMailList)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityMailListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMailList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMailList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMailList_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMailList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityMailList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityMailList.Builder.class);
       }
@@ -20438,7 +20438,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMailList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMailList_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityMailList getDefaultInstanceForType() {
@@ -20578,7 +20578,7 @@ public final class CommunityProtos {
           com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo, com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfoOrBuilder> mailInfoBuilder_;
 
       /**
-       * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo> getMailInfoList() {
         if (mailInfoBuilder_ == null) {
@@ -20588,7 +20588,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
        */
       public int getMailInfoCount() {
         if (mailInfoBuilder_ == null) {
@@ -20598,7 +20598,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo getMailInfo(int index) {
         if (mailInfoBuilder_ == null) {
@@ -20608,7 +20608,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
        */
       public Builder setMailInfo(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo value) {
@@ -20625,7 +20625,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
        */
       public Builder setMailInfo(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo.Builder builderForValue) {
@@ -20639,7 +20639,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
        */
       public Builder addMailInfo(com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo value) {
         if (mailInfoBuilder_ == null) {
@@ -20655,7 +20655,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
        */
       public Builder addMailInfo(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo value) {
@@ -20672,7 +20672,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
        */
       public Builder addMailInfo(
           com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo.Builder builderForValue) {
@@ -20686,7 +20686,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
        */
       public Builder addMailInfo(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo.Builder builderForValue) {
@@ -20700,7 +20700,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
        */
       public Builder addAllMailInfo(
           java.lang.Iterable<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo> values) {
@@ -20715,7 +20715,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
        */
       public Builder clearMailInfo() {
         if (mailInfoBuilder_ == null) {
@@ -20728,7 +20728,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
        */
       public Builder removeMailInfo(int index) {
         if (mailInfoBuilder_ == null) {
@@ -20741,14 +20741,14 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo.Builder getMailInfoBuilder(
           int index) {
         return getMailInfoFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfoOrBuilder getMailInfoOrBuilder(
           int index) {
@@ -20758,7 +20758,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
        */
       public java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfoOrBuilder> 
            getMailInfoOrBuilderList() {
@@ -20769,14 +20769,14 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo.Builder addMailInfoBuilder() {
         return getMailInfoFieldBuilder().addBuilder(
             com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo.Builder addMailInfoBuilder(
           int index) {
@@ -20784,7 +20784,7 @@ public final class CommunityProtos {
             index, com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityMailInfo MailInfo = 3;</code>
+       * <code>repeated .bbproto.PCommunityMailInfo MailInfo = 3;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityMailInfo.Builder> 
            getMailInfoBuilderList() {
@@ -20815,10 +20815,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityMailList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityMailList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityMailList)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityMailList)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityMailList DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityMailList();
@@ -20859,11 +20859,11 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityMemberOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityMember)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityMember)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .common.PUserBase User = 2;</code>
+     * <code>optional .bbproto.PUserBase User = 2;</code>
      *
      * <pre>
      * 社区成员信息
@@ -20871,7 +20871,7 @@ public final class CommunityProtos {
      */
     boolean hasUser();
     /**
-     * <code>optional .common.PUserBase User = 2;</code>
+     * <code>optional .bbproto.PUserBase User = 2;</code>
      *
      * <pre>
      * 社区成员信息
@@ -20879,7 +20879,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.AccountProtos.PUserBase getUser();
     /**
-     * <code>optional .common.PUserBase User = 2;</code>
+     * <code>optional .bbproto.PUserBase User = 2;</code>
      *
      * <pre>
      * 社区成员信息
@@ -20915,7 +20915,7 @@ public final class CommunityProtos {
     int getIsManager();
   }
   /**
-   * Protobuf type {@code common.PCommunityMember}
+   * Protobuf type {@code bbproto.PCommunityMember}
    *
    * <pre>
    * ---社区设定
@@ -20924,7 +20924,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityMember extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityMember)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityMember)
       PCommunityMemberOrBuilder {
     // Use PCommunityMember.newBuilder() to construct.
     private PCommunityMember(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -21002,12 +21002,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMember_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMember_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMember_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMember_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityMember.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityMember.Builder.class);
     }
@@ -21015,7 +21015,7 @@ public final class CommunityProtos {
     public static final int USER_FIELD_NUMBER = 2;
     private com.blemobi.sep.probuf.AccountProtos.PUserBase user_;
     /**
-     * <code>optional .common.PUserBase User = 2;</code>
+     * <code>optional .bbproto.PUserBase User = 2;</code>
      *
      * <pre>
      * 社区成员信息
@@ -21025,7 +21025,7 @@ public final class CommunityProtos {
       return user_ != null;
     }
     /**
-     * <code>optional .common.PUserBase User = 2;</code>
+     * <code>optional .bbproto.PUserBase User = 2;</code>
      *
      * <pre>
      * 社区成员信息
@@ -21035,7 +21035,7 @@ public final class CommunityProtos {
       return user_ == null ? com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : user_;
     }
     /**
-     * <code>optional .common.PUserBase User = 2;</code>
+     * <code>optional .bbproto.PUserBase User = 2;</code>
      *
      * <pre>
      * 社区成员信息
@@ -21209,7 +21209,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityMember}
+     * Protobuf type {@code bbproto.PCommunityMember}
      *
      * <pre>
      * ---社区设定
@@ -21218,16 +21218,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityMember)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityMember)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityMemberOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMember_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMember_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMember_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMember_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityMember.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityMember.Builder.class);
       }
@@ -21265,7 +21265,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMember_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMember_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityMember getDefaultInstanceForType() {
@@ -21347,7 +21347,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> userBuilder_;
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 社区成员信息
@@ -21357,7 +21357,7 @@ public final class CommunityProtos {
         return userBuilder_ != null || user_ != null;
       }
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 社区成员信息
@@ -21371,7 +21371,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 社区成员信息
@@ -21391,7 +21391,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 社区成员信息
@@ -21409,7 +21409,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 社区成员信息
@@ -21431,7 +21431,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 社区成员信息
@@ -21449,7 +21449,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 社区成员信息
@@ -21461,7 +21461,7 @@ public final class CommunityProtos {
         return getUserFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 社区成员信息
@@ -21476,7 +21476,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 社区成员信息
@@ -21620,10 +21620,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityMember)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityMember)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityMember)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityMember)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityMember DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityMember();
@@ -21664,35 +21664,64 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityMemberListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityMemberList)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityMemberList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .common.PCommunityMember List = 2;</code>
+     * <code>optional int32 Count = 1;</code>
+     *
+     * <pre>
+     * 社区成员总数，在第一次调用时返回
+     * </pre>
+     */
+    int getCount();
+
+    /**
+     * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+     *
+     * <pre>
+     * 社区成员列表
+     * </pre>
      */
     java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityMember> 
         getListList();
     /**
-     * <code>repeated .common.PCommunityMember List = 2;</code>
+     * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+     *
+     * <pre>
+     * 社区成员列表
+     * </pre>
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityMember getList(int index);
     /**
-     * <code>repeated .common.PCommunityMember List = 2;</code>
+     * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+     *
+     * <pre>
+     * 社区成员列表
+     * </pre>
      */
     int getListCount();
     /**
-     * <code>repeated .common.PCommunityMember List = 2;</code>
+     * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+     *
+     * <pre>
+     * 社区成员列表
+     * </pre>
      */
     java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityMemberOrBuilder> 
         getListOrBuilderList();
     /**
-     * <code>repeated .common.PCommunityMember List = 2;</code>
+     * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+     *
+     * <pre>
+     * 社区成员列表
+     * </pre>
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityMemberOrBuilder getListOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code common.PCommunityMemberList}
+   * Protobuf type {@code bbproto.PCommunityMemberList}
    *
    * <pre>
    * 社区成员信息列表
@@ -21700,13 +21729,14 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityMemberList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityMemberList)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityMemberList)
       PCommunityMemberListOrBuilder {
     // Use PCommunityMemberList.newBuilder() to construct.
     private PCommunityMemberList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PCommunityMemberList() {
+      count_ = 0;
       list_ = java.util.Collections.emptyList();
     }
 
@@ -21734,10 +21764,15 @@ public final class CommunityProtos {
               }
               break;
             }
+            case 8: {
+
+              count_ = input.readInt32();
+              break;
+            }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.CommunityProtos.PCommunityMember>();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000002;
               }
               list_.add(input.readMessage(com.blemobi.sep.probuf.CommunityProtos.PCommunityMember.PARSER, extensionRegistry));
               break;
@@ -21751,7 +21786,7 @@ public final class CommunityProtos {
             new com.google.protobuf.InvalidProtocolBufferException(
                 e.getMessage()).setUnfinishedMessage(this));
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
           list_ = java.util.Collections.unmodifiableList(list_);
         }
         makeExtensionsImmutable();
@@ -21759,45 +21794,79 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMemberList_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMemberList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMemberList_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMemberList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityMemberList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityMemberList.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int COUNT_FIELD_NUMBER = 1;
+    private int count_;
+    /**
+     * <code>optional int32 Count = 1;</code>
+     *
+     * <pre>
+     * 社区成员总数，在第一次调用时返回
+     * </pre>
+     */
+    public int getCount() {
+      return count_;
     }
 
     public static final int LIST_FIELD_NUMBER = 2;
     private java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityMember> list_;
     /**
-     * <code>repeated .common.PCommunityMember List = 2;</code>
+     * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+     *
+     * <pre>
+     * 社区成员列表
+     * </pre>
      */
     public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityMember> getListList() {
       return list_;
     }
     /**
-     * <code>repeated .common.PCommunityMember List = 2;</code>
+     * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+     *
+     * <pre>
+     * 社区成员列表
+     * </pre>
      */
     public java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityMemberOrBuilder> 
         getListOrBuilderList() {
       return list_;
     }
     /**
-     * <code>repeated .common.PCommunityMember List = 2;</code>
+     * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+     *
+     * <pre>
+     * 社区成员列表
+     * </pre>
      */
     public int getListCount() {
       return list_.size();
     }
     /**
-     * <code>repeated .common.PCommunityMember List = 2;</code>
+     * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+     *
+     * <pre>
+     * 社区成员列表
+     * </pre>
      */
     public com.blemobi.sep.probuf.CommunityProtos.PCommunityMember getList(int index) {
       return list_.get(index);
     }
     /**
-     * <code>repeated .common.PCommunityMember List = 2;</code>
+     * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+     *
+     * <pre>
+     * 社区成员列表
+     * </pre>
      */
     public com.blemobi.sep.probuf.CommunityProtos.PCommunityMemberOrBuilder getListOrBuilder(
         int index) {
@@ -21816,6 +21885,9 @@ public final class CommunityProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (count_ != 0) {
+        output.writeInt32(1, count_);
+      }
       for (int i = 0; i < list_.size(); i++) {
         output.writeMessage(2, list_.get(i));
       }
@@ -21827,6 +21899,10 @@ public final class CommunityProtos {
       if (size != -1) return size;
 
       size = 0;
+      if (count_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, count_);
+      }
       for (int i = 0; i < list_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, list_.get(i));
@@ -21908,7 +21984,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityMemberList}
+     * Protobuf type {@code bbproto.PCommunityMemberList}
      *
      * <pre>
      * 社区成员信息列表
@@ -21916,16 +21992,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityMemberList)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityMemberList)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityMemberListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMemberList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMemberList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMemberList_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMemberList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityMemberList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityMemberList.Builder.class);
       }
@@ -21947,9 +22023,11 @@ public final class CommunityProtos {
       }
       public Builder clear() {
         super.clear();
+        count_ = 0;
+
         if (listBuilder_ == null) {
           list_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           listBuilder_.clear();
         }
@@ -21958,7 +22036,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityMemberList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityMemberList_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityMemberList getDefaultInstanceForType() {
@@ -21976,15 +22054,18 @@ public final class CommunityProtos {
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityMemberList buildPartial() {
         com.blemobi.sep.probuf.CommunityProtos.PCommunityMemberList result = new com.blemobi.sep.probuf.CommunityProtos.PCommunityMemberList(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.count_ = count_;
         if (listBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
             list_ = java.util.Collections.unmodifiableList(list_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.list_ = list_;
         } else {
           result.list_ = listBuilder_.build();
         }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -22000,11 +22081,14 @@ public final class CommunityProtos {
 
       public Builder mergeFrom(com.blemobi.sep.probuf.CommunityProtos.PCommunityMemberList other) {
         if (other == com.blemobi.sep.probuf.CommunityProtos.PCommunityMemberList.getDefaultInstance()) return this;
+        if (other.getCount() != 0) {
+          setCount(other.getCount());
+        }
         if (listBuilder_ == null) {
           if (!other.list_.isEmpty()) {
             if (list_.isEmpty()) {
               list_ = other.list_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureListIsMutable();
               list_.addAll(other.list_);
@@ -22017,7 +22101,7 @@ public final class CommunityProtos {
               listBuilder_.dispose();
               listBuilder_ = null;
               list_ = other.list_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
               listBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getListFieldBuilder() : null;
@@ -22053,12 +22137,50 @@ public final class CommunityProtos {
       }
       private int bitField0_;
 
+      private int count_ ;
+      /**
+       * <code>optional int32 Count = 1;</code>
+       *
+       * <pre>
+       * 社区成员总数，在第一次调用时返回
+       * </pre>
+       */
+      public int getCount() {
+        return count_;
+      }
+      /**
+       * <code>optional int32 Count = 1;</code>
+       *
+       * <pre>
+       * 社区成员总数，在第一次调用时返回
+       * </pre>
+       */
+      public Builder setCount(int value) {
+        
+        count_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 Count = 1;</code>
+       *
+       * <pre>
+       * 社区成员总数，在第一次调用时返回
+       * </pre>
+       */
+      public Builder clearCount() {
+        
+        count_ = 0;
+        onChanged();
+        return this;
+      }
+
       private java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityMember> list_ =
         java.util.Collections.emptyList();
       private void ensureListIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
           list_ = new java.util.ArrayList<com.blemobi.sep.probuf.CommunityProtos.PCommunityMember>(list_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -22066,7 +22188,11 @@ public final class CommunityProtos {
           com.blemobi.sep.probuf.CommunityProtos.PCommunityMember, com.blemobi.sep.probuf.CommunityProtos.PCommunityMember.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityMemberOrBuilder> listBuilder_;
 
       /**
-       * <code>repeated .common.PCommunityMember List = 2;</code>
+       * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+       *
+       * <pre>
+       * 社区成员列表
+       * </pre>
        */
       public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityMember> getListList() {
         if (listBuilder_ == null) {
@@ -22076,7 +22202,11 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityMember List = 2;</code>
+       * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+       *
+       * <pre>
+       * 社区成员列表
+       * </pre>
        */
       public int getListCount() {
         if (listBuilder_ == null) {
@@ -22086,7 +22216,11 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityMember List = 2;</code>
+       * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+       *
+       * <pre>
+       * 社区成员列表
+       * </pre>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityMember getList(int index) {
         if (listBuilder_ == null) {
@@ -22096,7 +22230,11 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityMember List = 2;</code>
+       * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+       *
+       * <pre>
+       * 社区成员列表
+       * </pre>
        */
       public Builder setList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityMember value) {
@@ -22113,7 +22251,11 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityMember List = 2;</code>
+       * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+       *
+       * <pre>
+       * 社区成员列表
+       * </pre>
        */
       public Builder setList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityMember.Builder builderForValue) {
@@ -22127,7 +22269,11 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityMember List = 2;</code>
+       * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+       *
+       * <pre>
+       * 社区成员列表
+       * </pre>
        */
       public Builder addList(com.blemobi.sep.probuf.CommunityProtos.PCommunityMember value) {
         if (listBuilder_ == null) {
@@ -22143,7 +22289,11 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityMember List = 2;</code>
+       * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+       *
+       * <pre>
+       * 社区成员列表
+       * </pre>
        */
       public Builder addList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityMember value) {
@@ -22160,7 +22310,11 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityMember List = 2;</code>
+       * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+       *
+       * <pre>
+       * 社区成员列表
+       * </pre>
        */
       public Builder addList(
           com.blemobi.sep.probuf.CommunityProtos.PCommunityMember.Builder builderForValue) {
@@ -22174,7 +22328,11 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityMember List = 2;</code>
+       * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+       *
+       * <pre>
+       * 社区成员列表
+       * </pre>
        */
       public Builder addList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityMember.Builder builderForValue) {
@@ -22188,7 +22346,11 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityMember List = 2;</code>
+       * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+       *
+       * <pre>
+       * 社区成员列表
+       * </pre>
        */
       public Builder addAllList(
           java.lang.Iterable<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityMember> values) {
@@ -22203,12 +22365,16 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityMember List = 2;</code>
+       * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+       *
+       * <pre>
+       * 社区成员列表
+       * </pre>
        */
       public Builder clearList() {
         if (listBuilder_ == null) {
           list_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           listBuilder_.clear();
@@ -22216,7 +22382,11 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityMember List = 2;</code>
+       * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+       *
+       * <pre>
+       * 社区成员列表
+       * </pre>
        */
       public Builder removeList(int index) {
         if (listBuilder_ == null) {
@@ -22229,14 +22399,22 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityMember List = 2;</code>
+       * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+       *
+       * <pre>
+       * 社区成员列表
+       * </pre>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityMember.Builder getListBuilder(
           int index) {
         return getListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PCommunityMember List = 2;</code>
+       * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+       *
+       * <pre>
+       * 社区成员列表
+       * </pre>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityMemberOrBuilder getListOrBuilder(
           int index) {
@@ -22246,7 +22424,11 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityMember List = 2;</code>
+       * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+       *
+       * <pre>
+       * 社区成员列表
+       * </pre>
        */
       public java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityMemberOrBuilder> 
            getListOrBuilderList() {
@@ -22257,14 +22439,22 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityMember List = 2;</code>
+       * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+       *
+       * <pre>
+       * 社区成员列表
+       * </pre>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityMember.Builder addListBuilder() {
         return getListFieldBuilder().addBuilder(
             com.blemobi.sep.probuf.CommunityProtos.PCommunityMember.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityMember List = 2;</code>
+       * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+       *
+       * <pre>
+       * 社区成员列表
+       * </pre>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityMember.Builder addListBuilder(
           int index) {
@@ -22272,7 +22462,11 @@ public final class CommunityProtos {
             index, com.blemobi.sep.probuf.CommunityProtos.PCommunityMember.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityMember List = 2;</code>
+       * <code>repeated .bbproto.PCommunityMember List = 2;</code>
+       *
+       * <pre>
+       * 社区成员列表
+       * </pre>
        */
       public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityMember.Builder> 
            getListBuilderList() {
@@ -22285,7 +22479,7 @@ public final class CommunityProtos {
           listBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               com.blemobi.sep.probuf.CommunityProtos.PCommunityMember, com.blemobi.sep.probuf.CommunityProtos.PCommunityMember.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityMemberOrBuilder>(
                   list_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000002) == 0x00000002),
                   getParentForChildren(),
                   isClean());
           list_ = null;
@@ -22303,10 +22497,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityMemberList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityMemberList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityMemberList)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityMemberList)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityMemberList DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityMemberList();
@@ -22347,11 +22541,11 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityFriendOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityFriend)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityFriend)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .common.PUserBase User = 2;</code>
+     * <code>optional .bbproto.PUserBase User = 2;</code>
      *
      * <pre>
      * 好友信息
@@ -22359,7 +22553,7 @@ public final class CommunityProtos {
      */
     boolean hasUser();
     /**
-     * <code>optional .common.PUserBase User = 2;</code>
+     * <code>optional .bbproto.PUserBase User = 2;</code>
      *
      * <pre>
      * 好友信息
@@ -22367,7 +22561,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.AccountProtos.PUserBase getUser();
     /**
-     * <code>optional .common.PUserBase User = 2;</code>
+     * <code>optional .bbproto.PUserBase User = 2;</code>
      *
      * <pre>
      * 好友信息
@@ -22394,7 +22588,7 @@ public final class CommunityProtos {
     int getMembership();
   }
   /**
-   * Protobuf type {@code common.PCommunityFriend}
+   * Protobuf type {@code bbproto.PCommunityFriend}
    *
    * <pre>
    * 社区好友信息
@@ -22402,7 +22596,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityFriend extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityFriend)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityFriend)
       PCommunityFriendOrBuilder {
     // Use PCommunityFriend.newBuilder() to construct.
     private PCommunityFriend(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -22474,12 +22668,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityFriend_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityFriend_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityFriend_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityFriend_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend.Builder.class);
     }
@@ -22487,7 +22681,7 @@ public final class CommunityProtos {
     public static final int USER_FIELD_NUMBER = 2;
     private com.blemobi.sep.probuf.AccountProtos.PUserBase user_;
     /**
-     * <code>optional .common.PUserBase User = 2;</code>
+     * <code>optional .bbproto.PUserBase User = 2;</code>
      *
      * <pre>
      * 好友信息
@@ -22497,7 +22691,7 @@ public final class CommunityProtos {
       return user_ != null;
     }
     /**
-     * <code>optional .common.PUserBase User = 2;</code>
+     * <code>optional .bbproto.PUserBase User = 2;</code>
      *
      * <pre>
      * 好友信息
@@ -22507,7 +22701,7 @@ public final class CommunityProtos {
       return user_ == null ? com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : user_;
     }
     /**
-     * <code>optional .common.PUserBase User = 2;</code>
+     * <code>optional .bbproto.PUserBase User = 2;</code>
      *
      * <pre>
      * 好友信息
@@ -22661,7 +22855,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityFriend}
+     * Protobuf type {@code bbproto.PCommunityFriend}
      *
      * <pre>
      * 社区好友信息
@@ -22669,16 +22863,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityFriend)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityFriend)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityFriendOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityFriend_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityFriend_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityFriend_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityFriend_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend.Builder.class);
       }
@@ -22714,7 +22908,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityFriend_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityFriend_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend getDefaultInstanceForType() {
@@ -22792,7 +22986,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> userBuilder_;
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 好友信息
@@ -22802,7 +22996,7 @@ public final class CommunityProtos {
         return userBuilder_ != null || user_ != null;
       }
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 好友信息
@@ -22816,7 +23010,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 好友信息
@@ -22836,7 +23030,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 好友信息
@@ -22854,7 +23048,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 好友信息
@@ -22876,7 +23070,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 好友信息
@@ -22894,7 +23088,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 好友信息
@@ -22906,7 +23100,7 @@ public final class CommunityProtos {
         return getUserFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 好友信息
@@ -22921,7 +23115,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 好友信息
@@ -23027,10 +23221,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityFriend)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityFriend)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityFriend)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityFriend)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend();
@@ -23071,35 +23265,35 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityFriendListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityFriendList)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityFriendList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .common.PCommunityFriend List = 2;</code>
+     * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
      */
     java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend> 
         getListList();
     /**
-     * <code>repeated .common.PCommunityFriend List = 2;</code>
+     * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend getList(int index);
     /**
-     * <code>repeated .common.PCommunityFriend List = 2;</code>
+     * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
      */
     int getListCount();
     /**
-     * <code>repeated .common.PCommunityFriend List = 2;</code>
+     * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
      */
     java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityFriendOrBuilder> 
         getListOrBuilderList();
     /**
-     * <code>repeated .common.PCommunityFriend List = 2;</code>
+     * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityFriendOrBuilder getListOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code common.PCommunityFriendList}
+   * Protobuf type {@code bbproto.PCommunityFriendList}
    *
    * <pre>
    * 社区好友信息列表
@@ -23107,7 +23301,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityFriendList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityFriendList)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityFriendList)
       PCommunityFriendListOrBuilder {
     // Use PCommunityFriendList.newBuilder() to construct.
     private PCommunityFriendList(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -23166,12 +23360,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityFriendList_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityFriendList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityFriendList_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityFriendList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityFriendList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityFriendList.Builder.class);
     }
@@ -23179,32 +23373,32 @@ public final class CommunityProtos {
     public static final int LIST_FIELD_NUMBER = 2;
     private java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend> list_;
     /**
-     * <code>repeated .common.PCommunityFriend List = 2;</code>
+     * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
      */
     public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend> getListList() {
       return list_;
     }
     /**
-     * <code>repeated .common.PCommunityFriend List = 2;</code>
+     * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
      */
     public java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityFriendOrBuilder> 
         getListOrBuilderList() {
       return list_;
     }
     /**
-     * <code>repeated .common.PCommunityFriend List = 2;</code>
+     * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
      */
     public int getListCount() {
       return list_.size();
     }
     /**
-     * <code>repeated .common.PCommunityFriend List = 2;</code>
+     * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
      */
     public com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend getList(int index) {
       return list_.get(index);
     }
     /**
-     * <code>repeated .common.PCommunityFriend List = 2;</code>
+     * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
      */
     public com.blemobi.sep.probuf.CommunityProtos.PCommunityFriendOrBuilder getListOrBuilder(
         int index) {
@@ -23315,7 +23509,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityFriendList}
+     * Protobuf type {@code bbproto.PCommunityFriendList}
      *
      * <pre>
      * 社区好友信息列表
@@ -23323,16 +23517,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityFriendList)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityFriendList)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityFriendListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityFriendList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityFriendList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityFriendList_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityFriendList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityFriendList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityFriendList.Builder.class);
       }
@@ -23365,7 +23559,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityFriendList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityFriendList_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityFriendList getDefaultInstanceForType() {
@@ -23473,7 +23667,7 @@ public final class CommunityProtos {
           com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend, com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityFriendOrBuilder> listBuilder_;
 
       /**
-       * <code>repeated .common.PCommunityFriend List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend> getListList() {
         if (listBuilder_ == null) {
@@ -23483,7 +23677,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityFriend List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
        */
       public int getListCount() {
         if (listBuilder_ == null) {
@@ -23493,7 +23687,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityFriend List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend getList(int index) {
         if (listBuilder_ == null) {
@@ -23503,7 +23697,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityFriend List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
        */
       public Builder setList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend value) {
@@ -23520,7 +23714,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityFriend List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
        */
       public Builder setList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend.Builder builderForValue) {
@@ -23534,7 +23728,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityFriend List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
        */
       public Builder addList(com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend value) {
         if (listBuilder_ == null) {
@@ -23550,7 +23744,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityFriend List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
        */
       public Builder addList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend value) {
@@ -23567,7 +23761,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityFriend List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
        */
       public Builder addList(
           com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend.Builder builderForValue) {
@@ -23581,7 +23775,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityFriend List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
        */
       public Builder addList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend.Builder builderForValue) {
@@ -23595,7 +23789,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityFriend List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
        */
       public Builder addAllList(
           java.lang.Iterable<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend> values) {
@@ -23610,7 +23804,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityFriend List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
        */
       public Builder clearList() {
         if (listBuilder_ == null) {
@@ -23623,7 +23817,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityFriend List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
        */
       public Builder removeList(int index) {
         if (listBuilder_ == null) {
@@ -23636,14 +23830,14 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityFriend List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend.Builder getListBuilder(
           int index) {
         return getListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PCommunityFriend List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityFriendOrBuilder getListOrBuilder(
           int index) {
@@ -23653,7 +23847,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityFriend List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
        */
       public java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityFriendOrBuilder> 
            getListOrBuilderList() {
@@ -23664,14 +23858,14 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityFriend List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend.Builder addListBuilder() {
         return getListFieldBuilder().addBuilder(
             com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityFriend List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend.Builder addListBuilder(
           int index) {
@@ -23679,7 +23873,7 @@ public final class CommunityProtos {
             index, com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityFriend List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFriend List = 2;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityFriend.Builder> 
            getListBuilderList() {
@@ -23710,10 +23904,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityFriendList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityFriendList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityFriendList)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityFriendList)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityFriendList DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityFriendList();
@@ -23754,7 +23948,7 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityFlagOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityFlag)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityFlag)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -23875,7 +24069,7 @@ public final class CommunityProtos {
         getContentBytes();
   }
   /**
-   * Protobuf type {@code common.PCommunityFlag}
+   * Protobuf type {@code bbproto.PCommunityFlag}
    *
    * <pre>
    * 标旗内容
@@ -23883,7 +24077,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityFlag extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityFlag)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityFlag)
       PCommunityFlagOrBuilder {
     // Use PCommunityFlag.newBuilder() to construct.
     private PCommunityFlag(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -23983,12 +24177,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityFlag_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityFlag_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityFlag_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityFlag_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag.Builder.class);
     }
@@ -24405,7 +24599,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityFlag}
+     * Protobuf type {@code bbproto.PCommunityFlag}
      *
      * <pre>
      * 标旗内容
@@ -24413,16 +24607,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityFlag)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityFlag)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityFlagOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityFlag_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityFlag_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityFlag_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityFlag_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag.Builder.class);
       }
@@ -24464,7 +24658,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityFlag_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityFlag_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag getDefaultInstanceForType() {
@@ -25133,10 +25327,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityFlag)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityFlag)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityFlag)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityFlag)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag();
@@ -25177,35 +25371,35 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityFlagListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityFlagList)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityFlagList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .common.PCommunityFlag List = 2;</code>
+     * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
      */
     java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag> 
         getListList();
     /**
-     * <code>repeated .common.PCommunityFlag List = 2;</code>
+     * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag getList(int index);
     /**
-     * <code>repeated .common.PCommunityFlag List = 2;</code>
+     * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
      */
     int getListCount();
     /**
-     * <code>repeated .common.PCommunityFlag List = 2;</code>
+     * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
      */
     java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityFlagOrBuilder> 
         getListOrBuilderList();
     /**
-     * <code>repeated .common.PCommunityFlag List = 2;</code>
+     * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityFlagOrBuilder getListOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code common.PCommunityFlagList}
+   * Protobuf type {@code bbproto.PCommunityFlagList}
    *
    * <pre>
    * 标旗内容列表
@@ -25213,7 +25407,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityFlagList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityFlagList)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityFlagList)
       PCommunityFlagListOrBuilder {
     // Use PCommunityFlagList.newBuilder() to construct.
     private PCommunityFlagList(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -25272,12 +25466,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityFlagList_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityFlagList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityFlagList_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityFlagList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityFlagList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityFlagList.Builder.class);
     }
@@ -25285,32 +25479,32 @@ public final class CommunityProtos {
     public static final int LIST_FIELD_NUMBER = 2;
     private java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag> list_;
     /**
-     * <code>repeated .common.PCommunityFlag List = 2;</code>
+     * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
      */
     public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag> getListList() {
       return list_;
     }
     /**
-     * <code>repeated .common.PCommunityFlag List = 2;</code>
+     * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
      */
     public java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityFlagOrBuilder> 
         getListOrBuilderList() {
       return list_;
     }
     /**
-     * <code>repeated .common.PCommunityFlag List = 2;</code>
+     * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
      */
     public int getListCount() {
       return list_.size();
     }
     /**
-     * <code>repeated .common.PCommunityFlag List = 2;</code>
+     * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
      */
     public com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag getList(int index) {
       return list_.get(index);
     }
     /**
-     * <code>repeated .common.PCommunityFlag List = 2;</code>
+     * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
      */
     public com.blemobi.sep.probuf.CommunityProtos.PCommunityFlagOrBuilder getListOrBuilder(
         int index) {
@@ -25421,7 +25615,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityFlagList}
+     * Protobuf type {@code bbproto.PCommunityFlagList}
      *
      * <pre>
      * 标旗内容列表
@@ -25429,16 +25623,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityFlagList)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityFlagList)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityFlagListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityFlagList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityFlagList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityFlagList_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityFlagList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityFlagList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityFlagList.Builder.class);
       }
@@ -25471,7 +25665,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityFlagList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityFlagList_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityFlagList getDefaultInstanceForType() {
@@ -25579,7 +25773,7 @@ public final class CommunityProtos {
           com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag, com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityFlagOrBuilder> listBuilder_;
 
       /**
-       * <code>repeated .common.PCommunityFlag List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag> getListList() {
         if (listBuilder_ == null) {
@@ -25589,7 +25783,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityFlag List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
        */
       public int getListCount() {
         if (listBuilder_ == null) {
@@ -25599,7 +25793,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityFlag List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag getList(int index) {
         if (listBuilder_ == null) {
@@ -25609,7 +25803,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityFlag List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
        */
       public Builder setList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag value) {
@@ -25626,7 +25820,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityFlag List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
        */
       public Builder setList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag.Builder builderForValue) {
@@ -25640,7 +25834,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityFlag List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
        */
       public Builder addList(com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag value) {
         if (listBuilder_ == null) {
@@ -25656,7 +25850,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityFlag List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
        */
       public Builder addList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag value) {
@@ -25673,7 +25867,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityFlag List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
        */
       public Builder addList(
           com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag.Builder builderForValue) {
@@ -25687,7 +25881,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityFlag List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
        */
       public Builder addList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag.Builder builderForValue) {
@@ -25701,7 +25895,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityFlag List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
        */
       public Builder addAllList(
           java.lang.Iterable<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag> values) {
@@ -25716,7 +25910,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityFlag List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
        */
       public Builder clearList() {
         if (listBuilder_ == null) {
@@ -25729,7 +25923,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityFlag List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
        */
       public Builder removeList(int index) {
         if (listBuilder_ == null) {
@@ -25742,14 +25936,14 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityFlag List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag.Builder getListBuilder(
           int index) {
         return getListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PCommunityFlag List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityFlagOrBuilder getListOrBuilder(
           int index) {
@@ -25759,7 +25953,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityFlag List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
        */
       public java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityFlagOrBuilder> 
            getListOrBuilderList() {
@@ -25770,14 +25964,14 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityFlag List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag.Builder addListBuilder() {
         return getListFieldBuilder().addBuilder(
             com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityFlag List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag.Builder addListBuilder(
           int index) {
@@ -25785,7 +25979,7 @@ public final class CommunityProtos {
             index, com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityFlag List = 2;</code>
+       * <code>repeated .bbproto.PCommunityFlag List = 2;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityFlag.Builder> 
            getListBuilderList() {
@@ -25816,10 +26010,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityFlagList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityFlagList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityFlagList)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityFlagList)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityFlagList DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityFlagList();
@@ -25860,7 +26054,7 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityNotificationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityNotification)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityNotification)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -25954,7 +26148,7 @@ public final class CommunityProtos {
         getJumpExIDBytes();
 
     /**
-     * <code>optional .common.PUserBase User = 9;</code>
+     * <code>optional .bbproto.PUserBase User = 9;</code>
      *
      * <pre>
      * type为0，1时传递的用户信息
@@ -25962,7 +26156,7 @@ public final class CommunityProtos {
      */
     boolean hasUser();
     /**
-     * <code>optional .common.PUserBase User = 9;</code>
+     * <code>optional .bbproto.PUserBase User = 9;</code>
      *
      * <pre>
      * type为0，1时传递的用户信息
@@ -25970,7 +26164,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.AccountProtos.PUserBase getUser();
     /**
-     * <code>optional .common.PUserBase User = 9;</code>
+     * <code>optional .bbproto.PUserBase User = 9;</code>
      *
      * <pre>
      * type为0，1时传递的用户信息
@@ -25979,7 +26173,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserOrBuilder();
   }
   /**
-   * Protobuf type {@code common.PCommunityNotification}
+   * Protobuf type {@code bbproto.PCommunityNotification}
    *
    * <pre>
    * 通知内容
@@ -25987,7 +26181,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityNotification extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityNotification)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityNotification)
       PCommunityNotificationOrBuilder {
     // Use PCommunityNotification.newBuilder() to construct.
     private PCommunityNotification(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -26092,12 +26286,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityNotification_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityNotification_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityNotification_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityNotification_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification.Builder.class);
     }
@@ -26289,7 +26483,7 @@ public final class CommunityProtos {
     public static final int USER_FIELD_NUMBER = 9;
     private com.blemobi.sep.probuf.AccountProtos.PUserBase user_;
     /**
-     * <code>optional .common.PUserBase User = 9;</code>
+     * <code>optional .bbproto.PUserBase User = 9;</code>
      *
      * <pre>
      * type为0，1时传递的用户信息
@@ -26299,7 +26493,7 @@ public final class CommunityProtos {
       return user_ != null;
     }
     /**
-     * <code>optional .common.PUserBase User = 9;</code>
+     * <code>optional .bbproto.PUserBase User = 9;</code>
      *
      * <pre>
      * type为0，1时传递的用户信息
@@ -26309,7 +26503,7 @@ public final class CommunityProtos {
       return user_ == null ? com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : user_;
     }
     /**
-     * <code>optional .common.PUserBase User = 9;</code>
+     * <code>optional .bbproto.PUserBase User = 9;</code>
      *
      * <pre>
      * type为0，1时传递的用户信息
@@ -26472,7 +26666,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityNotification}
+     * Protobuf type {@code bbproto.PCommunityNotification}
      *
      * <pre>
      * 通知内容
@@ -26480,16 +26674,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityNotification)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityNotification)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityNotificationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityNotification_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityNotification_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityNotification_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityNotification_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification.Builder.class);
       }
@@ -26535,7 +26729,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityNotification_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityNotification_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification getDefaultInstanceForType() {
@@ -27058,7 +27252,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> userBuilder_;
       /**
-       * <code>optional .common.PUserBase User = 9;</code>
+       * <code>optional .bbproto.PUserBase User = 9;</code>
        *
        * <pre>
        * type为0，1时传递的用户信息
@@ -27068,7 +27262,7 @@ public final class CommunityProtos {
         return userBuilder_ != null || user_ != null;
       }
       /**
-       * <code>optional .common.PUserBase User = 9;</code>
+       * <code>optional .bbproto.PUserBase User = 9;</code>
        *
        * <pre>
        * type为0，1时传递的用户信息
@@ -27082,7 +27276,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PUserBase User = 9;</code>
+       * <code>optional .bbproto.PUserBase User = 9;</code>
        *
        * <pre>
        * type为0，1时传递的用户信息
@@ -27102,7 +27296,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 9;</code>
+       * <code>optional .bbproto.PUserBase User = 9;</code>
        *
        * <pre>
        * type为0，1时传递的用户信息
@@ -27120,7 +27314,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 9;</code>
+       * <code>optional .bbproto.PUserBase User = 9;</code>
        *
        * <pre>
        * type为0，1时传递的用户信息
@@ -27142,7 +27336,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 9;</code>
+       * <code>optional .bbproto.PUserBase User = 9;</code>
        *
        * <pre>
        * type为0，1时传递的用户信息
@@ -27160,7 +27354,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 9;</code>
+       * <code>optional .bbproto.PUserBase User = 9;</code>
        *
        * <pre>
        * type为0，1时传递的用户信息
@@ -27172,7 +27366,7 @@ public final class CommunityProtos {
         return getUserFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PUserBase User = 9;</code>
+       * <code>optional .bbproto.PUserBase User = 9;</code>
        *
        * <pre>
        * type为0，1时传递的用户信息
@@ -27187,7 +27381,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PUserBase User = 9;</code>
+       * <code>optional .bbproto.PUserBase User = 9;</code>
        *
        * <pre>
        * type为0，1时传递的用户信息
@@ -27217,10 +27411,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityNotification)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityNotification)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityNotification)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityNotification)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification();
@@ -27261,35 +27455,35 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityNotificationListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityNotificationList)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityNotificationList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .common.PCommunityNotification List = 2;</code>
+     * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
      */
     java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification> 
         getListList();
     /**
-     * <code>repeated .common.PCommunityNotification List = 2;</code>
+     * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification getList(int index);
     /**
-     * <code>repeated .common.PCommunityNotification List = 2;</code>
+     * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
      */
     int getListCount();
     /**
-     * <code>repeated .common.PCommunityNotification List = 2;</code>
+     * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
      */
     java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityNotificationOrBuilder> 
         getListOrBuilderList();
     /**
-     * <code>repeated .common.PCommunityNotification List = 2;</code>
+     * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityNotificationOrBuilder getListOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code common.PCommunityNotificationList}
+   * Protobuf type {@code bbproto.PCommunityNotificationList}
    *
    * <pre>
    * 通知内容列表
@@ -27297,7 +27491,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityNotificationList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityNotificationList)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityNotificationList)
       PCommunityNotificationListOrBuilder {
     // Use PCommunityNotificationList.newBuilder() to construct.
     private PCommunityNotificationList(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -27356,12 +27550,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityNotificationList_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityNotificationList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityNotificationList_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityNotificationList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityNotificationList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityNotificationList.Builder.class);
     }
@@ -27369,32 +27563,32 @@ public final class CommunityProtos {
     public static final int LIST_FIELD_NUMBER = 2;
     private java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification> list_;
     /**
-     * <code>repeated .common.PCommunityNotification List = 2;</code>
+     * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
      */
     public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification> getListList() {
       return list_;
     }
     /**
-     * <code>repeated .common.PCommunityNotification List = 2;</code>
+     * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
      */
     public java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityNotificationOrBuilder> 
         getListOrBuilderList() {
       return list_;
     }
     /**
-     * <code>repeated .common.PCommunityNotification List = 2;</code>
+     * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
      */
     public int getListCount() {
       return list_.size();
     }
     /**
-     * <code>repeated .common.PCommunityNotification List = 2;</code>
+     * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
      */
     public com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification getList(int index) {
       return list_.get(index);
     }
     /**
-     * <code>repeated .common.PCommunityNotification List = 2;</code>
+     * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
      */
     public com.blemobi.sep.probuf.CommunityProtos.PCommunityNotificationOrBuilder getListOrBuilder(
         int index) {
@@ -27505,7 +27699,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityNotificationList}
+     * Protobuf type {@code bbproto.PCommunityNotificationList}
      *
      * <pre>
      * 通知内容列表
@@ -27513,16 +27707,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityNotificationList)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityNotificationList)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityNotificationListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityNotificationList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityNotificationList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityNotificationList_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityNotificationList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityNotificationList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityNotificationList.Builder.class);
       }
@@ -27555,7 +27749,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityNotificationList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityNotificationList_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityNotificationList getDefaultInstanceForType() {
@@ -27663,7 +27857,7 @@ public final class CommunityProtos {
           com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification, com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityNotificationOrBuilder> listBuilder_;
 
       /**
-       * <code>repeated .common.PCommunityNotification List = 2;</code>
+       * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification> getListList() {
         if (listBuilder_ == null) {
@@ -27673,7 +27867,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityNotification List = 2;</code>
+       * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
        */
       public int getListCount() {
         if (listBuilder_ == null) {
@@ -27683,7 +27877,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityNotification List = 2;</code>
+       * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification getList(int index) {
         if (listBuilder_ == null) {
@@ -27693,7 +27887,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityNotification List = 2;</code>
+       * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
        */
       public Builder setList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification value) {
@@ -27710,7 +27904,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityNotification List = 2;</code>
+       * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
        */
       public Builder setList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification.Builder builderForValue) {
@@ -27724,7 +27918,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityNotification List = 2;</code>
+       * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
        */
       public Builder addList(com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification value) {
         if (listBuilder_ == null) {
@@ -27740,7 +27934,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityNotification List = 2;</code>
+       * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
        */
       public Builder addList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification value) {
@@ -27757,7 +27951,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityNotification List = 2;</code>
+       * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
        */
       public Builder addList(
           com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification.Builder builderForValue) {
@@ -27771,7 +27965,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityNotification List = 2;</code>
+       * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
        */
       public Builder addList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification.Builder builderForValue) {
@@ -27785,7 +27979,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityNotification List = 2;</code>
+       * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
        */
       public Builder addAllList(
           java.lang.Iterable<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification> values) {
@@ -27800,7 +27994,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityNotification List = 2;</code>
+       * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
        */
       public Builder clearList() {
         if (listBuilder_ == null) {
@@ -27813,7 +28007,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityNotification List = 2;</code>
+       * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
        */
       public Builder removeList(int index) {
         if (listBuilder_ == null) {
@@ -27826,14 +28020,14 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityNotification List = 2;</code>
+       * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification.Builder getListBuilder(
           int index) {
         return getListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PCommunityNotification List = 2;</code>
+       * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityNotificationOrBuilder getListOrBuilder(
           int index) {
@@ -27843,7 +28037,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityNotification List = 2;</code>
+       * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
        */
       public java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityNotificationOrBuilder> 
            getListOrBuilderList() {
@@ -27854,14 +28048,14 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityNotification List = 2;</code>
+       * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification.Builder addListBuilder() {
         return getListFieldBuilder().addBuilder(
             com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityNotification List = 2;</code>
+       * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification.Builder addListBuilder(
           int index) {
@@ -27869,7 +28063,7 @@ public final class CommunityProtos {
             index, com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityNotification List = 2;</code>
+       * <code>repeated .bbproto.PCommunityNotification List = 2;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityNotification.Builder> 
            getListBuilderList() {
@@ -27900,10 +28094,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityNotificationList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityNotificationList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityNotificationList)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityNotificationList)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityNotificationList DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityNotificationList();
@@ -27944,7 +28138,7 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityNotificationUnReadOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityNotificationUnRead)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityNotificationUnRead)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -27953,7 +28147,7 @@ public final class CommunityProtos {
     long getUnread();
   }
   /**
-   * Protobuf type {@code common.PCommunityNotificationUnRead}
+   * Protobuf type {@code bbproto.PCommunityNotificationUnRead}
    *
    * <pre>
    * 未读通知状态
@@ -27961,7 +28155,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityNotificationUnRead extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityNotificationUnRead)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityNotificationUnRead)
       PCommunityNotificationUnReadOrBuilder {
     // Use PCommunityNotificationUnRead.newBuilder() to construct.
     private PCommunityNotificationUnRead(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -28014,12 +28208,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityNotificationUnRead_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityNotificationUnRead_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityNotificationUnRead_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityNotificationUnRead_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityNotificationUnRead.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityNotificationUnRead.Builder.class);
     }
@@ -28137,7 +28331,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityNotificationUnRead}
+     * Protobuf type {@code bbproto.PCommunityNotificationUnRead}
      *
      * <pre>
      * 未读通知状态
@@ -28145,16 +28339,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityNotificationUnRead)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityNotificationUnRead)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityNotificationUnReadOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityNotificationUnRead_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityNotificationUnRead_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityNotificationUnRead_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityNotificationUnRead_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityNotificationUnRead.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityNotificationUnRead.Builder.class);
       }
@@ -28182,7 +28376,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityNotificationUnRead_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityNotificationUnRead_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityNotificationUnRead getDefaultInstanceForType() {
@@ -28280,10 +28474,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityNotificationUnRead)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityNotificationUnRead)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityNotificationUnRead)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityNotificationUnRead)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityNotificationUnRead DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityNotificationUnRead();
@@ -28323,12 +28517,12 @@ public final class CommunityProtos {
 
   }
 
-  public interface PIndiseCommunityUserOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PIndiseCommunityUser)
+  public interface PInsideCommunityUserOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PInsideCommunityUser)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .common.PUserBase User = 2;</code>
+     * <code>optional .bbproto.PUserBase User = 2;</code>
      *
      * <pre>
      * 用户基础信息
@@ -28336,7 +28530,7 @@ public final class CommunityProtos {
      */
     boolean hasUser();
     /**
-     * <code>optional .common.PUserBase User = 2;</code>
+     * <code>optional .bbproto.PUserBase User = 2;</code>
      *
      * <pre>
      * 用户基础信息
@@ -28344,7 +28538,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.AccountProtos.PUserBase getUser();
     /**
-     * <code>optional .common.PUserBase User = 2;</code>
+     * <code>optional .bbproto.PUserBase User = 2;</code>
      *
      * <pre>
      * 用户基础信息
@@ -28380,21 +28574,21 @@ public final class CommunityProtos {
     long getBeBlacklistTime();
   }
   /**
-   * Protobuf type {@code common.PIndiseCommunityUser}
+   * Protobuf type {@code bbproto.PInsideCommunityUser}
    *
    * <pre>
    * 社区用户信息
    * </pre>
    */
-  public  static final class PIndiseCommunityUser extends
+  public  static final class PInsideCommunityUser extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PIndiseCommunityUser)
-      PIndiseCommunityUserOrBuilder {
-    // Use PIndiseCommunityUser.newBuilder() to construct.
-    private PIndiseCommunityUser(com.google.protobuf.GeneratedMessage.Builder builder) {
+      // @@protoc_insertion_point(message_implements:bbproto.PInsideCommunityUser)
+      PInsideCommunityUserOrBuilder {
+    // Use PInsideCommunityUser.newBuilder() to construct.
+    private PInsideCommunityUser(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
-    private PIndiseCommunityUser() {
+    private PInsideCommunityUser() {
       followTime_ = 0L;
       forbidTime_ = 0L;
       beBlacklistTime_ = 0L;
@@ -28405,7 +28599,7 @@ public final class CommunityProtos {
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
     }
-    private PIndiseCommunityUser(
+    private PInsideCommunityUser(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
       this();
@@ -28466,20 +28660,20 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PIndiseCommunityUser_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PInsideCommunityUser_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PIndiseCommunityUser_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PInsideCommunityUser_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser.class, com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser.Builder.class);
+              com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser.class, com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser.Builder.class);
     }
 
     public static final int USER_FIELD_NUMBER = 2;
     private com.blemobi.sep.probuf.AccountProtos.PUserBase user_;
     /**
-     * <code>optional .common.PUserBase User = 2;</code>
+     * <code>optional .bbproto.PUserBase User = 2;</code>
      *
      * <pre>
      * 用户基础信息
@@ -28489,7 +28683,7 @@ public final class CommunityProtos {
       return user_ != null;
     }
     /**
-     * <code>optional .common.PUserBase User = 2;</code>
+     * <code>optional .bbproto.PUserBase User = 2;</code>
      *
      * <pre>
      * 用户基础信息
@@ -28499,7 +28693,7 @@ public final class CommunityProtos {
       return user_ == null ? com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : user_;
     }
     /**
-     * <code>optional .common.PUserBase User = 2;</code>
+     * <code>optional .bbproto.PUserBase User = 2;</code>
      *
      * <pre>
      * 用户基础信息
@@ -28601,53 +28795,53 @@ public final class CommunityProtos {
     }
 
     private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser parseFrom(
+    public static com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser parseFrom(
+    public static com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser parseFrom(byte[] data)
+    public static com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser parseFrom(
+    public static com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser parseFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser parseFrom(
+    public static com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser parseDelimitedFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser parseDelimitedFrom(
+    public static com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser parseFrom(
+    public static com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser parseFrom(
+    public static com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -28658,7 +28852,7 @@ public final class CommunityProtos {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser prototype) {
+    public static Builder newBuilder(com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -28673,7 +28867,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PIndiseCommunityUser}
+     * Protobuf type {@code bbproto.PInsideCommunityUser}
      *
      * <pre>
      * 社区用户信息
@@ -28681,21 +28875,21 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PIndiseCommunityUser)
-        com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserOrBuilder {
+        // @@protoc_insertion_point(builder_implements:bbproto.PInsideCommunityUser)
+        com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PIndiseCommunityUser_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PInsideCommunityUser_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PIndiseCommunityUser_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PInsideCommunityUser_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser.class, com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser.Builder.class);
+                com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser.class, com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser.Builder.class);
       }
 
-      // Construct using com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser.newBuilder()
+      // Construct using com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -28728,23 +28922,23 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PIndiseCommunityUser_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PInsideCommunityUser_descriptor;
       }
 
-      public com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser.getDefaultInstance();
+      public com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser.getDefaultInstance();
       }
 
-      public com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser build() {
-        com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser result = buildPartial();
+      public com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser build() {
+        com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser buildPartial() {
-        com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser result = new com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser(this);
+      public com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser buildPartial() {
+        com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser result = new com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser(this);
         if (userBuilder_ == null) {
           result.user_ = user_;
         } else {
@@ -28758,16 +28952,16 @@ public final class CommunityProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser) {
-          return mergeFrom((com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser)other);
+        if (other instanceof com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser) {
+          return mergeFrom((com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser other) {
-        if (other == com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser other) {
+        if (other == com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser.getDefaultInstance()) return this;
         if (other.hasUser()) {
           mergeUser(other.getUser());
         }
@@ -28792,11 +28986,11 @@ public final class CommunityProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser parsedMessage = null;
+        com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser) e.getUnfinishedMessage();
+          parsedMessage = (com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -28810,7 +29004,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> userBuilder_;
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 用户基础信息
@@ -28820,7 +29014,7 @@ public final class CommunityProtos {
         return userBuilder_ != null || user_ != null;
       }
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 用户基础信息
@@ -28834,7 +29028,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 用户基础信息
@@ -28854,7 +29048,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 用户基础信息
@@ -28872,7 +29066,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 用户基础信息
@@ -28894,7 +29088,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 用户基础信息
@@ -28912,7 +29106,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 用户基础信息
@@ -28924,7 +29118,7 @@ public final class CommunityProtos {
         return getUserFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 用户基础信息
@@ -28939,7 +29133,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PUserBase User = 2;</code>
+       * <code>optional .bbproto.PUserBase User = 2;</code>
        *
        * <pre>
        * 用户基础信息
@@ -29083,27 +29277,27 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PIndiseCommunityUser)
+      // @@protoc_insertion_point(builder_scope:bbproto.PInsideCommunityUser)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PIndiseCommunityUser)
-    private static final com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:bbproto.PInsideCommunityUser)
+    private static final com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser();
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser();
     }
 
-    public static com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser getDefaultInstance() {
+    public static com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PIndiseCommunityUser> PARSER =
-        new com.google.protobuf.AbstractParser<PIndiseCommunityUser>() {
-      public PIndiseCommunityUser parsePartialFrom(
+    public static final com.google.protobuf.Parser<PInsideCommunityUser> PARSER =
+        new com.google.protobuf.AbstractParser<PInsideCommunityUser>() {
+      public PInsideCommunityUser parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         try {
-          return new PIndiseCommunityUser(input, extensionRegistry);
+          return new PInsideCommunityUser(input, extensionRegistry);
         } catch (RuntimeException e) {
           if (e.getCause() instanceof
               com.google.protobuf.InvalidProtocolBufferException) {
@@ -29116,60 +29310,60 @@ public final class CommunityProtos {
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PIndiseCommunityUser> getParserForType() {
+    public com.google.protobuf.Parser<PInsideCommunityUser> getParserForType() {
       return PARSER;
     }
 
-    public com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser getDefaultInstanceForType() {
+    public com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface PIndiseCommunityUserListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PIndiseCommunityUserList)
+  public interface PInsideCommunityUserListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PInsideCommunityUserList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+     * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
      */
-    java.util.List<com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser> 
+    java.util.List<com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser> 
         getListList();
     /**
-     * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+     * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
      */
-    com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser getList(int index);
+    com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser getList(int index);
     /**
-     * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+     * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
      */
     int getListCount();
     /**
-     * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+     * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
      */
-    java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserOrBuilder> 
+    java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserOrBuilder> 
         getListOrBuilderList();
     /**
-     * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+     * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
      */
-    com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserOrBuilder getListOrBuilder(
+    com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserOrBuilder getListOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code common.PIndiseCommunityUserList}
+   * Protobuf type {@code bbproto.PInsideCommunityUserList}
    *
    * <pre>
    * 社区用户列表信息
    * </pre>
    */
-  public  static final class PIndiseCommunityUserList extends
+  public  static final class PInsideCommunityUserList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PIndiseCommunityUserList)
-      PIndiseCommunityUserListOrBuilder {
-    // Use PIndiseCommunityUserList.newBuilder() to construct.
-    private PIndiseCommunityUserList(com.google.protobuf.GeneratedMessage.Builder builder) {
+      // @@protoc_insertion_point(message_implements:bbproto.PInsideCommunityUserList)
+      PInsideCommunityUserListOrBuilder {
+    // Use PInsideCommunityUserList.newBuilder() to construct.
+    private PInsideCommunityUserList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
-    private PIndiseCommunityUserList() {
+    private PInsideCommunityUserList() {
       list_ = java.util.Collections.emptyList();
     }
 
@@ -29178,7 +29372,7 @@ public final class CommunityProtos {
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
     }
-    private PIndiseCommunityUserList(
+    private PInsideCommunityUserList(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
       this();
@@ -29199,10 +29393,10 @@ public final class CommunityProtos {
             }
             case 18: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                list_ = new java.util.ArrayList<com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser>();
+                list_ = new java.util.ArrayList<com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser.PARSER, extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser.PARSER, extensionRegistry));
               break;
             }
           }
@@ -29222,47 +29416,47 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PIndiseCommunityUserList_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PInsideCommunityUserList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PIndiseCommunityUserList_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PInsideCommunityUserList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList.class, com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList.Builder.class);
+              com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList.class, com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList.Builder.class);
     }
 
     public static final int LIST_FIELD_NUMBER = 2;
-    private java.util.List<com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser> list_;
+    private java.util.List<com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser> list_;
     /**
-     * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+     * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
      */
-    public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser> getListList() {
+    public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser> getListList() {
       return list_;
     }
     /**
-     * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+     * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
      */
-    public java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserOrBuilder> 
+    public java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserOrBuilder> 
         getListOrBuilderList() {
       return list_;
     }
     /**
-     * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+     * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
      */
     public int getListCount() {
       return list_.size();
     }
     /**
-     * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+     * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
      */
-    public com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser getList(int index) {
+    public com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser getList(int index) {
       return list_.get(index);
     }
     /**
-     * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+     * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
      */
-    public com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserOrBuilder getListOrBuilder(
+    public com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserOrBuilder getListOrBuilder(
         int index) {
       return list_.get(index);
     }
@@ -29299,53 +29493,53 @@ public final class CommunityProtos {
     }
 
     private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList parseFrom(
+    public static com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList parseFrom(
+    public static com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList parseFrom(byte[] data)
+    public static com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList parseFrom(
+    public static com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList parseFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList parseFrom(
+    public static com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList parseDelimitedFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList parseDelimitedFrom(
+    public static com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList parseFrom(
+    public static com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList parseFrom(
+    public static com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -29356,7 +29550,7 @@ public final class CommunityProtos {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList prototype) {
+    public static Builder newBuilder(com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -29371,7 +29565,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PIndiseCommunityUserList}
+     * Protobuf type {@code bbproto.PInsideCommunityUserList}
      *
      * <pre>
      * 社区用户列表信息
@@ -29379,21 +29573,21 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PIndiseCommunityUserList)
-        com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserListOrBuilder {
+        // @@protoc_insertion_point(builder_implements:bbproto.PInsideCommunityUserList)
+        com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PIndiseCommunityUserList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PInsideCommunityUserList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PIndiseCommunityUserList_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PInsideCommunityUserList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList.class, com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList.Builder.class);
+                com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList.class, com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList.Builder.class);
       }
 
-      // Construct using com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList.newBuilder()
+      // Construct using com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -29421,23 +29615,23 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PIndiseCommunityUserList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PInsideCommunityUserList_descriptor;
       }
 
-      public com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList.getDefaultInstance();
+      public com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList.getDefaultInstance();
       }
 
-      public com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList build() {
-        com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList result = buildPartial();
+      public com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList build() {
+        com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList buildPartial() {
-        com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList result = new com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList(this);
+      public com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList buildPartial() {
+        com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList result = new com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList(this);
         int from_bitField0_ = bitField0_;
         if (listBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -29453,16 +29647,16 @@ public final class CommunityProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList) {
-          return mergeFrom((com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList)other);
+        if (other instanceof com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList) {
+          return mergeFrom((com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList other) {
-        if (other == com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList other) {
+        if (other == com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList.getDefaultInstance()) return this;
         if (listBuilder_ == null) {
           if (!other.list_.isEmpty()) {
             if (list_.isEmpty()) {
@@ -29501,11 +29695,11 @@ public final class CommunityProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList parsedMessage = null;
+        com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList) e.getUnfinishedMessage();
+          parsedMessage = (com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -29516,22 +29710,22 @@ public final class CommunityProtos {
       }
       private int bitField0_;
 
-      private java.util.List<com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser> list_ =
+      private java.util.List<com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser> list_ =
         java.util.Collections.emptyList();
       private void ensureListIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          list_ = new java.util.ArrayList<com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser>(list_);
+          list_ = new java.util.ArrayList<com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser>(list_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser, com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser.Builder, com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserOrBuilder> listBuilder_;
+          com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser, com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser.Builder, com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserOrBuilder> listBuilder_;
 
       /**
-       * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+       * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
        */
-      public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser> getListList() {
+      public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser> getListList() {
         if (listBuilder_ == null) {
           return java.util.Collections.unmodifiableList(list_);
         } else {
@@ -29539,7 +29733,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+       * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
        */
       public int getListCount() {
         if (listBuilder_ == null) {
@@ -29549,9 +29743,9 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+       * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
        */
-      public com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser getList(int index) {
+      public com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser getList(int index) {
         if (listBuilder_ == null) {
           return list_.get(index);
         } else {
@@ -29559,10 +29753,10 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+       * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
        */
       public Builder setList(
-          int index, com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser value) {
+          int index, com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser value) {
         if (listBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -29576,10 +29770,10 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+       * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
        */
       public Builder setList(
-          int index, com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser.Builder builderForValue) {
+          int index, com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser.Builder builderForValue) {
         if (listBuilder_ == null) {
           ensureListIsMutable();
           list_.set(index, builderForValue.build());
@@ -29590,9 +29784,9 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+       * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
        */
-      public Builder addList(com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser value) {
+      public Builder addList(com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser value) {
         if (listBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -29606,10 +29800,10 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+       * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
        */
       public Builder addList(
-          int index, com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser value) {
+          int index, com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser value) {
         if (listBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -29623,10 +29817,10 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+       * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
        */
       public Builder addList(
-          com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser.Builder builderForValue) {
+          com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser.Builder builderForValue) {
         if (listBuilder_ == null) {
           ensureListIsMutable();
           list_.add(builderForValue.build());
@@ -29637,10 +29831,10 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+       * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
        */
       public Builder addList(
-          int index, com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser.Builder builderForValue) {
+          int index, com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser.Builder builderForValue) {
         if (listBuilder_ == null) {
           ensureListIsMutable();
           list_.add(index, builderForValue.build());
@@ -29651,10 +29845,10 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+       * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
        */
       public Builder addAllList(
-          java.lang.Iterable<? extends com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser> values) {
+          java.lang.Iterable<? extends com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser> values) {
         if (listBuilder_ == null) {
           ensureListIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -29666,7 +29860,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+       * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
        */
       public Builder clearList() {
         if (listBuilder_ == null) {
@@ -29679,7 +29873,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+       * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
        */
       public Builder removeList(int index) {
         if (listBuilder_ == null) {
@@ -29692,16 +29886,16 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+       * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
        */
-      public com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser.Builder getListBuilder(
+      public com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser.Builder getListBuilder(
           int index) {
         return getListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+       * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
        */
-      public com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserOrBuilder getListOrBuilder(
+      public com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserOrBuilder getListOrBuilder(
           int index) {
         if (listBuilder_ == null) {
           return list_.get(index);  } else {
@@ -29709,9 +29903,9 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+       * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
        */
-      public java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserOrBuilder> 
+      public java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserOrBuilder> 
            getListOrBuilderList() {
         if (listBuilder_ != null) {
           return listBuilder_.getMessageOrBuilderList();
@@ -29720,33 +29914,33 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+       * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
        */
-      public com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser.Builder addListBuilder() {
+      public com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser.Builder addListBuilder() {
         return getListFieldBuilder().addBuilder(
-            com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser.getDefaultInstance());
+            com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+       * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
        */
-      public com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser.Builder addListBuilder(
+      public com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser.Builder addListBuilder(
           int index) {
         return getListFieldBuilder().addBuilder(
-            index, com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser.getDefaultInstance());
+            index, com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PIndiseCommunityUser List = 2;</code>
+       * <code>repeated .bbproto.PInsideCommunityUser List = 2;</code>
        */
-      public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser.Builder> 
+      public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser.Builder> 
            getListBuilderList() {
         return getListFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser, com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser.Builder, com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserOrBuilder> 
+          com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser, com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser.Builder, com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserOrBuilder> 
           getListFieldBuilder() {
         if (listBuilder_ == null) {
           listBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser, com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUser.Builder, com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserOrBuilder>(
+              com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser, com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser.Builder, com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserOrBuilder>(
                   list_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
@@ -29766,27 +29960,27 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PIndiseCommunityUserList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PInsideCommunityUserList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PIndiseCommunityUserList)
-    private static final com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:bbproto.PInsideCommunityUserList)
+    private static final com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList();
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList();
     }
 
-    public static com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList getDefaultInstance() {
+    public static com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PIndiseCommunityUserList> PARSER =
-        new com.google.protobuf.AbstractParser<PIndiseCommunityUserList>() {
-      public PIndiseCommunityUserList parsePartialFrom(
+    public static final com.google.protobuf.Parser<PInsideCommunityUserList> PARSER =
+        new com.google.protobuf.AbstractParser<PInsideCommunityUserList>() {
+      public PInsideCommunityUserList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         try {
-          return new PIndiseCommunityUserList(input, extensionRegistry);
+          return new PInsideCommunityUserList(input, extensionRegistry);
         } catch (RuntimeException e) {
           if (e.getCause() instanceof
               com.google.protobuf.InvalidProtocolBufferException) {
@@ -29799,18 +29993,18 @@ public final class CommunityProtos {
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PIndiseCommunityUserList> getParserForType() {
+    public com.google.protobuf.Parser<PInsideCommunityUserList> getParserForType() {
       return PARSER;
     }
 
-    public com.blemobi.sep.probuf.CommunityProtos.PIndiseCommunityUserList getDefaultInstanceForType() {
+    public com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface PCommunityBannerInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityBannerInfo)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityBannerInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -29841,7 +30035,7 @@ public final class CommunityProtos {
         getNameBytes();
 
     /**
-     * <code>optional .common.PCommunityResource ImgRes = 3;</code>
+     * <code>optional .bbproto.PCommunityResource ImgRes = 3;</code>
      *
      * <pre>
      * banner的图片资源信息；
@@ -29849,7 +30043,7 @@ public final class CommunityProtos {
      */
     boolean hasImgRes();
     /**
-     * <code>optional .common.PCommunityResource ImgRes = 3;</code>
+     * <code>optional .bbproto.PCommunityResource ImgRes = 3;</code>
      *
      * <pre>
      * banner的图片资源信息；
@@ -29857,7 +30051,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityResource getImgRes();
     /**
-     * <code>optional .common.PCommunityResource ImgRes = 3;</code>
+     * <code>optional .bbproto.PCommunityResource ImgRes = 3;</code>
      *
      * <pre>
      * banner的图片资源信息；
@@ -29866,7 +30060,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceOrBuilder getImgResOrBuilder();
 
     /**
-     * <code>optional .common.PCommunityResource LinkRes = 4;</code>
+     * <code>optional .bbproto.PCommunityResource LinkRes = 4;</code>
      *
      * <pre>
      * banner链接信息，空(无链接)；非空时，type可选的有：url(链接地址)； post(帖子id)； notice(公告id)；对应信息保存在URL字段;如果链接需要保存名字，则保存在Name字段
@@ -29874,7 +30068,7 @@ public final class CommunityProtos {
      */
     boolean hasLinkRes();
     /**
-     * <code>optional .common.PCommunityResource LinkRes = 4;</code>
+     * <code>optional .bbproto.PCommunityResource LinkRes = 4;</code>
      *
      * <pre>
      * banner链接信息，空(无链接)；非空时，type可选的有：url(链接地址)； post(帖子id)； notice(公告id)；对应信息保存在URL字段;如果链接需要保存名字，则保存在Name字段
@@ -29882,7 +30076,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityResource getLinkRes();
     /**
-     * <code>optional .common.PCommunityResource LinkRes = 4;</code>
+     * <code>optional .bbproto.PCommunityResource LinkRes = 4;</code>
      *
      * <pre>
      * banner链接信息，空(无链接)；非空时，type可选的有：url(链接地址)； post(帖子id)； notice(公告id)；对应信息保存在URL字段;如果链接需要保存名字，则保存在Name字段
@@ -29891,7 +30085,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceOrBuilder getLinkResOrBuilder();
   }
   /**
-   * Protobuf type {@code common.PCommunityBannerInfo}
+   * Protobuf type {@code bbproto.PCommunityBannerInfo}
    *
    * <pre>
    * 社区Banner资源信息
@@ -29899,7 +30093,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityBannerInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityBannerInfo)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityBannerInfo)
       PCommunityBannerInfoOrBuilder {
     // Use PCommunityBannerInfo.newBuilder() to construct.
     private PCommunityBannerInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -29985,12 +30179,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityBannerInfo_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityBannerInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityBannerInfo_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityBannerInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfo.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfo.Builder.class);
     }
@@ -30055,7 +30249,7 @@ public final class CommunityProtos {
     public static final int IMGRES_FIELD_NUMBER = 3;
     private com.blemobi.sep.probuf.CommunityProtos.PCommunityResource imgRes_;
     /**
-     * <code>optional .common.PCommunityResource ImgRes = 3;</code>
+     * <code>optional .bbproto.PCommunityResource ImgRes = 3;</code>
      *
      * <pre>
      * banner的图片资源信息；
@@ -30065,7 +30259,7 @@ public final class CommunityProtos {
       return imgRes_ != null;
     }
     /**
-     * <code>optional .common.PCommunityResource ImgRes = 3;</code>
+     * <code>optional .bbproto.PCommunityResource ImgRes = 3;</code>
      *
      * <pre>
      * banner的图片资源信息；
@@ -30075,7 +30269,7 @@ public final class CommunityProtos {
       return imgRes_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityResource.getDefaultInstance() : imgRes_;
     }
     /**
-     * <code>optional .common.PCommunityResource ImgRes = 3;</code>
+     * <code>optional .bbproto.PCommunityResource ImgRes = 3;</code>
      *
      * <pre>
      * banner的图片资源信息；
@@ -30088,7 +30282,7 @@ public final class CommunityProtos {
     public static final int LINKRES_FIELD_NUMBER = 4;
     private com.blemobi.sep.probuf.CommunityProtos.PCommunityResource linkRes_;
     /**
-     * <code>optional .common.PCommunityResource LinkRes = 4;</code>
+     * <code>optional .bbproto.PCommunityResource LinkRes = 4;</code>
      *
      * <pre>
      * banner链接信息，空(无链接)；非空时，type可选的有：url(链接地址)； post(帖子id)； notice(公告id)；对应信息保存在URL字段;如果链接需要保存名字，则保存在Name字段
@@ -30098,7 +30292,7 @@ public final class CommunityProtos {
       return linkRes_ != null;
     }
     /**
-     * <code>optional .common.PCommunityResource LinkRes = 4;</code>
+     * <code>optional .bbproto.PCommunityResource LinkRes = 4;</code>
      *
      * <pre>
      * banner链接信息，空(无链接)；非空时，type可选的有：url(链接地址)； post(帖子id)； notice(公告id)；对应信息保存在URL字段;如果链接需要保存名字，则保存在Name字段
@@ -30108,7 +30302,7 @@ public final class CommunityProtos {
       return linkRes_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityResource.getDefaultInstance() : linkRes_;
     }
     /**
-     * <code>optional .common.PCommunityResource LinkRes = 4;</code>
+     * <code>optional .bbproto.PCommunityResource LinkRes = 4;</code>
      *
      * <pre>
      * banner链接信息，空(无链接)；非空时，type可选的有：url(链接地址)； post(帖子id)； notice(公告id)；对应信息保存在URL字段;如果链接需要保存名字，则保存在Name字段
@@ -30243,7 +30437,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityBannerInfo}
+     * Protobuf type {@code bbproto.PCommunityBannerInfo}
      *
      * <pre>
      * 社区Banner资源信息
@@ -30251,16 +30445,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityBannerInfo)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityBannerInfo)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityBannerInfo_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityBannerInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityBannerInfo_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityBannerInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfo.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfo.Builder.class);
       }
@@ -30302,7 +30496,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityBannerInfo_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityBannerInfo_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfo getDefaultInstanceForType() {
@@ -30517,7 +30711,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.CommunityProtos.PCommunityResource, com.blemobi.sep.probuf.CommunityProtos.PCommunityResource.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceOrBuilder> imgResBuilder_;
       /**
-       * <code>optional .common.PCommunityResource ImgRes = 3;</code>
+       * <code>optional .bbproto.PCommunityResource ImgRes = 3;</code>
        *
        * <pre>
        * banner的图片资源信息；
@@ -30527,7 +30721,7 @@ public final class CommunityProtos {
         return imgResBuilder_ != null || imgRes_ != null;
       }
       /**
-       * <code>optional .common.PCommunityResource ImgRes = 3;</code>
+       * <code>optional .bbproto.PCommunityResource ImgRes = 3;</code>
        *
        * <pre>
        * banner的图片资源信息；
@@ -30541,7 +30735,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityResource ImgRes = 3;</code>
+       * <code>optional .bbproto.PCommunityResource ImgRes = 3;</code>
        *
        * <pre>
        * banner的图片资源信息；
@@ -30561,7 +30755,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResource ImgRes = 3;</code>
+       * <code>optional .bbproto.PCommunityResource ImgRes = 3;</code>
        *
        * <pre>
        * banner的图片资源信息；
@@ -30579,7 +30773,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResource ImgRes = 3;</code>
+       * <code>optional .bbproto.PCommunityResource ImgRes = 3;</code>
        *
        * <pre>
        * banner的图片资源信息；
@@ -30601,7 +30795,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResource ImgRes = 3;</code>
+       * <code>optional .bbproto.PCommunityResource ImgRes = 3;</code>
        *
        * <pre>
        * banner的图片资源信息；
@@ -30619,7 +30813,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResource ImgRes = 3;</code>
+       * <code>optional .bbproto.PCommunityResource ImgRes = 3;</code>
        *
        * <pre>
        * banner的图片资源信息；
@@ -30631,7 +30825,7 @@ public final class CommunityProtos {
         return getImgResFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PCommunityResource ImgRes = 3;</code>
+       * <code>optional .bbproto.PCommunityResource ImgRes = 3;</code>
        *
        * <pre>
        * banner的图片资源信息；
@@ -30646,7 +30840,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityResource ImgRes = 3;</code>
+       * <code>optional .bbproto.PCommunityResource ImgRes = 3;</code>
        *
        * <pre>
        * banner的图片资源信息；
@@ -30670,7 +30864,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.CommunityProtos.PCommunityResource, com.blemobi.sep.probuf.CommunityProtos.PCommunityResource.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityResourceOrBuilder> linkResBuilder_;
       /**
-       * <code>optional .common.PCommunityResource LinkRes = 4;</code>
+       * <code>optional .bbproto.PCommunityResource LinkRes = 4;</code>
        *
        * <pre>
        * banner链接信息，空(无链接)；非空时，type可选的有：url(链接地址)； post(帖子id)； notice(公告id)；对应信息保存在URL字段;如果链接需要保存名字，则保存在Name字段
@@ -30680,7 +30874,7 @@ public final class CommunityProtos {
         return linkResBuilder_ != null || linkRes_ != null;
       }
       /**
-       * <code>optional .common.PCommunityResource LinkRes = 4;</code>
+       * <code>optional .bbproto.PCommunityResource LinkRes = 4;</code>
        *
        * <pre>
        * banner链接信息，空(无链接)；非空时，type可选的有：url(链接地址)； post(帖子id)； notice(公告id)；对应信息保存在URL字段;如果链接需要保存名字，则保存在Name字段
@@ -30694,7 +30888,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityResource LinkRes = 4;</code>
+       * <code>optional .bbproto.PCommunityResource LinkRes = 4;</code>
        *
        * <pre>
        * banner链接信息，空(无链接)；非空时，type可选的有：url(链接地址)； post(帖子id)； notice(公告id)；对应信息保存在URL字段;如果链接需要保存名字，则保存在Name字段
@@ -30714,7 +30908,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResource LinkRes = 4;</code>
+       * <code>optional .bbproto.PCommunityResource LinkRes = 4;</code>
        *
        * <pre>
        * banner链接信息，空(无链接)；非空时，type可选的有：url(链接地址)； post(帖子id)； notice(公告id)；对应信息保存在URL字段;如果链接需要保存名字，则保存在Name字段
@@ -30732,7 +30926,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResource LinkRes = 4;</code>
+       * <code>optional .bbproto.PCommunityResource LinkRes = 4;</code>
        *
        * <pre>
        * banner链接信息，空(无链接)；非空时，type可选的有：url(链接地址)； post(帖子id)； notice(公告id)；对应信息保存在URL字段;如果链接需要保存名字，则保存在Name字段
@@ -30754,7 +30948,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResource LinkRes = 4;</code>
+       * <code>optional .bbproto.PCommunityResource LinkRes = 4;</code>
        *
        * <pre>
        * banner链接信息，空(无链接)；非空时，type可选的有：url(链接地址)； post(帖子id)； notice(公告id)；对应信息保存在URL字段;如果链接需要保存名字，则保存在Name字段
@@ -30772,7 +30966,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityResource LinkRes = 4;</code>
+       * <code>optional .bbproto.PCommunityResource LinkRes = 4;</code>
        *
        * <pre>
        * banner链接信息，空(无链接)；非空时，type可选的有：url(链接地址)； post(帖子id)； notice(公告id)；对应信息保存在URL字段;如果链接需要保存名字，则保存在Name字段
@@ -30784,7 +30978,7 @@ public final class CommunityProtos {
         return getLinkResFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PCommunityResource LinkRes = 4;</code>
+       * <code>optional .bbproto.PCommunityResource LinkRes = 4;</code>
        *
        * <pre>
        * banner链接信息，空(无链接)；非空时，type可选的有：url(链接地址)； post(帖子id)； notice(公告id)；对应信息保存在URL字段;如果链接需要保存名字，则保存在Name字段
@@ -30799,7 +30993,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityResource LinkRes = 4;</code>
+       * <code>optional .bbproto.PCommunityResource LinkRes = 4;</code>
        *
        * <pre>
        * banner链接信息，空(无链接)；非空时，type可选的有：url(链接地址)； post(帖子id)； notice(公告id)；对应信息保存在URL字段;如果链接需要保存名字，则保存在Name字段
@@ -30829,10 +31023,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityBannerInfo)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityBannerInfo)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityBannerInfo)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityBannerInfo)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfo DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfo();
@@ -30873,11 +31067,11 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityBannerInfoListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityBannerInfoList)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityBannerInfoList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+     * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
      *
      * <pre>
      * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -30886,7 +31080,7 @@ public final class CommunityProtos {
     java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfo> 
         getListList();
     /**
-     * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+     * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
      *
      * <pre>
      * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -30894,7 +31088,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfo getList(int index);
     /**
-     * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+     * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
      *
      * <pre>
      * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -30902,7 +31096,7 @@ public final class CommunityProtos {
      */
     int getListCount();
     /**
-     * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+     * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
      *
      * <pre>
      * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -30911,7 +31105,7 @@ public final class CommunityProtos {
     java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoOrBuilder> 
         getListOrBuilderList();
     /**
-     * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+     * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
      *
      * <pre>
      * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -30921,7 +31115,7 @@ public final class CommunityProtos {
         int index);
   }
   /**
-   * Protobuf type {@code common.PCommunityBannerInfoList}
+   * Protobuf type {@code bbproto.PCommunityBannerInfoList}
    *
    * <pre>
    * 社区Banner资源信息列表
@@ -30929,7 +31123,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityBannerInfoList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityBannerInfoList)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityBannerInfoList)
       PCommunityBannerInfoListOrBuilder {
     // Use PCommunityBannerInfoList.newBuilder() to construct.
     private PCommunityBannerInfoList(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -30988,12 +31182,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityBannerInfoList_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityBannerInfoList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityBannerInfoList_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityBannerInfoList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList.Builder.class);
     }
@@ -31001,7 +31195,7 @@ public final class CommunityProtos {
     public static final int LIST_FIELD_NUMBER = 1;
     private java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfo> list_;
     /**
-     * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+     * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
      *
      * <pre>
      * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -31011,7 +31205,7 @@ public final class CommunityProtos {
       return list_;
     }
     /**
-     * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+     * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
      *
      * <pre>
      * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -31022,7 +31216,7 @@ public final class CommunityProtos {
       return list_;
     }
     /**
-     * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+     * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
      *
      * <pre>
      * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -31032,7 +31226,7 @@ public final class CommunityProtos {
       return list_.size();
     }
     /**
-     * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+     * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
      *
      * <pre>
      * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -31042,7 +31236,7 @@ public final class CommunityProtos {
       return list_.get(index);
     }
     /**
-     * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+     * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
      *
      * <pre>
      * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -31157,7 +31351,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityBannerInfoList}
+     * Protobuf type {@code bbproto.PCommunityBannerInfoList}
      *
      * <pre>
      * 社区Banner资源信息列表
@@ -31165,16 +31359,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityBannerInfoList)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityBannerInfoList)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityBannerInfoList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityBannerInfoList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityBannerInfoList_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityBannerInfoList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList.Builder.class);
       }
@@ -31207,7 +31401,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityBannerInfoList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityBannerInfoList_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList getDefaultInstanceForType() {
@@ -31315,7 +31509,7 @@ public final class CommunityProtos {
           com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfo, com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfo.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoOrBuilder> listBuilder_;
 
       /**
-       * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+       * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
        *
        * <pre>
        * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -31329,7 +31523,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+       * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
        *
        * <pre>
        * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -31343,7 +31537,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+       * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
        *
        * <pre>
        * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -31357,7 +31551,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+       * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
        *
        * <pre>
        * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -31378,7 +31572,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+       * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
        *
        * <pre>
        * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -31396,7 +31590,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+       * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
        *
        * <pre>
        * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -31416,7 +31610,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+       * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
        *
        * <pre>
        * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -31437,7 +31631,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+       * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
        *
        * <pre>
        * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -31455,7 +31649,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+       * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
        *
        * <pre>
        * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -31473,7 +31667,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+       * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
        *
        * <pre>
        * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -31492,7 +31686,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+       * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
        *
        * <pre>
        * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -31509,7 +31703,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+       * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
        *
        * <pre>
        * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -31526,7 +31720,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+       * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
        *
        * <pre>
        * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -31537,7 +31731,7 @@ public final class CommunityProtos {
         return getListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+       * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
        *
        * <pre>
        * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -31551,7 +31745,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+       * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
        *
        * <pre>
        * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -31566,7 +31760,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+       * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
        *
        * <pre>
        * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -31577,7 +31771,7 @@ public final class CommunityProtos {
             com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+       * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
        *
        * <pre>
        * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -31589,7 +31783,7 @@ public final class CommunityProtos {
             index, com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityBannerInfo List = 1;</code>
+       * <code>repeated .bbproto.PCommunityBannerInfo List = 1;</code>
        *
        * <pre>
        * banner图的顺序跟客户端编辑时顺序一致；开启的广告显示在前面，不开启的广告显示在后面
@@ -31624,10 +31818,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityBannerInfoList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityBannerInfoList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityBannerInfoList)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityBannerInfoList)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList();
@@ -31668,7 +31862,7 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityModulesOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityModules)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityModules)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -31699,7 +31893,7 @@ public final class CommunityProtos {
         getNameBytes();
   }
   /**
-   * Protobuf type {@code common.PCommunityModules}
+   * Protobuf type {@code bbproto.PCommunityModules}
    *
    * <pre>
    * 用户的自定义功能模块
@@ -31707,7 +31901,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityModules extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityModules)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityModules)
       PCommunityModulesOrBuilder {
     // Use PCommunityModules.newBuilder() to construct.
     private PCommunityModules(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -31767,12 +31961,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityModules_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityModules_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityModules_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityModules_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityModules.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityModules.Builder.class);
     }
@@ -31945,7 +32139,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityModules}
+     * Protobuf type {@code bbproto.PCommunityModules}
      *
      * <pre>
      * 用户的自定义功能模块
@@ -31953,16 +32147,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityModules)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityModules)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityModulesOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityModules_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityModules_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityModules_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityModules_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityModules.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityModules.Builder.class);
       }
@@ -31992,7 +32186,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityModules_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityModules_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityModules getDefaultInstanceForType() {
@@ -32197,10 +32391,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityModules)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityModules)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityModules)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityModules)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityModules DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityModules();
@@ -32241,35 +32435,35 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityModulesListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityModulesList)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityModulesList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .common.PCommunityModules List = 1;</code>
+     * <code>repeated .bbproto.PCommunityModules List = 1;</code>
      */
     java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityModules> 
         getListList();
     /**
-     * <code>repeated .common.PCommunityModules List = 1;</code>
+     * <code>repeated .bbproto.PCommunityModules List = 1;</code>
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityModules getList(int index);
     /**
-     * <code>repeated .common.PCommunityModules List = 1;</code>
+     * <code>repeated .bbproto.PCommunityModules List = 1;</code>
      */
     int getListCount();
     /**
-     * <code>repeated .common.PCommunityModules List = 1;</code>
+     * <code>repeated .bbproto.PCommunityModules List = 1;</code>
      */
     java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityModulesOrBuilder> 
         getListOrBuilderList();
     /**
-     * <code>repeated .common.PCommunityModules List = 1;</code>
+     * <code>repeated .bbproto.PCommunityModules List = 1;</code>
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityModulesOrBuilder getListOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code common.PCommunityModulesList}
+   * Protobuf type {@code bbproto.PCommunityModulesList}
    *
    * <pre>
    * 用户的自定义功能模块列表
@@ -32277,7 +32471,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityModulesList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityModulesList)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityModulesList)
       PCommunityModulesListOrBuilder {
     // Use PCommunityModulesList.newBuilder() to construct.
     private PCommunityModulesList(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -32336,12 +32530,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityModulesList_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityModulesList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityModulesList_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityModulesList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityModulesList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityModulesList.Builder.class);
     }
@@ -32349,32 +32543,32 @@ public final class CommunityProtos {
     public static final int LIST_FIELD_NUMBER = 1;
     private java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityModules> list_;
     /**
-     * <code>repeated .common.PCommunityModules List = 1;</code>
+     * <code>repeated .bbproto.PCommunityModules List = 1;</code>
      */
     public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityModules> getListList() {
       return list_;
     }
     /**
-     * <code>repeated .common.PCommunityModules List = 1;</code>
+     * <code>repeated .bbproto.PCommunityModules List = 1;</code>
      */
     public java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityModulesOrBuilder> 
         getListOrBuilderList() {
       return list_;
     }
     /**
-     * <code>repeated .common.PCommunityModules List = 1;</code>
+     * <code>repeated .bbproto.PCommunityModules List = 1;</code>
      */
     public int getListCount() {
       return list_.size();
     }
     /**
-     * <code>repeated .common.PCommunityModules List = 1;</code>
+     * <code>repeated .bbproto.PCommunityModules List = 1;</code>
      */
     public com.blemobi.sep.probuf.CommunityProtos.PCommunityModules getList(int index) {
       return list_.get(index);
     }
     /**
-     * <code>repeated .common.PCommunityModules List = 1;</code>
+     * <code>repeated .bbproto.PCommunityModules List = 1;</code>
      */
     public com.blemobi.sep.probuf.CommunityProtos.PCommunityModulesOrBuilder getListOrBuilder(
         int index) {
@@ -32485,7 +32679,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityModulesList}
+     * Protobuf type {@code bbproto.PCommunityModulesList}
      *
      * <pre>
      * 用户的自定义功能模块列表
@@ -32493,16 +32687,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityModulesList)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityModulesList)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityModulesListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityModulesList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityModulesList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityModulesList_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityModulesList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityModulesList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityModulesList.Builder.class);
       }
@@ -32535,7 +32729,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityModulesList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityModulesList_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityModulesList getDefaultInstanceForType() {
@@ -32643,7 +32837,7 @@ public final class CommunityProtos {
           com.blemobi.sep.probuf.CommunityProtos.PCommunityModules, com.blemobi.sep.probuf.CommunityProtos.PCommunityModules.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityModulesOrBuilder> listBuilder_;
 
       /**
-       * <code>repeated .common.PCommunityModules List = 1;</code>
+       * <code>repeated .bbproto.PCommunityModules List = 1;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityModules> getListList() {
         if (listBuilder_ == null) {
@@ -32653,7 +32847,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityModules List = 1;</code>
+       * <code>repeated .bbproto.PCommunityModules List = 1;</code>
        */
       public int getListCount() {
         if (listBuilder_ == null) {
@@ -32663,7 +32857,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityModules List = 1;</code>
+       * <code>repeated .bbproto.PCommunityModules List = 1;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityModules getList(int index) {
         if (listBuilder_ == null) {
@@ -32673,7 +32867,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityModules List = 1;</code>
+       * <code>repeated .bbproto.PCommunityModules List = 1;</code>
        */
       public Builder setList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityModules value) {
@@ -32690,7 +32884,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityModules List = 1;</code>
+       * <code>repeated .bbproto.PCommunityModules List = 1;</code>
        */
       public Builder setList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityModules.Builder builderForValue) {
@@ -32704,7 +32898,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityModules List = 1;</code>
+       * <code>repeated .bbproto.PCommunityModules List = 1;</code>
        */
       public Builder addList(com.blemobi.sep.probuf.CommunityProtos.PCommunityModules value) {
         if (listBuilder_ == null) {
@@ -32720,7 +32914,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityModules List = 1;</code>
+       * <code>repeated .bbproto.PCommunityModules List = 1;</code>
        */
       public Builder addList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityModules value) {
@@ -32737,7 +32931,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityModules List = 1;</code>
+       * <code>repeated .bbproto.PCommunityModules List = 1;</code>
        */
       public Builder addList(
           com.blemobi.sep.probuf.CommunityProtos.PCommunityModules.Builder builderForValue) {
@@ -32751,7 +32945,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityModules List = 1;</code>
+       * <code>repeated .bbproto.PCommunityModules List = 1;</code>
        */
       public Builder addList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityModules.Builder builderForValue) {
@@ -32765,7 +32959,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityModules List = 1;</code>
+       * <code>repeated .bbproto.PCommunityModules List = 1;</code>
        */
       public Builder addAllList(
           java.lang.Iterable<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityModules> values) {
@@ -32780,7 +32974,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityModules List = 1;</code>
+       * <code>repeated .bbproto.PCommunityModules List = 1;</code>
        */
       public Builder clearList() {
         if (listBuilder_ == null) {
@@ -32793,7 +32987,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityModules List = 1;</code>
+       * <code>repeated .bbproto.PCommunityModules List = 1;</code>
        */
       public Builder removeList(int index) {
         if (listBuilder_ == null) {
@@ -32806,14 +33000,14 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityModules List = 1;</code>
+       * <code>repeated .bbproto.PCommunityModules List = 1;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityModules.Builder getListBuilder(
           int index) {
         return getListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PCommunityModules List = 1;</code>
+       * <code>repeated .bbproto.PCommunityModules List = 1;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityModulesOrBuilder getListOrBuilder(
           int index) {
@@ -32823,7 +33017,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityModules List = 1;</code>
+       * <code>repeated .bbproto.PCommunityModules List = 1;</code>
        */
       public java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityModulesOrBuilder> 
            getListOrBuilderList() {
@@ -32834,14 +33028,14 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityModules List = 1;</code>
+       * <code>repeated .bbproto.PCommunityModules List = 1;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityModules.Builder addListBuilder() {
         return getListFieldBuilder().addBuilder(
             com.blemobi.sep.probuf.CommunityProtos.PCommunityModules.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityModules List = 1;</code>
+       * <code>repeated .bbproto.PCommunityModules List = 1;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityModules.Builder addListBuilder(
           int index) {
@@ -32849,7 +33043,7 @@ public final class CommunityProtos {
             index, com.blemobi.sep.probuf.CommunityProtos.PCommunityModules.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityModules List = 1;</code>
+       * <code>repeated .bbproto.PCommunityModules List = 1;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityModules.Builder> 
            getListBuilderList() {
@@ -32880,10 +33074,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityModulesList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityModulesList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityModulesList)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityModulesList)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityModulesList DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityModulesList();
@@ -32924,7 +33118,7 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityForumTagOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityForumTag)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityForumTag)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -32964,16 +33158,16 @@ public final class CommunityProtos {
         getNameBytes();
 
     /**
-     * <code>optional bool Enable = 4;</code>
+     * <code>optional bool Disable = 4;</code>
      *
      * <pre>
-     * 是否启用该标签 
+     * 是否禁用该标签 
      * </pre>
      */
-    boolean getEnable();
+    boolean getDisable();
   }
   /**
-   * Protobuf type {@code common.PCommunityForumTag}
+   * Protobuf type {@code bbproto.PCommunityForumTag}
    *
    * <pre>
    * 用户的自定义论坛帖子标签
@@ -32981,7 +33175,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityForumTag extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityForumTag)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityForumTag)
       PCommunityForumTagOrBuilder {
     // Use PCommunityForumTag.newBuilder() to construct.
     private PCommunityForumTag(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -32991,7 +33185,7 @@ public final class CommunityProtos {
       iD_ = 0;
       type_ = 0;
       name_ = "";
-      enable_ = false;
+      disable_ = false;
     }
 
     @java.lang.Override
@@ -33036,7 +33230,7 @@ public final class CommunityProtos {
             }
             case 32: {
 
-              enable_ = input.readBool();
+              disable_ = input.readBool();
               break;
             }
           }
@@ -33053,12 +33247,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityForumTag_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityForumTag_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityForumTag_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityForumTag_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag.Builder.class);
     }
@@ -33133,17 +33327,17 @@ public final class CommunityProtos {
       }
     }
 
-    public static final int ENABLE_FIELD_NUMBER = 4;
-    private boolean enable_;
+    public static final int DISABLE_FIELD_NUMBER = 4;
+    private boolean disable_;
     /**
-     * <code>optional bool Enable = 4;</code>
+     * <code>optional bool Disable = 4;</code>
      *
      * <pre>
-     * 是否启用该标签 
+     * 是否禁用该标签 
      * </pre>
      */
-    public boolean getEnable() {
-      return enable_;
+    public boolean getDisable() {
+      return disable_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -33167,8 +33361,8 @@ public final class CommunityProtos {
       if (!getNameBytes().isEmpty()) {
         output.writeBytes(3, getNameBytes());
       }
-      if (enable_ != false) {
-        output.writeBool(4, enable_);
+      if (disable_ != false) {
+        output.writeBool(4, disable_);
       }
     }
 
@@ -33190,9 +33384,9 @@ public final class CommunityProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, getNameBytes());
       }
-      if (enable_ != false) {
+      if (disable_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(4, enable_);
+          .computeBoolSize(4, disable_);
       }
       memoizedSerializedSize = size;
       return size;
@@ -33271,7 +33465,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityForumTag}
+     * Protobuf type {@code bbproto.PCommunityForumTag}
      *
      * <pre>
      * 用户的自定义论坛帖子标签
@@ -33279,16 +33473,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityForumTag)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityForumTag)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTagOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityForumTag_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityForumTag_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityForumTag_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityForumTag_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag.Builder.class);
       }
@@ -33315,14 +33509,14 @@ public final class CommunityProtos {
 
         name_ = "";
 
-        enable_ = false;
+        disable_ = false;
 
         return this;
       }
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityForumTag_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityForumTag_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag getDefaultInstanceForType() {
@@ -33342,7 +33536,7 @@ public final class CommunityProtos {
         result.iD_ = iD_;
         result.type_ = type_;
         result.name_ = name_;
-        result.enable_ = enable_;
+        result.disable_ = disable_;
         onBuilt();
         return result;
       }
@@ -33368,8 +33562,8 @@ public final class CommunityProtos {
           name_ = other.name_;
           onChanged();
         }
-        if (other.getEnable() != false) {
-          setEnable(other.getEnable());
+        if (other.getDisable() != false) {
+          setDisable(other.getDisable());
         }
         onChanged();
         return this;
@@ -33563,40 +33757,40 @@ public final class CommunityProtos {
         return this;
       }
 
-      private boolean enable_ ;
+      private boolean disable_ ;
       /**
-       * <code>optional bool Enable = 4;</code>
+       * <code>optional bool Disable = 4;</code>
        *
        * <pre>
-       * 是否启用该标签 
+       * 是否禁用该标签 
        * </pre>
        */
-      public boolean getEnable() {
-        return enable_;
+      public boolean getDisable() {
+        return disable_;
       }
       /**
-       * <code>optional bool Enable = 4;</code>
+       * <code>optional bool Disable = 4;</code>
        *
        * <pre>
-       * 是否启用该标签 
+       * 是否禁用该标签 
        * </pre>
        */
-      public Builder setEnable(boolean value) {
+      public Builder setDisable(boolean value) {
         
-        enable_ = value;
+        disable_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional bool Enable = 4;</code>
+       * <code>optional bool Disable = 4;</code>
        *
        * <pre>
-       * 是否启用该标签 
+       * 是否禁用该标签 
        * </pre>
        */
-      public Builder clearEnable() {
+      public Builder clearDisable() {
         
-        enable_ = false;
+        disable_ = false;
         onChanged();
         return this;
       }
@@ -33611,10 +33805,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityForumTag)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityForumTag)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityForumTag)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityForumTag)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag();
@@ -33655,35 +33849,35 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityForumTagListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityForumTagList)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityForumTagList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .common.PCommunityForumTag List = 1;</code>
+     * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
      */
     java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag> 
         getListList();
     /**
-     * <code>repeated .common.PCommunityForumTag List = 1;</code>
+     * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag getList(int index);
     /**
-     * <code>repeated .common.PCommunityForumTag List = 1;</code>
+     * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
      */
     int getListCount();
     /**
-     * <code>repeated .common.PCommunityForumTag List = 1;</code>
+     * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
      */
     java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTagOrBuilder> 
         getListOrBuilderList();
     /**
-     * <code>repeated .common.PCommunityForumTag List = 1;</code>
+     * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTagOrBuilder getListOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code common.PCommunityForumTagList}
+   * Protobuf type {@code bbproto.PCommunityForumTagList}
    *
    * <pre>
    * 用户的自定义论坛帖子标签列表
@@ -33691,7 +33885,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityForumTagList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityForumTagList)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityForumTagList)
       PCommunityForumTagListOrBuilder {
     // Use PCommunityForumTagList.newBuilder() to construct.
     private PCommunityForumTagList(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -33750,12 +33944,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityForumTagList_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityForumTagList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityForumTagList_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityForumTagList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTagList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTagList.Builder.class);
     }
@@ -33763,32 +33957,32 @@ public final class CommunityProtos {
     public static final int LIST_FIELD_NUMBER = 1;
     private java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag> list_;
     /**
-     * <code>repeated .common.PCommunityForumTag List = 1;</code>
+     * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
      */
     public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag> getListList() {
       return list_;
     }
     /**
-     * <code>repeated .common.PCommunityForumTag List = 1;</code>
+     * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
      */
     public java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTagOrBuilder> 
         getListOrBuilderList() {
       return list_;
     }
     /**
-     * <code>repeated .common.PCommunityForumTag List = 1;</code>
+     * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
      */
     public int getListCount() {
       return list_.size();
     }
     /**
-     * <code>repeated .common.PCommunityForumTag List = 1;</code>
+     * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
      */
     public com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag getList(int index) {
       return list_.get(index);
     }
     /**
-     * <code>repeated .common.PCommunityForumTag List = 1;</code>
+     * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
      */
     public com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTagOrBuilder getListOrBuilder(
         int index) {
@@ -33899,7 +34093,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityForumTagList}
+     * Protobuf type {@code bbproto.PCommunityForumTagList}
      *
      * <pre>
      * 用户的自定义论坛帖子标签列表
@@ -33907,16 +34101,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityForumTagList)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityForumTagList)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTagListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityForumTagList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityForumTagList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityForumTagList_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityForumTagList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTagList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTagList.Builder.class);
       }
@@ -33949,7 +34143,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityForumTagList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityForumTagList_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTagList getDefaultInstanceForType() {
@@ -34057,7 +34251,7 @@ public final class CommunityProtos {
           com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag, com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTagOrBuilder> listBuilder_;
 
       /**
-       * <code>repeated .common.PCommunityForumTag List = 1;</code>
+       * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag> getListList() {
         if (listBuilder_ == null) {
@@ -34067,7 +34261,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityForumTag List = 1;</code>
+       * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
        */
       public int getListCount() {
         if (listBuilder_ == null) {
@@ -34077,7 +34271,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityForumTag List = 1;</code>
+       * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag getList(int index) {
         if (listBuilder_ == null) {
@@ -34087,7 +34281,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityForumTag List = 1;</code>
+       * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
        */
       public Builder setList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag value) {
@@ -34104,7 +34298,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityForumTag List = 1;</code>
+       * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
        */
       public Builder setList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag.Builder builderForValue) {
@@ -34118,7 +34312,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityForumTag List = 1;</code>
+       * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
        */
       public Builder addList(com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag value) {
         if (listBuilder_ == null) {
@@ -34134,7 +34328,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityForumTag List = 1;</code>
+       * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
        */
       public Builder addList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag value) {
@@ -34151,7 +34345,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityForumTag List = 1;</code>
+       * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
        */
       public Builder addList(
           com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag.Builder builderForValue) {
@@ -34165,7 +34359,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityForumTag List = 1;</code>
+       * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
        */
       public Builder addList(
           int index, com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag.Builder builderForValue) {
@@ -34179,7 +34373,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityForumTag List = 1;</code>
+       * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
        */
       public Builder addAllList(
           java.lang.Iterable<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag> values) {
@@ -34194,7 +34388,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityForumTag List = 1;</code>
+       * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
        */
       public Builder clearList() {
         if (listBuilder_ == null) {
@@ -34207,7 +34401,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityForumTag List = 1;</code>
+       * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
        */
       public Builder removeList(int index) {
         if (listBuilder_ == null) {
@@ -34220,14 +34414,14 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityForumTag List = 1;</code>
+       * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag.Builder getListBuilder(
           int index) {
         return getListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PCommunityForumTag List = 1;</code>
+       * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTagOrBuilder getListOrBuilder(
           int index) {
@@ -34237,7 +34431,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityForumTag List = 1;</code>
+       * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
        */
       public java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTagOrBuilder> 
            getListOrBuilderList() {
@@ -34248,14 +34442,14 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityForumTag List = 1;</code>
+       * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag.Builder addListBuilder() {
         return getListFieldBuilder().addBuilder(
             com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityForumTag List = 1;</code>
+       * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
        */
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag.Builder addListBuilder(
           int index) {
@@ -34263,7 +34457,7 @@ public final class CommunityProtos {
             index, com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityForumTag List = 1;</code>
+       * <code>repeated .bbproto.PCommunityForumTag List = 1;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTag.Builder> 
            getListBuilderList() {
@@ -34294,10 +34488,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityForumTagList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityForumTagList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityForumTagList)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityForumTagList)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTagList DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTagList();
@@ -34338,20 +34532,11 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityLayoutPlan1OrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityLayoutPlan1)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityLayoutPlan1)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional int32 MemberCount = 2;</code>
-     *
-     * <pre>
-     * 社区成员数量；创建时不需要传
-     * </pre>
-     */
-    int getMemberCount();
-
-    /**
-     * <code>optional int32 ContentType = 3;</code>
+     * <code>optional int32 ContentType = 1;</code>
      *
      * <pre>
      * 内容模块id; -1 为公告; &gt;= 0 为论坛可选模块的id
@@ -34360,7 +34545,7 @@ public final class CommunityProtos {
     int getContentType();
 
     /**
-     * <code>optional .common.PUserBaseList TopUserList = 4;</code>
+     * <code>optional .bbproto.PUserBaseList TopUserList = 2;</code>
      *
      * <pre>
      * top成员列表；创建时不需要传
@@ -34368,7 +34553,7 @@ public final class CommunityProtos {
      */
     boolean hasTopUserList();
     /**
-     * <code>optional .common.PUserBaseList TopUserList = 4;</code>
+     * <code>optional .bbproto.PUserBaseList TopUserList = 2;</code>
      *
      * <pre>
      * top成员列表；创建时不需要传
@@ -34376,7 +34561,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.AccountProtos.PUserBaseList getTopUserList();
     /**
-     * <code>optional .common.PUserBaseList TopUserList = 4;</code>
+     * <code>optional .bbproto.PUserBaseList TopUserList = 2;</code>
      *
      * <pre>
      * top成员列表；创建时不需要传
@@ -34385,32 +34570,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.AccountProtos.PUserBaseListOrBuilder getTopUserListOrBuilder();
 
     /**
-     * <code>optional .common.PCommunityBannerInfoList BannerList = 5;</code>
-     *
-     * <pre>
-     * banner列表
-     * </pre>
-     */
-    boolean hasBannerList();
-    /**
-     * <code>optional .common.PCommunityBannerInfoList BannerList = 5;</code>
-     *
-     * <pre>
-     * banner列表
-     * </pre>
-     */
-    com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList getBannerList();
-    /**
-     * <code>optional .common.PCommunityBannerInfoList BannerList = 5;</code>
-     *
-     * <pre>
-     * banner列表
-     * </pre>
-     */
-    com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoListOrBuilder getBannerListOrBuilder();
-
-    /**
-     * <code>optional .common.PInt32List MiddleModulesID = 7;</code>
+     * <code>optional .bbproto.PInt32List MiddleModulesID = 3;</code>
      *
      * <pre>
      * 中间定义的功能模块列表
@@ -34418,7 +34578,7 @@ public final class CommunityProtos {
      */
     boolean hasMiddleModulesID();
     /**
-     * <code>optional .common.PInt32List MiddleModulesID = 7;</code>
+     * <code>optional .bbproto.PInt32List MiddleModulesID = 3;</code>
      *
      * <pre>
      * 中间定义的功能模块列表
@@ -34426,7 +34586,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.ResultProtos.PInt32List getMiddleModulesID();
     /**
-     * <code>optional .common.PInt32List MiddleModulesID = 7;</code>
+     * <code>optional .bbproto.PInt32List MiddleModulesID = 3;</code>
      *
      * <pre>
      * 中间定义的功能模块列表
@@ -34435,7 +34595,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.ResultProtos.PInt32ListOrBuilder getMiddleModulesIDOrBuilder();
 
     /**
-     * <code>optional .common.PInt32List BottomModulesID = 8;</code>
+     * <code>optional .bbproto.PInt32List BottomModulesID = 4;</code>
      *
      * <pre>
      * 底部定义的功能模块列表
@@ -34443,7 +34603,7 @@ public final class CommunityProtos {
      */
     boolean hasBottomModulesID();
     /**
-     * <code>optional .common.PInt32List BottomModulesID = 8;</code>
+     * <code>optional .bbproto.PInt32List BottomModulesID = 4;</code>
      *
      * <pre>
      * 底部定义的功能模块列表
@@ -34451,16 +34611,41 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.ResultProtos.PInt32List getBottomModulesID();
     /**
-     * <code>optional .common.PInt32List BottomModulesID = 8;</code>
+     * <code>optional .bbproto.PInt32List BottomModulesID = 4;</code>
      *
      * <pre>
      * 底部定义的功能模块列表
      * </pre>
      */
     com.blemobi.sep.probuf.ResultProtos.PInt32ListOrBuilder getBottomModulesIDOrBuilder();
+
+    /**
+     * <code>optional .bbproto.PCommunityBannerInfoList BannerList = 5;</code>
+     *
+     * <pre>
+     * banner列表
+     * </pre>
+     */
+    boolean hasBannerList();
+    /**
+     * <code>optional .bbproto.PCommunityBannerInfoList BannerList = 5;</code>
+     *
+     * <pre>
+     * banner列表
+     * </pre>
+     */
+    com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList getBannerList();
+    /**
+     * <code>optional .bbproto.PCommunityBannerInfoList BannerList = 5;</code>
+     *
+     * <pre>
+     * banner列表
+     * </pre>
+     */
+    com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoListOrBuilder getBannerListOrBuilder();
   }
   /**
-   * Protobuf type {@code common.PCommunityLayoutPlan1}
+   * Protobuf type {@code bbproto.PCommunityLayoutPlan1}
    *
    * <pre>
    * 社区成员的布局方案1
@@ -34469,14 +34654,13 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityLayoutPlan1 extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityLayoutPlan1)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityLayoutPlan1)
       PCommunityLayoutPlan1OrBuilder {
     // Use PCommunityLayoutPlan1.newBuilder() to construct.
     private PCommunityLayoutPlan1(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PCommunityLayoutPlan1() {
-      memberCount_ = 0;
       contentType_ = 0;
     }
 
@@ -34504,17 +34688,12 @@ public final class CommunityProtos {
               }
               break;
             }
-            case 16: {
-
-              memberCount_ = input.readInt32();
-              break;
-            }
-            case 24: {
+            case 8: {
 
               contentType_ = input.readInt32();
               break;
             }
-            case 34: {
+            case 18: {
               com.blemobi.sep.probuf.AccountProtos.PUserBaseList.Builder subBuilder = null;
               if (topUserList_ != null) {
                 subBuilder = topUserList_.toBuilder();
@@ -34523,6 +34702,32 @@ public final class CommunityProtos {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(topUserList_);
                 topUserList_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.blemobi.sep.probuf.ResultProtos.PInt32List.Builder subBuilder = null;
+              if (middleModulesID_ != null) {
+                subBuilder = middleModulesID_.toBuilder();
+              }
+              middleModulesID_ = input.readMessage(com.blemobi.sep.probuf.ResultProtos.PInt32List.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(middleModulesID_);
+                middleModulesID_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              com.blemobi.sep.probuf.ResultProtos.PInt32List.Builder subBuilder = null;
+              if (bottomModulesID_ != null) {
+                subBuilder = bottomModulesID_.toBuilder();
+              }
+              bottomModulesID_ = input.readMessage(com.blemobi.sep.probuf.ResultProtos.PInt32List.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(bottomModulesID_);
+                bottomModulesID_ = subBuilder.buildPartial();
               }
 
               break;
@@ -34536,32 +34741,6 @@ public final class CommunityProtos {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(bannerList_);
                 bannerList_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 58: {
-              com.blemobi.sep.probuf.ResultProtos.PInt32List.Builder subBuilder = null;
-              if (middleModulesID_ != null) {
-                subBuilder = middleModulesID_.toBuilder();
-              }
-              middleModulesID_ = input.readMessage(com.blemobi.sep.probuf.ResultProtos.PInt32List.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(middleModulesID_);
-                middleModulesID_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 66: {
-              com.blemobi.sep.probuf.ResultProtos.PInt32List.Builder subBuilder = null;
-              if (bottomModulesID_ != null) {
-                subBuilder = bottomModulesID_.toBuilder();
-              }
-              bottomModulesID_ = input.readMessage(com.blemobi.sep.probuf.ResultProtos.PInt32List.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(bottomModulesID_);
-                bottomModulesID_ = subBuilder.buildPartial();
               }
 
               break;
@@ -34580,33 +34759,20 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityLayoutPlan1_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityLayoutPlan1_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityLayoutPlan1_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityLayoutPlan1_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutPlan1.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutPlan1.Builder.class);
     }
 
-    public static final int MEMBERCOUNT_FIELD_NUMBER = 2;
-    private int memberCount_;
-    /**
-     * <code>optional int32 MemberCount = 2;</code>
-     *
-     * <pre>
-     * 社区成员数量；创建时不需要传
-     * </pre>
-     */
-    public int getMemberCount() {
-      return memberCount_;
-    }
-
-    public static final int CONTENTTYPE_FIELD_NUMBER = 3;
+    public static final int CONTENTTYPE_FIELD_NUMBER = 1;
     private int contentType_;
     /**
-     * <code>optional int32 ContentType = 3;</code>
+     * <code>optional int32 ContentType = 1;</code>
      *
      * <pre>
      * 内容模块id; -1 为公告; &gt;= 0 为论坛可选模块的id
@@ -34616,10 +34782,10 @@ public final class CommunityProtos {
       return contentType_;
     }
 
-    public static final int TOPUSERLIST_FIELD_NUMBER = 4;
+    public static final int TOPUSERLIST_FIELD_NUMBER = 2;
     private com.blemobi.sep.probuf.AccountProtos.PUserBaseList topUserList_;
     /**
-     * <code>optional .common.PUserBaseList TopUserList = 4;</code>
+     * <code>optional .bbproto.PUserBaseList TopUserList = 2;</code>
      *
      * <pre>
      * top成员列表；创建时不需要传
@@ -34629,7 +34795,7 @@ public final class CommunityProtos {
       return topUserList_ != null;
     }
     /**
-     * <code>optional .common.PUserBaseList TopUserList = 4;</code>
+     * <code>optional .bbproto.PUserBaseList TopUserList = 2;</code>
      *
      * <pre>
      * top成员列表；创建时不需要传
@@ -34639,7 +34805,7 @@ public final class CommunityProtos {
       return topUserList_ == null ? com.blemobi.sep.probuf.AccountProtos.PUserBaseList.getDefaultInstance() : topUserList_;
     }
     /**
-     * <code>optional .common.PUserBaseList TopUserList = 4;</code>
+     * <code>optional .bbproto.PUserBaseList TopUserList = 2;</code>
      *
      * <pre>
      * top成员列表；创建时不需要传
@@ -34649,43 +34815,10 @@ public final class CommunityProtos {
       return getTopUserList();
     }
 
-    public static final int BANNERLIST_FIELD_NUMBER = 5;
-    private com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList bannerList_;
-    /**
-     * <code>optional .common.PCommunityBannerInfoList BannerList = 5;</code>
-     *
-     * <pre>
-     * banner列表
-     * </pre>
-     */
-    public boolean hasBannerList() {
-      return bannerList_ != null;
-    }
-    /**
-     * <code>optional .common.PCommunityBannerInfoList BannerList = 5;</code>
-     *
-     * <pre>
-     * banner列表
-     * </pre>
-     */
-    public com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList getBannerList() {
-      return bannerList_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList.getDefaultInstance() : bannerList_;
-    }
-    /**
-     * <code>optional .common.PCommunityBannerInfoList BannerList = 5;</code>
-     *
-     * <pre>
-     * banner列表
-     * </pre>
-     */
-    public com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoListOrBuilder getBannerListOrBuilder() {
-      return getBannerList();
-    }
-
-    public static final int MIDDLEMODULESID_FIELD_NUMBER = 7;
+    public static final int MIDDLEMODULESID_FIELD_NUMBER = 3;
     private com.blemobi.sep.probuf.ResultProtos.PInt32List middleModulesID_;
     /**
-     * <code>optional .common.PInt32List MiddleModulesID = 7;</code>
+     * <code>optional .bbproto.PInt32List MiddleModulesID = 3;</code>
      *
      * <pre>
      * 中间定义的功能模块列表
@@ -34695,7 +34828,7 @@ public final class CommunityProtos {
       return middleModulesID_ != null;
     }
     /**
-     * <code>optional .common.PInt32List MiddleModulesID = 7;</code>
+     * <code>optional .bbproto.PInt32List MiddleModulesID = 3;</code>
      *
      * <pre>
      * 中间定义的功能模块列表
@@ -34705,7 +34838,7 @@ public final class CommunityProtos {
       return middleModulesID_ == null ? com.blemobi.sep.probuf.ResultProtos.PInt32List.getDefaultInstance() : middleModulesID_;
     }
     /**
-     * <code>optional .common.PInt32List MiddleModulesID = 7;</code>
+     * <code>optional .bbproto.PInt32List MiddleModulesID = 3;</code>
      *
      * <pre>
      * 中间定义的功能模块列表
@@ -34715,10 +34848,10 @@ public final class CommunityProtos {
       return getMiddleModulesID();
     }
 
-    public static final int BOTTOMMODULESID_FIELD_NUMBER = 8;
+    public static final int BOTTOMMODULESID_FIELD_NUMBER = 4;
     private com.blemobi.sep.probuf.ResultProtos.PInt32List bottomModulesID_;
     /**
-     * <code>optional .common.PInt32List BottomModulesID = 8;</code>
+     * <code>optional .bbproto.PInt32List BottomModulesID = 4;</code>
      *
      * <pre>
      * 底部定义的功能模块列表
@@ -34728,7 +34861,7 @@ public final class CommunityProtos {
       return bottomModulesID_ != null;
     }
     /**
-     * <code>optional .common.PInt32List BottomModulesID = 8;</code>
+     * <code>optional .bbproto.PInt32List BottomModulesID = 4;</code>
      *
      * <pre>
      * 底部定义的功能模块列表
@@ -34738,7 +34871,7 @@ public final class CommunityProtos {
       return bottomModulesID_ == null ? com.blemobi.sep.probuf.ResultProtos.PInt32List.getDefaultInstance() : bottomModulesID_;
     }
     /**
-     * <code>optional .common.PInt32List BottomModulesID = 8;</code>
+     * <code>optional .bbproto.PInt32List BottomModulesID = 4;</code>
      *
      * <pre>
      * 底部定义的功能模块列表
@@ -34746,6 +34879,39 @@ public final class CommunityProtos {
      */
     public com.blemobi.sep.probuf.ResultProtos.PInt32ListOrBuilder getBottomModulesIDOrBuilder() {
       return getBottomModulesID();
+    }
+
+    public static final int BANNERLIST_FIELD_NUMBER = 5;
+    private com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList bannerList_;
+    /**
+     * <code>optional .bbproto.PCommunityBannerInfoList BannerList = 5;</code>
+     *
+     * <pre>
+     * banner列表
+     * </pre>
+     */
+    public boolean hasBannerList() {
+      return bannerList_ != null;
+    }
+    /**
+     * <code>optional .bbproto.PCommunityBannerInfoList BannerList = 5;</code>
+     *
+     * <pre>
+     * banner列表
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList getBannerList() {
+      return bannerList_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList.getDefaultInstance() : bannerList_;
+    }
+    /**
+     * <code>optional .bbproto.PCommunityBannerInfoList BannerList = 5;</code>
+     *
+     * <pre>
+     * banner列表
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoListOrBuilder getBannerListOrBuilder() {
+      return getBannerList();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -34760,23 +34926,20 @@ public final class CommunityProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (memberCount_ != 0) {
-        output.writeInt32(2, memberCount_);
-      }
       if (contentType_ != 0) {
-        output.writeInt32(3, contentType_);
+        output.writeInt32(1, contentType_);
       }
       if (topUserList_ != null) {
-        output.writeMessage(4, getTopUserList());
+        output.writeMessage(2, getTopUserList());
+      }
+      if (middleModulesID_ != null) {
+        output.writeMessage(3, getMiddleModulesID());
+      }
+      if (bottomModulesID_ != null) {
+        output.writeMessage(4, getBottomModulesID());
       }
       if (bannerList_ != null) {
         output.writeMessage(5, getBannerList());
-      }
-      if (middleModulesID_ != null) {
-        output.writeMessage(7, getMiddleModulesID());
-      }
-      if (bottomModulesID_ != null) {
-        output.writeMessage(8, getBottomModulesID());
       }
     }
 
@@ -34786,29 +34949,25 @@ public final class CommunityProtos {
       if (size != -1) return size;
 
       size = 0;
-      if (memberCount_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, memberCount_);
-      }
       if (contentType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, contentType_);
+          .computeInt32Size(1, contentType_);
       }
       if (topUserList_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getTopUserList());
+          .computeMessageSize(2, getTopUserList());
+      }
+      if (middleModulesID_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getMiddleModulesID());
+      }
+      if (bottomModulesID_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getBottomModulesID());
       }
       if (bannerList_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getBannerList());
-      }
-      if (middleModulesID_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getMiddleModulesID());
-      }
-      if (bottomModulesID_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getBottomModulesID());
       }
       memoizedSerializedSize = size;
       return size;
@@ -34887,7 +35046,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityLayoutPlan1}
+     * Protobuf type {@code bbproto.PCommunityLayoutPlan1}
      *
      * <pre>
      * 社区成员的布局方案1
@@ -34896,16 +35055,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityLayoutPlan1)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityLayoutPlan1)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutPlan1OrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityLayoutPlan1_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityLayoutPlan1_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityLayoutPlan1_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityLayoutPlan1_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutPlan1.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutPlan1.Builder.class);
       }
@@ -34926,8 +35085,6 @@ public final class CommunityProtos {
       }
       public Builder clear() {
         super.clear();
-        memberCount_ = 0;
-
         contentType_ = 0;
 
         if (topUserListBuilder_ == null) {
@@ -34935,12 +35092,6 @@ public final class CommunityProtos {
         } else {
           topUserList_ = null;
           topUserListBuilder_ = null;
-        }
-        if (bannerListBuilder_ == null) {
-          bannerList_ = null;
-        } else {
-          bannerList_ = null;
-          bannerListBuilder_ = null;
         }
         if (middleModulesIDBuilder_ == null) {
           middleModulesID_ = null;
@@ -34954,12 +35105,18 @@ public final class CommunityProtos {
           bottomModulesID_ = null;
           bottomModulesIDBuilder_ = null;
         }
+        if (bannerListBuilder_ == null) {
+          bannerList_ = null;
+        } else {
+          bannerList_ = null;
+          bannerListBuilder_ = null;
+        }
         return this;
       }
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityLayoutPlan1_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityLayoutPlan1_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutPlan1 getDefaultInstanceForType() {
@@ -34976,17 +35133,11 @@ public final class CommunityProtos {
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutPlan1 buildPartial() {
         com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutPlan1 result = new com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutPlan1(this);
-        result.memberCount_ = memberCount_;
         result.contentType_ = contentType_;
         if (topUserListBuilder_ == null) {
           result.topUserList_ = topUserList_;
         } else {
           result.topUserList_ = topUserListBuilder_.build();
-        }
-        if (bannerListBuilder_ == null) {
-          result.bannerList_ = bannerList_;
-        } else {
-          result.bannerList_ = bannerListBuilder_.build();
         }
         if (middleModulesIDBuilder_ == null) {
           result.middleModulesID_ = middleModulesID_;
@@ -34997,6 +35148,11 @@ public final class CommunityProtos {
           result.bottomModulesID_ = bottomModulesID_;
         } else {
           result.bottomModulesID_ = bottomModulesIDBuilder_.build();
+        }
+        if (bannerListBuilder_ == null) {
+          result.bannerList_ = bannerList_;
+        } else {
+          result.bannerList_ = bannerListBuilder_.build();
         }
         onBuilt();
         return result;
@@ -35013,23 +35169,20 @@ public final class CommunityProtos {
 
       public Builder mergeFrom(com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutPlan1 other) {
         if (other == com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutPlan1.getDefaultInstance()) return this;
-        if (other.getMemberCount() != 0) {
-          setMemberCount(other.getMemberCount());
-        }
         if (other.getContentType() != 0) {
           setContentType(other.getContentType());
         }
         if (other.hasTopUserList()) {
           mergeTopUserList(other.getTopUserList());
         }
-        if (other.hasBannerList()) {
-          mergeBannerList(other.getBannerList());
-        }
         if (other.hasMiddleModulesID()) {
           mergeMiddleModulesID(other.getMiddleModulesID());
         }
         if (other.hasBottomModulesID()) {
           mergeBottomModulesID(other.getBottomModulesID());
+        }
+        if (other.hasBannerList()) {
+          mergeBannerList(other.getBannerList());
         }
         onChanged();
         return this;
@@ -35057,47 +35210,9 @@ public final class CommunityProtos {
         return this;
       }
 
-      private int memberCount_ ;
-      /**
-       * <code>optional int32 MemberCount = 2;</code>
-       *
-       * <pre>
-       * 社区成员数量；创建时不需要传
-       * </pre>
-       */
-      public int getMemberCount() {
-        return memberCount_;
-      }
-      /**
-       * <code>optional int32 MemberCount = 2;</code>
-       *
-       * <pre>
-       * 社区成员数量；创建时不需要传
-       * </pre>
-       */
-      public Builder setMemberCount(int value) {
-        
-        memberCount_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 MemberCount = 2;</code>
-       *
-       * <pre>
-       * 社区成员数量；创建时不需要传
-       * </pre>
-       */
-      public Builder clearMemberCount() {
-        
-        memberCount_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int contentType_ ;
       /**
-       * <code>optional int32 ContentType = 3;</code>
+       * <code>optional int32 ContentType = 1;</code>
        *
        * <pre>
        * 内容模块id; -1 为公告; &gt;= 0 为论坛可选模块的id
@@ -35107,7 +35222,7 @@ public final class CommunityProtos {
         return contentType_;
       }
       /**
-       * <code>optional int32 ContentType = 3;</code>
+       * <code>optional int32 ContentType = 1;</code>
        *
        * <pre>
        * 内容模块id; -1 为公告; &gt;= 0 为论坛可选模块的id
@@ -35120,7 +35235,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional int32 ContentType = 3;</code>
+       * <code>optional int32 ContentType = 1;</code>
        *
        * <pre>
        * 内容模块id; -1 为公告; &gt;= 0 为论坛可选模块的id
@@ -35137,7 +35252,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.AccountProtos.PUserBaseList, com.blemobi.sep.probuf.AccountProtos.PUserBaseList.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseListOrBuilder> topUserListBuilder_;
       /**
-       * <code>optional .common.PUserBaseList TopUserList = 4;</code>
+       * <code>optional .bbproto.PUserBaseList TopUserList = 2;</code>
        *
        * <pre>
        * top成员列表；创建时不需要传
@@ -35147,7 +35262,7 @@ public final class CommunityProtos {
         return topUserListBuilder_ != null || topUserList_ != null;
       }
       /**
-       * <code>optional .common.PUserBaseList TopUserList = 4;</code>
+       * <code>optional .bbproto.PUserBaseList TopUserList = 2;</code>
        *
        * <pre>
        * top成员列表；创建时不需要传
@@ -35161,7 +35276,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PUserBaseList TopUserList = 4;</code>
+       * <code>optional .bbproto.PUserBaseList TopUserList = 2;</code>
        *
        * <pre>
        * top成员列表；创建时不需要传
@@ -35181,7 +35296,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBaseList TopUserList = 4;</code>
+       * <code>optional .bbproto.PUserBaseList TopUserList = 2;</code>
        *
        * <pre>
        * top成员列表；创建时不需要传
@@ -35199,7 +35314,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBaseList TopUserList = 4;</code>
+       * <code>optional .bbproto.PUserBaseList TopUserList = 2;</code>
        *
        * <pre>
        * top成员列表；创建时不需要传
@@ -35221,7 +35336,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBaseList TopUserList = 4;</code>
+       * <code>optional .bbproto.PUserBaseList TopUserList = 2;</code>
        *
        * <pre>
        * top成员列表；创建时不需要传
@@ -35239,7 +35354,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBaseList TopUserList = 4;</code>
+       * <code>optional .bbproto.PUserBaseList TopUserList = 2;</code>
        *
        * <pre>
        * top成员列表；创建时不需要传
@@ -35251,7 +35366,7 @@ public final class CommunityProtos {
         return getTopUserListFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PUserBaseList TopUserList = 4;</code>
+       * <code>optional .bbproto.PUserBaseList TopUserList = 2;</code>
        *
        * <pre>
        * top成员列表；创建时不需要传
@@ -35266,7 +35381,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PUserBaseList TopUserList = 4;</code>
+       * <code>optional .bbproto.PUserBaseList TopUserList = 2;</code>
        *
        * <pre>
        * top成员列表；创建时不需要传
@@ -35286,164 +35401,11 @@ public final class CommunityProtos {
         return topUserListBuilder_;
       }
 
-      private com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList bannerList_ = null;
-      private com.google.protobuf.SingleFieldBuilder<
-          com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList, com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoListOrBuilder> bannerListBuilder_;
-      /**
-       * <code>optional .common.PCommunityBannerInfoList BannerList = 5;</code>
-       *
-       * <pre>
-       * banner列表
-       * </pre>
-       */
-      public boolean hasBannerList() {
-        return bannerListBuilder_ != null || bannerList_ != null;
-      }
-      /**
-       * <code>optional .common.PCommunityBannerInfoList BannerList = 5;</code>
-       *
-       * <pre>
-       * banner列表
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList getBannerList() {
-        if (bannerListBuilder_ == null) {
-          return bannerList_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList.getDefaultInstance() : bannerList_;
-        } else {
-          return bannerListBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .common.PCommunityBannerInfoList BannerList = 5;</code>
-       *
-       * <pre>
-       * banner列表
-       * </pre>
-       */
-      public Builder setBannerList(com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList value) {
-        if (bannerListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          bannerList_ = value;
-          onChanged();
-        } else {
-          bannerListBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .common.PCommunityBannerInfoList BannerList = 5;</code>
-       *
-       * <pre>
-       * banner列表
-       * </pre>
-       */
-      public Builder setBannerList(
-          com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList.Builder builderForValue) {
-        if (bannerListBuilder_ == null) {
-          bannerList_ = builderForValue.build();
-          onChanged();
-        } else {
-          bannerListBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .common.PCommunityBannerInfoList BannerList = 5;</code>
-       *
-       * <pre>
-       * banner列表
-       * </pre>
-       */
-      public Builder mergeBannerList(com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList value) {
-        if (bannerListBuilder_ == null) {
-          if (bannerList_ != null) {
-            bannerList_ =
-              com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList.newBuilder(bannerList_).mergeFrom(value).buildPartial();
-          } else {
-            bannerList_ = value;
-          }
-          onChanged();
-        } else {
-          bannerListBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .common.PCommunityBannerInfoList BannerList = 5;</code>
-       *
-       * <pre>
-       * banner列表
-       * </pre>
-       */
-      public Builder clearBannerList() {
-        if (bannerListBuilder_ == null) {
-          bannerList_ = null;
-          onChanged();
-        } else {
-          bannerList_ = null;
-          bannerListBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .common.PCommunityBannerInfoList BannerList = 5;</code>
-       *
-       * <pre>
-       * banner列表
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList.Builder getBannerListBuilder() {
-        
-        onChanged();
-        return getBannerListFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .common.PCommunityBannerInfoList BannerList = 5;</code>
-       *
-       * <pre>
-       * banner列表
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoListOrBuilder getBannerListOrBuilder() {
-        if (bannerListBuilder_ != null) {
-          return bannerListBuilder_.getMessageOrBuilder();
-        } else {
-          return bannerList_ == null ?
-              com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList.getDefaultInstance() : bannerList_;
-        }
-      }
-      /**
-       * <code>optional .common.PCommunityBannerInfoList BannerList = 5;</code>
-       *
-       * <pre>
-       * banner列表
-       * </pre>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList, com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoListOrBuilder> 
-          getBannerListFieldBuilder() {
-        if (bannerListBuilder_ == null) {
-          bannerListBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList, com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoListOrBuilder>(
-                  getBannerList(),
-                  getParentForChildren(),
-                  isClean());
-          bannerList_ = null;
-        }
-        return bannerListBuilder_;
-      }
-
       private com.blemobi.sep.probuf.ResultProtos.PInt32List middleModulesID_ = null;
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.ResultProtos.PInt32List, com.blemobi.sep.probuf.ResultProtos.PInt32List.Builder, com.blemobi.sep.probuf.ResultProtos.PInt32ListOrBuilder> middleModulesIDBuilder_;
       /**
-       * <code>optional .common.PInt32List MiddleModulesID = 7;</code>
+       * <code>optional .bbproto.PInt32List MiddleModulesID = 3;</code>
        *
        * <pre>
        * 中间定义的功能模块列表
@@ -35453,7 +35415,7 @@ public final class CommunityProtos {
         return middleModulesIDBuilder_ != null || middleModulesID_ != null;
       }
       /**
-       * <code>optional .common.PInt32List MiddleModulesID = 7;</code>
+       * <code>optional .bbproto.PInt32List MiddleModulesID = 3;</code>
        *
        * <pre>
        * 中间定义的功能模块列表
@@ -35467,7 +35429,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PInt32List MiddleModulesID = 7;</code>
+       * <code>optional .bbproto.PInt32List MiddleModulesID = 3;</code>
        *
        * <pre>
        * 中间定义的功能模块列表
@@ -35487,7 +35449,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PInt32List MiddleModulesID = 7;</code>
+       * <code>optional .bbproto.PInt32List MiddleModulesID = 3;</code>
        *
        * <pre>
        * 中间定义的功能模块列表
@@ -35505,7 +35467,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PInt32List MiddleModulesID = 7;</code>
+       * <code>optional .bbproto.PInt32List MiddleModulesID = 3;</code>
        *
        * <pre>
        * 中间定义的功能模块列表
@@ -35527,7 +35489,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PInt32List MiddleModulesID = 7;</code>
+       * <code>optional .bbproto.PInt32List MiddleModulesID = 3;</code>
        *
        * <pre>
        * 中间定义的功能模块列表
@@ -35545,7 +35507,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PInt32List MiddleModulesID = 7;</code>
+       * <code>optional .bbproto.PInt32List MiddleModulesID = 3;</code>
        *
        * <pre>
        * 中间定义的功能模块列表
@@ -35557,7 +35519,7 @@ public final class CommunityProtos {
         return getMiddleModulesIDFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PInt32List MiddleModulesID = 7;</code>
+       * <code>optional .bbproto.PInt32List MiddleModulesID = 3;</code>
        *
        * <pre>
        * 中间定义的功能模块列表
@@ -35572,7 +35534,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PInt32List MiddleModulesID = 7;</code>
+       * <code>optional .bbproto.PInt32List MiddleModulesID = 3;</code>
        *
        * <pre>
        * 中间定义的功能模块列表
@@ -35596,7 +35558,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.ResultProtos.PInt32List, com.blemobi.sep.probuf.ResultProtos.PInt32List.Builder, com.blemobi.sep.probuf.ResultProtos.PInt32ListOrBuilder> bottomModulesIDBuilder_;
       /**
-       * <code>optional .common.PInt32List BottomModulesID = 8;</code>
+       * <code>optional .bbproto.PInt32List BottomModulesID = 4;</code>
        *
        * <pre>
        * 底部定义的功能模块列表
@@ -35606,7 +35568,7 @@ public final class CommunityProtos {
         return bottomModulesIDBuilder_ != null || bottomModulesID_ != null;
       }
       /**
-       * <code>optional .common.PInt32List BottomModulesID = 8;</code>
+       * <code>optional .bbproto.PInt32List BottomModulesID = 4;</code>
        *
        * <pre>
        * 底部定义的功能模块列表
@@ -35620,7 +35582,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PInt32List BottomModulesID = 8;</code>
+       * <code>optional .bbproto.PInt32List BottomModulesID = 4;</code>
        *
        * <pre>
        * 底部定义的功能模块列表
@@ -35640,7 +35602,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PInt32List BottomModulesID = 8;</code>
+       * <code>optional .bbproto.PInt32List BottomModulesID = 4;</code>
        *
        * <pre>
        * 底部定义的功能模块列表
@@ -35658,7 +35620,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PInt32List BottomModulesID = 8;</code>
+       * <code>optional .bbproto.PInt32List BottomModulesID = 4;</code>
        *
        * <pre>
        * 底部定义的功能模块列表
@@ -35680,7 +35642,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PInt32List BottomModulesID = 8;</code>
+       * <code>optional .bbproto.PInt32List BottomModulesID = 4;</code>
        *
        * <pre>
        * 底部定义的功能模块列表
@@ -35698,7 +35660,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PInt32List BottomModulesID = 8;</code>
+       * <code>optional .bbproto.PInt32List BottomModulesID = 4;</code>
        *
        * <pre>
        * 底部定义的功能模块列表
@@ -35710,7 +35672,7 @@ public final class CommunityProtos {
         return getBottomModulesIDFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PInt32List BottomModulesID = 8;</code>
+       * <code>optional .bbproto.PInt32List BottomModulesID = 4;</code>
        *
        * <pre>
        * 底部定义的功能模块列表
@@ -35725,7 +35687,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PInt32List BottomModulesID = 8;</code>
+       * <code>optional .bbproto.PInt32List BottomModulesID = 4;</code>
        *
        * <pre>
        * 底部定义的功能模块列表
@@ -35744,6 +35706,159 @@ public final class CommunityProtos {
         }
         return bottomModulesIDBuilder_;
       }
+
+      private com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList bannerList_ = null;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList, com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoListOrBuilder> bannerListBuilder_;
+      /**
+       * <code>optional .bbproto.PCommunityBannerInfoList BannerList = 5;</code>
+       *
+       * <pre>
+       * banner列表
+       * </pre>
+       */
+      public boolean hasBannerList() {
+        return bannerListBuilder_ != null || bannerList_ != null;
+      }
+      /**
+       * <code>optional .bbproto.PCommunityBannerInfoList BannerList = 5;</code>
+       *
+       * <pre>
+       * banner列表
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList getBannerList() {
+        if (bannerListBuilder_ == null) {
+          return bannerList_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList.getDefaultInstance() : bannerList_;
+        } else {
+          return bannerListBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .bbproto.PCommunityBannerInfoList BannerList = 5;</code>
+       *
+       * <pre>
+       * banner列表
+       * </pre>
+       */
+      public Builder setBannerList(com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList value) {
+        if (bannerListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bannerList_ = value;
+          onChanged();
+        } else {
+          bannerListBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PCommunityBannerInfoList BannerList = 5;</code>
+       *
+       * <pre>
+       * banner列表
+       * </pre>
+       */
+      public Builder setBannerList(
+          com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList.Builder builderForValue) {
+        if (bannerListBuilder_ == null) {
+          bannerList_ = builderForValue.build();
+          onChanged();
+        } else {
+          bannerListBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PCommunityBannerInfoList BannerList = 5;</code>
+       *
+       * <pre>
+       * banner列表
+       * </pre>
+       */
+      public Builder mergeBannerList(com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList value) {
+        if (bannerListBuilder_ == null) {
+          if (bannerList_ != null) {
+            bannerList_ =
+              com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList.newBuilder(bannerList_).mergeFrom(value).buildPartial();
+          } else {
+            bannerList_ = value;
+          }
+          onChanged();
+        } else {
+          bannerListBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PCommunityBannerInfoList BannerList = 5;</code>
+       *
+       * <pre>
+       * banner列表
+       * </pre>
+       */
+      public Builder clearBannerList() {
+        if (bannerListBuilder_ == null) {
+          bannerList_ = null;
+          onChanged();
+        } else {
+          bannerList_ = null;
+          bannerListBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PCommunityBannerInfoList BannerList = 5;</code>
+       *
+       * <pre>
+       * banner列表
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList.Builder getBannerListBuilder() {
+        
+        onChanged();
+        return getBannerListFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .bbproto.PCommunityBannerInfoList BannerList = 5;</code>
+       *
+       * <pre>
+       * banner列表
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoListOrBuilder getBannerListOrBuilder() {
+        if (bannerListBuilder_ != null) {
+          return bannerListBuilder_.getMessageOrBuilder();
+        } else {
+          return bannerList_ == null ?
+              com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList.getDefaultInstance() : bannerList_;
+        }
+      }
+      /**
+       * <code>optional .bbproto.PCommunityBannerInfoList BannerList = 5;</code>
+       *
+       * <pre>
+       * banner列表
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList, com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoListOrBuilder> 
+          getBannerListFieldBuilder() {
+        if (bannerListBuilder_ == null) {
+          bannerListBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList, com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoList.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoListOrBuilder>(
+                  getBannerList(),
+                  getParentForChildren(),
+                  isClean());
+          bannerList_ = null;
+        }
+        return bannerListBuilder_;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return this;
@@ -35755,10 +35870,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityLayoutPlan1)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityLayoutPlan1)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityLayoutPlan1)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityLayoutPlan1)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutPlan1 DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutPlan1();
@@ -35799,7 +35914,7 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityLayoutOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityLayout)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityLayout)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -35830,7 +35945,7 @@ public final class CommunityProtos {
         getColorBytes();
 
     /**
-     * <code>optional .common.PCommunityLayoutPlan1 Plan1 = 3;</code>
+     * <code>optional .bbproto.PCommunityLayoutPlan1 Plan1 = 3;</code>
      *
      * <pre>
      * 方案1的布局
@@ -35838,7 +35953,7 @@ public final class CommunityProtos {
      */
     boolean hasPlan1();
     /**
-     * <code>optional .common.PCommunityLayoutPlan1 Plan1 = 3;</code>
+     * <code>optional .bbproto.PCommunityLayoutPlan1 Plan1 = 3;</code>
      *
      * <pre>
      * 方案1的布局
@@ -35846,7 +35961,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutPlan1 getPlan1();
     /**
-     * <code>optional .common.PCommunityLayoutPlan1 Plan1 = 3;</code>
+     * <code>optional .bbproto.PCommunityLayoutPlan1 Plan1 = 3;</code>
      *
      * <pre>
      * 方案1的布局
@@ -35855,7 +35970,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutPlan1OrBuilder getPlan1OrBuilder();
   }
   /**
-   * Protobuf type {@code common.PCommunityLayout}
+   * Protobuf type {@code bbproto.PCommunityLayout}
    *
    * <pre>
    * 社区成员的布局
@@ -35863,7 +35978,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityLayout extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityLayout)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityLayout)
       PCommunityLayoutOrBuilder {
     // Use PCommunityLayout.newBuilder() to construct.
     private PCommunityLayout(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -35936,12 +36051,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityLayout_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityLayout_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityLayout_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityLayout_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityLayout.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityLayout.Builder.class);
     }
@@ -36006,7 +36121,7 @@ public final class CommunityProtos {
     public static final int PLAN1_FIELD_NUMBER = 3;
     private com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutPlan1 plan1_;
     /**
-     * <code>optional .common.PCommunityLayoutPlan1 Plan1 = 3;</code>
+     * <code>optional .bbproto.PCommunityLayoutPlan1 Plan1 = 3;</code>
      *
      * <pre>
      * 方案1的布局
@@ -36016,7 +36131,7 @@ public final class CommunityProtos {
       return plan1_ != null;
     }
     /**
-     * <code>optional .common.PCommunityLayoutPlan1 Plan1 = 3;</code>
+     * <code>optional .bbproto.PCommunityLayoutPlan1 Plan1 = 3;</code>
      *
      * <pre>
      * 方案1的布局
@@ -36026,7 +36141,7 @@ public final class CommunityProtos {
       return plan1_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutPlan1.getDefaultInstance() : plan1_;
     }
     /**
-     * <code>optional .common.PCommunityLayoutPlan1 Plan1 = 3;</code>
+     * <code>optional .bbproto.PCommunityLayoutPlan1 Plan1 = 3;</code>
      *
      * <pre>
      * 方案1的布局
@@ -36154,7 +36269,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityLayout}
+     * Protobuf type {@code bbproto.PCommunityLayout}
      *
      * <pre>
      * 社区成员的布局
@@ -36162,16 +36277,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityLayout)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityLayout)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityLayout_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityLayout_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityLayout_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityLayout_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityLayout.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityLayout.Builder.class);
       }
@@ -36207,7 +36322,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityLayout_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityLayout_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityLayout getDefaultInstanceForType() {
@@ -36414,7 +36529,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutPlan1, com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutPlan1.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutPlan1OrBuilder> plan1Builder_;
       /**
-       * <code>optional .common.PCommunityLayoutPlan1 Plan1 = 3;</code>
+       * <code>optional .bbproto.PCommunityLayoutPlan1 Plan1 = 3;</code>
        *
        * <pre>
        * 方案1的布局
@@ -36424,7 +36539,7 @@ public final class CommunityProtos {
         return plan1Builder_ != null || plan1_ != null;
       }
       /**
-       * <code>optional .common.PCommunityLayoutPlan1 Plan1 = 3;</code>
+       * <code>optional .bbproto.PCommunityLayoutPlan1 Plan1 = 3;</code>
        *
        * <pre>
        * 方案1的布局
@@ -36438,7 +36553,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityLayoutPlan1 Plan1 = 3;</code>
+       * <code>optional .bbproto.PCommunityLayoutPlan1 Plan1 = 3;</code>
        *
        * <pre>
        * 方案1的布局
@@ -36458,7 +36573,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityLayoutPlan1 Plan1 = 3;</code>
+       * <code>optional .bbproto.PCommunityLayoutPlan1 Plan1 = 3;</code>
        *
        * <pre>
        * 方案1的布局
@@ -36476,7 +36591,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityLayoutPlan1 Plan1 = 3;</code>
+       * <code>optional .bbproto.PCommunityLayoutPlan1 Plan1 = 3;</code>
        *
        * <pre>
        * 方案1的布局
@@ -36498,7 +36613,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityLayoutPlan1 Plan1 = 3;</code>
+       * <code>optional .bbproto.PCommunityLayoutPlan1 Plan1 = 3;</code>
        *
        * <pre>
        * 方案1的布局
@@ -36516,7 +36631,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityLayoutPlan1 Plan1 = 3;</code>
+       * <code>optional .bbproto.PCommunityLayoutPlan1 Plan1 = 3;</code>
        *
        * <pre>
        * 方案1的布局
@@ -36528,7 +36643,7 @@ public final class CommunityProtos {
         return getPlan1FieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PCommunityLayoutPlan1 Plan1 = 3;</code>
+       * <code>optional .bbproto.PCommunityLayoutPlan1 Plan1 = 3;</code>
        *
        * <pre>
        * 方案1的布局
@@ -36543,7 +36658,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityLayoutPlan1 Plan1 = 3;</code>
+       * <code>optional .bbproto.PCommunityLayoutPlan1 Plan1 = 3;</code>
        *
        * <pre>
        * 方案1的布局
@@ -36573,10 +36688,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityLayout)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityLayout)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityLayout)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityLayout)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityLayout DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityLayout();
@@ -36617,11 +36732,11 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityInfoV12OrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityInfoV12)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityInfoV12)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .common.PCommunityBase BaseInfo = 1;</code>
+     * <code>optional .bbproto.PCommunityBase BaseInfo = 1;</code>
      *
      * <pre>
      * 社区基础信息
@@ -36629,7 +36744,7 @@ public final class CommunityProtos {
      */
     boolean hasBaseInfo();
     /**
-     * <code>optional .common.PCommunityBase BaseInfo = 1;</code>
+     * <code>optional .bbproto.PCommunityBase BaseInfo = 1;</code>
      *
      * <pre>
      * 社区基础信息
@@ -36637,7 +36752,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityBase getBaseInfo();
     /**
-     * <code>optional .common.PCommunityBase BaseInfo = 1;</code>
+     * <code>optional .bbproto.PCommunityBase BaseInfo = 1;</code>
      *
      * <pre>
      * 社区基础信息
@@ -36646,7 +36761,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseOrBuilder getBaseInfoOrBuilder();
 
     /**
-     * <code>optional .common.PCommunityLayout Layout = 2;</code>
+     * <code>optional .bbproto.PCommunityLayout Layout = 2;</code>
      *
      * <pre>
      * 社区成员的布局
@@ -36654,7 +36769,7 @@ public final class CommunityProtos {
      */
     boolean hasLayout();
     /**
-     * <code>optional .common.PCommunityLayout Layout = 2;</code>
+     * <code>optional .bbproto.PCommunityLayout Layout = 2;</code>
      *
      * <pre>
      * 社区成员的布局
@@ -36662,7 +36777,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityLayout getLayout();
     /**
-     * <code>optional .common.PCommunityLayout Layout = 2;</code>
+     * <code>optional .bbproto.PCommunityLayout Layout = 2;</code>
      *
      * <pre>
      * 社区成员的布局
@@ -36671,7 +36786,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutOrBuilder getLayoutOrBuilder();
 
     /**
-     * <code>optional .common.PCommunityBannerInfo Advertisement = 3;</code>
+     * <code>optional .bbproto.PCommunityBannerInfo Advertisement = 3;</code>
      *
      * <pre>
      * 监管后台设置的广告
@@ -36679,7 +36794,7 @@ public final class CommunityProtos {
      */
     boolean hasAdvertisement();
     /**
-     * <code>optional .common.PCommunityBannerInfo Advertisement = 3;</code>
+     * <code>optional .bbproto.PCommunityBannerInfo Advertisement = 3;</code>
      *
      * <pre>
      * 监管后台设置的广告
@@ -36687,7 +36802,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfo getAdvertisement();
     /**
-     * <code>optional .common.PCommunityBannerInfo Advertisement = 3;</code>
+     * <code>optional .bbproto.PCommunityBannerInfo Advertisement = 3;</code>
      *
      * <pre>
      * 监管后台设置的广告
@@ -36696,7 +36811,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoOrBuilder getAdvertisementOrBuilder();
 
     /**
-     * <code>optional .common.PCommunityForumTagList ForumTagList = 4;</code>
+     * <code>optional .bbproto.PCommunityForumTagList ForumTagList = 4;</code>
      *
      * <pre>
      * 论坛帖子的自定义标签类型列表
@@ -36704,7 +36819,7 @@ public final class CommunityProtos {
      */
     boolean hasForumTagList();
     /**
-     * <code>optional .common.PCommunityForumTagList ForumTagList = 4;</code>
+     * <code>optional .bbproto.PCommunityForumTagList ForumTagList = 4;</code>
      *
      * <pre>
      * 论坛帖子的自定义标签类型列表
@@ -36712,7 +36827,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTagList getForumTagList();
     /**
-     * <code>optional .common.PCommunityForumTagList ForumTagList = 4;</code>
+     * <code>optional .bbproto.PCommunityForumTagList ForumTagList = 4;</code>
      *
      * <pre>
      * 论坛帖子的自定义标签类型列表
@@ -36721,7 +36836,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTagListOrBuilder getForumTagListOrBuilder();
 
     /**
-     * <code>optional .common.PCommunityModulesList ModulesList = 5;</code>
+     * <code>optional .bbproto.PCommunityModulesList ModulesList = 5;</code>
      *
      * <pre>
      * 所有的功能模块列表
@@ -36729,7 +36844,7 @@ public final class CommunityProtos {
      */
     boolean hasModulesList();
     /**
-     * <code>optional .common.PCommunityModulesList ModulesList = 5;</code>
+     * <code>optional .bbproto.PCommunityModulesList ModulesList = 5;</code>
      *
      * <pre>
      * 所有的功能模块列表
@@ -36737,7 +36852,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityModulesList getModulesList();
     /**
-     * <code>optional .common.PCommunityModulesList ModulesList = 5;</code>
+     * <code>optional .bbproto.PCommunityModulesList ModulesList = 5;</code>
      *
      * <pre>
      * 所有的功能模块列表
@@ -36746,7 +36861,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.CommunityProtos.PCommunityModulesListOrBuilder getModulesListOrBuilder();
   }
   /**
-   * Protobuf type {@code common.PCommunityInfoV12}
+   * Protobuf type {@code bbproto.PCommunityInfoV12}
    *
    * <pre>
    * 社区信息 v1.2.x
@@ -36754,7 +36869,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityInfoV12 extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityInfoV12)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityInfoV12)
       PCommunityInfoV12OrBuilder {
     // Use PCommunityInfoV12.newBuilder() to construct.
     private PCommunityInfoV12(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -36866,12 +36981,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityInfoV12_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityInfoV12_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityInfoV12_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityInfoV12_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityInfoV12.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityInfoV12.Builder.class);
     }
@@ -36879,7 +36994,7 @@ public final class CommunityProtos {
     public static final int BASEINFO_FIELD_NUMBER = 1;
     private com.blemobi.sep.probuf.CommunityProtos.PCommunityBase baseInfo_;
     /**
-     * <code>optional .common.PCommunityBase BaseInfo = 1;</code>
+     * <code>optional .bbproto.PCommunityBase BaseInfo = 1;</code>
      *
      * <pre>
      * 社区基础信息
@@ -36889,7 +37004,7 @@ public final class CommunityProtos {
       return baseInfo_ != null;
     }
     /**
-     * <code>optional .common.PCommunityBase BaseInfo = 1;</code>
+     * <code>optional .bbproto.PCommunityBase BaseInfo = 1;</code>
      *
      * <pre>
      * 社区基础信息
@@ -36899,7 +37014,7 @@ public final class CommunityProtos {
       return baseInfo_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityBase.getDefaultInstance() : baseInfo_;
     }
     /**
-     * <code>optional .common.PCommunityBase BaseInfo = 1;</code>
+     * <code>optional .bbproto.PCommunityBase BaseInfo = 1;</code>
      *
      * <pre>
      * 社区基础信息
@@ -36912,7 +37027,7 @@ public final class CommunityProtos {
     public static final int LAYOUT_FIELD_NUMBER = 2;
     private com.blemobi.sep.probuf.CommunityProtos.PCommunityLayout layout_;
     /**
-     * <code>optional .common.PCommunityLayout Layout = 2;</code>
+     * <code>optional .bbproto.PCommunityLayout Layout = 2;</code>
      *
      * <pre>
      * 社区成员的布局
@@ -36922,7 +37037,7 @@ public final class CommunityProtos {
       return layout_ != null;
     }
     /**
-     * <code>optional .common.PCommunityLayout Layout = 2;</code>
+     * <code>optional .bbproto.PCommunityLayout Layout = 2;</code>
      *
      * <pre>
      * 社区成员的布局
@@ -36932,7 +37047,7 @@ public final class CommunityProtos {
       return layout_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityLayout.getDefaultInstance() : layout_;
     }
     /**
-     * <code>optional .common.PCommunityLayout Layout = 2;</code>
+     * <code>optional .bbproto.PCommunityLayout Layout = 2;</code>
      *
      * <pre>
      * 社区成员的布局
@@ -36945,7 +37060,7 @@ public final class CommunityProtos {
     public static final int ADVERTISEMENT_FIELD_NUMBER = 3;
     private com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfo advertisement_;
     /**
-     * <code>optional .common.PCommunityBannerInfo Advertisement = 3;</code>
+     * <code>optional .bbproto.PCommunityBannerInfo Advertisement = 3;</code>
      *
      * <pre>
      * 监管后台设置的广告
@@ -36955,7 +37070,7 @@ public final class CommunityProtos {
       return advertisement_ != null;
     }
     /**
-     * <code>optional .common.PCommunityBannerInfo Advertisement = 3;</code>
+     * <code>optional .bbproto.PCommunityBannerInfo Advertisement = 3;</code>
      *
      * <pre>
      * 监管后台设置的广告
@@ -36965,7 +37080,7 @@ public final class CommunityProtos {
       return advertisement_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfo.getDefaultInstance() : advertisement_;
     }
     /**
-     * <code>optional .common.PCommunityBannerInfo Advertisement = 3;</code>
+     * <code>optional .bbproto.PCommunityBannerInfo Advertisement = 3;</code>
      *
      * <pre>
      * 监管后台设置的广告
@@ -36978,7 +37093,7 @@ public final class CommunityProtos {
     public static final int FORUMTAGLIST_FIELD_NUMBER = 4;
     private com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTagList forumTagList_;
     /**
-     * <code>optional .common.PCommunityForumTagList ForumTagList = 4;</code>
+     * <code>optional .bbproto.PCommunityForumTagList ForumTagList = 4;</code>
      *
      * <pre>
      * 论坛帖子的自定义标签类型列表
@@ -36988,7 +37103,7 @@ public final class CommunityProtos {
       return forumTagList_ != null;
     }
     /**
-     * <code>optional .common.PCommunityForumTagList ForumTagList = 4;</code>
+     * <code>optional .bbproto.PCommunityForumTagList ForumTagList = 4;</code>
      *
      * <pre>
      * 论坛帖子的自定义标签类型列表
@@ -36998,7 +37113,7 @@ public final class CommunityProtos {
       return forumTagList_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTagList.getDefaultInstance() : forumTagList_;
     }
     /**
-     * <code>optional .common.PCommunityForumTagList ForumTagList = 4;</code>
+     * <code>optional .bbproto.PCommunityForumTagList ForumTagList = 4;</code>
      *
      * <pre>
      * 论坛帖子的自定义标签类型列表
@@ -37011,7 +37126,7 @@ public final class CommunityProtos {
     public static final int MODULESLIST_FIELD_NUMBER = 5;
     private com.blemobi.sep.probuf.CommunityProtos.PCommunityModulesList modulesList_;
     /**
-     * <code>optional .common.PCommunityModulesList ModulesList = 5;</code>
+     * <code>optional .bbproto.PCommunityModulesList ModulesList = 5;</code>
      *
      * <pre>
      * 所有的功能模块列表
@@ -37021,7 +37136,7 @@ public final class CommunityProtos {
       return modulesList_ != null;
     }
     /**
-     * <code>optional .common.PCommunityModulesList ModulesList = 5;</code>
+     * <code>optional .bbproto.PCommunityModulesList ModulesList = 5;</code>
      *
      * <pre>
      * 所有的功能模块列表
@@ -37031,7 +37146,7 @@ public final class CommunityProtos {
       return modulesList_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityModulesList.getDefaultInstance() : modulesList_;
     }
     /**
-     * <code>optional .common.PCommunityModulesList ModulesList = 5;</code>
+     * <code>optional .bbproto.PCommunityModulesList ModulesList = 5;</code>
      *
      * <pre>
      * 所有的功能模块列表
@@ -37173,7 +37288,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityInfoV12}
+     * Protobuf type {@code bbproto.PCommunityInfoV12}
      *
      * <pre>
      * 社区信息 v1.2.x
@@ -37181,16 +37296,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityInfoV12)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityInfoV12)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityInfoV12OrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityInfoV12_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityInfoV12_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityInfoV12_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityInfoV12_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityInfoV12.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityInfoV12.Builder.class);
       }
@@ -37246,7 +37361,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityInfoV12_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityInfoV12_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityInfoV12 getDefaultInstanceForType() {
@@ -37348,7 +37463,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.CommunityProtos.PCommunityBase, com.blemobi.sep.probuf.CommunityProtos.PCommunityBase.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseOrBuilder> baseInfoBuilder_;
       /**
-       * <code>optional .common.PCommunityBase BaseInfo = 1;</code>
+       * <code>optional .bbproto.PCommunityBase BaseInfo = 1;</code>
        *
        * <pre>
        * 社区基础信息
@@ -37358,7 +37473,7 @@ public final class CommunityProtos {
         return baseInfoBuilder_ != null || baseInfo_ != null;
       }
       /**
-       * <code>optional .common.PCommunityBase BaseInfo = 1;</code>
+       * <code>optional .bbproto.PCommunityBase BaseInfo = 1;</code>
        *
        * <pre>
        * 社区基础信息
@@ -37372,7 +37487,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityBase BaseInfo = 1;</code>
+       * <code>optional .bbproto.PCommunityBase BaseInfo = 1;</code>
        *
        * <pre>
        * 社区基础信息
@@ -37392,7 +37507,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityBase BaseInfo = 1;</code>
+       * <code>optional .bbproto.PCommunityBase BaseInfo = 1;</code>
        *
        * <pre>
        * 社区基础信息
@@ -37410,7 +37525,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityBase BaseInfo = 1;</code>
+       * <code>optional .bbproto.PCommunityBase BaseInfo = 1;</code>
        *
        * <pre>
        * 社区基础信息
@@ -37432,7 +37547,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityBase BaseInfo = 1;</code>
+       * <code>optional .bbproto.PCommunityBase BaseInfo = 1;</code>
        *
        * <pre>
        * 社区基础信息
@@ -37450,7 +37565,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityBase BaseInfo = 1;</code>
+       * <code>optional .bbproto.PCommunityBase BaseInfo = 1;</code>
        *
        * <pre>
        * 社区基础信息
@@ -37462,7 +37577,7 @@ public final class CommunityProtos {
         return getBaseInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PCommunityBase BaseInfo = 1;</code>
+       * <code>optional .bbproto.PCommunityBase BaseInfo = 1;</code>
        *
        * <pre>
        * 社区基础信息
@@ -37477,7 +37592,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityBase BaseInfo = 1;</code>
+       * <code>optional .bbproto.PCommunityBase BaseInfo = 1;</code>
        *
        * <pre>
        * 社区基础信息
@@ -37501,7 +37616,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.CommunityProtos.PCommunityLayout, com.blemobi.sep.probuf.CommunityProtos.PCommunityLayout.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutOrBuilder> layoutBuilder_;
       /**
-       * <code>optional .common.PCommunityLayout Layout = 2;</code>
+       * <code>optional .bbproto.PCommunityLayout Layout = 2;</code>
        *
        * <pre>
        * 社区成员的布局
@@ -37511,7 +37626,7 @@ public final class CommunityProtos {
         return layoutBuilder_ != null || layout_ != null;
       }
       /**
-       * <code>optional .common.PCommunityLayout Layout = 2;</code>
+       * <code>optional .bbproto.PCommunityLayout Layout = 2;</code>
        *
        * <pre>
        * 社区成员的布局
@@ -37525,7 +37640,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityLayout Layout = 2;</code>
+       * <code>optional .bbproto.PCommunityLayout Layout = 2;</code>
        *
        * <pre>
        * 社区成员的布局
@@ -37545,7 +37660,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityLayout Layout = 2;</code>
+       * <code>optional .bbproto.PCommunityLayout Layout = 2;</code>
        *
        * <pre>
        * 社区成员的布局
@@ -37563,7 +37678,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityLayout Layout = 2;</code>
+       * <code>optional .bbproto.PCommunityLayout Layout = 2;</code>
        *
        * <pre>
        * 社区成员的布局
@@ -37585,7 +37700,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityLayout Layout = 2;</code>
+       * <code>optional .bbproto.PCommunityLayout Layout = 2;</code>
        *
        * <pre>
        * 社区成员的布局
@@ -37603,7 +37718,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityLayout Layout = 2;</code>
+       * <code>optional .bbproto.PCommunityLayout Layout = 2;</code>
        *
        * <pre>
        * 社区成员的布局
@@ -37615,7 +37730,7 @@ public final class CommunityProtos {
         return getLayoutFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PCommunityLayout Layout = 2;</code>
+       * <code>optional .bbproto.PCommunityLayout Layout = 2;</code>
        *
        * <pre>
        * 社区成员的布局
@@ -37630,7 +37745,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityLayout Layout = 2;</code>
+       * <code>optional .bbproto.PCommunityLayout Layout = 2;</code>
        *
        * <pre>
        * 社区成员的布局
@@ -37654,7 +37769,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfo, com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfo.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoOrBuilder> advertisementBuilder_;
       /**
-       * <code>optional .common.PCommunityBannerInfo Advertisement = 3;</code>
+       * <code>optional .bbproto.PCommunityBannerInfo Advertisement = 3;</code>
        *
        * <pre>
        * 监管后台设置的广告
@@ -37664,7 +37779,7 @@ public final class CommunityProtos {
         return advertisementBuilder_ != null || advertisement_ != null;
       }
       /**
-       * <code>optional .common.PCommunityBannerInfo Advertisement = 3;</code>
+       * <code>optional .bbproto.PCommunityBannerInfo Advertisement = 3;</code>
        *
        * <pre>
        * 监管后台设置的广告
@@ -37678,7 +37793,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityBannerInfo Advertisement = 3;</code>
+       * <code>optional .bbproto.PCommunityBannerInfo Advertisement = 3;</code>
        *
        * <pre>
        * 监管后台设置的广告
@@ -37698,7 +37813,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityBannerInfo Advertisement = 3;</code>
+       * <code>optional .bbproto.PCommunityBannerInfo Advertisement = 3;</code>
        *
        * <pre>
        * 监管后台设置的广告
@@ -37716,7 +37831,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityBannerInfo Advertisement = 3;</code>
+       * <code>optional .bbproto.PCommunityBannerInfo Advertisement = 3;</code>
        *
        * <pre>
        * 监管后台设置的广告
@@ -37738,7 +37853,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityBannerInfo Advertisement = 3;</code>
+       * <code>optional .bbproto.PCommunityBannerInfo Advertisement = 3;</code>
        *
        * <pre>
        * 监管后台设置的广告
@@ -37756,7 +37871,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityBannerInfo Advertisement = 3;</code>
+       * <code>optional .bbproto.PCommunityBannerInfo Advertisement = 3;</code>
        *
        * <pre>
        * 监管后台设置的广告
@@ -37768,7 +37883,7 @@ public final class CommunityProtos {
         return getAdvertisementFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PCommunityBannerInfo Advertisement = 3;</code>
+       * <code>optional .bbproto.PCommunityBannerInfo Advertisement = 3;</code>
        *
        * <pre>
        * 监管后台设置的广告
@@ -37783,7 +37898,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityBannerInfo Advertisement = 3;</code>
+       * <code>optional .bbproto.PCommunityBannerInfo Advertisement = 3;</code>
        *
        * <pre>
        * 监管后台设置的广告
@@ -37807,7 +37922,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTagList, com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTagList.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityForumTagListOrBuilder> forumTagListBuilder_;
       /**
-       * <code>optional .common.PCommunityForumTagList ForumTagList = 4;</code>
+       * <code>optional .bbproto.PCommunityForumTagList ForumTagList = 4;</code>
        *
        * <pre>
        * 论坛帖子的自定义标签类型列表
@@ -37817,7 +37932,7 @@ public final class CommunityProtos {
         return forumTagListBuilder_ != null || forumTagList_ != null;
       }
       /**
-       * <code>optional .common.PCommunityForumTagList ForumTagList = 4;</code>
+       * <code>optional .bbproto.PCommunityForumTagList ForumTagList = 4;</code>
        *
        * <pre>
        * 论坛帖子的自定义标签类型列表
@@ -37831,7 +37946,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityForumTagList ForumTagList = 4;</code>
+       * <code>optional .bbproto.PCommunityForumTagList ForumTagList = 4;</code>
        *
        * <pre>
        * 论坛帖子的自定义标签类型列表
@@ -37851,7 +37966,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityForumTagList ForumTagList = 4;</code>
+       * <code>optional .bbproto.PCommunityForumTagList ForumTagList = 4;</code>
        *
        * <pre>
        * 论坛帖子的自定义标签类型列表
@@ -37869,7 +37984,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityForumTagList ForumTagList = 4;</code>
+       * <code>optional .bbproto.PCommunityForumTagList ForumTagList = 4;</code>
        *
        * <pre>
        * 论坛帖子的自定义标签类型列表
@@ -37891,7 +38006,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityForumTagList ForumTagList = 4;</code>
+       * <code>optional .bbproto.PCommunityForumTagList ForumTagList = 4;</code>
        *
        * <pre>
        * 论坛帖子的自定义标签类型列表
@@ -37909,7 +38024,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityForumTagList ForumTagList = 4;</code>
+       * <code>optional .bbproto.PCommunityForumTagList ForumTagList = 4;</code>
        *
        * <pre>
        * 论坛帖子的自定义标签类型列表
@@ -37921,7 +38036,7 @@ public final class CommunityProtos {
         return getForumTagListFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PCommunityForumTagList ForumTagList = 4;</code>
+       * <code>optional .bbproto.PCommunityForumTagList ForumTagList = 4;</code>
        *
        * <pre>
        * 论坛帖子的自定义标签类型列表
@@ -37936,7 +38051,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityForumTagList ForumTagList = 4;</code>
+       * <code>optional .bbproto.PCommunityForumTagList ForumTagList = 4;</code>
        *
        * <pre>
        * 论坛帖子的自定义标签类型列表
@@ -37960,7 +38075,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.CommunityProtos.PCommunityModulesList, com.blemobi.sep.probuf.CommunityProtos.PCommunityModulesList.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityModulesListOrBuilder> modulesListBuilder_;
       /**
-       * <code>optional .common.PCommunityModulesList ModulesList = 5;</code>
+       * <code>optional .bbproto.PCommunityModulesList ModulesList = 5;</code>
        *
        * <pre>
        * 所有的功能模块列表
@@ -37970,7 +38085,7 @@ public final class CommunityProtos {
         return modulesListBuilder_ != null || modulesList_ != null;
       }
       /**
-       * <code>optional .common.PCommunityModulesList ModulesList = 5;</code>
+       * <code>optional .bbproto.PCommunityModulesList ModulesList = 5;</code>
        *
        * <pre>
        * 所有的功能模块列表
@@ -37984,7 +38099,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityModulesList ModulesList = 5;</code>
+       * <code>optional .bbproto.PCommunityModulesList ModulesList = 5;</code>
        *
        * <pre>
        * 所有的功能模块列表
@@ -38004,7 +38119,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityModulesList ModulesList = 5;</code>
+       * <code>optional .bbproto.PCommunityModulesList ModulesList = 5;</code>
        *
        * <pre>
        * 所有的功能模块列表
@@ -38022,7 +38137,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityModulesList ModulesList = 5;</code>
+       * <code>optional .bbproto.PCommunityModulesList ModulesList = 5;</code>
        *
        * <pre>
        * 所有的功能模块列表
@@ -38044,7 +38159,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityModulesList ModulesList = 5;</code>
+       * <code>optional .bbproto.PCommunityModulesList ModulesList = 5;</code>
        *
        * <pre>
        * 所有的功能模块列表
@@ -38062,7 +38177,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityModulesList ModulesList = 5;</code>
+       * <code>optional .bbproto.PCommunityModulesList ModulesList = 5;</code>
        *
        * <pre>
        * 所有的功能模块列表
@@ -38074,7 +38189,7 @@ public final class CommunityProtos {
         return getModulesListFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PCommunityModulesList ModulesList = 5;</code>
+       * <code>optional .bbproto.PCommunityModulesList ModulesList = 5;</code>
        *
        * <pre>
        * 所有的功能模块列表
@@ -38089,7 +38204,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityModulesList ModulesList = 5;</code>
+       * <code>optional .bbproto.PCommunityModulesList ModulesList = 5;</code>
        *
        * <pre>
        * 所有的功能模块列表
@@ -38119,10 +38234,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityInfoV12)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityInfoV12)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityInfoV12)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityInfoV12)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityInfoV12 DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityInfoV12();
@@ -38163,7 +38278,7 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityHomeV12OrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityHomeV12)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityHomeV12)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -38176,7 +38291,34 @@ public final class CommunityProtos {
     int getMembership();
 
     /**
-     * <code>optional .common.PUserBase Owner = 2;</code>
+     * <code>optional int32 MemberCount = 2;</code>
+     *
+     * <pre>
+     * 社区成员数量
+     * </pre>
+     */
+    int getMemberCount();
+
+    /**
+     * <code>optional string ManagerList = 3;</code>
+     *
+     * <pre>
+     * 社区管理员的uuid列表,多个管理员用','分割
+     * </pre>
+     */
+    java.lang.String getManagerList();
+    /**
+     * <code>optional string ManagerList = 3;</code>
+     *
+     * <pre>
+     * 社区管理员的uuid列表,多个管理员用','分割
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getManagerListBytes();
+
+    /**
+     * <code>optional .bbproto.PUserBase Owner = 4;</code>
      *
      * <pre>
      * 社区创建者的信息
@@ -38184,7 +38326,7 @@ public final class CommunityProtos {
      */
     boolean hasOwner();
     /**
-     * <code>optional .common.PUserBase Owner = 2;</code>
+     * <code>optional .bbproto.PUserBase Owner = 4;</code>
      *
      * <pre>
      * 社区创建者的信息
@@ -38192,7 +38334,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.AccountProtos.PUserBase getOwner();
     /**
-     * <code>optional .common.PUserBase Owner = 2;</code>
+     * <code>optional .bbproto.PUserBase Owner = 4;</code>
      *
      * <pre>
      * 社区创建者的信息
@@ -38201,7 +38343,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getOwnerOrBuilder();
 
     /**
-     * <code>optional .common.PCommunityInfoV12 CommunityInfo = 3;</code>
+     * <code>optional .bbproto.PCommunityInfoV12 CommunityInfo = 5;</code>
      *
      * <pre>
      * 社区信息
@@ -38209,7 +38351,7 @@ public final class CommunityProtos {
      */
     boolean hasCommunityInfo();
     /**
-     * <code>optional .common.PCommunityInfoV12 CommunityInfo = 3;</code>
+     * <code>optional .bbproto.PCommunityInfoV12 CommunityInfo = 5;</code>
      *
      * <pre>
      * 社区信息
@@ -38217,7 +38359,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityInfoV12 getCommunityInfo();
     /**
-     * <code>optional .common.PCommunityInfoV12 CommunityInfo = 3;</code>
+     * <code>optional .bbproto.PCommunityInfoV12 CommunityInfo = 5;</code>
      *
      * <pre>
      * 社区信息
@@ -38226,32 +38368,16 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.CommunityProtos.PCommunityInfoV12OrBuilder getCommunityInfoOrBuilder();
 
     /**
-     * <code>optional .common.PCommunityPostInfo BackgroundPost = 4;</code>
+     * <code>optional bool IsVOMember = 6;</code>
      *
      * <pre>
-     * 底部的背景介绍
+     * 是否创建者(VO)任命的VIPP
      * </pre>
      */
-    boolean hasBackgroundPost();
-    /**
-     * <code>optional .common.PCommunityPostInfo BackgroundPost = 4;</code>
-     *
-     * <pre>
-     * 底部的背景介绍
-     * </pre>
-     */
-    com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo getBackgroundPost();
-    /**
-     * <code>optional .common.PCommunityPostInfo BackgroundPost = 4;</code>
-     *
-     * <pre>
-     * 底部的背景介绍
-     * </pre>
-     */
-    com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfoOrBuilder getBackgroundPostOrBuilder();
+    boolean getIsVOMember();
   }
   /**
-   * Protobuf type {@code common.PCommunityHomeV12}
+   * Protobuf type {@code bbproto.PCommunityHomeV12}
    *
    * <pre>
    * ‘社区首页’返回的信息 v1.2.x
@@ -38259,7 +38385,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityHomeV12 extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityHomeV12)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityHomeV12)
       PCommunityHomeV12OrBuilder {
     // Use PCommunityHomeV12.newBuilder() to construct.
     private PCommunityHomeV12(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -38267,6 +38393,9 @@ public final class CommunityProtos {
     }
     private PCommunityHomeV12() {
       membership_ = 0;
+      memberCount_ = 0;
+      managerList_ = "";
+      isVOMember_ = false;
     }
 
     @java.lang.Override
@@ -38298,7 +38427,18 @@ public final class CommunityProtos {
               membership_ = input.readInt32();
               break;
             }
-            case 18: {
+            case 16: {
+
+              memberCount_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              managerList_ = bs;
+              break;
+            }
+            case 34: {
               com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder subBuilder = null;
               if (owner_ != null) {
                 subBuilder = owner_.toBuilder();
@@ -38311,7 +38451,7 @@ public final class CommunityProtos {
 
               break;
             }
-            case 26: {
+            case 42: {
               com.blemobi.sep.probuf.CommunityProtos.PCommunityInfoV12.Builder subBuilder = null;
               if (communityInfo_ != null) {
                 subBuilder = communityInfo_.toBuilder();
@@ -38324,17 +38464,9 @@ public final class CommunityProtos {
 
               break;
             }
-            case 34: {
-              com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.Builder subBuilder = null;
-              if (backgroundPost_ != null) {
-                subBuilder = backgroundPost_.toBuilder();
-              }
-              backgroundPost_ = input.readMessage(com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(backgroundPost_);
-                backgroundPost_ = subBuilder.buildPartial();
-              }
+            case 48: {
 
+              isVOMember_ = input.readBool();
               break;
             }
           }
@@ -38351,12 +38483,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityHomeV12_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityHomeV12_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityHomeV12_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityHomeV12_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityHomeV12.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityHomeV12.Builder.class);
     }
@@ -38374,10 +38506,67 @@ public final class CommunityProtos {
       return membership_;
     }
 
-    public static final int OWNER_FIELD_NUMBER = 2;
+    public static final int MEMBERCOUNT_FIELD_NUMBER = 2;
+    private int memberCount_;
+    /**
+     * <code>optional int32 MemberCount = 2;</code>
+     *
+     * <pre>
+     * 社区成员数量
+     * </pre>
+     */
+    public int getMemberCount() {
+      return memberCount_;
+    }
+
+    public static final int MANAGERLIST_FIELD_NUMBER = 3;
+    private volatile java.lang.Object managerList_;
+    /**
+     * <code>optional string ManagerList = 3;</code>
+     *
+     * <pre>
+     * 社区管理员的uuid列表,多个管理员用','分割
+     * </pre>
+     */
+    public java.lang.String getManagerList() {
+      java.lang.Object ref = managerList_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          managerList_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string ManagerList = 3;</code>
+     *
+     * <pre>
+     * 社区管理员的uuid列表,多个管理员用','分割
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getManagerListBytes() {
+      java.lang.Object ref = managerList_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        managerList_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 4;
     private com.blemobi.sep.probuf.AccountProtos.PUserBase owner_;
     /**
-     * <code>optional .common.PUserBase Owner = 2;</code>
+     * <code>optional .bbproto.PUserBase Owner = 4;</code>
      *
      * <pre>
      * 社区创建者的信息
@@ -38387,7 +38576,7 @@ public final class CommunityProtos {
       return owner_ != null;
     }
     /**
-     * <code>optional .common.PUserBase Owner = 2;</code>
+     * <code>optional .bbproto.PUserBase Owner = 4;</code>
      *
      * <pre>
      * 社区创建者的信息
@@ -38397,7 +38586,7 @@ public final class CommunityProtos {
       return owner_ == null ? com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : owner_;
     }
     /**
-     * <code>optional .common.PUserBase Owner = 2;</code>
+     * <code>optional .bbproto.PUserBase Owner = 4;</code>
      *
      * <pre>
      * 社区创建者的信息
@@ -38407,10 +38596,10 @@ public final class CommunityProtos {
       return getOwner();
     }
 
-    public static final int COMMUNITYINFO_FIELD_NUMBER = 3;
+    public static final int COMMUNITYINFO_FIELD_NUMBER = 5;
     private com.blemobi.sep.probuf.CommunityProtos.PCommunityInfoV12 communityInfo_;
     /**
-     * <code>optional .common.PCommunityInfoV12 CommunityInfo = 3;</code>
+     * <code>optional .bbproto.PCommunityInfoV12 CommunityInfo = 5;</code>
      *
      * <pre>
      * 社区信息
@@ -38420,7 +38609,7 @@ public final class CommunityProtos {
       return communityInfo_ != null;
     }
     /**
-     * <code>optional .common.PCommunityInfoV12 CommunityInfo = 3;</code>
+     * <code>optional .bbproto.PCommunityInfoV12 CommunityInfo = 5;</code>
      *
      * <pre>
      * 社区信息
@@ -38430,7 +38619,7 @@ public final class CommunityProtos {
       return communityInfo_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityInfoV12.getDefaultInstance() : communityInfo_;
     }
     /**
-     * <code>optional .common.PCommunityInfoV12 CommunityInfo = 3;</code>
+     * <code>optional .bbproto.PCommunityInfoV12 CommunityInfo = 5;</code>
      *
      * <pre>
      * 社区信息
@@ -38440,37 +38629,17 @@ public final class CommunityProtos {
       return getCommunityInfo();
     }
 
-    public static final int BACKGROUNDPOST_FIELD_NUMBER = 4;
-    private com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo backgroundPost_;
+    public static final int ISVOMEMBER_FIELD_NUMBER = 6;
+    private boolean isVOMember_;
     /**
-     * <code>optional .common.PCommunityPostInfo BackgroundPost = 4;</code>
+     * <code>optional bool IsVOMember = 6;</code>
      *
      * <pre>
-     * 底部的背景介绍
+     * 是否创建者(VO)任命的VIPP
      * </pre>
      */
-    public boolean hasBackgroundPost() {
-      return backgroundPost_ != null;
-    }
-    /**
-     * <code>optional .common.PCommunityPostInfo BackgroundPost = 4;</code>
-     *
-     * <pre>
-     * 底部的背景介绍
-     * </pre>
-     */
-    public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo getBackgroundPost() {
-      return backgroundPost_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.getDefaultInstance() : backgroundPost_;
-    }
-    /**
-     * <code>optional .common.PCommunityPostInfo BackgroundPost = 4;</code>
-     *
-     * <pre>
-     * 底部的背景介绍
-     * </pre>
-     */
-    public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfoOrBuilder getBackgroundPostOrBuilder() {
-      return getBackgroundPost();
+    public boolean getIsVOMember() {
+      return isVOMember_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -38488,14 +38657,20 @@ public final class CommunityProtos {
       if (membership_ != 0) {
         output.writeInt32(1, membership_);
       }
+      if (memberCount_ != 0) {
+        output.writeInt32(2, memberCount_);
+      }
+      if (!getManagerListBytes().isEmpty()) {
+        output.writeBytes(3, getManagerListBytes());
+      }
       if (owner_ != null) {
-        output.writeMessage(2, getOwner());
+        output.writeMessage(4, getOwner());
       }
       if (communityInfo_ != null) {
-        output.writeMessage(3, getCommunityInfo());
+        output.writeMessage(5, getCommunityInfo());
       }
-      if (backgroundPost_ != null) {
-        output.writeMessage(4, getBackgroundPost());
+      if (isVOMember_ != false) {
+        output.writeBool(6, isVOMember_);
       }
     }
 
@@ -38509,17 +38684,25 @@ public final class CommunityProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, membership_);
       }
+      if (memberCount_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, memberCount_);
+      }
+      if (!getManagerListBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getManagerListBytes());
+      }
       if (owner_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getOwner());
+          .computeMessageSize(4, getOwner());
       }
       if (communityInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getCommunityInfo());
+          .computeMessageSize(5, getCommunityInfo());
       }
-      if (backgroundPost_ != null) {
+      if (isVOMember_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getBackgroundPost());
+          .computeBoolSize(6, isVOMember_);
       }
       memoizedSerializedSize = size;
       return size;
@@ -38598,7 +38781,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityHomeV12}
+     * Protobuf type {@code bbproto.PCommunityHomeV12}
      *
      * <pre>
      * ‘社区首页’返回的信息 v1.2.x
@@ -38606,16 +38789,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityHomeV12)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityHomeV12)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityHomeV12OrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityHomeV12_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityHomeV12_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityHomeV12_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityHomeV12_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityHomeV12.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityHomeV12.Builder.class);
       }
@@ -38638,6 +38821,10 @@ public final class CommunityProtos {
         super.clear();
         membership_ = 0;
 
+        memberCount_ = 0;
+
+        managerList_ = "";
+
         if (ownerBuilder_ == null) {
           owner_ = null;
         } else {
@@ -38650,18 +38837,14 @@ public final class CommunityProtos {
           communityInfo_ = null;
           communityInfoBuilder_ = null;
         }
-        if (backgroundPostBuilder_ == null) {
-          backgroundPost_ = null;
-        } else {
-          backgroundPost_ = null;
-          backgroundPostBuilder_ = null;
-        }
+        isVOMember_ = false;
+
         return this;
       }
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityHomeV12_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityHomeV12_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityHomeV12 getDefaultInstanceForType() {
@@ -38679,6 +38862,8 @@ public final class CommunityProtos {
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityHomeV12 buildPartial() {
         com.blemobi.sep.probuf.CommunityProtos.PCommunityHomeV12 result = new com.blemobi.sep.probuf.CommunityProtos.PCommunityHomeV12(this);
         result.membership_ = membership_;
+        result.memberCount_ = memberCount_;
+        result.managerList_ = managerList_;
         if (ownerBuilder_ == null) {
           result.owner_ = owner_;
         } else {
@@ -38689,11 +38874,7 @@ public final class CommunityProtos {
         } else {
           result.communityInfo_ = communityInfoBuilder_.build();
         }
-        if (backgroundPostBuilder_ == null) {
-          result.backgroundPost_ = backgroundPost_;
-        } else {
-          result.backgroundPost_ = backgroundPostBuilder_.build();
-        }
+        result.isVOMember_ = isVOMember_;
         onBuilt();
         return result;
       }
@@ -38712,14 +38893,21 @@ public final class CommunityProtos {
         if (other.getMembership() != 0) {
           setMembership(other.getMembership());
         }
+        if (other.getMemberCount() != 0) {
+          setMemberCount(other.getMemberCount());
+        }
+        if (!other.getManagerList().isEmpty()) {
+          managerList_ = other.managerList_;
+          onChanged();
+        }
         if (other.hasOwner()) {
           mergeOwner(other.getOwner());
         }
         if (other.hasCommunityInfo()) {
           mergeCommunityInfo(other.getCommunityInfo());
         }
-        if (other.hasBackgroundPost()) {
-          mergeBackgroundPost(other.getBackgroundPost());
+        if (other.getIsVOMember() != false) {
+          setIsVOMember(other.getIsVOMember());
         }
         onChanged();
         return this;
@@ -38785,11 +38973,139 @@ public final class CommunityProtos {
         return this;
       }
 
+      private int memberCount_ ;
+      /**
+       * <code>optional int32 MemberCount = 2;</code>
+       *
+       * <pre>
+       * 社区成员数量
+       * </pre>
+       */
+      public int getMemberCount() {
+        return memberCount_;
+      }
+      /**
+       * <code>optional int32 MemberCount = 2;</code>
+       *
+       * <pre>
+       * 社区成员数量
+       * </pre>
+       */
+      public Builder setMemberCount(int value) {
+        
+        memberCount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 MemberCount = 2;</code>
+       *
+       * <pre>
+       * 社区成员数量
+       * </pre>
+       */
+      public Builder clearMemberCount() {
+        
+        memberCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object managerList_ = "";
+      /**
+       * <code>optional string ManagerList = 3;</code>
+       *
+       * <pre>
+       * 社区管理员的uuid列表,多个管理员用','分割
+       * </pre>
+       */
+      public java.lang.String getManagerList() {
+        java.lang.Object ref = managerList_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            managerList_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string ManagerList = 3;</code>
+       *
+       * <pre>
+       * 社区管理员的uuid列表,多个管理员用','分割
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getManagerListBytes() {
+        java.lang.Object ref = managerList_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          managerList_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ManagerList = 3;</code>
+       *
+       * <pre>
+       * 社区管理员的uuid列表,多个管理员用','分割
+       * </pre>
+       */
+      public Builder setManagerList(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        managerList_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ManagerList = 3;</code>
+       *
+       * <pre>
+       * 社区管理员的uuid列表,多个管理员用','分割
+       * </pre>
+       */
+      public Builder clearManagerList() {
+        
+        managerList_ = getDefaultInstance().getManagerList();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ManagerList = 3;</code>
+       *
+       * <pre>
+       * 社区管理员的uuid列表,多个管理员用','分割
+       * </pre>
+       */
+      public Builder setManagerListBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        managerList_ = value;
+        onChanged();
+        return this;
+      }
+
       private com.blemobi.sep.probuf.AccountProtos.PUserBase owner_ = null;
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> ownerBuilder_;
       /**
-       * <code>optional .common.PUserBase Owner = 2;</code>
+       * <code>optional .bbproto.PUserBase Owner = 4;</code>
        *
        * <pre>
        * 社区创建者的信息
@@ -38799,7 +39115,7 @@ public final class CommunityProtos {
         return ownerBuilder_ != null || owner_ != null;
       }
       /**
-       * <code>optional .common.PUserBase Owner = 2;</code>
+       * <code>optional .bbproto.PUserBase Owner = 4;</code>
        *
        * <pre>
        * 社区创建者的信息
@@ -38813,7 +39129,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PUserBase Owner = 2;</code>
+       * <code>optional .bbproto.PUserBase Owner = 4;</code>
        *
        * <pre>
        * 社区创建者的信息
@@ -38833,7 +39149,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase Owner = 2;</code>
+       * <code>optional .bbproto.PUserBase Owner = 4;</code>
        *
        * <pre>
        * 社区创建者的信息
@@ -38851,7 +39167,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase Owner = 2;</code>
+       * <code>optional .bbproto.PUserBase Owner = 4;</code>
        *
        * <pre>
        * 社区创建者的信息
@@ -38873,7 +39189,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase Owner = 2;</code>
+       * <code>optional .bbproto.PUserBase Owner = 4;</code>
        *
        * <pre>
        * 社区创建者的信息
@@ -38891,7 +39207,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase Owner = 2;</code>
+       * <code>optional .bbproto.PUserBase Owner = 4;</code>
        *
        * <pre>
        * 社区创建者的信息
@@ -38903,7 +39219,7 @@ public final class CommunityProtos {
         return getOwnerFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PUserBase Owner = 2;</code>
+       * <code>optional .bbproto.PUserBase Owner = 4;</code>
        *
        * <pre>
        * 社区创建者的信息
@@ -38918,7 +39234,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PUserBase Owner = 2;</code>
+       * <code>optional .bbproto.PUserBase Owner = 4;</code>
        *
        * <pre>
        * 社区创建者的信息
@@ -38942,7 +39258,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.CommunityProtos.PCommunityInfoV12, com.blemobi.sep.probuf.CommunityProtos.PCommunityInfoV12.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityInfoV12OrBuilder> communityInfoBuilder_;
       /**
-       * <code>optional .common.PCommunityInfoV12 CommunityInfo = 3;</code>
+       * <code>optional .bbproto.PCommunityInfoV12 CommunityInfo = 5;</code>
        *
        * <pre>
        * 社区信息
@@ -38952,7 +39268,7 @@ public final class CommunityProtos {
         return communityInfoBuilder_ != null || communityInfo_ != null;
       }
       /**
-       * <code>optional .common.PCommunityInfoV12 CommunityInfo = 3;</code>
+       * <code>optional .bbproto.PCommunityInfoV12 CommunityInfo = 5;</code>
        *
        * <pre>
        * 社区信息
@@ -38966,7 +39282,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityInfoV12 CommunityInfo = 3;</code>
+       * <code>optional .bbproto.PCommunityInfoV12 CommunityInfo = 5;</code>
        *
        * <pre>
        * 社区信息
@@ -38986,7 +39302,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityInfoV12 CommunityInfo = 3;</code>
+       * <code>optional .bbproto.PCommunityInfoV12 CommunityInfo = 5;</code>
        *
        * <pre>
        * 社区信息
@@ -39004,7 +39320,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityInfoV12 CommunityInfo = 3;</code>
+       * <code>optional .bbproto.PCommunityInfoV12 CommunityInfo = 5;</code>
        *
        * <pre>
        * 社区信息
@@ -39026,7 +39342,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityInfoV12 CommunityInfo = 3;</code>
+       * <code>optional .bbproto.PCommunityInfoV12 CommunityInfo = 5;</code>
        *
        * <pre>
        * 社区信息
@@ -39044,7 +39360,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityInfoV12 CommunityInfo = 3;</code>
+       * <code>optional .bbproto.PCommunityInfoV12 CommunityInfo = 5;</code>
        *
        * <pre>
        * 社区信息
@@ -39056,7 +39372,7 @@ public final class CommunityProtos {
         return getCommunityInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PCommunityInfoV12 CommunityInfo = 3;</code>
+       * <code>optional .bbproto.PCommunityInfoV12 CommunityInfo = 5;</code>
        *
        * <pre>
        * 社区信息
@@ -39071,7 +39387,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityInfoV12 CommunityInfo = 3;</code>
+       * <code>optional .bbproto.PCommunityInfoV12 CommunityInfo = 5;</code>
        *
        * <pre>
        * 社区信息
@@ -39091,157 +39407,42 @@ public final class CommunityProtos {
         return communityInfoBuilder_;
       }
 
-      private com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo backgroundPost_ = null;
-      private com.google.protobuf.SingleFieldBuilder<
-          com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfoOrBuilder> backgroundPostBuilder_;
+      private boolean isVOMember_ ;
       /**
-       * <code>optional .common.PCommunityPostInfo BackgroundPost = 4;</code>
+       * <code>optional bool IsVOMember = 6;</code>
        *
        * <pre>
-       * 底部的背景介绍
+       * 是否创建者(VO)任命的VIPP
        * </pre>
        */
-      public boolean hasBackgroundPost() {
-        return backgroundPostBuilder_ != null || backgroundPost_ != null;
+      public boolean getIsVOMember() {
+        return isVOMember_;
       }
       /**
-       * <code>optional .common.PCommunityPostInfo BackgroundPost = 4;</code>
+       * <code>optional bool IsVOMember = 6;</code>
        *
        * <pre>
-       * 底部的背景介绍
+       * 是否创建者(VO)任命的VIPP
        * </pre>
        */
-      public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo getBackgroundPost() {
-        if (backgroundPostBuilder_ == null) {
-          return backgroundPost_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.getDefaultInstance() : backgroundPost_;
-        } else {
-          return backgroundPostBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .common.PCommunityPostInfo BackgroundPost = 4;</code>
-       *
-       * <pre>
-       * 底部的背景介绍
-       * </pre>
-       */
-      public Builder setBackgroundPost(com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo value) {
-        if (backgroundPostBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          backgroundPost_ = value;
-          onChanged();
-        } else {
-          backgroundPostBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .common.PCommunityPostInfo BackgroundPost = 4;</code>
-       *
-       * <pre>
-       * 底部的背景介绍
-       * </pre>
-       */
-      public Builder setBackgroundPost(
-          com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.Builder builderForValue) {
-        if (backgroundPostBuilder_ == null) {
-          backgroundPost_ = builderForValue.build();
-          onChanged();
-        } else {
-          backgroundPostBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .common.PCommunityPostInfo BackgroundPost = 4;</code>
-       *
-       * <pre>
-       * 底部的背景介绍
-       * </pre>
-       */
-      public Builder mergeBackgroundPost(com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo value) {
-        if (backgroundPostBuilder_ == null) {
-          if (backgroundPost_ != null) {
-            backgroundPost_ =
-              com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.newBuilder(backgroundPost_).mergeFrom(value).buildPartial();
-          } else {
-            backgroundPost_ = value;
-          }
-          onChanged();
-        } else {
-          backgroundPostBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .common.PCommunityPostInfo BackgroundPost = 4;</code>
-       *
-       * <pre>
-       * 底部的背景介绍
-       * </pre>
-       */
-      public Builder clearBackgroundPost() {
-        if (backgroundPostBuilder_ == null) {
-          backgroundPost_ = null;
-          onChanged();
-        } else {
-          backgroundPost_ = null;
-          backgroundPostBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .common.PCommunityPostInfo BackgroundPost = 4;</code>
-       *
-       * <pre>
-       * 底部的背景介绍
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.Builder getBackgroundPostBuilder() {
+      public Builder setIsVOMember(boolean value) {
         
+        isVOMember_ = value;
         onChanged();
-        return getBackgroundPostFieldBuilder().getBuilder();
+        return this;
       }
       /**
-       * <code>optional .common.PCommunityPostInfo BackgroundPost = 4;</code>
+       * <code>optional bool IsVOMember = 6;</code>
        *
        * <pre>
-       * 底部的背景介绍
+       * 是否创建者(VO)任命的VIPP
        * </pre>
        */
-      public com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfoOrBuilder getBackgroundPostOrBuilder() {
-        if (backgroundPostBuilder_ != null) {
-          return backgroundPostBuilder_.getMessageOrBuilder();
-        } else {
-          return backgroundPost_ == null ?
-              com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.getDefaultInstance() : backgroundPost_;
-        }
-      }
-      /**
-       * <code>optional .common.PCommunityPostInfo BackgroundPost = 4;</code>
-       *
-       * <pre>
-       * 底部的背景介绍
-       * </pre>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfoOrBuilder> 
-          getBackgroundPostFieldBuilder() {
-        if (backgroundPostBuilder_ == null) {
-          backgroundPostBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfo.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityPostInfoOrBuilder>(
-                  getBackgroundPost(),
-                  getParentForChildren(),
-                  isClean());
-          backgroundPost_ = null;
-        }
-        return backgroundPostBuilder_;
+      public Builder clearIsVOMember() {
+        
+        isVOMember_ = false;
+        onChanged();
+        return this;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -39254,10 +39455,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityHomeV12)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityHomeV12)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityHomeV12)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityHomeV12)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityHomeV12 DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityHomeV12();
@@ -39298,20 +39499,29 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityPhotoAlbumOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityPhotoAlbum)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityPhotoAlbum)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional int64 Time = 1;</code>
+     * <code>optional int64 ID = 1;</code>
      *
      * <pre>
-     * 添加到图集的时间
+     * 图片的ID，用于索引下一张图片
+     * </pre>
+     */
+    long getID();
+
+    /**
+     * <code>optional int64 Time = 2;</code>
+     *
+     * <pre>
+     * 服务端不返回该字段
      * </pre>
      */
     long getTime();
 
     /**
-     * <code>optional string URL = 2;</code>
+     * <code>optional string URL = 3;</code>
      *
      * <pre>
      * 图片的访问地址
@@ -39319,7 +39529,7 @@ public final class CommunityProtos {
      */
     java.lang.String getURL();
     /**
-     * <code>optional string URL = 2;</code>
+     * <code>optional string URL = 3;</code>
      *
      * <pre>
      * 图片的访问地址
@@ -39329,7 +39539,7 @@ public final class CommunityProtos {
         getURLBytes();
 
     /**
-     * <code>optional string ThumURL = 3;</code>
+     * <code>optional string ThumURL = 4;</code>
      *
      * <pre>
      * 图片缩略图的访问地址
@@ -39337,7 +39547,7 @@ public final class CommunityProtos {
      */
     java.lang.String getThumURL();
     /**
-     * <code>optional string ThumURL = 3;</code>
+     * <code>optional string ThumURL = 4;</code>
      *
      * <pre>
      * 图片缩略图的访问地址
@@ -39347,7 +39557,7 @@ public final class CommunityProtos {
         getThumURLBytes();
   }
   /**
-   * Protobuf type {@code common.PCommunityPhotoAlbum}
+   * Protobuf type {@code bbproto.PCommunityPhotoAlbum}
    *
    * <pre>
    * 图集里面图片的信息
@@ -39355,13 +39565,14 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityPhotoAlbum extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityPhotoAlbum)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityPhotoAlbum)
       PCommunityPhotoAlbumOrBuilder {
     // Use PCommunityPhotoAlbum.newBuilder() to construct.
     private PCommunityPhotoAlbum(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PCommunityPhotoAlbum() {
+      iD_ = 0L;
       time_ = 0L;
       uRL_ = "";
       thumURL_ = "";
@@ -39393,16 +39604,21 @@ public final class CommunityProtos {
             }
             case 8: {
 
+              iD_ = input.readInt64();
+              break;
+            }
+            case 16: {
+
               time_ = input.readInt64();
               break;
             }
-            case 18: {
+            case 26: {
               com.google.protobuf.ByteString bs = input.readBytes();
 
               uRL_ = bs;
               break;
             }
-            case 26: {
+            case 34: {
               com.google.protobuf.ByteString bs = input.readBytes();
 
               thumURL_ = bs;
@@ -39422,33 +39638,46 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPhotoAlbum_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPhotoAlbum_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPhotoAlbum_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPhotoAlbum_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbum.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbum.Builder.class);
     }
 
-    public static final int TIME_FIELD_NUMBER = 1;
-    private long time_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private long iD_;
     /**
-     * <code>optional int64 Time = 1;</code>
+     * <code>optional int64 ID = 1;</code>
      *
      * <pre>
-     * 添加到图集的时间
+     * 图片的ID，用于索引下一张图片
+     * </pre>
+     */
+    public long getID() {
+      return iD_;
+    }
+
+    public static final int TIME_FIELD_NUMBER = 2;
+    private long time_;
+    /**
+     * <code>optional int64 Time = 2;</code>
+     *
+     * <pre>
+     * 服务端不返回该字段
      * </pre>
      */
     public long getTime() {
       return time_;
     }
 
-    public static final int URL_FIELD_NUMBER = 2;
+    public static final int URL_FIELD_NUMBER = 3;
     private volatile java.lang.Object uRL_;
     /**
-     * <code>optional string URL = 2;</code>
+     * <code>optional string URL = 3;</code>
      *
      * <pre>
      * 图片的访问地址
@@ -39469,7 +39698,7 @@ public final class CommunityProtos {
       }
     }
     /**
-     * <code>optional string URL = 2;</code>
+     * <code>optional string URL = 3;</code>
      *
      * <pre>
      * 图片的访问地址
@@ -39489,10 +39718,10 @@ public final class CommunityProtos {
       }
     }
 
-    public static final int THUMURL_FIELD_NUMBER = 3;
+    public static final int THUMURL_FIELD_NUMBER = 4;
     private volatile java.lang.Object thumURL_;
     /**
-     * <code>optional string ThumURL = 3;</code>
+     * <code>optional string ThumURL = 4;</code>
      *
      * <pre>
      * 图片缩略图的访问地址
@@ -39513,7 +39742,7 @@ public final class CommunityProtos {
       }
     }
     /**
-     * <code>optional string ThumURL = 3;</code>
+     * <code>optional string ThumURL = 4;</code>
      *
      * <pre>
      * 图片缩略图的访问地址
@@ -39545,14 +39774,17 @@ public final class CommunityProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (iD_ != 0L) {
+        output.writeInt64(1, iD_);
+      }
       if (time_ != 0L) {
-        output.writeInt64(1, time_);
+        output.writeInt64(2, time_);
       }
       if (!getURLBytes().isEmpty()) {
-        output.writeBytes(2, getURLBytes());
+        output.writeBytes(3, getURLBytes());
       }
       if (!getThumURLBytes().isEmpty()) {
-        output.writeBytes(3, getThumURLBytes());
+        output.writeBytes(4, getThumURLBytes());
       }
     }
 
@@ -39562,17 +39794,21 @@ public final class CommunityProtos {
       if (size != -1) return size;
 
       size = 0;
+      if (iD_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, iD_);
+      }
       if (time_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, time_);
+          .computeInt64Size(2, time_);
       }
       if (!getURLBytes().isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getURLBytes());
+          .computeBytesSize(3, getURLBytes());
       }
       if (!getThumURLBytes().isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getThumURLBytes());
+          .computeBytesSize(4, getThumURLBytes());
       }
       memoizedSerializedSize = size;
       return size;
@@ -39651,7 +39887,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityPhotoAlbum}
+     * Protobuf type {@code bbproto.PCommunityPhotoAlbum}
      *
      * <pre>
      * 图集里面图片的信息
@@ -39659,16 +39895,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityPhotoAlbum)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityPhotoAlbum)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPhotoAlbum_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPhotoAlbum_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPhotoAlbum_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPhotoAlbum_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbum.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbum.Builder.class);
       }
@@ -39689,6 +39925,8 @@ public final class CommunityProtos {
       }
       public Builder clear() {
         super.clear();
+        iD_ = 0L;
+
         time_ = 0L;
 
         uRL_ = "";
@@ -39700,7 +39938,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPhotoAlbum_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPhotoAlbum_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbum getDefaultInstanceForType() {
@@ -39717,6 +39955,7 @@ public final class CommunityProtos {
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbum buildPartial() {
         com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbum result = new com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbum(this);
+        result.iD_ = iD_;
         result.time_ = time_;
         result.uRL_ = uRL_;
         result.thumURL_ = thumURL_;
@@ -39735,6 +39974,9 @@ public final class CommunityProtos {
 
       public Builder mergeFrom(com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbum other) {
         if (other == com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbum.getDefaultInstance()) return this;
+        if (other.getID() != 0L) {
+          setID(other.getID());
+        }
         if (other.getTime() != 0L) {
           setTime(other.getTime());
         }
@@ -39772,22 +40014,60 @@ public final class CommunityProtos {
         return this;
       }
 
-      private long time_ ;
+      private long iD_ ;
       /**
-       * <code>optional int64 Time = 1;</code>
+       * <code>optional int64 ID = 1;</code>
        *
        * <pre>
-       * 添加到图集的时间
+       * 图片的ID，用于索引下一张图片
+       * </pre>
+       */
+      public long getID() {
+        return iD_;
+      }
+      /**
+       * <code>optional int64 ID = 1;</code>
+       *
+       * <pre>
+       * 图片的ID，用于索引下一张图片
+       * </pre>
+       */
+      public Builder setID(long value) {
+        
+        iD_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 ID = 1;</code>
+       *
+       * <pre>
+       * 图片的ID，用于索引下一张图片
+       * </pre>
+       */
+      public Builder clearID() {
+        
+        iD_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long time_ ;
+      /**
+       * <code>optional int64 Time = 2;</code>
+       *
+       * <pre>
+       * 服务端不返回该字段
        * </pre>
        */
       public long getTime() {
         return time_;
       }
       /**
-       * <code>optional int64 Time = 1;</code>
+       * <code>optional int64 Time = 2;</code>
        *
        * <pre>
-       * 添加到图集的时间
+       * 服务端不返回该字段
        * </pre>
        */
       public Builder setTime(long value) {
@@ -39797,10 +40077,10 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional int64 Time = 1;</code>
+       * <code>optional int64 Time = 2;</code>
        *
        * <pre>
-       * 添加到图集的时间
+       * 服务端不返回该字段
        * </pre>
        */
       public Builder clearTime() {
@@ -39812,7 +40092,7 @@ public final class CommunityProtos {
 
       private java.lang.Object uRL_ = "";
       /**
-       * <code>optional string URL = 2;</code>
+       * <code>optional string URL = 3;</code>
        *
        * <pre>
        * 图片的访问地址
@@ -39833,7 +40113,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional string URL = 2;</code>
+       * <code>optional string URL = 3;</code>
        *
        * <pre>
        * 图片的访问地址
@@ -39853,7 +40133,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional string URL = 2;</code>
+       * <code>optional string URL = 3;</code>
        *
        * <pre>
        * 图片的访问地址
@@ -39870,7 +40150,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional string URL = 2;</code>
+       * <code>optional string URL = 3;</code>
        *
        * <pre>
        * 图片的访问地址
@@ -39883,7 +40163,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional string URL = 2;</code>
+       * <code>optional string URL = 3;</code>
        *
        * <pre>
        * 图片的访问地址
@@ -39902,7 +40182,7 @@ public final class CommunityProtos {
 
       private java.lang.Object thumURL_ = "";
       /**
-       * <code>optional string ThumURL = 3;</code>
+       * <code>optional string ThumURL = 4;</code>
        *
        * <pre>
        * 图片缩略图的访问地址
@@ -39923,7 +40203,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional string ThumURL = 3;</code>
+       * <code>optional string ThumURL = 4;</code>
        *
        * <pre>
        * 图片缩略图的访问地址
@@ -39943,7 +40223,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional string ThumURL = 3;</code>
+       * <code>optional string ThumURL = 4;</code>
        *
        * <pre>
        * 图片缩略图的访问地址
@@ -39960,7 +40240,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional string ThumURL = 3;</code>
+       * <code>optional string ThumURL = 4;</code>
        *
        * <pre>
        * 图片缩略图的访问地址
@@ -39973,7 +40253,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional string ThumURL = 3;</code>
+       * <code>optional string ThumURL = 4;</code>
        *
        * <pre>
        * 图片缩略图的访问地址
@@ -40000,10 +40280,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityPhotoAlbum)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityPhotoAlbum)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityPhotoAlbum)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityPhotoAlbum)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbum DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbum();
@@ -40044,11 +40324,11 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityPhotoAlbumListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityPhotoAlbumList)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityPhotoAlbumList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+     * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
      *
      * <pre>
      * 图集列表
@@ -40057,7 +40337,7 @@ public final class CommunityProtos {
     java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbum> 
         getListList();
     /**
-     * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+     * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
      *
      * <pre>
      * 图集列表
@@ -40065,7 +40345,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbum getList(int index);
     /**
-     * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+     * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
      *
      * <pre>
      * 图集列表
@@ -40073,7 +40353,7 @@ public final class CommunityProtos {
      */
     int getListCount();
     /**
-     * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+     * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
      *
      * <pre>
      * 图集列表
@@ -40082,7 +40362,7 @@ public final class CommunityProtos {
     java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumOrBuilder> 
         getListOrBuilderList();
     /**
-     * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+     * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
      *
      * <pre>
      * 图集列表
@@ -40092,7 +40372,7 @@ public final class CommunityProtos {
         int index);
   }
   /**
-   * Protobuf type {@code common.PCommunityPhotoAlbumList}
+   * Protobuf type {@code bbproto.PCommunityPhotoAlbumList}
    *
    * <pre>
    * 图集里面图片的信息列表
@@ -40100,7 +40380,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityPhotoAlbumList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityPhotoAlbumList)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityPhotoAlbumList)
       PCommunityPhotoAlbumListOrBuilder {
     // Use PCommunityPhotoAlbumList.newBuilder() to construct.
     private PCommunityPhotoAlbumList(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -40159,12 +40439,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPhotoAlbumList_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPhotoAlbumList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPhotoAlbumList_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPhotoAlbumList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumList.Builder.class);
     }
@@ -40172,7 +40452,7 @@ public final class CommunityProtos {
     public static final int LIST_FIELD_NUMBER = 1;
     private java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbum> list_;
     /**
-     * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+     * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
      *
      * <pre>
      * 图集列表
@@ -40182,7 +40462,7 @@ public final class CommunityProtos {
       return list_;
     }
     /**
-     * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+     * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
      *
      * <pre>
      * 图集列表
@@ -40193,7 +40473,7 @@ public final class CommunityProtos {
       return list_;
     }
     /**
-     * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+     * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
      *
      * <pre>
      * 图集列表
@@ -40203,7 +40483,7 @@ public final class CommunityProtos {
       return list_.size();
     }
     /**
-     * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+     * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
      *
      * <pre>
      * 图集列表
@@ -40213,7 +40493,7 @@ public final class CommunityProtos {
       return list_.get(index);
     }
     /**
-     * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+     * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
      *
      * <pre>
      * 图集列表
@@ -40328,7 +40608,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityPhotoAlbumList}
+     * Protobuf type {@code bbproto.PCommunityPhotoAlbumList}
      *
      * <pre>
      * 图集里面图片的信息列表
@@ -40336,16 +40616,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityPhotoAlbumList)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityPhotoAlbumList)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPhotoAlbumList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPhotoAlbumList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPhotoAlbumList_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPhotoAlbumList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumList.Builder.class);
       }
@@ -40378,7 +40658,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPhotoAlbumList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPhotoAlbumList_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumList getDefaultInstanceForType() {
@@ -40486,7 +40766,7 @@ public final class CommunityProtos {
           com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbum, com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbum.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumOrBuilder> listBuilder_;
 
       /**
-       * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
        *
        * <pre>
        * 图集列表
@@ -40500,7 +40780,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
        *
        * <pre>
        * 图集列表
@@ -40514,7 +40794,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
        *
        * <pre>
        * 图集列表
@@ -40528,7 +40808,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
        *
        * <pre>
        * 图集列表
@@ -40549,7 +40829,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
        *
        * <pre>
        * 图集列表
@@ -40567,7 +40847,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
        *
        * <pre>
        * 图集列表
@@ -40587,7 +40867,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
        *
        * <pre>
        * 图集列表
@@ -40608,7 +40888,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
        *
        * <pre>
        * 图集列表
@@ -40626,7 +40906,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
        *
        * <pre>
        * 图集列表
@@ -40644,7 +40924,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
        *
        * <pre>
        * 图集列表
@@ -40663,7 +40943,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
        *
        * <pre>
        * 图集列表
@@ -40680,7 +40960,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
        *
        * <pre>
        * 图集列表
@@ -40697,7 +40977,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
        *
        * <pre>
        * 图集列表
@@ -40708,7 +40988,7 @@ public final class CommunityProtos {
         return getListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
        *
        * <pre>
        * 图集列表
@@ -40722,7 +41002,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
        *
        * <pre>
        * 图集列表
@@ -40737,7 +41017,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
        *
        * <pre>
        * 图集列表
@@ -40748,7 +41028,7 @@ public final class CommunityProtos {
             com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbum.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
        *
        * <pre>
        * 图集列表
@@ -40760,7 +41040,7 @@ public final class CommunityProtos {
             index, com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbum.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbum List = 1;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbum List = 1;</code>
        *
        * <pre>
        * 图集列表
@@ -40795,10 +41075,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityPhotoAlbumList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityPhotoAlbumList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityPhotoAlbumList)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityPhotoAlbumList)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumList DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumList();
@@ -40839,7 +41119,7 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityPhotoAlbumDateListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityPhotoAlbumDateList)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityPhotoAlbumDateList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -40868,7 +41148,7 @@ public final class CommunityProtos {
     long getDateTime(int index);
 
     /**
-     * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+     * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
      *
      * <pre>
      * 图集列表
@@ -40877,7 +41157,7 @@ public final class CommunityProtos {
     java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumList> 
         getListList();
     /**
-     * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+     * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
      *
      * <pre>
      * 图集列表
@@ -40885,7 +41165,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumList getList(int index);
     /**
-     * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+     * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
      *
      * <pre>
      * 图集列表
@@ -40893,7 +41173,7 @@ public final class CommunityProtos {
      */
     int getListCount();
     /**
-     * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+     * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
      *
      * <pre>
      * 图集列表
@@ -40902,7 +41182,7 @@ public final class CommunityProtos {
     java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumListOrBuilder> 
         getListOrBuilderList();
     /**
-     * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+     * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
      *
      * <pre>
      * 图集列表
@@ -40912,7 +41192,7 @@ public final class CommunityProtos {
         int index);
   }
   /**
-   * Protobuf type {@code common.PCommunityPhotoAlbumDateList}
+   * Protobuf type {@code bbproto.PCommunityPhotoAlbumDateList}
    *
    * <pre>
    * 按照日期排列的图集里面图片的信息列表
@@ -40920,7 +41200,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityPhotoAlbumDateList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityPhotoAlbumDateList)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityPhotoAlbumDateList)
       PCommunityPhotoAlbumDateListOrBuilder {
     // Use PCommunityPhotoAlbumDateList.newBuilder() to construct.
     private PCommunityPhotoAlbumDateList(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -41004,12 +41284,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPhotoAlbumDateList_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPhotoAlbumDateList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPhotoAlbumDateList_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPhotoAlbumDateList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumDateList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumDateList.Builder.class);
     }
@@ -41052,7 +41332,7 @@ public final class CommunityProtos {
     public static final int LIST_FIELD_NUMBER = 2;
     private java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumList> list_;
     /**
-     * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+     * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
      *
      * <pre>
      * 图集列表
@@ -41062,7 +41342,7 @@ public final class CommunityProtos {
       return list_;
     }
     /**
-     * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+     * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
      *
      * <pre>
      * 图集列表
@@ -41073,7 +41353,7 @@ public final class CommunityProtos {
       return list_;
     }
     /**
-     * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+     * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
      *
      * <pre>
      * 图集列表
@@ -41083,7 +41363,7 @@ public final class CommunityProtos {
       return list_.size();
     }
     /**
-     * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+     * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
      *
      * <pre>
      * 图集列表
@@ -41093,7 +41373,7 @@ public final class CommunityProtos {
       return list_.get(index);
     }
     /**
-     * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+     * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
      *
      * <pre>
      * 图集列表
@@ -41230,7 +41510,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityPhotoAlbumDateList}
+     * Protobuf type {@code bbproto.PCommunityPhotoAlbumDateList}
      *
      * <pre>
      * 按照日期排列的图集里面图片的信息列表
@@ -41238,16 +41518,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityPhotoAlbumDateList)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityPhotoAlbumDateList)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumDateListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPhotoAlbumDateList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPhotoAlbumDateList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPhotoAlbumDateList_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPhotoAlbumDateList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumDateList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumDateList.Builder.class);
       }
@@ -41282,7 +41562,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityPhotoAlbumDateList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityPhotoAlbumDateList_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumDateList getDefaultInstanceForType() {
@@ -41499,7 +41779,7 @@ public final class CommunityProtos {
           com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumList, com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumList.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumListOrBuilder> listBuilder_;
 
       /**
-       * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
        *
        * <pre>
        * 图集列表
@@ -41513,7 +41793,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
        *
        * <pre>
        * 图集列表
@@ -41527,7 +41807,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
        *
        * <pre>
        * 图集列表
@@ -41541,7 +41821,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
        *
        * <pre>
        * 图集列表
@@ -41562,7 +41842,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
        *
        * <pre>
        * 图集列表
@@ -41580,7 +41860,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
        *
        * <pre>
        * 图集列表
@@ -41600,7 +41880,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
        *
        * <pre>
        * 图集列表
@@ -41621,7 +41901,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
        *
        * <pre>
        * 图集列表
@@ -41639,7 +41919,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
        *
        * <pre>
        * 图集列表
@@ -41657,7 +41937,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
        *
        * <pre>
        * 图集列表
@@ -41676,7 +41956,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
        *
        * <pre>
        * 图集列表
@@ -41693,7 +41973,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
        *
        * <pre>
        * 图集列表
@@ -41710,7 +41990,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
        *
        * <pre>
        * 图集列表
@@ -41721,7 +42001,7 @@ public final class CommunityProtos {
         return getListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
        *
        * <pre>
        * 图集列表
@@ -41735,7 +42015,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
        *
        * <pre>
        * 图集列表
@@ -41750,7 +42030,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
        *
        * <pre>
        * 图集列表
@@ -41761,7 +42041,7 @@ public final class CommunityProtos {
             com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumList.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
        *
        * <pre>
        * 图集列表
@@ -41773,7 +42053,7 @@ public final class CommunityProtos {
             index, com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumList.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityPhotoAlbumList List = 2;</code>
+       * <code>repeated .bbproto.PCommunityPhotoAlbumList List = 2;</code>
        *
        * <pre>
        * 图集列表
@@ -41808,10 +42088,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityPhotoAlbumDateList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityPhotoAlbumDateList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityPhotoAlbumDateList)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityPhotoAlbumDateList)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumDateList DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityPhotoAlbumDateList();
@@ -41852,11 +42132,11 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityReputationUserOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityReputationUser)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityReputationUser)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .common.PUserBase User = 1;</code>
+     * <code>optional .bbproto.PUserBase User = 1;</code>
      *
      * <pre>
      * 用户基础信息 
@@ -41864,7 +42144,7 @@ public final class CommunityProtos {
      */
     boolean hasUser();
     /**
-     * <code>optional .common.PUserBase User = 1;</code>
+     * <code>optional .bbproto.PUserBase User = 1;</code>
      *
      * <pre>
      * 用户基础信息 
@@ -41872,7 +42152,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.AccountProtos.PUserBase getUser();
     /**
-     * <code>optional .common.PUserBase User = 1;</code>
+     * <code>optional .bbproto.PUserBase User = 1;</code>
      *
      * <pre>
      * 用户基础信息 
@@ -41890,7 +42170,7 @@ public final class CommunityProtos {
     int getReputationVal();
   }
   /**
-   * Protobuf type {@code common.PCommunityReputationUser}
+   * Protobuf type {@code bbproto.PCommunityReputationUser}
    *
    * <pre>
    * 声望用户信息 
@@ -41898,7 +42178,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityReputationUser extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityReputationUser)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityReputationUser)
       PCommunityReputationUserOrBuilder {
     // Use PCommunityReputationUser.newBuilder() to construct.
     private PCommunityReputationUser(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -41964,12 +42244,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityReputationUser_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityReputationUser_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityReputationUser_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityReputationUser_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityReputationUser.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityReputationUser.Builder.class);
     }
@@ -41977,7 +42257,7 @@ public final class CommunityProtos {
     public static final int USER_FIELD_NUMBER = 1;
     private com.blemobi.sep.probuf.AccountProtos.PUserBase user_;
     /**
-     * <code>optional .common.PUserBase User = 1;</code>
+     * <code>optional .bbproto.PUserBase User = 1;</code>
      *
      * <pre>
      * 用户基础信息 
@@ -41987,7 +42267,7 @@ public final class CommunityProtos {
       return user_ != null;
     }
     /**
-     * <code>optional .common.PUserBase User = 1;</code>
+     * <code>optional .bbproto.PUserBase User = 1;</code>
      *
      * <pre>
      * 用户基础信息 
@@ -41997,7 +42277,7 @@ public final class CommunityProtos {
       return user_ == null ? com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : user_;
     }
     /**
-     * <code>optional .common.PUserBase User = 1;</code>
+     * <code>optional .bbproto.PUserBase User = 1;</code>
      *
      * <pre>
      * 用户基础信息 
@@ -42131,7 +42411,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityReputationUser}
+     * Protobuf type {@code bbproto.PCommunityReputationUser}
      *
      * <pre>
      * 声望用户信息 
@@ -42139,16 +42419,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityReputationUser)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityReputationUser)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityReputationUserOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityReputationUser_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityReputationUser_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityReputationUser_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityReputationUser_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityReputationUser.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityReputationUser.Builder.class);
       }
@@ -42182,7 +42462,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityReputationUser_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityReputationUser_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityReputationUser getDefaultInstanceForType() {
@@ -42256,7 +42536,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> userBuilder_;
       /**
-       * <code>optional .common.PUserBase User = 1;</code>
+       * <code>optional .bbproto.PUserBase User = 1;</code>
        *
        * <pre>
        * 用户基础信息 
@@ -42266,7 +42546,7 @@ public final class CommunityProtos {
         return userBuilder_ != null || user_ != null;
       }
       /**
-       * <code>optional .common.PUserBase User = 1;</code>
+       * <code>optional .bbproto.PUserBase User = 1;</code>
        *
        * <pre>
        * 用户基础信息 
@@ -42280,7 +42560,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PUserBase User = 1;</code>
+       * <code>optional .bbproto.PUserBase User = 1;</code>
        *
        * <pre>
        * 用户基础信息 
@@ -42300,7 +42580,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 1;</code>
+       * <code>optional .bbproto.PUserBase User = 1;</code>
        *
        * <pre>
        * 用户基础信息 
@@ -42318,7 +42598,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 1;</code>
+       * <code>optional .bbproto.PUserBase User = 1;</code>
        *
        * <pre>
        * 用户基础信息 
@@ -42340,7 +42620,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 1;</code>
+       * <code>optional .bbproto.PUserBase User = 1;</code>
        *
        * <pre>
        * 用户基础信息 
@@ -42358,7 +42638,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PUserBase User = 1;</code>
+       * <code>optional .bbproto.PUserBase User = 1;</code>
        *
        * <pre>
        * 用户基础信息 
@@ -42370,7 +42650,7 @@ public final class CommunityProtos {
         return getUserFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PUserBase User = 1;</code>
+       * <code>optional .bbproto.PUserBase User = 1;</code>
        *
        * <pre>
        * 用户基础信息 
@@ -42385,7 +42665,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PUserBase User = 1;</code>
+       * <code>optional .bbproto.PUserBase User = 1;</code>
        *
        * <pre>
        * 用户基础信息 
@@ -42453,10 +42733,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityReputationUser)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityReputationUser)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityReputationUser)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityReputationUser)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityReputationUser DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityReputationUser();
@@ -42497,11 +42777,11 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityRankingUserOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityRankingUser)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityRankingUser)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .common.PCommunityReputationUser ReputationUser = 1;</code>
+     * <code>optional .bbproto.PCommunityReputationUser ReputationUser = 1;</code>
      *
      * <pre>
      * 声望用户信息 
@@ -42509,7 +42789,7 @@ public final class CommunityProtos {
      */
     boolean hasReputationUser();
     /**
-     * <code>optional .common.PCommunityReputationUser ReputationUser = 1;</code>
+     * <code>optional .bbproto.PCommunityReputationUser ReputationUser = 1;</code>
      *
      * <pre>
      * 声望用户信息 
@@ -42517,7 +42797,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityReputationUser getReputationUser();
     /**
-     * <code>optional .common.PCommunityReputationUser ReputationUser = 1;</code>
+     * <code>optional .bbproto.PCommunityReputationUser ReputationUser = 1;</code>
      *
      * <pre>
      * 声望用户信息 
@@ -42526,7 +42806,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.CommunityProtos.PCommunityReputationUserOrBuilder getReputationUserOrBuilder();
   }
   /**
-   * Protobuf type {@code common.PCommunityRankingUser}
+   * Protobuf type {@code bbproto.PCommunityRankingUser}
    *
    * <pre>
    * 声望用户信息 
@@ -42534,7 +42814,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityRankingUser extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityRankingUser)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityRankingUser)
       PCommunityRankingUserOrBuilder {
     // Use PCommunityRankingUser.newBuilder() to construct.
     private PCommunityRankingUser(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -42594,12 +42874,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityRankingUser_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityRankingUser_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityRankingUser_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityRankingUser_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUser.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUser.Builder.class);
     }
@@ -42607,7 +42887,7 @@ public final class CommunityProtos {
     public static final int REPUTATIONUSER_FIELD_NUMBER = 1;
     private com.blemobi.sep.probuf.CommunityProtos.PCommunityReputationUser reputationUser_;
     /**
-     * <code>optional .common.PCommunityReputationUser ReputationUser = 1;</code>
+     * <code>optional .bbproto.PCommunityReputationUser ReputationUser = 1;</code>
      *
      * <pre>
      * 声望用户信息 
@@ -42617,7 +42897,7 @@ public final class CommunityProtos {
       return reputationUser_ != null;
     }
     /**
-     * <code>optional .common.PCommunityReputationUser ReputationUser = 1;</code>
+     * <code>optional .bbproto.PCommunityReputationUser ReputationUser = 1;</code>
      *
      * <pre>
      * 声望用户信息 
@@ -42627,7 +42907,7 @@ public final class CommunityProtos {
       return reputationUser_ == null ? com.blemobi.sep.probuf.CommunityProtos.PCommunityReputationUser.getDefaultInstance() : reputationUser_;
     }
     /**
-     * <code>optional .common.PCommunityReputationUser ReputationUser = 1;</code>
+     * <code>optional .bbproto.PCommunityReputationUser ReputationUser = 1;</code>
      *
      * <pre>
      * 声望用户信息 
@@ -42741,7 +43021,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityRankingUser}
+     * Protobuf type {@code bbproto.PCommunityRankingUser}
      *
      * <pre>
      * 声望用户信息 
@@ -42749,16 +43029,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityRankingUser)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityRankingUser)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUserOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityRankingUser_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityRankingUser_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityRankingUser_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityRankingUser_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUser.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUser.Builder.class);
       }
@@ -42790,7 +43070,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityRankingUser_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityRankingUser_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUser getDefaultInstanceForType() {
@@ -42860,7 +43140,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.CommunityProtos.PCommunityReputationUser, com.blemobi.sep.probuf.CommunityProtos.PCommunityReputationUser.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityReputationUserOrBuilder> reputationUserBuilder_;
       /**
-       * <code>optional .common.PCommunityReputationUser ReputationUser = 1;</code>
+       * <code>optional .bbproto.PCommunityReputationUser ReputationUser = 1;</code>
        *
        * <pre>
        * 声望用户信息 
@@ -42870,7 +43150,7 @@ public final class CommunityProtos {
         return reputationUserBuilder_ != null || reputationUser_ != null;
       }
       /**
-       * <code>optional .common.PCommunityReputationUser ReputationUser = 1;</code>
+       * <code>optional .bbproto.PCommunityReputationUser ReputationUser = 1;</code>
        *
        * <pre>
        * 声望用户信息 
@@ -42884,7 +43164,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityReputationUser ReputationUser = 1;</code>
+       * <code>optional .bbproto.PCommunityReputationUser ReputationUser = 1;</code>
        *
        * <pre>
        * 声望用户信息 
@@ -42904,7 +43184,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityReputationUser ReputationUser = 1;</code>
+       * <code>optional .bbproto.PCommunityReputationUser ReputationUser = 1;</code>
        *
        * <pre>
        * 声望用户信息 
@@ -42922,7 +43202,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityReputationUser ReputationUser = 1;</code>
+       * <code>optional .bbproto.PCommunityReputationUser ReputationUser = 1;</code>
        *
        * <pre>
        * 声望用户信息 
@@ -42944,7 +43224,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityReputationUser ReputationUser = 1;</code>
+       * <code>optional .bbproto.PCommunityReputationUser ReputationUser = 1;</code>
        *
        * <pre>
        * 声望用户信息 
@@ -42962,7 +43242,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PCommunityReputationUser ReputationUser = 1;</code>
+       * <code>optional .bbproto.PCommunityReputationUser ReputationUser = 1;</code>
        *
        * <pre>
        * 声望用户信息 
@@ -42974,7 +43254,7 @@ public final class CommunityProtos {
         return getReputationUserFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PCommunityReputationUser ReputationUser = 1;</code>
+       * <code>optional .bbproto.PCommunityReputationUser ReputationUser = 1;</code>
        *
        * <pre>
        * 声望用户信息 
@@ -42989,7 +43269,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PCommunityReputationUser ReputationUser = 1;</code>
+       * <code>optional .bbproto.PCommunityReputationUser ReputationUser = 1;</code>
        *
        * <pre>
        * 声望用户信息 
@@ -43019,10 +43299,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityRankingUser)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityRankingUser)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityRankingUser)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityRankingUser)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUser DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUser();
@@ -43063,11 +43343,29 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityRankingUserListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityRankingUserList)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityRankingUserList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+     * <code>optional int32 MyRanking = 1;</code>
+     *
+     * <pre>
+     * 我在排行榜的位置，只在第一次获取排行榜时返回
+     * </pre>
+     */
+    int getMyRanking();
+
+    /**
+     * <code>optional int32 MyRankingVal = 2;</code>
+     *
+     * <pre>
+     * 我在排行榜的分值，只在第一次获取排行榜时返回
+     * </pre>
+     */
+    int getMyRankingVal();
+
+    /**
+     * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
      *
      * <pre>
      * 列表
@@ -43076,7 +43374,7 @@ public final class CommunityProtos {
     java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUser> 
         getListList();
     /**
-     * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+     * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
      *
      * <pre>
      * 列表
@@ -43084,7 +43382,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUser getList(int index);
     /**
-     * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+     * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
      *
      * <pre>
      * 列表
@@ -43092,7 +43390,7 @@ public final class CommunityProtos {
      */
     int getListCount();
     /**
-     * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+     * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
      *
      * <pre>
      * 列表
@@ -43101,7 +43399,7 @@ public final class CommunityProtos {
     java.util.List<? extends com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUserOrBuilder> 
         getListOrBuilderList();
     /**
-     * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+     * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
      *
      * <pre>
      * 列表
@@ -43111,7 +43409,7 @@ public final class CommunityProtos {
         int index);
   }
   /**
-   * Protobuf type {@code common.PCommunityRankingUserList}
+   * Protobuf type {@code bbproto.PCommunityRankingUserList}
    *
    * <pre>
    * 声望用户信息列表
@@ -43119,13 +43417,15 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityRankingUserList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityRankingUserList)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityRankingUserList)
       PCommunityRankingUserListOrBuilder {
     // Use PCommunityRankingUserList.newBuilder() to construct.
     private PCommunityRankingUserList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PCommunityRankingUserList() {
+      myRanking_ = 0;
+      myRankingVal_ = 0;
       list_ = java.util.Collections.emptyList();
     }
 
@@ -43153,10 +43453,20 @@ public final class CommunityProtos {
               }
               break;
             }
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+            case 8: {
+
+              myRanking_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              myRankingVal_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUser>();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000004;
               }
               list_.add(input.readMessage(com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUser.PARSER, extensionRegistry));
               break;
@@ -43170,7 +43480,7 @@ public final class CommunityProtos {
             new com.google.protobuf.InvalidProtocolBufferException(
                 e.getMessage()).setUnfinishedMessage(this));
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           list_ = java.util.Collections.unmodifiableList(list_);
         }
         makeExtensionsImmutable();
@@ -43178,20 +43488,47 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityRankingUserList_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityRankingUserList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityRankingUserList_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityRankingUserList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUserList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUserList.Builder.class);
     }
 
-    public static final int LIST_FIELD_NUMBER = 1;
+    private int bitField0_;
+    public static final int MYRANKING_FIELD_NUMBER = 1;
+    private int myRanking_;
+    /**
+     * <code>optional int32 MyRanking = 1;</code>
+     *
+     * <pre>
+     * 我在排行榜的位置，只在第一次获取排行榜时返回
+     * </pre>
+     */
+    public int getMyRanking() {
+      return myRanking_;
+    }
+
+    public static final int MYRANKINGVAL_FIELD_NUMBER = 2;
+    private int myRankingVal_;
+    /**
+     * <code>optional int32 MyRankingVal = 2;</code>
+     *
+     * <pre>
+     * 我在排行榜的分值，只在第一次获取排行榜时返回
+     * </pre>
+     */
+    public int getMyRankingVal() {
+      return myRankingVal_;
+    }
+
+    public static final int LIST_FIELD_NUMBER = 3;
     private java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUser> list_;
     /**
-     * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+     * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
      *
      * <pre>
      * 列表
@@ -43201,7 +43538,7 @@ public final class CommunityProtos {
       return list_;
     }
     /**
-     * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+     * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
      *
      * <pre>
      * 列表
@@ -43212,7 +43549,7 @@ public final class CommunityProtos {
       return list_;
     }
     /**
-     * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+     * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
      *
      * <pre>
      * 列表
@@ -43222,7 +43559,7 @@ public final class CommunityProtos {
       return list_.size();
     }
     /**
-     * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+     * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
      *
      * <pre>
      * 列表
@@ -43232,7 +43569,7 @@ public final class CommunityProtos {
       return list_.get(index);
     }
     /**
-     * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+     * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
      *
      * <pre>
      * 列表
@@ -43255,8 +43592,14 @@ public final class CommunityProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (myRanking_ != 0) {
+        output.writeInt32(1, myRanking_);
+      }
+      if (myRankingVal_ != 0) {
+        output.writeInt32(2, myRankingVal_);
+      }
       for (int i = 0; i < list_.size(); i++) {
-        output.writeMessage(1, list_.get(i));
+        output.writeMessage(3, list_.get(i));
       }
     }
 
@@ -43266,9 +43609,17 @@ public final class CommunityProtos {
       if (size != -1) return size;
 
       size = 0;
+      if (myRanking_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, myRanking_);
+      }
+      if (myRankingVal_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, myRankingVal_);
+      }
       for (int i = 0; i < list_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, list_.get(i));
+          .computeMessageSize(3, list_.get(i));
       }
       memoizedSerializedSize = size;
       return size;
@@ -43347,7 +43698,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityRankingUserList}
+     * Protobuf type {@code bbproto.PCommunityRankingUserList}
      *
      * <pre>
      * 声望用户信息列表
@@ -43355,16 +43706,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityRankingUserList)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityRankingUserList)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUserListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityRankingUserList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityRankingUserList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityRankingUserList_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityRankingUserList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUserList.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUserList.Builder.class);
       }
@@ -43386,9 +43737,13 @@ public final class CommunityProtos {
       }
       public Builder clear() {
         super.clear();
+        myRanking_ = 0;
+
+        myRankingVal_ = 0;
+
         if (listBuilder_ == null) {
           list_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           listBuilder_.clear();
         }
@@ -43397,7 +43752,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityRankingUserList_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityRankingUserList_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUserList getDefaultInstanceForType() {
@@ -43415,15 +43770,19 @@ public final class CommunityProtos {
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUserList buildPartial() {
         com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUserList result = new com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUserList(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.myRanking_ = myRanking_;
+        result.myRankingVal_ = myRankingVal_;
         if (listBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
             list_ = java.util.Collections.unmodifiableList(list_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.list_ = list_;
         } else {
           result.list_ = listBuilder_.build();
         }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -43439,11 +43798,17 @@ public final class CommunityProtos {
 
       public Builder mergeFrom(com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUserList other) {
         if (other == com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUserList.getDefaultInstance()) return this;
+        if (other.getMyRanking() != 0) {
+          setMyRanking(other.getMyRanking());
+        }
+        if (other.getMyRankingVal() != 0) {
+          setMyRankingVal(other.getMyRankingVal());
+        }
         if (listBuilder_ == null) {
           if (!other.list_.isEmpty()) {
             if (list_.isEmpty()) {
               list_ = other.list_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureListIsMutable();
               list_.addAll(other.list_);
@@ -43456,7 +43821,7 @@ public final class CommunityProtos {
               listBuilder_.dispose();
               listBuilder_ = null;
               list_ = other.list_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
               listBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getListFieldBuilder() : null;
@@ -43492,12 +43857,88 @@ public final class CommunityProtos {
       }
       private int bitField0_;
 
+      private int myRanking_ ;
+      /**
+       * <code>optional int32 MyRanking = 1;</code>
+       *
+       * <pre>
+       * 我在排行榜的位置，只在第一次获取排行榜时返回
+       * </pre>
+       */
+      public int getMyRanking() {
+        return myRanking_;
+      }
+      /**
+       * <code>optional int32 MyRanking = 1;</code>
+       *
+       * <pre>
+       * 我在排行榜的位置，只在第一次获取排行榜时返回
+       * </pre>
+       */
+      public Builder setMyRanking(int value) {
+        
+        myRanking_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 MyRanking = 1;</code>
+       *
+       * <pre>
+       * 我在排行榜的位置，只在第一次获取排行榜时返回
+       * </pre>
+       */
+      public Builder clearMyRanking() {
+        
+        myRanking_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int myRankingVal_ ;
+      /**
+       * <code>optional int32 MyRankingVal = 2;</code>
+       *
+       * <pre>
+       * 我在排行榜的分值，只在第一次获取排行榜时返回
+       * </pre>
+       */
+      public int getMyRankingVal() {
+        return myRankingVal_;
+      }
+      /**
+       * <code>optional int32 MyRankingVal = 2;</code>
+       *
+       * <pre>
+       * 我在排行榜的分值，只在第一次获取排行榜时返回
+       * </pre>
+       */
+      public Builder setMyRankingVal(int value) {
+        
+        myRankingVal_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 MyRankingVal = 2;</code>
+       *
+       * <pre>
+       * 我在排行榜的分值，只在第一次获取排行榜时返回
+       * </pre>
+       */
+      public Builder clearMyRankingVal() {
+        
+        myRankingVal_ = 0;
+        onChanged();
+        return this;
+      }
+
       private java.util.List<com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUser> list_ =
         java.util.Collections.emptyList();
       private void ensureListIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
           list_ = new java.util.ArrayList<com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUser>(list_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -43505,7 +43946,7 @@ public final class CommunityProtos {
           com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUser, com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUser.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUserOrBuilder> listBuilder_;
 
       /**
-       * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+       * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
        *
        * <pre>
        * 列表
@@ -43519,7 +43960,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+       * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
        *
        * <pre>
        * 列表
@@ -43533,7 +43974,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+       * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
        *
        * <pre>
        * 列表
@@ -43547,7 +43988,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+       * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
        *
        * <pre>
        * 列表
@@ -43568,7 +44009,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+       * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
        *
        * <pre>
        * 列表
@@ -43586,7 +44027,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+       * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
        *
        * <pre>
        * 列表
@@ -43606,7 +44047,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+       * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
        *
        * <pre>
        * 列表
@@ -43627,7 +44068,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+       * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
        *
        * <pre>
        * 列表
@@ -43645,7 +44086,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+       * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
        *
        * <pre>
        * 列表
@@ -43663,7 +44104,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+       * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
        *
        * <pre>
        * 列表
@@ -43682,7 +44123,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+       * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
        *
        * <pre>
        * 列表
@@ -43691,7 +44132,7 @@ public final class CommunityProtos {
       public Builder clearList() {
         if (listBuilder_ == null) {
           list_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           listBuilder_.clear();
@@ -43699,7 +44140,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+       * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
        *
        * <pre>
        * 列表
@@ -43716,7 +44157,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+       * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
        *
        * <pre>
        * 列表
@@ -43727,7 +44168,7 @@ public final class CommunityProtos {
         return getListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+       * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
        *
        * <pre>
        * 列表
@@ -43741,7 +44182,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+       * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
        *
        * <pre>
        * 列表
@@ -43756,7 +44197,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+       * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
        *
        * <pre>
        * 列表
@@ -43767,7 +44208,7 @@ public final class CommunityProtos {
             com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUser.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+       * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
        *
        * <pre>
        * 列表
@@ -43779,7 +44220,7 @@ public final class CommunityProtos {
             index, com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUser.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PCommunityRankingUser List = 1;</code>
+       * <code>repeated .bbproto.PCommunityRankingUser List = 3;</code>
        *
        * <pre>
        * 列表
@@ -43796,7 +44237,7 @@ public final class CommunityProtos {
           listBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUser, com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUser.Builder, com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUserOrBuilder>(
                   list_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
                   isClean());
           list_ = null;
@@ -43814,10 +44255,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityRankingUserList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityRankingUserList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityRankingUserList)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityRankingUserList)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUserList DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityRankingUserList();
@@ -43858,11 +44299,11 @@ public final class CommunityProtos {
   }
 
   public interface PCommunityLayoutConfigOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PCommunityLayoutConfig)
+      // @@protoc_insertion_point(interface_extends:bbproto.PCommunityLayoutConfig)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .common.PStringList Color = 1;</code>
+     * <code>optional .bbproto.PStringList Color = 1;</code>
      *
      * <pre>
      * 可选的颜色方案
@@ -43870,7 +44311,7 @@ public final class CommunityProtos {
      */
     boolean hasColor();
     /**
-     * <code>optional .common.PStringList Color = 1;</code>
+     * <code>optional .bbproto.PStringList Color = 1;</code>
      *
      * <pre>
      * 可选的颜色方案
@@ -43878,7 +44319,7 @@ public final class CommunityProtos {
      */
     com.blemobi.sep.probuf.ResultProtos.PStringList getColor();
     /**
-     * <code>optional .common.PStringList Color = 1;</code>
+     * <code>optional .bbproto.PStringList Color = 1;</code>
      *
      * <pre>
      * 可选的颜色方案
@@ -43887,7 +44328,7 @@ public final class CommunityProtos {
     com.blemobi.sep.probuf.ResultProtos.PStringListOrBuilder getColorOrBuilder();
   }
   /**
-   * Protobuf type {@code common.PCommunityLayoutConfig}
+   * Protobuf type {@code bbproto.PCommunityLayoutConfig}
    *
    * <pre>
    * 社区布局的配置信息
@@ -43895,7 +44336,7 @@ public final class CommunityProtos {
    */
   public  static final class PCommunityLayoutConfig extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PCommunityLayoutConfig)
+      // @@protoc_insertion_point(message_implements:bbproto.PCommunityLayoutConfig)
       PCommunityLayoutConfigOrBuilder {
     // Use PCommunityLayoutConfig.newBuilder() to construct.
     private PCommunityLayoutConfig(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -43955,12 +44396,12 @@ public final class CommunityProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityLayoutConfig_descriptor;
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityLayoutConfig_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityLayoutConfig_fieldAccessorTable
+      return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityLayoutConfig_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutConfig.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutConfig.Builder.class);
     }
@@ -43968,7 +44409,7 @@ public final class CommunityProtos {
     public static final int COLOR_FIELD_NUMBER = 1;
     private com.blemobi.sep.probuf.ResultProtos.PStringList color_;
     /**
-     * <code>optional .common.PStringList Color = 1;</code>
+     * <code>optional .bbproto.PStringList Color = 1;</code>
      *
      * <pre>
      * 可选的颜色方案
@@ -43978,7 +44419,7 @@ public final class CommunityProtos {
       return color_ != null;
     }
     /**
-     * <code>optional .common.PStringList Color = 1;</code>
+     * <code>optional .bbproto.PStringList Color = 1;</code>
      *
      * <pre>
      * 可选的颜色方案
@@ -43988,7 +44429,7 @@ public final class CommunityProtos {
       return color_ == null ? com.blemobi.sep.probuf.ResultProtos.PStringList.getDefaultInstance() : color_;
     }
     /**
-     * <code>optional .common.PStringList Color = 1;</code>
+     * <code>optional .bbproto.PStringList Color = 1;</code>
      *
      * <pre>
      * 可选的颜色方案
@@ -44102,7 +44543,7 @@ public final class CommunityProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PCommunityLayoutConfig}
+     * Protobuf type {@code bbproto.PCommunityLayoutConfig}
      *
      * <pre>
      * 社区布局的配置信息
@@ -44110,16 +44551,16 @@ public final class CommunityProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PCommunityLayoutConfig)
+        // @@protoc_insertion_point(builder_implements:bbproto.PCommunityLayoutConfig)
         com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutConfigOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityLayoutConfig_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityLayoutConfig_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityLayoutConfig_fieldAccessorTable
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityLayoutConfig_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutConfig.class, com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutConfig.Builder.class);
       }
@@ -44151,7 +44592,7 @@ public final class CommunityProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.CommunityProtos.internal_static_common_PCommunityLayoutConfig_descriptor;
+        return com.blemobi.sep.probuf.CommunityProtos.internal_static_bbproto_PCommunityLayoutConfig_descriptor;
       }
 
       public com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutConfig getDefaultInstanceForType() {
@@ -44221,7 +44662,7 @@ public final class CommunityProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.ResultProtos.PStringList, com.blemobi.sep.probuf.ResultProtos.PStringList.Builder, com.blemobi.sep.probuf.ResultProtos.PStringListOrBuilder> colorBuilder_;
       /**
-       * <code>optional .common.PStringList Color = 1;</code>
+       * <code>optional .bbproto.PStringList Color = 1;</code>
        *
        * <pre>
        * 可选的颜色方案
@@ -44231,7 +44672,7 @@ public final class CommunityProtos {
         return colorBuilder_ != null || color_ != null;
       }
       /**
-       * <code>optional .common.PStringList Color = 1;</code>
+       * <code>optional .bbproto.PStringList Color = 1;</code>
        *
        * <pre>
        * 可选的颜色方案
@@ -44245,7 +44686,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PStringList Color = 1;</code>
+       * <code>optional .bbproto.PStringList Color = 1;</code>
        *
        * <pre>
        * 可选的颜色方案
@@ -44265,7 +44706,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PStringList Color = 1;</code>
+       * <code>optional .bbproto.PStringList Color = 1;</code>
        *
        * <pre>
        * 可选的颜色方案
@@ -44283,7 +44724,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PStringList Color = 1;</code>
+       * <code>optional .bbproto.PStringList Color = 1;</code>
        *
        * <pre>
        * 可选的颜色方案
@@ -44305,7 +44746,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PStringList Color = 1;</code>
+       * <code>optional .bbproto.PStringList Color = 1;</code>
        *
        * <pre>
        * 可选的颜色方案
@@ -44323,7 +44764,7 @@ public final class CommunityProtos {
         return this;
       }
       /**
-       * <code>optional .common.PStringList Color = 1;</code>
+       * <code>optional .bbproto.PStringList Color = 1;</code>
        *
        * <pre>
        * 可选的颜色方案
@@ -44335,7 +44776,7 @@ public final class CommunityProtos {
         return getColorFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PStringList Color = 1;</code>
+       * <code>optional .bbproto.PStringList Color = 1;</code>
        *
        * <pre>
        * 可选的颜色方案
@@ -44350,7 +44791,7 @@ public final class CommunityProtos {
         }
       }
       /**
-       * <code>optional .common.PStringList Color = 1;</code>
+       * <code>optional .bbproto.PStringList Color = 1;</code>
        *
        * <pre>
        * 可选的颜色方案
@@ -44380,10 +44821,10 @@ public final class CommunityProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PCommunityLayoutConfig)
+      // @@protoc_insertion_point(builder_scope:bbproto.PCommunityLayoutConfig)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PCommunityLayoutConfig)
+    // @@protoc_insertion_point(class_scope:bbproto.PCommunityLayoutConfig)
     private static final com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutConfig DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommunityProtos.PCommunityLayoutConfig();
@@ -44424,240 +44865,240 @@ public final class CommunityProtos {
   }
 
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityID_descriptor;
+    internal_static_bbproto_PCommunityID_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityID_fieldAccessorTable;
+      internal_static_bbproto_PCommunityID_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityBase_descriptor;
+    internal_static_bbproto_PCommunityBase_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityBase_fieldAccessorTable;
+      internal_static_bbproto_PCommunityBase_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityBaseList_descriptor;
+    internal_static_bbproto_PCommunityBaseList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityBaseList_fieldAccessorTable;
+      internal_static_bbproto_PCommunityBaseList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityInfo_descriptor;
+    internal_static_bbproto_PCommunityInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityInfo_fieldAccessorTable;
+      internal_static_bbproto_PCommunityInfo_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityMe_descriptor;
+    internal_static_bbproto_PCommunityMe_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityMe_fieldAccessorTable;
+      internal_static_bbproto_PCommunityMe_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityResource_descriptor;
+    internal_static_bbproto_PCommunityResource_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityResource_fieldAccessorTable;
+      internal_static_bbproto_PCommunityResource_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityResourceList_descriptor;
+    internal_static_bbproto_PCommunityResourceList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityResourceList_fieldAccessorTable;
+      internal_static_bbproto_PCommunityResourceList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityPostUpload_descriptor;
+    internal_static_bbproto_PCommunityPostUpload_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityPostUpload_fieldAccessorTable;
+      internal_static_bbproto_PCommunityPostUpload_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityRedpacketUpload_descriptor;
+    internal_static_bbproto_PCommunityRedpacketUpload_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityRedpacketUpload_fieldAccessorTable;
+      internal_static_bbproto_PCommunityRedpacketUpload_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityPostInfo_descriptor;
+    internal_static_bbproto_PCommunityPostInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityPostInfo_fieldAccessorTable;
+      internal_static_bbproto_PCommunityPostInfo_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityPostList_descriptor;
+    internal_static_bbproto_PCommunityPostList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityPostList_fieldAccessorTable;
+      internal_static_bbproto_PCommunityPostList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityFlagPostList_descriptor;
+    internal_static_bbproto_PCommunityFlagPostList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityFlagPostList_fieldAccessorTable;
+      internal_static_bbproto_PCommunityFlagPostList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityHome_descriptor;
+    internal_static_bbproto_PCommunityHome_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityHome_fieldAccessorTable;
+      internal_static_bbproto_PCommunityHome_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityPostComment_descriptor;
+    internal_static_bbproto_PCommunityPostComment_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityPostComment_fieldAccessorTable;
+      internal_static_bbproto_PCommunityPostComment_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityCommentInfo_descriptor;
+    internal_static_bbproto_PCommunityCommentInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityCommentInfo_fieldAccessorTable;
+      internal_static_bbproto_PCommunityCommentInfo_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityCommentInfoList_descriptor;
+    internal_static_bbproto_PCommunityCommentInfoList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityCommentInfoList_fieldAccessorTable;
+      internal_static_bbproto_PCommunityCommentInfoList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityMailUpload_descriptor;
+    internal_static_bbproto_PCommunityMailUpload_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityMailUpload_fieldAccessorTable;
+      internal_static_bbproto_PCommunityMailUpload_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityMailInfo_descriptor;
+    internal_static_bbproto_PCommunityMailInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityMailInfo_fieldAccessorTable;
+      internal_static_bbproto_PCommunityMailInfo_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityMailList_descriptor;
+    internal_static_bbproto_PCommunityMailList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityMailList_fieldAccessorTable;
+      internal_static_bbproto_PCommunityMailList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityMember_descriptor;
+    internal_static_bbproto_PCommunityMember_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityMember_fieldAccessorTable;
+      internal_static_bbproto_PCommunityMember_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityMemberList_descriptor;
+    internal_static_bbproto_PCommunityMemberList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityMemberList_fieldAccessorTable;
+      internal_static_bbproto_PCommunityMemberList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityFriend_descriptor;
+    internal_static_bbproto_PCommunityFriend_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityFriend_fieldAccessorTable;
+      internal_static_bbproto_PCommunityFriend_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityFriendList_descriptor;
+    internal_static_bbproto_PCommunityFriendList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityFriendList_fieldAccessorTable;
+      internal_static_bbproto_PCommunityFriendList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityFlag_descriptor;
+    internal_static_bbproto_PCommunityFlag_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityFlag_fieldAccessorTable;
+      internal_static_bbproto_PCommunityFlag_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityFlagList_descriptor;
+    internal_static_bbproto_PCommunityFlagList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityFlagList_fieldAccessorTable;
+      internal_static_bbproto_PCommunityFlagList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityNotification_descriptor;
+    internal_static_bbproto_PCommunityNotification_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityNotification_fieldAccessorTable;
+      internal_static_bbproto_PCommunityNotification_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityNotificationList_descriptor;
+    internal_static_bbproto_PCommunityNotificationList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityNotificationList_fieldAccessorTable;
+      internal_static_bbproto_PCommunityNotificationList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityNotificationUnRead_descriptor;
+    internal_static_bbproto_PCommunityNotificationUnRead_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityNotificationUnRead_fieldAccessorTable;
+      internal_static_bbproto_PCommunityNotificationUnRead_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PIndiseCommunityUser_descriptor;
+    internal_static_bbproto_PInsideCommunityUser_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PIndiseCommunityUser_fieldAccessorTable;
+      internal_static_bbproto_PInsideCommunityUser_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PIndiseCommunityUserList_descriptor;
+    internal_static_bbproto_PInsideCommunityUserList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PIndiseCommunityUserList_fieldAccessorTable;
+      internal_static_bbproto_PInsideCommunityUserList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityBannerInfo_descriptor;
+    internal_static_bbproto_PCommunityBannerInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityBannerInfo_fieldAccessorTable;
+      internal_static_bbproto_PCommunityBannerInfo_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityBannerInfoList_descriptor;
+    internal_static_bbproto_PCommunityBannerInfoList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityBannerInfoList_fieldAccessorTable;
+      internal_static_bbproto_PCommunityBannerInfoList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityModules_descriptor;
+    internal_static_bbproto_PCommunityModules_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityModules_fieldAccessorTable;
+      internal_static_bbproto_PCommunityModules_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityModulesList_descriptor;
+    internal_static_bbproto_PCommunityModulesList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityModulesList_fieldAccessorTable;
+      internal_static_bbproto_PCommunityModulesList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityForumTag_descriptor;
+    internal_static_bbproto_PCommunityForumTag_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityForumTag_fieldAccessorTable;
+      internal_static_bbproto_PCommunityForumTag_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityForumTagList_descriptor;
+    internal_static_bbproto_PCommunityForumTagList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityForumTagList_fieldAccessorTable;
+      internal_static_bbproto_PCommunityForumTagList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityLayoutPlan1_descriptor;
+    internal_static_bbproto_PCommunityLayoutPlan1_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityLayoutPlan1_fieldAccessorTable;
+      internal_static_bbproto_PCommunityLayoutPlan1_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityLayout_descriptor;
+    internal_static_bbproto_PCommunityLayout_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityLayout_fieldAccessorTable;
+      internal_static_bbproto_PCommunityLayout_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityInfoV12_descriptor;
+    internal_static_bbproto_PCommunityInfoV12_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityInfoV12_fieldAccessorTable;
+      internal_static_bbproto_PCommunityInfoV12_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityHomeV12_descriptor;
+    internal_static_bbproto_PCommunityHomeV12_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityHomeV12_fieldAccessorTable;
+      internal_static_bbproto_PCommunityHomeV12_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityPhotoAlbum_descriptor;
+    internal_static_bbproto_PCommunityPhotoAlbum_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityPhotoAlbum_fieldAccessorTable;
+      internal_static_bbproto_PCommunityPhotoAlbum_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityPhotoAlbumList_descriptor;
+    internal_static_bbproto_PCommunityPhotoAlbumList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityPhotoAlbumList_fieldAccessorTable;
+      internal_static_bbproto_PCommunityPhotoAlbumList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityPhotoAlbumDateList_descriptor;
+    internal_static_bbproto_PCommunityPhotoAlbumDateList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityPhotoAlbumDateList_fieldAccessorTable;
+      internal_static_bbproto_PCommunityPhotoAlbumDateList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityReputationUser_descriptor;
+    internal_static_bbproto_PCommunityReputationUser_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityReputationUser_fieldAccessorTable;
+      internal_static_bbproto_PCommunityReputationUser_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityRankingUser_descriptor;
+    internal_static_bbproto_PCommunityRankingUser_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityRankingUser_fieldAccessorTable;
+      internal_static_bbproto_PCommunityRankingUser_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityRankingUserList_descriptor;
+    internal_static_bbproto_PCommunityRankingUserList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityRankingUserList_fieldAccessorTable;
+      internal_static_bbproto_PCommunityRankingUserList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PCommunityLayoutConfig_descriptor;
+    internal_static_bbproto_PCommunityLayoutConfig_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PCommunityLayoutConfig_fieldAccessorTable;
+      internal_static_bbproto_PCommunityLayoutConfig_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -44667,144 +45108,147 @@ public final class CommunityProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017community.proto\022\006common\032\raccount.proto" +
-      "\032\014wallet.proto\032\014result.proto\"\032\n\014PCommuni" +
-      "tyID\022\n\n\002ID\030\002 \003(\t\"\224\001\n\016PCommunityBase\022\n\n\002I" +
-      "D\030\002 \001(\t\022\014\n\004Name\030\003 \001(\t\022\017\n\007HeadImg\030\004 \001(\t\022\021" +
-      "\n\tIntroduce\030\005 \001(\t\022\016\n\006Status\030\006 \001(\005\0224\n\014Int" +
-      "roduceRes\030\007 \001(\0132\036.common.PCommunityResou" +
-      "rceList\":\n\022PCommunityBaseList\022$\n\004List\030\002 " +
-      "\003(\0132\026.common.PCommunityBase\"\326\002\n\016PCommuni" +
-      "tyInfo\022\016\n\006Status\030\002 \001(\005\022\022\n\nMembership\030\003 \001" +
-      "(\005\022\n\n\002ID\030\004 \001(\t\022\014\n\004Name\030\005 \001(\t\022\017\n\007HeadImg\030",
-      "\006 \001(\t\022\025\n\rBackgroundImg\030\007 \001(\t\022\021\n\tIntroduc" +
-      "e\030\010 \001(\t\022\021\n\tOwnerUUID\030\t \001(\t\022\021\n\tOwnerName\030" +
-      "\n \001(\t\022\023\n\013MemberCount\030\013 \001(\005\022\026\n\016ForumPostC" +
-      "ount\030\014 \001(\005\022\027\n\017NoticePostCount\030\r \001(\005\022\025\n\rB" +
-      "ottomNewsTxt\030\016 \001(\t\022\033\n\023BottomBackgroundTx" +
-      "t\030\017 \001(\t\022\026\n\016BottomVideoTxt\030\020 \001(\t\022\023\n\013Manag" +
-      "erList\030\021 \001(\t\"^\n\014PCommunityMe\022$\n\004Info\030\002 \001" +
-      "(\0132\026.common.PCommunityInfo\022(\n\004List\030\003 \001(\013" +
-      "2\032.common.PCommunityBaseList\"K\n\022PCommuni" +
-      "tyResource\022\014\n\004Type\030\002 \001(\t\022\014\n\004Name\030\003 \001(\t\022\013",
-      "\n\003URL\030\004 \001(\t\022\014\n\004Size\030\005 \001(\t\"F\n\026PCommunityR" +
-      "esourceList\022,\n\010Resource\030\002 \003(\0132\032.common.P" +
-      "CommunityResource\"\200\001\n\024PCommunityPostUplo" +
-      "ad\022\r\n\005Title\030\002 \001(\t\022\017\n\007SubType\030\003 \001(\t\022\021\n\tBa" +
-      "nnerImg\030\004 \001(\t\0225\n\rResourcesList\030\n \001(\0132\036.c" +
-      "ommon.PCommunityResourceList\"r\n\031PCommuni" +
-      "tyRedpacketUpload\022*\n\004Post\030\002 \001(\0132\034.common" +
-      ".PCommunityPostUpload\022)\n\tRedpacket\030\003 \001(\013" +
-      "2\026.common.PSendRedPacket\"\345\002\n\022PCommunityP" +
-      "ostInfo\022\n\n\002ID\030\002 \001(\t\022\014\n\004Type\030\003 \001(\t\022\017\n\007Sub",
-      "Type\030\004 \001(\t\022\014\n\004Time\030\005 \001(\003\022\r\n\005Title\030\006 \001(\t\022" +
-      "\016\n\006IsView\030\007 \001(\010\022\021\n\tViewCount\030\010 \001(\003\022\024\n\014Co" +
-      "mmentCount\030\t \001(\003\022\037\n\004User\030\n \001(\0132\021.common." +
-      "PUserBase\0225\n\rResourcesList\030\013 \001(\0132\036.commo" +
-      "n.PCommunityResourceList\022)\n\tRedpacket\030\014 " +
-      "\001(\0132\026.common.PRedPacketInfo\022-\n\tBannerImg" +
-      "\030\r \001(\0132\032.common.PCommunityResource\022\r\n\005Is" +
-      "Top\030\016 \001(\010\022\r\n\005IsDel\030\017 \001(\010\"B\n\022PCommunityPo" +
-      "stList\022,\n\010PostInfo\030\002 \003(\0132\032.common.PCommu" +
-      "nityPostInfo\"Y\n\026PCommunityFlagPostList\022\021",
-      "\n\tFlagCount\030\002 \003(\005\022,\n\010PostInfo\030\003 \003(\0132\032.co" +
-      "mmon.PCommunityPostInfo\"\225\001\n\016PCommunityHo" +
-      "me\022$\n\004Info\030\002 \001(\0132\026.common.PCommunityInfo" +
-      "\022#\n\004List\030\003 \001(\0132\025.common.PUserBaseList\0228\n" +
-      "\024BottomBackgroundPost\030\004 \001(\0132\032.common.PCo" +
-      "mmunityPostInfo\"9\n\025PCommunityPostComment" +
-      "\022\017\n\007QuoteID\030\002 \001(\t\022\017\n\007Content\030\003 \001(\t\"\350\001\n\025P" +
-      "CommunityCommentInfo\022\r\n\005Floor\030\002 \001(\005\022\016\n\006U" +
-      "pVote\030\003 \001(\005\022\020\n\010DownVote\030\004 \001(\005\022\016\n\006Status\030" +
-      "\005 \001(\005\022\n\n\002ID\030\006 \001(\t\022\014\n\004Time\030\007 \001(\003\022\017\n\007Conte",
-      "nt\030\010 \001(\t\022\037\n\004User\030\t \001(\0132\021.common.PUserBas" +
-      "e\0220\n\tQuoteInfo\030\n \001(\0132\035.common.PCommunity" +
-      "CommentInfo\022\020\n\010IsDelete\030\013 \001(\010\"H\n\031PCommun" +
-      "ityCommentInfoList\022+\n\004List\030\002 \003(\0132\035.commo" +
-      "n.PCommunityCommentInfo\"n\n\024PCommunityMai" +
-      "lUpload\022\017\n\007Content\030\002 \001(\t\022\016\n\006IsView\030\003 \001(\010" +
-      "\0225\n\rResourcesList\030\n \001(\0132\036.common.PCommun" +
-      "ityResourceList\"\347\001\n\022PCommunityMailInfo\022\n" +
-      "\n\002ID\030\002 \001(\003\022\017\n\007ReplyID\030\003 \001(\t\022\014\n\004Time\030\004 \001(" +
-      "\003\022\016\n\006IsView\030\005 \001(\010\022\017\n\007Content\030\006 \001(\t\022\037\n\004Us",
-      "er\030\007 \001(\0132\021.common.PUserBase\0225\n\rResources" +
-      "List\030\010 \001(\0132\036.common.PCommunityResourceLi" +
-      "st\022-\n\tReplyInfo\030\t \001(\0132\032.common.PCommunit" +
-      "yMailInfo\"R\n\022PCommunityMailList\022\016\n\006Unrea" +
-      "d\030\002 \001(\003\022,\n\010MailInfo\030\003 \003(\0132\032.common.PComm" +
-      "unityMailInfo\"j\n\020PCommunityMember\022\037\n\004Use" +
-      "r\030\002 \001(\0132\021.common.PUserBase\022\020\n\010IsFriend\030\003" +
-      " \001(\005\022\020\n\010IsFollow\030\004 \001(\005\022\021\n\tIsManager\030\005 \001(" +
-      "\005\">\n\024PCommunityMemberList\022&\n\004List\030\002 \003(\0132" +
-      "\030.common.PCommunityMember\"W\n\020PCommunityF",
-      "riend\022\037\n\004User\030\002 \001(\0132\021.common.PUserBase\022\016" +
-      "\n\006Status\030\003 \001(\005\022\022\n\nMembership\030\004 \001(\005\">\n\024PC" +
-      "ommunityFriendList\022&\n\004List\030\002 \003(\0132\030.commo" +
-      "n.PCommunityFriend\"\232\001\n\016PCommunityFlag\022\016\n" +
-      "\006FlagID\030\002 \001(\t\022\020\n\010FlagType\030\003 \001(\005\022\021\n\tFlagC" +
-      "ount\030\004 \001(\005\022\020\n\010FlagTime\030\005 \001(\003\022\016\n\006PostID\030\006" +
-      " \001(\t\022\021\n\tCommentID\030\007 \001(\t\022\r\n\005Title\030\t \001(\t\022\017" +
-      "\n\007Content\030\n \001(\t\":\n\022PCommunityFlagList\022$\n" +
-      "\004List\030\002 \003(\0132\026.common.PCommunityFlag\"\244\001\n\026" +
-      "PCommunityNotification\022\016\n\006IsView\030\002 \001(\010\022\014",
-      "\n\004Type\030\003 \001(\005\022\n\n\002ID\030\004 \001(\003\022\014\n\004Time\030\005 \001(\003\022\017" +
-      "\n\007Content\030\006 \001(\t\022\016\n\006JumpID\030\007 \001(\t\022\020\n\010JumpE" +
-      "xID\030\010 \001(\t\022\037\n\004User\030\t \001(\0132\021.common.PUserBa" +
-      "se\"J\n\032PCommunityNotificationList\022,\n\004List" +
-      "\030\002 \003(\0132\036.common.PCommunityNotification\"." +
-      "\n\034PCommunityNotificationUnRead\022\016\n\006Unread" +
-      "\030\002 \001(\003\"x\n\024PIndiseCommunityUser\022\037\n\004User\030\002" +
-      " \001(\0132\021.common.PUserBase\022\022\n\nFollowTime\030\003 " +
-      "\001(\003\022\022\n\nForbidTime\030\004 \001(\003\022\027\n\017BeBlacklistTi" +
-      "me\030\005 \001(\003\"F\n\030PIndiseCommunityUserList\022*\n\004",
-      "List\030\002 \003(\0132\034.common.PIndiseCommunityUser" +
-      "\"\215\001\n\024PCommunityBannerInfo\022\016\n\006Enable\030\001 \001(" +
-      "\010\022\014\n\004Name\030\002 \001(\t\022*\n\006ImgRes\030\003 \001(\0132\032.common" +
-      ".PCommunityResource\022+\n\007LinkRes\030\004 \001(\0132\032.c" +
-      "ommon.PCommunityResource\"F\n\030PCommunityBa" +
-      "nnerInfoList\022*\n\004List\030\001 \003(\0132\034.common.PCom" +
-      "munityBannerInfo\"-\n\021PCommunityModules\022\n\n" +
-      "\002ID\030\001 \001(\005\022\014\n\004Name\030\002 \001(\t\"@\n\025PCommunityMod" +
-      "ulesList\022\'\n\004List\030\001 \003(\0132\031.common.PCommuni" +
-      "tyModules\"L\n\022PCommunityForumTag\022\n\n\002ID\030\001 ",
-      "\001(\005\022\014\n\004Type\030\002 \001(\005\022\014\n\004Name\030\003 \001(\t\022\016\n\006Enabl" +
-      "e\030\004 \001(\010\"B\n\026PCommunityForumTagList\022(\n\004Lis" +
-      "t\030\001 \003(\0132\032.common.PCommunityForumTag\"\375\001\n\025" +
-      "PCommunityLayoutPlan1\022\023\n\013MemberCount\030\002 \001" +
-      "(\005\022\023\n\013ContentType\030\003 \001(\005\022*\n\013TopUserList\030\004" +
-      " \001(\0132\025.common.PUserBaseList\0224\n\nBannerLis" +
-      "t\030\005 \001(\0132 .common.PCommunityBannerInfoLis" +
-      "t\022+\n\017MiddleModulesID\030\007 \001(\0132\022.common.PInt" +
-      "32List\022+\n\017BottomModulesID\030\010 \001(\0132\022.common" +
-      ".PInt32List\"_\n\020PCommunityLayout\022\016\n\006PlanI",
-      "D\030\001 \001(\005\022\r\n\005Color\030\002 \001(\t\022,\n\005Plan1\030\003 \001(\0132\035." +
-      "common.PCommunityLayoutPlan1\"\206\002\n\021PCommun" +
-      "ityInfoV12\022(\n\010BaseInfo\030\001 \001(\0132\026.common.PC" +
-      "ommunityBase\022(\n\006Layout\030\002 \001(\0132\030.common.PC" +
-      "ommunityLayout\0223\n\rAdvertisement\030\003 \001(\0132\034." +
-      "common.PCommunityBannerInfo\0224\n\014ForumTagL" +
-      "ist\030\004 \001(\0132\036.common.PCommunityForumTagLis" +
-      "t\0222\n\013ModulesList\030\005 \001(\0132\035.common.PCommuni" +
-      "tyModulesList\"\257\001\n\021PCommunityHomeV12\022\022\n\nM" +
-      "embership\030\001 \001(\005\022 \n\005Owner\030\002 \001(\0132\021.common.",
-      "PUserBase\0220\n\rCommunityInfo\030\003 \001(\0132\031.commo" +
-      "n.PCommunityInfoV12\0222\n\016BackgroundPost\030\004 " +
-      "\001(\0132\032.common.PCommunityPostInfo\"B\n\024PComm" +
-      "unityPhotoAlbum\022\014\n\004Time\030\001 \001(\003\022\013\n\003URL\030\002 \001" +
-      "(\t\022\017\n\007ThumURL\030\003 \001(\t\"F\n\030PCommunityPhotoAl" +
-      "bumList\022*\n\004List\030\001 \003(\0132\034.common.PCommunit" +
-      "yPhotoAlbum\"`\n\034PCommunityPhotoAlbumDateL" +
-      "ist\022\020\n\010DateTime\030\001 \003(\003\022.\n\004List\030\002 \003(\0132 .co" +
-      "mmon.PCommunityPhotoAlbumList\"R\n\030PCommun" +
-      "ityReputationUser\022\037\n\004User\030\001 \001(\0132\021.common",
-      ".PUserBase\022\025\n\rReputationVal\030\002 \001(\005\"Q\n\025PCo" +
-      "mmunityRankingUser\0228\n\016ReputationUser\030\001 \001" +
-      "(\0132 .common.PCommunityReputationUser\"H\n\031" +
-      "PCommunityRankingUserList\022+\n\004List\030\001 \003(\0132" +
-      "\035.common.PCommunityRankingUser\"<\n\026PCommu" +
-      "nityLayoutConfig\022\"\n\005Color\030\001 \001(\0132\023.common" +
-      ".PStringListB)\n\026com.blemobi.sep.probufB\017" +
-      "CommunityProtosb\006proto3"
+      "\n\017community.proto\022\007bbproto\032\raccount.prot" +
+      "o\032\014wallet.proto\032\014result.proto\"\032\n\014PCommun" +
+      "ityID\022\n\n\002ID\030\002 \003(\t\"\225\001\n\016PCommunityBase\022\n\n\002" +
+      "ID\030\002 \001(\t\022\014\n\004Name\030\003 \001(\t\022\017\n\007HeadImg\030\004 \001(\t\022" +
+      "\021\n\tIntroduce\030\005 \001(\t\022\016\n\006Status\030\006 \001(\005\0225\n\014In" +
+      "troduceRes\030\007 \001(\0132\037.bbproto.PCommunityRes" +
+      "ourceList\";\n\022PCommunityBaseList\022%\n\004List\030" +
+      "\002 \003(\0132\027.bbproto.PCommunityBase\"\326\002\n\016PComm" +
+      "unityInfo\022\016\n\006Status\030\002 \001(\005\022\022\n\nMembership\030" +
+      "\003 \001(\005\022\n\n\002ID\030\004 \001(\t\022\014\n\004Name\030\005 \001(\t\022\017\n\007HeadI",
+      "mg\030\006 \001(\t\022\025\n\rBackgroundImg\030\007 \001(\t\022\021\n\tIntro" +
+      "duce\030\010 \001(\t\022\021\n\tOwnerUUID\030\t \001(\t\022\021\n\tOwnerNa" +
+      "me\030\n \001(\t\022\023\n\013MemberCount\030\013 \001(\005\022\026\n\016ForumPo" +
+      "stCount\030\014 \001(\005\022\027\n\017NoticePostCount\030\r \001(\005\022\025" +
+      "\n\rBottomNewsTxt\030\016 \001(\t\022\033\n\023BottomBackgroun" +
+      "dTxt\030\017 \001(\t\022\026\n\016BottomVideoTxt\030\020 \001(\t\022\023\n\013Ma" +
+      "nagerList\030\021 \001(\t\"`\n\014PCommunityMe\022%\n\004Info\030" +
+      "\002 \001(\0132\027.bbproto.PCommunityInfo\022)\n\004List\030\003" +
+      " \001(\0132\033.bbproto.PCommunityBaseList\"K\n\022PCo" +
+      "mmunityResource\022\014\n\004Type\030\002 \001(\t\022\014\n\004Name\030\003 ",
+      "\001(\t\022\013\n\003URL\030\004 \001(\t\022\014\n\004Size\030\005 \001(\t\"G\n\026PCommu" +
+      "nityResourceList\022-\n\010Resource\030\002 \003(\0132\033.bbp" +
+      "roto.PCommunityResource\"\201\001\n\024PCommunityPo" +
+      "stUpload\022\r\n\005Title\030\002 \001(\t\022\017\n\007SubType\030\003 \001(\t" +
+      "\022\021\n\tBannerImg\030\004 \001(\t\0226\n\rResourcesList\030\n \001" +
+      "(\0132\037.bbproto.PCommunityResourceList\"t\n\031P" +
+      "CommunityRedpacketUpload\022+\n\004Post\030\002 \001(\0132\035" +
+      ".bbproto.PCommunityPostUpload\022*\n\tRedpack" +
+      "et\030\003 \001(\0132\027.bbproto.PSendRedPacket\"\351\002\n\022PC" +
+      "ommunityPostInfo\022\n\n\002ID\030\002 \001(\t\022\014\n\004Type\030\003 \001",
+      "(\t\022\017\n\007SubType\030\004 \001(\t\022\014\n\004Time\030\005 \001(\003\022\r\n\005Tit" +
+      "le\030\006 \001(\t\022\016\n\006IsView\030\007 \001(\010\022\021\n\tViewCount\030\010 " +
+      "\001(\003\022\024\n\014CommentCount\030\t \001(\003\022 \n\004User\030\n \001(\0132" +
+      "\022.bbproto.PUserBase\0226\n\rResourcesList\030\013 \001" +
+      "(\0132\037.bbproto.PCommunityResourceList\022*\n\tR" +
+      "edpacket\030\014 \001(\0132\027.bbproto.PRedPacketInfo\022" +
+      ".\n\tBannerImg\030\r \001(\0132\033.bbproto.PCommunityR" +
+      "esource\022\r\n\005IsTop\030\016 \001(\010\022\r\n\005IsDel\030\017 \001(\010\"C\n" +
+      "\022PCommunityPostList\022-\n\010PostInfo\030\002 \003(\0132\033." +
+      "bbproto.PCommunityPostInfo\"Z\n\026PCommunity",
+      "FlagPostList\022\021\n\tFlagCount\030\002 \003(\005\022-\n\010PostI" +
+      "nfo\030\003 \003(\0132\033.bbproto.PCommunityPostInfo\"\230" +
+      "\001\n\016PCommunityHome\022%\n\004Info\030\002 \001(\0132\027.bbprot" +
+      "o.PCommunityInfo\022$\n\004List\030\003 \001(\0132\026.bbproto" +
+      ".PUserBaseList\0229\n\024BottomBackgroundPost\030\004" +
+      " \001(\0132\033.bbproto.PCommunityPostInfo\"9\n\025PCo" +
+      "mmunityPostComment\022\017\n\007QuoteID\030\002 \001(\t\022\017\n\007C" +
+      "ontent\030\003 \001(\t\"\352\001\n\025PCommunityCommentInfo\022\r" +
+      "\n\005Floor\030\002 \001(\005\022\016\n\006UpVote\030\003 \001(\005\022\020\n\010DownVot" +
+      "e\030\004 \001(\005\022\016\n\006Status\030\005 \001(\005\022\n\n\002ID\030\006 \001(\t\022\014\n\004T",
+      "ime\030\007 \001(\003\022\017\n\007Content\030\010 \001(\t\022 \n\004User\030\t \001(\013" +
+      "2\022.bbproto.PUserBase\0221\n\tQuoteInfo\030\n \001(\0132" +
+      "\036.bbproto.PCommunityCommentInfo\022\020\n\010IsDel" +
+      "ete\030\013 \001(\010\"I\n\031PCommunityCommentInfoList\022," +
+      "\n\004List\030\002 \003(\0132\036.bbproto.PCommunityComment" +
+      "Info\"o\n\024PCommunityMailUpload\022\017\n\007Content\030" +
+      "\002 \001(\t\022\016\n\006IsView\030\003 \001(\010\0226\n\rResourcesList\030\n" +
+      " \001(\0132\037.bbproto.PCommunityResourceList\"\352\001" +
+      "\n\022PCommunityMailInfo\022\n\n\002ID\030\002 \001(\003\022\017\n\007Repl" +
+      "yID\030\003 \001(\t\022\014\n\004Time\030\004 \001(\003\022\016\n\006IsView\030\005 \001(\010\022",
+      "\017\n\007Content\030\006 \001(\t\022 \n\004User\030\007 \001(\0132\022.bbproto" +
+      ".PUserBase\0226\n\rResourcesList\030\010 \001(\0132\037.bbpr" +
+      "oto.PCommunityResourceList\022.\n\tReplyInfo\030" +
+      "\t \001(\0132\033.bbproto.PCommunityMailInfo\"S\n\022PC" +
+      "ommunityMailList\022\016\n\006Unread\030\002 \001(\003\022-\n\010Mail" +
+      "Info\030\003 \003(\0132\033.bbproto.PCommunityMailInfo\"" +
+      "k\n\020PCommunityMember\022 \n\004User\030\002 \001(\0132\022.bbpr" +
+      "oto.PUserBase\022\020\n\010IsFriend\030\003 \001(\005\022\020\n\010IsFol" +
+      "low\030\004 \001(\005\022\021\n\tIsManager\030\005 \001(\005\"N\n\024PCommuni" +
+      "tyMemberList\022\r\n\005Count\030\001 \001(\005\022\'\n\004List\030\002 \003(",
+      "\0132\031.bbproto.PCommunityMember\"X\n\020PCommuni" +
+      "tyFriend\022 \n\004User\030\002 \001(\0132\022.bbproto.PUserBa" +
+      "se\022\016\n\006Status\030\003 \001(\005\022\022\n\nMembership\030\004 \001(\005\"?" +
+      "\n\024PCommunityFriendList\022\'\n\004List\030\002 \003(\0132\031.b" +
+      "bproto.PCommunityFriend\"\232\001\n\016PCommunityFl" +
+      "ag\022\016\n\006FlagID\030\002 \001(\t\022\020\n\010FlagType\030\003 \001(\005\022\021\n\t" +
+      "FlagCount\030\004 \001(\005\022\020\n\010FlagTime\030\005 \001(\003\022\016\n\006Pos" +
+      "tID\030\006 \001(\t\022\021\n\tCommentID\030\007 \001(\t\022\r\n\005Title\030\t " +
+      "\001(\t\022\017\n\007Content\030\n \001(\t\";\n\022PCommunityFlagLi" +
+      "st\022%\n\004List\030\002 \003(\0132\027.bbproto.PCommunityFla",
+      "g\"\245\001\n\026PCommunityNotification\022\016\n\006IsView\030\002" +
+      " \001(\010\022\014\n\004Type\030\003 \001(\005\022\n\n\002ID\030\004 \001(\003\022\014\n\004Time\030\005" +
+      " \001(\003\022\017\n\007Content\030\006 \001(\t\022\016\n\006JumpID\030\007 \001(\t\022\020\n" +
+      "\010JumpExID\030\010 \001(\t\022 \n\004User\030\t \001(\0132\022.bbproto." +
+      "PUserBase\"K\n\032PCommunityNotificationList\022" +
+      "-\n\004List\030\002 \003(\0132\037.bbproto.PCommunityNotifi" +
+      "cation\".\n\034PCommunityNotificationUnRead\022\016" +
+      "\n\006Unread\030\002 \001(\003\"y\n\024PInsideCommunityUser\022 " +
+      "\n\004User\030\002 \001(\0132\022.bbproto.PUserBase\022\022\n\nFoll" +
+      "owTime\030\003 \001(\003\022\022\n\nForbidTime\030\004 \001(\003\022\027\n\017BeBl",
+      "acklistTime\030\005 \001(\003\"G\n\030PInsideCommunityUse" +
+      "rList\022+\n\004List\030\002 \003(\0132\035.bbproto.PInsideCom" +
+      "munityUser\"\217\001\n\024PCommunityBannerInfo\022\016\n\006E" +
+      "nable\030\001 \001(\010\022\014\n\004Name\030\002 \001(\t\022+\n\006ImgRes\030\003 \001(" +
+      "\0132\033.bbproto.PCommunityResource\022,\n\007LinkRe" +
+      "s\030\004 \001(\0132\033.bbproto.PCommunityResource\"G\n\030" +
+      "PCommunityBannerInfoList\022+\n\004List\030\001 \003(\0132\035" +
+      ".bbproto.PCommunityBannerInfo\"-\n\021PCommun" +
+      "ityModules\022\n\n\002ID\030\001 \001(\005\022\014\n\004Name\030\002 \001(\t\"A\n\025" +
+      "PCommunityModulesList\022(\n\004List\030\001 \003(\0132\032.bb",
+      "proto.PCommunityModules\"M\n\022PCommunityFor" +
+      "umTag\022\n\n\002ID\030\001 \001(\005\022\014\n\004Type\030\002 \001(\005\022\014\n\004Name\030" +
+      "\003 \001(\t\022\017\n\007Disable\030\004 \001(\010\"C\n\026PCommunityForu" +
+      "mTagList\022)\n\004List\030\001 \003(\0132\033.bbproto.PCommun" +
+      "ityForumTag\"\354\001\n\025PCommunityLayoutPlan1\022\023\n" +
+      "\013ContentType\030\001 \001(\005\022+\n\013TopUserList\030\002 \001(\0132" +
+      "\026.bbproto.PUserBaseList\022,\n\017MiddleModules" +
+      "ID\030\003 \001(\0132\023.bbproto.PInt32List\022,\n\017BottomM" +
+      "odulesID\030\004 \001(\0132\023.bbproto.PInt32List\0225\n\nB" +
+      "annerList\030\005 \001(\0132!.bbproto.PCommunityBann",
+      "erInfoList\"`\n\020PCommunityLayout\022\016\n\006PlanID" +
+      "\030\001 \001(\005\022\r\n\005Color\030\002 \001(\t\022-\n\005Plan1\030\003 \001(\0132\036.b" +
+      "bproto.PCommunityLayoutPlan1\"\213\002\n\021PCommun" +
+      "ityInfoV12\022)\n\010BaseInfo\030\001 \001(\0132\027.bbproto.P" +
+      "CommunityBase\022)\n\006Layout\030\002 \001(\0132\031.bbproto." +
+      "PCommunityLayout\0224\n\rAdvertisement\030\003 \001(\0132" +
+      "\035.bbproto.PCommunityBannerInfo\0225\n\014ForumT" +
+      "agList\030\004 \001(\0132\037.bbproto.PCommunityForumTa" +
+      "gList\0223\n\013ModulesList\030\005 \001(\0132\036.bbproto.PCo" +
+      "mmunityModulesList\"\273\001\n\021PCommunityHomeV12",
+      "\022\022\n\nMembership\030\001 \001(\005\022\023\n\013MemberCount\030\002 \001(" +
+      "\005\022\023\n\013ManagerList\030\003 \001(\t\022!\n\005Owner\030\004 \001(\0132\022." +
+      "bbproto.PUserBase\0221\n\rCommunityInfo\030\005 \001(\013" +
+      "2\032.bbproto.PCommunityInfoV12\022\022\n\nIsVOMemb" +
+      "er\030\006 \001(\010\"N\n\024PCommunityPhotoAlbum\022\n\n\002ID\030\001" +
+      " \001(\003\022\014\n\004Time\030\002 \001(\003\022\013\n\003URL\030\003 \001(\t\022\017\n\007ThumU" +
+      "RL\030\004 \001(\t\"G\n\030PCommunityPhotoAlbumList\022+\n\004" +
+      "List\030\001 \003(\0132\035.bbproto.PCommunityPhotoAlbu" +
+      "m\"a\n\034PCommunityPhotoAlbumDateList\022\020\n\010Dat" +
+      "eTime\030\001 \003(\003\022/\n\004List\030\002 \003(\0132!.bbproto.PCom",
+      "munityPhotoAlbumList\"S\n\030PCommunityReputa" +
+      "tionUser\022 \n\004User\030\001 \001(\0132\022.bbproto.PUserBa" +
+      "se\022\025\n\rReputationVal\030\002 \001(\005\"R\n\025PCommunityR" +
+      "ankingUser\0229\n\016ReputationUser\030\001 \001(\0132!.bbp" +
+      "roto.PCommunityReputationUser\"r\n\031PCommun" +
+      "ityRankingUserList\022\021\n\tMyRanking\030\001 \001(\005\022\024\n" +
+      "\014MyRankingVal\030\002 \001(\005\022,\n\004List\030\003 \003(\0132\036.bbpr" +
+      "oto.PCommunityRankingUser\"=\n\026PCommunityL" +
+      "ayoutConfig\022#\n\005Color\030\001 \001(\0132\024.bbproto.PSt" +
+      "ringListB)\n\026com.blemobi.sep.probufB\017Comm",
+      "unityProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -44821,287 +45265,287 @@ public final class CommunityProtos {
           com.blemobi.sep.probuf.WalletProtos.getDescriptor(),
           com.blemobi.sep.probuf.ResultProtos.getDescriptor(),
         }, assigner);
-    internal_static_common_PCommunityID_descriptor =
+    internal_static_bbproto_PCommunityID_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_common_PCommunityID_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityID_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityID_descriptor,
+        internal_static_bbproto_PCommunityID_descriptor,
         new java.lang.String[] { "ID", });
-    internal_static_common_PCommunityBase_descriptor =
+    internal_static_bbproto_PCommunityBase_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_common_PCommunityBase_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityBase_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityBase_descriptor,
+        internal_static_bbproto_PCommunityBase_descriptor,
         new java.lang.String[] { "ID", "Name", "HeadImg", "Introduce", "Status", "IntroduceRes", });
-    internal_static_common_PCommunityBaseList_descriptor =
+    internal_static_bbproto_PCommunityBaseList_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_common_PCommunityBaseList_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityBaseList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityBaseList_descriptor,
+        internal_static_bbproto_PCommunityBaseList_descriptor,
         new java.lang.String[] { "List", });
-    internal_static_common_PCommunityInfo_descriptor =
+    internal_static_bbproto_PCommunityInfo_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_common_PCommunityInfo_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityInfo_descriptor,
+        internal_static_bbproto_PCommunityInfo_descriptor,
         new java.lang.String[] { "Status", "Membership", "ID", "Name", "HeadImg", "BackgroundImg", "Introduce", "OwnerUUID", "OwnerName", "MemberCount", "ForumPostCount", "NoticePostCount", "BottomNewsTxt", "BottomBackgroundTxt", "BottomVideoTxt", "ManagerList", });
-    internal_static_common_PCommunityMe_descriptor =
+    internal_static_bbproto_PCommunityMe_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_common_PCommunityMe_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityMe_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityMe_descriptor,
+        internal_static_bbproto_PCommunityMe_descriptor,
         new java.lang.String[] { "Info", "List", });
-    internal_static_common_PCommunityResource_descriptor =
+    internal_static_bbproto_PCommunityResource_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_common_PCommunityResource_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityResource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityResource_descriptor,
+        internal_static_bbproto_PCommunityResource_descriptor,
         new java.lang.String[] { "Type", "Name", "URL", "Size", });
-    internal_static_common_PCommunityResourceList_descriptor =
+    internal_static_bbproto_PCommunityResourceList_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_common_PCommunityResourceList_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityResourceList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityResourceList_descriptor,
+        internal_static_bbproto_PCommunityResourceList_descriptor,
         new java.lang.String[] { "Resource", });
-    internal_static_common_PCommunityPostUpload_descriptor =
+    internal_static_bbproto_PCommunityPostUpload_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_common_PCommunityPostUpload_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityPostUpload_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityPostUpload_descriptor,
+        internal_static_bbproto_PCommunityPostUpload_descriptor,
         new java.lang.String[] { "Title", "SubType", "BannerImg", "ResourcesList", });
-    internal_static_common_PCommunityRedpacketUpload_descriptor =
+    internal_static_bbproto_PCommunityRedpacketUpload_descriptor =
       getDescriptor().getMessageTypes().get(8);
-    internal_static_common_PCommunityRedpacketUpload_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityRedpacketUpload_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityRedpacketUpload_descriptor,
+        internal_static_bbproto_PCommunityRedpacketUpload_descriptor,
         new java.lang.String[] { "Post", "Redpacket", });
-    internal_static_common_PCommunityPostInfo_descriptor =
+    internal_static_bbproto_PCommunityPostInfo_descriptor =
       getDescriptor().getMessageTypes().get(9);
-    internal_static_common_PCommunityPostInfo_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityPostInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityPostInfo_descriptor,
+        internal_static_bbproto_PCommunityPostInfo_descriptor,
         new java.lang.String[] { "ID", "Type", "SubType", "Time", "Title", "IsView", "ViewCount", "CommentCount", "User", "ResourcesList", "Redpacket", "BannerImg", "IsTop", "IsDel", });
-    internal_static_common_PCommunityPostList_descriptor =
+    internal_static_bbproto_PCommunityPostList_descriptor =
       getDescriptor().getMessageTypes().get(10);
-    internal_static_common_PCommunityPostList_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityPostList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityPostList_descriptor,
+        internal_static_bbproto_PCommunityPostList_descriptor,
         new java.lang.String[] { "PostInfo", });
-    internal_static_common_PCommunityFlagPostList_descriptor =
+    internal_static_bbproto_PCommunityFlagPostList_descriptor =
       getDescriptor().getMessageTypes().get(11);
-    internal_static_common_PCommunityFlagPostList_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityFlagPostList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityFlagPostList_descriptor,
+        internal_static_bbproto_PCommunityFlagPostList_descriptor,
         new java.lang.String[] { "FlagCount", "PostInfo", });
-    internal_static_common_PCommunityHome_descriptor =
+    internal_static_bbproto_PCommunityHome_descriptor =
       getDescriptor().getMessageTypes().get(12);
-    internal_static_common_PCommunityHome_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityHome_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityHome_descriptor,
+        internal_static_bbproto_PCommunityHome_descriptor,
         new java.lang.String[] { "Info", "List", "BottomBackgroundPost", });
-    internal_static_common_PCommunityPostComment_descriptor =
+    internal_static_bbproto_PCommunityPostComment_descriptor =
       getDescriptor().getMessageTypes().get(13);
-    internal_static_common_PCommunityPostComment_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityPostComment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityPostComment_descriptor,
+        internal_static_bbproto_PCommunityPostComment_descriptor,
         new java.lang.String[] { "QuoteID", "Content", });
-    internal_static_common_PCommunityCommentInfo_descriptor =
+    internal_static_bbproto_PCommunityCommentInfo_descriptor =
       getDescriptor().getMessageTypes().get(14);
-    internal_static_common_PCommunityCommentInfo_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityCommentInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityCommentInfo_descriptor,
+        internal_static_bbproto_PCommunityCommentInfo_descriptor,
         new java.lang.String[] { "Floor", "UpVote", "DownVote", "Status", "ID", "Time", "Content", "User", "QuoteInfo", "IsDelete", });
-    internal_static_common_PCommunityCommentInfoList_descriptor =
+    internal_static_bbproto_PCommunityCommentInfoList_descriptor =
       getDescriptor().getMessageTypes().get(15);
-    internal_static_common_PCommunityCommentInfoList_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityCommentInfoList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityCommentInfoList_descriptor,
+        internal_static_bbproto_PCommunityCommentInfoList_descriptor,
         new java.lang.String[] { "List", });
-    internal_static_common_PCommunityMailUpload_descriptor =
+    internal_static_bbproto_PCommunityMailUpload_descriptor =
       getDescriptor().getMessageTypes().get(16);
-    internal_static_common_PCommunityMailUpload_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityMailUpload_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityMailUpload_descriptor,
+        internal_static_bbproto_PCommunityMailUpload_descriptor,
         new java.lang.String[] { "Content", "IsView", "ResourcesList", });
-    internal_static_common_PCommunityMailInfo_descriptor =
+    internal_static_bbproto_PCommunityMailInfo_descriptor =
       getDescriptor().getMessageTypes().get(17);
-    internal_static_common_PCommunityMailInfo_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityMailInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityMailInfo_descriptor,
+        internal_static_bbproto_PCommunityMailInfo_descriptor,
         new java.lang.String[] { "ID", "ReplyID", "Time", "IsView", "Content", "User", "ResourcesList", "ReplyInfo", });
-    internal_static_common_PCommunityMailList_descriptor =
+    internal_static_bbproto_PCommunityMailList_descriptor =
       getDescriptor().getMessageTypes().get(18);
-    internal_static_common_PCommunityMailList_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityMailList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityMailList_descriptor,
+        internal_static_bbproto_PCommunityMailList_descriptor,
         new java.lang.String[] { "Unread", "MailInfo", });
-    internal_static_common_PCommunityMember_descriptor =
+    internal_static_bbproto_PCommunityMember_descriptor =
       getDescriptor().getMessageTypes().get(19);
-    internal_static_common_PCommunityMember_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityMember_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityMember_descriptor,
+        internal_static_bbproto_PCommunityMember_descriptor,
         new java.lang.String[] { "User", "IsFriend", "IsFollow", "IsManager", });
-    internal_static_common_PCommunityMemberList_descriptor =
+    internal_static_bbproto_PCommunityMemberList_descriptor =
       getDescriptor().getMessageTypes().get(20);
-    internal_static_common_PCommunityMemberList_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityMemberList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityMemberList_descriptor,
-        new java.lang.String[] { "List", });
-    internal_static_common_PCommunityFriend_descriptor =
+        internal_static_bbproto_PCommunityMemberList_descriptor,
+        new java.lang.String[] { "Count", "List", });
+    internal_static_bbproto_PCommunityFriend_descriptor =
       getDescriptor().getMessageTypes().get(21);
-    internal_static_common_PCommunityFriend_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityFriend_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityFriend_descriptor,
+        internal_static_bbproto_PCommunityFriend_descriptor,
         new java.lang.String[] { "User", "Status", "Membership", });
-    internal_static_common_PCommunityFriendList_descriptor =
+    internal_static_bbproto_PCommunityFriendList_descriptor =
       getDescriptor().getMessageTypes().get(22);
-    internal_static_common_PCommunityFriendList_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityFriendList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityFriendList_descriptor,
+        internal_static_bbproto_PCommunityFriendList_descriptor,
         new java.lang.String[] { "List", });
-    internal_static_common_PCommunityFlag_descriptor =
+    internal_static_bbproto_PCommunityFlag_descriptor =
       getDescriptor().getMessageTypes().get(23);
-    internal_static_common_PCommunityFlag_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityFlag_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityFlag_descriptor,
+        internal_static_bbproto_PCommunityFlag_descriptor,
         new java.lang.String[] { "FlagID", "FlagType", "FlagCount", "FlagTime", "PostID", "CommentID", "Title", "Content", });
-    internal_static_common_PCommunityFlagList_descriptor =
+    internal_static_bbproto_PCommunityFlagList_descriptor =
       getDescriptor().getMessageTypes().get(24);
-    internal_static_common_PCommunityFlagList_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityFlagList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityFlagList_descriptor,
+        internal_static_bbproto_PCommunityFlagList_descriptor,
         new java.lang.String[] { "List", });
-    internal_static_common_PCommunityNotification_descriptor =
+    internal_static_bbproto_PCommunityNotification_descriptor =
       getDescriptor().getMessageTypes().get(25);
-    internal_static_common_PCommunityNotification_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityNotification_descriptor,
+        internal_static_bbproto_PCommunityNotification_descriptor,
         new java.lang.String[] { "IsView", "Type", "ID", "Time", "Content", "JumpID", "JumpExID", "User", });
-    internal_static_common_PCommunityNotificationList_descriptor =
+    internal_static_bbproto_PCommunityNotificationList_descriptor =
       getDescriptor().getMessageTypes().get(26);
-    internal_static_common_PCommunityNotificationList_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityNotificationList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityNotificationList_descriptor,
+        internal_static_bbproto_PCommunityNotificationList_descriptor,
         new java.lang.String[] { "List", });
-    internal_static_common_PCommunityNotificationUnRead_descriptor =
+    internal_static_bbproto_PCommunityNotificationUnRead_descriptor =
       getDescriptor().getMessageTypes().get(27);
-    internal_static_common_PCommunityNotificationUnRead_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityNotificationUnRead_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityNotificationUnRead_descriptor,
+        internal_static_bbproto_PCommunityNotificationUnRead_descriptor,
         new java.lang.String[] { "Unread", });
-    internal_static_common_PIndiseCommunityUser_descriptor =
+    internal_static_bbproto_PInsideCommunityUser_descriptor =
       getDescriptor().getMessageTypes().get(28);
-    internal_static_common_PIndiseCommunityUser_fieldAccessorTable = new
+    internal_static_bbproto_PInsideCommunityUser_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PIndiseCommunityUser_descriptor,
+        internal_static_bbproto_PInsideCommunityUser_descriptor,
         new java.lang.String[] { "User", "FollowTime", "ForbidTime", "BeBlacklistTime", });
-    internal_static_common_PIndiseCommunityUserList_descriptor =
+    internal_static_bbproto_PInsideCommunityUserList_descriptor =
       getDescriptor().getMessageTypes().get(29);
-    internal_static_common_PIndiseCommunityUserList_fieldAccessorTable = new
+    internal_static_bbproto_PInsideCommunityUserList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PIndiseCommunityUserList_descriptor,
+        internal_static_bbproto_PInsideCommunityUserList_descriptor,
         new java.lang.String[] { "List", });
-    internal_static_common_PCommunityBannerInfo_descriptor =
+    internal_static_bbproto_PCommunityBannerInfo_descriptor =
       getDescriptor().getMessageTypes().get(30);
-    internal_static_common_PCommunityBannerInfo_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityBannerInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityBannerInfo_descriptor,
+        internal_static_bbproto_PCommunityBannerInfo_descriptor,
         new java.lang.String[] { "Enable", "Name", "ImgRes", "LinkRes", });
-    internal_static_common_PCommunityBannerInfoList_descriptor =
+    internal_static_bbproto_PCommunityBannerInfoList_descriptor =
       getDescriptor().getMessageTypes().get(31);
-    internal_static_common_PCommunityBannerInfoList_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityBannerInfoList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityBannerInfoList_descriptor,
+        internal_static_bbproto_PCommunityBannerInfoList_descriptor,
         new java.lang.String[] { "List", });
-    internal_static_common_PCommunityModules_descriptor =
+    internal_static_bbproto_PCommunityModules_descriptor =
       getDescriptor().getMessageTypes().get(32);
-    internal_static_common_PCommunityModules_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityModules_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityModules_descriptor,
+        internal_static_bbproto_PCommunityModules_descriptor,
         new java.lang.String[] { "ID", "Name", });
-    internal_static_common_PCommunityModulesList_descriptor =
+    internal_static_bbproto_PCommunityModulesList_descriptor =
       getDescriptor().getMessageTypes().get(33);
-    internal_static_common_PCommunityModulesList_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityModulesList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityModulesList_descriptor,
+        internal_static_bbproto_PCommunityModulesList_descriptor,
         new java.lang.String[] { "List", });
-    internal_static_common_PCommunityForumTag_descriptor =
+    internal_static_bbproto_PCommunityForumTag_descriptor =
       getDescriptor().getMessageTypes().get(34);
-    internal_static_common_PCommunityForumTag_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityForumTag_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityForumTag_descriptor,
-        new java.lang.String[] { "ID", "Type", "Name", "Enable", });
-    internal_static_common_PCommunityForumTagList_descriptor =
+        internal_static_bbproto_PCommunityForumTag_descriptor,
+        new java.lang.String[] { "ID", "Type", "Name", "Disable", });
+    internal_static_bbproto_PCommunityForumTagList_descriptor =
       getDescriptor().getMessageTypes().get(35);
-    internal_static_common_PCommunityForumTagList_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityForumTagList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityForumTagList_descriptor,
+        internal_static_bbproto_PCommunityForumTagList_descriptor,
         new java.lang.String[] { "List", });
-    internal_static_common_PCommunityLayoutPlan1_descriptor =
+    internal_static_bbproto_PCommunityLayoutPlan1_descriptor =
       getDescriptor().getMessageTypes().get(36);
-    internal_static_common_PCommunityLayoutPlan1_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityLayoutPlan1_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityLayoutPlan1_descriptor,
-        new java.lang.String[] { "MemberCount", "ContentType", "TopUserList", "BannerList", "MiddleModulesID", "BottomModulesID", });
-    internal_static_common_PCommunityLayout_descriptor =
+        internal_static_bbproto_PCommunityLayoutPlan1_descriptor,
+        new java.lang.String[] { "ContentType", "TopUserList", "MiddleModulesID", "BottomModulesID", "BannerList", });
+    internal_static_bbproto_PCommunityLayout_descriptor =
       getDescriptor().getMessageTypes().get(37);
-    internal_static_common_PCommunityLayout_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityLayout_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityLayout_descriptor,
+        internal_static_bbproto_PCommunityLayout_descriptor,
         new java.lang.String[] { "PlanID", "Color", "Plan1", });
-    internal_static_common_PCommunityInfoV12_descriptor =
+    internal_static_bbproto_PCommunityInfoV12_descriptor =
       getDescriptor().getMessageTypes().get(38);
-    internal_static_common_PCommunityInfoV12_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityInfoV12_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityInfoV12_descriptor,
+        internal_static_bbproto_PCommunityInfoV12_descriptor,
         new java.lang.String[] { "BaseInfo", "Layout", "Advertisement", "ForumTagList", "ModulesList", });
-    internal_static_common_PCommunityHomeV12_descriptor =
+    internal_static_bbproto_PCommunityHomeV12_descriptor =
       getDescriptor().getMessageTypes().get(39);
-    internal_static_common_PCommunityHomeV12_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityHomeV12_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityHomeV12_descriptor,
-        new java.lang.String[] { "Membership", "Owner", "CommunityInfo", "BackgroundPost", });
-    internal_static_common_PCommunityPhotoAlbum_descriptor =
+        internal_static_bbproto_PCommunityHomeV12_descriptor,
+        new java.lang.String[] { "Membership", "MemberCount", "ManagerList", "Owner", "CommunityInfo", "IsVOMember", });
+    internal_static_bbproto_PCommunityPhotoAlbum_descriptor =
       getDescriptor().getMessageTypes().get(40);
-    internal_static_common_PCommunityPhotoAlbum_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityPhotoAlbum_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityPhotoAlbum_descriptor,
-        new java.lang.String[] { "Time", "URL", "ThumURL", });
-    internal_static_common_PCommunityPhotoAlbumList_descriptor =
+        internal_static_bbproto_PCommunityPhotoAlbum_descriptor,
+        new java.lang.String[] { "ID", "Time", "URL", "ThumURL", });
+    internal_static_bbproto_PCommunityPhotoAlbumList_descriptor =
       getDescriptor().getMessageTypes().get(41);
-    internal_static_common_PCommunityPhotoAlbumList_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityPhotoAlbumList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityPhotoAlbumList_descriptor,
+        internal_static_bbproto_PCommunityPhotoAlbumList_descriptor,
         new java.lang.String[] { "List", });
-    internal_static_common_PCommunityPhotoAlbumDateList_descriptor =
+    internal_static_bbproto_PCommunityPhotoAlbumDateList_descriptor =
       getDescriptor().getMessageTypes().get(42);
-    internal_static_common_PCommunityPhotoAlbumDateList_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityPhotoAlbumDateList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityPhotoAlbumDateList_descriptor,
+        internal_static_bbproto_PCommunityPhotoAlbumDateList_descriptor,
         new java.lang.String[] { "DateTime", "List", });
-    internal_static_common_PCommunityReputationUser_descriptor =
+    internal_static_bbproto_PCommunityReputationUser_descriptor =
       getDescriptor().getMessageTypes().get(43);
-    internal_static_common_PCommunityReputationUser_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityReputationUser_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityReputationUser_descriptor,
+        internal_static_bbproto_PCommunityReputationUser_descriptor,
         new java.lang.String[] { "User", "ReputationVal", });
-    internal_static_common_PCommunityRankingUser_descriptor =
+    internal_static_bbproto_PCommunityRankingUser_descriptor =
       getDescriptor().getMessageTypes().get(44);
-    internal_static_common_PCommunityRankingUser_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityRankingUser_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityRankingUser_descriptor,
+        internal_static_bbproto_PCommunityRankingUser_descriptor,
         new java.lang.String[] { "ReputationUser", });
-    internal_static_common_PCommunityRankingUserList_descriptor =
+    internal_static_bbproto_PCommunityRankingUserList_descriptor =
       getDescriptor().getMessageTypes().get(45);
-    internal_static_common_PCommunityRankingUserList_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityRankingUserList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityRankingUserList_descriptor,
-        new java.lang.String[] { "List", });
-    internal_static_common_PCommunityLayoutConfig_descriptor =
+        internal_static_bbproto_PCommunityRankingUserList_descriptor,
+        new java.lang.String[] { "MyRanking", "MyRankingVal", "List", });
+    internal_static_bbproto_PCommunityLayoutConfig_descriptor =
       getDescriptor().getMessageTypes().get(46);
-    internal_static_common_PCommunityLayoutConfig_fieldAccessorTable = new
+    internal_static_bbproto_PCommunityLayoutConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PCommunityLayoutConfig_descriptor,
+        internal_static_bbproto_PCommunityLayoutConfig_descriptor,
         new java.lang.String[] { "Color", });
     com.blemobi.sep.probuf.AccountProtos.getDescriptor();
     com.blemobi.sep.probuf.WalletProtos.getDescriptor();

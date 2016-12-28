@@ -1,22 +1,65 @@
 package com.blemobi.library.client;
 
-import java.util.List;
+import java.io.IOException;
 
-import javax.servlet.http.Cookie;
-
-import org.apache.http.NameValuePair;
-
-import com.blemobi.library.consul.BaseService;
-import com.blemobi.library.consul.SocketInfo;
+import com.blemobi.library.jetty.JettyServer;
+import com.blemobi.sep.probuf.ResultProtos.PMessage;
 
 /**
- * @author 赵勇<andy.zhao@blemobi.com> 账户系统调用类
+ * 账户系统调用类
+ * 
+ * @author zhaoyong
+ *
  */
 public class AccountHttpClient extends BaseHttpClient {
-	public AccountHttpClient(String basePath, List<NameValuePair> params, Cookie[] cookies) {
-		super(basePath, params, cookies);
-		SocketInfo socketInfo = BaseService.getActiveServer("account");
-		super.socketInfo = socketInfo;
-		super.createUrl();
+	/**
+	 * 构造方法
+	 */
+	public AccountHttpClient() {
+		super("account");
+	}
+
+	/**
+	 * 获取用户信息
+	 * 
+	 * @param uuid
+	 * @return PMessage
+	 * @throws IOException
+	 */
+	public PMessage getUser(String uuid) throws IOException {
+		super.basePath = new StringBuffer("/account/user/profile?from=");
+		super.basePath.append(JettyServer.getServerName()).append("&uuid=").append(uuid);
+		return super.getMethod();
+	}
+
+	/**
+	 * 校验是不是VO与VIP+关系
+	 * 
+	 * @param vo_uuid
+	 *            VO用户uuid
+	 * @param uuid
+	 *            要匹配的用户uuid
+	 * @return PMessage
+	 * @throws IOException
+	 */
+	public PMessage isVOTOVIP(String vo_uuid, String uuid) throws IOException {
+		super.basePath = new StringBuffer("/v1/account/inside/vo/member/state?from=");
+		super.basePath.append(JettyServer.getServerName()).append("&project=sep&void=").append(vo_uuid).append("&uuid=")
+				.append(uuid);
+		return super.getMethod();
+	}
+
+	/**
+	 * 批量获取用户基础信息
+	 * 
+	 * @param uuids
+	 *            要匹配的用户（使用“，”隔开）
+	 * @return PMessage
+	 * @throws IOException
+	 */
+	public PMessage getUserInfo(String uuids) throws IOException {
+		super.basePath = new StringBuffer("/v1/account/users/baseinfo?from=");
+		super.basePath.append(JettyServer.getServerName()).append("&uuids=").append(uuids.toString());
+		return super.getMethod();
 	}
 }

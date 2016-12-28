@@ -121,4 +121,23 @@ public class CommonUtil {
 		return df.format(accuracy_num) + "%";
 	}
 
+	/*
+	 * 集合转化为带逗号隔开的字符串
+	 * 
+	 * @param list 需要转化的集合对象
+	 * 
+	 * @param clazz 对象的类型
+	 * 
+	 * @return String
+	 */
+	public static String collectionToString(Collection<String> list) {
+		StringBuffer sb = new StringBuffer();
+		for (String s : list) {
+			if (sb.length() > 0) {
+				sb.append(",");
+			}
+			sb.append(s);
+		}
+		return sb.toString();
+	}
 }

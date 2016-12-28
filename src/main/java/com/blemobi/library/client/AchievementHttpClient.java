@@ -1,22 +1,31 @@
 package com.blemobi.library.client;
 
-import java.util.List;
+import java.io.IOException;
 
-import javax.servlet.http.Cookie;
+import com.blemobi.library.jetty.JettyServer;
+import com.blemobi.sep.probuf.AchievementProtos.PAchievementActions;
+import com.blemobi.sep.probuf.ResultProtos.PMessage;
 
-import org.apache.http.NameValuePair;
-
-import com.blemobi.library.consul.BaseService;
-import com.blemobi.library.consul.SocketInfo;
-
-/**
- * @author 赵勇<andy.zhao@blemobi.com> 账户系统调用类
+/*
+ * 成就系统调用类
  */
 public class AchievementHttpClient extends BaseHttpClient {
-	public AchievementHttpClient(String basePath, List<NameValuePair> params, Cookie[] cookies) {
-		super(basePath, params, cookies);
-		SocketInfo socketInfo = BaseService.getActiveServer("achievement");
-		super.socketInfo = socketInfo;
-		super.createUrl();
+	public AchievementHttpClient() {
+		super("achievement");
+	}
+
+	/*
+	 * 发送成就消息
+	 */
+	public PMessage action(PAchievementActions achievementActions) throws IOException {
+		super.basePath = new StringBuffer("/v1/achievement/inside/action?from=");
+		super.basePath.append(JettyServer.getServerName());
+
+		PMessage messagebody = PMessage.newBuilder().setType("PAchievementActions")
+				.setData(achievementActions.toByteString()).build();
+
+		super.body = messagebody.toByteArray();
+		super.contentType = "application/x-protobuf";
+		return super.postBodyMethod();
 	}
 }
