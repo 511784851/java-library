@@ -19,7 +19,12 @@ import lombok.extern.log4j.Log4j;
  */
 @Log4j
 public class UserBaseCache {
-	private static Map<String, PUserBase> chcheUserBase = new HashMap<String, PUserBase>();
+	public static Map<String, PUserBase> chcheUserBase = new HashMap<String, PUserBase>();
+	public static Map<String, Long> chcheUserBaseTime = new HashMap<String, Long>();
+
+	private UserBaseCache() {
+
+	}
 
 	/**
 	 * 获取用户基础信息
@@ -36,6 +41,17 @@ public class UserBaseCache {
 	}
 
 	/**
+	 * 查询用户缓存是否存在
+	 * 
+	 * @param uuid
+	 * @return
+	 * @throws IOException
+	 */
+	public static boolean exist(String uuid) throws IOException {
+		return chcheUserBase.get(uuid) != null ? true : false;
+	}
+
+	/**
 	 * 缓存用户基础信息
 	 * 
 	 * @param uuid
@@ -44,6 +60,7 @@ public class UserBaseCache {
 	 */
 	public static void put(String uuid, PUserBase userBase) {
 		chcheUserBase.put(uuid, userBase);
+		chcheUserBaseTime.put(uuid, System.currentTimeMillis());
 		log.debug("缓存了用户[" + uuid + "]的数据");
 	}
 
