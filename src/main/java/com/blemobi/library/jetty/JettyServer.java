@@ -14,8 +14,11 @@ import org.glassfish.jersey.servlet.ServletContainer;
 import com.blemobi.library.filter.GzipCompressFilter;
 import com.blemobi.library.filter.ListParamFilter;
 
-/*
+/**
  * Jetty服务管理类
+ * 
+ * @author zhaoyong
+ *
  */
 public class JettyServer {
 
@@ -25,8 +28,13 @@ public class JettyServer {
 	private int port;
 	private List<ServerFilter> serverFilterList;
 
-	/*
+	/**
 	 * 构造方法
+	 * 
+	 * @param contextPath
+	 * @param packages
+	 * @param port
+	 * @param serverFilterList
 	 */
 	public JettyServer(String contextPath, String packages, int port, List<ServerFilter> serverFilterList) {
 		JettyServer.contextPath = contextPath;
@@ -35,8 +43,10 @@ public class JettyServer {
 		this.serverFilterList = serverFilterList;
 	}
 
-	/*
+	/**
 	 * 启动Jetty Http服务
+	 * 
+	 * @throws Exception
 	 */
 	public void start() throws Exception {
 		if (server == null) {

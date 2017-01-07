@@ -27,7 +27,7 @@ public class UserBaseCache {
 	}
 
 	/**
-	 * 获取用户基础信息
+	 * 获取用户基础信息（如果还未缓存就重新缓存）
 	 * 
 	 * @param uuid
 	 * @return PUserBase 用户基础信息

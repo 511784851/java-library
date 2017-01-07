@@ -5,16 +5,23 @@ import java.io.IOException;
 import com.blemobi.library.jetty.JettyServer;
 import com.blemobi.sep.probuf.ResultProtos.PMessage;
 
-/*
+/**
  * OSS系统调用类
+ * 
+ * @author zhaoyong
+ *
  */
 public class OssHttpClient extends BaseHttpClient {
 	public OssHttpClient() {
 		super("oss");
 	}
 
-	/*
+	/**
 	 * 内网获取多个下载文件的URL
+	 * 
+	 * @param filenames
+	 * @return
+	 * @throws IOException
 	 */
 	public PMessage getDownloadurls(String filenames) throws IOException {
 		super.basePath = new StringBuffer("/oss/downloadurls?from=");
@@ -22,8 +29,12 @@ public class OssHttpClient extends BaseHttpClient {
 		return super.getMethod();
 	}
 
-	/*
+	/**
 	 * 内网访问批量获取带签名的文件上传URL
+	 * 
+	 * @param body
+	 * @return
+	 * @throws IOException
 	 */
 	public PMessage uploadurls(byte[] body) throws IOException {
 		super.basePath = new StringBuffer("/oss/uploadurls?from=");
@@ -33,8 +44,12 @@ public class OssHttpClient extends BaseHttpClient {
 		return super.postBodyMethod();
 	}
 
-	/*
+	/**
 	 * 获取单个下载文件的URL
+	 * 
+	 * @param objectkey
+	 * @return
+	 * @throws IOException
 	 */
 	public PMessage getDownloadurl(String objectkey) throws IOException {
 		super.basePath = new StringBuffer("/oss/downloadurl?from=");

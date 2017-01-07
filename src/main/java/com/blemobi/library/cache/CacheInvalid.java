@@ -12,7 +12,7 @@ import lombok.extern.log4j.Log4j;
 public class CacheInvalid {
 
 	/**
-	 * 需要业务系统重写的方法
+	 * 业务系统可重写此方法
 	 * 
 	 * @param uuid
 	 */

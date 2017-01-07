@@ -13,16 +13,26 @@ import com.blemobi.sep.probuf.ResultProtos.PMessage;
 import com.blemobi.sep.probuf.ResultProtos.PStringList;
 import com.google.protobuf.ProtocolStringList;
 
-/*
+/**
  * 新闻系统调用类
+ * 
+ * @author zhaoyong
+ *
  */
 public class NewsHttpClient extends BaseHttpClient {
 	public NewsHttpClient() {
 		super("news");
 	}
 
-	/*
+	/**
 	 * 分页获取用户粉丝用户
+	 * 
+	 * @param uuid
+	 * @param offset
+	 * @param count
+	 * @return
+	 * @throws ClientProtocolException
+	 * @throws IOException
 	 */
 	public PMessage getFansList(String uuid, int offset, int count) throws ClientProtocolException, IOException {
 		super.basePath = new StringBuffer("/v1/news/inside/fans?from=");
@@ -31,8 +41,12 @@ public class NewsHttpClient extends BaseHttpClient {
 		return super.getMethod();
 	}
 
-	/*
+	/**
 	 * 获取用户全部粉丝用户
+	 * 
+	 * @param uuid
+	 * @return
+	 * @throws IOException
 	 */
 	public List<String> getAllFansList(String uuid) throws IOException {
 		List<String> allUserList = new ArrayList<String>();
@@ -52,8 +66,15 @@ public class NewsHttpClient extends BaseHttpClient {
 		return allUserList;
 	}
 
-	/*
+	/**
 	 * 分页获取用户关注用户
+	 * 
+	 * @param uuid
+	 * @param offset
+	 * @param count
+	 * @return
+	 * @throws ClientProtocolException
+	 * @throws IOException
 	 */
 	public PMessage getFollowList(String uuid, int offset, int count) throws ClientProtocolException, IOException {
 		super.basePath = new StringBuffer("/v1/news/inside/follow?from=");
@@ -62,8 +83,12 @@ public class NewsHttpClient extends BaseHttpClient {
 		return super.getMethod();
 	}
 
-	/*
+	/**
 	 * 获取用户全部关注用户
+	 * 
+	 * @param uuid
+	 * @return
+	 * @throws IOException
 	 */
 	public List<PRecommendUser> getAllFollowList(String uuid) throws IOException {
 		List<PRecommendUser> allUserList = new ArrayList<PRecommendUser>();
@@ -83,8 +108,13 @@ public class NewsHttpClient extends BaseHttpClient {
 		return allUserList;
 	}
 
-	/*
+	/**
 	 * 获取用户关注关系
+	 * 
+	 * @param uuid
+	 * @param uuids
+	 * @return
+	 * @throws IOException
 	 */
 	public PMessage getFollowStatu(String uuid, String uuids) throws IOException {
 		super.basePath = new StringBuffer("/v1/news/inside/multi/follow/status?from=");

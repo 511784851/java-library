@@ -9,16 +9,23 @@ import com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUser;
 import com.blemobi.sep.probuf.CommunityProtos.PInsideCommunityUserList;
 import com.blemobi.sep.probuf.ResultProtos.PMessage;
 
-/*
+/**
  * 社区系统调用类
+ * 
+ * @author zhaoyong
+ *
  */
 public class CommunityHttpClient extends BaseHttpClient {
 	public CommunityHttpClient() {
 		super("community");
 	}
 
-	/*
+	/**
 	 * 获取社区信息
+	 * 
+	 * @param communityId
+	 * @return
+	 * @throws IOException
 	 */
 	public PMessage getCommunityInfo(String communityId) throws IOException {
 		super.basePath = new StringBuffer("/v1/community/inside/communityinfo?from=");
@@ -26,8 +33,14 @@ public class CommunityHttpClient extends BaseHttpClient {
 		return super.getMethod();
 	}
 
-	/*
+	/**
 	 * 分页获取社区用户列表
+	 * 
+	 * @param communityId
+	 * @param offset
+	 * @param count
+	 * @return
+	 * @throws IOException
 	 */
 	public PMessage getUserList(String communityId, int offset, int count) throws IOException {
 		super.basePath = new StringBuffer("/v1/community/inside/userlist/follow?from=");
@@ -36,8 +49,12 @@ public class CommunityHttpClient extends BaseHttpClient {
 		return super.getMethod();
 	}
 
-	/*
-	 * 获取用户全部关注列表
+	/**
+	 * 获取社区全部用户列表
+	 * 
+	 * @param communityId
+	 * @return
+	 * @throws IOException
 	 */
 	public List<PInsideCommunityUser> getUserList(String communityId) throws IOException {
 		List<PInsideCommunityUser> userList = new ArrayList<PInsideCommunityUser>();
@@ -55,5 +72,20 @@ public class CommunityHttpClient extends BaseHttpClient {
 			}
 		} while (true);
 		return userList;
+	}
+
+	/**
+	 * 获取用户是否为社区成员
+	 * 
+	 * @param communityId
+	 * @param uuid
+	 * @return
+	 * @throws IOException
+	 */
+	public PMessage getUserStatus(String communityId, String uuid) throws IOException {
+		super.basePath = new StringBuffer("/v1/community/inside/user/member_status?from=");
+		super.basePath.append(JettyServer.getServerName()).append("&uuid=").append(uuid).append("&id=")
+				.append(communityId);
+		return super.getMethod();
 	}
 }

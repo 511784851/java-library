@@ -9,16 +9,25 @@ import com.blemobi.sep.probuf.AccountProtos.PUserBase;
 import com.blemobi.sep.probuf.AccountProtos.PUserBaseList;
 import com.blemobi.sep.probuf.ResultProtos.PMessage;
 
-/*
+/**
  * 好友系统调用类
+ * 
+ * @author zhaoyong
+ *
  */
 public class SocialHttpClient extends BaseHttpClient {
 	public SocialHttpClient() {
 		super("social");
 	}
 
-	/*
+	/**
 	 * 分页获取用户好友列表
+	 * 
+	 * @param uuid
+	 * @param start
+	 * @param count
+	 * @return
+	 * @throws IOException
 	 */
 	public PMessage getFriendList(String uuid, int start, int count) throws IOException {
 		super.basePath = new StringBuffer("/social/listfriendsex?from=");
@@ -27,8 +36,12 @@ public class SocialHttpClient extends BaseHttpClient {
 		return super.getMethod();
 	}
 
-	/*
+	/**
 	 * 获取用户全部好友列表
+	 * 
+	 * @param uuid
+	 * @return
+	 * @throws IOException
 	 */
 	public List<PUserBase> getAllFriendList(String uuid) throws IOException {
 		List<PUserBase> allUserList = new ArrayList<PUserBase>();
@@ -48,8 +61,13 @@ public class SocialHttpClient extends BaseHttpClient {
 		return allUserList;
 	}
 
-	/*
+	/**
 	 * 批量获取用户好友关系
+	 * 
+	 * @param uuid
+	 * @param uuids
+	 * @return
+	 * @throws IOException
 	 */
 	public PMessage getFriendStatu(String uuid, String uuids) throws IOException {
 		super.basePath = new StringBuffer("/social/isfriends?from=");

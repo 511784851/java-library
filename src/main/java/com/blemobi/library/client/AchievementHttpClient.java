@@ -6,16 +6,23 @@ import com.blemobi.library.jetty.JettyServer;
 import com.blemobi.sep.probuf.AchievementProtos.PAchievementActions;
 import com.blemobi.sep.probuf.ResultProtos.PMessage;
 
-/*
+/**
  * 成就系统调用类
+ * 
+ * @author zhaoyong
+ *
  */
 public class AchievementHttpClient extends BaseHttpClient {
 	public AchievementHttpClient() {
 		super("achievement");
 	}
 
-	/*
+	/**
 	 * 发送成就消息
+	 * 
+	 * @param achievementActions
+	 * @return
+	 * @throws IOException
 	 */
 	public PMessage action(PAchievementActions achievementActions) throws IOException {
 		super.basePath = new StringBuffer("/v1/achievement/inside/action?from=");

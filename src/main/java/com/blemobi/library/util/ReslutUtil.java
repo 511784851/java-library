@@ -13,21 +13,27 @@ import com.pakulov.jersey.protobuf.internal.MediaTypeExt;
 import lombok.extern.log4j.Log4j;
 
 /**
- * @author 赵勇<andy.zhao@blemobi.com> 返回PMessage数据封装类
+ * 返回数据包管理类
+ * 
+ * @author zhaoyong
+ *
  */
-
 @Log4j
 public class ReslutUtil {
-
-	private static final int magic = 9833;// 固定值
-	private static final String errorType = "PResult";// 返回PResult数据
+	/**
+	 * 固定值
+	 */
+	private static final int magic = 9833;
+	/**
+	 * 返回PResult数据
+	 */
+	private static final String errorType = "PResult";
 
 	/**
-	 * 返回PMessage对象数据
+	 * 返回PMessage对象数据（不带type）
 	 * 
 	 * @param message
-	 *            PMessage对象
-	 * @return PMessage 返回message对象数据
+	 * @return
 	 */
 	public static PMessage createReslutMessage(GeneratedMessage message) {
 		char charSubClassKey = '$';
@@ -44,7 +50,14 @@ public class ReslutUtil {
 		return createReslutMessage(className, message);
 	}
 
-	private static PMessage createReslutMessage(String type, GeneratedMessage message) {
+	/**
+	 * 返回PMessage对象数据
+	 * 
+	 * @param type
+	 * @param message
+	 * @return
+	 */
+	public static PMessage createReslutMessage(String type, GeneratedMessage message) {
 		log.debug("type：" + type + "；data：" + message);
 		return PMessage.newBuilder().setMagic(magic).setType(type).setData(message.toByteString()).build();
 	}
@@ -52,13 +65,7 @@ public class ReslutUtil {
 	/**
 	 * 返回PResult数据
 	 * 
-	 * @param errorCode
-	 *            错误码
-	 * @param errorMsg
-	 *            错误简要描述
-	 * @param extraInfo
-	 *            扩展信息
-	 * @return PMessage 返回message对象数据
+	 * @return
 	 */
 	public static PMessage createSucceedMessage() {
 		return createSucceedMessage("success");
@@ -92,7 +99,6 @@ public class ReslutUtil {
 	public static PResult createPResultMessage(int errorCode, String errorMsg, String extraInfo) {
 		PResult result = PResult.newBuilder().setErrorCode(errorCode).setErrorMsg(errorMsg).setExtraInfo(extraInfo)
 				.build();
-		log.debug("json：" + result);
 		return result;
 	}
 
@@ -100,12 +106,8 @@ public class ReslutUtil {
 	 * ServletResponse返回包处理
 	 * 
 	 * @param response
-	 *            response对象
 	 * @param errorCode
-	 *            返回码
 	 * @param errorMsg
-	 *            返回码描述
-	 * @return void 返回无
 	 * @throws IOException
 	 */
 	public static void createResponse(ServletResponse response, int errorCode, String errorMsg) throws IOException {

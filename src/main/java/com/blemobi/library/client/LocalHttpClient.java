@@ -6,8 +6,11 @@ import org.apache.http.NameValuePair;
 
 import lombok.extern.log4j.Log4j;
 
-/*
+/**
  * 测试调用类
+ * 
+ * @author zhaoyong
+ *
  */
 @Log4j
 public class LocalHttpClient extends BaseHttpClient {
@@ -25,7 +28,7 @@ public class LocalHttpClient extends BaseHttpClient {
 		super.contentType = contentType;
 	}
 
-	/*
+	/**
 	 * 生成服务的URL
 	 */
 	@Override
