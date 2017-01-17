@@ -1,7 +1,7 @@
 package com.blemobi.library.cache;
 
 import java.io.IOException;
-import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.Map;
 
 import com.blemobi.library.client.AccountHttpClient;
@@ -19,8 +19,8 @@ import lombok.extern.log4j.Log4j;
  */
 @Log4j
 public class UserBaseCache {
-	public static Map<String, PUserBase> chcheUserBase = new HashMap<String, PUserBase>();
-	public static Map<String, Long> chcheUserBaseTime = new HashMap<String, Long>();
+	public static Map<String, PUserBase> chcheUserBase = new Hashtable<String, PUserBase>();
+	public static Map<String, Long> chcheUserBaseTime = new Hashtable<String, Long>();
 
 	private UserBaseCache() {
 
@@ -48,7 +48,7 @@ public class UserBaseCache {
 	 * @throws IOException
 	 */
 	public static boolean exist(String uuid) throws IOException {
-		return chcheUserBase.get(uuid) != null ? true : false;
+		return chcheUserBase.containsKey(uuid);
 	}
 
 	/**
@@ -61,7 +61,8 @@ public class UserBaseCache {
 	public static void put(String uuid, PUserBase userBase) {
 		chcheUserBase.put(uuid, userBase);
 		chcheUserBaseTime.put(uuid, System.currentTimeMillis());
-		log.debug("缓存了用户[" + uuid + "]的数据");
+		log.debug("缓存了用户数据：uuid=[" + uuid + "],nickname=[" + userBase.getNickname() + "],headimg=["
+				+ userBase.getHeadImgURL() + "],level=[" + userBase.getLevel() + "]");
 	}
 
 	/**

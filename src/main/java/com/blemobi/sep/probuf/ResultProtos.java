@@ -9,7 +9,7 @@ public final class ResultProtos {
       com.google.protobuf.ExtensionRegistry registry) {
   }
   public interface PResultOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PResult)
+      // @@protoc_insertion_point(interface_extends:bbproto.PResult)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -58,7 +58,7 @@ public final class ResultProtos {
         getExtraInfoBytes();
   }
   /**
-   * Protobuf type {@code common.PResult}
+   * Protobuf type {@code bbproto.PResult}
    *
    * <pre>
    * 通用操作结果返回
@@ -66,7 +66,7 @@ public final class ResultProtos {
    */
   public  static final class PResult extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PResult)
+      // @@protoc_insertion_point(message_implements:bbproto.PResult)
       PResultOrBuilder {
     // Use PResult.newBuilder() to construct.
     private PResult(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -133,12 +133,12 @@ public final class ResultProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PResult_descriptor;
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PResult_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PResult_fieldAccessorTable
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PResult_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ResultProtos.PResult.class, com.blemobi.sep.probuf.ResultProtos.PResult.Builder.class);
     }
@@ -362,7 +362,7 @@ public final class ResultProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PResult}
+     * Protobuf type {@code bbproto.PResult}
      *
      * <pre>
      * 通用操作结果返回
@@ -370,16 +370,16 @@ public final class ResultProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PResult)
+        // @@protoc_insertion_point(builder_implements:bbproto.PResult)
         com.blemobi.sep.probuf.ResultProtos.PResultOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PResult_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PResult_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PResult_fieldAccessorTable
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PResult_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ResultProtos.PResult.class, com.blemobi.sep.probuf.ResultProtos.PResult.Builder.class);
       }
@@ -411,7 +411,7 @@ public final class ResultProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PResult_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PResult_descriptor;
       }
 
       public com.blemobi.sep.probuf.ResultProtos.PResult getDefaultInstanceForType() {
@@ -711,10 +711,10 @@ public final class ResultProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PResult)
+      // @@protoc_insertion_point(builder_scope:bbproto.PResult)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PResult)
+    // @@protoc_insertion_point(class_scope:bbproto.PResult)
     private static final com.blemobi.sep.probuf.ResultProtos.PResult DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ResultProtos.PResult();
@@ -755,7 +755,7 @@ public final class ResultProtos {
   }
 
   public interface PJResultOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PJResult)
+      // @@protoc_insertion_point(interface_extends:bbproto.PJResult)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -768,11 +768,11 @@ public final class ResultProtos {
     int getCode();
   }
   /**
-   * Protobuf type {@code common.PJResult}
+   * Protobuf type {@code bbproto.PJResult}
    */
   public  static final class PJResult extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PJResult)
+      // @@protoc_insertion_point(message_implements:bbproto.PJResult)
       PJResultOrBuilder {
     // Use PJResult.newBuilder() to construct.
     private PJResult(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -825,12 +825,12 @@ public final class ResultProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PJResult_descriptor;
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PJResult_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PJResult_fieldAccessorTable
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PJResult_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ResultProtos.PJResult.class, com.blemobi.sep.probuf.ResultProtos.PJResult.Builder.class);
     }
@@ -952,20 +952,20 @@ public final class ResultProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PJResult}
+     * Protobuf type {@code bbproto.PJResult}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PJResult)
+        // @@protoc_insertion_point(builder_implements:bbproto.PJResult)
         com.blemobi.sep.probuf.ResultProtos.PJResultOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PJResult_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PJResult_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PJResult_fieldAccessorTable
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PJResult_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ResultProtos.PJResult.class, com.blemobi.sep.probuf.ResultProtos.PJResult.Builder.class);
       }
@@ -993,7 +993,7 @@ public final class ResultProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PJResult_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PJResult_descriptor;
       }
 
       public com.blemobi.sep.probuf.ResultProtos.PJResult getDefaultInstanceForType() {
@@ -1103,10 +1103,10 @@ public final class ResultProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PJResult)
+      // @@protoc_insertion_point(builder_scope:bbproto.PJResult)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PJResult)
+    // @@protoc_insertion_point(class_scope:bbproto.PJResult)
     private static final com.blemobi.sep.probuf.ResultProtos.PJResult DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ResultProtos.PJResult();
@@ -1147,7 +1147,7 @@ public final class ResultProtos {
   }
 
   public interface PMessageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PMessage)
+      // @@protoc_insertion_point(interface_extends:bbproto.PMessage)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1187,7 +1187,7 @@ public final class ResultProtos {
     com.google.protobuf.ByteString getData();
   }
   /**
-   * Protobuf type {@code common.PMessage}
+   * Protobuf type {@code bbproto.PMessage}
    *
    * <pre>
    *&#64;note 通信消息结构
@@ -1195,7 +1195,7 @@ public final class ResultProtos {
    */
   public  static final class PMessage extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PMessage)
+      // @@protoc_insertion_point(message_implements:bbproto.PMessage)
       PMessageOrBuilder {
     // Use PMessage.newBuilder() to construct.
     private PMessage(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -1261,12 +1261,12 @@ public final class ResultProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PMessage_descriptor;
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PMessage_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PMessage_fieldAccessorTable
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PMessage_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ResultProtos.PMessage.class, com.blemobi.sep.probuf.ResultProtos.PMessage.Builder.class);
     }
@@ -1459,7 +1459,7 @@ public final class ResultProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PMessage}
+     * Protobuf type {@code bbproto.PMessage}
      *
      * <pre>
      *&#64;note 通信消息结构
@@ -1467,16 +1467,16 @@ public final class ResultProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PMessage)
+        // @@protoc_insertion_point(builder_implements:bbproto.PMessage)
         com.blemobi.sep.probuf.ResultProtos.PMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PMessage_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PMessage_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PMessage_fieldAccessorTable
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PMessage_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ResultProtos.PMessage.class, com.blemobi.sep.probuf.ResultProtos.PMessage.Builder.class);
       }
@@ -1508,7 +1508,7 @@ public final class ResultProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PMessage_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PMessage_descriptor;
       }
 
       public com.blemobi.sep.probuf.ResultProtos.PMessage getDefaultInstanceForType() {
@@ -1758,10 +1758,10 @@ public final class ResultProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PMessage)
+      // @@protoc_insertion_point(builder_scope:bbproto.PMessage)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PMessage)
+    // @@protoc_insertion_point(class_scope:bbproto.PMessage)
     private static final com.blemobi.sep.probuf.ResultProtos.PMessage DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ResultProtos.PMessage();
@@ -1802,7 +1802,7 @@ public final class ResultProtos {
   }
 
   public interface PManyUUIDOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PManyUUID)
+      // @@protoc_insertion_point(interface_extends:bbproto.PManyUUID)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1841,7 +1841,7 @@ public final class ResultProtos {
         getManyUUIDBytes(int index);
   }
   /**
-   * Protobuf type {@code common.PManyUUID}
+   * Protobuf type {@code bbproto.PManyUUID}
    *
    * <pre>
    *&#64;note 批量传输uuid
@@ -1849,7 +1849,7 @@ public final class ResultProtos {
    */
   public  static final class PManyUUID extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PManyUUID)
+      // @@protoc_insertion_point(message_implements:bbproto.PManyUUID)
       PManyUUIDOrBuilder {
     // Use PManyUUID.newBuilder() to construct.
     private PManyUUID(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -1909,12 +1909,12 @@ public final class ResultProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PManyUUID_descriptor;
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PManyUUID_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PManyUUID_fieldAccessorTable
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PManyUUID_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ResultProtos.PManyUUID.class, com.blemobi.sep.probuf.ResultProtos.PManyUUID.Builder.class);
     }
@@ -2073,7 +2073,7 @@ public final class ResultProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PManyUUID}
+     * Protobuf type {@code bbproto.PManyUUID}
      *
      * <pre>
      *&#64;note 批量传输uuid
@@ -2081,16 +2081,16 @@ public final class ResultProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PManyUUID)
+        // @@protoc_insertion_point(builder_implements:bbproto.PManyUUID)
         com.blemobi.sep.probuf.ResultProtos.PManyUUIDOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PManyUUID_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PManyUUID_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PManyUUID_fieldAccessorTable
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PManyUUID_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ResultProtos.PManyUUID.class, com.blemobi.sep.probuf.ResultProtos.PManyUUID.Builder.class);
       }
@@ -2118,7 +2118,7 @@ public final class ResultProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PManyUUID_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PManyUUID_descriptor;
       }
 
       public com.blemobi.sep.probuf.ResultProtos.PManyUUID getDefaultInstanceForType() {
@@ -2332,10 +2332,10 @@ public final class ResultProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PManyUUID)
+      // @@protoc_insertion_point(builder_scope:bbproto.PManyUUID)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PManyUUID)
+    // @@protoc_insertion_point(class_scope:bbproto.PManyUUID)
     private static final com.blemobi.sep.probuf.ResultProtos.PManyUUID DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ResultProtos.PManyUUID();
@@ -2376,7 +2376,7 @@ public final class ResultProtos {
   }
 
   public interface PManyErrorCodeOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PManyErrorCode)
+      // @@protoc_insertion_point(interface_extends:bbproto.PManyErrorCode)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2405,7 +2405,7 @@ public final class ResultProtos {
     int getManyErrorCode(int index);
   }
   /**
-   * Protobuf type {@code common.PManyErrorCode}
+   * Protobuf type {@code bbproto.PManyErrorCode}
    *
    * <pre>
    *&#64;note 批量传输errorCode
@@ -2413,7 +2413,7 @@ public final class ResultProtos {
    */
   public  static final class PManyErrorCode extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PManyErrorCode)
+      // @@protoc_insertion_point(message_implements:bbproto.PManyErrorCode)
       PManyErrorCodeOrBuilder {
     // Use PManyErrorCode.newBuilder() to construct.
     private PManyErrorCode(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -2485,12 +2485,12 @@ public final class ResultProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PManyErrorCode_descriptor;
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PManyErrorCode_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PManyErrorCode_fieldAccessorTable
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PManyErrorCode_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ResultProtos.PManyErrorCode.class, com.blemobi.sep.probuf.ResultProtos.PManyErrorCode.Builder.class);
     }
@@ -2649,7 +2649,7 @@ public final class ResultProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PManyErrorCode}
+     * Protobuf type {@code bbproto.PManyErrorCode}
      *
      * <pre>
      *&#64;note 批量传输errorCode
@@ -2657,16 +2657,16 @@ public final class ResultProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PManyErrorCode)
+        // @@protoc_insertion_point(builder_implements:bbproto.PManyErrorCode)
         com.blemobi.sep.probuf.ResultProtos.PManyErrorCodeOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PManyErrorCode_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PManyErrorCode_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PManyErrorCode_fieldAccessorTable
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PManyErrorCode_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ResultProtos.PManyErrorCode.class, com.blemobi.sep.probuf.ResultProtos.PManyErrorCode.Builder.class);
       }
@@ -2694,7 +2694,7 @@ public final class ResultProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PManyErrorCode_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PManyErrorCode_descriptor;
       }
 
       public com.blemobi.sep.probuf.ResultProtos.PManyErrorCode getDefaultInstanceForType() {
@@ -2873,10 +2873,10 @@ public final class ResultProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PManyErrorCode)
+      // @@protoc_insertion_point(builder_scope:bbproto.PManyErrorCode)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PManyErrorCode)
+    // @@protoc_insertion_point(class_scope:bbproto.PManyErrorCode)
     private static final com.blemobi.sep.probuf.ResultProtos.PManyErrorCode DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ResultProtos.PManyErrorCode();
@@ -2917,7 +2917,7 @@ public final class ResultProtos {
   }
 
   public interface PStringListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PStringList)
+      // @@protoc_insertion_point(interface_extends:bbproto.PStringList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2940,7 +2940,7 @@ public final class ResultProtos {
         getListBytes(int index);
   }
   /**
-   * Protobuf type {@code common.PStringList}
+   * Protobuf type {@code bbproto.PStringList}
    *
    * <pre>
    *&#64;note 批量传输string
@@ -2948,7 +2948,7 @@ public final class ResultProtos {
    */
   public  static final class PStringList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PStringList)
+      // @@protoc_insertion_point(message_implements:bbproto.PStringList)
       PStringListOrBuilder {
     // Use PStringList.newBuilder() to construct.
     private PStringList(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -3008,12 +3008,12 @@ public final class ResultProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PStringList_descriptor;
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PStringList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PStringList_fieldAccessorTable
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PStringList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ResultProtos.PStringList.class, com.blemobi.sep.probuf.ResultProtos.PStringList.Builder.class);
     }
@@ -3156,7 +3156,7 @@ public final class ResultProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PStringList}
+     * Protobuf type {@code bbproto.PStringList}
      *
      * <pre>
      *&#64;note 批量传输string
@@ -3164,16 +3164,16 @@ public final class ResultProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PStringList)
+        // @@protoc_insertion_point(builder_implements:bbproto.PStringList)
         com.blemobi.sep.probuf.ResultProtos.PStringListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PStringList_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PStringList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PStringList_fieldAccessorTable
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PStringList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ResultProtos.PStringList.class, com.blemobi.sep.probuf.ResultProtos.PStringList.Builder.class);
       }
@@ -3201,7 +3201,7 @@ public final class ResultProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PStringList_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PStringList_descriptor;
       }
 
       public com.blemobi.sep.probuf.ResultProtos.PStringList getDefaultInstanceForType() {
@@ -3379,10 +3379,10 @@ public final class ResultProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PStringList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PStringList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PStringList)
+    // @@protoc_insertion_point(class_scope:bbproto.PStringList)
     private static final com.blemobi.sep.probuf.ResultProtos.PStringList DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ResultProtos.PStringList();
@@ -3423,7 +3423,7 @@ public final class ResultProtos {
   }
 
   public interface PInt64ListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PInt64List)
+      // @@protoc_insertion_point(interface_extends:bbproto.PInt64List)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3440,7 +3440,7 @@ public final class ResultProtos {
     long getList(int index);
   }
   /**
-   * Protobuf type {@code common.PInt64List}
+   * Protobuf type {@code bbproto.PInt64List}
    *
    * <pre>
    *&#64;note 批量传输int64
@@ -3448,7 +3448,7 @@ public final class ResultProtos {
    */
   public  static final class PInt64List extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PInt64List)
+      // @@protoc_insertion_point(message_implements:bbproto.PInt64List)
       PInt64ListOrBuilder {
     // Use PInt64List.newBuilder() to construct.
     private PInt64List(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -3520,12 +3520,12 @@ public final class ResultProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PInt64List_descriptor;
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PInt64List_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PInt64List_fieldAccessorTable
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PInt64List_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ResultProtos.PInt64List.class, com.blemobi.sep.probuf.ResultProtos.PInt64List.Builder.class);
     }
@@ -3672,7 +3672,7 @@ public final class ResultProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PInt64List}
+     * Protobuf type {@code bbproto.PInt64List}
      *
      * <pre>
      *&#64;note 批量传输int64
@@ -3680,16 +3680,16 @@ public final class ResultProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PInt64List)
+        // @@protoc_insertion_point(builder_implements:bbproto.PInt64List)
         com.blemobi.sep.probuf.ResultProtos.PInt64ListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PInt64List_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PInt64List_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PInt64List_fieldAccessorTable
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PInt64List_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ResultProtos.PInt64List.class, com.blemobi.sep.probuf.ResultProtos.PInt64List.Builder.class);
       }
@@ -3717,7 +3717,7 @@ public final class ResultProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PInt64List_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PInt64List_descriptor;
       }
 
       public com.blemobi.sep.probuf.ResultProtos.PInt64List getDefaultInstanceForType() {
@@ -3868,10 +3868,10 @@ public final class ResultProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PInt64List)
+      // @@protoc_insertion_point(builder_scope:bbproto.PInt64List)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PInt64List)
+    // @@protoc_insertion_point(class_scope:bbproto.PInt64List)
     private static final com.blemobi.sep.probuf.ResultProtos.PInt64List DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ResultProtos.PInt64List();
@@ -3912,7 +3912,7 @@ public final class ResultProtos {
   }
 
   public interface PInt32ListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PInt32List)
+      // @@protoc_insertion_point(interface_extends:bbproto.PInt32List)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3929,7 +3929,7 @@ public final class ResultProtos {
     int getList(int index);
   }
   /**
-   * Protobuf type {@code common.PInt32List}
+   * Protobuf type {@code bbproto.PInt32List}
    *
    * <pre>
    *&#64;note 批量传输int32
@@ -3937,7 +3937,7 @@ public final class ResultProtos {
    */
   public  static final class PInt32List extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PInt32List)
+      // @@protoc_insertion_point(message_implements:bbproto.PInt32List)
       PInt32ListOrBuilder {
     // Use PInt32List.newBuilder() to construct.
     private PInt32List(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -4009,12 +4009,12 @@ public final class ResultProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PInt32List_descriptor;
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PInt32List_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PInt32List_fieldAccessorTable
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PInt32List_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ResultProtos.PInt32List.class, com.blemobi.sep.probuf.ResultProtos.PInt32List.Builder.class);
     }
@@ -4161,7 +4161,7 @@ public final class ResultProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PInt32List}
+     * Protobuf type {@code bbproto.PInt32List}
      *
      * <pre>
      *&#64;note 批量传输int32
@@ -4169,16 +4169,16 @@ public final class ResultProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PInt32List)
+        // @@protoc_insertion_point(builder_implements:bbproto.PInt32List)
         com.blemobi.sep.probuf.ResultProtos.PInt32ListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PInt32List_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PInt32List_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PInt32List_fieldAccessorTable
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PInt32List_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ResultProtos.PInt32List.class, com.blemobi.sep.probuf.ResultProtos.PInt32List.Builder.class);
       }
@@ -4206,7 +4206,7 @@ public final class ResultProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PInt32List_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PInt32List_descriptor;
       }
 
       public com.blemobi.sep.probuf.ResultProtos.PInt32List getDefaultInstanceForType() {
@@ -4357,10 +4357,10 @@ public final class ResultProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PInt32List)
+      // @@protoc_insertion_point(builder_scope:bbproto.PInt32List)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PInt32List)
+    // @@protoc_insertion_point(class_scope:bbproto.PInt32List)
     private static final com.blemobi.sep.probuf.ResultProtos.PInt32List DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ResultProtos.PInt32List();
@@ -4401,7 +4401,7 @@ public final class ResultProtos {
   }
 
   public interface PBoolListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PBoolList)
+      // @@protoc_insertion_point(interface_extends:bbproto.PBoolList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4418,7 +4418,7 @@ public final class ResultProtos {
     boolean getList(int index);
   }
   /**
-   * Protobuf type {@code common.PBoolList}
+   * Protobuf type {@code bbproto.PBoolList}
    *
    * <pre>
    *&#64;note 批量传输bool
@@ -4426,7 +4426,7 @@ public final class ResultProtos {
    */
   public  static final class PBoolList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PBoolList)
+      // @@protoc_insertion_point(message_implements:bbproto.PBoolList)
       PBoolListOrBuilder {
     // Use PBoolList.newBuilder() to construct.
     private PBoolList(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -4498,12 +4498,12 @@ public final class ResultProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PBoolList_descriptor;
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PBoolList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PBoolList_fieldAccessorTable
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PBoolList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ResultProtos.PBoolList.class, com.blemobi.sep.probuf.ResultProtos.PBoolList.Builder.class);
     }
@@ -4647,7 +4647,7 @@ public final class ResultProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PBoolList}
+     * Protobuf type {@code bbproto.PBoolList}
      *
      * <pre>
      *&#64;note 批量传输bool
@@ -4655,16 +4655,16 @@ public final class ResultProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PBoolList)
+        // @@protoc_insertion_point(builder_implements:bbproto.PBoolList)
         com.blemobi.sep.probuf.ResultProtos.PBoolListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PBoolList_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PBoolList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PBoolList_fieldAccessorTable
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PBoolList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ResultProtos.PBoolList.class, com.blemobi.sep.probuf.ResultProtos.PBoolList.Builder.class);
       }
@@ -4692,7 +4692,7 @@ public final class ResultProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PBoolList_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PBoolList_descriptor;
       }
 
       public com.blemobi.sep.probuf.ResultProtos.PBoolList getDefaultInstanceForType() {
@@ -4843,10 +4843,10 @@ public final class ResultProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PBoolList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PBoolList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PBoolList)
+    // @@protoc_insertion_point(class_scope:bbproto.PBoolList)
     private static final com.blemobi.sep.probuf.ResultProtos.PBoolList DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ResultProtos.PBoolList();
@@ -4887,7 +4887,7 @@ public final class ResultProtos {
   }
 
   public interface PFloat64ListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PFloat64List)
+      // @@protoc_insertion_point(interface_extends:bbproto.PFloat64List)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4904,7 +4904,7 @@ public final class ResultProtos {
     double getList(int index);
   }
   /**
-   * Protobuf type {@code common.PFloat64List}
+   * Protobuf type {@code bbproto.PFloat64List}
    *
    * <pre>
    *&#64;note 批量传输float64
@@ -4912,7 +4912,7 @@ public final class ResultProtos {
    */
   public  static final class PFloat64List extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PFloat64List)
+      // @@protoc_insertion_point(message_implements:bbproto.PFloat64List)
       PFloat64ListOrBuilder {
     // Use PFloat64List.newBuilder() to construct.
     private PFloat64List(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -4984,12 +4984,12 @@ public final class ResultProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PFloat64List_descriptor;
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PFloat64List_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PFloat64List_fieldAccessorTable
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PFloat64List_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ResultProtos.PFloat64List.class, com.blemobi.sep.probuf.ResultProtos.PFloat64List.Builder.class);
     }
@@ -5133,7 +5133,7 @@ public final class ResultProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PFloat64List}
+     * Protobuf type {@code bbproto.PFloat64List}
      *
      * <pre>
      *&#64;note 批量传输float64
@@ -5141,16 +5141,16 @@ public final class ResultProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PFloat64List)
+        // @@protoc_insertion_point(builder_implements:bbproto.PFloat64List)
         com.blemobi.sep.probuf.ResultProtos.PFloat64ListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PFloat64List_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PFloat64List_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PFloat64List_fieldAccessorTable
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PFloat64List_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ResultProtos.PFloat64List.class, com.blemobi.sep.probuf.ResultProtos.PFloat64List.Builder.class);
       }
@@ -5178,7 +5178,7 @@ public final class ResultProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PFloat64List_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PFloat64List_descriptor;
       }
 
       public com.blemobi.sep.probuf.ResultProtos.PFloat64List getDefaultInstanceForType() {
@@ -5329,10 +5329,10 @@ public final class ResultProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PFloat64List)
+      // @@protoc_insertion_point(builder_scope:bbproto.PFloat64List)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PFloat64List)
+    // @@protoc_insertion_point(class_scope:bbproto.PFloat64List)
     private static final com.blemobi.sep.probuf.ResultProtos.PFloat64List DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ResultProtos.PFloat64List();
@@ -5373,7 +5373,7 @@ public final class ResultProtos {
   }
 
   public interface PStringSingleOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PStringSingle)
+      // @@protoc_insertion_point(interface_extends:bbproto.PStringSingle)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -5387,7 +5387,7 @@ public final class ResultProtos {
         getValBytes();
   }
   /**
-   * Protobuf type {@code common.PStringSingle}
+   * Protobuf type {@code bbproto.PStringSingle}
    *
    * <pre>
    *&#64;note 单独传输string
@@ -5395,7 +5395,7 @@ public final class ResultProtos {
    */
   public  static final class PStringSingle extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PStringSingle)
+      // @@protoc_insertion_point(message_implements:bbproto.PStringSingle)
       PStringSingleOrBuilder {
     // Use PStringSingle.newBuilder() to construct.
     private PStringSingle(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -5449,12 +5449,12 @@ public final class ResultProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PStringSingle_descriptor;
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PStringSingle_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PStringSingle_fieldAccessorTable
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PStringSingle_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ResultProtos.PStringSingle.class, com.blemobi.sep.probuf.ResultProtos.PStringSingle.Builder.class);
     }
@@ -5599,7 +5599,7 @@ public final class ResultProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PStringSingle}
+     * Protobuf type {@code bbproto.PStringSingle}
      *
      * <pre>
      *&#64;note 单独传输string
@@ -5607,16 +5607,16 @@ public final class ResultProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PStringSingle)
+        // @@protoc_insertion_point(builder_implements:bbproto.PStringSingle)
         com.blemobi.sep.probuf.ResultProtos.PStringSingleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PStringSingle_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PStringSingle_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PStringSingle_fieldAccessorTable
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PStringSingle_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ResultProtos.PStringSingle.class, com.blemobi.sep.probuf.ResultProtos.PStringSingle.Builder.class);
       }
@@ -5644,7 +5644,7 @@ public final class ResultProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PStringSingle_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PStringSingle_descriptor;
       }
 
       public com.blemobi.sep.probuf.ResultProtos.PStringSingle getDefaultInstanceForType() {
@@ -5787,10 +5787,10 @@ public final class ResultProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PStringSingle)
+      // @@protoc_insertion_point(builder_scope:bbproto.PStringSingle)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PStringSingle)
+    // @@protoc_insertion_point(class_scope:bbproto.PStringSingle)
     private static final com.blemobi.sep.probuf.ResultProtos.PStringSingle DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ResultProtos.PStringSingle();
@@ -5831,7 +5831,7 @@ public final class ResultProtos {
   }
 
   public interface PInt64SingleOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PInt64Single)
+      // @@protoc_insertion_point(interface_extends:bbproto.PInt64Single)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -5840,7 +5840,7 @@ public final class ResultProtos {
     long getVal();
   }
   /**
-   * Protobuf type {@code common.PInt64Single}
+   * Protobuf type {@code bbproto.PInt64Single}
    *
    * <pre>
    *&#64;note 单独传输int64
@@ -5848,7 +5848,7 @@ public final class ResultProtos {
    */
   public  static final class PInt64Single extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PInt64Single)
+      // @@protoc_insertion_point(message_implements:bbproto.PInt64Single)
       PInt64SingleOrBuilder {
     // Use PInt64Single.newBuilder() to construct.
     private PInt64Single(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -5901,12 +5901,12 @@ public final class ResultProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PInt64Single_descriptor;
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PInt64Single_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PInt64Single_fieldAccessorTable
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PInt64Single_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ResultProtos.PInt64Single.class, com.blemobi.sep.probuf.ResultProtos.PInt64Single.Builder.class);
     }
@@ -6024,7 +6024,7 @@ public final class ResultProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PInt64Single}
+     * Protobuf type {@code bbproto.PInt64Single}
      *
      * <pre>
      *&#64;note 单独传输int64
@@ -6032,16 +6032,16 @@ public final class ResultProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PInt64Single)
+        // @@protoc_insertion_point(builder_implements:bbproto.PInt64Single)
         com.blemobi.sep.probuf.ResultProtos.PInt64SingleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PInt64Single_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PInt64Single_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PInt64Single_fieldAccessorTable
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PInt64Single_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ResultProtos.PInt64Single.class, com.blemobi.sep.probuf.ResultProtos.PInt64Single.Builder.class);
       }
@@ -6069,7 +6069,7 @@ public final class ResultProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PInt64Single_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PInt64Single_descriptor;
       }
 
       public com.blemobi.sep.probuf.ResultProtos.PInt64Single getDefaultInstanceForType() {
@@ -6167,10 +6167,10 @@ public final class ResultProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PInt64Single)
+      // @@protoc_insertion_point(builder_scope:bbproto.PInt64Single)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PInt64Single)
+    // @@protoc_insertion_point(class_scope:bbproto.PInt64Single)
     private static final com.blemobi.sep.probuf.ResultProtos.PInt64Single DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ResultProtos.PInt64Single();
@@ -6211,7 +6211,7 @@ public final class ResultProtos {
   }
 
   public interface PInt32SingleOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PInt32Single)
+      // @@protoc_insertion_point(interface_extends:bbproto.PInt32Single)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -6220,7 +6220,7 @@ public final class ResultProtos {
     int getVal();
   }
   /**
-   * Protobuf type {@code common.PInt32Single}
+   * Protobuf type {@code bbproto.PInt32Single}
    *
    * <pre>
    *&#64;note 单独传输int32
@@ -6228,7 +6228,7 @@ public final class ResultProtos {
    */
   public  static final class PInt32Single extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PInt32Single)
+      // @@protoc_insertion_point(message_implements:bbproto.PInt32Single)
       PInt32SingleOrBuilder {
     // Use PInt32Single.newBuilder() to construct.
     private PInt32Single(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -6281,12 +6281,12 @@ public final class ResultProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PInt32Single_descriptor;
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PInt32Single_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PInt32Single_fieldAccessorTable
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PInt32Single_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ResultProtos.PInt32Single.class, com.blemobi.sep.probuf.ResultProtos.PInt32Single.Builder.class);
     }
@@ -6404,7 +6404,7 @@ public final class ResultProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PInt32Single}
+     * Protobuf type {@code bbproto.PInt32Single}
      *
      * <pre>
      *&#64;note 单独传输int32
@@ -6412,16 +6412,16 @@ public final class ResultProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PInt32Single)
+        // @@protoc_insertion_point(builder_implements:bbproto.PInt32Single)
         com.blemobi.sep.probuf.ResultProtos.PInt32SingleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PInt32Single_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PInt32Single_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PInt32Single_fieldAccessorTable
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PInt32Single_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ResultProtos.PInt32Single.class, com.blemobi.sep.probuf.ResultProtos.PInt32Single.Builder.class);
       }
@@ -6449,7 +6449,7 @@ public final class ResultProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PInt32Single_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PInt32Single_descriptor;
       }
 
       public com.blemobi.sep.probuf.ResultProtos.PInt32Single getDefaultInstanceForType() {
@@ -6547,10 +6547,10 @@ public final class ResultProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PInt32Single)
+      // @@protoc_insertion_point(builder_scope:bbproto.PInt32Single)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PInt32Single)
+    // @@protoc_insertion_point(class_scope:bbproto.PInt32Single)
     private static final com.blemobi.sep.probuf.ResultProtos.PInt32Single DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ResultProtos.PInt32Single();
@@ -6591,7 +6591,7 @@ public final class ResultProtos {
   }
 
   public interface PBoolSingleOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PBoolSingle)
+      // @@protoc_insertion_point(interface_extends:bbproto.PBoolSingle)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -6600,7 +6600,7 @@ public final class ResultProtos {
     boolean getVal();
   }
   /**
-   * Protobuf type {@code common.PBoolSingle}
+   * Protobuf type {@code bbproto.PBoolSingle}
    *
    * <pre>
    *&#64;note 单独传输bool
@@ -6608,7 +6608,7 @@ public final class ResultProtos {
    */
   public  static final class PBoolSingle extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PBoolSingle)
+      // @@protoc_insertion_point(message_implements:bbproto.PBoolSingle)
       PBoolSingleOrBuilder {
     // Use PBoolSingle.newBuilder() to construct.
     private PBoolSingle(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -6661,12 +6661,12 @@ public final class ResultProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PBoolSingle_descriptor;
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PBoolSingle_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PBoolSingle_fieldAccessorTable
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PBoolSingle_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ResultProtos.PBoolSingle.class, com.blemobi.sep.probuf.ResultProtos.PBoolSingle.Builder.class);
     }
@@ -6784,7 +6784,7 @@ public final class ResultProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PBoolSingle}
+     * Protobuf type {@code bbproto.PBoolSingle}
      *
      * <pre>
      *&#64;note 单独传输bool
@@ -6792,16 +6792,16 @@ public final class ResultProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PBoolSingle)
+        // @@protoc_insertion_point(builder_implements:bbproto.PBoolSingle)
         com.blemobi.sep.probuf.ResultProtos.PBoolSingleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PBoolSingle_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PBoolSingle_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PBoolSingle_fieldAccessorTable
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PBoolSingle_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ResultProtos.PBoolSingle.class, com.blemobi.sep.probuf.ResultProtos.PBoolSingle.Builder.class);
       }
@@ -6829,7 +6829,7 @@ public final class ResultProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PBoolSingle_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PBoolSingle_descriptor;
       }
 
       public com.blemobi.sep.probuf.ResultProtos.PBoolSingle getDefaultInstanceForType() {
@@ -6927,10 +6927,10 @@ public final class ResultProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PBoolSingle)
+      // @@protoc_insertion_point(builder_scope:bbproto.PBoolSingle)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PBoolSingle)
+    // @@protoc_insertion_point(class_scope:bbproto.PBoolSingle)
     private static final com.blemobi.sep.probuf.ResultProtos.PBoolSingle DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ResultProtos.PBoolSingle();
@@ -6971,7 +6971,7 @@ public final class ResultProtos {
   }
 
   public interface PFloat64SingleOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PFloat64Single)
+      // @@protoc_insertion_point(interface_extends:bbproto.PFloat64Single)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -6980,7 +6980,7 @@ public final class ResultProtos {
     double getVal();
   }
   /**
-   * Protobuf type {@code common.PFloat64Single}
+   * Protobuf type {@code bbproto.PFloat64Single}
    *
    * <pre>
    *&#64;note 单独传输float64
@@ -6988,7 +6988,7 @@ public final class ResultProtos {
    */
   public  static final class PFloat64Single extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PFloat64Single)
+      // @@protoc_insertion_point(message_implements:bbproto.PFloat64Single)
       PFloat64SingleOrBuilder {
     // Use PFloat64Single.newBuilder() to construct.
     private PFloat64Single(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -7041,12 +7041,12 @@ public final class ResultProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PFloat64Single_descriptor;
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PFloat64Single_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PFloat64Single_fieldAccessorTable
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PFloat64Single_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ResultProtos.PFloat64Single.class, com.blemobi.sep.probuf.ResultProtos.PFloat64Single.Builder.class);
     }
@@ -7164,7 +7164,7 @@ public final class ResultProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PFloat64Single}
+     * Protobuf type {@code bbproto.PFloat64Single}
      *
      * <pre>
      *&#64;note 单独传输float64
@@ -7172,16 +7172,16 @@ public final class ResultProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PFloat64Single)
+        // @@protoc_insertion_point(builder_implements:bbproto.PFloat64Single)
         com.blemobi.sep.probuf.ResultProtos.PFloat64SingleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PFloat64Single_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PFloat64Single_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PFloat64Single_fieldAccessorTable
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PFloat64Single_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ResultProtos.PFloat64Single.class, com.blemobi.sep.probuf.ResultProtos.PFloat64Single.Builder.class);
       }
@@ -7209,7 +7209,7 @@ public final class ResultProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PFloat64Single_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PFloat64Single_descriptor;
       }
 
       public com.blemobi.sep.probuf.ResultProtos.PFloat64Single getDefaultInstanceForType() {
@@ -7307,10 +7307,10 @@ public final class ResultProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PFloat64Single)
+      // @@protoc_insertion_point(builder_scope:bbproto.PFloat64Single)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PFloat64Single)
+    // @@protoc_insertion_point(class_scope:bbproto.PFloat64Single)
     private static final com.blemobi.sep.probuf.ResultProtos.PFloat64Single DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ResultProtos.PFloat64Single();
@@ -7351,7 +7351,7 @@ public final class ResultProtos {
   }
 
   public interface PBinaryMsgOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PBinaryMsg)
+      // @@protoc_insertion_point(interface_extends:bbproto.PBinaryMsg)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -7365,7 +7365,7 @@ public final class ResultProtos {
     com.google.protobuf.ByteString getMsgData();
   }
   /**
-   * Protobuf type {@code common.PBinaryMsg}
+   * Protobuf type {@code bbproto.PBinaryMsg}
    *
    * <pre>
    *&#64;note 带类型的二进制数据包，通过解析MsgType后再把MsgData反序列化为proto
@@ -7373,7 +7373,7 @@ public final class ResultProtos {
    */
   public  static final class PBinaryMsg extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PBinaryMsg)
+      // @@protoc_insertion_point(message_implements:bbproto.PBinaryMsg)
       PBinaryMsgOrBuilder {
     // Use PBinaryMsg.newBuilder() to construct.
     private PBinaryMsg(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -7432,12 +7432,12 @@ public final class ResultProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PBinaryMsg_descriptor;
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PBinaryMsg_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PBinaryMsg_fieldAccessorTable
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PBinaryMsg_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ResultProtos.PBinaryMsg.class, com.blemobi.sep.probuf.ResultProtos.PBinaryMsg.Builder.class);
     }
@@ -7571,7 +7571,7 @@ public final class ResultProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PBinaryMsg}
+     * Protobuf type {@code bbproto.PBinaryMsg}
      *
      * <pre>
      *&#64;note 带类型的二进制数据包，通过解析MsgType后再把MsgData反序列化为proto
@@ -7579,16 +7579,16 @@ public final class ResultProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PBinaryMsg)
+        // @@protoc_insertion_point(builder_implements:bbproto.PBinaryMsg)
         com.blemobi.sep.probuf.ResultProtos.PBinaryMsgOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PBinaryMsg_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PBinaryMsg_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PBinaryMsg_fieldAccessorTable
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PBinaryMsg_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ResultProtos.PBinaryMsg.class, com.blemobi.sep.probuf.ResultProtos.PBinaryMsg.Builder.class);
       }
@@ -7618,7 +7618,7 @@ public final class ResultProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PBinaryMsg_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PBinaryMsg_descriptor;
       }
 
       public com.blemobi.sep.probuf.ResultProtos.PBinaryMsg getDefaultInstanceForType() {
@@ -7749,10 +7749,10 @@ public final class ResultProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PBinaryMsg)
+      // @@protoc_insertion_point(builder_scope:bbproto.PBinaryMsg)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PBinaryMsg)
+    // @@protoc_insertion_point(class_scope:bbproto.PBinaryMsg)
     private static final com.blemobi.sep.probuf.ResultProtos.PBinaryMsg DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ResultProtos.PBinaryMsg();
@@ -7793,35 +7793,35 @@ public final class ResultProtos {
   }
 
   public interface PBinaryMsgListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PBinaryMsgList)
+      // @@protoc_insertion_point(interface_extends:bbproto.PBinaryMsgList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .common.PBinaryMsg List = 1;</code>
+     * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
      */
     java.util.List<com.blemobi.sep.probuf.ResultProtos.PBinaryMsg> 
         getListList();
     /**
-     * <code>repeated .common.PBinaryMsg List = 1;</code>
+     * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
      */
     com.blemobi.sep.probuf.ResultProtos.PBinaryMsg getList(int index);
     /**
-     * <code>repeated .common.PBinaryMsg List = 1;</code>
+     * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
      */
     int getListCount();
     /**
-     * <code>repeated .common.PBinaryMsg List = 1;</code>
+     * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
      */
     java.util.List<? extends com.blemobi.sep.probuf.ResultProtos.PBinaryMsgOrBuilder> 
         getListOrBuilderList();
     /**
-     * <code>repeated .common.PBinaryMsg List = 1;</code>
+     * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
      */
     com.blemobi.sep.probuf.ResultProtos.PBinaryMsgOrBuilder getListOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code common.PBinaryMsgList}
+   * Protobuf type {@code bbproto.PBinaryMsgList}
    *
    * <pre>
    *&#64;note PBinaryMsg的列表
@@ -7829,7 +7829,7 @@ public final class ResultProtos {
    */
   public  static final class PBinaryMsgList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PBinaryMsgList)
+      // @@protoc_insertion_point(message_implements:bbproto.PBinaryMsgList)
       PBinaryMsgListOrBuilder {
     // Use PBinaryMsgList.newBuilder() to construct.
     private PBinaryMsgList(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -7888,12 +7888,12 @@ public final class ResultProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PBinaryMsgList_descriptor;
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PBinaryMsgList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PBinaryMsgList_fieldAccessorTable
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PBinaryMsgList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.ResultProtos.PBinaryMsgList.class, com.blemobi.sep.probuf.ResultProtos.PBinaryMsgList.Builder.class);
     }
@@ -7901,32 +7901,32 @@ public final class ResultProtos {
     public static final int LIST_FIELD_NUMBER = 1;
     private java.util.List<com.blemobi.sep.probuf.ResultProtos.PBinaryMsg> list_;
     /**
-     * <code>repeated .common.PBinaryMsg List = 1;</code>
+     * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
      */
     public java.util.List<com.blemobi.sep.probuf.ResultProtos.PBinaryMsg> getListList() {
       return list_;
     }
     /**
-     * <code>repeated .common.PBinaryMsg List = 1;</code>
+     * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
      */
     public java.util.List<? extends com.blemobi.sep.probuf.ResultProtos.PBinaryMsgOrBuilder> 
         getListOrBuilderList() {
       return list_;
     }
     /**
-     * <code>repeated .common.PBinaryMsg List = 1;</code>
+     * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
      */
     public int getListCount() {
       return list_.size();
     }
     /**
-     * <code>repeated .common.PBinaryMsg List = 1;</code>
+     * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
      */
     public com.blemobi.sep.probuf.ResultProtos.PBinaryMsg getList(int index) {
       return list_.get(index);
     }
     /**
-     * <code>repeated .common.PBinaryMsg List = 1;</code>
+     * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
      */
     public com.blemobi.sep.probuf.ResultProtos.PBinaryMsgOrBuilder getListOrBuilder(
         int index) {
@@ -8037,7 +8037,7 @@ public final class ResultProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PBinaryMsgList}
+     * Protobuf type {@code bbproto.PBinaryMsgList}
      *
      * <pre>
      *&#64;note PBinaryMsg的列表
@@ -8045,16 +8045,16 @@ public final class ResultProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PBinaryMsgList)
+        // @@protoc_insertion_point(builder_implements:bbproto.PBinaryMsgList)
         com.blemobi.sep.probuf.ResultProtos.PBinaryMsgListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PBinaryMsgList_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PBinaryMsgList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PBinaryMsgList_fieldAccessorTable
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PBinaryMsgList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.ResultProtos.PBinaryMsgList.class, com.blemobi.sep.probuf.ResultProtos.PBinaryMsgList.Builder.class);
       }
@@ -8087,7 +8087,7 @@ public final class ResultProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.ResultProtos.internal_static_common_PBinaryMsgList_descriptor;
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PBinaryMsgList_descriptor;
       }
 
       public com.blemobi.sep.probuf.ResultProtos.PBinaryMsgList getDefaultInstanceForType() {
@@ -8195,7 +8195,7 @@ public final class ResultProtos {
           com.blemobi.sep.probuf.ResultProtos.PBinaryMsg, com.blemobi.sep.probuf.ResultProtos.PBinaryMsg.Builder, com.blemobi.sep.probuf.ResultProtos.PBinaryMsgOrBuilder> listBuilder_;
 
       /**
-       * <code>repeated .common.PBinaryMsg List = 1;</code>
+       * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.ResultProtos.PBinaryMsg> getListList() {
         if (listBuilder_ == null) {
@@ -8205,7 +8205,7 @@ public final class ResultProtos {
         }
       }
       /**
-       * <code>repeated .common.PBinaryMsg List = 1;</code>
+       * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
        */
       public int getListCount() {
         if (listBuilder_ == null) {
@@ -8215,7 +8215,7 @@ public final class ResultProtos {
         }
       }
       /**
-       * <code>repeated .common.PBinaryMsg List = 1;</code>
+       * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
        */
       public com.blemobi.sep.probuf.ResultProtos.PBinaryMsg getList(int index) {
         if (listBuilder_ == null) {
@@ -8225,7 +8225,7 @@ public final class ResultProtos {
         }
       }
       /**
-       * <code>repeated .common.PBinaryMsg List = 1;</code>
+       * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
        */
       public Builder setList(
           int index, com.blemobi.sep.probuf.ResultProtos.PBinaryMsg value) {
@@ -8242,7 +8242,7 @@ public final class ResultProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PBinaryMsg List = 1;</code>
+       * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
        */
       public Builder setList(
           int index, com.blemobi.sep.probuf.ResultProtos.PBinaryMsg.Builder builderForValue) {
@@ -8256,7 +8256,7 @@ public final class ResultProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PBinaryMsg List = 1;</code>
+       * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
        */
       public Builder addList(com.blemobi.sep.probuf.ResultProtos.PBinaryMsg value) {
         if (listBuilder_ == null) {
@@ -8272,7 +8272,7 @@ public final class ResultProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PBinaryMsg List = 1;</code>
+       * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
        */
       public Builder addList(
           int index, com.blemobi.sep.probuf.ResultProtos.PBinaryMsg value) {
@@ -8289,7 +8289,7 @@ public final class ResultProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PBinaryMsg List = 1;</code>
+       * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
        */
       public Builder addList(
           com.blemobi.sep.probuf.ResultProtos.PBinaryMsg.Builder builderForValue) {
@@ -8303,7 +8303,7 @@ public final class ResultProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PBinaryMsg List = 1;</code>
+       * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
        */
       public Builder addList(
           int index, com.blemobi.sep.probuf.ResultProtos.PBinaryMsg.Builder builderForValue) {
@@ -8317,7 +8317,7 @@ public final class ResultProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PBinaryMsg List = 1;</code>
+       * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
        */
       public Builder addAllList(
           java.lang.Iterable<? extends com.blemobi.sep.probuf.ResultProtos.PBinaryMsg> values) {
@@ -8332,7 +8332,7 @@ public final class ResultProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PBinaryMsg List = 1;</code>
+       * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
        */
       public Builder clearList() {
         if (listBuilder_ == null) {
@@ -8345,7 +8345,7 @@ public final class ResultProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PBinaryMsg List = 1;</code>
+       * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
        */
       public Builder removeList(int index) {
         if (listBuilder_ == null) {
@@ -8358,14 +8358,14 @@ public final class ResultProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PBinaryMsg List = 1;</code>
+       * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
        */
       public com.blemobi.sep.probuf.ResultProtos.PBinaryMsg.Builder getListBuilder(
           int index) {
         return getListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PBinaryMsg List = 1;</code>
+       * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
        */
       public com.blemobi.sep.probuf.ResultProtos.PBinaryMsgOrBuilder getListOrBuilder(
           int index) {
@@ -8375,7 +8375,7 @@ public final class ResultProtos {
         }
       }
       /**
-       * <code>repeated .common.PBinaryMsg List = 1;</code>
+       * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
        */
       public java.util.List<? extends com.blemobi.sep.probuf.ResultProtos.PBinaryMsgOrBuilder> 
            getListOrBuilderList() {
@@ -8386,14 +8386,14 @@ public final class ResultProtos {
         }
       }
       /**
-       * <code>repeated .common.PBinaryMsg List = 1;</code>
+       * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
        */
       public com.blemobi.sep.probuf.ResultProtos.PBinaryMsg.Builder addListBuilder() {
         return getListFieldBuilder().addBuilder(
             com.blemobi.sep.probuf.ResultProtos.PBinaryMsg.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PBinaryMsg List = 1;</code>
+       * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
        */
       public com.blemobi.sep.probuf.ResultProtos.PBinaryMsg.Builder addListBuilder(
           int index) {
@@ -8401,7 +8401,7 @@ public final class ResultProtos {
             index, com.blemobi.sep.probuf.ResultProtos.PBinaryMsg.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PBinaryMsg List = 1;</code>
+       * <code>repeated .bbproto.PBinaryMsg List = 1;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.ResultProtos.PBinaryMsg.Builder> 
            getListBuilderList() {
@@ -8432,10 +8432,10 @@ public final class ResultProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PBinaryMsgList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PBinaryMsgList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PBinaryMsgList)
+    // @@protoc_insertion_point(class_scope:bbproto.PBinaryMsgList)
     private static final com.blemobi.sep.probuf.ResultProtos.PBinaryMsgList DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ResultProtos.PBinaryMsgList();
@@ -8475,91 +8475,3787 @@ public final class ResultProtos {
 
   }
 
+  public interface PHealthItemOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PHealthItem)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string name = 1;</code>
+     *
+     * <pre>
+     *检查项名称
+     * </pre>
+     */
+    java.lang.String getName();
+    /**
+     * <code>optional string name = 1;</code>
+     *
+     * <pre>
+     *检查项名称
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>optional int32 status = 2;</code>
+     *
+     * <pre>
+     *状态
+     * </pre>
+     */
+    int getStatus();
+
+    /**
+     * <code>map&lt;string, string&gt; detail = 3;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getDetail();
+  }
+  /**
+   * Protobuf type {@code bbproto.PHealthItem}
+   *
+   * <pre>
+   *&#64;note 服务健康检查项
+   * </pre>
+   */
+  public  static final class PHealthItem extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PHealthItem)
+      PHealthItemOrBuilder {
+    // Use PHealthItem.newBuilder() to construct.
+    private PHealthItem(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PHealthItem() {
+      name_ = "";
+      status_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PHealthItem(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              name_ = bs;
+              break;
+            }
+            case 16: {
+
+              status_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                detail_ = com.google.protobuf.MapField.newMapField(
+                    DetailDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000004;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              detail = input.readMessage(
+                  DetailDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              detail_.getMutableMap().put(detail.getKey(), detail.getValue());
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PHealthItem_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 3:
+          return internalGetDetail();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PHealthItem_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.ResultProtos.PHealthItem.class, com.blemobi.sep.probuf.ResultProtos.PHealthItem.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>optional string name = 1;</code>
+     *
+     * <pre>
+     *检查项名称
+     * </pre>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string name = 1;</code>
+     *
+     * <pre>
+     *检查项名称
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 2;
+    private int status_;
+    /**
+     * <code>optional int32 status = 2;</code>
+     *
+     * <pre>
+     *状态
+     * </pre>
+     */
+    public int getStatus() {
+      return status_;
+    }
+
+    public static final int DETAIL_FIELD_NUMBER = 3;
+    private static final class DetailDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PHealthItem_DetailEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> detail_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetDetail() {
+      if (detail_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            DetailDefaultEntryHolder.defaultEntry);
+     }
+      return detail_;
+    }
+    /**
+     * <code>map&lt;string, string&gt; detail = 3;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getDetail() {
+      return internalGetDetail().getMap();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getNameBytes().isEmpty()) {
+        output.writeBytes(1, getNameBytes());
+      }
+      if (status_ != 0) {
+        output.writeInt32(2, status_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetDetail().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        detail = DetailDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        output.writeMessage(3, detail);
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getNameBytes());
+      }
+      if (status_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, status_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetDetail().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        detail = DetailDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, detail);
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.ResultProtos.PHealthItem parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PHealthItem parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PHealthItem parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PHealthItem parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PHealthItem parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PHealthItem parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PHealthItem parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PHealthItem parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PHealthItem parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PHealthItem parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.ResultProtos.PHealthItem prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PHealthItem}
+     *
+     * <pre>
+     *&#64;note 服务健康检查项
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PHealthItem)
+        com.blemobi.sep.probuf.ResultProtos.PHealthItemOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PHealthItem_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetDetail();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetMutableDetail();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PHealthItem_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.ResultProtos.PHealthItem.class, com.blemobi.sep.probuf.ResultProtos.PHealthItem.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.ResultProtos.PHealthItem.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+
+        status_ = 0;
+
+        internalGetMutableDetail().clear();
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PHealthItem_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.ResultProtos.PHealthItem getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.ResultProtos.PHealthItem.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.ResultProtos.PHealthItem build() {
+        com.blemobi.sep.probuf.ResultProtos.PHealthItem result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.ResultProtos.PHealthItem buildPartial() {
+        com.blemobi.sep.probuf.ResultProtos.PHealthItem result = new com.blemobi.sep.probuf.ResultProtos.PHealthItem(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.name_ = name_;
+        result.status_ = status_;
+        result.detail_ = internalGetDetail();
+        result.detail_.makeImmutable();
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.ResultProtos.PHealthItem) {
+          return mergeFrom((com.blemobi.sep.probuf.ResultProtos.PHealthItem)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.ResultProtos.PHealthItem other) {
+        if (other == com.blemobi.sep.probuf.ResultProtos.PHealthItem.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.getStatus() != 0) {
+          setStatus(other.getStatus());
+        }
+        internalGetMutableDetail().mergeFrom(
+            other.internalGetDetail());
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.ResultProtos.PHealthItem parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.ResultProtos.PHealthItem) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>optional string name = 1;</code>
+       *
+       * <pre>
+       *检查项名称
+       * </pre>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       *
+       * <pre>
+       *检查项名称
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       *
+       * <pre>
+       *检查项名称
+       * </pre>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       *
+       * <pre>
+       *检查项名称
+       * </pre>
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 1;</code>
+       *
+       * <pre>
+       *检查项名称
+       * </pre>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int status_ ;
+      /**
+       * <code>optional int32 status = 2;</code>
+       *
+       * <pre>
+       *状态
+       * </pre>
+       */
+      public int getStatus() {
+        return status_;
+      }
+      /**
+       * <code>optional int32 status = 2;</code>
+       *
+       * <pre>
+       *状态
+       * </pre>
+       */
+      public Builder setStatus(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 status = 2;</code>
+       *
+       * <pre>
+       *状态
+       * </pre>
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> detail_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetDetail() {
+        if (detail_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              DetailDefaultEntryHolder.defaultEntry);
+       }
+        return detail_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableDetail() {
+        onChanged();;
+        if (detail_ == null) {
+          detail_ = com.google.protobuf.MapField.newMapField(
+              DetailDefaultEntryHolder.defaultEntry);
+        }
+        if (!detail_.isMutable()) {
+          detail_ = detail_.copy();
+        }
+        return detail_;
+      }
+      /**
+       * <code>map&lt;string, string&gt; detail = 3;</code>
+       */
+      public java.util.Map<java.lang.String, java.lang.String> getDetail() {
+        return internalGetDetail().getMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; detail = 3;</code>
+       */
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableDetail() {
+        return internalGetMutableDetail().getMutableMap();
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PHealthItem)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PHealthItem)
+    private static final com.blemobi.sep.probuf.ResultProtos.PHealthItem DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ResultProtos.PHealthItem();
+    }
+
+    public static com.blemobi.sep.probuf.ResultProtos.PHealthItem getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PHealthItem> PARSER =
+        new com.google.protobuf.AbstractParser<PHealthItem>() {
+      public PHealthItem parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PHealthItem(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PHealthItem> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.ResultProtos.PHealthItem getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PServiceHealthOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PServiceHealth)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 status = 1;</code>
+     *
+     * <pre>
+     *服务状态
+     * </pre>
+     */
+    int getStatus();
+
+    /**
+     * <code>optional string serviceName = 2;</code>
+     *
+     * <pre>
+     *服务名                       
+     * </pre>
+     */
+    java.lang.String getServiceName();
+    /**
+     * <code>optional string serviceName = 2;</code>
+     *
+     * <pre>
+     *服务名                       
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getServiceNameBytes();
+
+    /**
+     * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+     *
+     * <pre>
+     *健康信息
+     * </pre>
+     */
+    java.util.List<com.blemobi.sep.probuf.ResultProtos.PHealthItem> 
+        getHealInfoListList();
+    /**
+     * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+     *
+     * <pre>
+     *健康信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.ResultProtos.PHealthItem getHealInfoList(int index);
+    /**
+     * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+     *
+     * <pre>
+     *健康信息
+     * </pre>
+     */
+    int getHealInfoListCount();
+    /**
+     * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+     *
+     * <pre>
+     *健康信息
+     * </pre>
+     */
+    java.util.List<? extends com.blemobi.sep.probuf.ResultProtos.PHealthItemOrBuilder> 
+        getHealInfoListOrBuilderList();
+    /**
+     * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+     *
+     * <pre>
+     *健康信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.ResultProtos.PHealthItemOrBuilder getHealInfoListOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code bbproto.PServiceHealth}
+   *
+   * <pre>
+   *&#64;note 服务健康信息
+   * </pre>
+   */
+  public  static final class PServiceHealth extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PServiceHealth)
+      PServiceHealthOrBuilder {
+    // Use PServiceHealth.newBuilder() to construct.
+    private PServiceHealth(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PServiceHealth() {
+      status_ = 0;
+      serviceName_ = "";
+      healInfoList_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PServiceHealth(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              status_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              serviceName_ = bs;
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                healInfoList_ = new java.util.ArrayList<com.blemobi.sep.probuf.ResultProtos.PHealthItem>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              healInfoList_.add(input.readMessage(com.blemobi.sep.probuf.ResultProtos.PHealthItem.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          healInfoList_ = java.util.Collections.unmodifiableList(healInfoList_);
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PServiceHealth_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PServiceHealth_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.ResultProtos.PServiceHealth.class, com.blemobi.sep.probuf.ResultProtos.PServiceHealth.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int STATUS_FIELD_NUMBER = 1;
+    private int status_;
+    /**
+     * <code>optional int32 status = 1;</code>
+     *
+     * <pre>
+     *服务状态
+     * </pre>
+     */
+    public int getStatus() {
+      return status_;
+    }
+
+    public static final int SERVICENAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object serviceName_;
+    /**
+     * <code>optional string serviceName = 2;</code>
+     *
+     * <pre>
+     *服务名                       
+     * </pre>
+     */
+    public java.lang.String getServiceName() {
+      java.lang.Object ref = serviceName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          serviceName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string serviceName = 2;</code>
+     *
+     * <pre>
+     *服务名                       
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getServiceNameBytes() {
+      java.lang.Object ref = serviceName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HEALINFOLIST_FIELD_NUMBER = 3;
+    private java.util.List<com.blemobi.sep.probuf.ResultProtos.PHealthItem> healInfoList_;
+    /**
+     * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+     *
+     * <pre>
+     *健康信息
+     * </pre>
+     */
+    public java.util.List<com.blemobi.sep.probuf.ResultProtos.PHealthItem> getHealInfoListList() {
+      return healInfoList_;
+    }
+    /**
+     * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+     *
+     * <pre>
+     *健康信息
+     * </pre>
+     */
+    public java.util.List<? extends com.blemobi.sep.probuf.ResultProtos.PHealthItemOrBuilder> 
+        getHealInfoListOrBuilderList() {
+      return healInfoList_;
+    }
+    /**
+     * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+     *
+     * <pre>
+     *健康信息
+     * </pre>
+     */
+    public int getHealInfoListCount() {
+      return healInfoList_.size();
+    }
+    /**
+     * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+     *
+     * <pre>
+     *健康信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.ResultProtos.PHealthItem getHealInfoList(int index) {
+      return healInfoList_.get(index);
+    }
+    /**
+     * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+     *
+     * <pre>
+     *健康信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.ResultProtos.PHealthItemOrBuilder getHealInfoListOrBuilder(
+        int index) {
+      return healInfoList_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (status_ != 0) {
+        output.writeInt32(1, status_);
+      }
+      if (!getServiceNameBytes().isEmpty()) {
+        output.writeBytes(2, getServiceNameBytes());
+      }
+      for (int i = 0; i < healInfoList_.size(); i++) {
+        output.writeMessage(3, healInfoList_.get(i));
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (status_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, status_);
+      }
+      if (!getServiceNameBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getServiceNameBytes());
+      }
+      for (int i = 0; i < healInfoList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, healInfoList_.get(i));
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHealth parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHealth parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHealth parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHealth parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHealth parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHealth parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHealth parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHealth parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHealth parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHealth parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.ResultProtos.PServiceHealth prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PServiceHealth}
+     *
+     * <pre>
+     *&#64;note 服务健康信息
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PServiceHealth)
+        com.blemobi.sep.probuf.ResultProtos.PServiceHealthOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PServiceHealth_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PServiceHealth_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.ResultProtos.PServiceHealth.class, com.blemobi.sep.probuf.ResultProtos.PServiceHealth.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.ResultProtos.PServiceHealth.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getHealInfoListFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        status_ = 0;
+
+        serviceName_ = "";
+
+        if (healInfoListBuilder_ == null) {
+          healInfoList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          healInfoListBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PServiceHealth_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.ResultProtos.PServiceHealth getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.ResultProtos.PServiceHealth.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.ResultProtos.PServiceHealth build() {
+        com.blemobi.sep.probuf.ResultProtos.PServiceHealth result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.ResultProtos.PServiceHealth buildPartial() {
+        com.blemobi.sep.probuf.ResultProtos.PServiceHealth result = new com.blemobi.sep.probuf.ResultProtos.PServiceHealth(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.status_ = status_;
+        result.serviceName_ = serviceName_;
+        if (healInfoListBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            healInfoList_ = java.util.Collections.unmodifiableList(healInfoList_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.healInfoList_ = healInfoList_;
+        } else {
+          result.healInfoList_ = healInfoListBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.ResultProtos.PServiceHealth) {
+          return mergeFrom((com.blemobi.sep.probuf.ResultProtos.PServiceHealth)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.ResultProtos.PServiceHealth other) {
+        if (other == com.blemobi.sep.probuf.ResultProtos.PServiceHealth.getDefaultInstance()) return this;
+        if (other.getStatus() != 0) {
+          setStatus(other.getStatus());
+        }
+        if (!other.getServiceName().isEmpty()) {
+          serviceName_ = other.serviceName_;
+          onChanged();
+        }
+        if (healInfoListBuilder_ == null) {
+          if (!other.healInfoList_.isEmpty()) {
+            if (healInfoList_.isEmpty()) {
+              healInfoList_ = other.healInfoList_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureHealInfoListIsMutable();
+              healInfoList_.addAll(other.healInfoList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.healInfoList_.isEmpty()) {
+            if (healInfoListBuilder_.isEmpty()) {
+              healInfoListBuilder_.dispose();
+              healInfoListBuilder_ = null;
+              healInfoList_ = other.healInfoList_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              healInfoListBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getHealInfoListFieldBuilder() : null;
+            } else {
+              healInfoListBuilder_.addAllMessages(other.healInfoList_);
+            }
+          }
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.ResultProtos.PServiceHealth parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.ResultProtos.PServiceHealth) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int status_ ;
+      /**
+       * <code>optional int32 status = 1;</code>
+       *
+       * <pre>
+       *服务状态
+       * </pre>
+       */
+      public int getStatus() {
+        return status_;
+      }
+      /**
+       * <code>optional int32 status = 1;</code>
+       *
+       * <pre>
+       *服务状态
+       * </pre>
+       */
+      public Builder setStatus(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 status = 1;</code>
+       *
+       * <pre>
+       *服务状态
+       * </pre>
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceName_ = "";
+      /**
+       * <code>optional string serviceName = 2;</code>
+       *
+       * <pre>
+       *服务名                       
+       * </pre>
+       */
+      public java.lang.String getServiceName() {
+        java.lang.Object ref = serviceName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            serviceName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string serviceName = 2;</code>
+       *
+       * <pre>
+       *服务名                       
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getServiceNameBytes() {
+        java.lang.Object ref = serviceName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string serviceName = 2;</code>
+       *
+       * <pre>
+       *服务名                       
+       * </pre>
+       */
+      public Builder setServiceName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string serviceName = 2;</code>
+       *
+       * <pre>
+       *服务名                       
+       * </pre>
+       */
+      public Builder clearServiceName() {
+        
+        serviceName_ = getDefaultInstance().getServiceName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string serviceName = 2;</code>
+       *
+       * <pre>
+       *服务名                       
+       * </pre>
+       */
+      public Builder setServiceNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.blemobi.sep.probuf.ResultProtos.PHealthItem> healInfoList_ =
+        java.util.Collections.emptyList();
+      private void ensureHealInfoListIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          healInfoList_ = new java.util.ArrayList<com.blemobi.sep.probuf.ResultProtos.PHealthItem>(healInfoList_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.ResultProtos.PHealthItem, com.blemobi.sep.probuf.ResultProtos.PHealthItem.Builder, com.blemobi.sep.probuf.ResultProtos.PHealthItemOrBuilder> healInfoListBuilder_;
+
+      /**
+       * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+       *
+       * <pre>
+       *健康信息
+       * </pre>
+       */
+      public java.util.List<com.blemobi.sep.probuf.ResultProtos.PHealthItem> getHealInfoListList() {
+        if (healInfoListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(healInfoList_);
+        } else {
+          return healInfoListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+       *
+       * <pre>
+       *健康信息
+       * </pre>
+       */
+      public int getHealInfoListCount() {
+        if (healInfoListBuilder_ == null) {
+          return healInfoList_.size();
+        } else {
+          return healInfoListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+       *
+       * <pre>
+       *健康信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.ResultProtos.PHealthItem getHealInfoList(int index) {
+        if (healInfoListBuilder_ == null) {
+          return healInfoList_.get(index);
+        } else {
+          return healInfoListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+       *
+       * <pre>
+       *健康信息
+       * </pre>
+       */
+      public Builder setHealInfoList(
+          int index, com.blemobi.sep.probuf.ResultProtos.PHealthItem value) {
+        if (healInfoListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHealInfoListIsMutable();
+          healInfoList_.set(index, value);
+          onChanged();
+        } else {
+          healInfoListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+       *
+       * <pre>
+       *健康信息
+       * </pre>
+       */
+      public Builder setHealInfoList(
+          int index, com.blemobi.sep.probuf.ResultProtos.PHealthItem.Builder builderForValue) {
+        if (healInfoListBuilder_ == null) {
+          ensureHealInfoListIsMutable();
+          healInfoList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          healInfoListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+       *
+       * <pre>
+       *健康信息
+       * </pre>
+       */
+      public Builder addHealInfoList(com.blemobi.sep.probuf.ResultProtos.PHealthItem value) {
+        if (healInfoListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHealInfoListIsMutable();
+          healInfoList_.add(value);
+          onChanged();
+        } else {
+          healInfoListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+       *
+       * <pre>
+       *健康信息
+       * </pre>
+       */
+      public Builder addHealInfoList(
+          int index, com.blemobi.sep.probuf.ResultProtos.PHealthItem value) {
+        if (healInfoListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHealInfoListIsMutable();
+          healInfoList_.add(index, value);
+          onChanged();
+        } else {
+          healInfoListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+       *
+       * <pre>
+       *健康信息
+       * </pre>
+       */
+      public Builder addHealInfoList(
+          com.blemobi.sep.probuf.ResultProtos.PHealthItem.Builder builderForValue) {
+        if (healInfoListBuilder_ == null) {
+          ensureHealInfoListIsMutable();
+          healInfoList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          healInfoListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+       *
+       * <pre>
+       *健康信息
+       * </pre>
+       */
+      public Builder addHealInfoList(
+          int index, com.blemobi.sep.probuf.ResultProtos.PHealthItem.Builder builderForValue) {
+        if (healInfoListBuilder_ == null) {
+          ensureHealInfoListIsMutable();
+          healInfoList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          healInfoListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+       *
+       * <pre>
+       *健康信息
+       * </pre>
+       */
+      public Builder addAllHealInfoList(
+          java.lang.Iterable<? extends com.blemobi.sep.probuf.ResultProtos.PHealthItem> values) {
+        if (healInfoListBuilder_ == null) {
+          ensureHealInfoListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, healInfoList_);
+          onChanged();
+        } else {
+          healInfoListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+       *
+       * <pre>
+       *健康信息
+       * </pre>
+       */
+      public Builder clearHealInfoList() {
+        if (healInfoListBuilder_ == null) {
+          healInfoList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          healInfoListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+       *
+       * <pre>
+       *健康信息
+       * </pre>
+       */
+      public Builder removeHealInfoList(int index) {
+        if (healInfoListBuilder_ == null) {
+          ensureHealInfoListIsMutable();
+          healInfoList_.remove(index);
+          onChanged();
+        } else {
+          healInfoListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+       *
+       * <pre>
+       *健康信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.ResultProtos.PHealthItem.Builder getHealInfoListBuilder(
+          int index) {
+        return getHealInfoListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+       *
+       * <pre>
+       *健康信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.ResultProtos.PHealthItemOrBuilder getHealInfoListOrBuilder(
+          int index) {
+        if (healInfoListBuilder_ == null) {
+          return healInfoList_.get(index);  } else {
+          return healInfoListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+       *
+       * <pre>
+       *健康信息
+       * </pre>
+       */
+      public java.util.List<? extends com.blemobi.sep.probuf.ResultProtos.PHealthItemOrBuilder> 
+           getHealInfoListOrBuilderList() {
+        if (healInfoListBuilder_ != null) {
+          return healInfoListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(healInfoList_);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+       *
+       * <pre>
+       *健康信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.ResultProtos.PHealthItem.Builder addHealInfoListBuilder() {
+        return getHealInfoListFieldBuilder().addBuilder(
+            com.blemobi.sep.probuf.ResultProtos.PHealthItem.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+       *
+       * <pre>
+       *健康信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.ResultProtos.PHealthItem.Builder addHealInfoListBuilder(
+          int index) {
+        return getHealInfoListFieldBuilder().addBuilder(
+            index, com.blemobi.sep.probuf.ResultProtos.PHealthItem.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PHealthItem healInfoList = 3;</code>
+       *
+       * <pre>
+       *健康信息
+       * </pre>
+       */
+      public java.util.List<com.blemobi.sep.probuf.ResultProtos.PHealthItem.Builder> 
+           getHealInfoListBuilderList() {
+        return getHealInfoListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.ResultProtos.PHealthItem, com.blemobi.sep.probuf.ResultProtos.PHealthItem.Builder, com.blemobi.sep.probuf.ResultProtos.PHealthItemOrBuilder> 
+          getHealInfoListFieldBuilder() {
+        if (healInfoListBuilder_ == null) {
+          healInfoListBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.blemobi.sep.probuf.ResultProtos.PHealthItem, com.blemobi.sep.probuf.ResultProtos.PHealthItem.Builder, com.blemobi.sep.probuf.ResultProtos.PHealthItemOrBuilder>(
+                  healInfoList_,
+                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  getParentForChildren(),
+                  isClean());
+          healInfoList_ = null;
+        }
+        return healInfoListBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PServiceHealth)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PServiceHealth)
+    private static final com.blemobi.sep.probuf.ResultProtos.PServiceHealth DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ResultProtos.PServiceHealth();
+    }
+
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHealth getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PServiceHealth> PARSER =
+        new com.google.protobuf.AbstractParser<PServiceHealth>() {
+      public PServiceHealth parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PServiceHealth(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PServiceHealth> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.ResultProtos.PServiceHealth getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PServiceHealthListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PServiceHealthList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+     *
+     * <pre>
+     *健康信息列表
+     * </pre>
+     */
+    java.util.List<com.blemobi.sep.probuf.ResultProtos.PServiceHealth> 
+        getListList();
+    /**
+     * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+     *
+     * <pre>
+     *健康信息列表
+     * </pre>
+     */
+    com.blemobi.sep.probuf.ResultProtos.PServiceHealth getList(int index);
+    /**
+     * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+     *
+     * <pre>
+     *健康信息列表
+     * </pre>
+     */
+    int getListCount();
+    /**
+     * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+     *
+     * <pre>
+     *健康信息列表
+     * </pre>
+     */
+    java.util.List<? extends com.blemobi.sep.probuf.ResultProtos.PServiceHealthOrBuilder> 
+        getListOrBuilderList();
+    /**
+     * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+     *
+     * <pre>
+     *健康信息列表
+     * </pre>
+     */
+    com.blemobi.sep.probuf.ResultProtos.PServiceHealthOrBuilder getListOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code bbproto.PServiceHealthList}
+   *
+   * <pre>
+   *&#64;note 服务健康信息
+   * </pre>
+   */
+  public  static final class PServiceHealthList extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PServiceHealthList)
+      PServiceHealthListOrBuilder {
+    // Use PServiceHealthList.newBuilder() to construct.
+    private PServiceHealthList(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PServiceHealthList() {
+      list_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PServiceHealthList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                list_ = new java.util.ArrayList<com.blemobi.sep.probuf.ResultProtos.PServiceHealth>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              list_.add(input.readMessage(com.blemobi.sep.probuf.ResultProtos.PServiceHealth.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          list_ = java.util.Collections.unmodifiableList(list_);
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PServiceHealthList_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PServiceHealthList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.ResultProtos.PServiceHealthList.class, com.blemobi.sep.probuf.ResultProtos.PServiceHealthList.Builder.class);
+    }
+
+    public static final int LIST_FIELD_NUMBER = 3;
+    private java.util.List<com.blemobi.sep.probuf.ResultProtos.PServiceHealth> list_;
+    /**
+     * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+     *
+     * <pre>
+     *健康信息列表
+     * </pre>
+     */
+    public java.util.List<com.blemobi.sep.probuf.ResultProtos.PServiceHealth> getListList() {
+      return list_;
+    }
+    /**
+     * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+     *
+     * <pre>
+     *健康信息列表
+     * </pre>
+     */
+    public java.util.List<? extends com.blemobi.sep.probuf.ResultProtos.PServiceHealthOrBuilder> 
+        getListOrBuilderList() {
+      return list_;
+    }
+    /**
+     * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+     *
+     * <pre>
+     *健康信息列表
+     * </pre>
+     */
+    public int getListCount() {
+      return list_.size();
+    }
+    /**
+     * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+     *
+     * <pre>
+     *健康信息列表
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.ResultProtos.PServiceHealth getList(int index) {
+      return list_.get(index);
+    }
+    /**
+     * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+     *
+     * <pre>
+     *健康信息列表
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.ResultProtos.PServiceHealthOrBuilder getListOrBuilder(
+        int index) {
+      return list_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < list_.size(); i++) {
+        output.writeMessage(3, list_.get(i));
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < list_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, list_.get(i));
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHealthList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHealthList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHealthList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHealthList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHealthList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHealthList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHealthList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHealthList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHealthList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHealthList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.ResultProtos.PServiceHealthList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PServiceHealthList}
+     *
+     * <pre>
+     *&#64;note 服务健康信息
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PServiceHealthList)
+        com.blemobi.sep.probuf.ResultProtos.PServiceHealthListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PServiceHealthList_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PServiceHealthList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.ResultProtos.PServiceHealthList.class, com.blemobi.sep.probuf.ResultProtos.PServiceHealthList.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.ResultProtos.PServiceHealthList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getListFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (listBuilder_ == null) {
+          list_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          listBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PServiceHealthList_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.ResultProtos.PServiceHealthList getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.ResultProtos.PServiceHealthList.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.ResultProtos.PServiceHealthList build() {
+        com.blemobi.sep.probuf.ResultProtos.PServiceHealthList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.ResultProtos.PServiceHealthList buildPartial() {
+        com.blemobi.sep.probuf.ResultProtos.PServiceHealthList result = new com.blemobi.sep.probuf.ResultProtos.PServiceHealthList(this);
+        int from_bitField0_ = bitField0_;
+        if (listBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            list_ = java.util.Collections.unmodifiableList(list_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.list_ = list_;
+        } else {
+          result.list_ = listBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.ResultProtos.PServiceHealthList) {
+          return mergeFrom((com.blemobi.sep.probuf.ResultProtos.PServiceHealthList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.ResultProtos.PServiceHealthList other) {
+        if (other == com.blemobi.sep.probuf.ResultProtos.PServiceHealthList.getDefaultInstance()) return this;
+        if (listBuilder_ == null) {
+          if (!other.list_.isEmpty()) {
+            if (list_.isEmpty()) {
+              list_ = other.list_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureListIsMutable();
+              list_.addAll(other.list_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.list_.isEmpty()) {
+            if (listBuilder_.isEmpty()) {
+              listBuilder_.dispose();
+              listBuilder_ = null;
+              list_ = other.list_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              listBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getListFieldBuilder() : null;
+            } else {
+              listBuilder_.addAllMessages(other.list_);
+            }
+          }
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.ResultProtos.PServiceHealthList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.ResultProtos.PServiceHealthList) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.blemobi.sep.probuf.ResultProtos.PServiceHealth> list_ =
+        java.util.Collections.emptyList();
+      private void ensureListIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          list_ = new java.util.ArrayList<com.blemobi.sep.probuf.ResultProtos.PServiceHealth>(list_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.ResultProtos.PServiceHealth, com.blemobi.sep.probuf.ResultProtos.PServiceHealth.Builder, com.blemobi.sep.probuf.ResultProtos.PServiceHealthOrBuilder> listBuilder_;
+
+      /**
+       * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+       *
+       * <pre>
+       *健康信息列表
+       * </pre>
+       */
+      public java.util.List<com.blemobi.sep.probuf.ResultProtos.PServiceHealth> getListList() {
+        if (listBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(list_);
+        } else {
+          return listBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+       *
+       * <pre>
+       *健康信息列表
+       * </pre>
+       */
+      public int getListCount() {
+        if (listBuilder_ == null) {
+          return list_.size();
+        } else {
+          return listBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+       *
+       * <pre>
+       *健康信息列表
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.ResultProtos.PServiceHealth getList(int index) {
+        if (listBuilder_ == null) {
+          return list_.get(index);
+        } else {
+          return listBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+       *
+       * <pre>
+       *健康信息列表
+       * </pre>
+       */
+      public Builder setList(
+          int index, com.blemobi.sep.probuf.ResultProtos.PServiceHealth value) {
+        if (listBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureListIsMutable();
+          list_.set(index, value);
+          onChanged();
+        } else {
+          listBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+       *
+       * <pre>
+       *健康信息列表
+       * </pre>
+       */
+      public Builder setList(
+          int index, com.blemobi.sep.probuf.ResultProtos.PServiceHealth.Builder builderForValue) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          list_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          listBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+       *
+       * <pre>
+       *健康信息列表
+       * </pre>
+       */
+      public Builder addList(com.blemobi.sep.probuf.ResultProtos.PServiceHealth value) {
+        if (listBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureListIsMutable();
+          list_.add(value);
+          onChanged();
+        } else {
+          listBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+       *
+       * <pre>
+       *健康信息列表
+       * </pre>
+       */
+      public Builder addList(
+          int index, com.blemobi.sep.probuf.ResultProtos.PServiceHealth value) {
+        if (listBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureListIsMutable();
+          list_.add(index, value);
+          onChanged();
+        } else {
+          listBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+       *
+       * <pre>
+       *健康信息列表
+       * </pre>
+       */
+      public Builder addList(
+          com.blemobi.sep.probuf.ResultProtos.PServiceHealth.Builder builderForValue) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          list_.add(builderForValue.build());
+          onChanged();
+        } else {
+          listBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+       *
+       * <pre>
+       *健康信息列表
+       * </pre>
+       */
+      public Builder addList(
+          int index, com.blemobi.sep.probuf.ResultProtos.PServiceHealth.Builder builderForValue) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          list_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          listBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+       *
+       * <pre>
+       *健康信息列表
+       * </pre>
+       */
+      public Builder addAllList(
+          java.lang.Iterable<? extends com.blemobi.sep.probuf.ResultProtos.PServiceHealth> values) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, list_);
+          onChanged();
+        } else {
+          listBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+       *
+       * <pre>
+       *健康信息列表
+       * </pre>
+       */
+      public Builder clearList() {
+        if (listBuilder_ == null) {
+          list_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          listBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+       *
+       * <pre>
+       *健康信息列表
+       * </pre>
+       */
+      public Builder removeList(int index) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          list_.remove(index);
+          onChanged();
+        } else {
+          listBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+       *
+       * <pre>
+       *健康信息列表
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.ResultProtos.PServiceHealth.Builder getListBuilder(
+          int index) {
+        return getListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+       *
+       * <pre>
+       *健康信息列表
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.ResultProtos.PServiceHealthOrBuilder getListOrBuilder(
+          int index) {
+        if (listBuilder_ == null) {
+          return list_.get(index);  } else {
+          return listBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+       *
+       * <pre>
+       *健康信息列表
+       * </pre>
+       */
+      public java.util.List<? extends com.blemobi.sep.probuf.ResultProtos.PServiceHealthOrBuilder> 
+           getListOrBuilderList() {
+        if (listBuilder_ != null) {
+          return listBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(list_);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+       *
+       * <pre>
+       *健康信息列表
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.ResultProtos.PServiceHealth.Builder addListBuilder() {
+        return getListFieldBuilder().addBuilder(
+            com.blemobi.sep.probuf.ResultProtos.PServiceHealth.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+       *
+       * <pre>
+       *健康信息列表
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.ResultProtos.PServiceHealth.Builder addListBuilder(
+          int index) {
+        return getListFieldBuilder().addBuilder(
+            index, com.blemobi.sep.probuf.ResultProtos.PServiceHealth.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PServiceHealth list = 3;</code>
+       *
+       * <pre>
+       *健康信息列表
+       * </pre>
+       */
+      public java.util.List<com.blemobi.sep.probuf.ResultProtos.PServiceHealth.Builder> 
+           getListBuilderList() {
+        return getListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.ResultProtos.PServiceHealth, com.blemobi.sep.probuf.ResultProtos.PServiceHealth.Builder, com.blemobi.sep.probuf.ResultProtos.PServiceHealthOrBuilder> 
+          getListFieldBuilder() {
+        if (listBuilder_ == null) {
+          listBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.blemobi.sep.probuf.ResultProtos.PServiceHealth, com.blemobi.sep.probuf.ResultProtos.PServiceHealth.Builder, com.blemobi.sep.probuf.ResultProtos.PServiceHealthOrBuilder>(
+                  list_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          list_ = null;
+        }
+        return listBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PServiceHealthList)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PServiceHealthList)
+    private static final com.blemobi.sep.probuf.ResultProtos.PServiceHealthList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ResultProtos.PServiceHealthList();
+    }
+
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHealthList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PServiceHealthList> PARSER =
+        new com.google.protobuf.AbstractParser<PServiceHealthList>() {
+      public PServiceHealthList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PServiceHealthList(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PServiceHealthList> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.ResultProtos.PServiceHealthList getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PServicesStatusOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PServicesStatus)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 status = 1;</code>
+     *
+     * <pre>
+     *服务状态
+     * </pre>
+     */
+    int getStatus();
+  }
+  /**
+   * Protobuf type {@code bbproto.PServicesStatus}
+   *
+   * <pre>
+   *&#64;note 服务健康状态
+   * </pre>
+   */
+  public  static final class PServicesStatus extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PServicesStatus)
+      PServicesStatusOrBuilder {
+    // Use PServicesStatus.newBuilder() to construct.
+    private PServicesStatus(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PServicesStatus() {
+      status_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PServicesStatus(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              status_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PServicesStatus_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PServicesStatus_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.ResultProtos.PServicesStatus.class, com.blemobi.sep.probuf.ResultProtos.PServicesStatus.Builder.class);
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 1;
+    private int status_;
+    /**
+     * <code>optional int32 status = 1;</code>
+     *
+     * <pre>
+     *服务状态
+     * </pre>
+     */
+    public int getStatus() {
+      return status_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (status_ != 0) {
+        output.writeInt32(1, status_);
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (status_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, status_);
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.ResultProtos.PServicesStatus parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServicesStatus parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServicesStatus parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServicesStatus parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServicesStatus parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServicesStatus parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServicesStatus parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServicesStatus parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServicesStatus parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServicesStatus parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.ResultProtos.PServicesStatus prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PServicesStatus}
+     *
+     * <pre>
+     *&#64;note 服务健康状态
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PServicesStatus)
+        com.blemobi.sep.probuf.ResultProtos.PServicesStatusOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PServicesStatus_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PServicesStatus_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.ResultProtos.PServicesStatus.class, com.blemobi.sep.probuf.ResultProtos.PServicesStatus.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.ResultProtos.PServicesStatus.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        status_ = 0;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PServicesStatus_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.ResultProtos.PServicesStatus getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.ResultProtos.PServicesStatus.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.ResultProtos.PServicesStatus build() {
+        com.blemobi.sep.probuf.ResultProtos.PServicesStatus result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.ResultProtos.PServicesStatus buildPartial() {
+        com.blemobi.sep.probuf.ResultProtos.PServicesStatus result = new com.blemobi.sep.probuf.ResultProtos.PServicesStatus(this);
+        result.status_ = status_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.ResultProtos.PServicesStatus) {
+          return mergeFrom((com.blemobi.sep.probuf.ResultProtos.PServicesStatus)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.ResultProtos.PServicesStatus other) {
+        if (other == com.blemobi.sep.probuf.ResultProtos.PServicesStatus.getDefaultInstance()) return this;
+        if (other.getStatus() != 0) {
+          setStatus(other.getStatus());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.ResultProtos.PServicesStatus parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.ResultProtos.PServicesStatus) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int status_ ;
+      /**
+       * <code>optional int32 status = 1;</code>
+       *
+       * <pre>
+       *服务状态
+       * </pre>
+       */
+      public int getStatus() {
+        return status_;
+      }
+      /**
+       * <code>optional int32 status = 1;</code>
+       *
+       * <pre>
+       *服务状态
+       * </pre>
+       */
+      public Builder setStatus(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 status = 1;</code>
+       *
+       * <pre>
+       *服务状态
+       * </pre>
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PServicesStatus)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PServicesStatus)
+    private static final com.blemobi.sep.probuf.ResultProtos.PServicesStatus DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ResultProtos.PServicesStatus();
+    }
+
+    public static com.blemobi.sep.probuf.ResultProtos.PServicesStatus getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PServicesStatus> PARSER =
+        new com.google.protobuf.AbstractParser<PServicesStatus>() {
+      public PServicesStatus parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PServicesStatus(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PServicesStatus> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.ResultProtos.PServicesStatus getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PServiceHeartbeatInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PServiceHeartbeatInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int64 tokenExpiration = 1;</code>
+     *
+     * <pre>
+     *token有效期
+     * </pre>
+     */
+    long getTokenExpiration();
+
+    /**
+     * <code>optional int32 status = 2;</code>
+     *
+     * <pre>
+     *服务总体状态。0：所有服务正常; 1：存在服务异常
+     * </pre>
+     */
+    int getStatus();
+
+    /**
+     * <code>repeated int32 abnormalIdList = 3;</code>
+     *
+     * <pre>
+     *异常的服务id列表
+     * </pre>
+     */
+    java.util.List<java.lang.Integer> getAbnormalIdListList();
+    /**
+     * <code>repeated int32 abnormalIdList = 3;</code>
+     *
+     * <pre>
+     *异常的服务id列表
+     * </pre>
+     */
+    int getAbnormalIdListCount();
+    /**
+     * <code>repeated int32 abnormalIdList = 3;</code>
+     *
+     * <pre>
+     *异常的服务id列表
+     * </pre>
+     */
+    int getAbnormalIdList(int index);
+  }
+  /**
+   * Protobuf type {@code bbproto.PServiceHeartbeatInfo}
+   *
+   * <pre>
+   *&#64;note 服务心跳信息
+   * </pre>
+   */
+  public  static final class PServiceHeartbeatInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PServiceHeartbeatInfo)
+      PServiceHeartbeatInfoOrBuilder {
+    // Use PServiceHeartbeatInfo.newBuilder() to construct.
+    private PServiceHeartbeatInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PServiceHeartbeatInfo() {
+      tokenExpiration_ = 0L;
+      status_ = 0;
+      abnormalIdList_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PServiceHeartbeatInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              tokenExpiration_ = input.readInt64();
+              break;
+            }
+            case 16: {
+
+              status_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                abnormalIdList_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              abnormalIdList_.add(input.readInt32());
+              break;
+            }
+            case 26: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004) && input.getBytesUntilLimit() > 0) {
+                abnormalIdList_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                abnormalIdList_.add(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          abnormalIdList_ = java.util.Collections.unmodifiableList(abnormalIdList_);
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PServiceHeartbeatInfo_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PServiceHeartbeatInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo.class, com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int TOKENEXPIRATION_FIELD_NUMBER = 1;
+    private long tokenExpiration_;
+    /**
+     * <code>optional int64 tokenExpiration = 1;</code>
+     *
+     * <pre>
+     *token有效期
+     * </pre>
+     */
+    public long getTokenExpiration() {
+      return tokenExpiration_;
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 2;
+    private int status_;
+    /**
+     * <code>optional int32 status = 2;</code>
+     *
+     * <pre>
+     *服务总体状态。0：所有服务正常; 1：存在服务异常
+     * </pre>
+     */
+    public int getStatus() {
+      return status_;
+    }
+
+    public static final int ABNORMALIDLIST_FIELD_NUMBER = 3;
+    private java.util.List<java.lang.Integer> abnormalIdList_;
+    /**
+     * <code>repeated int32 abnormalIdList = 3;</code>
+     *
+     * <pre>
+     *异常的服务id列表
+     * </pre>
+     */
+    public java.util.List<java.lang.Integer>
+        getAbnormalIdListList() {
+      return abnormalIdList_;
+    }
+    /**
+     * <code>repeated int32 abnormalIdList = 3;</code>
+     *
+     * <pre>
+     *异常的服务id列表
+     * </pre>
+     */
+    public int getAbnormalIdListCount() {
+      return abnormalIdList_.size();
+    }
+    /**
+     * <code>repeated int32 abnormalIdList = 3;</code>
+     *
+     * <pre>
+     *异常的服务id列表
+     * </pre>
+     */
+    public int getAbnormalIdList(int index) {
+      return abnormalIdList_.get(index);
+    }
+    private int abnormalIdListMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (tokenExpiration_ != 0L) {
+        output.writeInt64(1, tokenExpiration_);
+      }
+      if (status_ != 0) {
+        output.writeInt32(2, status_);
+      }
+      if (getAbnormalIdListList().size() > 0) {
+        output.writeRawVarint32(26);
+        output.writeRawVarint32(abnormalIdListMemoizedSerializedSize);
+      }
+      for (int i = 0; i < abnormalIdList_.size(); i++) {
+        output.writeInt32NoTag(abnormalIdList_.get(i));
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (tokenExpiration_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, tokenExpiration_);
+      }
+      if (status_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, status_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < abnormalIdList_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(abnormalIdList_.get(i));
+        }
+        size += dataSize;
+        if (!getAbnormalIdListList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        abnormalIdListMemoizedSerializedSize = dataSize;
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PServiceHeartbeatInfo}
+     *
+     * <pre>
+     *&#64;note 服务心跳信息
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PServiceHeartbeatInfo)
+        com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PServiceHeartbeatInfo_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PServiceHeartbeatInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo.class, com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        tokenExpiration_ = 0L;
+
+        status_ = 0;
+
+        abnormalIdList_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.ResultProtos.internal_static_bbproto_PServiceHeartbeatInfo_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo build() {
+        com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo buildPartial() {
+        com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo result = new com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.tokenExpiration_ = tokenExpiration_;
+        result.status_ = status_;
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          abnormalIdList_ = java.util.Collections.unmodifiableList(abnormalIdList_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.abnormalIdList_ = abnormalIdList_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo) {
+          return mergeFrom((com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo other) {
+        if (other == com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo.getDefaultInstance()) return this;
+        if (other.getTokenExpiration() != 0L) {
+          setTokenExpiration(other.getTokenExpiration());
+        }
+        if (other.getStatus() != 0) {
+          setStatus(other.getStatus());
+        }
+        if (!other.abnormalIdList_.isEmpty()) {
+          if (abnormalIdList_.isEmpty()) {
+            abnormalIdList_ = other.abnormalIdList_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureAbnormalIdListIsMutable();
+            abnormalIdList_.addAll(other.abnormalIdList_);
+          }
+          onChanged();
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long tokenExpiration_ ;
+      /**
+       * <code>optional int64 tokenExpiration = 1;</code>
+       *
+       * <pre>
+       *token有效期
+       * </pre>
+       */
+      public long getTokenExpiration() {
+        return tokenExpiration_;
+      }
+      /**
+       * <code>optional int64 tokenExpiration = 1;</code>
+       *
+       * <pre>
+       *token有效期
+       * </pre>
+       */
+      public Builder setTokenExpiration(long value) {
+        
+        tokenExpiration_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 tokenExpiration = 1;</code>
+       *
+       * <pre>
+       *token有效期
+       * </pre>
+       */
+      public Builder clearTokenExpiration() {
+        
+        tokenExpiration_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int status_ ;
+      /**
+       * <code>optional int32 status = 2;</code>
+       *
+       * <pre>
+       *服务总体状态。0：所有服务正常; 1：存在服务异常
+       * </pre>
+       */
+      public int getStatus() {
+        return status_;
+      }
+      /**
+       * <code>optional int32 status = 2;</code>
+       *
+       * <pre>
+       *服务总体状态。0：所有服务正常; 1：存在服务异常
+       * </pre>
+       */
+      public Builder setStatus(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 status = 2;</code>
+       *
+       * <pre>
+       *服务总体状态。0：所有服务正常; 1：存在服务异常
+       * </pre>
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> abnormalIdList_ = java.util.Collections.emptyList();
+      private void ensureAbnormalIdListIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          abnormalIdList_ = new java.util.ArrayList<java.lang.Integer>(abnormalIdList_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <code>repeated int32 abnormalIdList = 3;</code>
+       *
+       * <pre>
+       *异常的服务id列表
+       * </pre>
+       */
+      public java.util.List<java.lang.Integer>
+          getAbnormalIdListList() {
+        return java.util.Collections.unmodifiableList(abnormalIdList_);
+      }
+      /**
+       * <code>repeated int32 abnormalIdList = 3;</code>
+       *
+       * <pre>
+       *异常的服务id列表
+       * </pre>
+       */
+      public int getAbnormalIdListCount() {
+        return abnormalIdList_.size();
+      }
+      /**
+       * <code>repeated int32 abnormalIdList = 3;</code>
+       *
+       * <pre>
+       *异常的服务id列表
+       * </pre>
+       */
+      public int getAbnormalIdList(int index) {
+        return abnormalIdList_.get(index);
+      }
+      /**
+       * <code>repeated int32 abnormalIdList = 3;</code>
+       *
+       * <pre>
+       *异常的服务id列表
+       * </pre>
+       */
+      public Builder setAbnormalIdList(
+          int index, int value) {
+        ensureAbnormalIdListIsMutable();
+        abnormalIdList_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 abnormalIdList = 3;</code>
+       *
+       * <pre>
+       *异常的服务id列表
+       * </pre>
+       */
+      public Builder addAbnormalIdList(int value) {
+        ensureAbnormalIdListIsMutable();
+        abnormalIdList_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 abnormalIdList = 3;</code>
+       *
+       * <pre>
+       *异常的服务id列表
+       * </pre>
+       */
+      public Builder addAllAbnormalIdList(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureAbnormalIdListIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, abnormalIdList_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 abnormalIdList = 3;</code>
+       *
+       * <pre>
+       *异常的服务id列表
+       * </pre>
+       */
+      public Builder clearAbnormalIdList() {
+        abnormalIdList_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PServiceHeartbeatInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PServiceHeartbeatInfo)
+    private static final com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo();
+    }
+
+    public static com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PServiceHeartbeatInfo> PARSER =
+        new com.google.protobuf.AbstractParser<PServiceHeartbeatInfo>() {
+      public PServiceHeartbeatInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PServiceHeartbeatInfo(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PServiceHeartbeatInfo> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.ResultProtos.PServiceHeartbeatInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PResult_descriptor;
+    internal_static_bbproto_PResult_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PResult_fieldAccessorTable;
+      internal_static_bbproto_PResult_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PJResult_descriptor;
+    internal_static_bbproto_PJResult_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PJResult_fieldAccessorTable;
+      internal_static_bbproto_PJResult_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PMessage_descriptor;
+    internal_static_bbproto_PMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PMessage_fieldAccessorTable;
+      internal_static_bbproto_PMessage_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PManyUUID_descriptor;
+    internal_static_bbproto_PManyUUID_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PManyUUID_fieldAccessorTable;
+      internal_static_bbproto_PManyUUID_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PManyErrorCode_descriptor;
+    internal_static_bbproto_PManyErrorCode_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PManyErrorCode_fieldAccessorTable;
+      internal_static_bbproto_PManyErrorCode_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PStringList_descriptor;
+    internal_static_bbproto_PStringList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PStringList_fieldAccessorTable;
+      internal_static_bbproto_PStringList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PInt64List_descriptor;
+    internal_static_bbproto_PInt64List_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PInt64List_fieldAccessorTable;
+      internal_static_bbproto_PInt64List_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PInt32List_descriptor;
+    internal_static_bbproto_PInt32List_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PInt32List_fieldAccessorTable;
+      internal_static_bbproto_PInt32List_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PBoolList_descriptor;
+    internal_static_bbproto_PBoolList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PBoolList_fieldAccessorTable;
+      internal_static_bbproto_PBoolList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PFloat64List_descriptor;
+    internal_static_bbproto_PFloat64List_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PFloat64List_fieldAccessorTable;
+      internal_static_bbproto_PFloat64List_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PStringSingle_descriptor;
+    internal_static_bbproto_PStringSingle_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PStringSingle_fieldAccessorTable;
+      internal_static_bbproto_PStringSingle_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PInt64Single_descriptor;
+    internal_static_bbproto_PInt64Single_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PInt64Single_fieldAccessorTable;
+      internal_static_bbproto_PInt64Single_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PInt32Single_descriptor;
+    internal_static_bbproto_PInt32Single_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PInt32Single_fieldAccessorTable;
+      internal_static_bbproto_PInt32Single_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PBoolSingle_descriptor;
+    internal_static_bbproto_PBoolSingle_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PBoolSingle_fieldAccessorTable;
+      internal_static_bbproto_PBoolSingle_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PFloat64Single_descriptor;
+    internal_static_bbproto_PFloat64Single_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PFloat64Single_fieldAccessorTable;
+      internal_static_bbproto_PFloat64Single_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PBinaryMsg_descriptor;
+    internal_static_bbproto_PBinaryMsg_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PBinaryMsg_fieldAccessorTable;
+      internal_static_bbproto_PBinaryMsg_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PBinaryMsgList_descriptor;
+    internal_static_bbproto_PBinaryMsgList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PBinaryMsgList_fieldAccessorTable;
+      internal_static_bbproto_PBinaryMsgList_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PHealthItem_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PHealthItem_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PHealthItem_DetailEntry_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PHealthItem_DetailEntry_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PServiceHealth_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PServiceHealth_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PServiceHealthList_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PServiceHealthList_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PServicesStatus_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PServicesStatus_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PServiceHeartbeatInfo_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PServiceHeartbeatInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -8569,23 +12265,34 @@ public final class ResultProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014result.proto\022\006common\"A\n\007PResult\022\021\n\terr" +
-      "orCode\030\001 \001(\005\022\020\n\010errorMsg\030\002 \001(\t\022\021\n\textraI" +
-      "nfo\030\003 \001(\t\"\030\n\010PJResult\022\014\n\004code\030\001 \001(\005\"5\n\010P" +
-      "Message\022\r\n\005magic\030\001 \001(\005\022\014\n\004type\030\002 \001(\t\022\014\n\004" +
-      "data\030\003 \001(\014\"\035\n\tPManyUUID\022\020\n\010ManyUUID\030\001 \003(" +
-      "\t\"\'\n\016PManyErrorCode\022\025\n\rManyErrorCode\030\001 \003" +
-      "(\005\"\033\n\013PStringList\022\014\n\004List\030\001 \003(\t\"\032\n\nPInt6" +
-      "4List\022\014\n\004List\030\001 \003(\003\"\032\n\nPInt32List\022\014\n\004Lis" +
-      "t\030\001 \003(\005\"\031\n\tPBoolList\022\014\n\004List\030\001 \003(\010\"\034\n\014PF" +
-      "loat64List\022\014\n\004List\030\001 \003(\001\"\034\n\rPStringSingl",
-      "e\022\013\n\003Val\030\001 \001(\t\"\033\n\014PInt64Single\022\013\n\003Val\030\001 " +
-      "\001(\003\"\033\n\014PInt32Single\022\013\n\003Val\030\001 \001(\005\"\032\n\013PBoo" +
-      "lSingle\022\013\n\003Val\030\001 \001(\010\"\035\n\016PFloat64Single\022\013" +
-      "\n\003Val\030\001 \001(\001\".\n\nPBinaryMsg\022\017\n\007MsgType\030\001 \001" +
-      "(\005\022\017\n\007MsgData\030\002 \001(\014\"2\n\016PBinaryMsgList\022 \n" +
-      "\004List\030\001 \003(\0132\022.common.PBinaryMsgB&\n\026com.b" +
-      "lemobi.sep.probufB\014ResultProtosb\006proto3"
+      "\n\014result.proto\022\007bbproto\"A\n\007PResult\022\021\n\ter" +
+      "rorCode\030\001 \001(\005\022\020\n\010errorMsg\030\002 \001(\t\022\021\n\textra" +
+      "Info\030\003 \001(\t\"\030\n\010PJResult\022\014\n\004code\030\001 \001(\005\"5\n\010" +
+      "PMessage\022\r\n\005magic\030\001 \001(\005\022\014\n\004type\030\002 \001(\t\022\014\n" +
+      "\004data\030\003 \001(\014\"\035\n\tPManyUUID\022\020\n\010ManyUUID\030\001 \003" +
+      "(\t\"\'\n\016PManyErrorCode\022\025\n\rManyErrorCode\030\001 " +
+      "\003(\005\"\033\n\013PStringList\022\014\n\004List\030\001 \003(\t\"\032\n\nPInt" +
+      "64List\022\014\n\004List\030\001 \003(\003\"\032\n\nPInt32List\022\014\n\004Li" +
+      "st\030\001 \003(\005\"\031\n\tPBoolList\022\014\n\004List\030\001 \003(\010\"\034\n\014P" +
+      "Float64List\022\014\n\004List\030\001 \003(\001\"\034\n\rPStringSing",
+      "le\022\013\n\003Val\030\001 \001(\t\"\033\n\014PInt64Single\022\013\n\003Val\030\001" +
+      " \001(\003\"\033\n\014PInt32Single\022\013\n\003Val\030\001 \001(\005\"\032\n\013PBo" +
+      "olSingle\022\013\n\003Val\030\001 \001(\010\"\035\n\016PFloat64Single\022" +
+      "\013\n\003Val\030\001 \001(\001\".\n\nPBinaryMsg\022\017\n\007MsgType\030\001 " +
+      "\001(\005\022\017\n\007MsgData\030\002 \001(\014\"3\n\016PBinaryMsgList\022!" +
+      "\n\004List\030\001 \003(\0132\023.bbproto.PBinaryMsg\"\214\001\n\013PH" +
+      "ealthItem\022\014\n\004name\030\001 \001(\t\022\016\n\006status\030\002 \001(\005\022" +
+      "0\n\006detail\030\003 \003(\0132 .bbproto.PHealthItem.De" +
+      "tailEntry\032-\n\013DetailEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t:\0028\001\"a\n\016PServiceHealth\022\016\n\006st",
+      "atus\030\001 \001(\005\022\023\n\013serviceName\030\002 \001(\t\022*\n\014healI" +
+      "nfoList\030\003 \003(\0132\024.bbproto.PHealthItem\";\n\022P" +
+      "ServiceHealthList\022%\n\004list\030\003 \003(\0132\027.bbprot" +
+      "o.PServiceHealth\"!\n\017PServicesStatus\022\016\n\006s" +
+      "tatus\030\001 \001(\005\"X\n\025PServiceHeartbeatInfo\022\027\n\017" +
+      "tokenExpiration\030\001 \001(\003\022\016\n\006status\030\002 \001(\005\022\026\n" +
+      "\016abnormalIdList\030\003 \003(\005B&\n\026com.blemobi.sep" +
+      ".probufB\014ResultProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8599,108 +12306,144 @@ public final class ResultProtos {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_common_PResult_descriptor =
+    internal_static_bbproto_PResult_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_common_PResult_fieldAccessorTable = new
+    internal_static_bbproto_PResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PResult_descriptor,
+        internal_static_bbproto_PResult_descriptor,
         new java.lang.String[] { "ErrorCode", "ErrorMsg", "ExtraInfo", });
-    internal_static_common_PJResult_descriptor =
+    internal_static_bbproto_PJResult_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_common_PJResult_fieldAccessorTable = new
+    internal_static_bbproto_PJResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PJResult_descriptor,
+        internal_static_bbproto_PJResult_descriptor,
         new java.lang.String[] { "Code", });
-    internal_static_common_PMessage_descriptor =
+    internal_static_bbproto_PMessage_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_common_PMessage_fieldAccessorTable = new
+    internal_static_bbproto_PMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PMessage_descriptor,
+        internal_static_bbproto_PMessage_descriptor,
         new java.lang.String[] { "Magic", "Type", "Data", });
-    internal_static_common_PManyUUID_descriptor =
+    internal_static_bbproto_PManyUUID_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_common_PManyUUID_fieldAccessorTable = new
+    internal_static_bbproto_PManyUUID_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PManyUUID_descriptor,
+        internal_static_bbproto_PManyUUID_descriptor,
         new java.lang.String[] { "ManyUUID", });
-    internal_static_common_PManyErrorCode_descriptor =
+    internal_static_bbproto_PManyErrorCode_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_common_PManyErrorCode_fieldAccessorTable = new
+    internal_static_bbproto_PManyErrorCode_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PManyErrorCode_descriptor,
+        internal_static_bbproto_PManyErrorCode_descriptor,
         new java.lang.String[] { "ManyErrorCode", });
-    internal_static_common_PStringList_descriptor =
+    internal_static_bbproto_PStringList_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_common_PStringList_fieldAccessorTable = new
+    internal_static_bbproto_PStringList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PStringList_descriptor,
+        internal_static_bbproto_PStringList_descriptor,
         new java.lang.String[] { "List", });
-    internal_static_common_PInt64List_descriptor =
+    internal_static_bbproto_PInt64List_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_common_PInt64List_fieldAccessorTable = new
+    internal_static_bbproto_PInt64List_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PInt64List_descriptor,
+        internal_static_bbproto_PInt64List_descriptor,
         new java.lang.String[] { "List", });
-    internal_static_common_PInt32List_descriptor =
+    internal_static_bbproto_PInt32List_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_common_PInt32List_fieldAccessorTable = new
+    internal_static_bbproto_PInt32List_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PInt32List_descriptor,
+        internal_static_bbproto_PInt32List_descriptor,
         new java.lang.String[] { "List", });
-    internal_static_common_PBoolList_descriptor =
+    internal_static_bbproto_PBoolList_descriptor =
       getDescriptor().getMessageTypes().get(8);
-    internal_static_common_PBoolList_fieldAccessorTable = new
+    internal_static_bbproto_PBoolList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PBoolList_descriptor,
+        internal_static_bbproto_PBoolList_descriptor,
         new java.lang.String[] { "List", });
-    internal_static_common_PFloat64List_descriptor =
+    internal_static_bbproto_PFloat64List_descriptor =
       getDescriptor().getMessageTypes().get(9);
-    internal_static_common_PFloat64List_fieldAccessorTable = new
+    internal_static_bbproto_PFloat64List_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PFloat64List_descriptor,
+        internal_static_bbproto_PFloat64List_descriptor,
         new java.lang.String[] { "List", });
-    internal_static_common_PStringSingle_descriptor =
+    internal_static_bbproto_PStringSingle_descriptor =
       getDescriptor().getMessageTypes().get(10);
-    internal_static_common_PStringSingle_fieldAccessorTable = new
+    internal_static_bbproto_PStringSingle_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PStringSingle_descriptor,
+        internal_static_bbproto_PStringSingle_descriptor,
         new java.lang.String[] { "Val", });
-    internal_static_common_PInt64Single_descriptor =
+    internal_static_bbproto_PInt64Single_descriptor =
       getDescriptor().getMessageTypes().get(11);
-    internal_static_common_PInt64Single_fieldAccessorTable = new
+    internal_static_bbproto_PInt64Single_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PInt64Single_descriptor,
+        internal_static_bbproto_PInt64Single_descriptor,
         new java.lang.String[] { "Val", });
-    internal_static_common_PInt32Single_descriptor =
+    internal_static_bbproto_PInt32Single_descriptor =
       getDescriptor().getMessageTypes().get(12);
-    internal_static_common_PInt32Single_fieldAccessorTable = new
+    internal_static_bbproto_PInt32Single_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PInt32Single_descriptor,
+        internal_static_bbproto_PInt32Single_descriptor,
         new java.lang.String[] { "Val", });
-    internal_static_common_PBoolSingle_descriptor =
+    internal_static_bbproto_PBoolSingle_descriptor =
       getDescriptor().getMessageTypes().get(13);
-    internal_static_common_PBoolSingle_fieldAccessorTable = new
+    internal_static_bbproto_PBoolSingle_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PBoolSingle_descriptor,
+        internal_static_bbproto_PBoolSingle_descriptor,
         new java.lang.String[] { "Val", });
-    internal_static_common_PFloat64Single_descriptor =
+    internal_static_bbproto_PFloat64Single_descriptor =
       getDescriptor().getMessageTypes().get(14);
-    internal_static_common_PFloat64Single_fieldAccessorTable = new
+    internal_static_bbproto_PFloat64Single_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PFloat64Single_descriptor,
+        internal_static_bbproto_PFloat64Single_descriptor,
         new java.lang.String[] { "Val", });
-    internal_static_common_PBinaryMsg_descriptor =
+    internal_static_bbproto_PBinaryMsg_descriptor =
       getDescriptor().getMessageTypes().get(15);
-    internal_static_common_PBinaryMsg_fieldAccessorTable = new
+    internal_static_bbproto_PBinaryMsg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PBinaryMsg_descriptor,
+        internal_static_bbproto_PBinaryMsg_descriptor,
         new java.lang.String[] { "MsgType", "MsgData", });
-    internal_static_common_PBinaryMsgList_descriptor =
+    internal_static_bbproto_PBinaryMsgList_descriptor =
       getDescriptor().getMessageTypes().get(16);
-    internal_static_common_PBinaryMsgList_fieldAccessorTable = new
+    internal_static_bbproto_PBinaryMsgList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PBinaryMsgList_descriptor,
+        internal_static_bbproto_PBinaryMsgList_descriptor,
         new java.lang.String[] { "List", });
+    internal_static_bbproto_PHealthItem_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_bbproto_PHealthItem_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PHealthItem_descriptor,
+        new java.lang.String[] { "Name", "Status", "Detail", });
+    internal_static_bbproto_PHealthItem_DetailEntry_descriptor =
+      internal_static_bbproto_PHealthItem_descriptor.getNestedTypes().get(0);
+    internal_static_bbproto_PHealthItem_DetailEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PHealthItem_DetailEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_bbproto_PServiceHealth_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_bbproto_PServiceHealth_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PServiceHealth_descriptor,
+        new java.lang.String[] { "Status", "ServiceName", "HealInfoList", });
+    internal_static_bbproto_PServiceHealthList_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_bbproto_PServiceHealthList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PServiceHealthList_descriptor,
+        new java.lang.String[] { "List", });
+    internal_static_bbproto_PServicesStatus_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_bbproto_PServicesStatus_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PServicesStatus_descriptor,
+        new java.lang.String[] { "Status", });
+    internal_static_bbproto_PServiceHeartbeatInfo_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_bbproto_PServiceHeartbeatInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PServiceHeartbeatInfo_descriptor,
+        new java.lang.String[] { "TokenExpiration", "Status", "AbnormalIdList", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

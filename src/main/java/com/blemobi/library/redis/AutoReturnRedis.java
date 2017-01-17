@@ -1,6 +1,6 @@
 package com.blemobi.library.redis;
 
-import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.Map;
 
 import redis.clients.jedis.Jedis;
@@ -15,8 +15,8 @@ public class AutoReturnRedis {
 	/**
 	 * 存放活跃的连接对象
 	 */
-	private static Map<Integer, Jedis> map = new HashMap<Integer, Jedis>();
-	private static Map<Integer, Long> mapTime = new HashMap<Integer, Long>();
+	private static Map<Integer, Jedis> map = new Hashtable<Integer, Jedis>();
+	private static Map<Integer, Long> mapTime = new Hashtable<Integer, Long>();
 
 	/**
 	 * 存放连接对象，并设置失效时间

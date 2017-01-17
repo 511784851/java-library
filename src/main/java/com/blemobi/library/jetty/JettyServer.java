@@ -21,8 +21,6 @@ import com.blemobi.library.filter.ListParamFilter;
  *
  */
 public class JettyServer {
-
-	private static Server server;
 	private static String contextPath;
 	private String packages;
 	private int port;
@@ -49,32 +47,52 @@ public class JettyServer {
 	 * @throws Exception
 	 */
 	public void start() throws Exception {
-		if (server == null) {
-			ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
-			context.setContextPath("/");
-			EnumSet<DispatcherType> enumSet = EnumSet.allOf(DispatcherType.class);
-			enumSet.add(DispatcherType.REQUEST);
+		ServletContextHandler context = createContext();
+		setPackages(context);
 
-			// 添加需要过滤的PATH
-			context.addFilter(ListParamFilter.class, "/*", enumSet);
-			context.addFilter(GzipCompressFilter.class, "/*", enumSet);
-			for (ServerFilter serverFilter : serverFilterList) {
-				for (String path : serverFilter.getPathList()) {
-					context.addFilter(serverFilter.getFilter().getClass(), path, enumSet);
-				}
-			}
-
-			server = new Server(port);
-			server.setHandler(context);
-
-			ServletHolder jerseyServlet = context.addServlet(ServletContainer.class, "/*");
-			jerseyServlet.setInitOrder(0);
-			jerseyServlet.setInitParameter(ServerProperties.PROVIDER_PACKAGES, packages);
-
-			server.start();
-		}
+		Server server = new Server(port);
+		server.setHandler(context);
+		server.start();
 	}
 
+	/**
+	 * 设置Context信息
+	 * 
+	 * @return
+	 */
+	private ServletContextHandler createContext() {
+		ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
+		context.setContextPath("/");
+		EnumSet<DispatcherType> enumSet = EnumSet.allOf(DispatcherType.class);
+		enumSet.add(DispatcherType.REQUEST);
+
+		// 添加需要过滤的PATH
+		context.addFilter(ListParamFilter.class, "/*", enumSet);
+		context.addFilter(GzipCompressFilter.class, "/*", enumSet);
+		for (ServerFilter serverFilter : serverFilterList) {
+			for (String path : serverFilter.getPathList()) {
+				context.addFilter(serverFilter.getFilter().getClass(), path, enumSet);
+			}
+		}
+		return context;
+	}
+
+	/**
+	 * 设置对外的服务路径
+	 * 
+	 * @param context
+	 */
+	private void setPackages(ServletContextHandler context) {
+		ServletHolder jerseyServlet = context.addServlet(ServletContainer.class, "/*");
+		jerseyServlet.setInitOrder(0);
+		jerseyServlet.setInitParameter(ServerProperties.PROVIDER_PACKAGES, packages);
+	}
+
+	/**
+	 * 获取服务名称
+	 * 
+	 * @return
+	 */
 	public static String getServerName() {
 		return contextPath;
 	}
