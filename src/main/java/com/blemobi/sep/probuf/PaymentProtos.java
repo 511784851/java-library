@@ -7577,93 +7577,48 @@ public final class PaymentProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional int32 lotteryId = 1;</code>
+     * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
      *
      * <pre>
-     *抽奖包ID
+     *单个抽奖信息
      * </pre>
      */
-    int getLotteryId();
-
+    java.util.List<com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet> 
+        getLotteriesList();
     /**
-     * <code>optional string title = 2;</code>
+     * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
      *
      * <pre>
-     *抽奖包标题
+     *单个抽奖信息
      * </pre>
      */
-    java.lang.String getTitle();
+    com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet getLotteries(int index);
     /**
-     * <code>optional string title = 2;</code>
+     * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
      *
      * <pre>
-     *抽奖包标题
+     *单个抽奖信息
      * </pre>
      */
-    com.google.protobuf.ByteString
-        getTitleBytes();
-
+    int getLotteriesCount();
     /**
-     * <code>optional int32 winners = 3;</code>
+     * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
      *
      * <pre>
-     *中奖人数
+     *单个抽奖信息
      * </pre>
      */
-    int getWinners();
-
+    java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRetOrBuilder> 
+        getLotteriesOrBuilderList();
     /**
-     * <code>optional string crtTm = 4;</code>
+     * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
      *
      * <pre>
-     *发起抽奖时间
+     *单个抽奖信息
      * </pre>
      */
-    java.lang.String getCrtTm();
-    /**
-     * <code>optional string crtTm = 4;</code>
-     *
-     * <pre>
-     *发起抽奖时间
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getCrtTmBytes();
-
-    /**
-     * <code>repeated string icons = 5;</code>
-     *
-     * <pre>
-     *中奖者头像列表（最长5个头像）
-     * </pre>
-     */
-    com.google.protobuf.ProtocolStringList
-        getIconsList();
-    /**
-     * <code>repeated string icons = 5;</code>
-     *
-     * <pre>
-     *中奖者头像列表（最长5个头像）
-     * </pre>
-     */
-    int getIconsCount();
-    /**
-     * <code>repeated string icons = 5;</code>
-     *
-     * <pre>
-     *中奖者头像列表（最长5个头像）
-     * </pre>
-     */
-    java.lang.String getIcons(int index);
-    /**
-     * <code>repeated string icons = 5;</code>
-     *
-     * <pre>
-     *中奖者头像列表（最长5个头像）
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getIconsBytes(int index);
+    com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRetOrBuilder getLotteriesOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code bbproto.PLotteryListRet}
@@ -7677,11 +7632,7 @@ public final class PaymentProtos {
       super(builder);
     }
     private PLotteryListRet() {
-      lotteryId_ = 0;
-      title_ = "";
-      winners_ = 0;
-      crtTm_ = "";
-      icons_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      lotteries_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -7708,35 +7659,12 @@ public final class PaymentProtos {
               }
               break;
             }
-            case 8: {
-
-              lotteryId_ = input.readInt32();
-              break;
-            }
-            case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-
-              title_ = bs;
-              break;
-            }
-            case 24: {
-
-              winners_ = input.readInt32();
-              break;
-            }
-            case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-
-              crtTm_ = bs;
-              break;
-            }
-            case 42: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-                icons_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000010;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                lotteries_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet>();
+                mutable_bitField0_ |= 0x00000001;
               }
-              icons_.add(bs);
+              lotteries_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet.PARSER, extensionRegistry));
               break;
             }
           }
@@ -7748,8 +7676,8 @@ public final class PaymentProtos {
             new com.google.protobuf.InvalidProtocolBufferException(
                 e.getMessage()).setUnfinishedMessage(this));
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-          icons_ = icons_.getUnmodifiableView();
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          lotteries_ = java.util.Collections.unmodifiableList(lotteries_);
         }
         makeExtensionsImmutable();
       }
@@ -7766,164 +7694,59 @@ public final class PaymentProtos {
               com.blemobi.sep.probuf.PaymentProtos.PLotteryListRet.class, com.blemobi.sep.probuf.PaymentProtos.PLotteryListRet.Builder.class);
     }
 
-    private int bitField0_;
-    public static final int LOTTERYID_FIELD_NUMBER = 1;
-    private int lotteryId_;
+    public static final int LOTTERIES_FIELD_NUMBER = 1;
+    private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet> lotteries_;
     /**
-     * <code>optional int32 lotteryId = 1;</code>
+     * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
      *
      * <pre>
-     *抽奖包ID
+     *单个抽奖信息
      * </pre>
      */
-    public int getLotteryId() {
-      return lotteryId_;
-    }
-
-    public static final int TITLE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object title_;
-    /**
-     * <code>optional string title = 2;</code>
-     *
-     * <pre>
-     *抽奖包标题
-     * </pre>
-     */
-    public java.lang.String getTitle() {
-      java.lang.Object ref = title_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          title_ = s;
-        }
-        return s;
-      }
+    public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet> getLotteriesList() {
+      return lotteries_;
     }
     /**
-     * <code>optional string title = 2;</code>
+     * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
      *
      * <pre>
-     *抽奖包标题
+     *单个抽奖信息
      * </pre>
      */
-    public com.google.protobuf.ByteString
-        getTitleBytes() {
-      java.lang.Object ref = title_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        title_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int WINNERS_FIELD_NUMBER = 3;
-    private int winners_;
-    /**
-     * <code>optional int32 winners = 3;</code>
-     *
-     * <pre>
-     *中奖人数
-     * </pre>
-     */
-    public int getWinners() {
-      return winners_;
-    }
-
-    public static final int CRTTM_FIELD_NUMBER = 4;
-    private volatile java.lang.Object crtTm_;
-    /**
-     * <code>optional string crtTm = 4;</code>
-     *
-     * <pre>
-     *发起抽奖时间
-     * </pre>
-     */
-    public java.lang.String getCrtTm() {
-      java.lang.Object ref = crtTm_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          crtTm_ = s;
-        }
-        return s;
-      }
+    public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRetOrBuilder> 
+        getLotteriesOrBuilderList() {
+      return lotteries_;
     }
     /**
-     * <code>optional string crtTm = 4;</code>
+     * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
      *
      * <pre>
-     *发起抽奖时间
+     *单个抽奖信息
      * </pre>
      */
-    public com.google.protobuf.ByteString
-        getCrtTmBytes() {
-      java.lang.Object ref = crtTm_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        crtTm_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int ICONS_FIELD_NUMBER = 5;
-    private com.google.protobuf.LazyStringList icons_;
-    /**
-     * <code>repeated string icons = 5;</code>
-     *
-     * <pre>
-     *中奖者头像列表（最长5个头像）
-     * </pre>
-     */
-    public com.google.protobuf.ProtocolStringList
-        getIconsList() {
-      return icons_;
+    public int getLotteriesCount() {
+      return lotteries_.size();
     }
     /**
-     * <code>repeated string icons = 5;</code>
+     * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
      *
      * <pre>
-     *中奖者头像列表（最长5个头像）
+     *单个抽奖信息
      * </pre>
      */
-    public int getIconsCount() {
-      return icons_.size();
+    public com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet getLotteries(int index) {
+      return lotteries_.get(index);
     }
     /**
-     * <code>repeated string icons = 5;</code>
+     * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
      *
      * <pre>
-     *中奖者头像列表（最长5个头像）
+     *单个抽奖信息
      * </pre>
      */
-    public java.lang.String getIcons(int index) {
-      return icons_.get(index);
-    }
-    /**
-     * <code>repeated string icons = 5;</code>
-     *
-     * <pre>
-     *中奖者头像列表（最长5个头像）
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getIconsBytes(int index) {
-      return icons_.getByteString(index);
+    public com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRetOrBuilder getLotteriesOrBuilder(
+        int index) {
+      return lotteries_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -7938,20 +7761,8 @@ public final class PaymentProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (lotteryId_ != 0) {
-        output.writeInt32(1, lotteryId_);
-      }
-      if (!getTitleBytes().isEmpty()) {
-        output.writeBytes(2, getTitleBytes());
-      }
-      if (winners_ != 0) {
-        output.writeInt32(3, winners_);
-      }
-      if (!getCrtTmBytes().isEmpty()) {
-        output.writeBytes(4, getCrtTmBytes());
-      }
-      for (int i = 0; i < icons_.size(); i++) {
-        output.writeBytes(5, icons_.getByteString(i));
+      for (int i = 0; i < lotteries_.size(); i++) {
+        output.writeMessage(1, lotteries_.get(i));
       }
     }
 
@@ -7961,30 +7772,9 @@ public final class PaymentProtos {
       if (size != -1) return size;
 
       size = 0;
-      if (lotteryId_ != 0) {
+      for (int i = 0; i < lotteries_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, lotteryId_);
-      }
-      if (!getTitleBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getTitleBytes());
-      }
-      if (winners_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, winners_);
-      }
-      if (!getCrtTmBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getCrtTmBytes());
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < icons_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(icons_.getByteString(i));
-        }
-        size += dataSize;
-        size += 1 * getIconsList().size();
+          .computeMessageSize(1, lotteries_.get(i));
       }
       memoizedSerializedSize = size;
       return size;
@@ -8093,20 +7883,17 @@ public final class PaymentProtos {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getLotteriesFieldBuilder();
         }
       }
       public Builder clear() {
         super.clear();
-        lotteryId_ = 0;
-
-        title_ = "";
-
-        winners_ = 0;
-
-        crtTm_ = "";
-
-        icons_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        if (lotteriesBuilder_ == null) {
+          lotteries_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          lotteriesBuilder_.clear();
+        }
         return this;
       }
 
@@ -8130,17 +7917,15 @@ public final class PaymentProtos {
       public com.blemobi.sep.probuf.PaymentProtos.PLotteryListRet buildPartial() {
         com.blemobi.sep.probuf.PaymentProtos.PLotteryListRet result = new com.blemobi.sep.probuf.PaymentProtos.PLotteryListRet(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        result.lotteryId_ = lotteryId_;
-        result.title_ = title_;
-        result.winners_ = winners_;
-        result.crtTm_ = crtTm_;
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
-          icons_ = icons_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000010);
+        if (lotteriesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            lotteries_ = java.util.Collections.unmodifiableList(lotteries_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.lotteries_ = lotteries_;
+        } else {
+          result.lotteries_ = lotteriesBuilder_.build();
         }
-        result.icons_ = icons_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -8156,29 +7941,31 @@ public final class PaymentProtos {
 
       public Builder mergeFrom(com.blemobi.sep.probuf.PaymentProtos.PLotteryListRet other) {
         if (other == com.blemobi.sep.probuf.PaymentProtos.PLotteryListRet.getDefaultInstance()) return this;
-        if (other.getLotteryId() != 0) {
-          setLotteryId(other.getLotteryId());
-        }
-        if (!other.getTitle().isEmpty()) {
-          title_ = other.title_;
-          onChanged();
-        }
-        if (other.getWinners() != 0) {
-          setWinners(other.getWinners());
-        }
-        if (!other.getCrtTm().isEmpty()) {
-          crtTm_ = other.crtTm_;
-          onChanged();
-        }
-        if (!other.icons_.isEmpty()) {
-          if (icons_.isEmpty()) {
-            icons_ = other.icons_;
-            bitField0_ = (bitField0_ & ~0x00000010);
-          } else {
-            ensureIconsIsMutable();
-            icons_.addAll(other.icons_);
+        if (lotteriesBuilder_ == null) {
+          if (!other.lotteries_.isEmpty()) {
+            if (lotteries_.isEmpty()) {
+              lotteries_ = other.lotteries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureLotteriesIsMutable();
+              lotteries_.addAll(other.lotteries_);
+            }
+            onChanged();
           }
-          onChanged();
+        } else {
+          if (!other.lotteries_.isEmpty()) {
+            if (lotteriesBuilder_.isEmpty()) {
+              lotteriesBuilder_.dispose();
+              lotteriesBuilder_ = null;
+              lotteries_ = other.lotteries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              lotteriesBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getLotteriesFieldBuilder() : null;
+            } else {
+              lotteriesBuilder_.addAllMessages(other.lotteries_);
+            }
+          }
         }
         onChanged();
         return this;
@@ -8207,389 +7994,316 @@ public final class PaymentProtos {
       }
       private int bitField0_;
 
-      private int lotteryId_ ;
-      /**
-       * <code>optional int32 lotteryId = 1;</code>
-       *
-       * <pre>
-       *抽奖包ID
-       * </pre>
-       */
-      public int getLotteryId() {
-        return lotteryId_;
-      }
-      /**
-       * <code>optional int32 lotteryId = 1;</code>
-       *
-       * <pre>
-       *抽奖包ID
-       * </pre>
-       */
-      public Builder setLotteryId(int value) {
-        
-        lotteryId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 lotteryId = 1;</code>
-       *
-       * <pre>
-       *抽奖包ID
-       * </pre>
-       */
-      public Builder clearLotteryId() {
-        
-        lotteryId_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object title_ = "";
-      /**
-       * <code>optional string title = 2;</code>
-       *
-       * <pre>
-       *抽奖包标题
-       * </pre>
-       */
-      public java.lang.String getTitle() {
-        java.lang.Object ref = title_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            title_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string title = 2;</code>
-       *
-       * <pre>
-       *抽奖包标题
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getTitleBytes() {
-        java.lang.Object ref = title_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          title_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string title = 2;</code>
-       *
-       * <pre>
-       *抽奖包标题
-       * </pre>
-       */
-      public Builder setTitle(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        title_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string title = 2;</code>
-       *
-       * <pre>
-       *抽奖包标题
-       * </pre>
-       */
-      public Builder clearTitle() {
-        
-        title_ = getDefaultInstance().getTitle();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string title = 2;</code>
-       *
-       * <pre>
-       *抽奖包标题
-       * </pre>
-       */
-      public Builder setTitleBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        title_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int winners_ ;
-      /**
-       * <code>optional int32 winners = 3;</code>
-       *
-       * <pre>
-       *中奖人数
-       * </pre>
-       */
-      public int getWinners() {
-        return winners_;
-      }
-      /**
-       * <code>optional int32 winners = 3;</code>
-       *
-       * <pre>
-       *中奖人数
-       * </pre>
-       */
-      public Builder setWinners(int value) {
-        
-        winners_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 winners = 3;</code>
-       *
-       * <pre>
-       *中奖人数
-       * </pre>
-       */
-      public Builder clearWinners() {
-        
-        winners_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object crtTm_ = "";
-      /**
-       * <code>optional string crtTm = 4;</code>
-       *
-       * <pre>
-       *发起抽奖时间
-       * </pre>
-       */
-      public java.lang.String getCrtTm() {
-        java.lang.Object ref = crtTm_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            crtTm_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string crtTm = 4;</code>
-       *
-       * <pre>
-       *发起抽奖时间
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getCrtTmBytes() {
-        java.lang.Object ref = crtTm_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          crtTm_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string crtTm = 4;</code>
-       *
-       * <pre>
-       *发起抽奖时间
-       * </pre>
-       */
-      public Builder setCrtTm(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        crtTm_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string crtTm = 4;</code>
-       *
-       * <pre>
-       *发起抽奖时间
-       * </pre>
-       */
-      public Builder clearCrtTm() {
-        
-        crtTm_ = getDefaultInstance().getCrtTm();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string crtTm = 4;</code>
-       *
-       * <pre>
-       *发起抽奖时间
-       * </pre>
-       */
-      public Builder setCrtTmBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        crtTm_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.LazyStringList icons_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureIconsIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
-          icons_ = new com.google.protobuf.LazyStringArrayList(icons_);
-          bitField0_ |= 0x00000010;
+      private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet> lotteries_ =
+        java.util.Collections.emptyList();
+      private void ensureLotteriesIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          lotteries_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet>(lotteries_);
+          bitField0_ |= 0x00000001;
          }
       }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet, com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet.Builder, com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRetOrBuilder> lotteriesBuilder_;
+
       /**
-       * <code>repeated string icons = 5;</code>
+       * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
        *
        * <pre>
-       *中奖者头像列表（最长5个头像）
+       *单个抽奖信息
        * </pre>
        */
-      public com.google.protobuf.ProtocolStringList
-          getIconsList() {
-        return icons_.getUnmodifiableView();
+      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet> getLotteriesList() {
+        if (lotteriesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(lotteries_);
+        } else {
+          return lotteriesBuilder_.getMessageList();
+        }
       }
       /**
-       * <code>repeated string icons = 5;</code>
+       * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
        *
        * <pre>
-       *中奖者头像列表（最长5个头像）
+       *单个抽奖信息
        * </pre>
        */
-      public int getIconsCount() {
-        return icons_.size();
+      public int getLotteriesCount() {
+        if (lotteriesBuilder_ == null) {
+          return lotteries_.size();
+        } else {
+          return lotteriesBuilder_.getCount();
+        }
       }
       /**
-       * <code>repeated string icons = 5;</code>
+       * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
        *
        * <pre>
-       *中奖者头像列表（最长5个头像）
+       *单个抽奖信息
        * </pre>
        */
-      public java.lang.String getIcons(int index) {
-        return icons_.get(index);
+      public com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet getLotteries(int index) {
+        if (lotteriesBuilder_ == null) {
+          return lotteries_.get(index);
+        } else {
+          return lotteriesBuilder_.getMessage(index);
+        }
       }
       /**
-       * <code>repeated string icons = 5;</code>
+       * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
        *
        * <pre>
-       *中奖者头像列表（最长5个头像）
+       *单个抽奖信息
        * </pre>
        */
-      public com.google.protobuf.ByteString
-          getIconsBytes(int index) {
-        return icons_.getByteString(index);
-      }
-      /**
-       * <code>repeated string icons = 5;</code>
-       *
-       * <pre>
-       *中奖者头像列表（最长5个头像）
-       * </pre>
-       */
-      public Builder setIcons(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureIconsIsMutable();
-        icons_.set(index, value);
-        onChanged();
+      public Builder setLotteries(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet value) {
+        if (lotteriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLotteriesIsMutable();
+          lotteries_.set(index, value);
+          onChanged();
+        } else {
+          lotteriesBuilder_.setMessage(index, value);
+        }
         return this;
       }
       /**
-       * <code>repeated string icons = 5;</code>
+       * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
        *
        * <pre>
-       *中奖者头像列表（最长5个头像）
+       *单个抽奖信息
        * </pre>
        */
-      public Builder addIcons(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureIconsIsMutable();
-        icons_.add(value);
-        onChanged();
+      public Builder setLotteries(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet.Builder builderForValue) {
+        if (lotteriesBuilder_ == null) {
+          ensureLotteriesIsMutable();
+          lotteries_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          lotteriesBuilder_.setMessage(index, builderForValue.build());
+        }
         return this;
       }
       /**
-       * <code>repeated string icons = 5;</code>
+       * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
        *
        * <pre>
-       *中奖者头像列表（最长5个头像）
+       *单个抽奖信息
        * </pre>
        */
-      public Builder addAllIcons(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureIconsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, icons_);
-        onChanged();
+      public Builder addLotteries(com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet value) {
+        if (lotteriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLotteriesIsMutable();
+          lotteries_.add(value);
+          onChanged();
+        } else {
+          lotteriesBuilder_.addMessage(value);
+        }
         return this;
       }
       /**
-       * <code>repeated string icons = 5;</code>
+       * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
        *
        * <pre>
-       *中奖者头像列表（最长5个头像）
+       *单个抽奖信息
        * </pre>
        */
-      public Builder clearIcons() {
-        icons_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
-        onChanged();
+      public Builder addLotteries(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet value) {
+        if (lotteriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLotteriesIsMutable();
+          lotteries_.add(index, value);
+          onChanged();
+        } else {
+          lotteriesBuilder_.addMessage(index, value);
+        }
         return this;
       }
       /**
-       * <code>repeated string icons = 5;</code>
+       * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
        *
        * <pre>
-       *中奖者头像列表（最长5个头像）
+       *单个抽奖信息
        * </pre>
        */
-      public Builder addIconsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureIconsIsMutable();
-        icons_.add(value);
-        onChanged();
+      public Builder addLotteries(
+          com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet.Builder builderForValue) {
+        if (lotteriesBuilder_ == null) {
+          ensureLotteriesIsMutable();
+          lotteries_.add(builderForValue.build());
+          onChanged();
+        } else {
+          lotteriesBuilder_.addMessage(builderForValue.build());
+        }
         return this;
+      }
+      /**
+       * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
+       *
+       * <pre>
+       *单个抽奖信息
+       * </pre>
+       */
+      public Builder addLotteries(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet.Builder builderForValue) {
+        if (lotteriesBuilder_ == null) {
+          ensureLotteriesIsMutable();
+          lotteries_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          lotteriesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
+       *
+       * <pre>
+       *单个抽奖信息
+       * </pre>
+       */
+      public Builder addAllLotteries(
+          java.lang.Iterable<? extends com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet> values) {
+        if (lotteriesBuilder_ == null) {
+          ensureLotteriesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, lotteries_);
+          onChanged();
+        } else {
+          lotteriesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
+       *
+       * <pre>
+       *单个抽奖信息
+       * </pre>
+       */
+      public Builder clearLotteries() {
+        if (lotteriesBuilder_ == null) {
+          lotteries_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          lotteriesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
+       *
+       * <pre>
+       *单个抽奖信息
+       * </pre>
+       */
+      public Builder removeLotteries(int index) {
+        if (lotteriesBuilder_ == null) {
+          ensureLotteriesIsMutable();
+          lotteries_.remove(index);
+          onChanged();
+        } else {
+          lotteriesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
+       *
+       * <pre>
+       *单个抽奖信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet.Builder getLotteriesBuilder(
+          int index) {
+        return getLotteriesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
+       *
+       * <pre>
+       *单个抽奖信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRetOrBuilder getLotteriesOrBuilder(
+          int index) {
+        if (lotteriesBuilder_ == null) {
+          return lotteries_.get(index);  } else {
+          return lotteriesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
+       *
+       * <pre>
+       *单个抽奖信息
+       * </pre>
+       */
+      public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRetOrBuilder> 
+           getLotteriesOrBuilderList() {
+        if (lotteriesBuilder_ != null) {
+          return lotteriesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(lotteries_);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
+       *
+       * <pre>
+       *单个抽奖信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet.Builder addLotteriesBuilder() {
+        return getLotteriesFieldBuilder().addBuilder(
+            com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
+       *
+       * <pre>
+       *单个抽奖信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet.Builder addLotteriesBuilder(
+          int index) {
+        return getLotteriesFieldBuilder().addBuilder(
+            index, com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PLotterySingleRet lotteries = 1;</code>
+       *
+       * <pre>
+       *单个抽奖信息
+       * </pre>
+       */
+      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet.Builder> 
+           getLotteriesBuilderList() {
+        return getLotteriesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet, com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet.Builder, com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRetOrBuilder> 
+          getLotteriesFieldBuilder() {
+        if (lotteriesBuilder_ == null) {
+          lotteriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet, com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet.Builder, com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRetOrBuilder>(
+                  lotteries_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          lotteries_ = null;
+        }
+        return lotteriesBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8748,47 +8462,47 @@ public final class PaymentProtos {
         int index);
 
     /**
-     * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+     * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
      *
      * <pre>
      *用户列表
      * </pre>
      */
     java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> 
-        getListList();
+        getUsersList();
     /**
-     * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+     * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
      *
      * <pre>
      *用户列表
      * </pre>
      */
-    com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx getList(int index);
+    com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx getUsers(int index);
     /**
-     * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+     * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
      *
      * <pre>
      *用户列表
      * </pre>
      */
-    int getListCount();
+    int getUsersCount();
     /**
-     * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+     * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
      *
      * <pre>
      *用户列表
      * </pre>
      */
     java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder> 
-        getListOrBuilderList();
+        getUsersOrBuilderList();
     /**
-     * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+     * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
      *
      * <pre>
      *用户列表
      * </pre>
      */
-    com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder getListOrBuilder(
+    com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder getUsersOrBuilder(
         int index);
   }
   /**
@@ -8809,7 +8523,7 @@ public final class PaymentProtos {
       type_ = 0;
       winners_ = 0;
       locs_ = java.util.Collections.emptyList();
-      list_ = java.util.Collections.emptyList();
+      users_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -8872,10 +8586,10 @@ public final class PaymentProtos {
             }
             case 58: {
               if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
-                list_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx>();
+                users_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx>();
                 mutable_bitField0_ |= 0x00000040;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.PARSER, extensionRegistry));
+              users_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.PARSER, extensionRegistry));
               break;
             }
           }
@@ -8891,7 +8605,7 @@ public final class PaymentProtos {
           locs_ = java.util.Collections.unmodifiableList(locs_);
         }
         if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
-          list_ = java.util.Collections.unmodifiableList(list_);
+          users_ = java.util.Collections.unmodifiableList(users_);
         }
         makeExtensionsImmutable();
       }
@@ -9060,59 +8774,59 @@ public final class PaymentProtos {
       return locs_.get(index);
     }
 
-    public static final int LIST_FIELD_NUMBER = 7;
-    private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> list_;
+    public static final int USERS_FIELD_NUMBER = 7;
+    private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> users_;
     /**
-     * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+     * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
      *
      * <pre>
      *用户列表
      * </pre>
      */
-    public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> getListList() {
-      return list_;
+    public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> getUsersList() {
+      return users_;
     }
     /**
-     * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+     * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
      *
      * <pre>
      *用户列表
      * </pre>
      */
     public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder> 
-        getListOrBuilderList() {
-      return list_;
+        getUsersOrBuilderList() {
+      return users_;
     }
     /**
-     * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+     * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
      *
      * <pre>
      *用户列表
      * </pre>
      */
-    public int getListCount() {
-      return list_.size();
+    public int getUsersCount() {
+      return users_.size();
     }
     /**
-     * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+     * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
      *
      * <pre>
      *用户列表
      * </pre>
      */
-    public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx getList(int index) {
-      return list_.get(index);
+    public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx getUsers(int index) {
+      return users_.get(index);
     }
     /**
-     * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+     * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
      *
      * <pre>
      *用户列表
      * </pre>
      */
-    public com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder getListOrBuilder(
+    public com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder getUsersOrBuilder(
         int index) {
-      return list_.get(index);
+      return users_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -9145,8 +8859,8 @@ public final class PaymentProtos {
       for (int i = 0; i < locs_.size(); i++) {
         output.writeMessage(6, locs_.get(i));
       }
-      for (int i = 0; i < list_.size(); i++) {
-        output.writeMessage(7, list_.get(i));
+      for (int i = 0; i < users_.size(); i++) {
+        output.writeMessage(7, users_.get(i));
       }
     }
 
@@ -9180,9 +8894,9 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, locs_.get(i));
       }
-      for (int i = 0; i < list_.size(); i++) {
+      for (int i = 0; i < users_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, list_.get(i));
+          .computeMessageSize(7, users_.get(i));
       }
       memoizedSerializedSize = size;
       return size;
@@ -9292,7 +9006,7 @@ public final class PaymentProtos {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getLocsFieldBuilder();
-          getListFieldBuilder();
+          getUsersFieldBuilder();
         }
       }
       public Builder clear() {
@@ -9313,11 +9027,11 @@ public final class PaymentProtos {
         } else {
           locsBuilder_.clear();
         }
-        if (listBuilder_ == null) {
-          list_ = java.util.Collections.emptyList();
+        if (usersBuilder_ == null) {
+          users_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000040);
         } else {
-          listBuilder_.clear();
+          usersBuilder_.clear();
         }
         return this;
       }
@@ -9357,14 +9071,14 @@ public final class PaymentProtos {
         } else {
           result.locs_ = locsBuilder_.build();
         }
-        if (listBuilder_ == null) {
+        if (usersBuilder_ == null) {
           if (((bitField0_ & 0x00000040) == 0x00000040)) {
-            list_ = java.util.Collections.unmodifiableList(list_);
+            users_ = java.util.Collections.unmodifiableList(users_);
             bitField0_ = (bitField0_ & ~0x00000040);
           }
-          result.list_ = list_;
+          result.users_ = users_;
         } else {
-          result.list_ = listBuilder_.build();
+          result.users_ = usersBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -9424,29 +9138,29 @@ public final class PaymentProtos {
             }
           }
         }
-        if (listBuilder_ == null) {
-          if (!other.list_.isEmpty()) {
-            if (list_.isEmpty()) {
-              list_ = other.list_;
+        if (usersBuilder_ == null) {
+          if (!other.users_.isEmpty()) {
+            if (users_.isEmpty()) {
+              users_ = other.users_;
               bitField0_ = (bitField0_ & ~0x00000040);
             } else {
-              ensureListIsMutable();
-              list_.addAll(other.list_);
+              ensureUsersIsMutable();
+              users_.addAll(other.users_);
             }
             onChanged();
           }
         } else {
-          if (!other.list_.isEmpty()) {
-            if (listBuilder_.isEmpty()) {
-              listBuilder_.dispose();
-              listBuilder_ = null;
-              list_ = other.list_;
+          if (!other.users_.isEmpty()) {
+            if (usersBuilder_.isEmpty()) {
+              usersBuilder_.dispose();
+              usersBuilder_ = null;
+              users_ = other.users_;
               bitField0_ = (bitField0_ & ~0x00000040);
-              listBuilder_ = 
+              usersBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getListFieldBuilder() : null;
+                   getUsersFieldBuilder() : null;
             } else {
-              listBuilder_.addAllMessages(other.list_);
+              usersBuilder_.addAllMessages(other.users_);
             }
           }
         }
@@ -10031,316 +9745,316 @@ public final class PaymentProtos {
         return locsBuilder_;
       }
 
-      private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> list_ =
+      private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> users_ =
         java.util.Collections.emptyList();
-      private void ensureListIsMutable() {
+      private void ensureUsersIsMutable() {
         if (!((bitField0_ & 0x00000040) == 0x00000040)) {
-          list_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx>(list_);
+          users_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx>(users_);
           bitField0_ |= 0x00000040;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder, com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder> listBuilder_;
+          com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder, com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder> usersBuilder_;
 
       /**
-       * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> getListList() {
-        if (listBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(list_);
+      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> getUsersList() {
+        if (usersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(users_);
         } else {
-          return listBuilder_.getMessageList();
+          return usersBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public int getListCount() {
-        if (listBuilder_ == null) {
-          return list_.size();
+      public int getUsersCount() {
+        if (usersBuilder_ == null) {
+          return users_.size();
         } else {
-          return listBuilder_.getCount();
+          return usersBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx getList(int index) {
-        if (listBuilder_ == null) {
-          return list_.get(index);
+      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx getUsers(int index) {
+        if (usersBuilder_ == null) {
+          return users_.get(index);
         } else {
-          return listBuilder_.getMessage(index);
+          return usersBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public Builder setList(
+      public Builder setUsers(
           int index, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx value) {
-        if (listBuilder_ == null) {
+        if (usersBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureListIsMutable();
-          list_.set(index, value);
+          ensureUsersIsMutable();
+          users_.set(index, value);
           onChanged();
         } else {
-          listBuilder_.setMessage(index, value);
+          usersBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public Builder setList(
+      public Builder setUsers(
           int index, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder builderForValue) {
-        if (listBuilder_ == null) {
-          ensureListIsMutable();
-          list_.set(index, builderForValue.build());
+        if (usersBuilder_ == null) {
+          ensureUsersIsMutable();
+          users_.set(index, builderForValue.build());
           onChanged();
         } else {
-          listBuilder_.setMessage(index, builderForValue.build());
+          usersBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public Builder addList(com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx value) {
-        if (listBuilder_ == null) {
+      public Builder addUsers(com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx value) {
+        if (usersBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureListIsMutable();
-          list_.add(value);
+          ensureUsersIsMutable();
+          users_.add(value);
           onChanged();
         } else {
-          listBuilder_.addMessage(value);
+          usersBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public Builder addList(
+      public Builder addUsers(
           int index, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx value) {
-        if (listBuilder_ == null) {
+        if (usersBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureListIsMutable();
-          list_.add(index, value);
+          ensureUsersIsMutable();
+          users_.add(index, value);
           onChanged();
         } else {
-          listBuilder_.addMessage(index, value);
+          usersBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public Builder addList(
+      public Builder addUsers(
           com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder builderForValue) {
-        if (listBuilder_ == null) {
-          ensureListIsMutable();
-          list_.add(builderForValue.build());
+        if (usersBuilder_ == null) {
+          ensureUsersIsMutable();
+          users_.add(builderForValue.build());
           onChanged();
         } else {
-          listBuilder_.addMessage(builderForValue.build());
+          usersBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public Builder addList(
+      public Builder addUsers(
           int index, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder builderForValue) {
-        if (listBuilder_ == null) {
-          ensureListIsMutable();
-          list_.add(index, builderForValue.build());
+        if (usersBuilder_ == null) {
+          ensureUsersIsMutable();
+          users_.add(index, builderForValue.build());
           onChanged();
         } else {
-          listBuilder_.addMessage(index, builderForValue.build());
+          usersBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public Builder addAllList(
+      public Builder addAllUsers(
           java.lang.Iterable<? extends com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> values) {
-        if (listBuilder_ == null) {
-          ensureListIsMutable();
+        if (usersBuilder_ == null) {
+          ensureUsersIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, list_);
+              values, users_);
           onChanged();
         } else {
-          listBuilder_.addAllMessages(values);
+          usersBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public Builder clearList() {
-        if (listBuilder_ == null) {
-          list_ = java.util.Collections.emptyList();
+      public Builder clearUsers() {
+        if (usersBuilder_ == null) {
+          users_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000040);
           onChanged();
         } else {
-          listBuilder_.clear();
+          usersBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public Builder removeList(int index) {
-        if (listBuilder_ == null) {
-          ensureListIsMutable();
-          list_.remove(index);
+      public Builder removeUsers(int index) {
+        if (usersBuilder_ == null) {
+          ensureUsersIsMutable();
+          users_.remove(index);
           onChanged();
         } else {
-          listBuilder_.remove(index);
+          usersBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder getListBuilder(
+      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder getUsersBuilder(
           int index) {
-        return getListFieldBuilder().getBuilder(index);
+        return getUsersFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder getListOrBuilder(
+      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder getUsersOrBuilder(
           int index) {
-        if (listBuilder_ == null) {
-          return list_.get(index);  } else {
-          return listBuilder_.getMessageOrBuilder(index);
+        if (usersBuilder_ == null) {
+          return users_.get(index);  } else {
+          return usersBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
       public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder> 
-           getListOrBuilderList() {
-        if (listBuilder_ != null) {
-          return listBuilder_.getMessageOrBuilderList();
+           getUsersOrBuilderList() {
+        if (usersBuilder_ != null) {
+          return usersBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(list_);
+          return java.util.Collections.unmodifiableList(users_);
         }
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder addListBuilder() {
-        return getListFieldBuilder().addBuilder(
+      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder addUsersBuilder() {
+        return getUsersFieldBuilder().addBuilder(
             com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.getDefaultInstance());
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder addListBuilder(
+      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder addUsersBuilder(
           int index) {
-        return getListFieldBuilder().addBuilder(
+        return getUsersFieldBuilder().addBuilder(
             index, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.getDefaultInstance());
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx list = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
       public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder> 
-           getListBuilderList() {
-        return getListFieldBuilder().getBuilderList();
+           getUsersBuilderList() {
+        return getUsersFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
           com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder, com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder> 
-          getListFieldBuilder() {
-        if (listBuilder_ == null) {
-          listBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          getUsersFieldBuilder() {
+        if (usersBuilder_ == null) {
+          usersBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder, com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder>(
-                  list_,
+                  users_,
                   ((bitField0_ & 0x00000040) == 0x00000040),
                   getParentForChildren(),
                   isClean());
-          list_ = null;
+          users_ = null;
         }
-        return listBuilder_;
+        return usersBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -10391,6 +10105,1079 @@ public final class PaymentProtos {
     }
 
     public com.blemobi.sep.probuf.PaymentProtos.PLotteryDetailRet getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PLotterySingleRetOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PLotterySingleRet)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 lotteryId = 1;</code>
+     *
+     * <pre>
+     *抽奖包ID
+     * </pre>
+     */
+    int getLotteryId();
+
+    /**
+     * <code>optional string title = 2;</code>
+     *
+     * <pre>
+     *抽奖包标题
+     * </pre>
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>optional string title = 2;</code>
+     *
+     * <pre>
+     *抽奖包标题
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>optional int32 winners = 3;</code>
+     *
+     * <pre>
+     *中奖人数
+     * </pre>
+     */
+    int getWinners();
+
+    /**
+     * <code>optional string crtTm = 4;</code>
+     *
+     * <pre>
+     *发起抽奖时间
+     * </pre>
+     */
+    java.lang.String getCrtTm();
+    /**
+     * <code>optional string crtTm = 4;</code>
+     *
+     * <pre>
+     *发起抽奖时间
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getCrtTmBytes();
+
+    /**
+     * <code>repeated string icons = 5;</code>
+     *
+     * <pre>
+     *中奖者头像列表（最长5个头像.）
+     * </pre>
+     */
+    com.google.protobuf.ProtocolStringList
+        getIconsList();
+    /**
+     * <code>repeated string icons = 5;</code>
+     *
+     * <pre>
+     *中奖者头像列表（最长5个头像.）
+     * </pre>
+     */
+    int getIconsCount();
+    /**
+     * <code>repeated string icons = 5;</code>
+     *
+     * <pre>
+     *中奖者头像列表（最长5个头像.）
+     * </pre>
+     */
+    java.lang.String getIcons(int index);
+    /**
+     * <code>repeated string icons = 5;</code>
+     *
+     * <pre>
+     *中奖者头像列表（最长5个头像.）
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getIconsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code bbproto.PLotterySingleRet}
+   */
+  public  static final class PLotterySingleRet extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PLotterySingleRet)
+      PLotterySingleRetOrBuilder {
+    // Use PLotterySingleRet.newBuilder() to construct.
+    private PLotterySingleRet(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PLotterySingleRet() {
+      lotteryId_ = 0;
+      title_ = "";
+      winners_ = 0;
+      crtTm_ = "";
+      icons_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PLotterySingleRet(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              lotteryId_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              title_ = bs;
+              break;
+            }
+            case 24: {
+
+              winners_ = input.readInt32();
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              crtTm_ = bs;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                icons_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              icons_.add(bs);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          icons_ = icons_.getUnmodifiableView();
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PLotterySingleRet_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PLotterySingleRet_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet.class, com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int LOTTERYID_FIELD_NUMBER = 1;
+    private int lotteryId_;
+    /**
+     * <code>optional int32 lotteryId = 1;</code>
+     *
+     * <pre>
+     *抽奖包ID
+     * </pre>
+     */
+    public int getLotteryId() {
+      return lotteryId_;
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object title_;
+    /**
+     * <code>optional string title = 2;</code>
+     *
+     * <pre>
+     *抽奖包标题
+     * </pre>
+     */
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          title_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string title = 2;</code>
+     *
+     * <pre>
+     *抽奖包标题
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WINNERS_FIELD_NUMBER = 3;
+    private int winners_;
+    /**
+     * <code>optional int32 winners = 3;</code>
+     *
+     * <pre>
+     *中奖人数
+     * </pre>
+     */
+    public int getWinners() {
+      return winners_;
+    }
+
+    public static final int CRTTM_FIELD_NUMBER = 4;
+    private volatile java.lang.Object crtTm_;
+    /**
+     * <code>optional string crtTm = 4;</code>
+     *
+     * <pre>
+     *发起抽奖时间
+     * </pre>
+     */
+    public java.lang.String getCrtTm() {
+      java.lang.Object ref = crtTm_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          crtTm_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string crtTm = 4;</code>
+     *
+     * <pre>
+     *发起抽奖时间
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getCrtTmBytes() {
+      java.lang.Object ref = crtTm_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        crtTm_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ICONS_FIELD_NUMBER = 5;
+    private com.google.protobuf.LazyStringList icons_;
+    /**
+     * <code>repeated string icons = 5;</code>
+     *
+     * <pre>
+     *中奖者头像列表（最长5个头像.）
+     * </pre>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getIconsList() {
+      return icons_;
+    }
+    /**
+     * <code>repeated string icons = 5;</code>
+     *
+     * <pre>
+     *中奖者头像列表（最长5个头像.）
+     * </pre>
+     */
+    public int getIconsCount() {
+      return icons_.size();
+    }
+    /**
+     * <code>repeated string icons = 5;</code>
+     *
+     * <pre>
+     *中奖者头像列表（最长5个头像.）
+     * </pre>
+     */
+    public java.lang.String getIcons(int index) {
+      return icons_.get(index);
+    }
+    /**
+     * <code>repeated string icons = 5;</code>
+     *
+     * <pre>
+     *中奖者头像列表（最长5个头像.）
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getIconsBytes(int index) {
+      return icons_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (lotteryId_ != 0) {
+        output.writeInt32(1, lotteryId_);
+      }
+      if (!getTitleBytes().isEmpty()) {
+        output.writeBytes(2, getTitleBytes());
+      }
+      if (winners_ != 0) {
+        output.writeInt32(3, winners_);
+      }
+      if (!getCrtTmBytes().isEmpty()) {
+        output.writeBytes(4, getCrtTmBytes());
+      }
+      for (int i = 0; i < icons_.size(); i++) {
+        output.writeBytes(5, icons_.getByteString(i));
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (lotteryId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, lotteryId_);
+      }
+      if (!getTitleBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getTitleBytes());
+      }
+      if (winners_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, winners_);
+      }
+      if (!getCrtTmBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getCrtTmBytes());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < icons_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(icons_.getByteString(i));
+        }
+        size += dataSize;
+        size += 1 * getIconsList().size();
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PLotterySingleRet}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PLotterySingleRet)
+        com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRetOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PLotterySingleRet_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PLotterySingleRet_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet.class, com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        lotteryId_ = 0;
+
+        title_ = "";
+
+        winners_ = 0;
+
+        crtTm_ = "";
+
+        icons_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PLotterySingleRet_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet build() {
+        com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet buildPartial() {
+        com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet result = new com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.lotteryId_ = lotteryId_;
+        result.title_ = title_;
+        result.winners_ = winners_;
+        result.crtTm_ = crtTm_;
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          icons_ = icons_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.icons_ = icons_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet) {
+          return mergeFrom((com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet other) {
+        if (other == com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet.getDefaultInstance()) return this;
+        if (other.getLotteryId() != 0) {
+          setLotteryId(other.getLotteryId());
+        }
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          onChanged();
+        }
+        if (other.getWinners() != 0) {
+          setWinners(other.getWinners());
+        }
+        if (!other.getCrtTm().isEmpty()) {
+          crtTm_ = other.crtTm_;
+          onChanged();
+        }
+        if (!other.icons_.isEmpty()) {
+          if (icons_.isEmpty()) {
+            icons_ = other.icons_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureIconsIsMutable();
+            icons_.addAll(other.icons_);
+          }
+          onChanged();
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int lotteryId_ ;
+      /**
+       * <code>optional int32 lotteryId = 1;</code>
+       *
+       * <pre>
+       *抽奖包ID
+       * </pre>
+       */
+      public int getLotteryId() {
+        return lotteryId_;
+      }
+      /**
+       * <code>optional int32 lotteryId = 1;</code>
+       *
+       * <pre>
+       *抽奖包ID
+       * </pre>
+       */
+      public Builder setLotteryId(int value) {
+        
+        lotteryId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 lotteryId = 1;</code>
+       *
+       * <pre>
+       *抽奖包ID
+       * </pre>
+       */
+      public Builder clearLotteryId() {
+        
+        lotteryId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>optional string title = 2;</code>
+       *
+       * <pre>
+       *抽奖包标题
+       * </pre>
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            title_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string title = 2;</code>
+       *
+       * <pre>
+       *抽奖包标题
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string title = 2;</code>
+       *
+       * <pre>
+       *抽奖包标题
+       * </pre>
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        title_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string title = 2;</code>
+       *
+       * <pre>
+       *抽奖包标题
+       * </pre>
+       */
+      public Builder clearTitle() {
+        
+        title_ = getDefaultInstance().getTitle();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string title = 2;</code>
+       *
+       * <pre>
+       *抽奖包标题
+       * </pre>
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        title_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int winners_ ;
+      /**
+       * <code>optional int32 winners = 3;</code>
+       *
+       * <pre>
+       *中奖人数
+       * </pre>
+       */
+      public int getWinners() {
+        return winners_;
+      }
+      /**
+       * <code>optional int32 winners = 3;</code>
+       *
+       * <pre>
+       *中奖人数
+       * </pre>
+       */
+      public Builder setWinners(int value) {
+        
+        winners_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 winners = 3;</code>
+       *
+       * <pre>
+       *中奖人数
+       * </pre>
+       */
+      public Builder clearWinners() {
+        
+        winners_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object crtTm_ = "";
+      /**
+       * <code>optional string crtTm = 4;</code>
+       *
+       * <pre>
+       *发起抽奖时间
+       * </pre>
+       */
+      public java.lang.String getCrtTm() {
+        java.lang.Object ref = crtTm_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            crtTm_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string crtTm = 4;</code>
+       *
+       * <pre>
+       *发起抽奖时间
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getCrtTmBytes() {
+        java.lang.Object ref = crtTm_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          crtTm_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string crtTm = 4;</code>
+       *
+       * <pre>
+       *发起抽奖时间
+       * </pre>
+       */
+      public Builder setCrtTm(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        crtTm_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string crtTm = 4;</code>
+       *
+       * <pre>
+       *发起抽奖时间
+       * </pre>
+       */
+      public Builder clearCrtTm() {
+        
+        crtTm_ = getDefaultInstance().getCrtTm();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string crtTm = 4;</code>
+       *
+       * <pre>
+       *发起抽奖时间
+       * </pre>
+       */
+      public Builder setCrtTmBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        crtTm_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList icons_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureIconsIsMutable() {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+          icons_ = new com.google.protobuf.LazyStringArrayList(icons_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+      /**
+       * <code>repeated string icons = 5;</code>
+       *
+       * <pre>
+       *中奖者头像列表（最长5个头像.）
+       * </pre>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getIconsList() {
+        return icons_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string icons = 5;</code>
+       *
+       * <pre>
+       *中奖者头像列表（最长5个头像.）
+       * </pre>
+       */
+      public int getIconsCount() {
+        return icons_.size();
+      }
+      /**
+       * <code>repeated string icons = 5;</code>
+       *
+       * <pre>
+       *中奖者头像列表（最长5个头像.）
+       * </pre>
+       */
+      public java.lang.String getIcons(int index) {
+        return icons_.get(index);
+      }
+      /**
+       * <code>repeated string icons = 5;</code>
+       *
+       * <pre>
+       *中奖者头像列表（最长5个头像.）
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getIconsBytes(int index) {
+        return icons_.getByteString(index);
+      }
+      /**
+       * <code>repeated string icons = 5;</code>
+       *
+       * <pre>
+       *中奖者头像列表（最长5个头像.）
+       * </pre>
+       */
+      public Builder setIcons(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureIconsIsMutable();
+        icons_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string icons = 5;</code>
+       *
+       * <pre>
+       *中奖者头像列表（最长5个头像.）
+       * </pre>
+       */
+      public Builder addIcons(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureIconsIsMutable();
+        icons_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string icons = 5;</code>
+       *
+       * <pre>
+       *中奖者头像列表（最长5个头像.）
+       * </pre>
+       */
+      public Builder addAllIcons(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureIconsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, icons_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string icons = 5;</code>
+       *
+       * <pre>
+       *中奖者头像列表（最长5个头像.）
+       * </pre>
+       */
+      public Builder clearIcons() {
+        icons_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string icons = 5;</code>
+       *
+       * <pre>
+       *中奖者头像列表（最长5个头像.）
+       * </pre>
+       */
+      public Builder addIconsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureIconsIsMutable();
+        icons_.add(value);
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PLotterySingleRet)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PLotterySingleRet)
+    private static final com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet();
+    }
+
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PLotterySingleRet> PARSER =
+        new com.google.protobuf.AbstractParser<PLotterySingleRet>() {
+      public PLotterySingleRet parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PLotterySingleRet(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PLotterySingleRet> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -11812,6 +12599,11 @@ public final class PaymentProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_bbproto_PLotteryDetailRet_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PLotterySingleRet_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PLotterySingleRet_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
     internal_static_bbproto_PLocation_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -11851,18 +12643,20 @@ public final class PaymentProtos {
       "ode\030\t \001(\005\"\213\001\n\010PLottery\022\r\n\005title\030\001 \001(\t\022\014\n" +
       "\004type\030\002 \001(\005\022\017\n\007winners\030\003 \001(\005\022\016\n\006totAmt\030\004",
       " \001(\005\022\r\n\005bonus\030\005 \001(\005\022 \n\004locs\030\006 \003(\0132\022.bbpr" +
-      "oto.PLocation\022\020\n\010uuidList\030\007 \003(\t\"b\n\017PLott" +
-      "eryListRet\022\021\n\tlotteryId\030\001 \001(\005\022\r\n\005title\030\002" +
-      " \001(\t\022\017\n\007winners\030\003 \001(\005\022\r\n\005crtTm\030\004 \001(\t\022\r\n\005" +
-      "icons\030\005 \003(\t\"\252\001\n\021PLotteryDetailRet\022\021\n\tlot" +
-      "teryId\030\001 \001(\005\022\016\n\006totAmt\030\002 \001(\005\022\r\n\005crtTm\030\003 " +
-      "\001(\t\022\014\n\004type\030\004 \001(\005\022\017\n\007winners\030\005 \001(\005\022 \n\004lo" +
-      "cs\030\006 \003(\0132\022.bbproto.PLocation\022\"\n\004list\030\007 \003" +
-      "(\0132\024.bbproto.PUserBaseEx\")\n\tPLocation\022\r\n" +
-      "\005locCd\030\001 \001(\t\022\r\n\005locNm\030\002 \001(\t\"I\n\013PUserBase",
-      "Ex\022 \n\004info\030\001 \001(\0132\022.bbproto.PUserBase\022\013\n\003" +
-      "sex\030\002 \001(\005\022\013\n\003amt\030\003 \001(\005B\'\n\026com.blemobi.se" +
-      "p.probufB\rPaymentProtosb\006proto3"
+      "oto.PLocation\022\020\n\010uuidList\030\007 \003(\t\"@\n\017PLott" +
+      "eryListRet\022-\n\tlotteries\030\001 \003(\0132\032.bbproto." +
+      "PLotterySingleRet\"\253\001\n\021PLotteryDetailRet\022" +
+      "\021\n\tlotteryId\030\001 \001(\005\022\016\n\006totAmt\030\002 \001(\005\022\r\n\005cr" +
+      "tTm\030\003 \001(\t\022\014\n\004type\030\004 \001(\005\022\017\n\007winners\030\005 \001(\005" +
+      "\022 \n\004locs\030\006 \003(\0132\022.bbproto.PLocation\022#\n\005us" +
+      "ers\030\007 \003(\0132\024.bbproto.PUserBaseEx\"d\n\021PLott" +
+      "erySingleRet\022\021\n\tlotteryId\030\001 \001(\005\022\r\n\005title" +
+      "\030\002 \001(\t\022\017\n\007winners\030\003 \001(\005\022\r\n\005crtTm\030\004 \001(\t\022\r",
+      "\n\005icons\030\005 \003(\t\")\n\tPLocation\022\r\n\005locCd\030\001 \001(" +
+      "\t\022\r\n\005locNm\030\002 \001(\t\"I\n\013PUserBaseEx\022 \n\004info\030" +
+      "\001 \001(\0132\022.bbproto.PUserBase\022\013\n\003sex\030\002 \001(\005\022\013" +
+      "\n\003amt\030\003 \001(\005B\'\n\026com.blemobi.sep.probufB\rP" +
+      "aymentProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11918,21 +12712,27 @@ public final class PaymentProtos {
     internal_static_bbproto_PLotteryListRet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PLotteryListRet_descriptor,
-        new java.lang.String[] { "LotteryId", "Title", "Winners", "CrtTm", "Icons", });
+        new java.lang.String[] { "Lotteries", });
     internal_static_bbproto_PLotteryDetailRet_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_bbproto_PLotteryDetailRet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PLotteryDetailRet_descriptor,
-        new java.lang.String[] { "LotteryId", "TotAmt", "CrtTm", "Type", "Winners", "Locs", "List", });
-    internal_static_bbproto_PLocation_descriptor =
+        new java.lang.String[] { "LotteryId", "TotAmt", "CrtTm", "Type", "Winners", "Locs", "Users", });
+    internal_static_bbproto_PLotterySingleRet_descriptor =
       getDescriptor().getMessageTypes().get(8);
+    internal_static_bbproto_PLotterySingleRet_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PLotterySingleRet_descriptor,
+        new java.lang.String[] { "LotteryId", "Title", "Winners", "CrtTm", "Icons", });
+    internal_static_bbproto_PLocation_descriptor =
+      getDescriptor().getMessageTypes().get(9);
     internal_static_bbproto_PLocation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PLocation_descriptor,
         new java.lang.String[] { "LocCd", "LocNm", });
     internal_static_bbproto_PUserBaseEx_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_bbproto_PUserBaseEx_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PUserBaseEx_descriptor,
