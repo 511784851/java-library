@@ -827,6 +827,41 @@ public final class PaymentProtos {
      * </pre>
      */
     com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParamOrBuilder getFilterOrBuilder();
+
+    /**
+     * <code>repeated string uuid = 6;</code>
+     *
+     * <pre>
+     * 勾选的用户
+     * </pre>
+     */
+    com.google.protobuf.ProtocolStringList
+        getUuidList();
+    /**
+     * <code>repeated string uuid = 6;</code>
+     *
+     * <pre>
+     * 勾选的用户
+     * </pre>
+     */
+    int getUuidCount();
+    /**
+     * <code>repeated string uuid = 6;</code>
+     *
+     * <pre>
+     * 勾选的用户
+     * </pre>
+     */
+    java.lang.String getUuid(int index);
+    /**
+     * <code>repeated string uuid = 6;</code>
+     *
+     * <pre>
+     * 勾选的用户
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUuidBytes(int index);
   }
   /**
    * Protobuf type {@code bbproto.PGroupRedEnve}
@@ -848,6 +883,7 @@ public final class PaymentProtos {
       money_ = 0;
       isRandom_ = false;
       content_ = "";
+      uuid_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -908,6 +944,15 @@ public final class PaymentProtos {
 
               break;
             }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                uuid_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              uuid_.add(bs);
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -917,6 +962,9 @@ public final class PaymentProtos {
             new com.google.protobuf.InvalidProtocolBufferException(
                 e.getMessage()).setUnfinishedMessage(this));
       } finally {
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+          uuid_ = uuid_.getUnmodifiableView();
+        }
         makeExtensionsImmutable();
       }
     }
@@ -932,6 +980,7 @@ public final class PaymentProtos {
               com.blemobi.sep.probuf.PaymentProtos.PGroupRedEnve.class, com.blemobi.sep.probuf.PaymentProtos.PGroupRedEnve.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NUMBER_FIELD_NUMBER = 1;
     private int number_;
     /**
@@ -1048,6 +1097,51 @@ public final class PaymentProtos {
       return getFilter();
     }
 
+    public static final int UUID_FIELD_NUMBER = 6;
+    private com.google.protobuf.LazyStringList uuid_;
+    /**
+     * <code>repeated string uuid = 6;</code>
+     *
+     * <pre>
+     * 勾选的用户
+     * </pre>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getUuidList() {
+      return uuid_;
+    }
+    /**
+     * <code>repeated string uuid = 6;</code>
+     *
+     * <pre>
+     * 勾选的用户
+     * </pre>
+     */
+    public int getUuidCount() {
+      return uuid_.size();
+    }
+    /**
+     * <code>repeated string uuid = 6;</code>
+     *
+     * <pre>
+     * 勾选的用户
+     * </pre>
+     */
+    public java.lang.String getUuid(int index) {
+      return uuid_.get(index);
+    }
+    /**
+     * <code>repeated string uuid = 6;</code>
+     *
+     * <pre>
+     * 勾选的用户
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUuidBytes(int index) {
+      return uuid_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -1074,6 +1168,9 @@ public final class PaymentProtos {
       }
       if (filter_ != null) {
         output.writeMessage(5, getFilter());
+      }
+      for (int i = 0; i < uuid_.size(); i++) {
+        output.writeBytes(6, uuid_.getByteString(i));
       }
     }
 
@@ -1102,6 +1199,15 @@ public final class PaymentProtos {
       if (filter_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getFilter());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < uuid_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(uuid_.getByteString(i));
+        }
+        size += dataSize;
+        size += 1 * getUuidList().size();
       }
       memoizedSerializedSize = size;
       return size;
@@ -1232,6 +1338,8 @@ public final class PaymentProtos {
           filter_ = null;
           filterBuilder_ = null;
         }
+        uuid_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -1254,6 +1362,8 @@ public final class PaymentProtos {
 
       public com.blemobi.sep.probuf.PaymentProtos.PGroupRedEnve buildPartial() {
         com.blemobi.sep.probuf.PaymentProtos.PGroupRedEnve result = new com.blemobi.sep.probuf.PaymentProtos.PGroupRedEnve(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.number_ = number_;
         result.money_ = money_;
         result.isRandom_ = isRandom_;
@@ -1263,6 +1373,12 @@ public final class PaymentProtos {
         } else {
           result.filter_ = filterBuilder_.build();
         }
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          uuid_ = uuid_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.uuid_ = uuid_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -1294,6 +1410,16 @@ public final class PaymentProtos {
         if (other.hasFilter()) {
           mergeFilter(other.getFilter());
         }
+        if (!other.uuid_.isEmpty()) {
+          if (uuid_.isEmpty()) {
+            uuid_ = other.uuid_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+          } else {
+            ensureUuidIsMutable();
+            uuid_.addAll(other.uuid_);
+          }
+          onChanged();
+        }
         onChanged();
         return this;
       }
@@ -1319,6 +1445,7 @@ public final class PaymentProtos {
         }
         return this;
       }
+      private int bitField0_;
 
       private int number_ ;
       /**
@@ -1675,6 +1802,135 @@ public final class PaymentProtos {
           filter_ = null;
         }
         return filterBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList uuid_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureUuidIsMutable() {
+        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+          uuid_ = new com.google.protobuf.LazyStringArrayList(uuid_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+      /**
+       * <code>repeated string uuid = 6;</code>
+       *
+       * <pre>
+       * 勾选的用户
+       * </pre>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getUuidList() {
+        return uuid_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string uuid = 6;</code>
+       *
+       * <pre>
+       * 勾选的用户
+       * </pre>
+       */
+      public int getUuidCount() {
+        return uuid_.size();
+      }
+      /**
+       * <code>repeated string uuid = 6;</code>
+       *
+       * <pre>
+       * 勾选的用户
+       * </pre>
+       */
+      public java.lang.String getUuid(int index) {
+        return uuid_.get(index);
+      }
+      /**
+       * <code>repeated string uuid = 6;</code>
+       *
+       * <pre>
+       * 勾选的用户
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUuidBytes(int index) {
+        return uuid_.getByteString(index);
+      }
+      /**
+       * <code>repeated string uuid = 6;</code>
+       *
+       * <pre>
+       * 勾选的用户
+       * </pre>
+       */
+      public Builder setUuid(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureUuidIsMutable();
+        uuid_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string uuid = 6;</code>
+       *
+       * <pre>
+       * 勾选的用户
+       * </pre>
+       */
+      public Builder addUuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureUuidIsMutable();
+        uuid_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string uuid = 6;</code>
+       *
+       * <pre>
+       * 勾选的用户
+       * </pre>
+       */
+      public Builder addAllUuid(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureUuidIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, uuid_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string uuid = 6;</code>
+       *
+       * <pre>
+       * 勾选的用户
+       * </pre>
+       */
+      public Builder clearUuid() {
+        uuid_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string uuid = 6;</code>
+       *
+       * <pre>
+       * 勾选的用户
+       * </pre>
+       */
+      public Builder addUuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureUuidIsMutable();
+        uuid_.add(value);
+        onChanged();
+        return this;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -15672,8 +15928,1884 @@ public final class PaymentProtos {
 
   }
 
-  public interface PLotteryOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bbproto.PLottery)
+  public interface PShuffleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PShuffle)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 gender = 1;</code>
+     *
+     * <pre>
+     *性别 0:不限，1:男，2:女
+     * </pre>
+     */
+    int getGender();
+
+    /**
+     * <code>repeated string region = 2;</code>
+     *
+     * <pre>
+     *地区筛选，格式如CN;4403、CN;44
+     * </pre>
+     */
+    com.google.protobuf.ProtocolStringList
+        getRegionList();
+    /**
+     * <code>repeated string region = 2;</code>
+     *
+     * <pre>
+     *地区筛选，格式如CN;4403、CN;44
+     * </pre>
+     */
+    int getRegionCount();
+    /**
+     * <code>repeated string region = 2;</code>
+     *
+     * <pre>
+     *地区筛选，格式如CN;4403、CN;44
+     * </pre>
+     */
+    java.lang.String getRegion(int index);
+    /**
+     * <code>repeated string region = 2;</code>
+     *
+     * <pre>
+     *地区筛选，格式如CN;4403、CN;44
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getRegionBytes(int index);
+
+    /**
+     * <code>optional int32 winners = 3;</code>
+     *
+     * <pre>
+     *中奖人数
+     * </pre>
+     */
+    int getWinners();
+
+    /**
+     * <code>optional int32 bonus = 4;</code>
+     *
+     * <pre>
+     *单个金额
+     * </pre>
+     */
+    int getBonus();
+
+    /**
+     * <code>optional int32 totAmt = 5;</code>
+     *
+     * <pre>
+     *总金额
+     * </pre>
+     */
+    int getTotAmt();
+  }
+  /**
+   * Protobuf type {@code bbproto.PShuffle}
+   *
+   * <pre>
+   **抽奖（限制5mins/2times） 
+   *message PShuffle {
+   *string title = 1; //标题
+   *int32 gender = 2;//性别0:不限，1:男，2:女
+   *repeated string region = 3;//地区筛选，格式如CN;4403、CN;44，配合下面的negate使用
+   *bool negate = 4;// true表示要对region取反，即排除
+   *int32 winners = 5;	//中奖人数
+   *repeated string skipUuid = 6;// 反选掉的用户
+   *int32 totAmt = 7;   //总金额
+   *string remark = 8;//描述
+   *}
+   * </pre>
+   */
+  public  static final class PShuffle extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PShuffle)
+      PShuffleOrBuilder {
+    // Use PShuffle.newBuilder() to construct.
+    private PShuffle(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PShuffle() {
+      gender_ = 0;
+      region_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      winners_ = 0;
+      bonus_ = 0;
+      totAmt_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PShuffle(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              gender_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                region_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              region_.add(bs);
+              break;
+            }
+            case 24: {
+
+              winners_ = input.readInt32();
+              break;
+            }
+            case 32: {
+
+              bonus_ = input.readInt32();
+              break;
+            }
+            case 40: {
+
+              totAmt_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          region_ = region_.getUnmodifiableView();
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PShuffle_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PShuffle_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.PaymentProtos.PShuffle.class, com.blemobi.sep.probuf.PaymentProtos.PShuffle.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int GENDER_FIELD_NUMBER = 1;
+    private int gender_;
+    /**
+     * <code>optional int32 gender = 1;</code>
+     *
+     * <pre>
+     *性别 0:不限，1:男，2:女
+     * </pre>
+     */
+    public int getGender() {
+      return gender_;
+    }
+
+    public static final int REGION_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList region_;
+    /**
+     * <code>repeated string region = 2;</code>
+     *
+     * <pre>
+     *地区筛选，格式如CN;4403、CN;44
+     * </pre>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getRegionList() {
+      return region_;
+    }
+    /**
+     * <code>repeated string region = 2;</code>
+     *
+     * <pre>
+     *地区筛选，格式如CN;4403、CN;44
+     * </pre>
+     */
+    public int getRegionCount() {
+      return region_.size();
+    }
+    /**
+     * <code>repeated string region = 2;</code>
+     *
+     * <pre>
+     *地区筛选，格式如CN;4403、CN;44
+     * </pre>
+     */
+    public java.lang.String getRegion(int index) {
+      return region_.get(index);
+    }
+    /**
+     * <code>repeated string region = 2;</code>
+     *
+     * <pre>
+     *地区筛选，格式如CN;4403、CN;44
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getRegionBytes(int index) {
+      return region_.getByteString(index);
+    }
+
+    public static final int WINNERS_FIELD_NUMBER = 3;
+    private int winners_;
+    /**
+     * <code>optional int32 winners = 3;</code>
+     *
+     * <pre>
+     *中奖人数
+     * </pre>
+     */
+    public int getWinners() {
+      return winners_;
+    }
+
+    public static final int BONUS_FIELD_NUMBER = 4;
+    private int bonus_;
+    /**
+     * <code>optional int32 bonus = 4;</code>
+     *
+     * <pre>
+     *单个金额
+     * </pre>
+     */
+    public int getBonus() {
+      return bonus_;
+    }
+
+    public static final int TOTAMT_FIELD_NUMBER = 5;
+    private int totAmt_;
+    /**
+     * <code>optional int32 totAmt = 5;</code>
+     *
+     * <pre>
+     *总金额
+     * </pre>
+     */
+    public int getTotAmt() {
+      return totAmt_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (gender_ != 0) {
+        output.writeInt32(1, gender_);
+      }
+      for (int i = 0; i < region_.size(); i++) {
+        output.writeBytes(2, region_.getByteString(i));
+      }
+      if (winners_ != 0) {
+        output.writeInt32(3, winners_);
+      }
+      if (bonus_ != 0) {
+        output.writeInt32(4, bonus_);
+      }
+      if (totAmt_ != 0) {
+        output.writeInt32(5, totAmt_);
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (gender_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, gender_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < region_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(region_.getByteString(i));
+        }
+        size += dataSize;
+        size += 1 * getRegionList().size();
+      }
+      if (winners_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, winners_);
+      }
+      if (bonus_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, bonus_);
+      }
+      if (totAmt_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, totAmt_);
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.PaymentProtos.PShuffle parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PShuffle parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PShuffle parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PShuffle parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PShuffle parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PShuffle parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PShuffle parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PShuffle parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PShuffle parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PShuffle parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.PaymentProtos.PShuffle prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PShuffle}
+     *
+     * <pre>
+     **抽奖（限制5mins/2times） 
+     *message PShuffle {
+     *string title = 1; //标题
+     *int32 gender = 2;//性别0:不限，1:男，2:女
+     *repeated string region = 3;//地区筛选，格式如CN;4403、CN;44，配合下面的negate使用
+     *bool negate = 4;// true表示要对region取反，即排除
+     *int32 winners = 5;	//中奖人数
+     *repeated string skipUuid = 6;// 反选掉的用户
+     *int32 totAmt = 7;   //总金额
+     *string remark = 8;//描述
+     *}
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PShuffle)
+        com.blemobi.sep.probuf.PaymentProtos.PShuffleOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PShuffle_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PShuffle_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.PaymentProtos.PShuffle.class, com.blemobi.sep.probuf.PaymentProtos.PShuffle.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.PaymentProtos.PShuffle.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        gender_ = 0;
+
+        region_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        winners_ = 0;
+
+        bonus_ = 0;
+
+        totAmt_ = 0;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PShuffle_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PShuffle getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.PShuffle.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PShuffle build() {
+        com.blemobi.sep.probuf.PaymentProtos.PShuffle result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PShuffle buildPartial() {
+        com.blemobi.sep.probuf.PaymentProtos.PShuffle result = new com.blemobi.sep.probuf.PaymentProtos.PShuffle(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.gender_ = gender_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          region_ = region_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.region_ = region_;
+        result.winners_ = winners_;
+        result.bonus_ = bonus_;
+        result.totAmt_ = totAmt_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.PaymentProtos.PShuffle) {
+          return mergeFrom((com.blemobi.sep.probuf.PaymentProtos.PShuffle)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.PaymentProtos.PShuffle other) {
+        if (other == com.blemobi.sep.probuf.PaymentProtos.PShuffle.getDefaultInstance()) return this;
+        if (other.getGender() != 0) {
+          setGender(other.getGender());
+        }
+        if (!other.region_.isEmpty()) {
+          if (region_.isEmpty()) {
+            region_ = other.region_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureRegionIsMutable();
+            region_.addAll(other.region_);
+          }
+          onChanged();
+        }
+        if (other.getWinners() != 0) {
+          setWinners(other.getWinners());
+        }
+        if (other.getBonus() != 0) {
+          setBonus(other.getBonus());
+        }
+        if (other.getTotAmt() != 0) {
+          setTotAmt(other.getTotAmt());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.PaymentProtos.PShuffle parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.PaymentProtos.PShuffle) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int gender_ ;
+      /**
+       * <code>optional int32 gender = 1;</code>
+       *
+       * <pre>
+       *性别 0:不限，1:男，2:女
+       * </pre>
+       */
+      public int getGender() {
+        return gender_;
+      }
+      /**
+       * <code>optional int32 gender = 1;</code>
+       *
+       * <pre>
+       *性别 0:不限，1:男，2:女
+       * </pre>
+       */
+      public Builder setGender(int value) {
+        
+        gender_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 gender = 1;</code>
+       *
+       * <pre>
+       *性别 0:不限，1:男，2:女
+       * </pre>
+       */
+      public Builder clearGender() {
+        
+        gender_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList region_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureRegionIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          region_ = new com.google.protobuf.LazyStringArrayList(region_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated string region = 2;</code>
+       *
+       * <pre>
+       *地区筛选，格式如CN;4403、CN;44
+       * </pre>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getRegionList() {
+        return region_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string region = 2;</code>
+       *
+       * <pre>
+       *地区筛选，格式如CN;4403、CN;44
+       * </pre>
+       */
+      public int getRegionCount() {
+        return region_.size();
+      }
+      /**
+       * <code>repeated string region = 2;</code>
+       *
+       * <pre>
+       *地区筛选，格式如CN;4403、CN;44
+       * </pre>
+       */
+      public java.lang.String getRegion(int index) {
+        return region_.get(index);
+      }
+      /**
+       * <code>repeated string region = 2;</code>
+       *
+       * <pre>
+       *地区筛选，格式如CN;4403、CN;44
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getRegionBytes(int index) {
+        return region_.getByteString(index);
+      }
+      /**
+       * <code>repeated string region = 2;</code>
+       *
+       * <pre>
+       *地区筛选，格式如CN;4403、CN;44
+       * </pre>
+       */
+      public Builder setRegion(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRegionIsMutable();
+        region_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string region = 2;</code>
+       *
+       * <pre>
+       *地区筛选，格式如CN;4403、CN;44
+       * </pre>
+       */
+      public Builder addRegion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRegionIsMutable();
+        region_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string region = 2;</code>
+       *
+       * <pre>
+       *地区筛选，格式如CN;4403、CN;44
+       * </pre>
+       */
+      public Builder addAllRegion(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureRegionIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, region_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string region = 2;</code>
+       *
+       * <pre>
+       *地区筛选，格式如CN;4403、CN;44
+       * </pre>
+       */
+      public Builder clearRegion() {
+        region_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string region = 2;</code>
+       *
+       * <pre>
+       *地区筛选，格式如CN;4403、CN;44
+       * </pre>
+       */
+      public Builder addRegionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRegionIsMutable();
+        region_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private int winners_ ;
+      /**
+       * <code>optional int32 winners = 3;</code>
+       *
+       * <pre>
+       *中奖人数
+       * </pre>
+       */
+      public int getWinners() {
+        return winners_;
+      }
+      /**
+       * <code>optional int32 winners = 3;</code>
+       *
+       * <pre>
+       *中奖人数
+       * </pre>
+       */
+      public Builder setWinners(int value) {
+        
+        winners_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 winners = 3;</code>
+       *
+       * <pre>
+       *中奖人数
+       * </pre>
+       */
+      public Builder clearWinners() {
+        
+        winners_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int bonus_ ;
+      /**
+       * <code>optional int32 bonus = 4;</code>
+       *
+       * <pre>
+       *单个金额
+       * </pre>
+       */
+      public int getBonus() {
+        return bonus_;
+      }
+      /**
+       * <code>optional int32 bonus = 4;</code>
+       *
+       * <pre>
+       *单个金额
+       * </pre>
+       */
+      public Builder setBonus(int value) {
+        
+        bonus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 bonus = 4;</code>
+       *
+       * <pre>
+       *单个金额
+       * </pre>
+       */
+      public Builder clearBonus() {
+        
+        bonus_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int totAmt_ ;
+      /**
+       * <code>optional int32 totAmt = 5;</code>
+       *
+       * <pre>
+       *总金额
+       * </pre>
+       */
+      public int getTotAmt() {
+        return totAmt_;
+      }
+      /**
+       * <code>optional int32 totAmt = 5;</code>
+       *
+       * <pre>
+       *总金额
+       * </pre>
+       */
+      public Builder setTotAmt(int value) {
+        
+        totAmt_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 totAmt = 5;</code>
+       *
+       * <pre>
+       *总金额
+       * </pre>
+       */
+      public Builder clearTotAmt() {
+        
+        totAmt_ = 0;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PShuffle)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PShuffle)
+    private static final com.blemobi.sep.probuf.PaymentProtos.PShuffle DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.PaymentProtos.PShuffle();
+    }
+
+    public static com.blemobi.sep.probuf.PaymentProtos.PShuffle getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PShuffle> PARSER =
+        new com.google.protobuf.AbstractParser<PShuffle>() {
+      public PShuffle parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PShuffle(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PShuffle> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.PaymentProtos.PShuffle getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PShuffleRetOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PShuffleRet)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+     *
+     * <pre>
+     *中奖用户信息
+     * </pre>
+     */
+    java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> 
+        getUserListList();
+    /**
+     * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+     *
+     * <pre>
+     *中奖用户信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx getUserList(int index);
+    /**
+     * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+     *
+     * <pre>
+     *中奖用户信息
+     * </pre>
+     */
+    int getUserListCount();
+    /**
+     * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+     *
+     * <pre>
+     *中奖用户信息
+     * </pre>
+     */
+    java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder> 
+        getUserListOrBuilderList();
+    /**
+     * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+     *
+     * <pre>
+     *中奖用户信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder getUserListOrBuilder(
+        int index);
+
+    /**
+     * <code>optional string crtTm = 2;</code>
+     *
+     * <pre>
+     *创建时间
+     * </pre>
+     */
+    java.lang.String getCrtTm();
+    /**
+     * <code>optional string crtTm = 2;</code>
+     *
+     * <pre>
+     *创建时间
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getCrtTmBytes();
+  }
+  /**
+   * Protobuf type {@code bbproto.PShuffleRet}
+   */
+  public  static final class PShuffleRet extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PShuffleRet)
+      PShuffleRetOrBuilder {
+    // Use PShuffleRet.newBuilder() to construct.
+    private PShuffleRet(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PShuffleRet() {
+      userList_ = java.util.Collections.emptyList();
+      crtTm_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PShuffleRet(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                userList_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              userList_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.PARSER, extensionRegistry));
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              crtTm_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          userList_ = java.util.Collections.unmodifiableList(userList_);
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PShuffleRet_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PShuffleRet_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.PaymentProtos.PShuffleRet.class, com.blemobi.sep.probuf.PaymentProtos.PShuffleRet.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int USERLIST_FIELD_NUMBER = 1;
+    private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> userList_;
+    /**
+     * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+     *
+     * <pre>
+     *中奖用户信息
+     * </pre>
+     */
+    public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> getUserListList() {
+      return userList_;
+    }
+    /**
+     * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+     *
+     * <pre>
+     *中奖用户信息
+     * </pre>
+     */
+    public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder> 
+        getUserListOrBuilderList() {
+      return userList_;
+    }
+    /**
+     * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+     *
+     * <pre>
+     *中奖用户信息
+     * </pre>
+     */
+    public int getUserListCount() {
+      return userList_.size();
+    }
+    /**
+     * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+     *
+     * <pre>
+     *中奖用户信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx getUserList(int index) {
+      return userList_.get(index);
+    }
+    /**
+     * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+     *
+     * <pre>
+     *中奖用户信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder getUserListOrBuilder(
+        int index) {
+      return userList_.get(index);
+    }
+
+    public static final int CRTTM_FIELD_NUMBER = 2;
+    private volatile java.lang.Object crtTm_;
+    /**
+     * <code>optional string crtTm = 2;</code>
+     *
+     * <pre>
+     *创建时间
+     * </pre>
+     */
+    public java.lang.String getCrtTm() {
+      java.lang.Object ref = crtTm_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          crtTm_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string crtTm = 2;</code>
+     *
+     * <pre>
+     *创建时间
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getCrtTmBytes() {
+      java.lang.Object ref = crtTm_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        crtTm_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < userList_.size(); i++) {
+        output.writeMessage(1, userList_.get(i));
+      }
+      if (!getCrtTmBytes().isEmpty()) {
+        output.writeBytes(2, getCrtTmBytes());
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < userList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, userList_.get(i));
+      }
+      if (!getCrtTmBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getCrtTmBytes());
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.PaymentProtos.PShuffleRet parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PShuffleRet parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PShuffleRet parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PShuffleRet parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PShuffleRet parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PShuffleRet parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PShuffleRet parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PShuffleRet parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PShuffleRet parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PShuffleRet parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.PaymentProtos.PShuffleRet prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PShuffleRet}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PShuffleRet)
+        com.blemobi.sep.probuf.PaymentProtos.PShuffleRetOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PShuffleRet_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PShuffleRet_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.PaymentProtos.PShuffleRet.class, com.blemobi.sep.probuf.PaymentProtos.PShuffleRet.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.PaymentProtos.PShuffleRet.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getUserListFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (userListBuilder_ == null) {
+          userList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          userListBuilder_.clear();
+        }
+        crtTm_ = "";
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PShuffleRet_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PShuffleRet getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.PShuffleRet.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PShuffleRet build() {
+        com.blemobi.sep.probuf.PaymentProtos.PShuffleRet result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PShuffleRet buildPartial() {
+        com.blemobi.sep.probuf.PaymentProtos.PShuffleRet result = new com.blemobi.sep.probuf.PaymentProtos.PShuffleRet(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (userListBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            userList_ = java.util.Collections.unmodifiableList(userList_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.userList_ = userList_;
+        } else {
+          result.userList_ = userListBuilder_.build();
+        }
+        result.crtTm_ = crtTm_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.PaymentProtos.PShuffleRet) {
+          return mergeFrom((com.blemobi.sep.probuf.PaymentProtos.PShuffleRet)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.PaymentProtos.PShuffleRet other) {
+        if (other == com.blemobi.sep.probuf.PaymentProtos.PShuffleRet.getDefaultInstance()) return this;
+        if (userListBuilder_ == null) {
+          if (!other.userList_.isEmpty()) {
+            if (userList_.isEmpty()) {
+              userList_ = other.userList_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureUserListIsMutable();
+              userList_.addAll(other.userList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.userList_.isEmpty()) {
+            if (userListBuilder_.isEmpty()) {
+              userListBuilder_.dispose();
+              userListBuilder_ = null;
+              userList_ = other.userList_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              userListBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getUserListFieldBuilder() : null;
+            } else {
+              userListBuilder_.addAllMessages(other.userList_);
+            }
+          }
+        }
+        if (!other.getCrtTm().isEmpty()) {
+          crtTm_ = other.crtTm_;
+          onChanged();
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.PaymentProtos.PShuffleRet parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.PaymentProtos.PShuffleRet) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> userList_ =
+        java.util.Collections.emptyList();
+      private void ensureUserListIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          userList_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx>(userList_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder, com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder> userListBuilder_;
+
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> getUserListList() {
+        if (userListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(userList_);
+        } else {
+          return userListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public int getUserListCount() {
+        if (userListBuilder_ == null) {
+          return userList_.size();
+        } else {
+          return userListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx getUserList(int index) {
+        if (userListBuilder_ == null) {
+          return userList_.get(index);
+        } else {
+          return userListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public Builder setUserList(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx value) {
+        if (userListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUserListIsMutable();
+          userList_.set(index, value);
+          onChanged();
+        } else {
+          userListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public Builder setUserList(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder builderForValue) {
+        if (userListBuilder_ == null) {
+          ensureUserListIsMutable();
+          userList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          userListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public Builder addUserList(com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx value) {
+        if (userListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUserListIsMutable();
+          userList_.add(value);
+          onChanged();
+        } else {
+          userListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public Builder addUserList(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx value) {
+        if (userListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUserListIsMutable();
+          userList_.add(index, value);
+          onChanged();
+        } else {
+          userListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public Builder addUserList(
+          com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder builderForValue) {
+        if (userListBuilder_ == null) {
+          ensureUserListIsMutable();
+          userList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          userListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public Builder addUserList(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder builderForValue) {
+        if (userListBuilder_ == null) {
+          ensureUserListIsMutable();
+          userList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          userListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public Builder addAllUserList(
+          java.lang.Iterable<? extends com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> values) {
+        if (userListBuilder_ == null) {
+          ensureUserListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, userList_);
+          onChanged();
+        } else {
+          userListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public Builder clearUserList() {
+        if (userListBuilder_ == null) {
+          userList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          userListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public Builder removeUserList(int index) {
+        if (userListBuilder_ == null) {
+          ensureUserListIsMutable();
+          userList_.remove(index);
+          onChanged();
+        } else {
+          userListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder getUserListBuilder(
+          int index) {
+        return getUserListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder getUserListOrBuilder(
+          int index) {
+        if (userListBuilder_ == null) {
+          return userList_.get(index);  } else {
+          return userListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder> 
+           getUserListOrBuilderList() {
+        if (userListBuilder_ != null) {
+          return userListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(userList_);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder addUserListBuilder() {
+        return getUserListFieldBuilder().addBuilder(
+            com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder addUserListBuilder(
+          int index) {
+        return getUserListFieldBuilder().addBuilder(
+            index, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 1;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder> 
+           getUserListBuilderList() {
+        return getUserListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder, com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder> 
+          getUserListFieldBuilder() {
+        if (userListBuilder_ == null) {
+          userListBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder, com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder>(
+                  userList_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          userList_ = null;
+        }
+        return userListBuilder_;
+      }
+
+      private java.lang.Object crtTm_ = "";
+      /**
+       * <code>optional string crtTm = 2;</code>
+       *
+       * <pre>
+       *创建时间
+       * </pre>
+       */
+      public java.lang.String getCrtTm() {
+        java.lang.Object ref = crtTm_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            crtTm_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string crtTm = 2;</code>
+       *
+       * <pre>
+       *创建时间
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getCrtTmBytes() {
+        java.lang.Object ref = crtTm_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          crtTm_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string crtTm = 2;</code>
+       *
+       * <pre>
+       *创建时间
+       * </pre>
+       */
+      public Builder setCrtTm(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        crtTm_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string crtTm = 2;</code>
+       *
+       * <pre>
+       *创建时间
+       * </pre>
+       */
+      public Builder clearCrtTm() {
+        
+        crtTm_ = getDefaultInstance().getCrtTm();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string crtTm = 2;</code>
+       *
+       * <pre>
+       *创建时间
+       * </pre>
+       */
+      public Builder setCrtTmBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        crtTm_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PShuffleRet)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PShuffleRet)
+    private static final com.blemobi.sep.probuf.PaymentProtos.PShuffleRet DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.PaymentProtos.PShuffleRet();
+    }
+
+    public static com.blemobi.sep.probuf.PaymentProtos.PShuffleRet getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PShuffleRet> PARSER =
+        new com.google.protobuf.AbstractParser<PShuffleRet>() {
+      public PShuffleRet parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PShuffleRet(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PShuffleRet> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.PaymentProtos.PShuffleRet getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PLotteryConfirmOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PLotteryConfirm)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -15695,16 +17827,60 @@ public final class PaymentProtos {
         getTitleBytes();
 
     /**
-     * <code>optional int32 type = 2;</code>
+     * <code>optional int32 gender = 2;</code>
      *
      * <pre>
      * 接受人类型（0:全部，1:男，2:女）
      * </pre>
      */
-    int getType();
+    int getGender();
 
     /**
-     * <code>optional int32 winners = 3;</code>
+     * <code>repeated string region = 3;</code>
+     *
+     * <pre>
+     *地区筛选，格式如CN;4403、CN;44，配合下面的negate使用
+     * </pre>
+     */
+    com.google.protobuf.ProtocolStringList
+        getRegionList();
+    /**
+     * <code>repeated string region = 3;</code>
+     *
+     * <pre>
+     *地区筛选，格式如CN;4403、CN;44，配合下面的negate使用
+     * </pre>
+     */
+    int getRegionCount();
+    /**
+     * <code>repeated string region = 3;</code>
+     *
+     * <pre>
+     *地区筛选，格式如CN;4403、CN;44，配合下面的negate使用
+     * </pre>
+     */
+    java.lang.String getRegion(int index);
+    /**
+     * <code>repeated string region = 3;</code>
+     *
+     * <pre>
+     *地区筛选，格式如CN;4403、CN;44，配合下面的negate使用
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getRegionBytes(int index);
+
+    /**
+     * <code>optional int32 totAmt = 4;</code>
+     *
+     * <pre>
+     *总金额
+     * </pre>
+     */
+    int getTotAmt();
+
+    /**
+     * <code>optional int32 winners = 5;</code>
      *
      * <pre>
      *获奖名额数
@@ -15713,16 +17889,7 @@ public final class PaymentProtos {
     int getWinners();
 
     /**
-     * <code>optional int32 totAmt = 4;</code>
-     *
-     * <pre>
-     *抽奖总金额（分）
-     * </pre>
-     */
-    int getTotAmt();
-
-    /**
-     * <code>optional int32 bonus = 5;</code>
+     * <code>optional int32 bonus = 6;</code>
      *
      * <pre>
      *平均每个人的奖金（分）
@@ -15731,107 +17898,91 @@ public final class PaymentProtos {
     int getBonus();
 
     /**
-     * <code>repeated .bbproto.PLocation locs = 6;</code>
+     * <code>optional string remark = 7;</code>
      *
      * <pre>
-     * 地理位置
+     *描述
      * </pre>
      */
-    java.util.List<com.blemobi.sep.probuf.PaymentProtos.PLocation> 
-        getLocsList();
+    java.lang.String getRemark();
     /**
-     * <code>repeated .bbproto.PLocation locs = 6;</code>
+     * <code>optional string remark = 7;</code>
      *
      * <pre>
-     * 地理位置
-     * </pre>
-     */
-    com.blemobi.sep.probuf.PaymentProtos.PLocation getLocs(int index);
-    /**
-     * <code>repeated .bbproto.PLocation locs = 6;</code>
-     *
-     * <pre>
-     * 地理位置
-     * </pre>
-     */
-    int getLocsCount();
-    /**
-     * <code>repeated .bbproto.PLocation locs = 6;</code>
-     *
-     * <pre>
-     * 地理位置
-     * </pre>
-     */
-    java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PLocationOrBuilder> 
-        getLocsOrBuilderList();
-    /**
-     * <code>repeated .bbproto.PLocation locs = 6;</code>
-     *
-     * <pre>
-     * 地理位置
-     * </pre>
-     */
-    com.blemobi.sep.probuf.PaymentProtos.PLocationOrBuilder getLocsOrBuilder(
-        int index);
-
-    /**
-     * <code>repeated string uuidList = 7;</code>
-     *
-     * <pre>
-     *获奖人列表
-     * </pre>
-     */
-    com.google.protobuf.ProtocolStringList
-        getUuidListList();
-    /**
-     * <code>repeated string uuidList = 7;</code>
-     *
-     * <pre>
-     *获奖人列表
-     * </pre>
-     */
-    int getUuidListCount();
-    /**
-     * <code>repeated string uuidList = 7;</code>
-     *
-     * <pre>
-     *获奖人列表
-     * </pre>
-     */
-    java.lang.String getUuidList(int index);
-    /**
-     * <code>repeated string uuidList = 7;</code>
-     *
-     * <pre>
-     *获奖人列表
+     *描述
      * </pre>
      */
     com.google.protobuf.ByteString
-        getUuidListBytes(int index);
+        getRemarkBytes();
+
+    /**
+     * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+     *
+     * <pre>
+     *中奖用户信息
+     * </pre>
+     */
+    java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> 
+        getUserListList();
+    /**
+     * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+     *
+     * <pre>
+     *中奖用户信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx getUserList(int index);
+    /**
+     * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+     *
+     * <pre>
+     *中奖用户信息
+     * </pre>
+     */
+    int getUserListCount();
+    /**
+     * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+     *
+     * <pre>
+     *中奖用户信息
+     * </pre>
+     */
+    java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder> 
+        getUserListOrBuilderList();
+    /**
+     * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+     *
+     * <pre>
+     *中奖用户信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder getUserListOrBuilder(
+        int index);
   }
   /**
-   * Protobuf type {@code bbproto.PLottery}
+   * Protobuf type {@code bbproto.PLotteryConfirm}
    *
    * <pre>
-   * ----------------- 以下是抽奖协议 （潘有良）-----------------
+   **确认抽奖
    * </pre>
    */
-  public  static final class PLottery extends
+  public  static final class PLotteryConfirm extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:bbproto.PLottery)
-      PLotteryOrBuilder {
-    // Use PLottery.newBuilder() to construct.
-    private PLottery(com.google.protobuf.GeneratedMessage.Builder builder) {
+      // @@protoc_insertion_point(message_implements:bbproto.PLotteryConfirm)
+      PLotteryConfirmOrBuilder {
+    // Use PLotteryConfirm.newBuilder() to construct.
+    private PLotteryConfirm(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
-    private PLottery() {
+    private PLotteryConfirm() {
       title_ = "";
-      type_ = 0;
-      winners_ = 0;
+      gender_ = 0;
+      region_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       totAmt_ = 0;
+      winners_ = 0;
       bonus_ = 0;
-      locs_ = java.util.Collections.emptyList();
-      uuidList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      remark_ = "";
+      userList_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -15839,7 +17990,7 @@ public final class PaymentProtos {
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
     }
-    private PLottery(
+    private PLotteryConfirm(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
       this();
@@ -15866,12 +18017,16 @@ public final class PaymentProtos {
             }
             case 16: {
 
-              type_ = input.readInt32();
+              gender_ = input.readInt32();
               break;
             }
-            case 24: {
-
-              winners_ = input.readInt32();
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                region_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              region_.add(bs);
               break;
             }
             case 32: {
@@ -15881,24 +18036,26 @@ public final class PaymentProtos {
             }
             case 40: {
 
-              bonus_ = input.readInt32();
+              winners_ = input.readInt32();
               break;
             }
-            case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
-                locs_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PLocation>();
-                mutable_bitField0_ |= 0x00000020;
-              }
-              locs_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PLocation.PARSER, extensionRegistry));
+            case 48: {
+
+              bonus_ = input.readInt32();
               break;
             }
             case 58: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
-                uuidList_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000040;
+
+              remark_ = bs;
+              break;
+            }
+            case 66: {
+              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+                userList_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx>();
+                mutable_bitField0_ |= 0x00000080;
               }
-              uuidList_.add(bs);
+              userList_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.PARSER, extensionRegistry));
               break;
             }
           }
@@ -15910,25 +18067,25 @@ public final class PaymentProtos {
             new com.google.protobuf.InvalidProtocolBufferException(
                 e.getMessage()).setUnfinishedMessage(this));
       } finally {
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
-          locs_ = java.util.Collections.unmodifiableList(locs_);
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          region_ = region_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
-          uuidList_ = uuidList_.getUnmodifiableView();
+        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+          userList_ = java.util.Collections.unmodifiableList(userList_);
         }
         makeExtensionsImmutable();
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PLottery_descriptor;
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PLotteryConfirm_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PLottery_fieldAccessorTable
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PLotteryConfirm_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.PaymentProtos.PLottery.class, com.blemobi.sep.probuf.PaymentProtos.PLottery.Builder.class);
+              com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm.class, com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm.Builder.class);
     }
 
     private int bitField0_;
@@ -15976,23 +18133,81 @@ public final class PaymentProtos {
       }
     }
 
-    public static final int TYPE_FIELD_NUMBER = 2;
-    private int type_;
+    public static final int GENDER_FIELD_NUMBER = 2;
+    private int gender_;
     /**
-     * <code>optional int32 type = 2;</code>
+     * <code>optional int32 gender = 2;</code>
      *
      * <pre>
      * 接受人类型（0:全部，1:男，2:女）
      * </pre>
      */
-    public int getType() {
-      return type_;
+    public int getGender() {
+      return gender_;
     }
 
-    public static final int WINNERS_FIELD_NUMBER = 3;
+    public static final int REGION_FIELD_NUMBER = 3;
+    private com.google.protobuf.LazyStringList region_;
+    /**
+     * <code>repeated string region = 3;</code>
+     *
+     * <pre>
+     *地区筛选，格式如CN;4403、CN;44，配合下面的negate使用
+     * </pre>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getRegionList() {
+      return region_;
+    }
+    /**
+     * <code>repeated string region = 3;</code>
+     *
+     * <pre>
+     *地区筛选，格式如CN;4403、CN;44，配合下面的negate使用
+     * </pre>
+     */
+    public int getRegionCount() {
+      return region_.size();
+    }
+    /**
+     * <code>repeated string region = 3;</code>
+     *
+     * <pre>
+     *地区筛选，格式如CN;4403、CN;44，配合下面的negate使用
+     * </pre>
+     */
+    public java.lang.String getRegion(int index) {
+      return region_.get(index);
+    }
+    /**
+     * <code>repeated string region = 3;</code>
+     *
+     * <pre>
+     *地区筛选，格式如CN;4403、CN;44，配合下面的negate使用
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getRegionBytes(int index) {
+      return region_.getByteString(index);
+    }
+
+    public static final int TOTAMT_FIELD_NUMBER = 4;
+    private int totAmt_;
+    /**
+     * <code>optional int32 totAmt = 4;</code>
+     *
+     * <pre>
+     *总金额
+     * </pre>
+     */
+    public int getTotAmt() {
+      return totAmt_;
+    }
+
+    public static final int WINNERS_FIELD_NUMBER = 5;
     private int winners_;
     /**
-     * <code>optional int32 winners = 3;</code>
+     * <code>optional int32 winners = 5;</code>
      *
      * <pre>
      *获奖名额数
@@ -16002,23 +18217,10 @@ public final class PaymentProtos {
       return winners_;
     }
 
-    public static final int TOTAMT_FIELD_NUMBER = 4;
-    private int totAmt_;
-    /**
-     * <code>optional int32 totAmt = 4;</code>
-     *
-     * <pre>
-     *抽奖总金额（分）
-     * </pre>
-     */
-    public int getTotAmt() {
-      return totAmt_;
-    }
-
-    public static final int BONUS_FIELD_NUMBER = 5;
+    public static final int BONUS_FIELD_NUMBER = 6;
     private int bonus_;
     /**
-     * <code>optional int32 bonus = 5;</code>
+     * <code>optional int32 bonus = 6;</code>
      *
      * <pre>
      *平均每个人的奖金（分）
@@ -16028,104 +18230,103 @@ public final class PaymentProtos {
       return bonus_;
     }
 
-    public static final int LOCS_FIELD_NUMBER = 6;
-    private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PLocation> locs_;
+    public static final int REMARK_FIELD_NUMBER = 7;
+    private volatile java.lang.Object remark_;
     /**
-     * <code>repeated .bbproto.PLocation locs = 6;</code>
+     * <code>optional string remark = 7;</code>
      *
      * <pre>
-     * 地理位置
+     *描述
      * </pre>
      */
-    public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PLocation> getLocsList() {
-      return locs_;
+    public java.lang.String getRemark() {
+      java.lang.Object ref = remark_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          remark_ = s;
+        }
+        return s;
+      }
     }
     /**
-     * <code>repeated .bbproto.PLocation locs = 6;</code>
+     * <code>optional string remark = 7;</code>
      *
      * <pre>
-     * 地理位置
-     * </pre>
-     */
-    public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PLocationOrBuilder> 
-        getLocsOrBuilderList() {
-      return locs_;
-    }
-    /**
-     * <code>repeated .bbproto.PLocation locs = 6;</code>
-     *
-     * <pre>
-     * 地理位置
-     * </pre>
-     */
-    public int getLocsCount() {
-      return locs_.size();
-    }
-    /**
-     * <code>repeated .bbproto.PLocation locs = 6;</code>
-     *
-     * <pre>
-     * 地理位置
-     * </pre>
-     */
-    public com.blemobi.sep.probuf.PaymentProtos.PLocation getLocs(int index) {
-      return locs_.get(index);
-    }
-    /**
-     * <code>repeated .bbproto.PLocation locs = 6;</code>
-     *
-     * <pre>
-     * 地理位置
-     * </pre>
-     */
-    public com.blemobi.sep.probuf.PaymentProtos.PLocationOrBuilder getLocsOrBuilder(
-        int index) {
-      return locs_.get(index);
-    }
-
-    public static final int UUIDLIST_FIELD_NUMBER = 7;
-    private com.google.protobuf.LazyStringList uuidList_;
-    /**
-     * <code>repeated string uuidList = 7;</code>
-     *
-     * <pre>
-     *获奖人列表
-     * </pre>
-     */
-    public com.google.protobuf.ProtocolStringList
-        getUuidListList() {
-      return uuidList_;
-    }
-    /**
-     * <code>repeated string uuidList = 7;</code>
-     *
-     * <pre>
-     *获奖人列表
-     * </pre>
-     */
-    public int getUuidListCount() {
-      return uuidList_.size();
-    }
-    /**
-     * <code>repeated string uuidList = 7;</code>
-     *
-     * <pre>
-     *获奖人列表
-     * </pre>
-     */
-    public java.lang.String getUuidList(int index) {
-      return uuidList_.get(index);
-    }
-    /**
-     * <code>repeated string uuidList = 7;</code>
-     *
-     * <pre>
-     *获奖人列表
+     *描述
      * </pre>
      */
     public com.google.protobuf.ByteString
-        getUuidListBytes(int index) {
-      return uuidList_.getByteString(index);
+        getRemarkBytes() {
+      java.lang.Object ref = remark_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        remark_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int USERLIST_FIELD_NUMBER = 8;
+    private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> userList_;
+    /**
+     * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+     *
+     * <pre>
+     *中奖用户信息
+     * </pre>
+     */
+    public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> getUserListList() {
+      return userList_;
+    }
+    /**
+     * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+     *
+     * <pre>
+     *中奖用户信息
+     * </pre>
+     */
+    public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder> 
+        getUserListOrBuilderList() {
+      return userList_;
+    }
+    /**
+     * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+     *
+     * <pre>
+     *中奖用户信息
+     * </pre>
+     */
+    public int getUserListCount() {
+      return userList_.size();
+    }
+    /**
+     * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+     *
+     * <pre>
+     *中奖用户信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx getUserList(int index) {
+      return userList_.get(index);
+    }
+    /**
+     * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+     *
+     * <pre>
+     *中奖用户信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder getUserListOrBuilder(
+        int index) {
+      return userList_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -16143,23 +18344,26 @@ public final class PaymentProtos {
       if (!getTitleBytes().isEmpty()) {
         output.writeBytes(1, getTitleBytes());
       }
-      if (type_ != 0) {
-        output.writeInt32(2, type_);
+      if (gender_ != 0) {
+        output.writeInt32(2, gender_);
       }
-      if (winners_ != 0) {
-        output.writeInt32(3, winners_);
+      for (int i = 0; i < region_.size(); i++) {
+        output.writeBytes(3, region_.getByteString(i));
       }
       if (totAmt_ != 0) {
         output.writeInt32(4, totAmt_);
       }
+      if (winners_ != 0) {
+        output.writeInt32(5, winners_);
+      }
       if (bonus_ != 0) {
-        output.writeInt32(5, bonus_);
+        output.writeInt32(6, bonus_);
       }
-      for (int i = 0; i < locs_.size(); i++) {
-        output.writeMessage(6, locs_.get(i));
+      if (!getRemarkBytes().isEmpty()) {
+        output.writeBytes(7, getRemarkBytes());
       }
-      for (int i = 0; i < uuidList_.size(); i++) {
-        output.writeBytes(7, uuidList_.getByteString(i));
+      for (int i = 0; i < userList_.size(); i++) {
+        output.writeMessage(8, userList_.get(i));
       }
     }
 
@@ -16173,87 +18377,91 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, getTitleBytes());
       }
-      if (type_ != 0) {
+      if (gender_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, type_);
+          .computeInt32Size(2, gender_);
       }
-      if (winners_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, winners_);
+      {
+        int dataSize = 0;
+        for (int i = 0; i < region_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(region_.getByteString(i));
+        }
+        size += dataSize;
+        size += 1 * getRegionList().size();
       }
       if (totAmt_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(4, totAmt_);
       }
+      if (winners_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, winners_);
+      }
       if (bonus_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, bonus_);
+          .computeInt32Size(6, bonus_);
       }
-      for (int i = 0; i < locs_.size(); i++) {
+      if (!getRemarkBytes().isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, locs_.get(i));
+          .computeBytesSize(7, getRemarkBytes());
       }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < uuidList_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(uuidList_.getByteString(i));
-        }
-        size += dataSize;
-        size += 1 * getUuidListList().size();
+      for (int i = 0; i < userList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, userList_.get(i));
       }
       memoizedSerializedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.PaymentProtos.PLottery parseFrom(
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.blemobi.sep.probuf.PaymentProtos.PLottery parseFrom(
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.PaymentProtos.PLottery parseFrom(byte[] data)
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.blemobi.sep.probuf.PaymentProtos.PLottery parseFrom(
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.PaymentProtos.PLottery parseFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.blemobi.sep.probuf.PaymentProtos.PLottery parseFrom(
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.PaymentProtos.PLottery parseDelimitedFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.blemobi.sep.probuf.PaymentProtos.PLottery parseDelimitedFrom(
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.PaymentProtos.PLottery parseFrom(
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.blemobi.sep.probuf.PaymentProtos.PLottery parseFrom(
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -16264,7 +18472,7 @@ public final class PaymentProtos {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.blemobi.sep.probuf.PaymentProtos.PLottery prototype) {
+    public static Builder newBuilder(com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -16279,29 +18487,29 @@ public final class PaymentProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code bbproto.PLottery}
+     * Protobuf type {@code bbproto.PLotteryConfirm}
      *
      * <pre>
-     * ----------------- 以下是抽奖协议 （潘有良）-----------------
+     **确认抽奖
      * </pre>
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bbproto.PLottery)
-        com.blemobi.sep.probuf.PaymentProtos.PLotteryOrBuilder {
+        // @@protoc_insertion_point(builder_implements:bbproto.PLotteryConfirm)
+        com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirmOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PLottery_descriptor;
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PLotteryConfirm_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PLottery_fieldAccessorTable
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PLotteryConfirm_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.PaymentProtos.PLottery.class, com.blemobi.sep.probuf.PaymentProtos.PLottery.Builder.class);
+                com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm.class, com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm.Builder.class);
       }
 
-      // Construct using com.blemobi.sep.probuf.PaymentProtos.PLottery.newBuilder()
+      // Construct using com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -16313,139 +18521,146 @@ public final class PaymentProtos {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getLocsFieldBuilder();
+          getUserListFieldBuilder();
         }
       }
       public Builder clear() {
         super.clear();
         title_ = "";
 
-        type_ = 0;
+        gender_ = 0;
+
+        region_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        totAmt_ = 0;
 
         winners_ = 0;
 
-        totAmt_ = 0;
-
         bonus_ = 0;
 
-        if (locsBuilder_ == null) {
-          locs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+        remark_ = "";
+
+        if (userListBuilder_ == null) {
+          userList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
         } else {
-          locsBuilder_.clear();
+          userListBuilder_.clear();
         }
-        uuidList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PLottery_descriptor;
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PLotteryConfirm_descriptor;
       }
 
-      public com.blemobi.sep.probuf.PaymentProtos.PLottery getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.PaymentProtos.PLottery.getDefaultInstance();
+      public com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm.getDefaultInstance();
       }
 
-      public com.blemobi.sep.probuf.PaymentProtos.PLottery build() {
-        com.blemobi.sep.probuf.PaymentProtos.PLottery result = buildPartial();
+      public com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm build() {
+        com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.blemobi.sep.probuf.PaymentProtos.PLottery buildPartial() {
-        com.blemobi.sep.probuf.PaymentProtos.PLottery result = new com.blemobi.sep.probuf.PaymentProtos.PLottery(this);
+      public com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm buildPartial() {
+        com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm result = new com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         result.title_ = title_;
-        result.type_ = type_;
-        result.winners_ = winners_;
+        result.gender_ = gender_;
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          region_ = region_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.region_ = region_;
         result.totAmt_ = totAmt_;
+        result.winners_ = winners_;
         result.bonus_ = bonus_;
-        if (locsBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
-            locs_ = java.util.Collections.unmodifiableList(locs_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+        result.remark_ = remark_;
+        if (userListBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) == 0x00000080)) {
+            userList_ = java.util.Collections.unmodifiableList(userList_);
+            bitField0_ = (bitField0_ & ~0x00000080);
           }
-          result.locs_ = locs_;
+          result.userList_ = userList_;
         } else {
-          result.locs_ = locsBuilder_.build();
+          result.userList_ = userListBuilder_.build();
         }
-        if (((bitField0_ & 0x00000040) == 0x00000040)) {
-          uuidList_ = uuidList_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000040);
-        }
-        result.uuidList_ = uuidList_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.PaymentProtos.PLottery) {
-          return mergeFrom((com.blemobi.sep.probuf.PaymentProtos.PLottery)other);
+        if (other instanceof com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm) {
+          return mergeFrom((com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.blemobi.sep.probuf.PaymentProtos.PLottery other) {
-        if (other == com.blemobi.sep.probuf.PaymentProtos.PLottery.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm other) {
+        if (other == com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm.getDefaultInstance()) return this;
         if (!other.getTitle().isEmpty()) {
           title_ = other.title_;
           onChanged();
         }
-        if (other.getType() != 0) {
-          setType(other.getType());
+        if (other.getGender() != 0) {
+          setGender(other.getGender());
         }
-        if (other.getWinners() != 0) {
-          setWinners(other.getWinners());
+        if (!other.region_.isEmpty()) {
+          if (region_.isEmpty()) {
+            region_ = other.region_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureRegionIsMutable();
+            region_.addAll(other.region_);
+          }
+          onChanged();
         }
         if (other.getTotAmt() != 0) {
           setTotAmt(other.getTotAmt());
         }
+        if (other.getWinners() != 0) {
+          setWinners(other.getWinners());
+        }
         if (other.getBonus() != 0) {
           setBonus(other.getBonus());
         }
-        if (locsBuilder_ == null) {
-          if (!other.locs_.isEmpty()) {
-            if (locs_.isEmpty()) {
-              locs_ = other.locs_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+        if (!other.getRemark().isEmpty()) {
+          remark_ = other.remark_;
+          onChanged();
+        }
+        if (userListBuilder_ == null) {
+          if (!other.userList_.isEmpty()) {
+            if (userList_.isEmpty()) {
+              userList_ = other.userList_;
+              bitField0_ = (bitField0_ & ~0x00000080);
             } else {
-              ensureLocsIsMutable();
-              locs_.addAll(other.locs_);
+              ensureUserListIsMutable();
+              userList_.addAll(other.userList_);
             }
             onChanged();
           }
         } else {
-          if (!other.locs_.isEmpty()) {
-            if (locsBuilder_.isEmpty()) {
-              locsBuilder_.dispose();
-              locsBuilder_ = null;
-              locs_ = other.locs_;
-              bitField0_ = (bitField0_ & ~0x00000020);
-              locsBuilder_ = 
+          if (!other.userList_.isEmpty()) {
+            if (userListBuilder_.isEmpty()) {
+              userListBuilder_.dispose();
+              userListBuilder_ = null;
+              userList_ = other.userList_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+              userListBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getLocsFieldBuilder() : null;
+                   getUserListFieldBuilder() : null;
             } else {
-              locsBuilder_.addAllMessages(other.locs_);
+              userListBuilder_.addAllMessages(other.userList_);
             }
           }
-        }
-        if (!other.uuidList_.isEmpty()) {
-          if (uuidList_.isEmpty()) {
-            uuidList_ = other.uuidList_;
-            bitField0_ = (bitField0_ & ~0x00000040);
-          } else {
-            ensureUuidListIsMutable();
-            uuidList_.addAll(other.uuidList_);
-          }
-          onChanged();
         }
         onChanged();
         return this;
@@ -16459,11 +18674,11 @@ public final class PaymentProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.blemobi.sep.probuf.PaymentProtos.PLottery parsedMessage = null;
+        com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.PaymentProtos.PLottery) e.getUnfinishedMessage();
+          parsedMessage = (com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -16564,78 +18779,169 @@ public final class PaymentProtos {
         return this;
       }
 
-      private int type_ ;
+      private int gender_ ;
       /**
-       * <code>optional int32 type = 2;</code>
+       * <code>optional int32 gender = 2;</code>
        *
        * <pre>
        * 接受人类型（0:全部，1:男，2:女）
        * </pre>
        */
-      public int getType() {
-        return type_;
+      public int getGender() {
+        return gender_;
       }
       /**
-       * <code>optional int32 type = 2;</code>
+       * <code>optional int32 gender = 2;</code>
        *
        * <pre>
        * 接受人类型（0:全部，1:男，2:女）
        * </pre>
        */
-      public Builder setType(int value) {
+      public Builder setGender(int value) {
         
-        type_ = value;
+        gender_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 type = 2;</code>
+       * <code>optional int32 gender = 2;</code>
        *
        * <pre>
        * 接受人类型（0:全部，1:男，2:女）
        * </pre>
        */
-      public Builder clearType() {
+      public Builder clearGender() {
         
-        type_ = 0;
+        gender_ = 0;
         onChanged();
         return this;
       }
 
-      private int winners_ ;
-      /**
-       * <code>optional int32 winners = 3;</code>
-       *
-       * <pre>
-       *获奖名额数
-       * </pre>
-       */
-      public int getWinners() {
-        return winners_;
+      private com.google.protobuf.LazyStringList region_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureRegionIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          region_ = new com.google.protobuf.LazyStringArrayList(region_);
+          bitField0_ |= 0x00000004;
+         }
       }
       /**
-       * <code>optional int32 winners = 3;</code>
+       * <code>repeated string region = 3;</code>
        *
        * <pre>
-       *获奖名额数
+       *地区筛选，格式如CN;4403、CN;44，配合下面的negate使用
        * </pre>
        */
-      public Builder setWinners(int value) {
-        
-        winners_ = value;
+      public com.google.protobuf.ProtocolStringList
+          getRegionList() {
+        return region_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string region = 3;</code>
+       *
+       * <pre>
+       *地区筛选，格式如CN;4403、CN;44，配合下面的negate使用
+       * </pre>
+       */
+      public int getRegionCount() {
+        return region_.size();
+      }
+      /**
+       * <code>repeated string region = 3;</code>
+       *
+       * <pre>
+       *地区筛选，格式如CN;4403、CN;44，配合下面的negate使用
+       * </pre>
+       */
+      public java.lang.String getRegion(int index) {
+        return region_.get(index);
+      }
+      /**
+       * <code>repeated string region = 3;</code>
+       *
+       * <pre>
+       *地区筛选，格式如CN;4403、CN;44，配合下面的negate使用
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getRegionBytes(int index) {
+        return region_.getByteString(index);
+      }
+      /**
+       * <code>repeated string region = 3;</code>
+       *
+       * <pre>
+       *地区筛选，格式如CN;4403、CN;44，配合下面的negate使用
+       * </pre>
+       */
+      public Builder setRegion(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRegionIsMutable();
+        region_.set(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 winners = 3;</code>
+       * <code>repeated string region = 3;</code>
        *
        * <pre>
-       *获奖名额数
+       *地区筛选，格式如CN;4403、CN;44，配合下面的negate使用
        * </pre>
        */
-      public Builder clearWinners() {
-        
-        winners_ = 0;
+      public Builder addRegion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRegionIsMutable();
+        region_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string region = 3;</code>
+       *
+       * <pre>
+       *地区筛选，格式如CN;4403、CN;44，配合下面的negate使用
+       * </pre>
+       */
+      public Builder addAllRegion(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureRegionIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, region_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string region = 3;</code>
+       *
+       * <pre>
+       *地区筛选，格式如CN;4403、CN;44，配合下面的negate使用
+       * </pre>
+       */
+      public Builder clearRegion() {
+        region_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string region = 3;</code>
+       *
+       * <pre>
+       *地区筛选，格式如CN;4403、CN;44，配合下面的negate使用
+       * </pre>
+       */
+      public Builder addRegionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRegionIsMutable();
+        region_.add(value);
         onChanged();
         return this;
       }
@@ -16645,7 +18951,7 @@ public final class PaymentProtos {
        * <code>optional int32 totAmt = 4;</code>
        *
        * <pre>
-       *抽奖总金额（分）
+       *总金额
        * </pre>
        */
       public int getTotAmt() {
@@ -16655,7 +18961,7 @@ public final class PaymentProtos {
        * <code>optional int32 totAmt = 4;</code>
        *
        * <pre>
-       *抽奖总金额（分）
+       *总金额
        * </pre>
        */
       public Builder setTotAmt(int value) {
@@ -16668,7 +18974,7 @@ public final class PaymentProtos {
        * <code>optional int32 totAmt = 4;</code>
        *
        * <pre>
-       *抽奖总金额（分）
+       *总金额
        * </pre>
        */
       public Builder clearTotAmt() {
@@ -16678,9 +18984,47 @@ public final class PaymentProtos {
         return this;
       }
 
+      private int winners_ ;
+      /**
+       * <code>optional int32 winners = 5;</code>
+       *
+       * <pre>
+       *获奖名额数
+       * </pre>
+       */
+      public int getWinners() {
+        return winners_;
+      }
+      /**
+       * <code>optional int32 winners = 5;</code>
+       *
+       * <pre>
+       *获奖名额数
+       * </pre>
+       */
+      public Builder setWinners(int value) {
+        
+        winners_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 winners = 5;</code>
+       *
+       * <pre>
+       *获奖名额数
+       * </pre>
+       */
+      public Builder clearWinners() {
+        
+        winners_ = 0;
+        onChanged();
+        return this;
+      }
+
       private int bonus_ ;
       /**
-       * <code>optional int32 bonus = 5;</code>
+       * <code>optional int32 bonus = 6;</code>
        *
        * <pre>
        *平均每个人的奖金（分）
@@ -16690,7 +19034,7 @@ public final class PaymentProtos {
         return bonus_;
       }
       /**
-       * <code>optional int32 bonus = 5;</code>
+       * <code>optional int32 bonus = 6;</code>
        *
        * <pre>
        *平均每个人的奖金（分）
@@ -16703,7 +19047,7 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>optional int32 bonus = 5;</code>
+       * <code>optional int32 bonus = 6;</code>
        *
        * <pre>
        *平均每个人的奖金（分）
@@ -16716,445 +19060,406 @@ public final class PaymentProtos {
         return this;
       }
 
-      private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PLocation> locs_ =
-        java.util.Collections.emptyList();
-      private void ensureLocsIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
-          locs_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PLocation>(locs_);
-          bitField0_ |= 0x00000020;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.PaymentProtos.PLocation, com.blemobi.sep.probuf.PaymentProtos.PLocation.Builder, com.blemobi.sep.probuf.PaymentProtos.PLocationOrBuilder> locsBuilder_;
-
+      private java.lang.Object remark_ = "";
       /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
+       * <code>optional string remark = 7;</code>
        *
        * <pre>
-       * 地理位置
+       *描述
        * </pre>
        */
-      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PLocation> getLocsList() {
-        if (locsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(locs_);
-        } else {
-          return locsBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       * 地理位置
-       * </pre>
-       */
-      public int getLocsCount() {
-        if (locsBuilder_ == null) {
-          return locs_.size();
-        } else {
-          return locsBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       * 地理位置
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.PaymentProtos.PLocation getLocs(int index) {
-        if (locsBuilder_ == null) {
-          return locs_.get(index);
-        } else {
-          return locsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       * 地理位置
-       * </pre>
-       */
-      public Builder setLocs(
-          int index, com.blemobi.sep.probuf.PaymentProtos.PLocation value) {
-        if (locsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
+      public java.lang.String getRemark() {
+        java.lang.Object ref = remark_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            remark_ = s;
           }
-          ensureLocsIsMutable();
-          locs_.set(index, value);
-          onChanged();
+          return s;
         } else {
-          locsBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       * 地理位置
-       * </pre>
-       */
-      public Builder setLocs(
-          int index, com.blemobi.sep.probuf.PaymentProtos.PLocation.Builder builderForValue) {
-        if (locsBuilder_ == null) {
-          ensureLocsIsMutable();
-          locs_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          locsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       * 地理位置
-       * </pre>
-       */
-      public Builder addLocs(com.blemobi.sep.probuf.PaymentProtos.PLocation value) {
-        if (locsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureLocsIsMutable();
-          locs_.add(value);
-          onChanged();
-        } else {
-          locsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       * 地理位置
-       * </pre>
-       */
-      public Builder addLocs(
-          int index, com.blemobi.sep.probuf.PaymentProtos.PLocation value) {
-        if (locsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureLocsIsMutable();
-          locs_.add(index, value);
-          onChanged();
-        } else {
-          locsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       * 地理位置
-       * </pre>
-       */
-      public Builder addLocs(
-          com.blemobi.sep.probuf.PaymentProtos.PLocation.Builder builderForValue) {
-        if (locsBuilder_ == null) {
-          ensureLocsIsMutable();
-          locs_.add(builderForValue.build());
-          onChanged();
-        } else {
-          locsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       * 地理位置
-       * </pre>
-       */
-      public Builder addLocs(
-          int index, com.blemobi.sep.probuf.PaymentProtos.PLocation.Builder builderForValue) {
-        if (locsBuilder_ == null) {
-          ensureLocsIsMutable();
-          locs_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          locsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       * 地理位置
-       * </pre>
-       */
-      public Builder addAllLocs(
-          java.lang.Iterable<? extends com.blemobi.sep.probuf.PaymentProtos.PLocation> values) {
-        if (locsBuilder_ == null) {
-          ensureLocsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, locs_);
-          onChanged();
-        } else {
-          locsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       * 地理位置
-       * </pre>
-       */
-      public Builder clearLocs() {
-        if (locsBuilder_ == null) {
-          locs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
-          onChanged();
-        } else {
-          locsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       * 地理位置
-       * </pre>
-       */
-      public Builder removeLocs(int index) {
-        if (locsBuilder_ == null) {
-          ensureLocsIsMutable();
-          locs_.remove(index);
-          onChanged();
-        } else {
-          locsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       * 地理位置
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.PaymentProtos.PLocation.Builder getLocsBuilder(
-          int index) {
-        return getLocsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       * 地理位置
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.PaymentProtos.PLocationOrBuilder getLocsOrBuilder(
-          int index) {
-        if (locsBuilder_ == null) {
-          return locs_.get(index);  } else {
-          return locsBuilder_.getMessageOrBuilder(index);
+          return (java.lang.String) ref;
         }
       }
       /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
+       * <code>optional string remark = 7;</code>
        *
        * <pre>
-       * 地理位置
-       * </pre>
-       */
-      public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PLocationOrBuilder> 
-           getLocsOrBuilderList() {
-        if (locsBuilder_ != null) {
-          return locsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(locs_);
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       * 地理位置
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.PaymentProtos.PLocation.Builder addLocsBuilder() {
-        return getLocsFieldBuilder().addBuilder(
-            com.blemobi.sep.probuf.PaymentProtos.PLocation.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       * 地理位置
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.PaymentProtos.PLocation.Builder addLocsBuilder(
-          int index) {
-        return getLocsFieldBuilder().addBuilder(
-            index, com.blemobi.sep.probuf.PaymentProtos.PLocation.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       * 地理位置
-       * </pre>
-       */
-      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PLocation.Builder> 
-           getLocsBuilderList() {
-        return getLocsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.PaymentProtos.PLocation, com.blemobi.sep.probuf.PaymentProtos.PLocation.Builder, com.blemobi.sep.probuf.PaymentProtos.PLocationOrBuilder> 
-          getLocsFieldBuilder() {
-        if (locsBuilder_ == null) {
-          locsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              com.blemobi.sep.probuf.PaymentProtos.PLocation, com.blemobi.sep.probuf.PaymentProtos.PLocation.Builder, com.blemobi.sep.probuf.PaymentProtos.PLocationOrBuilder>(
-                  locs_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
-                  getParentForChildren(),
-                  isClean());
-          locs_ = null;
-        }
-        return locsBuilder_;
-      }
-
-      private com.google.protobuf.LazyStringList uuidList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureUuidListIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
-          uuidList_ = new com.google.protobuf.LazyStringArrayList(uuidList_);
-          bitField0_ |= 0x00000040;
-         }
-      }
-      /**
-       * <code>repeated string uuidList = 7;</code>
-       *
-       * <pre>
-       *获奖人列表
-       * </pre>
-       */
-      public com.google.protobuf.ProtocolStringList
-          getUuidListList() {
-        return uuidList_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string uuidList = 7;</code>
-       *
-       * <pre>
-       *获奖人列表
-       * </pre>
-       */
-      public int getUuidListCount() {
-        return uuidList_.size();
-      }
-      /**
-       * <code>repeated string uuidList = 7;</code>
-       *
-       * <pre>
-       *获奖人列表
-       * </pre>
-       */
-      public java.lang.String getUuidList(int index) {
-        return uuidList_.get(index);
-      }
-      /**
-       * <code>repeated string uuidList = 7;</code>
-       *
-       * <pre>
-       *获奖人列表
+       *描述
        * </pre>
        */
       public com.google.protobuf.ByteString
-          getUuidListBytes(int index) {
-        return uuidList_.getByteString(index);
+          getRemarkBytes() {
+        java.lang.Object ref = remark_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          remark_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
       }
       /**
-       * <code>repeated string uuidList = 7;</code>
+       * <code>optional string remark = 7;</code>
        *
        * <pre>
-       *获奖人列表
+       *描述
        * </pre>
        */
-      public Builder setUuidList(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureUuidListIsMutable();
-        uuidList_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string uuidList = 7;</code>
-       *
-       * <pre>
-       *获奖人列表
-       * </pre>
-       */
-      public Builder addUuidList(
+      public Builder setRemark(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureUuidListIsMutable();
-        uuidList_.add(value);
+  
+        remark_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string uuidList = 7;</code>
+       * <code>optional string remark = 7;</code>
        *
        * <pre>
-       *获奖人列表
+       *描述
        * </pre>
        */
-      public Builder addAllUuidList(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureUuidListIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, uuidList_);
+      public Builder clearRemark() {
+        
+        remark_ = getDefaultInstance().getRemark();
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string uuidList = 7;</code>
+       * <code>optional string remark = 7;</code>
        *
        * <pre>
-       *获奖人列表
+       *描述
        * </pre>
        */
-      public Builder clearUuidList() {
-        uuidList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string uuidList = 7;</code>
-       *
-       * <pre>
-       *获奖人列表
-       * </pre>
-       */
-      public Builder addUuidListBytes(
+      public Builder setRemarkBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureUuidListIsMutable();
-        uuidList_.add(value);
+  
+        remark_ = value;
         onChanged();
         return this;
+      }
+
+      private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> userList_ =
+        java.util.Collections.emptyList();
+      private void ensureUserListIsMutable() {
+        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+          userList_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx>(userList_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder, com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder> userListBuilder_;
+
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> getUserListList() {
+        if (userListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(userList_);
+        } else {
+          return userListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public int getUserListCount() {
+        if (userListBuilder_ == null) {
+          return userList_.size();
+        } else {
+          return userListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx getUserList(int index) {
+        if (userListBuilder_ == null) {
+          return userList_.get(index);
+        } else {
+          return userListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public Builder setUserList(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx value) {
+        if (userListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUserListIsMutable();
+          userList_.set(index, value);
+          onChanged();
+        } else {
+          userListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public Builder setUserList(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder builderForValue) {
+        if (userListBuilder_ == null) {
+          ensureUserListIsMutable();
+          userList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          userListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public Builder addUserList(com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx value) {
+        if (userListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUserListIsMutable();
+          userList_.add(value);
+          onChanged();
+        } else {
+          userListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public Builder addUserList(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx value) {
+        if (userListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUserListIsMutable();
+          userList_.add(index, value);
+          onChanged();
+        } else {
+          userListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public Builder addUserList(
+          com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder builderForValue) {
+        if (userListBuilder_ == null) {
+          ensureUserListIsMutable();
+          userList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          userListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public Builder addUserList(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder builderForValue) {
+        if (userListBuilder_ == null) {
+          ensureUserListIsMutable();
+          userList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          userListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public Builder addAllUserList(
+          java.lang.Iterable<? extends com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> values) {
+        if (userListBuilder_ == null) {
+          ensureUserListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, userList_);
+          onChanged();
+        } else {
+          userListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public Builder clearUserList() {
+        if (userListBuilder_ == null) {
+          userList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+          onChanged();
+        } else {
+          userListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public Builder removeUserList(int index) {
+        if (userListBuilder_ == null) {
+          ensureUserListIsMutable();
+          userList_.remove(index);
+          onChanged();
+        } else {
+          userListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder getUserListBuilder(
+          int index) {
+        return getUserListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder getUserListOrBuilder(
+          int index) {
+        if (userListBuilder_ == null) {
+          return userList_.get(index);  } else {
+          return userListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder> 
+           getUserListOrBuilderList() {
+        if (userListBuilder_ != null) {
+          return userListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(userList_);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder addUserListBuilder() {
+        return getUserListFieldBuilder().addBuilder(
+            com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder addUserListBuilder(
+          int index) {
+        return getUserListFieldBuilder().addBuilder(
+            index, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
+       *
+       * <pre>
+       *中奖用户信息
+       * </pre>
+       */
+      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder> 
+           getUserListBuilderList() {
+        return getUserListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder, com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder> 
+          getUserListFieldBuilder() {
+        if (userListBuilder_ == null) {
+          userListBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder, com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder>(
+                  userList_,
+                  ((bitField0_ & 0x00000080) == 0x00000080),
+                  getParentForChildren(),
+                  isClean());
+          userList_ = null;
+        }
+        return userListBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -17167,27 +19472,27 @@ public final class PaymentProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bbproto.PLottery)
+      // @@protoc_insertion_point(builder_scope:bbproto.PLotteryConfirm)
     }
 
-    // @@protoc_insertion_point(class_scope:bbproto.PLottery)
-    private static final com.blemobi.sep.probuf.PaymentProtos.PLottery DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:bbproto.PLotteryConfirm)
+    private static final com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.PaymentProtos.PLottery();
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm();
     }
 
-    public static com.blemobi.sep.probuf.PaymentProtos.PLottery getDefaultInstance() {
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PLottery> PARSER =
-        new com.google.protobuf.AbstractParser<PLottery>() {
-      public PLottery parsePartialFrom(
+    public static final com.google.protobuf.Parser<PLotteryConfirm> PARSER =
+        new com.google.protobuf.AbstractParser<PLotteryConfirm>() {
+      public PLotteryConfirm parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         try {
-          return new PLottery(input, extensionRegistry);
+          return new PLotteryConfirm(input, extensionRegistry);
         } catch (RuntimeException e) {
           if (e.getCause() instanceof
               com.google.protobuf.InvalidProtocolBufferException) {
@@ -17200,11 +19505,11 @@ public final class PaymentProtos {
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PLottery> getParserForType() {
+    public com.google.protobuf.Parser<PLotteryConfirm> getParserForType() {
       return PARSER;
     }
 
-    public com.blemobi.sep.probuf.PaymentProtos.PLottery getDefaultInstanceForType() {
+    public com.blemobi.sep.probuf.PaymentProtos.PLotteryConfirm getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -17260,6 +19565,10 @@ public final class PaymentProtos {
   }
   /**
    * Protobuf type {@code bbproto.PLotteryListRet}
+   *
+   * <pre>
+   **历史抽奖记录（最近一月）
+   * </pre>
    */
   public  static final class PLotteryListRet extends
       com.google.protobuf.GeneratedMessage implements
@@ -17492,6 +19801,10 @@ public final class PaymentProtos {
     }
     /**
      * Protobuf type {@code bbproto.PLotteryListRet}
+     *
+     * <pre>
+     **历史抽奖记录（最近一月）
+     * </pre>
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -18021,6 +20334,10 @@ public final class PaymentProtos {
   }
   /**
    * Protobuf type {@code bbproto.PAcceptPrize}
+   *
+   * <pre>
+   **中奖者领奖
+   * </pre>
    */
   public  static final class PAcceptPrize extends
       com.google.protobuf.GeneratedMessage implements
@@ -18237,6 +20554,10 @@ public final class PaymentProtos {
     }
     /**
      * Protobuf type {@code bbproto.PAcceptPrize}
+     *
+     * <pre>
+     **中奖者领奖
+     * </pre>
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -18506,7 +20827,25 @@ public final class PaymentProtos {
         getLotteryIdBytes();
 
     /**
-     * <code>optional int32 totAmt = 2;</code>
+     * <code>optional string title = 2;</code>
+     *
+     * <pre>
+     *标题
+     * </pre>
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>optional string title = 2;</code>
+     *
+     * <pre>
+     *标题
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>optional int32 totAmt = 3;</code>
      *
      * <pre>
      *抽奖总金额
@@ -18515,7 +20854,7 @@ public final class PaymentProtos {
     int getTotAmt();
 
     /**
-     * <code>optional string crtTm = 3;</code>
+     * <code>optional string crtTm = 4;</code>
      *
      * <pre>
      *抽奖创建时间
@@ -18523,7 +20862,7 @@ public final class PaymentProtos {
      */
     java.lang.String getCrtTm();
     /**
-     * <code>optional string crtTm = 3;</code>
+     * <code>optional string crtTm = 4;</code>
      *
      * <pre>
      *抽奖创建时间
@@ -18533,7 +20872,7 @@ public final class PaymentProtos {
         getCrtTmBytes();
 
     /**
-     * <code>optional int32 type = 4;</code>
+     * <code>optional int32 type = 5;</code>
      *
      * <pre>
      *抽奖类型（0:全部，1：男，2:女）
@@ -18542,7 +20881,7 @@ public final class PaymentProtos {
     int getType();
 
     /**
-     * <code>optional int32 winners = 5;</code>
+     * <code>optional int32 winners = 6;</code>
      *
      * <pre>
      *获奖人数
@@ -18551,95 +20890,108 @@ public final class PaymentProtos {
     int getWinners();
 
     /**
-     * <code>repeated .bbproto.PLocation locs = 6;</code>
+     * <code>repeated string region = 7;</code>
      *
      * <pre>
      *位置代码
      * </pre>
      */
-    java.util.List<com.blemobi.sep.probuf.PaymentProtos.PLocation> 
-        getLocsList();
+    com.google.protobuf.ProtocolStringList
+        getRegionList();
     /**
-     * <code>repeated .bbproto.PLocation locs = 6;</code>
+     * <code>repeated string region = 7;</code>
      *
      * <pre>
      *位置代码
      * </pre>
      */
-    com.blemobi.sep.probuf.PaymentProtos.PLocation getLocs(int index);
+    int getRegionCount();
     /**
-     * <code>repeated .bbproto.PLocation locs = 6;</code>
+     * <code>repeated string region = 7;</code>
      *
      * <pre>
      *位置代码
      * </pre>
      */
-    int getLocsCount();
+    java.lang.String getRegion(int index);
     /**
-     * <code>repeated .bbproto.PLocation locs = 6;</code>
+     * <code>repeated string region = 7;</code>
      *
      * <pre>
      *位置代码
      * </pre>
      */
-    java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PLocationOrBuilder> 
-        getLocsOrBuilderList();
-    /**
-     * <code>repeated .bbproto.PLocation locs = 6;</code>
-     *
-     * <pre>
-     *位置代码
-     * </pre>
-     */
-    com.blemobi.sep.probuf.PaymentProtos.PLocationOrBuilder getLocsOrBuilder(
-        int index);
+    com.google.protobuf.ByteString
+        getRegionBytes(int index);
 
     /**
-     * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+     * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
      *
      * <pre>
      *用户列表
      * </pre>
      */
     java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> 
-        getUsersList();
+        getUserListList();
     /**
-     * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+     * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
      *
      * <pre>
      *用户列表
      * </pre>
      */
-    com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx getUsers(int index);
+    com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx getUserList(int index);
     /**
-     * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+     * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
      *
      * <pre>
      *用户列表
      * </pre>
      */
-    int getUsersCount();
+    int getUserListCount();
     /**
-     * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+     * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
      *
      * <pre>
      *用户列表
      * </pre>
      */
     java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder> 
-        getUsersOrBuilderList();
+        getUserListOrBuilderList();
     /**
-     * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+     * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
      *
      * <pre>
      *用户列表
      * </pre>
      */
-    com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder getUsersOrBuilder(
+    com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder getUserListOrBuilder(
         int index);
+
+    /**
+     * <code>optional string remark = 9;</code>
+     *
+     * <pre>
+     *描述
+     * </pre>
+     */
+    java.lang.String getRemark();
+    /**
+     * <code>optional string remark = 9;</code>
+     *
+     * <pre>
+     *描述
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getRemarkBytes();
   }
   /**
    * Protobuf type {@code bbproto.PLotteryDetailRet}
+   *
+   * <pre>
+   **抽奖包详情
+   * </pre>
    */
   public  static final class PLotteryDetailRet extends
       com.google.protobuf.GeneratedMessage implements
@@ -18651,12 +21003,14 @@ public final class PaymentProtos {
     }
     private PLotteryDetailRet() {
       lotteryId_ = "";
+      title_ = "";
       totAmt_ = 0;
       crtTm_ = "";
       type_ = 0;
       winners_ = 0;
-      locs_ = java.util.Collections.emptyList();
-      users_ = java.util.Collections.emptyList();
+      region_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      userList_ = java.util.Collections.emptyList();
+      remark_ = "";
     }
 
     @java.lang.Override
@@ -18689,41 +21043,54 @@ public final class PaymentProtos {
               lotteryId_ = bs;
               break;
             }
-            case 16: {
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              title_ = bs;
+              break;
+            }
+            case 24: {
 
               totAmt_ = input.readInt32();
               break;
             }
-            case 26: {
+            case 34: {
               com.google.protobuf.ByteString bs = input.readBytes();
 
               crtTm_ = bs;
               break;
             }
-            case 32: {
+            case 40: {
 
               type_ = input.readInt32();
               break;
             }
-            case 40: {
+            case 48: {
 
               winners_ = input.readInt32();
               break;
             }
-            case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
-                locs_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PLocation>();
-                mutable_bitField0_ |= 0x00000020;
-              }
-              locs_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PLocation.PARSER, extensionRegistry));
-              break;
-            }
             case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
-                users_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx>();
+                region_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000040;
               }
-              users_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.PARSER, extensionRegistry));
+              region_.add(bs);
+              break;
+            }
+            case 66: {
+              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+                userList_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx>();
+                mutable_bitField0_ |= 0x00000080;
+              }
+              userList_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.PARSER, extensionRegistry));
+              break;
+            }
+            case 74: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              remark_ = bs;
               break;
             }
           }
@@ -18735,11 +21102,11 @@ public final class PaymentProtos {
             new com.google.protobuf.InvalidProtocolBufferException(
                 e.getMessage()).setUnfinishedMessage(this));
       } finally {
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
-          locs_ = java.util.Collections.unmodifiableList(locs_);
-        }
         if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
-          users_ = java.util.Collections.unmodifiableList(users_);
+          region_ = region_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+          userList_ = java.util.Collections.unmodifiableList(userList_);
         }
         makeExtensionsImmutable();
       }
@@ -18801,10 +21168,54 @@ public final class PaymentProtos {
       }
     }
 
-    public static final int TOTAMT_FIELD_NUMBER = 2;
+    public static final int TITLE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object title_;
+    /**
+     * <code>optional string title = 2;</code>
+     *
+     * <pre>
+     *标题
+     * </pre>
+     */
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          title_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string title = 2;</code>
+     *
+     * <pre>
+     *标题
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOTAMT_FIELD_NUMBER = 3;
     private int totAmt_;
     /**
-     * <code>optional int32 totAmt = 2;</code>
+     * <code>optional int32 totAmt = 3;</code>
      *
      * <pre>
      *抽奖总金额
@@ -18814,10 +21225,10 @@ public final class PaymentProtos {
       return totAmt_;
     }
 
-    public static final int CRTTM_FIELD_NUMBER = 3;
+    public static final int CRTTM_FIELD_NUMBER = 4;
     private volatile java.lang.Object crtTm_;
     /**
-     * <code>optional string crtTm = 3;</code>
+     * <code>optional string crtTm = 4;</code>
      *
      * <pre>
      *抽奖创建时间
@@ -18838,7 +21249,7 @@ public final class PaymentProtos {
       }
     }
     /**
-     * <code>optional string crtTm = 3;</code>
+     * <code>optional string crtTm = 4;</code>
      *
      * <pre>
      *抽奖创建时间
@@ -18858,10 +21269,10 @@ public final class PaymentProtos {
       }
     }
 
-    public static final int TYPE_FIELD_NUMBER = 4;
+    public static final int TYPE_FIELD_NUMBER = 5;
     private int type_;
     /**
-     * <code>optional int32 type = 4;</code>
+     * <code>optional int32 type = 5;</code>
      *
      * <pre>
      *抽奖类型（0:全部，1：男，2:女）
@@ -18871,10 +21282,10 @@ public final class PaymentProtos {
       return type_;
     }
 
-    public static final int WINNERS_FIELD_NUMBER = 5;
+    public static final int WINNERS_FIELD_NUMBER = 6;
     private int winners_;
     /**
-     * <code>optional int32 winners = 5;</code>
+     * <code>optional int32 winners = 6;</code>
      *
      * <pre>
      *获奖人数
@@ -18884,114 +21295,148 @@ public final class PaymentProtos {
       return winners_;
     }
 
-    public static final int LOCS_FIELD_NUMBER = 6;
-    private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PLocation> locs_;
+    public static final int REGION_FIELD_NUMBER = 7;
+    private com.google.protobuf.LazyStringList region_;
     /**
-     * <code>repeated .bbproto.PLocation locs = 6;</code>
+     * <code>repeated string region = 7;</code>
      *
      * <pre>
      *位置代码
      * </pre>
      */
-    public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PLocation> getLocsList() {
-      return locs_;
+    public com.google.protobuf.ProtocolStringList
+        getRegionList() {
+      return region_;
     }
     /**
-     * <code>repeated .bbproto.PLocation locs = 6;</code>
+     * <code>repeated string region = 7;</code>
      *
      * <pre>
      *位置代码
      * </pre>
      */
-    public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PLocationOrBuilder> 
-        getLocsOrBuilderList() {
-      return locs_;
+    public int getRegionCount() {
+      return region_.size();
     }
     /**
-     * <code>repeated .bbproto.PLocation locs = 6;</code>
+     * <code>repeated string region = 7;</code>
      *
      * <pre>
      *位置代码
      * </pre>
      */
-    public int getLocsCount() {
-      return locs_.size();
+    public java.lang.String getRegion(int index) {
+      return region_.get(index);
     }
     /**
-     * <code>repeated .bbproto.PLocation locs = 6;</code>
+     * <code>repeated string region = 7;</code>
      *
      * <pre>
      *位置代码
      * </pre>
      */
-    public com.blemobi.sep.probuf.PaymentProtos.PLocation getLocs(int index) {
-      return locs_.get(index);
-    }
-    /**
-     * <code>repeated .bbproto.PLocation locs = 6;</code>
-     *
-     * <pre>
-     *位置代码
-     * </pre>
-     */
-    public com.blemobi.sep.probuf.PaymentProtos.PLocationOrBuilder getLocsOrBuilder(
-        int index) {
-      return locs_.get(index);
+    public com.google.protobuf.ByteString
+        getRegionBytes(int index) {
+      return region_.getByteString(index);
     }
 
-    public static final int USERS_FIELD_NUMBER = 7;
-    private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> users_;
+    public static final int USERLIST_FIELD_NUMBER = 8;
+    private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> userList_;
     /**
-     * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+     * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
      *
      * <pre>
      *用户列表
      * </pre>
      */
-    public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> getUsersList() {
-      return users_;
+    public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> getUserListList() {
+      return userList_;
     }
     /**
-     * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+     * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
      *
      * <pre>
      *用户列表
      * </pre>
      */
     public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder> 
-        getUsersOrBuilderList() {
-      return users_;
+        getUserListOrBuilderList() {
+      return userList_;
     }
     /**
-     * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+     * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
      *
      * <pre>
      *用户列表
      * </pre>
      */
-    public int getUsersCount() {
-      return users_.size();
+    public int getUserListCount() {
+      return userList_.size();
     }
     /**
-     * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+     * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
      *
      * <pre>
      *用户列表
      * </pre>
      */
-    public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx getUsers(int index) {
-      return users_.get(index);
+    public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx getUserList(int index) {
+      return userList_.get(index);
     }
     /**
-     * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+     * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
      *
      * <pre>
      *用户列表
      * </pre>
      */
-    public com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder getUsersOrBuilder(
+    public com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder getUserListOrBuilder(
         int index) {
-      return users_.get(index);
+      return userList_.get(index);
+    }
+
+    public static final int REMARK_FIELD_NUMBER = 9;
+    private volatile java.lang.Object remark_;
+    /**
+     * <code>optional string remark = 9;</code>
+     *
+     * <pre>
+     *描述
+     * </pre>
+     */
+    public java.lang.String getRemark() {
+      java.lang.Object ref = remark_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          remark_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string remark = 9;</code>
+     *
+     * <pre>
+     *描述
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getRemarkBytes() {
+      java.lang.Object ref = remark_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        remark_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -19009,23 +21454,29 @@ public final class PaymentProtos {
       if (!getLotteryIdBytes().isEmpty()) {
         output.writeBytes(1, getLotteryIdBytes());
       }
+      if (!getTitleBytes().isEmpty()) {
+        output.writeBytes(2, getTitleBytes());
+      }
       if (totAmt_ != 0) {
-        output.writeInt32(2, totAmt_);
+        output.writeInt32(3, totAmt_);
       }
       if (!getCrtTmBytes().isEmpty()) {
-        output.writeBytes(3, getCrtTmBytes());
+        output.writeBytes(4, getCrtTmBytes());
       }
       if (type_ != 0) {
-        output.writeInt32(4, type_);
+        output.writeInt32(5, type_);
       }
       if (winners_ != 0) {
-        output.writeInt32(5, winners_);
+        output.writeInt32(6, winners_);
       }
-      for (int i = 0; i < locs_.size(); i++) {
-        output.writeMessage(6, locs_.get(i));
+      for (int i = 0; i < region_.size(); i++) {
+        output.writeBytes(7, region_.getByteString(i));
       }
-      for (int i = 0; i < users_.size(); i++) {
-        output.writeMessage(7, users_.get(i));
+      for (int i = 0; i < userList_.size(); i++) {
+        output.writeMessage(8, userList_.get(i));
+      }
+      if (!getRemarkBytes().isEmpty()) {
+        output.writeBytes(9, getRemarkBytes());
       }
     }
 
@@ -19039,29 +21490,42 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, getLotteryIdBytes());
       }
+      if (!getTitleBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getTitleBytes());
+      }
       if (totAmt_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, totAmt_);
+          .computeInt32Size(3, totAmt_);
       }
       if (!getCrtTmBytes().isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getCrtTmBytes());
+          .computeBytesSize(4, getCrtTmBytes());
       }
       if (type_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, type_);
+          .computeInt32Size(5, type_);
       }
       if (winners_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, winners_);
+          .computeInt32Size(6, winners_);
       }
-      for (int i = 0; i < locs_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, locs_.get(i));
+      {
+        int dataSize = 0;
+        for (int i = 0; i < region_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(region_.getByteString(i));
+        }
+        size += dataSize;
+        size += 1 * getRegionList().size();
       }
-      for (int i = 0; i < users_.size(); i++) {
+      for (int i = 0; i < userList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, users_.get(i));
+          .computeMessageSize(8, userList_.get(i));
+      }
+      if (!getRemarkBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(9, getRemarkBytes());
       }
       memoizedSerializedSize = size;
       return size;
@@ -19141,6 +21605,10 @@ public final class PaymentProtos {
     }
     /**
      * Protobuf type {@code bbproto.PLotteryDetailRet}
+     *
+     * <pre>
+     **抽奖包详情
+     * </pre>
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -19170,13 +21638,14 @@ public final class PaymentProtos {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getLocsFieldBuilder();
-          getUsersFieldBuilder();
+          getUserListFieldBuilder();
         }
       }
       public Builder clear() {
         super.clear();
         lotteryId_ = "";
+
+        title_ = "";
 
         totAmt_ = 0;
 
@@ -19186,18 +21655,16 @@ public final class PaymentProtos {
 
         winners_ = 0;
 
-        if (locsBuilder_ == null) {
-          locs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+        region_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        if (userListBuilder_ == null) {
+          userList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
         } else {
-          locsBuilder_.clear();
+          userListBuilder_.clear();
         }
-        if (usersBuilder_ == null) {
-          users_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
-        } else {
-          usersBuilder_.clear();
-        }
+        remark_ = "";
+
         return this;
       }
 
@@ -19223,28 +21690,26 @@ public final class PaymentProtos {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         result.lotteryId_ = lotteryId_;
+        result.title_ = title_;
         result.totAmt_ = totAmt_;
         result.crtTm_ = crtTm_;
         result.type_ = type_;
         result.winners_ = winners_;
-        if (locsBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
-            locs_ = java.util.Collections.unmodifiableList(locs_);
-            bitField0_ = (bitField0_ & ~0x00000020);
-          }
-          result.locs_ = locs_;
-        } else {
-          result.locs_ = locsBuilder_.build();
+        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          region_ = region_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000040);
         }
-        if (usersBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) == 0x00000040)) {
-            users_ = java.util.Collections.unmodifiableList(users_);
-            bitField0_ = (bitField0_ & ~0x00000040);
+        result.region_ = region_;
+        if (userListBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) == 0x00000080)) {
+            userList_ = java.util.Collections.unmodifiableList(userList_);
+            bitField0_ = (bitField0_ & ~0x00000080);
           }
-          result.users_ = users_;
+          result.userList_ = userList_;
         } else {
-          result.users_ = usersBuilder_.build();
+          result.userList_ = userListBuilder_.build();
         }
+        result.remark_ = remark_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -19265,6 +21730,10 @@ public final class PaymentProtos {
           lotteryId_ = other.lotteryId_;
           onChanged();
         }
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          onChanged();
+        }
         if (other.getTotAmt() != 0) {
           setTotAmt(other.getTotAmt());
         }
@@ -19278,57 +21747,45 @@ public final class PaymentProtos {
         if (other.getWinners() != 0) {
           setWinners(other.getWinners());
         }
-        if (locsBuilder_ == null) {
-          if (!other.locs_.isEmpty()) {
-            if (locs_.isEmpty()) {
-              locs_ = other.locs_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+        if (!other.region_.isEmpty()) {
+          if (region_.isEmpty()) {
+            region_ = other.region_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+          } else {
+            ensureRegionIsMutable();
+            region_.addAll(other.region_);
+          }
+          onChanged();
+        }
+        if (userListBuilder_ == null) {
+          if (!other.userList_.isEmpty()) {
+            if (userList_.isEmpty()) {
+              userList_ = other.userList_;
+              bitField0_ = (bitField0_ & ~0x00000080);
             } else {
-              ensureLocsIsMutable();
-              locs_.addAll(other.locs_);
+              ensureUserListIsMutable();
+              userList_.addAll(other.userList_);
             }
             onChanged();
           }
         } else {
-          if (!other.locs_.isEmpty()) {
-            if (locsBuilder_.isEmpty()) {
-              locsBuilder_.dispose();
-              locsBuilder_ = null;
-              locs_ = other.locs_;
-              bitField0_ = (bitField0_ & ~0x00000020);
-              locsBuilder_ = 
+          if (!other.userList_.isEmpty()) {
+            if (userListBuilder_.isEmpty()) {
+              userListBuilder_.dispose();
+              userListBuilder_ = null;
+              userList_ = other.userList_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+              userListBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getLocsFieldBuilder() : null;
+                   getUserListFieldBuilder() : null;
             } else {
-              locsBuilder_.addAllMessages(other.locs_);
+              userListBuilder_.addAllMessages(other.userList_);
             }
           }
         }
-        if (usersBuilder_ == null) {
-          if (!other.users_.isEmpty()) {
-            if (users_.isEmpty()) {
-              users_ = other.users_;
-              bitField0_ = (bitField0_ & ~0x00000040);
-            } else {
-              ensureUsersIsMutable();
-              users_.addAll(other.users_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.users_.isEmpty()) {
-            if (usersBuilder_.isEmpty()) {
-              usersBuilder_.dispose();
-              usersBuilder_ = null;
-              users_ = other.users_;
-              bitField0_ = (bitField0_ & ~0x00000040);
-              usersBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getUsersFieldBuilder() : null;
-            } else {
-              usersBuilder_.addAllMessages(other.users_);
-            }
-          }
+        if (!other.getRemark().isEmpty()) {
+          remark_ = other.remark_;
+          onChanged();
         }
         onChanged();
         return this;
@@ -19447,9 +21904,99 @@ public final class PaymentProtos {
         return this;
       }
 
+      private java.lang.Object title_ = "";
+      /**
+       * <code>optional string title = 2;</code>
+       *
+       * <pre>
+       *标题
+       * </pre>
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            title_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string title = 2;</code>
+       *
+       * <pre>
+       *标题
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string title = 2;</code>
+       *
+       * <pre>
+       *标题
+       * </pre>
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        title_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string title = 2;</code>
+       *
+       * <pre>
+       *标题
+       * </pre>
+       */
+      public Builder clearTitle() {
+        
+        title_ = getDefaultInstance().getTitle();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string title = 2;</code>
+       *
+       * <pre>
+       *标题
+       * </pre>
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        title_ = value;
+        onChanged();
+        return this;
+      }
+
       private int totAmt_ ;
       /**
-       * <code>optional int32 totAmt = 2;</code>
+       * <code>optional int32 totAmt = 3;</code>
        *
        * <pre>
        *抽奖总金额
@@ -19459,7 +22006,7 @@ public final class PaymentProtos {
         return totAmt_;
       }
       /**
-       * <code>optional int32 totAmt = 2;</code>
+       * <code>optional int32 totAmt = 3;</code>
        *
        * <pre>
        *抽奖总金额
@@ -19472,7 +22019,7 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>optional int32 totAmt = 2;</code>
+       * <code>optional int32 totAmt = 3;</code>
        *
        * <pre>
        *抽奖总金额
@@ -19487,7 +22034,7 @@ public final class PaymentProtos {
 
       private java.lang.Object crtTm_ = "";
       /**
-       * <code>optional string crtTm = 3;</code>
+       * <code>optional string crtTm = 4;</code>
        *
        * <pre>
        *抽奖创建时间
@@ -19508,7 +22055,7 @@ public final class PaymentProtos {
         }
       }
       /**
-       * <code>optional string crtTm = 3;</code>
+       * <code>optional string crtTm = 4;</code>
        *
        * <pre>
        *抽奖创建时间
@@ -19528,7 +22075,7 @@ public final class PaymentProtos {
         }
       }
       /**
-       * <code>optional string crtTm = 3;</code>
+       * <code>optional string crtTm = 4;</code>
        *
        * <pre>
        *抽奖创建时间
@@ -19545,7 +22092,7 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>optional string crtTm = 3;</code>
+       * <code>optional string crtTm = 4;</code>
        *
        * <pre>
        *抽奖创建时间
@@ -19558,7 +22105,7 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>optional string crtTm = 3;</code>
+       * <code>optional string crtTm = 4;</code>
        *
        * <pre>
        *抽奖创建时间
@@ -19577,7 +22124,7 @@ public final class PaymentProtos {
 
       private int type_ ;
       /**
-       * <code>optional int32 type = 4;</code>
+       * <code>optional int32 type = 5;</code>
        *
        * <pre>
        *抽奖类型（0:全部，1：男，2:女）
@@ -19587,7 +22134,7 @@ public final class PaymentProtos {
         return type_;
       }
       /**
-       * <code>optional int32 type = 4;</code>
+       * <code>optional int32 type = 5;</code>
        *
        * <pre>
        *抽奖类型（0:全部，1：男，2:女）
@@ -19600,7 +22147,7 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>optional int32 type = 4;</code>
+       * <code>optional int32 type = 5;</code>
        *
        * <pre>
        *抽奖类型（0:全部，1：男，2:女）
@@ -19615,7 +22162,7 @@ public final class PaymentProtos {
 
       private int winners_ ;
       /**
-       * <code>optional int32 winners = 5;</code>
+       * <code>optional int32 winners = 6;</code>
        *
        * <pre>
        *获奖人数
@@ -19625,7 +22172,7 @@ public final class PaymentProtos {
         return winners_;
       }
       /**
-       * <code>optional int32 winners = 5;</code>
+       * <code>optional int32 winners = 6;</code>
        *
        * <pre>
        *获奖人数
@@ -19638,7 +22185,7 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>optional int32 winners = 5;</code>
+       * <code>optional int32 winners = 6;</code>
        *
        * <pre>
        *获奖人数
@@ -19651,628 +22198,535 @@ public final class PaymentProtos {
         return this;
       }
 
-      private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PLocation> locs_ =
-        java.util.Collections.emptyList();
-      private void ensureLocsIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
-          locs_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PLocation>(locs_);
-          bitField0_ |= 0x00000020;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.PaymentProtos.PLocation, com.blemobi.sep.probuf.PaymentProtos.PLocation.Builder, com.blemobi.sep.probuf.PaymentProtos.PLocationOrBuilder> locsBuilder_;
-
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       *位置代码
-       * </pre>
-       */
-      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PLocation> getLocsList() {
-        if (locsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(locs_);
-        } else {
-          return locsBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       *位置代码
-       * </pre>
-       */
-      public int getLocsCount() {
-        if (locsBuilder_ == null) {
-          return locs_.size();
-        } else {
-          return locsBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       *位置代码
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.PaymentProtos.PLocation getLocs(int index) {
-        if (locsBuilder_ == null) {
-          return locs_.get(index);
-        } else {
-          return locsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       *位置代码
-       * </pre>
-       */
-      public Builder setLocs(
-          int index, com.blemobi.sep.probuf.PaymentProtos.PLocation value) {
-        if (locsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureLocsIsMutable();
-          locs_.set(index, value);
-          onChanged();
-        } else {
-          locsBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       *位置代码
-       * </pre>
-       */
-      public Builder setLocs(
-          int index, com.blemobi.sep.probuf.PaymentProtos.PLocation.Builder builderForValue) {
-        if (locsBuilder_ == null) {
-          ensureLocsIsMutable();
-          locs_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          locsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       *位置代码
-       * </pre>
-       */
-      public Builder addLocs(com.blemobi.sep.probuf.PaymentProtos.PLocation value) {
-        if (locsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureLocsIsMutable();
-          locs_.add(value);
-          onChanged();
-        } else {
-          locsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       *位置代码
-       * </pre>
-       */
-      public Builder addLocs(
-          int index, com.blemobi.sep.probuf.PaymentProtos.PLocation value) {
-        if (locsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureLocsIsMutable();
-          locs_.add(index, value);
-          onChanged();
-        } else {
-          locsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       *位置代码
-       * </pre>
-       */
-      public Builder addLocs(
-          com.blemobi.sep.probuf.PaymentProtos.PLocation.Builder builderForValue) {
-        if (locsBuilder_ == null) {
-          ensureLocsIsMutable();
-          locs_.add(builderForValue.build());
-          onChanged();
-        } else {
-          locsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       *位置代码
-       * </pre>
-       */
-      public Builder addLocs(
-          int index, com.blemobi.sep.probuf.PaymentProtos.PLocation.Builder builderForValue) {
-        if (locsBuilder_ == null) {
-          ensureLocsIsMutable();
-          locs_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          locsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       *位置代码
-       * </pre>
-       */
-      public Builder addAllLocs(
-          java.lang.Iterable<? extends com.blemobi.sep.probuf.PaymentProtos.PLocation> values) {
-        if (locsBuilder_ == null) {
-          ensureLocsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, locs_);
-          onChanged();
-        } else {
-          locsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       *位置代码
-       * </pre>
-       */
-      public Builder clearLocs() {
-        if (locsBuilder_ == null) {
-          locs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
-          onChanged();
-        } else {
-          locsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       *位置代码
-       * </pre>
-       */
-      public Builder removeLocs(int index) {
-        if (locsBuilder_ == null) {
-          ensureLocsIsMutable();
-          locs_.remove(index);
-          onChanged();
-        } else {
-          locsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       *位置代码
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.PaymentProtos.PLocation.Builder getLocsBuilder(
-          int index) {
-        return getLocsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       *位置代码
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.PaymentProtos.PLocationOrBuilder getLocsOrBuilder(
-          int index) {
-        if (locsBuilder_ == null) {
-          return locs_.get(index);  } else {
-          return locsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       *位置代码
-       * </pre>
-       */
-      public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PLocationOrBuilder> 
-           getLocsOrBuilderList() {
-        if (locsBuilder_ != null) {
-          return locsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(locs_);
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       *位置代码
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.PaymentProtos.PLocation.Builder addLocsBuilder() {
-        return getLocsFieldBuilder().addBuilder(
-            com.blemobi.sep.probuf.PaymentProtos.PLocation.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       *位置代码
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.PaymentProtos.PLocation.Builder addLocsBuilder(
-          int index) {
-        return getLocsFieldBuilder().addBuilder(
-            index, com.blemobi.sep.probuf.PaymentProtos.PLocation.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .bbproto.PLocation locs = 6;</code>
-       *
-       * <pre>
-       *位置代码
-       * </pre>
-       */
-      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PLocation.Builder> 
-           getLocsBuilderList() {
-        return getLocsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.PaymentProtos.PLocation, com.blemobi.sep.probuf.PaymentProtos.PLocation.Builder, com.blemobi.sep.probuf.PaymentProtos.PLocationOrBuilder> 
-          getLocsFieldBuilder() {
-        if (locsBuilder_ == null) {
-          locsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              com.blemobi.sep.probuf.PaymentProtos.PLocation, com.blemobi.sep.probuf.PaymentProtos.PLocation.Builder, com.blemobi.sep.probuf.PaymentProtos.PLocationOrBuilder>(
-                  locs_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
-                  getParentForChildren(),
-                  isClean());
-          locs_ = null;
-        }
-        return locsBuilder_;
-      }
-
-      private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> users_ =
-        java.util.Collections.emptyList();
-      private void ensureUsersIsMutable() {
+      private com.google.protobuf.LazyStringList region_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureRegionIsMutable() {
         if (!((bitField0_ & 0x00000040) == 0x00000040)) {
-          users_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx>(users_);
+          region_ = new com.google.protobuf.LazyStringArrayList(region_);
           bitField0_ |= 0x00000040;
          }
       }
+      /**
+       * <code>repeated string region = 7;</code>
+       *
+       * <pre>
+       *位置代码
+       * </pre>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getRegionList() {
+        return region_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string region = 7;</code>
+       *
+       * <pre>
+       *位置代码
+       * </pre>
+       */
+      public int getRegionCount() {
+        return region_.size();
+      }
+      /**
+       * <code>repeated string region = 7;</code>
+       *
+       * <pre>
+       *位置代码
+       * </pre>
+       */
+      public java.lang.String getRegion(int index) {
+        return region_.get(index);
+      }
+      /**
+       * <code>repeated string region = 7;</code>
+       *
+       * <pre>
+       *位置代码
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getRegionBytes(int index) {
+        return region_.getByteString(index);
+      }
+      /**
+       * <code>repeated string region = 7;</code>
+       *
+       * <pre>
+       *位置代码
+       * </pre>
+       */
+      public Builder setRegion(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRegionIsMutable();
+        region_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string region = 7;</code>
+       *
+       * <pre>
+       *位置代码
+       * </pre>
+       */
+      public Builder addRegion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRegionIsMutable();
+        region_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string region = 7;</code>
+       *
+       * <pre>
+       *位置代码
+       * </pre>
+       */
+      public Builder addAllRegion(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureRegionIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, region_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string region = 7;</code>
+       *
+       * <pre>
+       *位置代码
+       * </pre>
+       */
+      public Builder clearRegion() {
+        region_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string region = 7;</code>
+       *
+       * <pre>
+       *位置代码
+       * </pre>
+       */
+      public Builder addRegionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRegionIsMutable();
+        region_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> userList_ =
+        java.util.Collections.emptyList();
+      private void ensureUserListIsMutable() {
+        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+          userList_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx>(userList_);
+          bitField0_ |= 0x00000080;
+         }
+      }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder, com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder> usersBuilder_;
+          com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder, com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder> userListBuilder_;
 
       /**
-       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> getUsersList() {
-        if (usersBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(users_);
+      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> getUserListList() {
+        if (userListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(userList_);
         } else {
-          return usersBuilder_.getMessageList();
+          return userListBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public int getUsersCount() {
-        if (usersBuilder_ == null) {
-          return users_.size();
+      public int getUserListCount() {
+        if (userListBuilder_ == null) {
+          return userList_.size();
         } else {
-          return usersBuilder_.getCount();
+          return userListBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx getUsers(int index) {
-        if (usersBuilder_ == null) {
-          return users_.get(index);
+      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx getUserList(int index) {
+        if (userListBuilder_ == null) {
+          return userList_.get(index);
         } else {
-          return usersBuilder_.getMessage(index);
+          return userListBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public Builder setUsers(
+      public Builder setUserList(
           int index, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx value) {
-        if (usersBuilder_ == null) {
+        if (userListBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureUsersIsMutable();
-          users_.set(index, value);
+          ensureUserListIsMutable();
+          userList_.set(index, value);
           onChanged();
         } else {
-          usersBuilder_.setMessage(index, value);
+          userListBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public Builder setUsers(
+      public Builder setUserList(
           int index, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder builderForValue) {
-        if (usersBuilder_ == null) {
-          ensureUsersIsMutable();
-          users_.set(index, builderForValue.build());
+        if (userListBuilder_ == null) {
+          ensureUserListIsMutable();
+          userList_.set(index, builderForValue.build());
           onChanged();
         } else {
-          usersBuilder_.setMessage(index, builderForValue.build());
+          userListBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public Builder addUsers(com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx value) {
-        if (usersBuilder_ == null) {
+      public Builder addUserList(com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx value) {
+        if (userListBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureUsersIsMutable();
-          users_.add(value);
+          ensureUserListIsMutable();
+          userList_.add(value);
           onChanged();
         } else {
-          usersBuilder_.addMessage(value);
+          userListBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public Builder addUsers(
+      public Builder addUserList(
           int index, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx value) {
-        if (usersBuilder_ == null) {
+        if (userListBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureUsersIsMutable();
-          users_.add(index, value);
+          ensureUserListIsMutable();
+          userList_.add(index, value);
           onChanged();
         } else {
-          usersBuilder_.addMessage(index, value);
+          userListBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public Builder addUsers(
+      public Builder addUserList(
           com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder builderForValue) {
-        if (usersBuilder_ == null) {
-          ensureUsersIsMutable();
-          users_.add(builderForValue.build());
+        if (userListBuilder_ == null) {
+          ensureUserListIsMutable();
+          userList_.add(builderForValue.build());
           onChanged();
         } else {
-          usersBuilder_.addMessage(builderForValue.build());
+          userListBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public Builder addUsers(
+      public Builder addUserList(
           int index, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder builderForValue) {
-        if (usersBuilder_ == null) {
-          ensureUsersIsMutable();
-          users_.add(index, builderForValue.build());
+        if (userListBuilder_ == null) {
+          ensureUserListIsMutable();
+          userList_.add(index, builderForValue.build());
           onChanged();
         } else {
-          usersBuilder_.addMessage(index, builderForValue.build());
+          userListBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public Builder addAllUsers(
+      public Builder addAllUserList(
           java.lang.Iterable<? extends com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx> values) {
-        if (usersBuilder_ == null) {
-          ensureUsersIsMutable();
+        if (userListBuilder_ == null) {
+          ensureUserListIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, users_);
+              values, userList_);
           onChanged();
         } else {
-          usersBuilder_.addAllMessages(values);
+          userListBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public Builder clearUsers() {
-        if (usersBuilder_ == null) {
-          users_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+      public Builder clearUserList() {
+        if (userListBuilder_ == null) {
+          userList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
           onChanged();
         } else {
-          usersBuilder_.clear();
+          userListBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public Builder removeUsers(int index) {
-        if (usersBuilder_ == null) {
-          ensureUsersIsMutable();
-          users_.remove(index);
+      public Builder removeUserList(int index) {
+        if (userListBuilder_ == null) {
+          ensureUserListIsMutable();
+          userList_.remove(index);
           onChanged();
         } else {
-          usersBuilder_.remove(index);
+          userListBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder getUsersBuilder(
+      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder getUserListBuilder(
           int index) {
-        return getUsersFieldBuilder().getBuilder(index);
+        return getUserListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder getUsersOrBuilder(
+      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder getUserListOrBuilder(
           int index) {
-        if (usersBuilder_ == null) {
-          return users_.get(index);  } else {
-          return usersBuilder_.getMessageOrBuilder(index);
+        if (userListBuilder_ == null) {
+          return userList_.get(index);  } else {
+          return userListBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
       public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder> 
-           getUsersOrBuilderList() {
-        if (usersBuilder_ != null) {
-          return usersBuilder_.getMessageOrBuilderList();
+           getUserListOrBuilderList() {
+        if (userListBuilder_ != null) {
+          return userListBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(users_);
+          return java.util.Collections.unmodifiableList(userList_);
         }
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder addUsersBuilder() {
-        return getUsersFieldBuilder().addBuilder(
+      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder addUserListBuilder() {
+        return getUserListFieldBuilder().addBuilder(
             com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.getDefaultInstance());
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
-      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder addUsersBuilder(
+      public com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder addUserListBuilder(
           int index) {
-        return getUsersFieldBuilder().addBuilder(
+        return getUserListFieldBuilder().addBuilder(
             index, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.getDefaultInstance());
       }
       /**
-       * <code>repeated .bbproto.PUserBaseEx users = 7;</code>
+       * <code>repeated .bbproto.PUserBaseEx userList = 8;</code>
        *
        * <pre>
        *用户列表
        * </pre>
        */
       public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder> 
-           getUsersBuilderList() {
-        return getUsersFieldBuilder().getBuilderList();
+           getUserListBuilderList() {
+        return getUserListFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
           com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder, com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder> 
-          getUsersFieldBuilder() {
-        if (usersBuilder_ == null) {
-          usersBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          getUserListFieldBuilder() {
+        if (userListBuilder_ == null) {
+          userListBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx, com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.Builder, com.blemobi.sep.probuf.PaymentProtos.PUserBaseExOrBuilder>(
-                  users_,
-                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  userList_,
+                  ((bitField0_ & 0x00000080) == 0x00000080),
                   getParentForChildren(),
                   isClean());
-          users_ = null;
+          userList_ = null;
         }
-        return usersBuilder_;
+        return userListBuilder_;
+      }
+
+      private java.lang.Object remark_ = "";
+      /**
+       * <code>optional string remark = 9;</code>
+       *
+       * <pre>
+       *描述
+       * </pre>
+       */
+      public java.lang.String getRemark() {
+        java.lang.Object ref = remark_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            remark_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string remark = 9;</code>
+       *
+       * <pre>
+       *描述
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getRemarkBytes() {
+        java.lang.Object ref = remark_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          remark_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string remark = 9;</code>
+       *
+       * <pre>
+       *描述
+       * </pre>
+       */
+      public Builder setRemark(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        remark_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string remark = 9;</code>
+       *
+       * <pre>
+       *描述
+       * </pre>
+       */
+      public Builder clearRemark() {
+        
+        remark_ = getDefaultInstance().getRemark();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string remark = 9;</code>
+       *
+       * <pre>
+       *描述
+       * </pre>
+       */
+      public Builder setRemarkBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        remark_ = value;
+        onChanged();
+        return this;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -20396,39 +22850,48 @@ public final class PaymentProtos {
         getCrtTmBytes();
 
     /**
-     * <code>repeated string icons = 5;</code>
+     * <code>repeated .bbproto.PUserBase userList = 5;</code>
      *
      * <pre>
-     *中奖者头像列表（最长5个头像.）
+     *参与抽奖者信息（最多5个）
      * </pre>
      */
-    com.google.protobuf.ProtocolStringList
-        getIconsList();
+    java.util.List<com.blemobi.sep.probuf.AccountProtos.PUserBase> 
+        getUserListList();
     /**
-     * <code>repeated string icons = 5;</code>
+     * <code>repeated .bbproto.PUserBase userList = 5;</code>
      *
      * <pre>
-     *中奖者头像列表（最长5个头像.）
+     *参与抽奖者信息（最多5个）
      * </pre>
      */
-    int getIconsCount();
+    com.blemobi.sep.probuf.AccountProtos.PUserBase getUserList(int index);
     /**
-     * <code>repeated string icons = 5;</code>
+     * <code>repeated .bbproto.PUserBase userList = 5;</code>
      *
      * <pre>
-     *中奖者头像列表（最长5个头像.）
+     *参与抽奖者信息（最多5个）
      * </pre>
      */
-    java.lang.String getIcons(int index);
+    int getUserListCount();
     /**
-     * <code>repeated string icons = 5;</code>
+     * <code>repeated .bbproto.PUserBase userList = 5;</code>
      *
      * <pre>
-     *中奖者头像列表（最长5个头像.）
+     *参与抽奖者信息（最多5个）
      * </pre>
      */
-    com.google.protobuf.ByteString
-        getIconsBytes(int index);
+    java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> 
+        getUserListOrBuilderList();
+    /**
+     * <code>repeated .bbproto.PUserBase userList = 5;</code>
+     *
+     * <pre>
+     *参与抽奖者信息（最多5个）
+     * </pre>
+     */
+    com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserListOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code bbproto.PLotterySingleRet}
@@ -20446,7 +22909,7 @@ public final class PaymentProtos {
       title_ = "";
       winners_ = 0;
       crtTm_ = "";
-      icons_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      userList_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -20497,12 +22960,11 @@ public final class PaymentProtos {
               break;
             }
             case 42: {
-              com.google.protobuf.ByteString bs = input.readBytes();
               if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-                icons_ = new com.google.protobuf.LazyStringArrayList();
+                userList_ = new java.util.ArrayList<com.blemobi.sep.probuf.AccountProtos.PUserBase>();
                 mutable_bitField0_ |= 0x00000010;
               }
-              icons_.add(bs);
+              userList_.add(input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.PARSER, extensionRegistry));
               break;
             }
           }
@@ -20515,7 +22977,7 @@ public final class PaymentProtos {
                 e.getMessage()).setUnfinishedMessage(this));
       } finally {
         if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-          icons_ = icons_.getUnmodifiableView();
+          userList_ = java.util.Collections.unmodifiableList(userList_);
         }
         makeExtensionsImmutable();
       }
@@ -20678,49 +23140,59 @@ public final class PaymentProtos {
       }
     }
 
-    public static final int ICONS_FIELD_NUMBER = 5;
-    private com.google.protobuf.LazyStringList icons_;
+    public static final int USERLIST_FIELD_NUMBER = 5;
+    private java.util.List<com.blemobi.sep.probuf.AccountProtos.PUserBase> userList_;
     /**
-     * <code>repeated string icons = 5;</code>
+     * <code>repeated .bbproto.PUserBase userList = 5;</code>
      *
      * <pre>
-     *中奖者头像列表（最长5个头像.）
+     *参与抽奖者信息（最多5个）
      * </pre>
      */
-    public com.google.protobuf.ProtocolStringList
-        getIconsList() {
-      return icons_;
+    public java.util.List<com.blemobi.sep.probuf.AccountProtos.PUserBase> getUserListList() {
+      return userList_;
     }
     /**
-     * <code>repeated string icons = 5;</code>
+     * <code>repeated .bbproto.PUserBase userList = 5;</code>
      *
      * <pre>
-     *中奖者头像列表（最长5个头像.）
+     *参与抽奖者信息（最多5个）
      * </pre>
      */
-    public int getIconsCount() {
-      return icons_.size();
+    public java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> 
+        getUserListOrBuilderList() {
+      return userList_;
     }
     /**
-     * <code>repeated string icons = 5;</code>
+     * <code>repeated .bbproto.PUserBase userList = 5;</code>
      *
      * <pre>
-     *中奖者头像列表（最长5个头像.）
+     *参与抽奖者信息（最多5个）
      * </pre>
      */
-    public java.lang.String getIcons(int index) {
-      return icons_.get(index);
+    public int getUserListCount() {
+      return userList_.size();
     }
     /**
-     * <code>repeated string icons = 5;</code>
+     * <code>repeated .bbproto.PUserBase userList = 5;</code>
      *
      * <pre>
-     *中奖者头像列表（最长5个头像.）
+     *参与抽奖者信息（最多5个）
      * </pre>
      */
-    public com.google.protobuf.ByteString
-        getIconsBytes(int index) {
-      return icons_.getByteString(index);
+    public com.blemobi.sep.probuf.AccountProtos.PUserBase getUserList(int index) {
+      return userList_.get(index);
+    }
+    /**
+     * <code>repeated .bbproto.PUserBase userList = 5;</code>
+     *
+     * <pre>
+     *参与抽奖者信息（最多5个）
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserListOrBuilder(
+        int index) {
+      return userList_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -20747,8 +23219,8 @@ public final class PaymentProtos {
       if (!getCrtTmBytes().isEmpty()) {
         output.writeBytes(4, getCrtTmBytes());
       }
-      for (int i = 0; i < icons_.size(); i++) {
-        output.writeBytes(5, icons_.getByteString(i));
+      for (int i = 0; i < userList_.size(); i++) {
+        output.writeMessage(5, userList_.get(i));
       }
     }
 
@@ -20774,14 +23246,9 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(4, getCrtTmBytes());
       }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < icons_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(icons_.getByteString(i));
-        }
-        size += dataSize;
-        size += 1 * getIconsList().size();
+      for (int i = 0; i < userList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, userList_.get(i));
       }
       memoizedSerializedSize = size;
       return size;
@@ -20890,6 +23357,7 @@ public final class PaymentProtos {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getUserListFieldBuilder();
         }
       }
       public Builder clear() {
@@ -20902,8 +23370,12 @@ public final class PaymentProtos {
 
         crtTm_ = "";
 
-        icons_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        if (userListBuilder_ == null) {
+          userList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        } else {
+          userListBuilder_.clear();
+        }
         return this;
       }
 
@@ -20932,11 +23404,15 @@ public final class PaymentProtos {
         result.title_ = title_;
         result.winners_ = winners_;
         result.crtTm_ = crtTm_;
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
-          icons_ = icons_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000010);
+        if (userListBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+            userList_ = java.util.Collections.unmodifiableList(userList_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.userList_ = userList_;
+        } else {
+          result.userList_ = userListBuilder_.build();
         }
-        result.icons_ = icons_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -20968,15 +23444,31 @@ public final class PaymentProtos {
           crtTm_ = other.crtTm_;
           onChanged();
         }
-        if (!other.icons_.isEmpty()) {
-          if (icons_.isEmpty()) {
-            icons_ = other.icons_;
-            bitField0_ = (bitField0_ & ~0x00000010);
-          } else {
-            ensureIconsIsMutable();
-            icons_.addAll(other.icons_);
+        if (userListBuilder_ == null) {
+          if (!other.userList_.isEmpty()) {
+            if (userList_.isEmpty()) {
+              userList_ = other.userList_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureUserListIsMutable();
+              userList_.addAll(other.userList_);
+            }
+            onChanged();
           }
-          onChanged();
+        } else {
+          if (!other.userList_.isEmpty()) {
+            if (userListBuilder_.isEmpty()) {
+              userListBuilder_.dispose();
+              userListBuilder_ = null;
+              userList_ = other.userList_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              userListBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getUserListFieldBuilder() : null;
+            } else {
+              userListBuilder_.addAllMessages(other.userList_);
+            }
+          }
         }
         onChanged();
         return this;
@@ -21313,133 +23805,316 @@ public final class PaymentProtos {
         return this;
       }
 
-      private com.google.protobuf.LazyStringList icons_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureIconsIsMutable() {
+      private java.util.List<com.blemobi.sep.probuf.AccountProtos.PUserBase> userList_ =
+        java.util.Collections.emptyList();
+      private void ensureUserListIsMutable() {
         if (!((bitField0_ & 0x00000010) == 0x00000010)) {
-          icons_ = new com.google.protobuf.LazyStringArrayList(icons_);
+          userList_ = new java.util.ArrayList<com.blemobi.sep.probuf.AccountProtos.PUserBase>(userList_);
           bitField0_ |= 0x00000010;
          }
       }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> userListBuilder_;
+
       /**
-       * <code>repeated string icons = 5;</code>
+       * <code>repeated .bbproto.PUserBase userList = 5;</code>
        *
        * <pre>
-       *中奖者头像列表（最长5个头像.）
+       *参与抽奖者信息（最多5个）
        * </pre>
        */
-      public com.google.protobuf.ProtocolStringList
-          getIconsList() {
-        return icons_.getUnmodifiableView();
+      public java.util.List<com.blemobi.sep.probuf.AccountProtos.PUserBase> getUserListList() {
+        if (userListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(userList_);
+        } else {
+          return userListBuilder_.getMessageList();
+        }
       }
       /**
-       * <code>repeated string icons = 5;</code>
+       * <code>repeated .bbproto.PUserBase userList = 5;</code>
        *
        * <pre>
-       *中奖者头像列表（最长5个头像.）
+       *参与抽奖者信息（最多5个）
        * </pre>
        */
-      public int getIconsCount() {
-        return icons_.size();
+      public int getUserListCount() {
+        if (userListBuilder_ == null) {
+          return userList_.size();
+        } else {
+          return userListBuilder_.getCount();
+        }
       }
       /**
-       * <code>repeated string icons = 5;</code>
+       * <code>repeated .bbproto.PUserBase userList = 5;</code>
        *
        * <pre>
-       *中奖者头像列表（最长5个头像.）
+       *参与抽奖者信息（最多5个）
        * </pre>
        */
-      public java.lang.String getIcons(int index) {
-        return icons_.get(index);
+      public com.blemobi.sep.probuf.AccountProtos.PUserBase getUserList(int index) {
+        if (userListBuilder_ == null) {
+          return userList_.get(index);
+        } else {
+          return userListBuilder_.getMessage(index);
+        }
       }
       /**
-       * <code>repeated string icons = 5;</code>
+       * <code>repeated .bbproto.PUserBase userList = 5;</code>
        *
        * <pre>
-       *中奖者头像列表（最长5个头像.）
+       *参与抽奖者信息（最多5个）
        * </pre>
        */
-      public com.google.protobuf.ByteString
-          getIconsBytes(int index) {
-        return icons_.getByteString(index);
-      }
-      /**
-       * <code>repeated string icons = 5;</code>
-       *
-       * <pre>
-       *中奖者头像列表（最长5个头像.）
-       * </pre>
-       */
-      public Builder setIcons(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureIconsIsMutable();
-        icons_.set(index, value);
-        onChanged();
+      public Builder setUserList(
+          int index, com.blemobi.sep.probuf.AccountProtos.PUserBase value) {
+        if (userListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUserListIsMutable();
+          userList_.set(index, value);
+          onChanged();
+        } else {
+          userListBuilder_.setMessage(index, value);
+        }
         return this;
       }
       /**
-       * <code>repeated string icons = 5;</code>
+       * <code>repeated .bbproto.PUserBase userList = 5;</code>
        *
        * <pre>
-       *中奖者头像列表（最长5个头像.）
+       *参与抽奖者信息（最多5个）
        * </pre>
        */
-      public Builder addIcons(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureIconsIsMutable();
-        icons_.add(value);
-        onChanged();
+      public Builder setUserList(
+          int index, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder builderForValue) {
+        if (userListBuilder_ == null) {
+          ensureUserListIsMutable();
+          userList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          userListBuilder_.setMessage(index, builderForValue.build());
+        }
         return this;
       }
       /**
-       * <code>repeated string icons = 5;</code>
+       * <code>repeated .bbproto.PUserBase userList = 5;</code>
        *
        * <pre>
-       *中奖者头像列表（最长5个头像.）
+       *参与抽奖者信息（最多5个）
        * </pre>
        */
-      public Builder addAllIcons(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureIconsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, icons_);
-        onChanged();
+      public Builder addUserList(com.blemobi.sep.probuf.AccountProtos.PUserBase value) {
+        if (userListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUserListIsMutable();
+          userList_.add(value);
+          onChanged();
+        } else {
+          userListBuilder_.addMessage(value);
+        }
         return this;
       }
       /**
-       * <code>repeated string icons = 5;</code>
+       * <code>repeated .bbproto.PUserBase userList = 5;</code>
        *
        * <pre>
-       *中奖者头像列表（最长5个头像.）
+       *参与抽奖者信息（最多5个）
        * </pre>
        */
-      public Builder clearIcons() {
-        icons_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
-        onChanged();
+      public Builder addUserList(
+          int index, com.blemobi.sep.probuf.AccountProtos.PUserBase value) {
+        if (userListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUserListIsMutable();
+          userList_.add(index, value);
+          onChanged();
+        } else {
+          userListBuilder_.addMessage(index, value);
+        }
         return this;
       }
       /**
-       * <code>repeated string icons = 5;</code>
+       * <code>repeated .bbproto.PUserBase userList = 5;</code>
        *
        * <pre>
-       *中奖者头像列表（最长5个头像.）
+       *参与抽奖者信息（最多5个）
        * </pre>
        */
-      public Builder addIconsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureIconsIsMutable();
-        icons_.add(value);
-        onChanged();
+      public Builder addUserList(
+          com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder builderForValue) {
+        if (userListBuilder_ == null) {
+          ensureUserListIsMutable();
+          userList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          userListBuilder_.addMessage(builderForValue.build());
+        }
         return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userList = 5;</code>
+       *
+       * <pre>
+       *参与抽奖者信息（最多5个）
+       * </pre>
+       */
+      public Builder addUserList(
+          int index, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder builderForValue) {
+        if (userListBuilder_ == null) {
+          ensureUserListIsMutable();
+          userList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          userListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userList = 5;</code>
+       *
+       * <pre>
+       *参与抽奖者信息（最多5个）
+       * </pre>
+       */
+      public Builder addAllUserList(
+          java.lang.Iterable<? extends com.blemobi.sep.probuf.AccountProtos.PUserBase> values) {
+        if (userListBuilder_ == null) {
+          ensureUserListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, userList_);
+          onChanged();
+        } else {
+          userListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userList = 5;</code>
+       *
+       * <pre>
+       *参与抽奖者信息（最多5个）
+       * </pre>
+       */
+      public Builder clearUserList() {
+        if (userListBuilder_ == null) {
+          userList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          userListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userList = 5;</code>
+       *
+       * <pre>
+       *参与抽奖者信息（最多5个）
+       * </pre>
+       */
+      public Builder removeUserList(int index) {
+        if (userListBuilder_ == null) {
+          ensureUserListIsMutable();
+          userList_.remove(index);
+          onChanged();
+        } else {
+          userListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userList = 5;</code>
+       *
+       * <pre>
+       *参与抽奖者信息（最多5个）
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder getUserListBuilder(
+          int index) {
+        return getUserListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userList = 5;</code>
+       *
+       * <pre>
+       *参与抽奖者信息（最多5个）
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserListOrBuilder(
+          int index) {
+        if (userListBuilder_ == null) {
+          return userList_.get(index);  } else {
+          return userListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userList = 5;</code>
+       *
+       * <pre>
+       *参与抽奖者信息（最多5个）
+       * </pre>
+       */
+      public java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> 
+           getUserListOrBuilderList() {
+        if (userListBuilder_ != null) {
+          return userListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(userList_);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userList = 5;</code>
+       *
+       * <pre>
+       *参与抽奖者信息（最多5个）
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder addUserListBuilder() {
+        return getUserListFieldBuilder().addBuilder(
+            com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userList = 5;</code>
+       *
+       * <pre>
+       *参与抽奖者信息（最多5个）
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder addUserListBuilder(
+          int index) {
+        return getUserListFieldBuilder().addBuilder(
+            index, com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userList = 5;</code>
+       *
+       * <pre>
+       *参与抽奖者信息（最多5个）
+       * </pre>
+       */
+      public java.util.List<com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder> 
+           getUserListBuilderList() {
+        return getUserListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> 
+          getUserListFieldBuilder() {
+        if (userListBuilder_ == null) {
+          userListBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder>(
+                  userList_,
+                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  getParentForChildren(),
+                  isClean());
+          userList_ = null;
+        }
+        return userListBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -21495,665 +24170,6 @@ public final class PaymentProtos {
 
   }
 
-  public interface PLocationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bbproto.PLocation)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional string locCd = 1;</code>
-     *
-     * <pre>
-     *位置代码
-     * </pre>
-     */
-    java.lang.String getLocCd();
-    /**
-     * <code>optional string locCd = 1;</code>
-     *
-     * <pre>
-     *位置代码
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getLocCdBytes();
-
-    /**
-     * <code>optional string locNm = 2;</code>
-     *
-     * <pre>
-     *位置名称
-     * </pre>
-     */
-    java.lang.String getLocNm();
-    /**
-     * <code>optional string locNm = 2;</code>
-     *
-     * <pre>
-     *位置名称
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getLocNmBytes();
-  }
-  /**
-   * Protobuf type {@code bbproto.PLocation}
-   */
-  public  static final class PLocation extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:bbproto.PLocation)
-      PLocationOrBuilder {
-    // Use PLocation.newBuilder() to construct.
-    private PLocation(com.google.protobuf.GeneratedMessage.Builder builder) {
-      super(builder);
-    }
-    private PLocation() {
-      locCd_ = "";
-      locNm_ = "";
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-    }
-    private PLocation(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
-      this();
-      int mutable_bitField0_ = 0;
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-
-              locCd_ = bs;
-              break;
-            }
-            case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-
-              locNm_ = bs;
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
-      } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
-      } finally {
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PLocation_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PLocation_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.PaymentProtos.PLocation.class, com.blemobi.sep.probuf.PaymentProtos.PLocation.Builder.class);
-    }
-
-    public static final int LOCCD_FIELD_NUMBER = 1;
-    private volatile java.lang.Object locCd_;
-    /**
-     * <code>optional string locCd = 1;</code>
-     *
-     * <pre>
-     *位置代码
-     * </pre>
-     */
-    public java.lang.String getLocCd() {
-      java.lang.Object ref = locCd_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          locCd_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string locCd = 1;</code>
-     *
-     * <pre>
-     *位置代码
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getLocCdBytes() {
-      java.lang.Object ref = locCd_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        locCd_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int LOCNM_FIELD_NUMBER = 2;
-    private volatile java.lang.Object locNm_;
-    /**
-     * <code>optional string locNm = 2;</code>
-     *
-     * <pre>
-     *位置名称
-     * </pre>
-     */
-    public java.lang.String getLocNm() {
-      java.lang.Object ref = locNm_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          locNm_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string locNm = 2;</code>
-     *
-     * <pre>
-     *位置名称
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getLocNmBytes() {
-      java.lang.Object ref = locNm_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        locNm_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getLocCdBytes().isEmpty()) {
-        output.writeBytes(1, getLocCdBytes());
-      }
-      if (!getLocNmBytes().isEmpty()) {
-        output.writeBytes(2, getLocNmBytes());
-      }
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getLocCdBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getLocCdBytes());
-      }
-      if (!getLocNmBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getLocNmBytes());
-      }
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.PaymentProtos.PLocation parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.PaymentProtos.PLocation parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.PaymentProtos.PLocation parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.PaymentProtos.PLocation parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.PaymentProtos.PLocation parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.PaymentProtos.PLocation parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.PaymentProtos.PLocation parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.blemobi.sep.probuf.PaymentProtos.PLocation parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.PaymentProtos.PLocation parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.PaymentProtos.PLocation parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.blemobi.sep.probuf.PaymentProtos.PLocation prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code bbproto.PLocation}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bbproto.PLocation)
-        com.blemobi.sep.probuf.PaymentProtos.PLocationOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PLocation_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PLocation_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.PaymentProtos.PLocation.class, com.blemobi.sep.probuf.PaymentProtos.PLocation.Builder.class);
-      }
-
-      // Construct using com.blemobi.sep.probuf.PaymentProtos.PLocation.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        locCd_ = "";
-
-        locNm_ = "";
-
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PLocation_descriptor;
-      }
-
-      public com.blemobi.sep.probuf.PaymentProtos.PLocation getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.PaymentProtos.PLocation.getDefaultInstance();
-      }
-
-      public com.blemobi.sep.probuf.PaymentProtos.PLocation build() {
-        com.blemobi.sep.probuf.PaymentProtos.PLocation result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.blemobi.sep.probuf.PaymentProtos.PLocation buildPartial() {
-        com.blemobi.sep.probuf.PaymentProtos.PLocation result = new com.blemobi.sep.probuf.PaymentProtos.PLocation(this);
-        result.locCd_ = locCd_;
-        result.locNm_ = locNm_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.PaymentProtos.PLocation) {
-          return mergeFrom((com.blemobi.sep.probuf.PaymentProtos.PLocation)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.blemobi.sep.probuf.PaymentProtos.PLocation other) {
-        if (other == com.blemobi.sep.probuf.PaymentProtos.PLocation.getDefaultInstance()) return this;
-        if (!other.getLocCd().isEmpty()) {
-          locCd_ = other.locCd_;
-          onChanged();
-        }
-        if (!other.getLocNm().isEmpty()) {
-          locNm_ = other.locNm_;
-          onChanged();
-        }
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.blemobi.sep.probuf.PaymentProtos.PLocation parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.PaymentProtos.PLocation) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object locCd_ = "";
-      /**
-       * <code>optional string locCd = 1;</code>
-       *
-       * <pre>
-       *位置代码
-       * </pre>
-       */
-      public java.lang.String getLocCd() {
-        java.lang.Object ref = locCd_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            locCd_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string locCd = 1;</code>
-       *
-       * <pre>
-       *位置代码
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getLocCdBytes() {
-        java.lang.Object ref = locCd_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          locCd_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string locCd = 1;</code>
-       *
-       * <pre>
-       *位置代码
-       * </pre>
-       */
-      public Builder setLocCd(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        locCd_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string locCd = 1;</code>
-       *
-       * <pre>
-       *位置代码
-       * </pre>
-       */
-      public Builder clearLocCd() {
-        
-        locCd_ = getDefaultInstance().getLocCd();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string locCd = 1;</code>
-       *
-       * <pre>
-       *位置代码
-       * </pre>
-       */
-      public Builder setLocCdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        locCd_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object locNm_ = "";
-      /**
-       * <code>optional string locNm = 2;</code>
-       *
-       * <pre>
-       *位置名称
-       * </pre>
-       */
-      public java.lang.String getLocNm() {
-        java.lang.Object ref = locNm_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            locNm_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string locNm = 2;</code>
-       *
-       * <pre>
-       *位置名称
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getLocNmBytes() {
-        java.lang.Object ref = locNm_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          locNm_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string locNm = 2;</code>
-       *
-       * <pre>
-       *位置名称
-       * </pre>
-       */
-      public Builder setLocNm(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        locNm_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string locNm = 2;</code>
-       *
-       * <pre>
-       *位置名称
-       * </pre>
-       */
-      public Builder clearLocNm() {
-        
-        locNm_ = getDefaultInstance().getLocNm();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string locNm = 2;</code>
-       *
-       * <pre>
-       *位置名称
-       * </pre>
-       */
-      public Builder setLocNmBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        locNm_ = value;
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:bbproto.PLocation)
-    }
-
-    // @@protoc_insertion_point(class_scope:bbproto.PLocation)
-    private static final com.blemobi.sep.probuf.PaymentProtos.PLocation DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.PaymentProtos.PLocation();
-    }
-
-    public static com.blemobi.sep.probuf.PaymentProtos.PLocation getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    public static final com.google.protobuf.Parser<PLocation> PARSER =
-        new com.google.protobuf.AbstractParser<PLocation>() {
-      public PLocation parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
-          return new PLocation(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PLocation> getParserForType() {
-      return PARSER;
-    }
-
-    public com.blemobi.sep.probuf.PaymentProtos.PLocation getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface PUserBaseExOrBuilder extends
       // @@protoc_insertion_point(interface_extends:bbproto.PUserBaseEx)
       com.google.protobuf.MessageOrBuilder {
@@ -22184,13 +24200,13 @@ public final class PaymentProtos {
     com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getInfoOrBuilder();
 
     /**
-     * <code>optional int32 sex = 2;</code>
+     * <code>optional int32 gender = 2;</code>
      *
      * <pre>
-     *用户性别（0:全部，1：男，2:女）
+     *用户性别（1：男，2:女）
      * </pre>
      */
-    int getSex();
+    int getGender();
 
     /**
      * <code>optional int32 amt = 3;</code>
@@ -22213,7 +24229,7 @@ public final class PaymentProtos {
       super(builder);
     }
     private PUserBaseEx() {
-      sex_ = 0;
+      gender_ = 0;
       amt_ = 0;
     }
 
@@ -22256,7 +24272,7 @@ public final class PaymentProtos {
             }
             case 16: {
 
-              sex_ = input.readInt32();
+              gender_ = input.readInt32();
               break;
             }
             case 24: {
@@ -22321,17 +24337,17 @@ public final class PaymentProtos {
       return getInfo();
     }
 
-    public static final int SEX_FIELD_NUMBER = 2;
-    private int sex_;
+    public static final int GENDER_FIELD_NUMBER = 2;
+    private int gender_;
     /**
-     * <code>optional int32 sex = 2;</code>
+     * <code>optional int32 gender = 2;</code>
      *
      * <pre>
-     *用户性别（0:全部，1：男，2:女）
+     *用户性别（1：男，2:女）
      * </pre>
      */
-    public int getSex() {
-      return sex_;
+    public int getGender() {
+      return gender_;
     }
 
     public static final int AMT_FIELD_NUMBER = 3;
@@ -22362,8 +24378,8 @@ public final class PaymentProtos {
       if (info_ != null) {
         output.writeMessage(1, getInfo());
       }
-      if (sex_ != 0) {
-        output.writeInt32(2, sex_);
+      if (gender_ != 0) {
+        output.writeInt32(2, gender_);
       }
       if (amt_ != 0) {
         output.writeInt32(3, amt_);
@@ -22380,9 +24396,9 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getInfo());
       }
-      if (sex_ != 0) {
+      if (gender_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, sex_);
+          .computeInt32Size(2, gender_);
       }
       if (amt_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -22505,7 +24521,7 @@ public final class PaymentProtos {
           info_ = null;
           infoBuilder_ = null;
         }
-        sex_ = 0;
+        gender_ = 0;
 
         amt_ = 0;
 
@@ -22536,7 +24552,7 @@ public final class PaymentProtos {
         } else {
           result.info_ = infoBuilder_.build();
         }
-        result.sex_ = sex_;
+        result.gender_ = gender_;
         result.amt_ = amt_;
         onBuilt();
         return result;
@@ -22556,8 +24572,8 @@ public final class PaymentProtos {
         if (other.hasInfo()) {
           mergeInfo(other.getInfo());
         }
-        if (other.getSex() != 0) {
-          setSex(other.getSex());
+        if (other.getGender() != 0) {
+          setGender(other.getGender());
         }
         if (other.getAmt() != 0) {
           setAmt(other.getAmt());
@@ -22741,40 +24757,40 @@ public final class PaymentProtos {
         return infoBuilder_;
       }
 
-      private int sex_ ;
+      private int gender_ ;
       /**
-       * <code>optional int32 sex = 2;</code>
+       * <code>optional int32 gender = 2;</code>
        *
        * <pre>
-       *用户性别（0:全部，1：男，2:女）
+       *用户性别（1：男，2:女）
        * </pre>
        */
-      public int getSex() {
-        return sex_;
+      public int getGender() {
+        return gender_;
       }
       /**
-       * <code>optional int32 sex = 2;</code>
+       * <code>optional int32 gender = 2;</code>
        *
        * <pre>
-       *用户性别（0:全部，1：男，2:女）
+       *用户性别（1：男，2:女）
        * </pre>
        */
-      public Builder setSex(int value) {
+      public Builder setGender(int value) {
         
-        sex_ = value;
+        gender_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 sex = 2;</code>
+       * <code>optional int32 gender = 2;</code>
        *
        * <pre>
-       *用户性别（0:全部，1：男，2:女）
+       *用户性别（1：男，2:女）
        * </pre>
        */
-      public Builder clearSex() {
+      public Builder clearGender() {
         
-        sex_ = 0;
+        gender_ = 0;
         onChanged();
         return this;
       }
@@ -22870,6 +24886,580 @@ public final class PaymentProtos {
 
   }
 
+  public interface PLotteryDelOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PLotteryDel)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string lotteryId = 1;</code>
+     *
+     * <pre>
+     *抽奖ID
+     * </pre>
+     */
+    com.google.protobuf.ProtocolStringList
+        getLotteryIdList();
+    /**
+     * <code>repeated string lotteryId = 1;</code>
+     *
+     * <pre>
+     *抽奖ID
+     * </pre>
+     */
+    int getLotteryIdCount();
+    /**
+     * <code>repeated string lotteryId = 1;</code>
+     *
+     * <pre>
+     *抽奖ID
+     * </pre>
+     */
+    java.lang.String getLotteryId(int index);
+    /**
+     * <code>repeated string lotteryId = 1;</code>
+     *
+     * <pre>
+     *抽奖ID
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getLotteryIdBytes(int index);
+  }
+  /**
+   * Protobuf type {@code bbproto.PLotteryDel}
+   *
+   * <pre>
+   **抽奖历史删除
+   * </pre>
+   */
+  public  static final class PLotteryDel extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PLotteryDel)
+      PLotteryDelOrBuilder {
+    // Use PLotteryDel.newBuilder() to construct.
+    private PLotteryDel(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PLotteryDel() {
+      lotteryId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PLotteryDel(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                lotteryId_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              lotteryId_.add(bs);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          lotteryId_ = lotteryId_.getUnmodifiableView();
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PLotteryDel_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PLotteryDel_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.PaymentProtos.PLotteryDel.class, com.blemobi.sep.probuf.PaymentProtos.PLotteryDel.Builder.class);
+    }
+
+    public static final int LOTTERYID_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList lotteryId_;
+    /**
+     * <code>repeated string lotteryId = 1;</code>
+     *
+     * <pre>
+     *抽奖ID
+     * </pre>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getLotteryIdList() {
+      return lotteryId_;
+    }
+    /**
+     * <code>repeated string lotteryId = 1;</code>
+     *
+     * <pre>
+     *抽奖ID
+     * </pre>
+     */
+    public int getLotteryIdCount() {
+      return lotteryId_.size();
+    }
+    /**
+     * <code>repeated string lotteryId = 1;</code>
+     *
+     * <pre>
+     *抽奖ID
+     * </pre>
+     */
+    public java.lang.String getLotteryId(int index) {
+      return lotteryId_.get(index);
+    }
+    /**
+     * <code>repeated string lotteryId = 1;</code>
+     *
+     * <pre>
+     *抽奖ID
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getLotteryIdBytes(int index) {
+      return lotteryId_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < lotteryId_.size(); i++) {
+        output.writeBytes(1, lotteryId_.getByteString(i));
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < lotteryId_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(lotteryId_.getByteString(i));
+        }
+        size += dataSize;
+        size += 1 * getLotteryIdList().size();
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotteryDel parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotteryDel parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotteryDel parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotteryDel parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotteryDel parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotteryDel parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotteryDel parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotteryDel parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotteryDel parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotteryDel parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.PaymentProtos.PLotteryDel prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PLotteryDel}
+     *
+     * <pre>
+     **抽奖历史删除
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PLotteryDel)
+        com.blemobi.sep.probuf.PaymentProtos.PLotteryDelOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PLotteryDel_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PLotteryDel_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.PaymentProtos.PLotteryDel.class, com.blemobi.sep.probuf.PaymentProtos.PLotteryDel.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.PaymentProtos.PLotteryDel.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        lotteryId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PLotteryDel_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PLotteryDel getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.PLotteryDel.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PLotteryDel build() {
+        com.blemobi.sep.probuf.PaymentProtos.PLotteryDel result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PLotteryDel buildPartial() {
+        com.blemobi.sep.probuf.PaymentProtos.PLotteryDel result = new com.blemobi.sep.probuf.PaymentProtos.PLotteryDel(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          lotteryId_ = lotteryId_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.lotteryId_ = lotteryId_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.PaymentProtos.PLotteryDel) {
+          return mergeFrom((com.blemobi.sep.probuf.PaymentProtos.PLotteryDel)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.PaymentProtos.PLotteryDel other) {
+        if (other == com.blemobi.sep.probuf.PaymentProtos.PLotteryDel.getDefaultInstance()) return this;
+        if (!other.lotteryId_.isEmpty()) {
+          if (lotteryId_.isEmpty()) {
+            lotteryId_ = other.lotteryId_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureLotteryIdIsMutable();
+            lotteryId_.addAll(other.lotteryId_);
+          }
+          onChanged();
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.PaymentProtos.PLotteryDel parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.PaymentProtos.PLotteryDel) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList lotteryId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureLotteryIdIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          lotteryId_ = new com.google.protobuf.LazyStringArrayList(lotteryId_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string lotteryId = 1;</code>
+       *
+       * <pre>
+       *抽奖ID
+       * </pre>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getLotteryIdList() {
+        return lotteryId_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string lotteryId = 1;</code>
+       *
+       * <pre>
+       *抽奖ID
+       * </pre>
+       */
+      public int getLotteryIdCount() {
+        return lotteryId_.size();
+      }
+      /**
+       * <code>repeated string lotteryId = 1;</code>
+       *
+       * <pre>
+       *抽奖ID
+       * </pre>
+       */
+      public java.lang.String getLotteryId(int index) {
+        return lotteryId_.get(index);
+      }
+      /**
+       * <code>repeated string lotteryId = 1;</code>
+       *
+       * <pre>
+       *抽奖ID
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getLotteryIdBytes(int index) {
+        return lotteryId_.getByteString(index);
+      }
+      /**
+       * <code>repeated string lotteryId = 1;</code>
+       *
+       * <pre>
+       *抽奖ID
+       * </pre>
+       */
+      public Builder setLotteryId(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureLotteryIdIsMutable();
+        lotteryId_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string lotteryId = 1;</code>
+       *
+       * <pre>
+       *抽奖ID
+       * </pre>
+       */
+      public Builder addLotteryId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureLotteryIdIsMutable();
+        lotteryId_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string lotteryId = 1;</code>
+       *
+       * <pre>
+       *抽奖ID
+       * </pre>
+       */
+      public Builder addAllLotteryId(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureLotteryIdIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, lotteryId_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string lotteryId = 1;</code>
+       *
+       * <pre>
+       *抽奖ID
+       * </pre>
+       */
+      public Builder clearLotteryId() {
+        lotteryId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string lotteryId = 1;</code>
+       *
+       * <pre>
+       *抽奖ID
+       * </pre>
+       */
+      public Builder addLotteryIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureLotteryIdIsMutable();
+        lotteryId_.add(value);
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PLotteryDel)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PLotteryDel)
+    private static final com.blemobi.sep.probuf.PaymentProtos.PLotteryDel DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.PaymentProtos.PLotteryDel();
+    }
+
+    public static com.blemobi.sep.probuf.PaymentProtos.PLotteryDel getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PLotteryDel> PARSER =
+        new com.google.protobuf.AbstractParser<PLotteryDel>() {
+      public PLotteryDel parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PLotteryDel(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PLotteryDel> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.PaymentProtos.PLotteryDel getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_bbproto_POrdinRedEnve_descriptor;
   private static
@@ -22946,10 +25536,20 @@ public final class PaymentProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_bbproto_PSreachList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_bbproto_PLottery_descriptor;
+    internal_static_bbproto_PShuffle_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_bbproto_PLottery_fieldAccessorTable;
+      internal_static_bbproto_PShuffle_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PShuffleRet_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PShuffleRet_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PLotteryConfirm_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PLotteryConfirm_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_bbproto_PLotteryListRet_descriptor;
   private static
@@ -22971,15 +25571,15 @@ public final class PaymentProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_bbproto_PLotterySingleRet_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_bbproto_PLocation_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_bbproto_PLocation_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
     internal_static_bbproto_PUserBaseEx_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_bbproto_PUserBaseEx_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PLotteryDel_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PLotteryDel_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -22992,66 +25592,72 @@ public final class PaymentProtos {
       "\n\rpayment.proto\022\007bbproto\032\raccount.proto\032" +
       "\024datapublishing.proto\"B\n\rPOrdinRedEnve\022\r" +
       "\n\005money\030\001 \001(\005\022\017\n\007content\030\002 \001(\t\022\021\n\trece_u" +
-      "uid\030\003 \001(\t\"|\n\rPGroupRedEnve\022\016\n\006number\030\001 \001" +
-      "(\005\022\r\n\005money\030\002 \001(\005\022\020\n\010isRandom\030\003 \001(\010\022\017\n\007c" +
-      "ontent\030\004 \001(\t\022)\n\006filter\030\005 \001(\0132\031.bbproto.P" +
-      "FansFilterParam\"\211\001\n\tPOrderPay\022\026\n\016recAcco" +
-      "untType\030\001 \001(\005\022\r\n\005cusId\030\002 \001(\t\022\022\n\nreceived" +
-      "Id\030\003 \001(\t\022\020\n\010fenMoney\030\004 \001(\005\022\016\n\006ord_no\030\005 \001" +
-      "(\t\022\021\n\tgoodsName\030\006 \001(\t\022\014\n\004sign\030\007 \001(\t\"\233\002\n\014",
-      "PRedEnveInfo\022\016\n\006ord_no\030\001 \001(\t\022\027\n\017user_rec" +
-      "e_money\030\002 \001(\005\022\014\n\004type\030\003 \001(\005\022\022\n\ntota_mone" +
-      "y\030\004 \001(\005\022\023\n\013tota_number\030\005 \001(\005\022\022\n\nrece_mon" +
-      "ey\030\006 \001(\005\022\023\n\013rece_number\030\007 \001(\005\022\017\n\007content" +
-      "\030\010 \001(\t\022\017\n\007send_tm\030\t \001(\003\022$\n\010userBase\030\n \001(" +
-      "\0132\022.bbproto.PUserBase\022\016\n\006status\030\013 \001(\010\022*\n" +
-      "\013redEnveRece\030\014 \003(\0132\025.bbproto.PRedEnveRec" +
-      "e\"t\n\014PRedEnveRece\022\n\n\002id\030\001 \001(\005\022\r\n\005money\030\002" +
-      " \001(\005\022\017\n\007rece_tm\030\003 \001(\003\022\022\n\nluck_level\030\004 \001(" +
-      "\005\022$\n\010userBase\030\005 \001(\0132\022.bbproto.PUserBase\"",
-      "4\n\016PRedEnveStatus\022\016\n\006status\030\001 \001(\005\022\022\n\nrec" +
-      "e_money\030\002 \001(\005\">\n\020PRedEnveReceList\022*\n\013red" +
-      "EnveRece\030\001 \003(\0132\025.bbproto.PRedEnveRece\"\207\001" +
-      "\n\005PBill\022\024\n\014income_money\030\001 \001(\005\022\024\n\014expend_" +
-      "money\030\002 \001(\005\022\025\n\rincome_number\030\003 \001(\005\022\025\n\rex" +
-      "pend_number\030\004 \001(\005\022$\n\010billInfo\030\005 \003(\0132\022.bb" +
-      "proto.PBillInfo\"x\n\tPBillInfo\022\n\n\002id\030\001 \001(\005" +
-      "\022\016\n\006ord_no\030\002 \001(\t\022\r\n\005money\030\003 \001(\005\022\014\n\004time\030" +
-      "\004 \001(\003\022\014\n\004type\030\005 \001(\005\022$\n\010userBase\030\006 \001(\0132\022." +
-      "bbproto.PUserBase\"B\n\014PRedEnveList\0222\n\017red",
-      "EnveBaseInfo\030\001 \003(\0132\031.bbproto.PRedEnveBas" +
-      "eInfo\"\224\001\n\020PRedEnveBaseInfo\022\n\n\002id\030\001 \001(\005\022\016" +
-      "\n\006ord_no\030\002 \001(\t\022\014\n\004type\030\003 \001(\005\022\017\n\007content\030" +
-      "\004 \001(\t\022\017\n\007send_tm\030\005 \001(\003\022\016\n\006number\030\006 \001(\005\022$" +
-      "\n\010userBase\030\007 \003(\0132\022.bbproto.PUserBase\"7\n\013" +
-      "PRewardList\022(\n\nrewardInfo\030\001 \003(\0132\024.bbprot" +
-      "o.PRewardInfo\"}\n\013PRewardInfo\022\n\n\002id\030\001 \001(\005" +
-      "\022\016\n\006ord_no\030\002 \001(\t\022\r\n\005money\030\003 \001(\005\022\017\n\007conte" +
-      "nt\030\004 \001(\t\022\014\n\004time\030\005 \001(\003\022$\n\010userBase\030\006 \001(\013" +
-      "2\022.bbproto.PUserBase\"t\n\017PRewardInfoList\022",
-      "(\n\nrewardInfo\030\001 \001(\0132\024.bbproto.PRewardInf" +
-      "o\022\r\n\005money\030\002 \001(\005\022(\n\nrewardList\030\003 \003(\0132\024.b" +
-      "bproto.PRewardInfo\"k\n\013PSreachList\0222\n\017red" +
-      "EnveBaseInfo\030\001 \003(\0132\031.bbproto.PRedEnveBas" +
-      "eInfo\022(\n\nrewardInfo\030\002 \003(\0132\024.bbproto.PRew" +
-      "ardInfo\"\213\001\n\010PLottery\022\r\n\005title\030\001 \001(\t\022\014\n\004t" +
-      "ype\030\002 \001(\005\022\017\n\007winners\030\003 \001(\005\022\016\n\006totAmt\030\004 \001" +
-      "(\005\022\r\n\005bonus\030\005 \001(\005\022 \n\004locs\030\006 \003(\0132\022.bbprot" +
-      "o.PLocation\022\020\n\010uuidList\030\007 \003(\t\"@\n\017PLotter" +
-      "yListRet\022-\n\tlotteries\030\001 \003(\0132\032.bbproto.PL",
-      "otterySingleRet\"!\n\014PAcceptPrize\022\021\n\tlotte" +
-      "ryId\030\001 \001(\t\"\253\001\n\021PLotteryDetailRet\022\021\n\tlott" +
-      "eryId\030\001 \001(\t\022\016\n\006totAmt\030\002 \001(\005\022\r\n\005crtTm\030\003 \001" +
-      "(\t\022\014\n\004type\030\004 \001(\005\022\017\n\007winners\030\005 \001(\005\022 \n\004loc" +
-      "s\030\006 \003(\0132\022.bbproto.PLocation\022#\n\005users\030\007 \003" +
-      "(\0132\024.bbproto.PUserBaseEx\"d\n\021PLotterySing" +
-      "leRet\022\021\n\tlotteryId\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022" +
-      "\017\n\007winners\030\003 \001(\005\022\r\n\005crtTm\030\004 \001(\t\022\r\n\005icons" +
-      "\030\005 \003(\t\")\n\tPLocation\022\r\n\005locCd\030\001 \001(\t\022\r\n\005lo" +
-      "cNm\030\002 \001(\t\"I\n\013PUserBaseEx\022 \n\004info\030\001 \001(\0132\022",
-      ".bbproto.PUserBase\022\013\n\003sex\030\002 \001(\005\022\013\n\003amt\030\003" +
-      " \001(\005B\'\n\026com.blemobi.sep.probufB\rPaymentP" +
-      "rotosb\006proto3"
+      "uid\030\003 \001(\t\"\212\001\n\rPGroupRedEnve\022\016\n\006number\030\001 " +
+      "\001(\005\022\r\n\005money\030\002 \001(\005\022\020\n\010isRandom\030\003 \001(\010\022\017\n\007" +
+      "content\030\004 \001(\t\022)\n\006filter\030\005 \001(\0132\031.bbproto." +
+      "PFansFilterParam\022\014\n\004uuid\030\006 \003(\t\"\211\001\n\tPOrde" +
+      "rPay\022\026\n\016recAccountType\030\001 \001(\005\022\r\n\005cusId\030\002 " +
+      "\001(\t\022\022\n\nreceivedId\030\003 \001(\t\022\020\n\010fenMoney\030\004 \001(" +
+      "\005\022\016\n\006ord_no\030\005 \001(\t\022\021\n\tgoodsName\030\006 \001(\t\022\014\n\004",
+      "sign\030\007 \001(\t\"\233\002\n\014PRedEnveInfo\022\016\n\006ord_no\030\001 " +
+      "\001(\t\022\027\n\017user_rece_money\030\002 \001(\005\022\014\n\004type\030\003 \001" +
+      "(\005\022\022\n\ntota_money\030\004 \001(\005\022\023\n\013tota_number\030\005 " +
+      "\001(\005\022\022\n\nrece_money\030\006 \001(\005\022\023\n\013rece_number\030\007" +
+      " \001(\005\022\017\n\007content\030\010 \001(\t\022\017\n\007send_tm\030\t \001(\003\022$" +
+      "\n\010userBase\030\n \001(\0132\022.bbproto.PUserBase\022\016\n\006" +
+      "status\030\013 \001(\010\022*\n\013redEnveRece\030\014 \003(\0132\025.bbpr" +
+      "oto.PRedEnveRece\"t\n\014PRedEnveRece\022\n\n\002id\030\001" +
+      " \001(\005\022\r\n\005money\030\002 \001(\005\022\017\n\007rece_tm\030\003 \001(\003\022\022\n\n" +
+      "luck_level\030\004 \001(\005\022$\n\010userBase\030\005 \001(\0132\022.bbp",
+      "roto.PUserBase\"4\n\016PRedEnveStatus\022\016\n\006stat" +
+      "us\030\001 \001(\005\022\022\n\nrece_money\030\002 \001(\005\">\n\020PRedEnve" +
+      "ReceList\022*\n\013redEnveRece\030\001 \003(\0132\025.bbproto." +
+      "PRedEnveRece\"\207\001\n\005PBill\022\024\n\014income_money\030\001" +
+      " \001(\005\022\024\n\014expend_money\030\002 \001(\005\022\025\n\rincome_num" +
+      "ber\030\003 \001(\005\022\025\n\rexpend_number\030\004 \001(\005\022$\n\010bill" +
+      "Info\030\005 \003(\0132\022.bbproto.PBillInfo\"x\n\tPBillI" +
+      "nfo\022\n\n\002id\030\001 \001(\005\022\016\n\006ord_no\030\002 \001(\t\022\r\n\005money" +
+      "\030\003 \001(\005\022\014\n\004time\030\004 \001(\003\022\014\n\004type\030\005 \001(\005\022$\n\010us" +
+      "erBase\030\006 \001(\0132\022.bbproto.PUserBase\"B\n\014PRed",
+      "EnveList\0222\n\017redEnveBaseInfo\030\001 \003(\0132\031.bbpr" +
+      "oto.PRedEnveBaseInfo\"\224\001\n\020PRedEnveBaseInf" +
+      "o\022\n\n\002id\030\001 \001(\005\022\016\n\006ord_no\030\002 \001(\t\022\014\n\004type\030\003 " +
+      "\001(\005\022\017\n\007content\030\004 \001(\t\022\017\n\007send_tm\030\005 \001(\003\022\016\n" +
+      "\006number\030\006 \001(\005\022$\n\010userBase\030\007 \003(\0132\022.bbprot" +
+      "o.PUserBase\"7\n\013PRewardList\022(\n\nrewardInfo" +
+      "\030\001 \003(\0132\024.bbproto.PRewardInfo\"}\n\013PRewardI" +
+      "nfo\022\n\n\002id\030\001 \001(\005\022\016\n\006ord_no\030\002 \001(\t\022\r\n\005money" +
+      "\030\003 \001(\005\022\017\n\007content\030\004 \001(\t\022\014\n\004time\030\005 \001(\003\022$\n" +
+      "\010userBase\030\006 \001(\0132\022.bbproto.PUserBase\"t\n\017P",
+      "RewardInfoList\022(\n\nrewardInfo\030\001 \001(\0132\024.bbp" +
+      "roto.PRewardInfo\022\r\n\005money\030\002 \001(\005\022(\n\nrewar" +
+      "dList\030\003 \003(\0132\024.bbproto.PRewardInfo\"k\n\013PSr" +
+      "eachList\0222\n\017redEnveBaseInfo\030\001 \003(\0132\031.bbpr" +
+      "oto.PRedEnveBaseInfo\022(\n\nrewardInfo\030\002 \003(\013" +
+      "2\024.bbproto.PRewardInfo\"Z\n\010PShuffle\022\016\n\006ge" +
+      "nder\030\001 \001(\005\022\016\n\006region\030\002 \003(\t\022\017\n\007winners\030\003 " +
+      "\001(\005\022\r\n\005bonus\030\004 \001(\005\022\016\n\006totAmt\030\005 \001(\005\"D\n\013PS" +
+      "huffleRet\022&\n\010userList\030\001 \003(\0132\024.bbproto.PU" +
+      "serBaseEx\022\r\n\005crtTm\030\002 \001(\t\"\250\001\n\017PLotteryCon",
+      "firm\022\r\n\005title\030\001 \001(\t\022\016\n\006gender\030\002 \001(\005\022\016\n\006r" +
+      "egion\030\003 \003(\t\022\016\n\006totAmt\030\004 \001(\005\022\017\n\007winners\030\005" +
+      " \001(\005\022\r\n\005bonus\030\006 \001(\005\022\016\n\006remark\030\007 \001(\t\022&\n\010u" +
+      "serList\030\010 \003(\0132\024.bbproto.PUserBaseEx\"@\n\017P" +
+      "LotteryListRet\022-\n\tlotteries\030\001 \003(\0132\032.bbpr" +
+      "oto.PLotterySingleRet\"!\n\014PAcceptPrize\022\021\n" +
+      "\tlotteryId\030\001 \001(\t\"\273\001\n\021PLotteryDetailRet\022\021" +
+      "\n\tlotteryId\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022\016\n\006totA" +
+      "mt\030\003 \001(\005\022\r\n\005crtTm\030\004 \001(\t\022\014\n\004type\030\005 \001(\005\022\017\n" +
+      "\007winners\030\006 \001(\005\022\016\n\006region\030\007 \003(\t\022&\n\010userLi",
+      "st\030\010 \003(\0132\024.bbproto.PUserBaseEx\022\016\n\006remark" +
+      "\030\t \001(\t\"{\n\021PLotterySingleRet\022\021\n\tlotteryId" +
+      "\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022\017\n\007winners\030\003 \001(\005\022\r" +
+      "\n\005crtTm\030\004 \001(\t\022$\n\010userList\030\005 \003(\0132\022.bbprot" +
+      "o.PUserBase\"L\n\013PUserBaseEx\022 \n\004info\030\001 \001(\013" +
+      "2\022.bbproto.PUserBase\022\016\n\006gender\030\002 \001(\005\022\013\n\003" +
+      "amt\030\003 \001(\005\" \n\013PLotteryDel\022\021\n\tlotteryId\030\001 " +
+      "\003(\tB\'\n\026com.blemobi.sep.probufB\rPaymentPr" +
+      "otosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -23078,7 +25684,7 @@ public final class PaymentProtos {
     internal_static_bbproto_PGroupRedEnve_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PGroupRedEnve_descriptor,
-        new java.lang.String[] { "Number", "Money", "IsRandom", "Content", "Filter", });
+        new java.lang.String[] { "Number", "Money", "IsRandom", "Content", "Filter", "Uuid", });
     internal_static_bbproto_POrderPay_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_bbproto_POrderPay_fieldAccessorTable = new
@@ -23157,48 +25763,60 @@ public final class PaymentProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PSreachList_descriptor,
         new java.lang.String[] { "RedEnveBaseInfo", "RewardInfo", });
-    internal_static_bbproto_PLottery_descriptor =
+    internal_static_bbproto_PShuffle_descriptor =
       getDescriptor().getMessageTypes().get(15);
-    internal_static_bbproto_PLottery_fieldAccessorTable = new
+    internal_static_bbproto_PShuffle_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_bbproto_PLottery_descriptor,
-        new java.lang.String[] { "Title", "Type", "Winners", "TotAmt", "Bonus", "Locs", "UuidList", });
-    internal_static_bbproto_PLotteryListRet_descriptor =
+        internal_static_bbproto_PShuffle_descriptor,
+        new java.lang.String[] { "Gender", "Region", "Winners", "Bonus", "TotAmt", });
+    internal_static_bbproto_PShuffleRet_descriptor =
       getDescriptor().getMessageTypes().get(16);
+    internal_static_bbproto_PShuffleRet_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PShuffleRet_descriptor,
+        new java.lang.String[] { "UserList", "CrtTm", });
+    internal_static_bbproto_PLotteryConfirm_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_bbproto_PLotteryConfirm_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PLotteryConfirm_descriptor,
+        new java.lang.String[] { "Title", "Gender", "Region", "TotAmt", "Winners", "Bonus", "Remark", "UserList", });
+    internal_static_bbproto_PLotteryListRet_descriptor =
+      getDescriptor().getMessageTypes().get(18);
     internal_static_bbproto_PLotteryListRet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PLotteryListRet_descriptor,
         new java.lang.String[] { "Lotteries", });
     internal_static_bbproto_PAcceptPrize_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_bbproto_PAcceptPrize_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PAcceptPrize_descriptor,
         new java.lang.String[] { "LotteryId", });
     internal_static_bbproto_PLotteryDetailRet_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_bbproto_PLotteryDetailRet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PLotteryDetailRet_descriptor,
-        new java.lang.String[] { "LotteryId", "TotAmt", "CrtTm", "Type", "Winners", "Locs", "Users", });
+        new java.lang.String[] { "LotteryId", "Title", "TotAmt", "CrtTm", "Type", "Winners", "Region", "UserList", "Remark", });
     internal_static_bbproto_PLotterySingleRet_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_bbproto_PLotterySingleRet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PLotterySingleRet_descriptor,
-        new java.lang.String[] { "LotteryId", "Title", "Winners", "CrtTm", "Icons", });
-    internal_static_bbproto_PLocation_descriptor =
-      getDescriptor().getMessageTypes().get(20);
-    internal_static_bbproto_PLocation_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_bbproto_PLocation_descriptor,
-        new java.lang.String[] { "LocCd", "LocNm", });
+        new java.lang.String[] { "LotteryId", "Title", "Winners", "CrtTm", "UserList", });
     internal_static_bbproto_PUserBaseEx_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_bbproto_PUserBaseEx_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PUserBaseEx_descriptor,
-        new java.lang.String[] { "Info", "Sex", "Amt", });
+        new java.lang.String[] { "Info", "Gender", "Amt", });
+    internal_static_bbproto_PLotteryDel_descriptor =
+      getDescriptor().getMessageTypes().get(23);
+    internal_static_bbproto_PLotteryDel_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PLotteryDel_descriptor,
+        new java.lang.String[] { "LotteryId", });
     com.blemobi.sep.probuf.AccountProtos.getDescriptor();
     com.blemobi.sep.probuf.DataPublishingProtos.getDescriptor();
   }
