@@ -18,7 +18,7 @@
  *    2017年3月3日 上午11:15:19
  *
  *****************************************************************/
-package com.blemobi.library.client;
+package com.blemobi.library.grpc;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +39,7 @@ import bbproto.grpcDataPublishingGrpc.grpcDataPublishingBlockingStub;
  */
 public class SelectFansGRPCClient extends BaseGRPCClient {
 
-    protected SelectFansGRPCClient() {
+    public SelectFansGRPCClient() {
         super("datapublishing");
     }
 

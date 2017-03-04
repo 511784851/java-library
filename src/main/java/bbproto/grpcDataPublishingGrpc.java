@@ -37,6 +37,15 @@ public class grpcDataPublishingGrpc {
           io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.getDefaultInstance()),
           io.grpc.protobuf.ProtoUtils.marshaller(bbproto.DatapublishingInside.PScrollResult.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<bbproto.DatapublishingInside.PFansSaveParam,
+      bbproto.CommonInside.PEmpty> METHOD_SAVE_FANS =
+      io.grpc.MethodDescriptor.create(
+          io.grpc.MethodDescriptor.MethodType.UNARY,
+          generateFullMethodName(
+              "bbproto.grpcDataPublishing", "SaveFans"),
+          io.grpc.protobuf.ProtoUtils.marshaller(bbproto.DatapublishingInside.PFansSaveParam.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(bbproto.CommonInside.PEmpty.getDefaultInstance()));
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringSingle,
       bbproto.DatapublishingInside.PScrollResult> METHOD_SCROLL_MORE =
       io.grpc.MethodDescriptor.create(
@@ -120,6 +129,13 @@ public class grpcDataPublishingGrpc {
     }
 
     /**
+     */
+    public void saveFans(bbproto.DatapublishingInside.PFansSaveParam request,
+        io.grpc.stub.StreamObserver<bbproto.CommonInside.PEmpty> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_SAVE_FANS, responseObserver);
+    }
+
+    /**
      * <pre>
      * 用PScrollResult.scrollId查询下一页粉丝，直到PScrollResult.id为空
      * </pre>
@@ -178,6 +194,13 @@ public class grpcDataPublishingGrpc {
                 com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam,
                 bbproto.DatapublishingInside.PScrollResult>(
                   this, METHODID_SELECT_FANS)))
+          .addMethod(
+            METHOD_SAVE_FANS,
+            asyncUnaryCall(
+              new MethodHandlers<
+                bbproto.DatapublishingInside.PFansSaveParam,
+                bbproto.CommonInside.PEmpty>(
+                  this, METHODID_SAVE_FANS)))
           .addMethod(
             METHOD_SCROLL_MORE,
             asyncUnaryCall(
@@ -244,6 +267,14 @@ public class grpcDataPublishingGrpc {
         io.grpc.stub.StreamObserver<bbproto.DatapublishingInside.PScrollResult> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_SELECT_FANS, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void saveFans(bbproto.DatapublishingInside.PFansSaveParam request,
+        io.grpc.stub.StreamObserver<bbproto.CommonInside.PEmpty> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_SAVE_FANS, getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -331,6 +362,13 @@ public class grpcDataPublishingGrpc {
     }
 
     /**
+     */
+    public bbproto.CommonInside.PEmpty saveFans(bbproto.DatapublishingInside.PFansSaveParam request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_SAVE_FANS, getCallOptions(), request);
+    }
+
+    /**
      * <pre>
      * 用PScrollResult.scrollId查询下一页粉丝，直到PScrollResult.id为空
      * </pre>
@@ -411,6 +449,14 @@ public class grpcDataPublishingGrpc {
     }
 
     /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<bbproto.CommonInside.PEmpty> saveFans(
+        bbproto.DatapublishingInside.PFansSaveParam request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_SAVE_FANS, getCallOptions()), request);
+    }
+
+    /**
      * <pre>
      * 用PScrollResult.scrollId查询下一页粉丝，直到PScrollResult.id为空
      * </pre>
@@ -467,11 +513,12 @@ public class grpcDataPublishingGrpc {
   }
 
   private static final int METHODID_SELECT_FANS = 0;
-  private static final int METHODID_SCROLL_MORE = 1;
-  private static final int METHODID_SELECT_VUSER = 2;
-  private static final int METHODID_SELECT_TODAY_BIRTHDAY_FANS = 3;
-  private static final int METHODID_SELECT7DAY_BIRTHDAY_FANS = 4;
-  private static final int METHODID_SELECT_VUSER_HAVE_TODAY_BIRTHDAY_FANS = 5;
+  private static final int METHODID_SAVE_FANS = 1;
+  private static final int METHODID_SCROLL_MORE = 2;
+  private static final int METHODID_SELECT_VUSER = 3;
+  private static final int METHODID_SELECT_TODAY_BIRTHDAY_FANS = 4;
+  private static final int METHODID_SELECT7DAY_BIRTHDAY_FANS = 5;
+  private static final int METHODID_SELECT_VUSER_HAVE_TODAY_BIRTHDAY_FANS = 6;
 
   private static class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -492,6 +539,10 @@ public class grpcDataPublishingGrpc {
         case METHODID_SELECT_FANS:
           serviceImpl.selectFans((com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam) request,
               (io.grpc.stub.StreamObserver<bbproto.DatapublishingInside.PScrollResult>) responseObserver);
+          break;
+        case METHODID_SAVE_FANS:
+          serviceImpl.saveFans((bbproto.DatapublishingInside.PFansSaveParam) request,
+              (io.grpc.stub.StreamObserver<bbproto.CommonInside.PEmpty>) responseObserver);
           break;
         case METHODID_SCROLL_MORE:
           serviceImpl.scrollMore((com.blemobi.sep.probuf.ResultProtos.PStringSingle) request,
@@ -531,6 +582,7 @@ public class grpcDataPublishingGrpc {
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     return new io.grpc.ServiceDescriptor(SERVICE_NAME,
         METHOD_SELECT_FANS,
+        METHOD_SAVE_FANS,
         METHOD_SCROLL_MORE,
         METHOD_SELECT_VUSER,
         METHOD_SELECT_TODAY_BIRTHDAY_FANS,

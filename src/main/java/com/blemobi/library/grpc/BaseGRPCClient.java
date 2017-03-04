@@ -18,7 +18,7 @@
  *    2017年3月3日 下午3:26:26
  *
  *****************************************************************/
-package com.blemobi.library.client;
+package com.blemobi.library.grpc;
 
 import com.blemobi.library.consul.BaseService;
 import com.blemobi.library.consul.SocketInfo;
