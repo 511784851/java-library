@@ -61,7 +61,7 @@ public final class PaymentProtos {
    * Protobuf type {@code bbproto.POrdinRedEnve}
    *
    * <pre>
-   ** ----------------- 以下是红包协议 （赵勇）-----------------
+   ** 发普通红包，打赏 
    * </pre>
    */
   public  static final class POrdinRedEnve extends
@@ -69,7 +69,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.POrdinRedEnve)
       POrdinRedEnveOrBuilder {
     // Use POrdinRedEnve.newBuilder() to construct.
-    private POrdinRedEnve(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private POrdinRedEnve(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private POrdinRedEnve() {
@@ -108,15 +108,15 @@ public final class PaymentProtos {
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              content_ = s;
+              content_ = bs;
               break;
             }
             case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              receUuid_ = s;
+              receUuid_ = bs;
               break;
             }
           }
@@ -173,7 +173,9 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        content_ = s;
+        if (bs.isValidUtf8()) {
+          content_ = s;
+        }
         return s;
       }
     }
@@ -215,7 +217,9 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        receUuid_ = s;
+        if (bs.isValidUtf8()) {
+          receUuid_ = s;
+        }
         return s;
       }
     }
@@ -256,15 +260,16 @@ public final class PaymentProtos {
         output.writeInt32(1, money_);
       }
       if (!getContentBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 2, content_);
+        output.writeBytes(2, getContentBytes());
       }
       if (!getReceUuidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 3, receUuid_);
+        output.writeBytes(3, getReceUuidBytes());
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -273,12 +278,14 @@ public final class PaymentProtos {
           .computeInt32Size(1, money_);
       }
       if (!getContentBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, content_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getContentBytes());
       }
       if (!getReceUuidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, receUuid_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getReceUuidBytes());
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -358,7 +365,7 @@ public final class PaymentProtos {
      * Protobuf type {@code bbproto.POrdinRedEnve}
      *
      * <pre>
-     ** ----------------- 以下是红包协议 （赵勇）-----------------
+     ** 发普通红包，打赏 
      * </pre>
      */
     public static final class Builder extends
@@ -528,7 +535,9 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          content_ = s;
+          if (bs.isValidUtf8()) {
+            content_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -596,8 +605,7 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         content_ = value;
         onChanged();
         return this;
@@ -617,7 +625,9 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          receUuid_ = s;
+          if (bs.isValidUtf8()) {
+            receUuid_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -685,8 +695,7 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         receUuid_ = value;
         onChanged();
         return this;
@@ -715,8 +724,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<POrdinRedEnve>
-        PARSER = new com.google.protobuf.AbstractParser<POrdinRedEnve>() {
+    public static final com.google.protobuf.Parser<POrdinRedEnve> PARSER =
+        new com.google.protobuf.AbstractParser<POrdinRedEnve>() {
       public POrdinRedEnve parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -733,10 +742,6 @@ public final class PaymentProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<POrdinRedEnve> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<POrdinRedEnve> getParserForType() {
@@ -799,49 +804,43 @@ public final class PaymentProtos {
         getContentBytes();
 
     /**
-     * <code>repeated string rece_uuid = 5;</code>
+     * <code>optional .bbproto.PFansFilterParam filter = 5;</code>
      *
      * <pre>
-     * 接收用户uuid
+     * 粉丝筛选条件
      * </pre>
      */
-    com.google.protobuf.ProtocolStringList
-        getReceUuidList();
+    boolean hasFilter();
     /**
-     * <code>repeated string rece_uuid = 5;</code>
+     * <code>optional .bbproto.PFansFilterParam filter = 5;</code>
      *
      * <pre>
-     * 接收用户uuid
+     * 粉丝筛选条件
      * </pre>
      */
-    int getReceUuidCount();
+    com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam getFilter();
     /**
-     * <code>repeated string rece_uuid = 5;</code>
+     * <code>optional .bbproto.PFansFilterParam filter = 5;</code>
      *
      * <pre>
-     * 接收用户uuid
+     * 粉丝筛选条件
      * </pre>
      */
-    java.lang.String getReceUuid(int index);
-    /**
-     * <code>repeated string rece_uuid = 5;</code>
-     *
-     * <pre>
-     * 接收用户uuid
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getReceUuidBytes(int index);
+    com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParamOrBuilder getFilterOrBuilder();
   }
   /**
    * Protobuf type {@code bbproto.PGroupRedEnve}
+   *
+   * <pre>
+   ** 发群红包 
+   * </pre>
    */
   public  static final class PGroupRedEnve extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:bbproto.PGroupRedEnve)
       PGroupRedEnveOrBuilder {
     // Use PGroupRedEnve.newBuilder() to construct.
-    private PGroupRedEnve(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PGroupRedEnve(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PGroupRedEnve() {
@@ -849,7 +848,6 @@ public final class PaymentProtos {
       money_ = 0;
       isRandom_ = false;
       content_ = "";
-      receUuid_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -892,18 +890,22 @@ public final class PaymentProtos {
               break;
             }
             case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              content_ = s;
+              content_ = bs;
               break;
             }
             case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-                receUuid_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000010;
+              com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.Builder subBuilder = null;
+              if (filter_ != null) {
+                subBuilder = filter_.toBuilder();
               }
-              receUuid_.add(s);
+              filter_ = input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(filter_);
+                filter_ = subBuilder.buildPartial();
+              }
+
               break;
             }
           }
@@ -915,9 +917,6 @@ public final class PaymentProtos {
             new com.google.protobuf.InvalidProtocolBufferException(
                 e.getMessage()).setUnfinishedMessage(this));
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-          receUuid_ = receUuid_.getUnmodifiableView();
-        }
         makeExtensionsImmutable();
       }
     }
@@ -933,7 +932,6 @@ public final class PaymentProtos {
               com.blemobi.sep.probuf.PaymentProtos.PGroupRedEnve.class, com.blemobi.sep.probuf.PaymentProtos.PGroupRedEnve.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NUMBER_FIELD_NUMBER = 1;
     private int number_;
     /**
@@ -990,7 +988,9 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        content_ = s;
+        if (bs.isValidUtf8()) {
+          content_ = s;
+        }
         return s;
       }
     }
@@ -1015,49 +1015,37 @@ public final class PaymentProtos {
       }
     }
 
-    public static final int RECE_UUID_FIELD_NUMBER = 5;
-    private com.google.protobuf.LazyStringList receUuid_;
+    public static final int FILTER_FIELD_NUMBER = 5;
+    private com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam filter_;
     /**
-     * <code>repeated string rece_uuid = 5;</code>
+     * <code>optional .bbproto.PFansFilterParam filter = 5;</code>
      *
      * <pre>
-     * 接收用户uuid
+     * 粉丝筛选条件
      * </pre>
      */
-    public com.google.protobuf.ProtocolStringList
-        getReceUuidList() {
-      return receUuid_;
+    public boolean hasFilter() {
+      return filter_ != null;
     }
     /**
-     * <code>repeated string rece_uuid = 5;</code>
+     * <code>optional .bbproto.PFansFilterParam filter = 5;</code>
      *
      * <pre>
-     * 接收用户uuid
+     * 粉丝筛选条件
      * </pre>
      */
-    public int getReceUuidCount() {
-      return receUuid_.size();
+    public com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam getFilter() {
+      return filter_ == null ? com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.getDefaultInstance() : filter_;
     }
     /**
-     * <code>repeated string rece_uuid = 5;</code>
+     * <code>optional .bbproto.PFansFilterParam filter = 5;</code>
      *
      * <pre>
-     * 接收用户uuid
+     * 粉丝筛选条件
      * </pre>
      */
-    public java.lang.String getReceUuid(int index) {
-      return receUuid_.get(index);
-    }
-    /**
-     * <code>repeated string rece_uuid = 5;</code>
-     *
-     * <pre>
-     * 接收用户uuid
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getReceUuidBytes(int index) {
-      return receUuid_.getByteString(index);
+    public com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParamOrBuilder getFilterOrBuilder() {
+      return getFilter();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1082,15 +1070,16 @@ public final class PaymentProtos {
         output.writeBool(3, isRandom_);
       }
       if (!getContentBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 4, content_);
+        output.writeBytes(4, getContentBytes());
       }
-      for (int i = 0; i < receUuid_.size(); i++) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 5, receUuid_.getRaw(i));
+      if (filter_ != null) {
+        output.writeMessage(5, getFilter());
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -1107,17 +1096,14 @@ public final class PaymentProtos {
           .computeBoolSize(3, isRandom_);
       }
       if (!getContentBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, content_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getContentBytes());
       }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < receUuid_.size(); i++) {
-          dataSize += computeStringSizeNoTag(receUuid_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getReceUuidList().size();
+      if (filter_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getFilter());
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -1195,6 +1181,10 @@ public final class PaymentProtos {
     }
     /**
      * Protobuf type {@code bbproto.PGroupRedEnve}
+     *
+     * <pre>
+     ** 发群红包 
+     * </pre>
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -1236,8 +1226,12 @@ public final class PaymentProtos {
 
         content_ = "";
 
-        receUuid_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        if (filterBuilder_ == null) {
+          filter_ = null;
+        } else {
+          filter_ = null;
+          filterBuilder_ = null;
+        }
         return this;
       }
 
@@ -1260,18 +1254,15 @@ public final class PaymentProtos {
 
       public com.blemobi.sep.probuf.PaymentProtos.PGroupRedEnve buildPartial() {
         com.blemobi.sep.probuf.PaymentProtos.PGroupRedEnve result = new com.blemobi.sep.probuf.PaymentProtos.PGroupRedEnve(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.number_ = number_;
         result.money_ = money_;
         result.isRandom_ = isRandom_;
         result.content_ = content_;
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
-          receUuid_ = receUuid_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000010);
+        if (filterBuilder_ == null) {
+          result.filter_ = filter_;
+        } else {
+          result.filter_ = filterBuilder_.build();
         }
-        result.receUuid_ = receUuid_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -1300,15 +1291,8 @@ public final class PaymentProtos {
           content_ = other.content_;
           onChanged();
         }
-        if (!other.receUuid_.isEmpty()) {
-          if (receUuid_.isEmpty()) {
-            receUuid_ = other.receUuid_;
-            bitField0_ = (bitField0_ & ~0x00000010);
-          } else {
-            ensureReceUuidIsMutable();
-            receUuid_.addAll(other.receUuid_);
-          }
-          onChanged();
+        if (other.hasFilter()) {
+          mergeFilter(other.getFilter());
         }
         onChanged();
         return this;
@@ -1335,7 +1319,6 @@ public final class PaymentProtos {
         }
         return this;
       }
-      private int bitField0_;
 
       private int number_ ;
       /**
@@ -1465,7 +1448,9 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          content_ = s;
+          if (bs.isValidUtf8()) {
+            content_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1533,141 +1518,163 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         content_ = value;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.LazyStringList receUuid_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureReceUuidIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
-          receUuid_ = new com.google.protobuf.LazyStringArrayList(receUuid_);
-          bitField0_ |= 0x00000010;
-         }
-      }
+      private com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam filter_ = null;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam, com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.Builder, com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParamOrBuilder> filterBuilder_;
       /**
-       * <code>repeated string rece_uuid = 5;</code>
+       * <code>optional .bbproto.PFansFilterParam filter = 5;</code>
        *
        * <pre>
-       * 接收用户uuid
+       * 粉丝筛选条件
        * </pre>
        */
-      public com.google.protobuf.ProtocolStringList
-          getReceUuidList() {
-        return receUuid_.getUnmodifiableView();
+      public boolean hasFilter() {
+        return filterBuilder_ != null || filter_ != null;
       }
       /**
-       * <code>repeated string rece_uuid = 5;</code>
+       * <code>optional .bbproto.PFansFilterParam filter = 5;</code>
        *
        * <pre>
-       * 接收用户uuid
+       * 粉丝筛选条件
        * </pre>
        */
-      public int getReceUuidCount() {
-        return receUuid_.size();
+      public com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam getFilter() {
+        if (filterBuilder_ == null) {
+          return filter_ == null ? com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.getDefaultInstance() : filter_;
+        } else {
+          return filterBuilder_.getMessage();
+        }
       }
       /**
-       * <code>repeated string rece_uuid = 5;</code>
+       * <code>optional .bbproto.PFansFilterParam filter = 5;</code>
        *
        * <pre>
-       * 接收用户uuid
+       * 粉丝筛选条件
        * </pre>
        */
-      public java.lang.String getReceUuid(int index) {
-        return receUuid_.get(index);
-      }
-      /**
-       * <code>repeated string rece_uuid = 5;</code>
-       *
-       * <pre>
-       * 接收用户uuid
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getReceUuidBytes(int index) {
-        return receUuid_.getByteString(index);
-      }
-      /**
-       * <code>repeated string rece_uuid = 5;</code>
-       *
-       * <pre>
-       * 接收用户uuid
-       * </pre>
-       */
-      public Builder setReceUuid(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureReceUuidIsMutable();
-        receUuid_.set(index, value);
-        onChanged();
+      public Builder setFilter(com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam value) {
+        if (filterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          filter_ = value;
+          onChanged();
+        } else {
+          filterBuilder_.setMessage(value);
+        }
+
         return this;
       }
       /**
-       * <code>repeated string rece_uuid = 5;</code>
+       * <code>optional .bbproto.PFansFilterParam filter = 5;</code>
        *
        * <pre>
-       * 接收用户uuid
+       * 粉丝筛选条件
        * </pre>
        */
-      public Builder addReceUuid(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureReceUuidIsMutable();
-        receUuid_.add(value);
-        onChanged();
+      public Builder setFilter(
+          com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.Builder builderForValue) {
+        if (filterBuilder_ == null) {
+          filter_ = builderForValue.build();
+          onChanged();
+        } else {
+          filterBuilder_.setMessage(builderForValue.build());
+        }
+
         return this;
       }
       /**
-       * <code>repeated string rece_uuid = 5;</code>
+       * <code>optional .bbproto.PFansFilterParam filter = 5;</code>
        *
        * <pre>
-       * 接收用户uuid
+       * 粉丝筛选条件
        * </pre>
        */
-      public Builder addAllReceUuid(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureReceUuidIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, receUuid_);
-        onChanged();
+      public Builder mergeFilter(com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam value) {
+        if (filterBuilder_ == null) {
+          if (filter_ != null) {
+            filter_ =
+              com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.newBuilder(filter_).mergeFrom(value).buildPartial();
+          } else {
+            filter_ = value;
+          }
+          onChanged();
+        } else {
+          filterBuilder_.mergeFrom(value);
+        }
+
         return this;
       }
       /**
-       * <code>repeated string rece_uuid = 5;</code>
+       * <code>optional .bbproto.PFansFilterParam filter = 5;</code>
        *
        * <pre>
-       * 接收用户uuid
+       * 粉丝筛选条件
        * </pre>
        */
-      public Builder clearReceUuid() {
-        receUuid_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
-        onChanged();
+      public Builder clearFilter() {
+        if (filterBuilder_ == null) {
+          filter_ = null;
+          onChanged();
+        } else {
+          filter_ = null;
+          filterBuilder_ = null;
+        }
+
         return this;
       }
       /**
-       * <code>repeated string rece_uuid = 5;</code>
+       * <code>optional .bbproto.PFansFilterParam filter = 5;</code>
        *
        * <pre>
-       * 接收用户uuid
+       * 粉丝筛选条件
        * </pre>
        */
-      public Builder addReceUuidBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureReceUuidIsMutable();
-        receUuid_.add(value);
+      public com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.Builder getFilterBuilder() {
+        
         onChanged();
-        return this;
+        return getFilterFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .bbproto.PFansFilterParam filter = 5;</code>
+       *
+       * <pre>
+       * 粉丝筛选条件
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParamOrBuilder getFilterOrBuilder() {
+        if (filterBuilder_ != null) {
+          return filterBuilder_.getMessageOrBuilder();
+        } else {
+          return filter_ == null ?
+              com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.getDefaultInstance() : filter_;
+        }
+      }
+      /**
+       * <code>optional .bbproto.PFansFilterParam filter = 5;</code>
+       *
+       * <pre>
+       * 粉丝筛选条件
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam, com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.Builder, com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParamOrBuilder> 
+          getFilterFieldBuilder() {
+        if (filterBuilder_ == null) {
+          filterBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam, com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.Builder, com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParamOrBuilder>(
+                  getFilter(),
+                  getParentForChildren(),
+                  isClean());
+          filter_ = null;
+        }
+        return filterBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1693,8 +1700,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PGroupRedEnve>
-        PARSER = new com.google.protobuf.AbstractParser<PGroupRedEnve>() {
+    public static final com.google.protobuf.Parser<PGroupRedEnve> PARSER =
+        new com.google.protobuf.AbstractParser<PGroupRedEnve>() {
       public PGroupRedEnve parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1712,10 +1719,6 @@ public final class PaymentProtos {
       }
     };
 
-    public static com.google.protobuf.Parser<PGroupRedEnve> parser() {
-      return PARSER;
-    }
-
     @java.lang.Override
     public com.google.protobuf.Parser<PGroupRedEnve> getParserForType() {
       return PARSER;
@@ -1732,70 +1735,52 @@ public final class PaymentProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string fromActivity = 1;</code>
+     * <code>optional int32 recAccountType = 1;</code>
      *
      * <pre>
-     * 环境变量
-     * </pre>
-     */
-    java.lang.String getFromActivity();
-    /**
-     * <code>optional string fromActivity = 1;</code>
-     *
-     * <pre>
-     * 环境变量
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getFromActivityBytes();
-
-    /**
-     * <code>optional int32 recAccountType = 2;</code>
-     *
-     * <pre>
-     * 接受者账户类型（0-个人，1-企业）
+     * 接受者账户类型
      * </pre>
      */
     int getRecAccountType();
 
     /**
-     * <code>optional string cusId = 3;</code>
+     * <code>optional string cusId = 2;</code>
      *
      * <pre>
-     * 用户id
+     * 支付用户id
      * </pre>
      */
     java.lang.String getCusId();
     /**
-     * <code>optional string cusId = 3;</code>
+     * <code>optional string cusId = 2;</code>
      *
      * <pre>
-     * 用户id
+     * 支付用户id
      * </pre>
      */
     com.google.protobuf.ByteString
         getCusIdBytes();
 
     /**
-     * <code>optional string receivedId = 4;</code>
+     * <code>optional string receivedId = 3;</code>
      *
      * <pre>
-     * 接受者id
+     * 收款用户id
      * </pre>
      */
     java.lang.String getReceivedId();
     /**
-     * <code>optional string receivedId = 4;</code>
+     * <code>optional string receivedId = 3;</code>
      *
      * <pre>
-     * 接受者id
+     * 收款用户id
      * </pre>
      */
     com.google.protobuf.ByteString
         getReceivedIdBytes();
 
     /**
-     * <code>optional int32 fenMoney = 5;</code>
+     * <code>optional int32 fenMoney = 4;</code>
      *
      * <pre>
      * 支付金额（单位：分）
@@ -1804,25 +1789,25 @@ public final class PaymentProtos {
     int getFenMoney();
 
     /**
-     * <code>optional string orderNum = 6;</code>
+     * <code>optional string ord_no = 5;</code>
      *
      * <pre>
-     * 业务订单号
+     * 支付订单号
      * </pre>
      */
-    java.lang.String getOrderNum();
+    java.lang.String getOrdNo();
     /**
-     * <code>optional string orderNum = 6;</code>
+     * <code>optional string ord_no = 5;</code>
      *
      * <pre>
-     * 业务订单号
+     * 支付订单号
      * </pre>
      */
     com.google.protobuf.ByteString
-        getOrderNumBytes();
+        getOrdNoBytes();
 
     /**
-     * <code>optional string goodsName = 7;</code>
+     * <code>optional string goodsName = 6;</code>
      *
      * <pre>
      * 商品名称
@@ -1830,7 +1815,7 @@ public final class PaymentProtos {
      */
     java.lang.String getGoodsName();
     /**
-     * <code>optional string goodsName = 7;</code>
+     * <code>optional string goodsName = 6;</code>
      *
      * <pre>
      * 商品名称
@@ -1840,7 +1825,7 @@ public final class PaymentProtos {
         getGoodsNameBytes();
 
     /**
-     * <code>optional string sign = 8;</code>
+     * <code>optional string sign = 7;</code>
      *
      * <pre>
      * 签名
@@ -1848,7 +1833,7 @@ public final class PaymentProtos {
      */
     java.lang.String getSign();
     /**
-     * <code>optional string sign = 8;</code>
+     * <code>optional string sign = 7;</code>
      *
      * <pre>
      * 签名
@@ -1856,37 +1841,30 @@ public final class PaymentProtos {
      */
     com.google.protobuf.ByteString
         getSignBytes();
-
-    /**
-     * <code>optional int32 requestCode = 9;</code>
-     *
-     * <pre>
-     * 请求码
-     * </pre>
-     */
-    int getRequestCode();
   }
   /**
    * Protobuf type {@code bbproto.POrderPay}
+   *
+   * <pre>
+   ** 发红包，打赏，抽奖返回的订单预支付信息 
+   * </pre>
    */
   public  static final class POrderPay extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:bbproto.POrderPay)
       POrderPayOrBuilder {
     // Use POrderPay.newBuilder() to construct.
-    private POrderPay(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private POrderPay(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private POrderPay() {
-      fromActivity_ = "";
       recAccountType_ = 0;
       cusId_ = "";
       receivedId_ = "";
       fenMoney_ = 0;
-      orderNum_ = "";
+      ordNo_ = "";
       goodsName_ = "";
       sign_ = "";
-      requestCode_ = 0;
     }
 
     @java.lang.Override
@@ -1913,55 +1891,44 @@ public final class PaymentProtos {
               }
               break;
             }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              fromActivity_ = s;
-              break;
-            }
-            case 16: {
+            case 8: {
 
               recAccountType_ = input.readInt32();
               break;
             }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              cusId_ = bs;
+              break;
+            }
             case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              cusId_ = s;
+              receivedId_ = bs;
               break;
             }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              receivedId_ = s;
-              break;
-            }
-            case 40: {
+            case 32: {
 
               fenMoney_ = input.readInt32();
               break;
             }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              orderNum_ = s;
+              ordNo_ = bs;
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              goodsName_ = bs;
               break;
             }
             case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              goodsName_ = s;
-              break;
-            }
-            case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              sign_ = s;
-              break;
-            }
-            case 72: {
-
-              requestCode_ = input.readInt32();
+              sign_ = bs;
               break;
             }
           }
@@ -1988,68 +1955,26 @@ public final class PaymentProtos {
               com.blemobi.sep.probuf.PaymentProtos.POrderPay.class, com.blemobi.sep.probuf.PaymentProtos.POrderPay.Builder.class);
     }
 
-    public static final int FROMACTIVITY_FIELD_NUMBER = 1;
-    private volatile java.lang.Object fromActivity_;
-    /**
-     * <code>optional string fromActivity = 1;</code>
-     *
-     * <pre>
-     * 环境变量
-     * </pre>
-     */
-    public java.lang.String getFromActivity() {
-      java.lang.Object ref = fromActivity_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        fromActivity_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>optional string fromActivity = 1;</code>
-     *
-     * <pre>
-     * 环境变量
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getFromActivityBytes() {
-      java.lang.Object ref = fromActivity_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        fromActivity_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int RECACCOUNTTYPE_FIELD_NUMBER = 2;
+    public static final int RECACCOUNTTYPE_FIELD_NUMBER = 1;
     private int recAccountType_;
     /**
-     * <code>optional int32 recAccountType = 2;</code>
+     * <code>optional int32 recAccountType = 1;</code>
      *
      * <pre>
-     * 接受者账户类型（0-个人，1-企业）
+     * 接受者账户类型
      * </pre>
      */
     public int getRecAccountType() {
       return recAccountType_;
     }
 
-    public static final int CUSID_FIELD_NUMBER = 3;
+    public static final int CUSID_FIELD_NUMBER = 2;
     private volatile java.lang.Object cusId_;
     /**
-     * <code>optional string cusId = 3;</code>
+     * <code>optional string cusId = 2;</code>
      *
      * <pre>
-     * 用户id
+     * 支付用户id
      * </pre>
      */
     public java.lang.String getCusId() {
@@ -2060,15 +1985,17 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        cusId_ = s;
+        if (bs.isValidUtf8()) {
+          cusId_ = s;
+        }
         return s;
       }
     }
     /**
-     * <code>optional string cusId = 3;</code>
+     * <code>optional string cusId = 2;</code>
      *
      * <pre>
-     * 用户id
+     * 支付用户id
      * </pre>
      */
     public com.google.protobuf.ByteString
@@ -2085,13 +2012,13 @@ public final class PaymentProtos {
       }
     }
 
-    public static final int RECEIVEDID_FIELD_NUMBER = 4;
+    public static final int RECEIVEDID_FIELD_NUMBER = 3;
     private volatile java.lang.Object receivedId_;
     /**
-     * <code>optional string receivedId = 4;</code>
+     * <code>optional string receivedId = 3;</code>
      *
      * <pre>
-     * 接受者id
+     * 收款用户id
      * </pre>
      */
     public java.lang.String getReceivedId() {
@@ -2102,15 +2029,17 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        receivedId_ = s;
+        if (bs.isValidUtf8()) {
+          receivedId_ = s;
+        }
         return s;
       }
     }
     /**
-     * <code>optional string receivedId = 4;</code>
+     * <code>optional string receivedId = 3;</code>
      *
      * <pre>
-     * 接受者id
+     * 收款用户id
      * </pre>
      */
     public com.google.protobuf.ByteString
@@ -2127,10 +2056,10 @@ public final class PaymentProtos {
       }
     }
 
-    public static final int FENMONEY_FIELD_NUMBER = 5;
+    public static final int FENMONEY_FIELD_NUMBER = 4;
     private int fenMoney_;
     /**
-     * <code>optional int32 fenMoney = 5;</code>
+     * <code>optional int32 fenMoney = 4;</code>
      *
      * <pre>
      * 支付金额（单位：分）
@@ -2140,52 +2069,54 @@ public final class PaymentProtos {
       return fenMoney_;
     }
 
-    public static final int ORDERNUM_FIELD_NUMBER = 6;
-    private volatile java.lang.Object orderNum_;
+    public static final int ORD_NO_FIELD_NUMBER = 5;
+    private volatile java.lang.Object ordNo_;
     /**
-     * <code>optional string orderNum = 6;</code>
+     * <code>optional string ord_no = 5;</code>
      *
      * <pre>
-     * 业务订单号
+     * 支付订单号
      * </pre>
      */
-    public java.lang.String getOrderNum() {
-      java.lang.Object ref = orderNum_;
+    public java.lang.String getOrdNo() {
+      java.lang.Object ref = ordNo_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        orderNum_ = s;
+        if (bs.isValidUtf8()) {
+          ordNo_ = s;
+        }
         return s;
       }
     }
     /**
-     * <code>optional string orderNum = 6;</code>
+     * <code>optional string ord_no = 5;</code>
      *
      * <pre>
-     * 业务订单号
+     * 支付订单号
      * </pre>
      */
     public com.google.protobuf.ByteString
-        getOrderNumBytes() {
-      java.lang.Object ref = orderNum_;
+        getOrdNoBytes() {
+      java.lang.Object ref = ordNo_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        orderNum_ = b;
+        ordNo_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int GOODSNAME_FIELD_NUMBER = 7;
+    public static final int GOODSNAME_FIELD_NUMBER = 6;
     private volatile java.lang.Object goodsName_;
     /**
-     * <code>optional string goodsName = 7;</code>
+     * <code>optional string goodsName = 6;</code>
      *
      * <pre>
      * 商品名称
@@ -2199,12 +2130,14 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        goodsName_ = s;
+        if (bs.isValidUtf8()) {
+          goodsName_ = s;
+        }
         return s;
       }
     }
     /**
-     * <code>optional string goodsName = 7;</code>
+     * <code>optional string goodsName = 6;</code>
      *
      * <pre>
      * 商品名称
@@ -2224,10 +2157,10 @@ public final class PaymentProtos {
       }
     }
 
-    public static final int SIGN_FIELD_NUMBER = 8;
+    public static final int SIGN_FIELD_NUMBER = 7;
     private volatile java.lang.Object sign_;
     /**
-     * <code>optional string sign = 8;</code>
+     * <code>optional string sign = 7;</code>
      *
      * <pre>
      * 签名
@@ -2241,12 +2174,14 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        sign_ = s;
+        if (bs.isValidUtf8()) {
+          sign_ = s;
+        }
         return s;
       }
     }
     /**
-     * <code>optional string sign = 8;</code>
+     * <code>optional string sign = 7;</code>
      *
      * <pre>
      * 签名
@@ -2266,19 +2201,6 @@ public final class PaymentProtos {
       }
     }
 
-    public static final int REQUESTCODE_FIELD_NUMBER = 9;
-    private int requestCode_;
-    /**
-     * <code>optional int32 requestCode = 9;</code>
-     *
-     * <pre>
-     * 请求码
-     * </pre>
-     */
-    public int getRequestCode() {
-      return requestCode_;
-    }
-
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -2291,71 +2213,64 @@ public final class PaymentProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFromActivityBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, fromActivity_);
-      }
       if (recAccountType_ != 0) {
-        output.writeInt32(2, recAccountType_);
+        output.writeInt32(1, recAccountType_);
       }
       if (!getCusIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 3, cusId_);
+        output.writeBytes(2, getCusIdBytes());
       }
       if (!getReceivedIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 4, receivedId_);
+        output.writeBytes(3, getReceivedIdBytes());
       }
       if (fenMoney_ != 0) {
-        output.writeInt32(5, fenMoney_);
+        output.writeInt32(4, fenMoney_);
       }
-      if (!getOrderNumBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 6, orderNum_);
+      if (!getOrdNoBytes().isEmpty()) {
+        output.writeBytes(5, getOrdNoBytes());
       }
       if (!getGoodsNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 7, goodsName_);
+        output.writeBytes(6, getGoodsNameBytes());
       }
       if (!getSignBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 8, sign_);
-      }
-      if (requestCode_ != 0) {
-        output.writeInt32(9, requestCode_);
+        output.writeBytes(7, getSignBytes());
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
-      if (!getFromActivityBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, fromActivity_);
-      }
       if (recAccountType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, recAccountType_);
+          .computeInt32Size(1, recAccountType_);
       }
       if (!getCusIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, cusId_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getCusIdBytes());
       }
       if (!getReceivedIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, receivedId_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getReceivedIdBytes());
       }
       if (fenMoney_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, fenMoney_);
+          .computeInt32Size(4, fenMoney_);
       }
-      if (!getOrderNumBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, orderNum_);
+      if (!getOrdNoBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, getOrdNoBytes());
       }
       if (!getGoodsNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, goodsName_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, getGoodsNameBytes());
       }
       if (!getSignBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(8, sign_);
-      }
-      if (requestCode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(9, requestCode_);
+          .computeBytesSize(7, getSignBytes());
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -2433,6 +2348,10 @@ public final class PaymentProtos {
     }
     /**
      * Protobuf type {@code bbproto.POrderPay}
+     *
+     * <pre>
+     ** 发红包，打赏，抽奖返回的订单预支付信息 
+     * </pre>
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -2466,8 +2385,6 @@ public final class PaymentProtos {
       }
       public Builder clear() {
         super.clear();
-        fromActivity_ = "";
-
         recAccountType_ = 0;
 
         cusId_ = "";
@@ -2476,13 +2393,11 @@ public final class PaymentProtos {
 
         fenMoney_ = 0;
 
-        orderNum_ = "";
+        ordNo_ = "";
 
         goodsName_ = "";
 
         sign_ = "";
-
-        requestCode_ = 0;
 
         return this;
       }
@@ -2506,15 +2421,13 @@ public final class PaymentProtos {
 
       public com.blemobi.sep.probuf.PaymentProtos.POrderPay buildPartial() {
         com.blemobi.sep.probuf.PaymentProtos.POrderPay result = new com.blemobi.sep.probuf.PaymentProtos.POrderPay(this);
-        result.fromActivity_ = fromActivity_;
         result.recAccountType_ = recAccountType_;
         result.cusId_ = cusId_;
         result.receivedId_ = receivedId_;
         result.fenMoney_ = fenMoney_;
-        result.orderNum_ = orderNum_;
+        result.ordNo_ = ordNo_;
         result.goodsName_ = goodsName_;
         result.sign_ = sign_;
-        result.requestCode_ = requestCode_;
         onBuilt();
         return result;
       }
@@ -2530,10 +2443,6 @@ public final class PaymentProtos {
 
       public Builder mergeFrom(com.blemobi.sep.probuf.PaymentProtos.POrderPay other) {
         if (other == com.blemobi.sep.probuf.PaymentProtos.POrderPay.getDefaultInstance()) return this;
-        if (!other.getFromActivity().isEmpty()) {
-          fromActivity_ = other.fromActivity_;
-          onChanged();
-        }
         if (other.getRecAccountType() != 0) {
           setRecAccountType(other.getRecAccountType());
         }
@@ -2548,8 +2457,8 @@ public final class PaymentProtos {
         if (other.getFenMoney() != 0) {
           setFenMoney(other.getFenMoney());
         }
-        if (!other.getOrderNum().isEmpty()) {
-          orderNum_ = other.orderNum_;
+        if (!other.getOrdNo().isEmpty()) {
+          ordNo_ = other.ordNo_;
           onChanged();
         }
         if (!other.getGoodsName().isEmpty()) {
@@ -2559,9 +2468,6 @@ public final class PaymentProtos {
         if (!other.getSign().isEmpty()) {
           sign_ = other.sign_;
           onChanged();
-        }
-        if (other.getRequestCode() != 0) {
-          setRequestCode(other.getRequestCode());
         }
         onChanged();
         return this;
@@ -2589,111 +2495,22 @@ public final class PaymentProtos {
         return this;
       }
 
-      private java.lang.Object fromActivity_ = "";
-      /**
-       * <code>optional string fromActivity = 1;</code>
-       *
-       * <pre>
-       * 环境变量
-       * </pre>
-       */
-      public java.lang.String getFromActivity() {
-        java.lang.Object ref = fromActivity_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          fromActivity_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string fromActivity = 1;</code>
-       *
-       * <pre>
-       * 环境变量
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getFromActivityBytes() {
-        java.lang.Object ref = fromActivity_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          fromActivity_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string fromActivity = 1;</code>
-       *
-       * <pre>
-       * 环境变量
-       * </pre>
-       */
-      public Builder setFromActivity(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        fromActivity_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string fromActivity = 1;</code>
-       *
-       * <pre>
-       * 环境变量
-       * </pre>
-       */
-      public Builder clearFromActivity() {
-        
-        fromActivity_ = getDefaultInstance().getFromActivity();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string fromActivity = 1;</code>
-       *
-       * <pre>
-       * 环境变量
-       * </pre>
-       */
-      public Builder setFromActivityBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        fromActivity_ = value;
-        onChanged();
-        return this;
-      }
-
       private int recAccountType_ ;
       /**
-       * <code>optional int32 recAccountType = 2;</code>
+       * <code>optional int32 recAccountType = 1;</code>
        *
        * <pre>
-       * 接受者账户类型（0-个人，1-企业）
+       * 接受者账户类型
        * </pre>
        */
       public int getRecAccountType() {
         return recAccountType_;
       }
       /**
-       * <code>optional int32 recAccountType = 2;</code>
+       * <code>optional int32 recAccountType = 1;</code>
        *
        * <pre>
-       * 接受者账户类型（0-个人，1-企业）
+       * 接受者账户类型
        * </pre>
        */
       public Builder setRecAccountType(int value) {
@@ -2703,10 +2520,10 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>optional int32 recAccountType = 2;</code>
+       * <code>optional int32 recAccountType = 1;</code>
        *
        * <pre>
-       * 接受者账户类型（0-个人，1-企业）
+       * 接受者账户类型
        * </pre>
        */
       public Builder clearRecAccountType() {
@@ -2718,10 +2535,10 @@ public final class PaymentProtos {
 
       private java.lang.Object cusId_ = "";
       /**
-       * <code>optional string cusId = 3;</code>
+       * <code>optional string cusId = 2;</code>
        *
        * <pre>
-       * 用户id
+       * 支付用户id
        * </pre>
        */
       public java.lang.String getCusId() {
@@ -2730,17 +2547,19 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          cusId_ = s;
+          if (bs.isValidUtf8()) {
+            cusId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>optional string cusId = 3;</code>
+       * <code>optional string cusId = 2;</code>
        *
        * <pre>
-       * 用户id
+       * 支付用户id
        * </pre>
        */
       public com.google.protobuf.ByteString
@@ -2757,10 +2576,10 @@ public final class PaymentProtos {
         }
       }
       /**
-       * <code>optional string cusId = 3;</code>
+       * <code>optional string cusId = 2;</code>
        *
        * <pre>
-       * 用户id
+       * 支付用户id
        * </pre>
        */
       public Builder setCusId(
@@ -2774,10 +2593,10 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>optional string cusId = 3;</code>
+       * <code>optional string cusId = 2;</code>
        *
        * <pre>
-       * 用户id
+       * 支付用户id
        * </pre>
        */
       public Builder clearCusId() {
@@ -2787,10 +2606,10 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>optional string cusId = 3;</code>
+       * <code>optional string cusId = 2;</code>
        *
        * <pre>
-       * 用户id
+       * 支付用户id
        * </pre>
        */
       public Builder setCusIdBytes(
@@ -2798,8 +2617,7 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         cusId_ = value;
         onChanged();
         return this;
@@ -2807,10 +2625,10 @@ public final class PaymentProtos {
 
       private java.lang.Object receivedId_ = "";
       /**
-       * <code>optional string receivedId = 4;</code>
+       * <code>optional string receivedId = 3;</code>
        *
        * <pre>
-       * 接受者id
+       * 收款用户id
        * </pre>
        */
       public java.lang.String getReceivedId() {
@@ -2819,17 +2637,19 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          receivedId_ = s;
+          if (bs.isValidUtf8()) {
+            receivedId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>optional string receivedId = 4;</code>
+       * <code>optional string receivedId = 3;</code>
        *
        * <pre>
-       * 接受者id
+       * 收款用户id
        * </pre>
        */
       public com.google.protobuf.ByteString
@@ -2846,10 +2666,10 @@ public final class PaymentProtos {
         }
       }
       /**
-       * <code>optional string receivedId = 4;</code>
+       * <code>optional string receivedId = 3;</code>
        *
        * <pre>
-       * 接受者id
+       * 收款用户id
        * </pre>
        */
       public Builder setReceivedId(
@@ -2863,10 +2683,10 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>optional string receivedId = 4;</code>
+       * <code>optional string receivedId = 3;</code>
        *
        * <pre>
-       * 接受者id
+       * 收款用户id
        * </pre>
        */
       public Builder clearReceivedId() {
@@ -2876,10 +2696,10 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>optional string receivedId = 4;</code>
+       * <code>optional string receivedId = 3;</code>
        *
        * <pre>
-       * 接受者id
+       * 收款用户id
        * </pre>
        */
       public Builder setReceivedIdBytes(
@@ -2887,8 +2707,7 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         receivedId_ = value;
         onChanged();
         return this;
@@ -2896,7 +2715,7 @@ public final class PaymentProtos {
 
       private int fenMoney_ ;
       /**
-       * <code>optional int32 fenMoney = 5;</code>
+       * <code>optional int32 fenMoney = 4;</code>
        *
        * <pre>
        * 支付金额（单位：分）
@@ -2906,7 +2725,7 @@ public final class PaymentProtos {
         return fenMoney_;
       }
       /**
-       * <code>optional int32 fenMoney = 5;</code>
+       * <code>optional int32 fenMoney = 4;</code>
        *
        * <pre>
        * 支付金额（单位：分）
@@ -2919,7 +2738,7 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>optional int32 fenMoney = 5;</code>
+       * <code>optional int32 fenMoney = 4;</code>
        *
        * <pre>
        * 支付金额（单位：分）
@@ -2932,98 +2751,99 @@ public final class PaymentProtos {
         return this;
       }
 
-      private java.lang.Object orderNum_ = "";
+      private java.lang.Object ordNo_ = "";
       /**
-       * <code>optional string orderNum = 6;</code>
+       * <code>optional string ord_no = 5;</code>
        *
        * <pre>
-       * 业务订单号
+       * 支付订单号
        * </pre>
        */
-      public java.lang.String getOrderNum() {
-        java.lang.Object ref = orderNum_;
+      public java.lang.String getOrdNo() {
+        java.lang.Object ref = ordNo_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          orderNum_ = s;
+          if (bs.isValidUtf8()) {
+            ordNo_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>optional string orderNum = 6;</code>
+       * <code>optional string ord_no = 5;</code>
        *
        * <pre>
-       * 业务订单号
+       * 支付订单号
        * </pre>
        */
       public com.google.protobuf.ByteString
-          getOrderNumBytes() {
-        java.lang.Object ref = orderNum_;
+          getOrdNoBytes() {
+        java.lang.Object ref = ordNo_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          orderNum_ = b;
+          ordNo_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>optional string orderNum = 6;</code>
+       * <code>optional string ord_no = 5;</code>
        *
        * <pre>
-       * 业务订单号
+       * 支付订单号
        * </pre>
        */
-      public Builder setOrderNum(
+      public Builder setOrdNo(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        orderNum_ = value;
+        ordNo_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string orderNum = 6;</code>
+       * <code>optional string ord_no = 5;</code>
        *
        * <pre>
-       * 业务订单号
+       * 支付订单号
        * </pre>
        */
-      public Builder clearOrderNum() {
+      public Builder clearOrdNo() {
         
-        orderNum_ = getDefaultInstance().getOrderNum();
+        ordNo_ = getDefaultInstance().getOrdNo();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string orderNum = 6;</code>
+       * <code>optional string ord_no = 5;</code>
        *
        * <pre>
-       * 业务订单号
+       * 支付订单号
        * </pre>
        */
-      public Builder setOrderNumBytes(
+      public Builder setOrdNoBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
-        orderNum_ = value;
+  
+        ordNo_ = value;
         onChanged();
         return this;
       }
 
       private java.lang.Object goodsName_ = "";
       /**
-       * <code>optional string goodsName = 7;</code>
+       * <code>optional string goodsName = 6;</code>
        *
        * <pre>
        * 商品名称
@@ -3035,14 +2855,16 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          goodsName_ = s;
+          if (bs.isValidUtf8()) {
+            goodsName_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>optional string goodsName = 7;</code>
+       * <code>optional string goodsName = 6;</code>
        *
        * <pre>
        * 商品名称
@@ -3062,7 +2884,7 @@ public final class PaymentProtos {
         }
       }
       /**
-       * <code>optional string goodsName = 7;</code>
+       * <code>optional string goodsName = 6;</code>
        *
        * <pre>
        * 商品名称
@@ -3079,7 +2901,7 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>optional string goodsName = 7;</code>
+       * <code>optional string goodsName = 6;</code>
        *
        * <pre>
        * 商品名称
@@ -3092,7 +2914,7 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>optional string goodsName = 7;</code>
+       * <code>optional string goodsName = 6;</code>
        *
        * <pre>
        * 商品名称
@@ -3103,8 +2925,7 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         goodsName_ = value;
         onChanged();
         return this;
@@ -3112,7 +2933,7 @@ public final class PaymentProtos {
 
       private java.lang.Object sign_ = "";
       /**
-       * <code>optional string sign = 8;</code>
+       * <code>optional string sign = 7;</code>
        *
        * <pre>
        * 签名
@@ -3124,14 +2945,16 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          sign_ = s;
+          if (bs.isValidUtf8()) {
+            sign_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>optional string sign = 8;</code>
+       * <code>optional string sign = 7;</code>
        *
        * <pre>
        * 签名
@@ -3151,7 +2974,7 @@ public final class PaymentProtos {
         }
       }
       /**
-       * <code>optional string sign = 8;</code>
+       * <code>optional string sign = 7;</code>
        *
        * <pre>
        * 签名
@@ -3168,7 +2991,7 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>optional string sign = 8;</code>
+       * <code>optional string sign = 7;</code>
        *
        * <pre>
        * 签名
@@ -3181,7 +3004,7 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>optional string sign = 8;</code>
+       * <code>optional string sign = 7;</code>
        *
        * <pre>
        * 签名
@@ -3192,47 +3015,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         sign_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int requestCode_ ;
-      /**
-       * <code>optional int32 requestCode = 9;</code>
-       *
-       * <pre>
-       * 请求码
-       * </pre>
-       */
-      public int getRequestCode() {
-        return requestCode_;
-      }
-      /**
-       * <code>optional int32 requestCode = 9;</code>
-       *
-       * <pre>
-       * 请求码
-       * </pre>
-       */
-      public Builder setRequestCode(int value) {
-        
-        requestCode_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 requestCode = 9;</code>
-       *
-       * <pre>
-       * 请求码
-       * </pre>
-       */
-      public Builder clearRequestCode() {
-        
-        requestCode_ = 0;
         onChanged();
         return this;
       }
@@ -3260,8 +3044,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<POrderPay>
-        PARSER = new com.google.protobuf.AbstractParser<POrderPay>() {
+    public static final com.google.protobuf.Parser<POrderPay> PARSER =
+        new com.google.protobuf.AbstractParser<POrderPay>() {
       public POrderPay parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3278,10 +3062,6 @@ public final class PaymentProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<POrderPay> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<POrderPay> getParserForType() {
@@ -3317,13 +3097,13 @@ public final class PaymentProtos {
         getOrdNoBytes();
 
     /**
-     * <code>optional int32 status = 2;</code>
+     * <code>optional int32 user_rece_money = 2;</code>
      *
      * <pre>
-     * 红包当前针对用户状态（0-无权限领取，1-已领取，2-可领取，3-已领完，4-已过期）
+     * 当前用户领取的金额（单位：分），如果是0表示网红自己查看详情
      * </pre>
      */
-    int getStatus();
+    int getUserReceMoney();
 
     /**
      * <code>optional int32 type = 3;</code>
@@ -3356,7 +3136,7 @@ public final class PaymentProtos {
      * <code>optional int32 rece_money = 6;</code>
      *
      * <pre>
-     * 已接收金额（单位：分）
+     * 已领取金额（单位：分）
      * </pre>
      */
     int getReceMoney();
@@ -3365,7 +3145,7 @@ public final class PaymentProtos {
      * <code>optional int32 rece_number = 7;</code>
      *
      * <pre>
-     * 已接收数量
+     * 已领取数量
      * </pre>
      */
     int getReceNumber();
@@ -3423,44 +3203,53 @@ public final class PaymentProtos {
     com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserBaseOrBuilder();
 
     /**
-     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+     * <code>optional bool status = 11;</code>
      *
      * <pre>
-     * 接收用户列表
+     * 红包是否过期
+     * </pre>
+     */
+    boolean getStatus();
+
+    /**
+     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
+     *
+     * <pre>
+     * 红包领取信息，默认给10个
      * </pre>
      */
     java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece> 
         getRedEnveReceList();
     /**
-     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
      *
      * <pre>
-     * 接收用户列表
+     * 红包领取信息，默认给10个
      * </pre>
      */
     com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece getRedEnveRece(int index);
     /**
-     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
      *
      * <pre>
-     * 接收用户列表
+     * 红包领取信息，默认给10个
      * </pre>
      */
     int getRedEnveReceCount();
     /**
-     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
      *
      * <pre>
-     * 接收用户列表
+     * 红包领取信息，默认给10个
      * </pre>
      */
     java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceOrBuilder> 
         getRedEnveReceOrBuilderList();
     /**
-     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
      *
      * <pre>
-     * 接收用户列表
+     * 红包领取信息，默认给10个
      * </pre>
      */
     com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceOrBuilder getRedEnveReceOrBuilder(
@@ -3468,18 +3257,22 @@ public final class PaymentProtos {
   }
   /**
    * Protobuf type {@code bbproto.PRedEnveInfo}
+   *
+   * <pre>
+   ** 红包详情 
+   * </pre>
    */
   public  static final class PRedEnveInfo extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:bbproto.PRedEnveInfo)
       PRedEnveInfoOrBuilder {
     // Use PRedEnveInfo.newBuilder() to construct.
-    private PRedEnveInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PRedEnveInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PRedEnveInfo() {
       ordNo_ = "";
-      status_ = 0;
+      userReceMoney_ = 0;
       type_ = 0;
       totaMoney_ = 0;
       totaNumber_ = 0;
@@ -3487,6 +3280,7 @@ public final class PaymentProtos {
       receNumber_ = 0;
       content_ = "";
       sendTm_ = 0L;
+      status_ = false;
       redEnveRece_ = java.util.Collections.emptyList();
     }
 
@@ -3515,14 +3309,14 @@ public final class PaymentProtos {
               break;
             }
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              ordNo_ = s;
+              ordNo_ = bs;
               break;
             }
             case 16: {
 
-              status_ = input.readInt32();
+              userReceMoney_ = input.readInt32();
               break;
             }
             case 24: {
@@ -3551,9 +3345,9 @@ public final class PaymentProtos {
               break;
             }
             case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              content_ = s;
+              content_ = bs;
               break;
             }
             case 72: {
@@ -3566,7 +3360,7 @@ public final class PaymentProtos {
               if (userBase_ != null) {
                 subBuilder = userBase_.toBuilder();
               }
-              userBase_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.parser(), extensionRegistry);
+              userBase_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(userBase_);
                 userBase_ = subBuilder.buildPartial();
@@ -3574,12 +3368,17 @@ public final class PaymentProtos {
 
               break;
             }
-            case 90: {
-              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+            case 88: {
+
+              status_ = input.readBool();
+              break;
+            }
+            case 98: {
+              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
                 redEnveRece_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece>();
-                mutable_bitField0_ |= 0x00000400;
+                mutable_bitField0_ |= 0x00000800;
               }
-              redEnveRece_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.parser(), extensionRegistry));
+              redEnveRece_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.PARSER, extensionRegistry));
               break;
             }
           }
@@ -3591,7 +3390,7 @@ public final class PaymentProtos {
             new com.google.protobuf.InvalidProtocolBufferException(
                 e.getMessage()).setUnfinishedMessage(this));
       } finally {
-        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+        if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
           redEnveRece_ = java.util.Collections.unmodifiableList(redEnveRece_);
         }
         makeExtensionsImmutable();
@@ -3627,7 +3426,9 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        ordNo_ = s;
+        if (bs.isValidUtf8()) {
+          ordNo_ = s;
+        }
         return s;
       }
     }
@@ -3652,17 +3453,17 @@ public final class PaymentProtos {
       }
     }
 
-    public static final int STATUS_FIELD_NUMBER = 2;
-    private int status_;
+    public static final int USER_RECE_MONEY_FIELD_NUMBER = 2;
+    private int userReceMoney_;
     /**
-     * <code>optional int32 status = 2;</code>
+     * <code>optional int32 user_rece_money = 2;</code>
      *
      * <pre>
-     * 红包当前针对用户状态（0-无权限领取，1-已领取，2-可领取，3-已领完，4-已过期）
+     * 当前用户领取的金额（单位：分），如果是0表示网红自己查看详情
      * </pre>
      */
-    public int getStatus() {
-      return status_;
+    public int getUserReceMoney() {
+      return userReceMoney_;
     }
 
     public static final int TYPE_FIELD_NUMBER = 3;
@@ -3710,7 +3511,7 @@ public final class PaymentProtos {
      * <code>optional int32 rece_money = 6;</code>
      *
      * <pre>
-     * 已接收金额（单位：分）
+     * 已领取金额（单位：分）
      * </pre>
      */
     public int getReceMoney() {
@@ -3723,7 +3524,7 @@ public final class PaymentProtos {
      * <code>optional int32 rece_number = 7;</code>
      *
      * <pre>
-     * 已接收数量
+     * 已领取数量
      * </pre>
      */
     public int getReceNumber() {
@@ -3747,7 +3548,9 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        content_ = s;
+        if (bs.isValidUtf8()) {
+          content_ = s;
+        }
         return s;
       }
     }
@@ -3818,23 +3621,36 @@ public final class PaymentProtos {
       return getUserBase();
     }
 
-    public static final int REDENVERECE_FIELD_NUMBER = 11;
-    private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece> redEnveRece_;
+    public static final int STATUS_FIELD_NUMBER = 11;
+    private boolean status_;
     /**
-     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+     * <code>optional bool status = 11;</code>
      *
      * <pre>
-     * 接收用户列表
+     * 红包是否过期
+     * </pre>
+     */
+    public boolean getStatus() {
+      return status_;
+    }
+
+    public static final int REDENVERECE_FIELD_NUMBER = 12;
+    private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece> redEnveRece_;
+    /**
+     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
+     *
+     * <pre>
+     * 红包领取信息，默认给10个
      * </pre>
      */
     public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece> getRedEnveReceList() {
       return redEnveRece_;
     }
     /**
-     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
      *
      * <pre>
-     * 接收用户列表
+     * 红包领取信息，默认给10个
      * </pre>
      */
     public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceOrBuilder> 
@@ -3842,30 +3658,30 @@ public final class PaymentProtos {
       return redEnveRece_;
     }
     /**
-     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
      *
      * <pre>
-     * 接收用户列表
+     * 红包领取信息，默认给10个
      * </pre>
      */
     public int getRedEnveReceCount() {
       return redEnveRece_.size();
     }
     /**
-     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
      *
      * <pre>
-     * 接收用户列表
+     * 红包领取信息，默认给10个
      * </pre>
      */
     public com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece getRedEnveRece(int index) {
       return redEnveRece_.get(index);
     }
     /**
-     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
      *
      * <pre>
-     * 接收用户列表
+     * 红包领取信息，默认给10个
      * </pre>
      */
     public com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceOrBuilder getRedEnveReceOrBuilder(
@@ -3886,10 +3702,10 @@ public final class PaymentProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getOrdNoBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, ordNo_);
+        output.writeBytes(1, getOrdNoBytes());
       }
-      if (status_ != 0) {
-        output.writeInt32(2, status_);
+      if (userReceMoney_ != 0) {
+        output.writeInt32(2, userReceMoney_);
       }
       if (type_ != 0) {
         output.writeInt32(3, type_);
@@ -3907,7 +3723,7 @@ public final class PaymentProtos {
         output.writeInt32(7, receNumber_);
       }
       if (!getContentBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 8, content_);
+        output.writeBytes(8, getContentBytes());
       }
       if (sendTm_ != 0L) {
         output.writeInt64(9, sendTm_);
@@ -3915,22 +3731,27 @@ public final class PaymentProtos {
       if (userBase_ != null) {
         output.writeMessage(10, getUserBase());
       }
+      if (status_ != false) {
+        output.writeBool(11, status_);
+      }
       for (int i = 0; i < redEnveRece_.size(); i++) {
-        output.writeMessage(11, redEnveRece_.get(i));
+        output.writeMessage(12, redEnveRece_.get(i));
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getOrdNoBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, ordNo_);
-      }
-      if (status_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, status_);
+          .computeBytesSize(1, getOrdNoBytes());
+      }
+      if (userReceMoney_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, userReceMoney_);
       }
       if (type_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -3953,7 +3774,8 @@ public final class PaymentProtos {
           .computeInt32Size(7, receNumber_);
       }
       if (!getContentBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(8, content_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(8, getContentBytes());
       }
       if (sendTm_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -3963,11 +3785,15 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getUserBase());
       }
+      if (status_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(11, status_);
+      }
       for (int i = 0; i < redEnveRece_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, redEnveRece_.get(i));
+          .computeMessageSize(12, redEnveRece_.get(i));
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -4045,6 +3871,10 @@ public final class PaymentProtos {
     }
     /**
      * Protobuf type {@code bbproto.PRedEnveInfo}
+     *
+     * <pre>
+     ** 红包详情 
+     * </pre>
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -4081,7 +3911,7 @@ public final class PaymentProtos {
         super.clear();
         ordNo_ = "";
 
-        status_ = 0;
+        userReceMoney_ = 0;
 
         type_ = 0;
 
@@ -4103,9 +3933,11 @@ public final class PaymentProtos {
           userBase_ = null;
           userBaseBuilder_ = null;
         }
+        status_ = false;
+
         if (redEnveReceBuilder_ == null) {
           redEnveRece_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000800);
         } else {
           redEnveReceBuilder_.clear();
         }
@@ -4134,7 +3966,7 @@ public final class PaymentProtos {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         result.ordNo_ = ordNo_;
-        result.status_ = status_;
+        result.userReceMoney_ = userReceMoney_;
         result.type_ = type_;
         result.totaMoney_ = totaMoney_;
         result.totaNumber_ = totaNumber_;
@@ -4147,10 +3979,11 @@ public final class PaymentProtos {
         } else {
           result.userBase_ = userBaseBuilder_.build();
         }
+        result.status_ = status_;
         if (redEnveReceBuilder_ == null) {
-          if (((bitField0_ & 0x00000400) == 0x00000400)) {
+          if (((bitField0_ & 0x00000800) == 0x00000800)) {
             redEnveRece_ = java.util.Collections.unmodifiableList(redEnveRece_);
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00000800);
           }
           result.redEnveRece_ = redEnveRece_;
         } else {
@@ -4176,8 +4009,8 @@ public final class PaymentProtos {
           ordNo_ = other.ordNo_;
           onChanged();
         }
-        if (other.getStatus() != 0) {
-          setStatus(other.getStatus());
+        if (other.getUserReceMoney() != 0) {
+          setUserReceMoney(other.getUserReceMoney());
         }
         if (other.getType() != 0) {
           setType(other.getType());
@@ -4204,11 +4037,14 @@ public final class PaymentProtos {
         if (other.hasUserBase()) {
           mergeUserBase(other.getUserBase());
         }
+        if (other.getStatus() != false) {
+          setStatus(other.getStatus());
+        }
         if (redEnveReceBuilder_ == null) {
           if (!other.redEnveRece_.isEmpty()) {
             if (redEnveRece_.isEmpty()) {
               redEnveRece_ = other.redEnveRece_;
-              bitField0_ = (bitField0_ & ~0x00000400);
+              bitField0_ = (bitField0_ & ~0x00000800);
             } else {
               ensureRedEnveReceIsMutable();
               redEnveRece_.addAll(other.redEnveRece_);
@@ -4221,7 +4057,7 @@ public final class PaymentProtos {
               redEnveReceBuilder_.dispose();
               redEnveReceBuilder_ = null;
               redEnveRece_ = other.redEnveRece_;
-              bitField0_ = (bitField0_ & ~0x00000400);
+              bitField0_ = (bitField0_ & ~0x00000800);
               redEnveReceBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getRedEnveReceFieldBuilder() : null;
@@ -4271,7 +4107,9 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          ordNo_ = s;
+          if (bs.isValidUtf8()) {
+            ordNo_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -4339,47 +4177,46 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         ordNo_ = value;
         onChanged();
         return this;
       }
 
-      private int status_ ;
+      private int userReceMoney_ ;
       /**
-       * <code>optional int32 status = 2;</code>
+       * <code>optional int32 user_rece_money = 2;</code>
        *
        * <pre>
-       * 红包当前针对用户状态（0-无权限领取，1-已领取，2-可领取，3-已领完，4-已过期）
+       * 当前用户领取的金额（单位：分），如果是0表示网红自己查看详情
        * </pre>
        */
-      public int getStatus() {
-        return status_;
+      public int getUserReceMoney() {
+        return userReceMoney_;
       }
       /**
-       * <code>optional int32 status = 2;</code>
+       * <code>optional int32 user_rece_money = 2;</code>
        *
        * <pre>
-       * 红包当前针对用户状态（0-无权限领取，1-已领取，2-可领取，3-已领完，4-已过期）
+       * 当前用户领取的金额（单位：分），如果是0表示网红自己查看详情
        * </pre>
        */
-      public Builder setStatus(int value) {
+      public Builder setUserReceMoney(int value) {
         
-        status_ = value;
+        userReceMoney_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 status = 2;</code>
+       * <code>optional int32 user_rece_money = 2;</code>
        *
        * <pre>
-       * 红包当前针对用户状态（0-无权限领取，1-已领取，2-可领取，3-已领完，4-已过期）
+       * 当前用户领取的金额（单位：分），如果是0表示网红自己查看详情
        * </pre>
        */
-      public Builder clearStatus() {
+      public Builder clearUserReceMoney() {
         
-        status_ = 0;
+        userReceMoney_ = 0;
         onChanged();
         return this;
       }
@@ -4503,7 +4340,7 @@ public final class PaymentProtos {
        * <code>optional int32 rece_money = 6;</code>
        *
        * <pre>
-       * 已接收金额（单位：分）
+       * 已领取金额（单位：分）
        * </pre>
        */
       public int getReceMoney() {
@@ -4513,7 +4350,7 @@ public final class PaymentProtos {
        * <code>optional int32 rece_money = 6;</code>
        *
        * <pre>
-       * 已接收金额（单位：分）
+       * 已领取金额（单位：分）
        * </pre>
        */
       public Builder setReceMoney(int value) {
@@ -4526,7 +4363,7 @@ public final class PaymentProtos {
        * <code>optional int32 rece_money = 6;</code>
        *
        * <pre>
-       * 已接收金额（单位：分）
+       * 已领取金额（单位：分）
        * </pre>
        */
       public Builder clearReceMoney() {
@@ -4541,7 +4378,7 @@ public final class PaymentProtos {
        * <code>optional int32 rece_number = 7;</code>
        *
        * <pre>
-       * 已接收数量
+       * 已领取数量
        * </pre>
        */
       public int getReceNumber() {
@@ -4551,7 +4388,7 @@ public final class PaymentProtos {
        * <code>optional int32 rece_number = 7;</code>
        *
        * <pre>
-       * 已接收数量
+       * 已领取数量
        * </pre>
        */
       public Builder setReceNumber(int value) {
@@ -4564,7 +4401,7 @@ public final class PaymentProtos {
        * <code>optional int32 rece_number = 7;</code>
        *
        * <pre>
-       * 已接收数量
+       * 已领取数量
        * </pre>
        */
       public Builder clearReceNumber() {
@@ -4588,7 +4425,9 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          content_ = s;
+          if (bs.isValidUtf8()) {
+            content_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -4656,8 +4495,7 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         content_ = value;
         onChanged();
         return this;
@@ -4854,12 +4692,50 @@ public final class PaymentProtos {
         return userBaseBuilder_;
       }
 
+      private boolean status_ ;
+      /**
+       * <code>optional bool status = 11;</code>
+       *
+       * <pre>
+       * 红包是否过期
+       * </pre>
+       */
+      public boolean getStatus() {
+        return status_;
+      }
+      /**
+       * <code>optional bool status = 11;</code>
+       *
+       * <pre>
+       * 红包是否过期
+       * </pre>
+       */
+      public Builder setStatus(boolean value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool status = 11;</code>
+       *
+       * <pre>
+       * 红包是否过期
+       * </pre>
+       */
+      public Builder clearStatus() {
+        
+        status_ = false;
+        onChanged();
+        return this;
+      }
+
       private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece> redEnveRece_ =
         java.util.Collections.emptyList();
       private void ensureRedEnveReceIsMutable() {
-        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+        if (!((bitField0_ & 0x00000800) == 0x00000800)) {
           redEnveRece_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece>(redEnveRece_);
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00000800;
          }
       }
 
@@ -4867,10 +4743,10 @@ public final class PaymentProtos {
           com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece, com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.Builder, com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceOrBuilder> redEnveReceBuilder_;
 
       /**
-       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
        *
        * <pre>
-       * 接收用户列表
+       * 红包领取信息，默认给10个
        * </pre>
        */
       public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece> getRedEnveReceList() {
@@ -4881,10 +4757,10 @@ public final class PaymentProtos {
         }
       }
       /**
-       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
        *
        * <pre>
-       * 接收用户列表
+       * 红包领取信息，默认给10个
        * </pre>
        */
       public int getRedEnveReceCount() {
@@ -4895,10 +4771,10 @@ public final class PaymentProtos {
         }
       }
       /**
-       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
        *
        * <pre>
-       * 接收用户列表
+       * 红包领取信息，默认给10个
        * </pre>
        */
       public com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece getRedEnveRece(int index) {
@@ -4909,10 +4785,10 @@ public final class PaymentProtos {
         }
       }
       /**
-       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
        *
        * <pre>
-       * 接收用户列表
+       * 红包领取信息，默认给10个
        * </pre>
        */
       public Builder setRedEnveRece(
@@ -4930,10 +4806,10 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
        *
        * <pre>
-       * 接收用户列表
+       * 红包领取信息，默认给10个
        * </pre>
        */
       public Builder setRedEnveRece(
@@ -4948,10 +4824,10 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
        *
        * <pre>
-       * 接收用户列表
+       * 红包领取信息，默认给10个
        * </pre>
        */
       public Builder addRedEnveRece(com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece value) {
@@ -4968,10 +4844,10 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
        *
        * <pre>
-       * 接收用户列表
+       * 红包领取信息，默认给10个
        * </pre>
        */
       public Builder addRedEnveRece(
@@ -4989,10 +4865,10 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
        *
        * <pre>
-       * 接收用户列表
+       * 红包领取信息，默认给10个
        * </pre>
        */
       public Builder addRedEnveRece(
@@ -5007,10 +4883,10 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
        *
        * <pre>
-       * 接收用户列表
+       * 红包领取信息，默认给10个
        * </pre>
        */
       public Builder addRedEnveRece(
@@ -5025,10 +4901,10 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
        *
        * <pre>
-       * 接收用户列表
+       * 红包领取信息，默认给10个
        * </pre>
        */
       public Builder addAllRedEnveRece(
@@ -5044,16 +4920,16 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
        *
        * <pre>
-       * 接收用户列表
+       * 红包领取信息，默认给10个
        * </pre>
        */
       public Builder clearRedEnveRece() {
         if (redEnveReceBuilder_ == null) {
           redEnveRece_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000800);
           onChanged();
         } else {
           redEnveReceBuilder_.clear();
@@ -5061,10 +4937,10 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
        *
        * <pre>
-       * 接收用户列表
+       * 红包领取信息，默认给10个
        * </pre>
        */
       public Builder removeRedEnveRece(int index) {
@@ -5078,10 +4954,10 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
        *
        * <pre>
-       * 接收用户列表
+       * 红包领取信息，默认给10个
        * </pre>
        */
       public com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.Builder getRedEnveReceBuilder(
@@ -5089,10 +4965,10 @@ public final class PaymentProtos {
         return getRedEnveReceFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
        *
        * <pre>
-       * 接收用户列表
+       * 红包领取信息，默认给10个
        * </pre>
        */
       public com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceOrBuilder getRedEnveReceOrBuilder(
@@ -5103,10 +4979,10 @@ public final class PaymentProtos {
         }
       }
       /**
-       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
        *
        * <pre>
-       * 接收用户列表
+       * 红包领取信息，默认给10个
        * </pre>
        */
       public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceOrBuilder> 
@@ -5118,10 +4994,10 @@ public final class PaymentProtos {
         }
       }
       /**
-       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
        *
        * <pre>
-       * 接收用户列表
+       * 红包领取信息，默认给10个
        * </pre>
        */
       public com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.Builder addRedEnveReceBuilder() {
@@ -5129,10 +5005,10 @@ public final class PaymentProtos {
             com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.getDefaultInstance());
       }
       /**
-       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
        *
        * <pre>
-       * 接收用户列表
+       * 红包领取信息，默认给10个
        * </pre>
        */
       public com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.Builder addRedEnveReceBuilder(
@@ -5141,10 +5017,10 @@ public final class PaymentProtos {
             index, com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.getDefaultInstance());
       }
       /**
-       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 11;</code>
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 12;</code>
        *
        * <pre>
-       * 接收用户列表
+       * 红包领取信息，默认给10个
        * </pre>
        */
       public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.Builder> 
@@ -5158,7 +5034,7 @@ public final class PaymentProtos {
           redEnveReceBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece, com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.Builder, com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceOrBuilder>(
                   redEnveRece_,
-                  ((bitField0_ & 0x00000400) == 0x00000400),
+                  ((bitField0_ & 0x00000800) == 0x00000800),
                   getParentForChildren(),
                   isClean());
           redEnveRece_ = null;
@@ -5189,8 +5065,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PRedEnveInfo>
-        PARSER = new com.google.protobuf.AbstractParser<PRedEnveInfo>() {
+    public static final com.google.protobuf.Parser<PRedEnveInfo> PARSER =
+        new com.google.protobuf.AbstractParser<PRedEnveInfo>() {
       public PRedEnveInfo parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5208,694 +5084,12 @@ public final class PaymentProtos {
       }
     };
 
-    public static com.google.protobuf.Parser<PRedEnveInfo> parser() {
-      return PARSER;
-    }
-
     @java.lang.Override
     public com.google.protobuf.Parser<PRedEnveInfo> getParserForType() {
       return PARSER;
     }
 
     public com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface PRedEnveHistoryOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bbproto.PRedEnveHistory)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-     */
-    java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo> 
-        getRedEnveInfoList();
-    /**
-     * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-     */
-    com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo getRedEnveInfo(int index);
-    /**
-     * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-     */
-    int getRedEnveInfoCount();
-    /**
-     * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-     */
-    java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfoOrBuilder> 
-        getRedEnveInfoOrBuilderList();
-    /**
-     * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-     */
-    com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfoOrBuilder getRedEnveInfoOrBuilder(
-        int index);
-  }
-  /**
-   * Protobuf type {@code bbproto.PRedEnveHistory}
-   */
-  public  static final class PRedEnveHistory extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:bbproto.PRedEnveHistory)
-      PRedEnveHistoryOrBuilder {
-    // Use PRedEnveHistory.newBuilder() to construct.
-    private PRedEnveHistory(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-    }
-    private PRedEnveHistory() {
-      redEnveInfo_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-    }
-    private PRedEnveHistory(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
-      this();
-      int mutable_bitField0_ = 0;
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                redEnveInfo_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              redEnveInfo_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo.parser(), extensionRegistry));
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
-      } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-          redEnveInfo_ = java.util.Collections.unmodifiableList(redEnveInfo_);
-        }
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRedEnveHistory_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRedEnveHistory_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory.class, com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory.Builder.class);
-    }
-
-    public static final int REDENVEINFO_FIELD_NUMBER = 1;
-    private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo> redEnveInfo_;
-    /**
-     * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-     */
-    public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo> getRedEnveInfoList() {
-      return redEnveInfo_;
-    }
-    /**
-     * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-     */
-    public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfoOrBuilder> 
-        getRedEnveInfoOrBuilderList() {
-      return redEnveInfo_;
-    }
-    /**
-     * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-     */
-    public int getRedEnveInfoCount() {
-      return redEnveInfo_.size();
-    }
-    /**
-     * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-     */
-    public com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo getRedEnveInfo(int index) {
-      return redEnveInfo_.get(index);
-    }
-    /**
-     * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-     */
-    public com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfoOrBuilder getRedEnveInfoOrBuilder(
-        int index) {
-      return redEnveInfo_.get(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < redEnveInfo_.size(); i++) {
-        output.writeMessage(1, redEnveInfo_.get(i));
-      }
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < redEnveInfo_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, redEnveInfo_.get(i));
-      }
-      memoizedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code bbproto.PRedEnveHistory}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bbproto.PRedEnveHistory)
-        com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistoryOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRedEnveHistory_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRedEnveHistory_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory.class, com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory.Builder.class);
-      }
-
-      // Construct using com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getRedEnveInfoFieldBuilder();
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        if (redEnveInfoBuilder_ == null) {
-          redEnveInfo_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          redEnveInfoBuilder_.clear();
-        }
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRedEnveHistory_descriptor;
-      }
-
-      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory.getDefaultInstance();
-      }
-
-      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory build() {
-        com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory buildPartial() {
-        com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory result = new com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory(this);
-        int from_bitField0_ = bitField0_;
-        if (redEnveInfoBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
-            redEnveInfo_ = java.util.Collections.unmodifiableList(redEnveInfo_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.redEnveInfo_ = redEnveInfo_;
-        } else {
-          result.redEnveInfo_ = redEnveInfoBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory) {
-          return mergeFrom((com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory other) {
-        if (other == com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory.getDefaultInstance()) return this;
-        if (redEnveInfoBuilder_ == null) {
-          if (!other.redEnveInfo_.isEmpty()) {
-            if (redEnveInfo_.isEmpty()) {
-              redEnveInfo_ = other.redEnveInfo_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureRedEnveInfoIsMutable();
-              redEnveInfo_.addAll(other.redEnveInfo_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.redEnveInfo_.isEmpty()) {
-            if (redEnveInfoBuilder_.isEmpty()) {
-              redEnveInfoBuilder_.dispose();
-              redEnveInfoBuilder_ = null;
-              redEnveInfo_ = other.redEnveInfo_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              redEnveInfoBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getRedEnveInfoFieldBuilder() : null;
-            } else {
-              redEnveInfoBuilder_.addAllMessages(other.redEnveInfo_);
-            }
-          }
-        }
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo> redEnveInfo_ =
-        java.util.Collections.emptyList();
-      private void ensureRedEnveInfoIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          redEnveInfo_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo>(redEnveInfo_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo, com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfoOrBuilder> redEnveInfoBuilder_;
-
-      /**
-       * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-       */
-      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo> getRedEnveInfoList() {
-        if (redEnveInfoBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(redEnveInfo_);
-        } else {
-          return redEnveInfoBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-       */
-      public int getRedEnveInfoCount() {
-        if (redEnveInfoBuilder_ == null) {
-          return redEnveInfo_.size();
-        } else {
-          return redEnveInfoBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-       */
-      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo getRedEnveInfo(int index) {
-        if (redEnveInfoBuilder_ == null) {
-          return redEnveInfo_.get(index);
-        } else {
-          return redEnveInfoBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-       */
-      public Builder setRedEnveInfo(
-          int index, com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo value) {
-        if (redEnveInfoBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureRedEnveInfoIsMutable();
-          redEnveInfo_.set(index, value);
-          onChanged();
-        } else {
-          redEnveInfoBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-       */
-      public Builder setRedEnveInfo(
-          int index, com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo.Builder builderForValue) {
-        if (redEnveInfoBuilder_ == null) {
-          ensureRedEnveInfoIsMutable();
-          redEnveInfo_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          redEnveInfoBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-       */
-      public Builder addRedEnveInfo(com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo value) {
-        if (redEnveInfoBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureRedEnveInfoIsMutable();
-          redEnveInfo_.add(value);
-          onChanged();
-        } else {
-          redEnveInfoBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-       */
-      public Builder addRedEnveInfo(
-          int index, com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo value) {
-        if (redEnveInfoBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureRedEnveInfoIsMutable();
-          redEnveInfo_.add(index, value);
-          onChanged();
-        } else {
-          redEnveInfoBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-       */
-      public Builder addRedEnveInfo(
-          com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo.Builder builderForValue) {
-        if (redEnveInfoBuilder_ == null) {
-          ensureRedEnveInfoIsMutable();
-          redEnveInfo_.add(builderForValue.build());
-          onChanged();
-        } else {
-          redEnveInfoBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-       */
-      public Builder addRedEnveInfo(
-          int index, com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo.Builder builderForValue) {
-        if (redEnveInfoBuilder_ == null) {
-          ensureRedEnveInfoIsMutable();
-          redEnveInfo_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          redEnveInfoBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-       */
-      public Builder addAllRedEnveInfo(
-          java.lang.Iterable<? extends com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo> values) {
-        if (redEnveInfoBuilder_ == null) {
-          ensureRedEnveInfoIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, redEnveInfo_);
-          onChanged();
-        } else {
-          redEnveInfoBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-       */
-      public Builder clearRedEnveInfo() {
-        if (redEnveInfoBuilder_ == null) {
-          redEnveInfo_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          redEnveInfoBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-       */
-      public Builder removeRedEnveInfo(int index) {
-        if (redEnveInfoBuilder_ == null) {
-          ensureRedEnveInfoIsMutable();
-          redEnveInfo_.remove(index);
-          onChanged();
-        } else {
-          redEnveInfoBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-       */
-      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo.Builder getRedEnveInfoBuilder(
-          int index) {
-        return getRedEnveInfoFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-       */
-      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfoOrBuilder getRedEnveInfoOrBuilder(
-          int index) {
-        if (redEnveInfoBuilder_ == null) {
-          return redEnveInfo_.get(index);  } else {
-          return redEnveInfoBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-       */
-      public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfoOrBuilder> 
-           getRedEnveInfoOrBuilderList() {
-        if (redEnveInfoBuilder_ != null) {
-          return redEnveInfoBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(redEnveInfo_);
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-       */
-      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo.Builder addRedEnveInfoBuilder() {
-        return getRedEnveInfoFieldBuilder().addBuilder(
-            com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-       */
-      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo.Builder addRedEnveInfoBuilder(
-          int index) {
-        return getRedEnveInfoFieldBuilder().addBuilder(
-            index, com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .bbproto.PRedEnveInfo redEnveInfo = 1;</code>
-       */
-      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo.Builder> 
-           getRedEnveInfoBuilderList() {
-        return getRedEnveInfoFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo, com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfoOrBuilder> 
-          getRedEnveInfoFieldBuilder() {
-        if (redEnveInfoBuilder_ == null) {
-          redEnveInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo, com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PRedEnveInfoOrBuilder>(
-                  redEnveInfo_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
-                  getParentForChildren(),
-                  isClean());
-          redEnveInfo_ = null;
-        }
-        return redEnveInfoBuilder_;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:bbproto.PRedEnveHistory)
-    }
-
-    // @@protoc_insertion_point(class_scope:bbproto.PRedEnveHistory)
-    private static final com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory();
-    }
-
-    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<PRedEnveHistory>
-        PARSER = new com.google.protobuf.AbstractParser<PRedEnveHistory>() {
-      public PRedEnveHistory parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
-          return new PRedEnveHistory(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
-      }
-    };
-
-    public static com.google.protobuf.Parser<PRedEnveHistory> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PRedEnveHistory> getParserForType() {
-      return PARSER;
-    }
-
-    public com.blemobi.sep.probuf.PaymentProtos.PRedEnveHistory getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5909,7 +5103,7 @@ public final class PaymentProtos {
      * <code>optional int32 id = 1;</code>
      *
      * <pre>
-     * 唯一标识
+     * 唯一编号
      * </pre>
      */
     int getId();
@@ -5918,7 +5112,7 @@ public final class PaymentProtos {
      * <code>optional int32 money = 2;</code>
      *
      * <pre>
-     * 接收金额（单位：分）
+     * 领取金额（单位：分）
      * </pre>
      */
     int getMoney();
@@ -5927,51 +5121,65 @@ public final class PaymentProtos {
      * <code>optional int64 rece_tm = 3;</code>
      *
      * <pre>
-     * 接收时间
+     * 领取时间
      * </pre>
      */
     long getReceTm();
 
     /**
-     * <code>optional .bbproto.PUserBase userBase = 4;</code>
+     * <code>optional int32 luck_level = 4;</code>
      *
      * <pre>
-     * 接收用户信息
+     * 幸运级别（0-一般，1-手气最佳，2-手气最差）
+     * </pre>
+     */
+    int getLuckLevel();
+
+    /**
+     * <code>optional .bbproto.PUserBase userBase = 5;</code>
+     *
+     * <pre>
+     * 领取用户信息
      * </pre>
      */
     boolean hasUserBase();
     /**
-     * <code>optional .bbproto.PUserBase userBase = 4;</code>
+     * <code>optional .bbproto.PUserBase userBase = 5;</code>
      *
      * <pre>
-     * 接收用户信息
+     * 领取用户信息
      * </pre>
      */
     com.blemobi.sep.probuf.AccountProtos.PUserBase getUserBase();
     /**
-     * <code>optional .bbproto.PUserBase userBase = 4;</code>
+     * <code>optional .bbproto.PUserBase userBase = 5;</code>
      *
      * <pre>
-     * 接收用户信息
+     * 领取用户信息
      * </pre>
      */
     com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserBaseOrBuilder();
   }
   /**
    * Protobuf type {@code bbproto.PRedEnveRece}
+   *
+   * <pre>
+   ** 红包领取信息 
+   * </pre>
    */
   public  static final class PRedEnveRece extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:bbproto.PRedEnveRece)
       PRedEnveReceOrBuilder {
     // Use PRedEnveRece.newBuilder() to construct.
-    private PRedEnveRece(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PRedEnveRece(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PRedEnveRece() {
       id_ = 0;
       money_ = 0;
       receTm_ = 0L;
+      luckLevel_ = 0;
     }
 
     @java.lang.Override
@@ -6013,12 +5221,17 @@ public final class PaymentProtos {
               receTm_ = input.readInt64();
               break;
             }
-            case 34: {
+            case 32: {
+
+              luckLevel_ = input.readInt32();
+              break;
+            }
+            case 42: {
               com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder subBuilder = null;
               if (userBase_ != null) {
                 subBuilder = userBase_.toBuilder();
               }
-              userBase_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.parser(), extensionRegistry);
+              userBase_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(userBase_);
                 userBase_ = subBuilder.buildPartial();
@@ -6056,7 +5269,7 @@ public final class PaymentProtos {
      * <code>optional int32 id = 1;</code>
      *
      * <pre>
-     * 唯一标识
+     * 唯一编号
      * </pre>
      */
     public int getId() {
@@ -6069,7 +5282,7 @@ public final class PaymentProtos {
      * <code>optional int32 money = 2;</code>
      *
      * <pre>
-     * 接收金额（单位：分）
+     * 领取金额（单位：分）
      * </pre>
      */
     public int getMoney() {
@@ -6082,40 +5295,53 @@ public final class PaymentProtos {
      * <code>optional int64 rece_tm = 3;</code>
      *
      * <pre>
-     * 接收时间
+     * 领取时间
      * </pre>
      */
     public long getReceTm() {
       return receTm_;
     }
 
-    public static final int USERBASE_FIELD_NUMBER = 4;
-    private com.blemobi.sep.probuf.AccountProtos.PUserBase userBase_;
+    public static final int LUCK_LEVEL_FIELD_NUMBER = 4;
+    private int luckLevel_;
     /**
-     * <code>optional .bbproto.PUserBase userBase = 4;</code>
+     * <code>optional int32 luck_level = 4;</code>
      *
      * <pre>
-     * 接收用户信息
+     * 幸运级别（0-一般，1-手气最佳，2-手气最差）
+     * </pre>
+     */
+    public int getLuckLevel() {
+      return luckLevel_;
+    }
+
+    public static final int USERBASE_FIELD_NUMBER = 5;
+    private com.blemobi.sep.probuf.AccountProtos.PUserBase userBase_;
+    /**
+     * <code>optional .bbproto.PUserBase userBase = 5;</code>
+     *
+     * <pre>
+     * 领取用户信息
      * </pre>
      */
     public boolean hasUserBase() {
       return userBase_ != null;
     }
     /**
-     * <code>optional .bbproto.PUserBase userBase = 4;</code>
+     * <code>optional .bbproto.PUserBase userBase = 5;</code>
      *
      * <pre>
-     * 接收用户信息
+     * 领取用户信息
      * </pre>
      */
     public com.blemobi.sep.probuf.AccountProtos.PUserBase getUserBase() {
       return userBase_ == null ? com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : userBase_;
     }
     /**
-     * <code>optional .bbproto.PUserBase userBase = 4;</code>
+     * <code>optional .bbproto.PUserBase userBase = 5;</code>
      *
      * <pre>
-     * 接收用户信息
+     * 领取用户信息
      * </pre>
      */
     public com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserBaseOrBuilder() {
@@ -6143,13 +5369,17 @@ public final class PaymentProtos {
       if (receTm_ != 0L) {
         output.writeInt64(3, receTm_);
       }
+      if (luckLevel_ != 0) {
+        output.writeInt32(4, luckLevel_);
+      }
       if (userBase_ != null) {
-        output.writeMessage(4, getUserBase());
+        output.writeMessage(5, getUserBase());
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -6165,11 +5395,15 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, receTm_);
       }
+      if (luckLevel_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, luckLevel_);
+      }
       if (userBase_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getUserBase());
+          .computeMessageSize(5, getUserBase());
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -6247,6 +5481,10 @@ public final class PaymentProtos {
     }
     /**
      * Protobuf type {@code bbproto.PRedEnveRece}
+     *
+     * <pre>
+     ** 红包领取信息 
+     * </pre>
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -6286,6 +5524,8 @@ public final class PaymentProtos {
 
         receTm_ = 0L;
 
+        luckLevel_ = 0;
+
         if (userBaseBuilder_ == null) {
           userBase_ = null;
         } else {
@@ -6317,6 +5557,7 @@ public final class PaymentProtos {
         result.id_ = id_;
         result.money_ = money_;
         result.receTm_ = receTm_;
+        result.luckLevel_ = luckLevel_;
         if (userBaseBuilder_ == null) {
           result.userBase_ = userBase_;
         } else {
@@ -6345,6 +5586,9 @@ public final class PaymentProtos {
         }
         if (other.getReceTm() != 0L) {
           setReceTm(other.getReceTm());
+        }
+        if (other.getLuckLevel() != 0) {
+          setLuckLevel(other.getLuckLevel());
         }
         if (other.hasUserBase()) {
           mergeUserBase(other.getUserBase());
@@ -6380,7 +5624,7 @@ public final class PaymentProtos {
        * <code>optional int32 id = 1;</code>
        *
        * <pre>
-       * 唯一标识
+       * 唯一编号
        * </pre>
        */
       public int getId() {
@@ -6390,7 +5634,7 @@ public final class PaymentProtos {
        * <code>optional int32 id = 1;</code>
        *
        * <pre>
-       * 唯一标识
+       * 唯一编号
        * </pre>
        */
       public Builder setId(int value) {
@@ -6403,7 +5647,7 @@ public final class PaymentProtos {
        * <code>optional int32 id = 1;</code>
        *
        * <pre>
-       * 唯一标识
+       * 唯一编号
        * </pre>
        */
       public Builder clearId() {
@@ -6418,7 +5662,7 @@ public final class PaymentProtos {
        * <code>optional int32 money = 2;</code>
        *
        * <pre>
-       * 接收金额（单位：分）
+       * 领取金额（单位：分）
        * </pre>
        */
       public int getMoney() {
@@ -6428,7 +5672,7 @@ public final class PaymentProtos {
        * <code>optional int32 money = 2;</code>
        *
        * <pre>
-       * 接收金额（单位：分）
+       * 领取金额（单位：分）
        * </pre>
        */
       public Builder setMoney(int value) {
@@ -6441,7 +5685,7 @@ public final class PaymentProtos {
        * <code>optional int32 money = 2;</code>
        *
        * <pre>
-       * 接收金额（单位：分）
+       * 领取金额（单位：分）
        * </pre>
        */
       public Builder clearMoney() {
@@ -6456,7 +5700,7 @@ public final class PaymentProtos {
        * <code>optional int64 rece_tm = 3;</code>
        *
        * <pre>
-       * 接收时间
+       * 领取时间
        * </pre>
        */
       public long getReceTm() {
@@ -6466,7 +5710,7 @@ public final class PaymentProtos {
        * <code>optional int64 rece_tm = 3;</code>
        *
        * <pre>
-       * 接收时间
+       * 领取时间
        * </pre>
        */
       public Builder setReceTm(long value) {
@@ -6479,7 +5723,7 @@ public final class PaymentProtos {
        * <code>optional int64 rece_tm = 3;</code>
        *
        * <pre>
-       * 接收时间
+       * 领取时间
        * </pre>
        */
       public Builder clearReceTm() {
@@ -6489,24 +5733,62 @@ public final class PaymentProtos {
         return this;
       }
 
+      private int luckLevel_ ;
+      /**
+       * <code>optional int32 luck_level = 4;</code>
+       *
+       * <pre>
+       * 幸运级别（0-一般，1-手气最佳，2-手气最差）
+       * </pre>
+       */
+      public int getLuckLevel() {
+        return luckLevel_;
+      }
+      /**
+       * <code>optional int32 luck_level = 4;</code>
+       *
+       * <pre>
+       * 幸运级别（0-一般，1-手气最佳，2-手气最差）
+       * </pre>
+       */
+      public Builder setLuckLevel(int value) {
+        
+        luckLevel_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 luck_level = 4;</code>
+       *
+       * <pre>
+       * 幸运级别（0-一般，1-手气最佳，2-手气最差）
+       * </pre>
+       */
+      public Builder clearLuckLevel() {
+        
+        luckLevel_ = 0;
+        onChanged();
+        return this;
+      }
+
       private com.blemobi.sep.probuf.AccountProtos.PUserBase userBase_ = null;
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> userBaseBuilder_;
       /**
-       * <code>optional .bbproto.PUserBase userBase = 4;</code>
+       * <code>optional .bbproto.PUserBase userBase = 5;</code>
        *
        * <pre>
-       * 接收用户信息
+       * 领取用户信息
        * </pre>
        */
       public boolean hasUserBase() {
         return userBaseBuilder_ != null || userBase_ != null;
       }
       /**
-       * <code>optional .bbproto.PUserBase userBase = 4;</code>
+       * <code>optional .bbproto.PUserBase userBase = 5;</code>
        *
        * <pre>
-       * 接收用户信息
+       * 领取用户信息
        * </pre>
        */
       public com.blemobi.sep.probuf.AccountProtos.PUserBase getUserBase() {
@@ -6517,10 +5799,10 @@ public final class PaymentProtos {
         }
       }
       /**
-       * <code>optional .bbproto.PUserBase userBase = 4;</code>
+       * <code>optional .bbproto.PUserBase userBase = 5;</code>
        *
        * <pre>
-       * 接收用户信息
+       * 领取用户信息
        * </pre>
        */
       public Builder setUserBase(com.blemobi.sep.probuf.AccountProtos.PUserBase value) {
@@ -6537,10 +5819,10 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>optional .bbproto.PUserBase userBase = 4;</code>
+       * <code>optional .bbproto.PUserBase userBase = 5;</code>
        *
        * <pre>
-       * 接收用户信息
+       * 领取用户信息
        * </pre>
        */
       public Builder setUserBase(
@@ -6555,10 +5837,10 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>optional .bbproto.PUserBase userBase = 4;</code>
+       * <code>optional .bbproto.PUserBase userBase = 5;</code>
        *
        * <pre>
-       * 接收用户信息
+       * 领取用户信息
        * </pre>
        */
       public Builder mergeUserBase(com.blemobi.sep.probuf.AccountProtos.PUserBase value) {
@@ -6577,10 +5859,10 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>optional .bbproto.PUserBase userBase = 4;</code>
+       * <code>optional .bbproto.PUserBase userBase = 5;</code>
        *
        * <pre>
-       * 接收用户信息
+       * 领取用户信息
        * </pre>
        */
       public Builder clearUserBase() {
@@ -6595,10 +5877,10 @@ public final class PaymentProtos {
         return this;
       }
       /**
-       * <code>optional .bbproto.PUserBase userBase = 4;</code>
+       * <code>optional .bbproto.PUserBase userBase = 5;</code>
        *
        * <pre>
-       * 接收用户信息
+       * 领取用户信息
        * </pre>
        */
       public com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder getUserBaseBuilder() {
@@ -6607,10 +5889,10 @@ public final class PaymentProtos {
         return getUserBaseFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .bbproto.PUserBase userBase = 4;</code>
+       * <code>optional .bbproto.PUserBase userBase = 5;</code>
        *
        * <pre>
-       * 接收用户信息
+       * 领取用户信息
        * </pre>
        */
       public com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserBaseOrBuilder() {
@@ -6622,10 +5904,10 @@ public final class PaymentProtos {
         }
       }
       /**
-       * <code>optional .bbproto.PUserBase userBase = 4;</code>
+       * <code>optional .bbproto.PUserBase userBase = 5;</code>
        *
        * <pre>
-       * 接收用户信息
+       * 领取用户信息
        * </pre>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -6665,8 +5947,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PRedEnveRece>
-        PARSER = new com.google.protobuf.AbstractParser<PRedEnveRece>() {
+    public static final com.google.protobuf.Parser<PRedEnveRece> PARSER =
+        new com.google.protobuf.AbstractParser<PRedEnveRece>() {
       public PRedEnveRece parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6684,16 +5966,1174 @@ public final class PaymentProtos {
       }
     };
 
-    public static com.google.protobuf.Parser<PRedEnveRece> parser() {
-      return PARSER;
-    }
-
     @java.lang.Override
     public com.google.protobuf.Parser<PRedEnveRece> getParserForType() {
       return PARSER;
     }
 
     public com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PRedEnveStatusOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PRedEnveStatus)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 status = 1;</code>
+     *
+     * <pre>
+     * 0-可领取，1-已领取，2-已过期，3-已领完
+     * </pre>
+     */
+    int getStatus();
+
+    /**
+     * <code>optional int32 rece_money = 2;</code>
+     *
+     * <pre>
+     * 已领取金额（单位：分）
+     * </pre>
+     */
+    int getReceMoney();
+  }
+  /**
+   * Protobuf type {@code bbproto.PRedEnveStatus}
+   *
+   * <pre>
+   ** 红包针对用户状态 
+   * </pre>
+   */
+  public  static final class PRedEnveStatus extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PRedEnveStatus)
+      PRedEnveStatusOrBuilder {
+    // Use PRedEnveStatus.newBuilder() to construct.
+    private PRedEnveStatus(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PRedEnveStatus() {
+      status_ = 0;
+      receMoney_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PRedEnveStatus(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              status_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              receMoney_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRedEnveStatus_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRedEnveStatus_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus.class, com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus.Builder.class);
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 1;
+    private int status_;
+    /**
+     * <code>optional int32 status = 1;</code>
+     *
+     * <pre>
+     * 0-可领取，1-已领取，2-已过期，3-已领完
+     * </pre>
+     */
+    public int getStatus() {
+      return status_;
+    }
+
+    public static final int RECE_MONEY_FIELD_NUMBER = 2;
+    private int receMoney_;
+    /**
+     * <code>optional int32 rece_money = 2;</code>
+     *
+     * <pre>
+     * 已领取金额（单位：分）
+     * </pre>
+     */
+    public int getReceMoney() {
+      return receMoney_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (status_ != 0) {
+        output.writeInt32(1, status_);
+      }
+      if (receMoney_ != 0) {
+        output.writeInt32(2, receMoney_);
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (status_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, status_);
+      }
+      if (receMoney_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, receMoney_);
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PRedEnveStatus}
+     *
+     * <pre>
+     ** 红包针对用户状态 
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PRedEnveStatus)
+        com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatusOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRedEnveStatus_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRedEnveStatus_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus.class, com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        status_ = 0;
+
+        receMoney_ = 0;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRedEnveStatus_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus build() {
+        com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus buildPartial() {
+        com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus result = new com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus(this);
+        result.status_ = status_;
+        result.receMoney_ = receMoney_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus) {
+          return mergeFrom((com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus other) {
+        if (other == com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus.getDefaultInstance()) return this;
+        if (other.getStatus() != 0) {
+          setStatus(other.getStatus());
+        }
+        if (other.getReceMoney() != 0) {
+          setReceMoney(other.getReceMoney());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int status_ ;
+      /**
+       * <code>optional int32 status = 1;</code>
+       *
+       * <pre>
+       * 0-可领取，1-已领取，2-已过期，3-已领完
+       * </pre>
+       */
+      public int getStatus() {
+        return status_;
+      }
+      /**
+       * <code>optional int32 status = 1;</code>
+       *
+       * <pre>
+       * 0-可领取，1-已领取，2-已过期，3-已领完
+       * </pre>
+       */
+      public Builder setStatus(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 status = 1;</code>
+       *
+       * <pre>
+       * 0-可领取，1-已领取，2-已过期，3-已领完
+       * </pre>
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int receMoney_ ;
+      /**
+       * <code>optional int32 rece_money = 2;</code>
+       *
+       * <pre>
+       * 已领取金额（单位：分）
+       * </pre>
+       */
+      public int getReceMoney() {
+        return receMoney_;
+      }
+      /**
+       * <code>optional int32 rece_money = 2;</code>
+       *
+       * <pre>
+       * 已领取金额（单位：分）
+       * </pre>
+       */
+      public Builder setReceMoney(int value) {
+        
+        receMoney_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 rece_money = 2;</code>
+       *
+       * <pre>
+       * 已领取金额（单位：分）
+       * </pre>
+       */
+      public Builder clearReceMoney() {
+        
+        receMoney_ = 0;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PRedEnveStatus)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PRedEnveStatus)
+    private static final com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus();
+    }
+
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PRedEnveStatus> PARSER =
+        new com.google.protobuf.AbstractParser<PRedEnveStatus>() {
+      public PRedEnveStatus parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PRedEnveStatus(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PRedEnveStatus> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PRedEnveReceListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PRedEnveReceList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+     */
+    java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece> 
+        getRedEnveReceList();
+    /**
+     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+     */
+    com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece getRedEnveRece(int index);
+    /**
+     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+     */
+    int getRedEnveReceCount();
+    /**
+     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+     */
+    java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceOrBuilder> 
+        getRedEnveReceOrBuilderList();
+    /**
+     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+     */
+    com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceOrBuilder getRedEnveReceOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code bbproto.PRedEnveReceList}
+   *
+   * <pre>
+   ** 红包领取列表 
+   * </pre>
+   */
+  public  static final class PRedEnveReceList extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PRedEnveReceList)
+      PRedEnveReceListOrBuilder {
+    // Use PRedEnveReceList.newBuilder() to construct.
+    private PRedEnveReceList(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PRedEnveReceList() {
+      redEnveRece_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PRedEnveReceList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                redEnveRece_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              redEnveRece_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          redEnveRece_ = java.util.Collections.unmodifiableList(redEnveRece_);
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRedEnveReceList_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRedEnveReceList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList.class, com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList.Builder.class);
+    }
+
+    public static final int REDENVERECE_FIELD_NUMBER = 1;
+    private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece> redEnveRece_;
+    /**
+     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+     */
+    public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece> getRedEnveReceList() {
+      return redEnveRece_;
+    }
+    /**
+     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+     */
+    public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceOrBuilder> 
+        getRedEnveReceOrBuilderList() {
+      return redEnveRece_;
+    }
+    /**
+     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+     */
+    public int getRedEnveReceCount() {
+      return redEnveRece_.size();
+    }
+    /**
+     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+     */
+    public com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece getRedEnveRece(int index) {
+      return redEnveRece_.get(index);
+    }
+    /**
+     * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+     */
+    public com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceOrBuilder getRedEnveReceOrBuilder(
+        int index) {
+      return redEnveRece_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < redEnveRece_.size(); i++) {
+        output.writeMessage(1, redEnveRece_.get(i));
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < redEnveRece_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, redEnveRece_.get(i));
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PRedEnveReceList}
+     *
+     * <pre>
+     ** 红包领取列表 
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PRedEnveReceList)
+        com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRedEnveReceList_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRedEnveReceList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList.class, com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getRedEnveReceFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (redEnveReceBuilder_ == null) {
+          redEnveRece_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          redEnveReceBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRedEnveReceList_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList build() {
+        com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList buildPartial() {
+        com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList result = new com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList(this);
+        int from_bitField0_ = bitField0_;
+        if (redEnveReceBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            redEnveRece_ = java.util.Collections.unmodifiableList(redEnveRece_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.redEnveRece_ = redEnveRece_;
+        } else {
+          result.redEnveRece_ = redEnveReceBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList) {
+          return mergeFrom((com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList other) {
+        if (other == com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList.getDefaultInstance()) return this;
+        if (redEnveReceBuilder_ == null) {
+          if (!other.redEnveRece_.isEmpty()) {
+            if (redEnveRece_.isEmpty()) {
+              redEnveRece_ = other.redEnveRece_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRedEnveReceIsMutable();
+              redEnveRece_.addAll(other.redEnveRece_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.redEnveRece_.isEmpty()) {
+            if (redEnveReceBuilder_.isEmpty()) {
+              redEnveReceBuilder_.dispose();
+              redEnveReceBuilder_ = null;
+              redEnveRece_ = other.redEnveRece_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              redEnveReceBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getRedEnveReceFieldBuilder() : null;
+            } else {
+              redEnveReceBuilder_.addAllMessages(other.redEnveRece_);
+            }
+          }
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece> redEnveRece_ =
+        java.util.Collections.emptyList();
+      private void ensureRedEnveReceIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          redEnveRece_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece>(redEnveRece_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece, com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.Builder, com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceOrBuilder> redEnveReceBuilder_;
+
+      /**
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+       */
+      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece> getRedEnveReceList() {
+        if (redEnveReceBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(redEnveRece_);
+        } else {
+          return redEnveReceBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+       */
+      public int getRedEnveReceCount() {
+        if (redEnveReceBuilder_ == null) {
+          return redEnveRece_.size();
+        } else {
+          return redEnveReceBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece getRedEnveRece(int index) {
+        if (redEnveReceBuilder_ == null) {
+          return redEnveRece_.get(index);
+        } else {
+          return redEnveReceBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+       */
+      public Builder setRedEnveRece(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece value) {
+        if (redEnveReceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRedEnveReceIsMutable();
+          redEnveRece_.set(index, value);
+          onChanged();
+        } else {
+          redEnveReceBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+       */
+      public Builder setRedEnveRece(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.Builder builderForValue) {
+        if (redEnveReceBuilder_ == null) {
+          ensureRedEnveReceIsMutable();
+          redEnveRece_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          redEnveReceBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+       */
+      public Builder addRedEnveRece(com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece value) {
+        if (redEnveReceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRedEnveReceIsMutable();
+          redEnveRece_.add(value);
+          onChanged();
+        } else {
+          redEnveReceBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+       */
+      public Builder addRedEnveRece(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece value) {
+        if (redEnveReceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRedEnveReceIsMutable();
+          redEnveRece_.add(index, value);
+          onChanged();
+        } else {
+          redEnveReceBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+       */
+      public Builder addRedEnveRece(
+          com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.Builder builderForValue) {
+        if (redEnveReceBuilder_ == null) {
+          ensureRedEnveReceIsMutable();
+          redEnveRece_.add(builderForValue.build());
+          onChanged();
+        } else {
+          redEnveReceBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+       */
+      public Builder addRedEnveRece(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.Builder builderForValue) {
+        if (redEnveReceBuilder_ == null) {
+          ensureRedEnveReceIsMutable();
+          redEnveRece_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          redEnveReceBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+       */
+      public Builder addAllRedEnveRece(
+          java.lang.Iterable<? extends com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece> values) {
+        if (redEnveReceBuilder_ == null) {
+          ensureRedEnveReceIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, redEnveRece_);
+          onChanged();
+        } else {
+          redEnveReceBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+       */
+      public Builder clearRedEnveRece() {
+        if (redEnveReceBuilder_ == null) {
+          redEnveRece_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          redEnveReceBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+       */
+      public Builder removeRedEnveRece(int index) {
+        if (redEnveReceBuilder_ == null) {
+          ensureRedEnveReceIsMutable();
+          redEnveRece_.remove(index);
+          onChanged();
+        } else {
+          redEnveReceBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.Builder getRedEnveReceBuilder(
+          int index) {
+        return getRedEnveReceFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceOrBuilder getRedEnveReceOrBuilder(
+          int index) {
+        if (redEnveReceBuilder_ == null) {
+          return redEnveRece_.get(index);  } else {
+          return redEnveReceBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+       */
+      public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceOrBuilder> 
+           getRedEnveReceOrBuilderList() {
+        if (redEnveReceBuilder_ != null) {
+          return redEnveReceBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(redEnveRece_);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.Builder addRedEnveReceBuilder() {
+        return getRedEnveReceFieldBuilder().addBuilder(
+            com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.Builder addRedEnveReceBuilder(
+          int index) {
+        return getRedEnveReceFieldBuilder().addBuilder(
+            index, com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveRece redEnveRece = 1;</code>
+       */
+      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.Builder> 
+           getRedEnveReceBuilderList() {
+        return getRedEnveReceFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece, com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.Builder, com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceOrBuilder> 
+          getRedEnveReceFieldBuilder() {
+        if (redEnveReceBuilder_ == null) {
+          redEnveReceBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece, com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.Builder, com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceOrBuilder>(
+                  redEnveRece_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          redEnveRece_ = null;
+        }
+        return redEnveReceBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PRedEnveReceList)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PRedEnveReceList)
+    private static final com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList();
+    }
+
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PRedEnveReceList> PARSER =
+        new com.google.protobuf.AbstractParser<PRedEnveReceList>() {
+      public PRedEnveReceList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PRedEnveReceList(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PRedEnveReceList> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.PaymentProtos.PRedEnveReceList getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6740,102 +7180,62 @@ public final class PaymentProtos {
     int getExpendNumber();
 
     /**
-     * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+     * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
      *
      * <pre>
-     * 收入账单明细
+     * 账单明细
      * </pre>
      */
     java.util.List<com.blemobi.sep.probuf.PaymentProtos.PBillInfo> 
-        getIncomeBillList();
+        getBillInfoList();
     /**
-     * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+     * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
      *
      * <pre>
-     * 收入账单明细
+     * 账单明细
      * </pre>
      */
-    com.blemobi.sep.probuf.PaymentProtos.PBillInfo getIncomeBill(int index);
+    com.blemobi.sep.probuf.PaymentProtos.PBillInfo getBillInfo(int index);
     /**
-     * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+     * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
      *
      * <pre>
-     * 收入账单明细
+     * 账单明细
      * </pre>
      */
-    int getIncomeBillCount();
+    int getBillInfoCount();
     /**
-     * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+     * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
      *
      * <pre>
-     * 收入账单明细
-     * </pre>
-     */
-    java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PBillInfoOrBuilder> 
-        getIncomeBillOrBuilderList();
-    /**
-     * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
-     *
-     * <pre>
-     * 收入账单明细
-     * </pre>
-     */
-    com.blemobi.sep.probuf.PaymentProtos.PBillInfoOrBuilder getIncomeBillOrBuilder(
-        int index);
-
-    /**
-     * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-     *
-     * <pre>
-     * 支出账单明细
-     * </pre>
-     */
-    java.util.List<com.blemobi.sep.probuf.PaymentProtos.PBillInfo> 
-        getExpendBillList();
-    /**
-     * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-     *
-     * <pre>
-     * 支出账单明细
-     * </pre>
-     */
-    com.blemobi.sep.probuf.PaymentProtos.PBillInfo getExpendBill(int index);
-    /**
-     * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-     *
-     * <pre>
-     * 支出账单明细
-     * </pre>
-     */
-    int getExpendBillCount();
-    /**
-     * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-     *
-     * <pre>
-     * 支出账单明细
+     * 账单明细
      * </pre>
      */
     java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PBillInfoOrBuilder> 
-        getExpendBillOrBuilderList();
+        getBillInfoOrBuilderList();
     /**
-     * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
+     * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
      *
      * <pre>
-     * 支出账单明细
+     * 账单明细
      * </pre>
      */
-    com.blemobi.sep.probuf.PaymentProtos.PBillInfoOrBuilder getExpendBillOrBuilder(
+    com.blemobi.sep.probuf.PaymentProtos.PBillInfoOrBuilder getBillInfoOrBuilder(
         int index);
   }
   /**
    * Protobuf type {@code bbproto.PBill}
+   *
+   * <pre>
+   ** 账单-总账 
+   * </pre>
    */
   public  static final class PBill extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:bbproto.PBill)
       PBillOrBuilder {
     // Use PBill.newBuilder() to construct.
-    private PBill(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PBill(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PBill() {
@@ -6843,8 +7243,7 @@ public final class PaymentProtos {
       expendMoney_ = 0;
       incomeNumber_ = 0;
       expendNumber_ = 0;
-      incomeBill_ = java.util.Collections.emptyList();
-      expendBill_ = java.util.Collections.emptyList();
+      billInfo_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -6893,18 +7292,10 @@ public final class PaymentProtos {
             }
             case 42: {
               if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-                incomeBill_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PBillInfo>();
+                billInfo_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PBillInfo>();
                 mutable_bitField0_ |= 0x00000010;
               }
-              incomeBill_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PBillInfo.parser(), extensionRegistry));
-              break;
-            }
-            case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
-                expendBill_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PBillInfo>();
-                mutable_bitField0_ |= 0x00000020;
-              }
-              expendBill_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PBillInfo.parser(), extensionRegistry));
+              billInfo_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PBillInfo.PARSER, extensionRegistry));
               break;
             }
           }
@@ -6917,10 +7308,7 @@ public final class PaymentProtos {
                 e.getMessage()).setUnfinishedMessage(this));
       } finally {
         if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-          incomeBill_ = java.util.Collections.unmodifiableList(incomeBill_);
-        }
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
-          expendBill_ = java.util.Collections.unmodifiableList(expendBill_);
+          billInfo_ = java.util.Collections.unmodifiableList(billInfo_);
         }
         makeExtensionsImmutable();
       }
@@ -6990,114 +7378,59 @@ public final class PaymentProtos {
       return expendNumber_;
     }
 
-    public static final int INCOMEBILL_FIELD_NUMBER = 5;
-    private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PBillInfo> incomeBill_;
+    public static final int BILLINFO_FIELD_NUMBER = 5;
+    private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PBillInfo> billInfo_;
     /**
-     * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+     * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
      *
      * <pre>
-     * 收入账单明细
+     * 账单明细
      * </pre>
      */
-    public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PBillInfo> getIncomeBillList() {
-      return incomeBill_;
+    public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PBillInfo> getBillInfoList() {
+      return billInfo_;
     }
     /**
-     * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+     * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
      *
      * <pre>
-     * 收入账单明细
+     * 账单明细
      * </pre>
      */
     public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PBillInfoOrBuilder> 
-        getIncomeBillOrBuilderList() {
-      return incomeBill_;
+        getBillInfoOrBuilderList() {
+      return billInfo_;
     }
     /**
-     * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+     * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
      *
      * <pre>
-     * 收入账单明细
+     * 账单明细
      * </pre>
      */
-    public int getIncomeBillCount() {
-      return incomeBill_.size();
+    public int getBillInfoCount() {
+      return billInfo_.size();
     }
     /**
-     * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+     * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
      *
      * <pre>
-     * 收入账单明细
+     * 账单明细
      * </pre>
      */
-    public com.blemobi.sep.probuf.PaymentProtos.PBillInfo getIncomeBill(int index) {
-      return incomeBill_.get(index);
+    public com.blemobi.sep.probuf.PaymentProtos.PBillInfo getBillInfo(int index) {
+      return billInfo_.get(index);
     }
     /**
-     * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+     * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
      *
      * <pre>
-     * 收入账单明细
+     * 账单明细
      * </pre>
      */
-    public com.blemobi.sep.probuf.PaymentProtos.PBillInfoOrBuilder getIncomeBillOrBuilder(
+    public com.blemobi.sep.probuf.PaymentProtos.PBillInfoOrBuilder getBillInfoOrBuilder(
         int index) {
-      return incomeBill_.get(index);
-    }
-
-    public static final int EXPENDBILL_FIELD_NUMBER = 6;
-    private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PBillInfo> expendBill_;
-    /**
-     * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-     *
-     * <pre>
-     * 支出账单明细
-     * </pre>
-     */
-    public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PBillInfo> getExpendBillList() {
-      return expendBill_;
-    }
-    /**
-     * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-     *
-     * <pre>
-     * 支出账单明细
-     * </pre>
-     */
-    public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PBillInfoOrBuilder> 
-        getExpendBillOrBuilderList() {
-      return expendBill_;
-    }
-    /**
-     * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-     *
-     * <pre>
-     * 支出账单明细
-     * </pre>
-     */
-    public int getExpendBillCount() {
-      return expendBill_.size();
-    }
-    /**
-     * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-     *
-     * <pre>
-     * 支出账单明细
-     * </pre>
-     */
-    public com.blemobi.sep.probuf.PaymentProtos.PBillInfo getExpendBill(int index) {
-      return expendBill_.get(index);
-    }
-    /**
-     * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-     *
-     * <pre>
-     * 支出账单明细
-     * </pre>
-     */
-    public com.blemobi.sep.probuf.PaymentProtos.PBillInfoOrBuilder getExpendBillOrBuilder(
-        int index) {
-      return expendBill_.get(index);
+      return billInfo_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -7124,16 +7457,14 @@ public final class PaymentProtos {
       if (expendNumber_ != 0) {
         output.writeInt32(4, expendNumber_);
       }
-      for (int i = 0; i < incomeBill_.size(); i++) {
-        output.writeMessage(5, incomeBill_.get(i));
-      }
-      for (int i = 0; i < expendBill_.size(); i++) {
-        output.writeMessage(6, expendBill_.get(i));
+      for (int i = 0; i < billInfo_.size(); i++) {
+        output.writeMessage(5, billInfo_.get(i));
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -7153,15 +7484,11 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(4, expendNumber_);
       }
-      for (int i = 0; i < incomeBill_.size(); i++) {
+      for (int i = 0; i < billInfo_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, incomeBill_.get(i));
+          .computeMessageSize(5, billInfo_.get(i));
       }
-      for (int i = 0; i < expendBill_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, expendBill_.get(i));
-      }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -7239,6 +7566,10 @@ public final class PaymentProtos {
     }
     /**
      * Protobuf type {@code bbproto.PBill}
+     *
+     * <pre>
+     ** 账单-总账 
+     * </pre>
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -7268,8 +7599,7 @@ public final class PaymentProtos {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getIncomeBillFieldBuilder();
-          getExpendBillFieldBuilder();
+          getBillInfoFieldBuilder();
         }
       }
       public Builder clear() {
@@ -7282,17 +7612,11 @@ public final class PaymentProtos {
 
         expendNumber_ = 0;
 
-        if (incomeBillBuilder_ == null) {
-          incomeBill_ = java.util.Collections.emptyList();
+        if (billInfoBuilder_ == null) {
+          billInfo_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000010);
         } else {
-          incomeBillBuilder_.clear();
-        }
-        if (expendBillBuilder_ == null) {
-          expendBill_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
-        } else {
-          expendBillBuilder_.clear();
+          billInfoBuilder_.clear();
         }
         return this;
       }
@@ -7322,23 +7646,14 @@ public final class PaymentProtos {
         result.expendMoney_ = expendMoney_;
         result.incomeNumber_ = incomeNumber_;
         result.expendNumber_ = expendNumber_;
-        if (incomeBillBuilder_ == null) {
+        if (billInfoBuilder_ == null) {
           if (((bitField0_ & 0x00000010) == 0x00000010)) {
-            incomeBill_ = java.util.Collections.unmodifiableList(incomeBill_);
+            billInfo_ = java.util.Collections.unmodifiableList(billInfo_);
             bitField0_ = (bitField0_ & ~0x00000010);
           }
-          result.incomeBill_ = incomeBill_;
+          result.billInfo_ = billInfo_;
         } else {
-          result.incomeBill_ = incomeBillBuilder_.build();
-        }
-        if (expendBillBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
-            expendBill_ = java.util.Collections.unmodifiableList(expendBill_);
-            bitField0_ = (bitField0_ & ~0x00000020);
-          }
-          result.expendBill_ = expendBill_;
-        } else {
-          result.expendBill_ = expendBillBuilder_.build();
+          result.billInfo_ = billInfoBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -7368,55 +7683,29 @@ public final class PaymentProtos {
         if (other.getExpendNumber() != 0) {
           setExpendNumber(other.getExpendNumber());
         }
-        if (incomeBillBuilder_ == null) {
-          if (!other.incomeBill_.isEmpty()) {
-            if (incomeBill_.isEmpty()) {
-              incomeBill_ = other.incomeBill_;
+        if (billInfoBuilder_ == null) {
+          if (!other.billInfo_.isEmpty()) {
+            if (billInfo_.isEmpty()) {
+              billInfo_ = other.billInfo_;
               bitField0_ = (bitField0_ & ~0x00000010);
             } else {
-              ensureIncomeBillIsMutable();
-              incomeBill_.addAll(other.incomeBill_);
+              ensureBillInfoIsMutable();
+              billInfo_.addAll(other.billInfo_);
             }
             onChanged();
           }
         } else {
-          if (!other.incomeBill_.isEmpty()) {
-            if (incomeBillBuilder_.isEmpty()) {
-              incomeBillBuilder_.dispose();
-              incomeBillBuilder_ = null;
-              incomeBill_ = other.incomeBill_;
+          if (!other.billInfo_.isEmpty()) {
+            if (billInfoBuilder_.isEmpty()) {
+              billInfoBuilder_.dispose();
+              billInfoBuilder_ = null;
+              billInfo_ = other.billInfo_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              incomeBillBuilder_ = 
+              billInfoBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getIncomeBillFieldBuilder() : null;
+                   getBillInfoFieldBuilder() : null;
             } else {
-              incomeBillBuilder_.addAllMessages(other.incomeBill_);
-            }
-          }
-        }
-        if (expendBillBuilder_ == null) {
-          if (!other.expendBill_.isEmpty()) {
-            if (expendBill_.isEmpty()) {
-              expendBill_ = other.expendBill_;
-              bitField0_ = (bitField0_ & ~0x00000020);
-            } else {
-              ensureExpendBillIsMutable();
-              expendBill_.addAll(other.expendBill_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.expendBill_.isEmpty()) {
-            if (expendBillBuilder_.isEmpty()) {
-              expendBillBuilder_.dispose();
-              expendBillBuilder_ = null;
-              expendBill_ = other.expendBill_;
-              bitField0_ = (bitField0_ & ~0x00000020);
-              expendBillBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getExpendBillFieldBuilder() : null;
-            } else {
-              expendBillBuilder_.addAllMessages(other.expendBill_);
+              billInfoBuilder_.addAllMessages(other.billInfo_);
             }
           }
         }
@@ -7599,628 +7888,316 @@ public final class PaymentProtos {
         return this;
       }
 
-      private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PBillInfo> incomeBill_ =
+      private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PBillInfo> billInfo_ =
         java.util.Collections.emptyList();
-      private void ensureIncomeBillIsMutable() {
+      private void ensureBillInfoIsMutable() {
         if (!((bitField0_ & 0x00000010) == 0x00000010)) {
-          incomeBill_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PBillInfo>(incomeBill_);
+          billInfo_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PBillInfo>(billInfo_);
           bitField0_ |= 0x00000010;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.PaymentProtos.PBillInfo, com.blemobi.sep.probuf.PaymentProtos.PBillInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PBillInfoOrBuilder> incomeBillBuilder_;
+          com.blemobi.sep.probuf.PaymentProtos.PBillInfo, com.blemobi.sep.probuf.PaymentProtos.PBillInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PBillInfoOrBuilder> billInfoBuilder_;
 
       /**
-       * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+       * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
        *
        * <pre>
-       * 收入账单明细
+       * 账单明细
        * </pre>
        */
-      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PBillInfo> getIncomeBillList() {
-        if (incomeBillBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(incomeBill_);
+      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PBillInfo> getBillInfoList() {
+        if (billInfoBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(billInfo_);
         } else {
-          return incomeBillBuilder_.getMessageList();
+          return billInfoBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+       * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
        *
        * <pre>
-       * 收入账单明细
+       * 账单明细
        * </pre>
        */
-      public int getIncomeBillCount() {
-        if (incomeBillBuilder_ == null) {
-          return incomeBill_.size();
+      public int getBillInfoCount() {
+        if (billInfoBuilder_ == null) {
+          return billInfo_.size();
         } else {
-          return incomeBillBuilder_.getCount();
+          return billInfoBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+       * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
        *
        * <pre>
-       * 收入账单明细
+       * 账单明细
        * </pre>
        */
-      public com.blemobi.sep.probuf.PaymentProtos.PBillInfo getIncomeBill(int index) {
-        if (incomeBillBuilder_ == null) {
-          return incomeBill_.get(index);
+      public com.blemobi.sep.probuf.PaymentProtos.PBillInfo getBillInfo(int index) {
+        if (billInfoBuilder_ == null) {
+          return billInfo_.get(index);
         } else {
-          return incomeBillBuilder_.getMessage(index);
+          return billInfoBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+       * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
        *
        * <pre>
-       * 收入账单明细
+       * 账单明细
        * </pre>
        */
-      public Builder setIncomeBill(
+      public Builder setBillInfo(
           int index, com.blemobi.sep.probuf.PaymentProtos.PBillInfo value) {
-        if (incomeBillBuilder_ == null) {
+        if (billInfoBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureIncomeBillIsMutable();
-          incomeBill_.set(index, value);
+          ensureBillInfoIsMutable();
+          billInfo_.set(index, value);
           onChanged();
         } else {
-          incomeBillBuilder_.setMessage(index, value);
+          billInfoBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+       * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
        *
        * <pre>
-       * 收入账单明细
+       * 账单明细
        * </pre>
        */
-      public Builder setIncomeBill(
+      public Builder setBillInfo(
           int index, com.blemobi.sep.probuf.PaymentProtos.PBillInfo.Builder builderForValue) {
-        if (incomeBillBuilder_ == null) {
-          ensureIncomeBillIsMutable();
-          incomeBill_.set(index, builderForValue.build());
+        if (billInfoBuilder_ == null) {
+          ensureBillInfoIsMutable();
+          billInfo_.set(index, builderForValue.build());
           onChanged();
         } else {
-          incomeBillBuilder_.setMessage(index, builderForValue.build());
+          billInfoBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+       * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
        *
        * <pre>
-       * 收入账单明细
+       * 账单明细
        * </pre>
        */
-      public Builder addIncomeBill(com.blemobi.sep.probuf.PaymentProtos.PBillInfo value) {
-        if (incomeBillBuilder_ == null) {
+      public Builder addBillInfo(com.blemobi.sep.probuf.PaymentProtos.PBillInfo value) {
+        if (billInfoBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureIncomeBillIsMutable();
-          incomeBill_.add(value);
+          ensureBillInfoIsMutable();
+          billInfo_.add(value);
           onChanged();
         } else {
-          incomeBillBuilder_.addMessage(value);
+          billInfoBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+       * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
        *
        * <pre>
-       * 收入账单明细
+       * 账单明细
        * </pre>
        */
-      public Builder addIncomeBill(
+      public Builder addBillInfo(
           int index, com.blemobi.sep.probuf.PaymentProtos.PBillInfo value) {
-        if (incomeBillBuilder_ == null) {
+        if (billInfoBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureIncomeBillIsMutable();
-          incomeBill_.add(index, value);
+          ensureBillInfoIsMutable();
+          billInfo_.add(index, value);
           onChanged();
         } else {
-          incomeBillBuilder_.addMessage(index, value);
+          billInfoBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+       * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
        *
        * <pre>
-       * 收入账单明细
+       * 账单明细
        * </pre>
        */
-      public Builder addIncomeBill(
+      public Builder addBillInfo(
           com.blemobi.sep.probuf.PaymentProtos.PBillInfo.Builder builderForValue) {
-        if (incomeBillBuilder_ == null) {
-          ensureIncomeBillIsMutable();
-          incomeBill_.add(builderForValue.build());
+        if (billInfoBuilder_ == null) {
+          ensureBillInfoIsMutable();
+          billInfo_.add(builderForValue.build());
           onChanged();
         } else {
-          incomeBillBuilder_.addMessage(builderForValue.build());
+          billInfoBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+       * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
        *
        * <pre>
-       * 收入账单明细
+       * 账单明细
        * </pre>
        */
-      public Builder addIncomeBill(
+      public Builder addBillInfo(
           int index, com.blemobi.sep.probuf.PaymentProtos.PBillInfo.Builder builderForValue) {
-        if (incomeBillBuilder_ == null) {
-          ensureIncomeBillIsMutable();
-          incomeBill_.add(index, builderForValue.build());
+        if (billInfoBuilder_ == null) {
+          ensureBillInfoIsMutable();
+          billInfo_.add(index, builderForValue.build());
           onChanged();
         } else {
-          incomeBillBuilder_.addMessage(index, builderForValue.build());
+          billInfoBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+       * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
        *
        * <pre>
-       * 收入账单明细
+       * 账单明细
        * </pre>
        */
-      public Builder addAllIncomeBill(
+      public Builder addAllBillInfo(
           java.lang.Iterable<? extends com.blemobi.sep.probuf.PaymentProtos.PBillInfo> values) {
-        if (incomeBillBuilder_ == null) {
-          ensureIncomeBillIsMutable();
+        if (billInfoBuilder_ == null) {
+          ensureBillInfoIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, incomeBill_);
+              values, billInfo_);
           onChanged();
         } else {
-          incomeBillBuilder_.addAllMessages(values);
+          billInfoBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+       * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
        *
        * <pre>
-       * 收入账单明细
+       * 账单明细
        * </pre>
        */
-      public Builder clearIncomeBill() {
-        if (incomeBillBuilder_ == null) {
-          incomeBill_ = java.util.Collections.emptyList();
+      public Builder clearBillInfo() {
+        if (billInfoBuilder_ == null) {
+          billInfo_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
-          incomeBillBuilder_.clear();
+          billInfoBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+       * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
        *
        * <pre>
-       * 收入账单明细
+       * 账单明细
        * </pre>
        */
-      public Builder removeIncomeBill(int index) {
-        if (incomeBillBuilder_ == null) {
-          ensureIncomeBillIsMutable();
-          incomeBill_.remove(index);
+      public Builder removeBillInfo(int index) {
+        if (billInfoBuilder_ == null) {
+          ensureBillInfoIsMutable();
+          billInfo_.remove(index);
           onChanged();
         } else {
-          incomeBillBuilder_.remove(index);
+          billInfoBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+       * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
        *
        * <pre>
-       * 收入账单明细
+       * 账单明细
        * </pre>
        */
-      public com.blemobi.sep.probuf.PaymentProtos.PBillInfo.Builder getIncomeBillBuilder(
+      public com.blemobi.sep.probuf.PaymentProtos.PBillInfo.Builder getBillInfoBuilder(
           int index) {
-        return getIncomeBillFieldBuilder().getBuilder(index);
+        return getBillInfoFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+       * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
        *
        * <pre>
-       * 收入账单明细
+       * 账单明细
        * </pre>
        */
-      public com.blemobi.sep.probuf.PaymentProtos.PBillInfoOrBuilder getIncomeBillOrBuilder(
+      public com.blemobi.sep.probuf.PaymentProtos.PBillInfoOrBuilder getBillInfoOrBuilder(
           int index) {
-        if (incomeBillBuilder_ == null) {
-          return incomeBill_.get(index);  } else {
-          return incomeBillBuilder_.getMessageOrBuilder(index);
+        if (billInfoBuilder_ == null) {
+          return billInfo_.get(index);  } else {
+          return billInfoBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+       * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
        *
        * <pre>
-       * 收入账单明细
+       * 账单明细
        * </pre>
        */
       public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PBillInfoOrBuilder> 
-           getIncomeBillOrBuilderList() {
-        if (incomeBillBuilder_ != null) {
-          return incomeBillBuilder_.getMessageOrBuilderList();
+           getBillInfoOrBuilderList() {
+        if (billInfoBuilder_ != null) {
+          return billInfoBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(incomeBill_);
+          return java.util.Collections.unmodifiableList(billInfo_);
         }
       }
       /**
-       * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+       * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
        *
        * <pre>
-       * 收入账单明细
+       * 账单明细
        * </pre>
        */
-      public com.blemobi.sep.probuf.PaymentProtos.PBillInfo.Builder addIncomeBillBuilder() {
-        return getIncomeBillFieldBuilder().addBuilder(
+      public com.blemobi.sep.probuf.PaymentProtos.PBillInfo.Builder addBillInfoBuilder() {
+        return getBillInfoFieldBuilder().addBuilder(
             com.blemobi.sep.probuf.PaymentProtos.PBillInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+       * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
        *
        * <pre>
-       * 收入账单明细
+       * 账单明细
        * </pre>
        */
-      public com.blemobi.sep.probuf.PaymentProtos.PBillInfo.Builder addIncomeBillBuilder(
+      public com.blemobi.sep.probuf.PaymentProtos.PBillInfo.Builder addBillInfoBuilder(
           int index) {
-        return getIncomeBillFieldBuilder().addBuilder(
+        return getBillInfoFieldBuilder().addBuilder(
             index, com.blemobi.sep.probuf.PaymentProtos.PBillInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .bbproto.PBillInfo incomeBill = 5;</code>
+       * <code>repeated .bbproto.PBillInfo billInfo = 5;</code>
        *
        * <pre>
-       * 收入账单明细
+       * 账单明细
        * </pre>
        */
       public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PBillInfo.Builder> 
-           getIncomeBillBuilderList() {
-        return getIncomeBillFieldBuilder().getBuilderList();
+           getBillInfoBuilderList() {
+        return getBillInfoFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
           com.blemobi.sep.probuf.PaymentProtos.PBillInfo, com.blemobi.sep.probuf.PaymentProtos.PBillInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PBillInfoOrBuilder> 
-          getIncomeBillFieldBuilder() {
-        if (incomeBillBuilder_ == null) {
-          incomeBillBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          getBillInfoFieldBuilder() {
+        if (billInfoBuilder_ == null) {
+          billInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               com.blemobi.sep.probuf.PaymentProtos.PBillInfo, com.blemobi.sep.probuf.PaymentProtos.PBillInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PBillInfoOrBuilder>(
-                  incomeBill_,
+                  billInfo_,
                   ((bitField0_ & 0x00000010) == 0x00000010),
                   getParentForChildren(),
                   isClean());
-          incomeBill_ = null;
+          billInfo_ = null;
         }
-        return incomeBillBuilder_;
-      }
-
-      private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PBillInfo> expendBill_ =
-        java.util.Collections.emptyList();
-      private void ensureExpendBillIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
-          expendBill_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PBillInfo>(expendBill_);
-          bitField0_ |= 0x00000020;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.PaymentProtos.PBillInfo, com.blemobi.sep.probuf.PaymentProtos.PBillInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PBillInfoOrBuilder> expendBillBuilder_;
-
-      /**
-       * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-       *
-       * <pre>
-       * 支出账单明细
-       * </pre>
-       */
-      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PBillInfo> getExpendBillList() {
-        if (expendBillBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(expendBill_);
-        } else {
-          return expendBillBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-       *
-       * <pre>
-       * 支出账单明细
-       * </pre>
-       */
-      public int getExpendBillCount() {
-        if (expendBillBuilder_ == null) {
-          return expendBill_.size();
-        } else {
-          return expendBillBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-       *
-       * <pre>
-       * 支出账单明细
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.PaymentProtos.PBillInfo getExpendBill(int index) {
-        if (expendBillBuilder_ == null) {
-          return expendBill_.get(index);
-        } else {
-          return expendBillBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-       *
-       * <pre>
-       * 支出账单明细
-       * </pre>
-       */
-      public Builder setExpendBill(
-          int index, com.blemobi.sep.probuf.PaymentProtos.PBillInfo value) {
-        if (expendBillBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureExpendBillIsMutable();
-          expendBill_.set(index, value);
-          onChanged();
-        } else {
-          expendBillBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-       *
-       * <pre>
-       * 支出账单明细
-       * </pre>
-       */
-      public Builder setExpendBill(
-          int index, com.blemobi.sep.probuf.PaymentProtos.PBillInfo.Builder builderForValue) {
-        if (expendBillBuilder_ == null) {
-          ensureExpendBillIsMutable();
-          expendBill_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          expendBillBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-       *
-       * <pre>
-       * 支出账单明细
-       * </pre>
-       */
-      public Builder addExpendBill(com.blemobi.sep.probuf.PaymentProtos.PBillInfo value) {
-        if (expendBillBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureExpendBillIsMutable();
-          expendBill_.add(value);
-          onChanged();
-        } else {
-          expendBillBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-       *
-       * <pre>
-       * 支出账单明细
-       * </pre>
-       */
-      public Builder addExpendBill(
-          int index, com.blemobi.sep.probuf.PaymentProtos.PBillInfo value) {
-        if (expendBillBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureExpendBillIsMutable();
-          expendBill_.add(index, value);
-          onChanged();
-        } else {
-          expendBillBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-       *
-       * <pre>
-       * 支出账单明细
-       * </pre>
-       */
-      public Builder addExpendBill(
-          com.blemobi.sep.probuf.PaymentProtos.PBillInfo.Builder builderForValue) {
-        if (expendBillBuilder_ == null) {
-          ensureExpendBillIsMutable();
-          expendBill_.add(builderForValue.build());
-          onChanged();
-        } else {
-          expendBillBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-       *
-       * <pre>
-       * 支出账单明细
-       * </pre>
-       */
-      public Builder addExpendBill(
-          int index, com.blemobi.sep.probuf.PaymentProtos.PBillInfo.Builder builderForValue) {
-        if (expendBillBuilder_ == null) {
-          ensureExpendBillIsMutable();
-          expendBill_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          expendBillBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-       *
-       * <pre>
-       * 支出账单明细
-       * </pre>
-       */
-      public Builder addAllExpendBill(
-          java.lang.Iterable<? extends com.blemobi.sep.probuf.PaymentProtos.PBillInfo> values) {
-        if (expendBillBuilder_ == null) {
-          ensureExpendBillIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, expendBill_);
-          onChanged();
-        } else {
-          expendBillBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-       *
-       * <pre>
-       * 支出账单明细
-       * </pre>
-       */
-      public Builder clearExpendBill() {
-        if (expendBillBuilder_ == null) {
-          expendBill_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
-          onChanged();
-        } else {
-          expendBillBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-       *
-       * <pre>
-       * 支出账单明细
-       * </pre>
-       */
-      public Builder removeExpendBill(int index) {
-        if (expendBillBuilder_ == null) {
-          ensureExpendBillIsMutable();
-          expendBill_.remove(index);
-          onChanged();
-        } else {
-          expendBillBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-       *
-       * <pre>
-       * 支出账单明细
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.PaymentProtos.PBillInfo.Builder getExpendBillBuilder(
-          int index) {
-        return getExpendBillFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-       *
-       * <pre>
-       * 支出账单明细
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.PaymentProtos.PBillInfoOrBuilder getExpendBillOrBuilder(
-          int index) {
-        if (expendBillBuilder_ == null) {
-          return expendBill_.get(index);  } else {
-          return expendBillBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-       *
-       * <pre>
-       * 支出账单明细
-       * </pre>
-       */
-      public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PBillInfoOrBuilder> 
-           getExpendBillOrBuilderList() {
-        if (expendBillBuilder_ != null) {
-          return expendBillBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(expendBill_);
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-       *
-       * <pre>
-       * 支出账单明细
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.PaymentProtos.PBillInfo.Builder addExpendBillBuilder() {
-        return getExpendBillFieldBuilder().addBuilder(
-            com.blemobi.sep.probuf.PaymentProtos.PBillInfo.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-       *
-       * <pre>
-       * 支出账单明细
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.PaymentProtos.PBillInfo.Builder addExpendBillBuilder(
-          int index) {
-        return getExpendBillFieldBuilder().addBuilder(
-            index, com.blemobi.sep.probuf.PaymentProtos.PBillInfo.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .bbproto.PBillInfo expendBill = 6;</code>
-       *
-       * <pre>
-       * 支出账单明细
-       * </pre>
-       */
-      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PBillInfo.Builder> 
-           getExpendBillBuilderList() {
-        return getExpendBillFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.PaymentProtos.PBillInfo, com.blemobi.sep.probuf.PaymentProtos.PBillInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PBillInfoOrBuilder> 
-          getExpendBillFieldBuilder() {
-        if (expendBillBuilder_ == null) {
-          expendBillBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              com.blemobi.sep.probuf.PaymentProtos.PBillInfo, com.blemobi.sep.probuf.PaymentProtos.PBillInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PBillInfoOrBuilder>(
-                  expendBill_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
-                  getParentForChildren(),
-                  isClean());
-          expendBill_ = null;
-        }
-        return expendBillBuilder_;
+        return billInfoBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8246,8 +8223,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PBill>
-        PARSER = new com.google.protobuf.AbstractParser<PBill>() {
+    public static final com.google.protobuf.Parser<PBill> PARSER =
+        new com.google.protobuf.AbstractParser<PBill>() {
       public PBill parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8264,10 +8241,6 @@ public final class PaymentProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PBill> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PBill> getParserForType() {
@@ -8312,13 +8285,13 @@ public final class PaymentProtos {
         getOrdNoBytes();
 
     /**
-     * <code>optional int32 rece_money = 3;</code>
+     * <code>optional int32 money = 3;</code>
      *
      * <pre>
      * 金额（单位：分）
      * </pre>
      */
-    int getReceMoney();
+    int getMoney();
 
     /**
      * <code>optional int64 time = 4;</code>
@@ -8333,7 +8306,7 @@ public final class PaymentProtos {
      * <code>optional int32 type = 5;</code>
      *
      * <pre>
-     * 类型
+     * 类型（1-普通红包，2-等额群红包，3-随机群红包，4-打赏，5-抽奖）
      * </pre>
      */
     int getType();
@@ -8365,19 +8338,23 @@ public final class PaymentProtos {
   }
   /**
    * Protobuf type {@code bbproto.PBillInfo}
+   *
+   * <pre>
+   ** 账单-明细 
+   * </pre>
    */
   public  static final class PBillInfo extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:bbproto.PBillInfo)
       PBillInfoOrBuilder {
     // Use PBillInfo.newBuilder() to construct.
-    private PBillInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PBillInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PBillInfo() {
       id_ = 0;
       ordNo_ = "";
-      receMoney_ = 0;
+      money_ = 0;
       time_ = 0L;
       type_ = 0;
     }
@@ -8412,14 +8389,14 @@ public final class PaymentProtos {
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              ordNo_ = s;
+              ordNo_ = bs;
               break;
             }
             case 24: {
 
-              receMoney_ = input.readInt32();
+              money_ = input.readInt32();
               break;
             }
             case 32: {
@@ -8437,7 +8414,7 @@ public final class PaymentProtos {
               if (userBase_ != null) {
                 subBuilder = userBase_.toBuilder();
               }
-              userBase_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.parser(), extensionRegistry);
+              userBase_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(userBase_);
                 userBase_ = subBuilder.buildPartial();
@@ -8499,7 +8476,9 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        ordNo_ = s;
+        if (bs.isValidUtf8()) {
+          ordNo_ = s;
+        }
         return s;
       }
     }
@@ -8524,17 +8503,17 @@ public final class PaymentProtos {
       }
     }
 
-    public static final int RECE_MONEY_FIELD_NUMBER = 3;
-    private int receMoney_;
+    public static final int MONEY_FIELD_NUMBER = 3;
+    private int money_;
     /**
-     * <code>optional int32 rece_money = 3;</code>
+     * <code>optional int32 money = 3;</code>
      *
      * <pre>
      * 金额（单位：分）
      * </pre>
      */
-    public int getReceMoney() {
-      return receMoney_;
+    public int getMoney() {
+      return money_;
     }
 
     public static final int TIME_FIELD_NUMBER = 4;
@@ -8556,7 +8535,7 @@ public final class PaymentProtos {
      * <code>optional int32 type = 5;</code>
      *
      * <pre>
-     * 类型
+     * 类型（1-普通红包，2-等额群红包，3-随机群红包，4-打赏，5-抽奖）
      * </pre>
      */
     public int getType() {
@@ -8612,10 +8591,10 @@ public final class PaymentProtos {
         output.writeInt32(1, id_);
       }
       if (!getOrdNoBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 2, ordNo_);
+        output.writeBytes(2, getOrdNoBytes());
       }
-      if (receMoney_ != 0) {
-        output.writeInt32(3, receMoney_);
+      if (money_ != 0) {
+        output.writeInt32(3, money_);
       }
       if (time_ != 0L) {
         output.writeInt64(4, time_);
@@ -8628,8 +8607,9 @@ public final class PaymentProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -8638,11 +8618,12 @@ public final class PaymentProtos {
           .computeInt32Size(1, id_);
       }
       if (!getOrdNoBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, ordNo_);
-      }
-      if (receMoney_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, receMoney_);
+          .computeBytesSize(2, getOrdNoBytes());
+      }
+      if (money_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, money_);
       }
       if (time_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -8656,7 +8637,7 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getUserBase());
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -8734,6 +8715,10 @@ public final class PaymentProtos {
     }
     /**
      * Protobuf type {@code bbproto.PBillInfo}
+     *
+     * <pre>
+     ** 账单-明细 
+     * </pre>
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -8771,7 +8756,7 @@ public final class PaymentProtos {
 
         ordNo_ = "";
 
-        receMoney_ = 0;
+        money_ = 0;
 
         time_ = 0L;
 
@@ -8807,7 +8792,7 @@ public final class PaymentProtos {
         com.blemobi.sep.probuf.PaymentProtos.PBillInfo result = new com.blemobi.sep.probuf.PaymentProtos.PBillInfo(this);
         result.id_ = id_;
         result.ordNo_ = ordNo_;
-        result.receMoney_ = receMoney_;
+        result.money_ = money_;
         result.time_ = time_;
         result.type_ = type_;
         if (userBaseBuilder_ == null) {
@@ -8837,8 +8822,8 @@ public final class PaymentProtos {
           ordNo_ = other.ordNo_;
           onChanged();
         }
-        if (other.getReceMoney() != 0) {
-          setReceMoney(other.getReceMoney());
+        if (other.getMoney() != 0) {
+          setMoney(other.getMoney());
         }
         if (other.getTime() != 0L) {
           setTime(other.getTime());
@@ -8927,7 +8912,9 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          ordNo_ = s;
+          if (bs.isValidUtf8()) {
+            ordNo_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -8995,47 +8982,46 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         ordNo_ = value;
         onChanged();
         return this;
       }
 
-      private int receMoney_ ;
+      private int money_ ;
       /**
-       * <code>optional int32 rece_money = 3;</code>
+       * <code>optional int32 money = 3;</code>
        *
        * <pre>
        * 金额（单位：分）
        * </pre>
        */
-      public int getReceMoney() {
-        return receMoney_;
+      public int getMoney() {
+        return money_;
       }
       /**
-       * <code>optional int32 rece_money = 3;</code>
+       * <code>optional int32 money = 3;</code>
        *
        * <pre>
        * 金额（单位：分）
        * </pre>
        */
-      public Builder setReceMoney(int value) {
+      public Builder setMoney(int value) {
         
-        receMoney_ = value;
+        money_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 rece_money = 3;</code>
+       * <code>optional int32 money = 3;</code>
        *
        * <pre>
        * 金额（单位：分）
        * </pre>
        */
-      public Builder clearReceMoney() {
+      public Builder clearMoney() {
         
-        receMoney_ = 0;
+        money_ = 0;
         onChanged();
         return this;
       }
@@ -9083,7 +9069,7 @@ public final class PaymentProtos {
        * <code>optional int32 type = 5;</code>
        *
        * <pre>
-       * 类型
+       * 类型（1-普通红包，2-等额群红包，3-随机群红包，4-打赏，5-抽奖）
        * </pre>
        */
       public int getType() {
@@ -9093,7 +9079,7 @@ public final class PaymentProtos {
        * <code>optional int32 type = 5;</code>
        *
        * <pre>
-       * 类型
+       * 类型（1-普通红包，2-等额群红包，3-随机群红包，4-打赏，5-抽奖）
        * </pre>
        */
       public Builder setType(int value) {
@@ -9106,7 +9092,7 @@ public final class PaymentProtos {
        * <code>optional int32 type = 5;</code>
        *
        * <pre>
-       * 类型
+       * 类型（1-普通红包，2-等额群红包，3-随机群红包，4-打赏，5-抽奖）
        * </pre>
        */
       public Builder clearType() {
@@ -9292,8 +9278,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PBillInfo>
-        PARSER = new com.google.protobuf.AbstractParser<PBillInfo>() {
+    public static final com.google.protobuf.Parser<PBillInfo> PARSER =
+        new com.google.protobuf.AbstractParser<PBillInfo>() {
       public PBillInfo parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9311,16 +9297,6376 @@ public final class PaymentProtos {
       }
     };
 
-    public static com.google.protobuf.Parser<PBillInfo> parser() {
-      return PARSER;
-    }
-
     @java.lang.Override
     public com.google.protobuf.Parser<PBillInfo> getParserForType() {
       return PARSER;
     }
 
     public com.blemobi.sep.probuf.PaymentProtos.PBillInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PRedEnveListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PRedEnveList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+     */
+    java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo> 
+        getRedEnveBaseInfoList();
+    /**
+     * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+     */
+    com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo getRedEnveBaseInfo(int index);
+    /**
+     * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+     */
+    int getRedEnveBaseInfoCount();
+    /**
+     * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+     */
+    java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfoOrBuilder> 
+        getRedEnveBaseInfoOrBuilderList();
+    /**
+     * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+     */
+    com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfoOrBuilder getRedEnveBaseInfoOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code bbproto.PRedEnveList}
+   *
+   * <pre>
+   ** 发红包列表 
+   * </pre>
+   */
+  public  static final class PRedEnveList extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PRedEnveList)
+      PRedEnveListOrBuilder {
+    // Use PRedEnveList.newBuilder() to construct.
+    private PRedEnveList(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PRedEnveList() {
+      redEnveBaseInfo_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PRedEnveList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                redEnveBaseInfo_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              redEnveBaseInfo_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          redEnveBaseInfo_ = java.util.Collections.unmodifiableList(redEnveBaseInfo_);
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRedEnveList_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRedEnveList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.PaymentProtos.PRedEnveList.class, com.blemobi.sep.probuf.PaymentProtos.PRedEnveList.Builder.class);
+    }
+
+    public static final int REDENVEBASEINFO_FIELD_NUMBER = 1;
+    private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo> redEnveBaseInfo_;
+    /**
+     * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+     */
+    public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo> getRedEnveBaseInfoList() {
+      return redEnveBaseInfo_;
+    }
+    /**
+     * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+     */
+    public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfoOrBuilder> 
+        getRedEnveBaseInfoOrBuilderList() {
+      return redEnveBaseInfo_;
+    }
+    /**
+     * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+     */
+    public int getRedEnveBaseInfoCount() {
+      return redEnveBaseInfo_.size();
+    }
+    /**
+     * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+     */
+    public com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo getRedEnveBaseInfo(int index) {
+      return redEnveBaseInfo_.get(index);
+    }
+    /**
+     * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+     */
+    public com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfoOrBuilder getRedEnveBaseInfoOrBuilder(
+        int index) {
+      return redEnveBaseInfo_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < redEnveBaseInfo_.size(); i++) {
+        output.writeMessage(1, redEnveBaseInfo_.get(i));
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < redEnveBaseInfo_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, redEnveBaseInfo_.get(i));
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.PaymentProtos.PRedEnveList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PRedEnveList}
+     *
+     * <pre>
+     ** 发红包列表 
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PRedEnveList)
+        com.blemobi.sep.probuf.PaymentProtos.PRedEnveListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRedEnveList_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRedEnveList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.PaymentProtos.PRedEnveList.class, com.blemobi.sep.probuf.PaymentProtos.PRedEnveList.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.PaymentProtos.PRedEnveList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getRedEnveBaseInfoFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (redEnveBaseInfoBuilder_ == null) {
+          redEnveBaseInfo_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          redEnveBaseInfoBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRedEnveList_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveList getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.PRedEnveList.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveList build() {
+        com.blemobi.sep.probuf.PaymentProtos.PRedEnveList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveList buildPartial() {
+        com.blemobi.sep.probuf.PaymentProtos.PRedEnveList result = new com.blemobi.sep.probuf.PaymentProtos.PRedEnveList(this);
+        int from_bitField0_ = bitField0_;
+        if (redEnveBaseInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            redEnveBaseInfo_ = java.util.Collections.unmodifiableList(redEnveBaseInfo_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.redEnveBaseInfo_ = redEnveBaseInfo_;
+        } else {
+          result.redEnveBaseInfo_ = redEnveBaseInfoBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.PaymentProtos.PRedEnveList) {
+          return mergeFrom((com.blemobi.sep.probuf.PaymentProtos.PRedEnveList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.PaymentProtos.PRedEnveList other) {
+        if (other == com.blemobi.sep.probuf.PaymentProtos.PRedEnveList.getDefaultInstance()) return this;
+        if (redEnveBaseInfoBuilder_ == null) {
+          if (!other.redEnveBaseInfo_.isEmpty()) {
+            if (redEnveBaseInfo_.isEmpty()) {
+              redEnveBaseInfo_ = other.redEnveBaseInfo_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRedEnveBaseInfoIsMutable();
+              redEnveBaseInfo_.addAll(other.redEnveBaseInfo_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.redEnveBaseInfo_.isEmpty()) {
+            if (redEnveBaseInfoBuilder_.isEmpty()) {
+              redEnveBaseInfoBuilder_.dispose();
+              redEnveBaseInfoBuilder_ = null;
+              redEnveBaseInfo_ = other.redEnveBaseInfo_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              redEnveBaseInfoBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getRedEnveBaseInfoFieldBuilder() : null;
+            } else {
+              redEnveBaseInfoBuilder_.addAllMessages(other.redEnveBaseInfo_);
+            }
+          }
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.PaymentProtos.PRedEnveList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.PaymentProtos.PRedEnveList) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo> redEnveBaseInfo_ =
+        java.util.Collections.emptyList();
+      private void ensureRedEnveBaseInfoIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          redEnveBaseInfo_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo>(redEnveBaseInfo_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo, com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfoOrBuilder> redEnveBaseInfoBuilder_;
+
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       */
+      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo> getRedEnveBaseInfoList() {
+        if (redEnveBaseInfoBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(redEnveBaseInfo_);
+        } else {
+          return redEnveBaseInfoBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       */
+      public int getRedEnveBaseInfoCount() {
+        if (redEnveBaseInfoBuilder_ == null) {
+          return redEnveBaseInfo_.size();
+        } else {
+          return redEnveBaseInfoBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo getRedEnveBaseInfo(int index) {
+        if (redEnveBaseInfoBuilder_ == null) {
+          return redEnveBaseInfo_.get(index);
+        } else {
+          return redEnveBaseInfoBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       */
+      public Builder setRedEnveBaseInfo(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo value) {
+        if (redEnveBaseInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRedEnveBaseInfoIsMutable();
+          redEnveBaseInfo_.set(index, value);
+          onChanged();
+        } else {
+          redEnveBaseInfoBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       */
+      public Builder setRedEnveBaseInfo(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.Builder builderForValue) {
+        if (redEnveBaseInfoBuilder_ == null) {
+          ensureRedEnveBaseInfoIsMutable();
+          redEnveBaseInfo_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          redEnveBaseInfoBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       */
+      public Builder addRedEnveBaseInfo(com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo value) {
+        if (redEnveBaseInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRedEnveBaseInfoIsMutable();
+          redEnveBaseInfo_.add(value);
+          onChanged();
+        } else {
+          redEnveBaseInfoBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       */
+      public Builder addRedEnveBaseInfo(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo value) {
+        if (redEnveBaseInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRedEnveBaseInfoIsMutable();
+          redEnveBaseInfo_.add(index, value);
+          onChanged();
+        } else {
+          redEnveBaseInfoBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       */
+      public Builder addRedEnveBaseInfo(
+          com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.Builder builderForValue) {
+        if (redEnveBaseInfoBuilder_ == null) {
+          ensureRedEnveBaseInfoIsMutable();
+          redEnveBaseInfo_.add(builderForValue.build());
+          onChanged();
+        } else {
+          redEnveBaseInfoBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       */
+      public Builder addRedEnveBaseInfo(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.Builder builderForValue) {
+        if (redEnveBaseInfoBuilder_ == null) {
+          ensureRedEnveBaseInfoIsMutable();
+          redEnveBaseInfo_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          redEnveBaseInfoBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       */
+      public Builder addAllRedEnveBaseInfo(
+          java.lang.Iterable<? extends com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo> values) {
+        if (redEnveBaseInfoBuilder_ == null) {
+          ensureRedEnveBaseInfoIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, redEnveBaseInfo_);
+          onChanged();
+        } else {
+          redEnveBaseInfoBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       */
+      public Builder clearRedEnveBaseInfo() {
+        if (redEnveBaseInfoBuilder_ == null) {
+          redEnveBaseInfo_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          redEnveBaseInfoBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       */
+      public Builder removeRedEnveBaseInfo(int index) {
+        if (redEnveBaseInfoBuilder_ == null) {
+          ensureRedEnveBaseInfoIsMutable();
+          redEnveBaseInfo_.remove(index);
+          onChanged();
+        } else {
+          redEnveBaseInfoBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.Builder getRedEnveBaseInfoBuilder(
+          int index) {
+        return getRedEnveBaseInfoFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfoOrBuilder getRedEnveBaseInfoOrBuilder(
+          int index) {
+        if (redEnveBaseInfoBuilder_ == null) {
+          return redEnveBaseInfo_.get(index);  } else {
+          return redEnveBaseInfoBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       */
+      public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfoOrBuilder> 
+           getRedEnveBaseInfoOrBuilderList() {
+        if (redEnveBaseInfoBuilder_ != null) {
+          return redEnveBaseInfoBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(redEnveBaseInfo_);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.Builder addRedEnveBaseInfoBuilder() {
+        return getRedEnveBaseInfoFieldBuilder().addBuilder(
+            com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.Builder addRedEnveBaseInfoBuilder(
+          int index) {
+        return getRedEnveBaseInfoFieldBuilder().addBuilder(
+            index, com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       */
+      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.Builder> 
+           getRedEnveBaseInfoBuilderList() {
+        return getRedEnveBaseInfoFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo, com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfoOrBuilder> 
+          getRedEnveBaseInfoFieldBuilder() {
+        if (redEnveBaseInfoBuilder_ == null) {
+          redEnveBaseInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo, com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfoOrBuilder>(
+                  redEnveBaseInfo_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          redEnveBaseInfo_ = null;
+        }
+        return redEnveBaseInfoBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PRedEnveList)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PRedEnveList)
+    private static final com.blemobi.sep.probuf.PaymentProtos.PRedEnveList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.PaymentProtos.PRedEnveList();
+    }
+
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PRedEnveList> PARSER =
+        new com.google.protobuf.AbstractParser<PRedEnveList>() {
+      public PRedEnveList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PRedEnveList(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PRedEnveList> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.PaymentProtos.PRedEnveList getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PRedEnveBaseInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PRedEnveBaseInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 id = 1;</code>
+     *
+     * <pre>
+     * 唯一编号
+     * </pre>
+     */
+    int getId();
+
+    /**
+     * <code>optional string ord_no = 2;</code>
+     *
+     * <pre>
+     * 业务订单号
+     * </pre>
+     */
+    java.lang.String getOrdNo();
+    /**
+     * <code>optional string ord_no = 2;</code>
+     *
+     * <pre>
+     * 业务订单号
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getOrdNoBytes();
+
+    /**
+     * <code>optional int32 type = 3;</code>
+     *
+     * <pre>
+     * 红包类型（1-普通红包，2-等额群红包，3-随机群红包）
+     * </pre>
+     */
+    int getType();
+
+    /**
+     * <code>optional string content = 4;</code>
+     *
+     * <pre>
+     * 描述
+     * </pre>
+     */
+    java.lang.String getContent();
+    /**
+     * <code>optional string content = 4;</code>
+     *
+     * <pre>
+     * 描述
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getContentBytes();
+
+    /**
+     * <code>optional int64 send_tm = 5;</code>
+     *
+     * <pre>
+     * 发送时间
+     * </pre>
+     */
+    long getSendTm();
+
+    /**
+     * <code>optional int32 number = 6;</code>
+     *
+     * <pre>
+     * 可领取用户总数量
+     * </pre>
+     */
+    int getNumber();
+
+    /**
+     * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+     *
+     * <pre>
+     * 前五个可领取用户信息
+     * </pre>
+     */
+    java.util.List<com.blemobi.sep.probuf.AccountProtos.PUserBase> 
+        getUserBaseList();
+    /**
+     * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+     *
+     * <pre>
+     * 前五个可领取用户信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.AccountProtos.PUserBase getUserBase(int index);
+    /**
+     * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+     *
+     * <pre>
+     * 前五个可领取用户信息
+     * </pre>
+     */
+    int getUserBaseCount();
+    /**
+     * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+     *
+     * <pre>
+     * 前五个可领取用户信息
+     * </pre>
+     */
+    java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> 
+        getUserBaseOrBuilderList();
+    /**
+     * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+     *
+     * <pre>
+     * 前五个可领取用户信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserBaseOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code bbproto.PRedEnveBaseInfo}
+   *
+   * <pre>
+   ** 发红包列表单个红包信息 
+   * </pre>
+   */
+  public  static final class PRedEnveBaseInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PRedEnveBaseInfo)
+      PRedEnveBaseInfoOrBuilder {
+    // Use PRedEnveBaseInfo.newBuilder() to construct.
+    private PRedEnveBaseInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PRedEnveBaseInfo() {
+      id_ = 0;
+      ordNo_ = "";
+      type_ = 0;
+      content_ = "";
+      sendTm_ = 0L;
+      number_ = 0;
+      userBase_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PRedEnveBaseInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              id_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              ordNo_ = bs;
+              break;
+            }
+            case 24: {
+
+              type_ = input.readInt32();
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              content_ = bs;
+              break;
+            }
+            case 40: {
+
+              sendTm_ = input.readInt64();
+              break;
+            }
+            case 48: {
+
+              number_ = input.readInt32();
+              break;
+            }
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+                userBase_ = new java.util.ArrayList<com.blemobi.sep.probuf.AccountProtos.PUserBase>();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              userBase_.add(input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+          userBase_ = java.util.Collections.unmodifiableList(userBase_);
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRedEnveBaseInfo_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRedEnveBaseInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.class, com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private int id_;
+    /**
+     * <code>optional int32 id = 1;</code>
+     *
+     * <pre>
+     * 唯一编号
+     * </pre>
+     */
+    public int getId() {
+      return id_;
+    }
+
+    public static final int ORD_NO_FIELD_NUMBER = 2;
+    private volatile java.lang.Object ordNo_;
+    /**
+     * <code>optional string ord_no = 2;</code>
+     *
+     * <pre>
+     * 业务订单号
+     * </pre>
+     */
+    public java.lang.String getOrdNo() {
+      java.lang.Object ref = ordNo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          ordNo_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string ord_no = 2;</code>
+     *
+     * <pre>
+     * 业务订单号
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getOrdNoBytes() {
+      java.lang.Object ref = ordNo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ordNo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 3;
+    private int type_;
+    /**
+     * <code>optional int32 type = 3;</code>
+     *
+     * <pre>
+     * 红包类型（1-普通红包，2-等额群红包，3-随机群红包）
+     * </pre>
+     */
+    public int getType() {
+      return type_;
+    }
+
+    public static final int CONTENT_FIELD_NUMBER = 4;
+    private volatile java.lang.Object content_;
+    /**
+     * <code>optional string content = 4;</code>
+     *
+     * <pre>
+     * 描述
+     * </pre>
+     */
+    public java.lang.String getContent() {
+      java.lang.Object ref = content_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          content_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string content = 4;</code>
+     *
+     * <pre>
+     * 描述
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getContentBytes() {
+      java.lang.Object ref = content_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        content_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SEND_TM_FIELD_NUMBER = 5;
+    private long sendTm_;
+    /**
+     * <code>optional int64 send_tm = 5;</code>
+     *
+     * <pre>
+     * 发送时间
+     * </pre>
+     */
+    public long getSendTm() {
+      return sendTm_;
+    }
+
+    public static final int NUMBER_FIELD_NUMBER = 6;
+    private int number_;
+    /**
+     * <code>optional int32 number = 6;</code>
+     *
+     * <pre>
+     * 可领取用户总数量
+     * </pre>
+     */
+    public int getNumber() {
+      return number_;
+    }
+
+    public static final int USERBASE_FIELD_NUMBER = 7;
+    private java.util.List<com.blemobi.sep.probuf.AccountProtos.PUserBase> userBase_;
+    /**
+     * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+     *
+     * <pre>
+     * 前五个可领取用户信息
+     * </pre>
+     */
+    public java.util.List<com.blemobi.sep.probuf.AccountProtos.PUserBase> getUserBaseList() {
+      return userBase_;
+    }
+    /**
+     * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+     *
+     * <pre>
+     * 前五个可领取用户信息
+     * </pre>
+     */
+    public java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> 
+        getUserBaseOrBuilderList() {
+      return userBase_;
+    }
+    /**
+     * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+     *
+     * <pre>
+     * 前五个可领取用户信息
+     * </pre>
+     */
+    public int getUserBaseCount() {
+      return userBase_.size();
+    }
+    /**
+     * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+     *
+     * <pre>
+     * 前五个可领取用户信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.AccountProtos.PUserBase getUserBase(int index) {
+      return userBase_.get(index);
+    }
+    /**
+     * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+     *
+     * <pre>
+     * 前五个可领取用户信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserBaseOrBuilder(
+        int index) {
+      return userBase_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0) {
+        output.writeInt32(1, id_);
+      }
+      if (!getOrdNoBytes().isEmpty()) {
+        output.writeBytes(2, getOrdNoBytes());
+      }
+      if (type_ != 0) {
+        output.writeInt32(3, type_);
+      }
+      if (!getContentBytes().isEmpty()) {
+        output.writeBytes(4, getContentBytes());
+      }
+      if (sendTm_ != 0L) {
+        output.writeInt64(5, sendTm_);
+      }
+      if (number_ != 0) {
+        output.writeInt32(6, number_);
+      }
+      for (int i = 0; i < userBase_.size(); i++) {
+        output.writeMessage(7, userBase_.get(i));
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, id_);
+      }
+      if (!getOrdNoBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getOrdNoBytes());
+      }
+      if (type_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, type_);
+      }
+      if (!getContentBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getContentBytes());
+      }
+      if (sendTm_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, sendTm_);
+      }
+      if (number_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(6, number_);
+      }
+      for (int i = 0; i < userBase_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, userBase_.get(i));
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PRedEnveBaseInfo}
+     *
+     * <pre>
+     ** 发红包列表单个红包信息 
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PRedEnveBaseInfo)
+        com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRedEnveBaseInfo_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRedEnveBaseInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.class, com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getUserBaseFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        id_ = 0;
+
+        ordNo_ = "";
+
+        type_ = 0;
+
+        content_ = "";
+
+        sendTm_ = 0L;
+
+        number_ = 0;
+
+        if (userBaseBuilder_ == null) {
+          userBase_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+        } else {
+          userBaseBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRedEnveBaseInfo_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo build() {
+        com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo buildPartial() {
+        com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo result = new com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.id_ = id_;
+        result.ordNo_ = ordNo_;
+        result.type_ = type_;
+        result.content_ = content_;
+        result.sendTm_ = sendTm_;
+        result.number_ = number_;
+        if (userBaseBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+            userBase_ = java.util.Collections.unmodifiableList(userBase_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.userBase_ = userBase_;
+        } else {
+          result.userBase_ = userBaseBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo) {
+          return mergeFrom((com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo other) {
+        if (other == com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.getDefaultInstance()) return this;
+        if (other.getId() != 0) {
+          setId(other.getId());
+        }
+        if (!other.getOrdNo().isEmpty()) {
+          ordNo_ = other.ordNo_;
+          onChanged();
+        }
+        if (other.getType() != 0) {
+          setType(other.getType());
+        }
+        if (!other.getContent().isEmpty()) {
+          content_ = other.content_;
+          onChanged();
+        }
+        if (other.getSendTm() != 0L) {
+          setSendTm(other.getSendTm());
+        }
+        if (other.getNumber() != 0) {
+          setNumber(other.getNumber());
+        }
+        if (userBaseBuilder_ == null) {
+          if (!other.userBase_.isEmpty()) {
+            if (userBase_.isEmpty()) {
+              userBase_ = other.userBase_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureUserBaseIsMutable();
+              userBase_.addAll(other.userBase_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.userBase_.isEmpty()) {
+            if (userBaseBuilder_.isEmpty()) {
+              userBaseBuilder_.dispose();
+              userBaseBuilder_ = null;
+              userBase_ = other.userBase_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              userBaseBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getUserBaseFieldBuilder() : null;
+            } else {
+              userBaseBuilder_.addAllMessages(other.userBase_);
+            }
+          }
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int id_ ;
+      /**
+       * <code>optional int32 id = 1;</code>
+       *
+       * <pre>
+       * 唯一编号
+       * </pre>
+       */
+      public int getId() {
+        return id_;
+      }
+      /**
+       * <code>optional int32 id = 1;</code>
+       *
+       * <pre>
+       * 唯一编号
+       * </pre>
+       */
+      public Builder setId(int value) {
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 id = 1;</code>
+       *
+       * <pre>
+       * 唯一编号
+       * </pre>
+       */
+      public Builder clearId() {
+        
+        id_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object ordNo_ = "";
+      /**
+       * <code>optional string ord_no = 2;</code>
+       *
+       * <pre>
+       * 业务订单号
+       * </pre>
+       */
+      public java.lang.String getOrdNo() {
+        java.lang.Object ref = ordNo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            ordNo_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string ord_no = 2;</code>
+       *
+       * <pre>
+       * 业务订单号
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getOrdNoBytes() {
+        java.lang.Object ref = ordNo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ordNo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ord_no = 2;</code>
+       *
+       * <pre>
+       * 业务订单号
+       * </pre>
+       */
+      public Builder setOrdNo(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        ordNo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ord_no = 2;</code>
+       *
+       * <pre>
+       * 业务订单号
+       * </pre>
+       */
+      public Builder clearOrdNo() {
+        
+        ordNo_ = getDefaultInstance().getOrdNo();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ord_no = 2;</code>
+       *
+       * <pre>
+       * 业务订单号
+       * </pre>
+       */
+      public Builder setOrdNoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        ordNo_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int type_ ;
+      /**
+       * <code>optional int32 type = 3;</code>
+       *
+       * <pre>
+       * 红包类型（1-普通红包，2-等额群红包，3-随机群红包）
+       * </pre>
+       */
+      public int getType() {
+        return type_;
+      }
+      /**
+       * <code>optional int32 type = 3;</code>
+       *
+       * <pre>
+       * 红包类型（1-普通红包，2-等额群红包，3-随机群红包）
+       * </pre>
+       */
+      public Builder setType(int value) {
+        
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 type = 3;</code>
+       *
+       * <pre>
+       * 红包类型（1-普通红包，2-等额群红包，3-随机群红包）
+       * </pre>
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object content_ = "";
+      /**
+       * <code>optional string content = 4;</code>
+       *
+       * <pre>
+       * 描述
+       * </pre>
+       */
+      public java.lang.String getContent() {
+        java.lang.Object ref = content_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            content_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string content = 4;</code>
+       *
+       * <pre>
+       * 描述
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getContentBytes() {
+        java.lang.Object ref = content_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          content_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string content = 4;</code>
+       *
+       * <pre>
+       * 描述
+       * </pre>
+       */
+      public Builder setContent(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        content_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string content = 4;</code>
+       *
+       * <pre>
+       * 描述
+       * </pre>
+       */
+      public Builder clearContent() {
+        
+        content_ = getDefaultInstance().getContent();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string content = 4;</code>
+       *
+       * <pre>
+       * 描述
+       * </pre>
+       */
+      public Builder setContentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        content_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long sendTm_ ;
+      /**
+       * <code>optional int64 send_tm = 5;</code>
+       *
+       * <pre>
+       * 发送时间
+       * </pre>
+       */
+      public long getSendTm() {
+        return sendTm_;
+      }
+      /**
+       * <code>optional int64 send_tm = 5;</code>
+       *
+       * <pre>
+       * 发送时间
+       * </pre>
+       */
+      public Builder setSendTm(long value) {
+        
+        sendTm_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 send_tm = 5;</code>
+       *
+       * <pre>
+       * 发送时间
+       * </pre>
+       */
+      public Builder clearSendTm() {
+        
+        sendTm_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int number_ ;
+      /**
+       * <code>optional int32 number = 6;</code>
+       *
+       * <pre>
+       * 可领取用户总数量
+       * </pre>
+       */
+      public int getNumber() {
+        return number_;
+      }
+      /**
+       * <code>optional int32 number = 6;</code>
+       *
+       * <pre>
+       * 可领取用户总数量
+       * </pre>
+       */
+      public Builder setNumber(int value) {
+        
+        number_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 number = 6;</code>
+       *
+       * <pre>
+       * 可领取用户总数量
+       * </pre>
+       */
+      public Builder clearNumber() {
+        
+        number_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.blemobi.sep.probuf.AccountProtos.PUserBase> userBase_ =
+        java.util.Collections.emptyList();
+      private void ensureUserBaseIsMutable() {
+        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+          userBase_ = new java.util.ArrayList<com.blemobi.sep.probuf.AccountProtos.PUserBase>(userBase_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> userBaseBuilder_;
+
+      /**
+       * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+       *
+       * <pre>
+       * 前五个可领取用户信息
+       * </pre>
+       */
+      public java.util.List<com.blemobi.sep.probuf.AccountProtos.PUserBase> getUserBaseList() {
+        if (userBaseBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(userBase_);
+        } else {
+          return userBaseBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+       *
+       * <pre>
+       * 前五个可领取用户信息
+       * </pre>
+       */
+      public int getUserBaseCount() {
+        if (userBaseBuilder_ == null) {
+          return userBase_.size();
+        } else {
+          return userBaseBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+       *
+       * <pre>
+       * 前五个可领取用户信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUserBase getUserBase(int index) {
+        if (userBaseBuilder_ == null) {
+          return userBase_.get(index);
+        } else {
+          return userBaseBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+       *
+       * <pre>
+       * 前五个可领取用户信息
+       * </pre>
+       */
+      public Builder setUserBase(
+          int index, com.blemobi.sep.probuf.AccountProtos.PUserBase value) {
+        if (userBaseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUserBaseIsMutable();
+          userBase_.set(index, value);
+          onChanged();
+        } else {
+          userBaseBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+       *
+       * <pre>
+       * 前五个可领取用户信息
+       * </pre>
+       */
+      public Builder setUserBase(
+          int index, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder builderForValue) {
+        if (userBaseBuilder_ == null) {
+          ensureUserBaseIsMutable();
+          userBase_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          userBaseBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+       *
+       * <pre>
+       * 前五个可领取用户信息
+       * </pre>
+       */
+      public Builder addUserBase(com.blemobi.sep.probuf.AccountProtos.PUserBase value) {
+        if (userBaseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUserBaseIsMutable();
+          userBase_.add(value);
+          onChanged();
+        } else {
+          userBaseBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+       *
+       * <pre>
+       * 前五个可领取用户信息
+       * </pre>
+       */
+      public Builder addUserBase(
+          int index, com.blemobi.sep.probuf.AccountProtos.PUserBase value) {
+        if (userBaseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUserBaseIsMutable();
+          userBase_.add(index, value);
+          onChanged();
+        } else {
+          userBaseBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+       *
+       * <pre>
+       * 前五个可领取用户信息
+       * </pre>
+       */
+      public Builder addUserBase(
+          com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder builderForValue) {
+        if (userBaseBuilder_ == null) {
+          ensureUserBaseIsMutable();
+          userBase_.add(builderForValue.build());
+          onChanged();
+        } else {
+          userBaseBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+       *
+       * <pre>
+       * 前五个可领取用户信息
+       * </pre>
+       */
+      public Builder addUserBase(
+          int index, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder builderForValue) {
+        if (userBaseBuilder_ == null) {
+          ensureUserBaseIsMutable();
+          userBase_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          userBaseBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+       *
+       * <pre>
+       * 前五个可领取用户信息
+       * </pre>
+       */
+      public Builder addAllUserBase(
+          java.lang.Iterable<? extends com.blemobi.sep.probuf.AccountProtos.PUserBase> values) {
+        if (userBaseBuilder_ == null) {
+          ensureUserBaseIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, userBase_);
+          onChanged();
+        } else {
+          userBaseBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+       *
+       * <pre>
+       * 前五个可领取用户信息
+       * </pre>
+       */
+      public Builder clearUserBase() {
+        if (userBaseBuilder_ == null) {
+          userBase_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          userBaseBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+       *
+       * <pre>
+       * 前五个可领取用户信息
+       * </pre>
+       */
+      public Builder removeUserBase(int index) {
+        if (userBaseBuilder_ == null) {
+          ensureUserBaseIsMutable();
+          userBase_.remove(index);
+          onChanged();
+        } else {
+          userBaseBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+       *
+       * <pre>
+       * 前五个可领取用户信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder getUserBaseBuilder(
+          int index) {
+        return getUserBaseFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+       *
+       * <pre>
+       * 前五个可领取用户信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserBaseOrBuilder(
+          int index) {
+        if (userBaseBuilder_ == null) {
+          return userBase_.get(index);  } else {
+          return userBaseBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+       *
+       * <pre>
+       * 前五个可领取用户信息
+       * </pre>
+       */
+      public java.util.List<? extends com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> 
+           getUserBaseOrBuilderList() {
+        if (userBaseBuilder_ != null) {
+          return userBaseBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(userBase_);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+       *
+       * <pre>
+       * 前五个可领取用户信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder addUserBaseBuilder() {
+        return getUserBaseFieldBuilder().addBuilder(
+            com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+       *
+       * <pre>
+       * 前五个可领取用户信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder addUserBaseBuilder(
+          int index) {
+        return getUserBaseFieldBuilder().addBuilder(
+            index, com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PUserBase userBase = 7;</code>
+       *
+       * <pre>
+       * 前五个可领取用户信息
+       * </pre>
+       */
+      public java.util.List<com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder> 
+           getUserBaseBuilderList() {
+        return getUserBaseFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> 
+          getUserBaseFieldBuilder() {
+        if (userBaseBuilder_ == null) {
+          userBaseBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder>(
+                  userBase_,
+                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  getParentForChildren(),
+                  isClean());
+          userBase_ = null;
+        }
+        return userBaseBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PRedEnveBaseInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PRedEnveBaseInfo)
+    private static final com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo();
+    }
+
+    public static com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PRedEnveBaseInfo> PARSER =
+        new com.google.protobuf.AbstractParser<PRedEnveBaseInfo>() {
+      public PRedEnveBaseInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PRedEnveBaseInfo(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PRedEnveBaseInfo> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PRewardListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PRewardList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+     */
+    java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo> 
+        getRewardInfoList();
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+     */
+    com.blemobi.sep.probuf.PaymentProtos.PRewardInfo getRewardInfo(int index);
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+     */
+    int getRewardInfoCount();
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+     */
+    java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder> 
+        getRewardInfoOrBuilderList();
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+     */
+    com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder getRewardInfoOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code bbproto.PRewardList}
+   *
+   * <pre>
+   ** 打赏列表 
+   * </pre>
+   */
+  public  static final class PRewardList extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PRewardList)
+      PRewardListOrBuilder {
+    // Use PRewardList.newBuilder() to construct.
+    private PRewardList(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PRewardList() {
+      rewardInfo_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PRewardList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                rewardInfo_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              rewardInfo_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          rewardInfo_ = java.util.Collections.unmodifiableList(rewardInfo_);
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRewardList_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRewardList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.PaymentProtos.PRewardList.class, com.blemobi.sep.probuf.PaymentProtos.PRewardList.Builder.class);
+    }
+
+    public static final int REWARDINFO_FIELD_NUMBER = 1;
+    private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo> rewardInfo_;
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+     */
+    public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo> getRewardInfoList() {
+      return rewardInfo_;
+    }
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+     */
+    public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder> 
+        getRewardInfoOrBuilderList() {
+      return rewardInfo_;
+    }
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+     */
+    public int getRewardInfoCount() {
+      return rewardInfo_.size();
+    }
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+     */
+    public com.blemobi.sep.probuf.PaymentProtos.PRewardInfo getRewardInfo(int index) {
+      return rewardInfo_.get(index);
+    }
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+     */
+    public com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder getRewardInfoOrBuilder(
+        int index) {
+      return rewardInfo_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < rewardInfo_.size(); i++) {
+        output.writeMessage(1, rewardInfo_.get(i));
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < rewardInfo_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, rewardInfo_.get(i));
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.PaymentProtos.PRewardList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PRewardList}
+     *
+     * <pre>
+     ** 打赏列表 
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PRewardList)
+        com.blemobi.sep.probuf.PaymentProtos.PRewardListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRewardList_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRewardList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.PaymentProtos.PRewardList.class, com.blemobi.sep.probuf.PaymentProtos.PRewardList.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.PaymentProtos.PRewardList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getRewardInfoFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (rewardInfoBuilder_ == null) {
+          rewardInfo_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          rewardInfoBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRewardList_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardList getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.PRewardList.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardList build() {
+        com.blemobi.sep.probuf.PaymentProtos.PRewardList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardList buildPartial() {
+        com.blemobi.sep.probuf.PaymentProtos.PRewardList result = new com.blemobi.sep.probuf.PaymentProtos.PRewardList(this);
+        int from_bitField0_ = bitField0_;
+        if (rewardInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            rewardInfo_ = java.util.Collections.unmodifiableList(rewardInfo_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.rewardInfo_ = rewardInfo_;
+        } else {
+          result.rewardInfo_ = rewardInfoBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.PaymentProtos.PRewardList) {
+          return mergeFrom((com.blemobi.sep.probuf.PaymentProtos.PRewardList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.PaymentProtos.PRewardList other) {
+        if (other == com.blemobi.sep.probuf.PaymentProtos.PRewardList.getDefaultInstance()) return this;
+        if (rewardInfoBuilder_ == null) {
+          if (!other.rewardInfo_.isEmpty()) {
+            if (rewardInfo_.isEmpty()) {
+              rewardInfo_ = other.rewardInfo_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRewardInfoIsMutable();
+              rewardInfo_.addAll(other.rewardInfo_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rewardInfo_.isEmpty()) {
+            if (rewardInfoBuilder_.isEmpty()) {
+              rewardInfoBuilder_.dispose();
+              rewardInfoBuilder_ = null;
+              rewardInfo_ = other.rewardInfo_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              rewardInfoBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getRewardInfoFieldBuilder() : null;
+            } else {
+              rewardInfoBuilder_.addAllMessages(other.rewardInfo_);
+            }
+          }
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.PaymentProtos.PRewardList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.PaymentProtos.PRewardList) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo> rewardInfo_ =
+        java.util.Collections.emptyList();
+      private void ensureRewardInfoIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          rewardInfo_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo>(rewardInfo_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.PaymentProtos.PRewardInfo, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder> rewardInfoBuilder_;
+
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+       */
+      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo> getRewardInfoList() {
+        if (rewardInfoBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rewardInfo_);
+        } else {
+          return rewardInfoBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+       */
+      public int getRewardInfoCount() {
+        if (rewardInfoBuilder_ == null) {
+          return rewardInfo_.size();
+        } else {
+          return rewardInfoBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardInfo getRewardInfo(int index) {
+        if (rewardInfoBuilder_ == null) {
+          return rewardInfo_.get(index);
+        } else {
+          return rewardInfoBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+       */
+      public Builder setRewardInfo(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo value) {
+        if (rewardInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardInfoIsMutable();
+          rewardInfo_.set(index, value);
+          onChanged();
+        } else {
+          rewardInfoBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+       */
+      public Builder setRewardInfo(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder builderForValue) {
+        if (rewardInfoBuilder_ == null) {
+          ensureRewardInfoIsMutable();
+          rewardInfo_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardInfoBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+       */
+      public Builder addRewardInfo(com.blemobi.sep.probuf.PaymentProtos.PRewardInfo value) {
+        if (rewardInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardInfoIsMutable();
+          rewardInfo_.add(value);
+          onChanged();
+        } else {
+          rewardInfoBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+       */
+      public Builder addRewardInfo(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo value) {
+        if (rewardInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardInfoIsMutable();
+          rewardInfo_.add(index, value);
+          onChanged();
+        } else {
+          rewardInfoBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+       */
+      public Builder addRewardInfo(
+          com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder builderForValue) {
+        if (rewardInfoBuilder_ == null) {
+          ensureRewardInfoIsMutable();
+          rewardInfo_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rewardInfoBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+       */
+      public Builder addRewardInfo(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder builderForValue) {
+        if (rewardInfoBuilder_ == null) {
+          ensureRewardInfoIsMutable();
+          rewardInfo_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardInfoBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+       */
+      public Builder addAllRewardInfo(
+          java.lang.Iterable<? extends com.blemobi.sep.probuf.PaymentProtos.PRewardInfo> values) {
+        if (rewardInfoBuilder_ == null) {
+          ensureRewardInfoIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rewardInfo_);
+          onChanged();
+        } else {
+          rewardInfoBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+       */
+      public Builder clearRewardInfo() {
+        if (rewardInfoBuilder_ == null) {
+          rewardInfo_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          rewardInfoBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+       */
+      public Builder removeRewardInfo(int index) {
+        if (rewardInfoBuilder_ == null) {
+          ensureRewardInfoIsMutable();
+          rewardInfo_.remove(index);
+          onChanged();
+        } else {
+          rewardInfoBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder getRewardInfoBuilder(
+          int index) {
+        return getRewardInfoFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder getRewardInfoOrBuilder(
+          int index) {
+        if (rewardInfoBuilder_ == null) {
+          return rewardInfo_.get(index);  } else {
+          return rewardInfoBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+       */
+      public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder> 
+           getRewardInfoOrBuilderList() {
+        if (rewardInfoBuilder_ != null) {
+          return rewardInfoBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rewardInfo_);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder addRewardInfoBuilder() {
+        return getRewardInfoFieldBuilder().addBuilder(
+            com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder addRewardInfoBuilder(
+          int index) {
+        return getRewardInfoFieldBuilder().addBuilder(
+            index, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 1;</code>
+       */
+      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder> 
+           getRewardInfoBuilderList() {
+        return getRewardInfoFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.PaymentProtos.PRewardInfo, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder> 
+          getRewardInfoFieldBuilder() {
+        if (rewardInfoBuilder_ == null) {
+          rewardInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.blemobi.sep.probuf.PaymentProtos.PRewardInfo, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder>(
+                  rewardInfo_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          rewardInfo_ = null;
+        }
+        return rewardInfoBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PRewardList)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PRewardList)
+    private static final com.blemobi.sep.probuf.PaymentProtos.PRewardList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.PaymentProtos.PRewardList();
+    }
+
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PRewardList> PARSER =
+        new com.google.protobuf.AbstractParser<PRewardList>() {
+      public PRewardList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PRewardList(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PRewardList> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.PaymentProtos.PRewardList getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PRewardInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PRewardInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 id = 1;</code>
+     *
+     * <pre>
+     * 唯一编号
+     * </pre>
+     */
+    int getId();
+
+    /**
+     * <code>optional string ord_no = 2;</code>
+     *
+     * <pre>
+     * 业务订单号
+     * </pre>
+     */
+    java.lang.String getOrdNo();
+    /**
+     * <code>optional string ord_no = 2;</code>
+     *
+     * <pre>
+     * 业务订单号
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getOrdNoBytes();
+
+    /**
+     * <code>optional int32 money = 3;</code>
+     *
+     * <pre>
+     * 金额(单位：分)
+     * </pre>
+     */
+    int getMoney();
+
+    /**
+     * <code>optional string content = 4;</code>
+     *
+     * <pre>
+     * 描述
+     * </pre>
+     */
+    java.lang.String getContent();
+    /**
+     * <code>optional string content = 4;</code>
+     *
+     * <pre>
+     * 描述
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getContentBytes();
+
+    /**
+     * <code>optional int64 time = 5;</code>
+     *
+     * <pre>
+     * 打赏时间
+     * </pre>
+     */
+    long getTime();
+
+    /**
+     * <code>optional .bbproto.PUserBase userBase = 6;</code>
+     *
+     * <pre>
+     * 打赏人或领赏人信息
+     * </pre>
+     */
+    boolean hasUserBase();
+    /**
+     * <code>optional .bbproto.PUserBase userBase = 6;</code>
+     *
+     * <pre>
+     * 打赏人或领赏人信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.AccountProtos.PUserBase getUserBase();
+    /**
+     * <code>optional .bbproto.PUserBase userBase = 6;</code>
+     *
+     * <pre>
+     * 打赏人或领赏人信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserBaseOrBuilder();
+  }
+  /**
+   * Protobuf type {@code bbproto.PRewardInfo}
+   *
+   * <pre>
+   ** 打赏列表详情 
+   * </pre>
+   */
+  public  static final class PRewardInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PRewardInfo)
+      PRewardInfoOrBuilder {
+    // Use PRewardInfo.newBuilder() to construct.
+    private PRewardInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PRewardInfo() {
+      id_ = 0;
+      ordNo_ = "";
+      money_ = 0;
+      content_ = "";
+      time_ = 0L;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PRewardInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              id_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              ordNo_ = bs;
+              break;
+            }
+            case 24: {
+
+              money_ = input.readInt32();
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              content_ = bs;
+              break;
+            }
+            case 40: {
+
+              time_ = input.readInt64();
+              break;
+            }
+            case 50: {
+              com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder subBuilder = null;
+              if (userBase_ != null) {
+                subBuilder = userBase_.toBuilder();
+              }
+              userBase_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(userBase_);
+                userBase_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRewardInfo_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRewardInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.class, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private int id_;
+    /**
+     * <code>optional int32 id = 1;</code>
+     *
+     * <pre>
+     * 唯一编号
+     * </pre>
+     */
+    public int getId() {
+      return id_;
+    }
+
+    public static final int ORD_NO_FIELD_NUMBER = 2;
+    private volatile java.lang.Object ordNo_;
+    /**
+     * <code>optional string ord_no = 2;</code>
+     *
+     * <pre>
+     * 业务订单号
+     * </pre>
+     */
+    public java.lang.String getOrdNo() {
+      java.lang.Object ref = ordNo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          ordNo_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string ord_no = 2;</code>
+     *
+     * <pre>
+     * 业务订单号
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getOrdNoBytes() {
+      java.lang.Object ref = ordNo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ordNo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MONEY_FIELD_NUMBER = 3;
+    private int money_;
+    /**
+     * <code>optional int32 money = 3;</code>
+     *
+     * <pre>
+     * 金额(单位：分)
+     * </pre>
+     */
+    public int getMoney() {
+      return money_;
+    }
+
+    public static final int CONTENT_FIELD_NUMBER = 4;
+    private volatile java.lang.Object content_;
+    /**
+     * <code>optional string content = 4;</code>
+     *
+     * <pre>
+     * 描述
+     * </pre>
+     */
+    public java.lang.String getContent() {
+      java.lang.Object ref = content_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          content_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string content = 4;</code>
+     *
+     * <pre>
+     * 描述
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getContentBytes() {
+      java.lang.Object ref = content_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        content_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TIME_FIELD_NUMBER = 5;
+    private long time_;
+    /**
+     * <code>optional int64 time = 5;</code>
+     *
+     * <pre>
+     * 打赏时间
+     * </pre>
+     */
+    public long getTime() {
+      return time_;
+    }
+
+    public static final int USERBASE_FIELD_NUMBER = 6;
+    private com.blemobi.sep.probuf.AccountProtos.PUserBase userBase_;
+    /**
+     * <code>optional .bbproto.PUserBase userBase = 6;</code>
+     *
+     * <pre>
+     * 打赏人或领赏人信息
+     * </pre>
+     */
+    public boolean hasUserBase() {
+      return userBase_ != null;
+    }
+    /**
+     * <code>optional .bbproto.PUserBase userBase = 6;</code>
+     *
+     * <pre>
+     * 打赏人或领赏人信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.AccountProtos.PUserBase getUserBase() {
+      return userBase_ == null ? com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : userBase_;
+    }
+    /**
+     * <code>optional .bbproto.PUserBase userBase = 6;</code>
+     *
+     * <pre>
+     * 打赏人或领赏人信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserBaseOrBuilder() {
+      return getUserBase();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0) {
+        output.writeInt32(1, id_);
+      }
+      if (!getOrdNoBytes().isEmpty()) {
+        output.writeBytes(2, getOrdNoBytes());
+      }
+      if (money_ != 0) {
+        output.writeInt32(3, money_);
+      }
+      if (!getContentBytes().isEmpty()) {
+        output.writeBytes(4, getContentBytes());
+      }
+      if (time_ != 0L) {
+        output.writeInt64(5, time_);
+      }
+      if (userBase_ != null) {
+        output.writeMessage(6, getUserBase());
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, id_);
+      }
+      if (!getOrdNoBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getOrdNoBytes());
+      }
+      if (money_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, money_);
+      }
+      if (!getContentBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getContentBytes());
+      }
+      if (time_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, time_);
+      }
+      if (userBase_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getUserBase());
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.PaymentProtos.PRewardInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PRewardInfo}
+     *
+     * <pre>
+     ** 打赏列表详情 
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PRewardInfo)
+        com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRewardInfo_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRewardInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.class, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        id_ = 0;
+
+        ordNo_ = "";
+
+        money_ = 0;
+
+        content_ = "";
+
+        time_ = 0L;
+
+        if (userBaseBuilder_ == null) {
+          userBase_ = null;
+        } else {
+          userBase_ = null;
+          userBaseBuilder_ = null;
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRewardInfo_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardInfo getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardInfo build() {
+        com.blemobi.sep.probuf.PaymentProtos.PRewardInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardInfo buildPartial() {
+        com.blemobi.sep.probuf.PaymentProtos.PRewardInfo result = new com.blemobi.sep.probuf.PaymentProtos.PRewardInfo(this);
+        result.id_ = id_;
+        result.ordNo_ = ordNo_;
+        result.money_ = money_;
+        result.content_ = content_;
+        result.time_ = time_;
+        if (userBaseBuilder_ == null) {
+          result.userBase_ = userBase_;
+        } else {
+          result.userBase_ = userBaseBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.PaymentProtos.PRewardInfo) {
+          return mergeFrom((com.blemobi.sep.probuf.PaymentProtos.PRewardInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.PaymentProtos.PRewardInfo other) {
+        if (other == com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.getDefaultInstance()) return this;
+        if (other.getId() != 0) {
+          setId(other.getId());
+        }
+        if (!other.getOrdNo().isEmpty()) {
+          ordNo_ = other.ordNo_;
+          onChanged();
+        }
+        if (other.getMoney() != 0) {
+          setMoney(other.getMoney());
+        }
+        if (!other.getContent().isEmpty()) {
+          content_ = other.content_;
+          onChanged();
+        }
+        if (other.getTime() != 0L) {
+          setTime(other.getTime());
+        }
+        if (other.hasUserBase()) {
+          mergeUserBase(other.getUserBase());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.PaymentProtos.PRewardInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.PaymentProtos.PRewardInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int id_ ;
+      /**
+       * <code>optional int32 id = 1;</code>
+       *
+       * <pre>
+       * 唯一编号
+       * </pre>
+       */
+      public int getId() {
+        return id_;
+      }
+      /**
+       * <code>optional int32 id = 1;</code>
+       *
+       * <pre>
+       * 唯一编号
+       * </pre>
+       */
+      public Builder setId(int value) {
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 id = 1;</code>
+       *
+       * <pre>
+       * 唯一编号
+       * </pre>
+       */
+      public Builder clearId() {
+        
+        id_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object ordNo_ = "";
+      /**
+       * <code>optional string ord_no = 2;</code>
+       *
+       * <pre>
+       * 业务订单号
+       * </pre>
+       */
+      public java.lang.String getOrdNo() {
+        java.lang.Object ref = ordNo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            ordNo_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string ord_no = 2;</code>
+       *
+       * <pre>
+       * 业务订单号
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getOrdNoBytes() {
+        java.lang.Object ref = ordNo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ordNo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ord_no = 2;</code>
+       *
+       * <pre>
+       * 业务订单号
+       * </pre>
+       */
+      public Builder setOrdNo(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        ordNo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ord_no = 2;</code>
+       *
+       * <pre>
+       * 业务订单号
+       * </pre>
+       */
+      public Builder clearOrdNo() {
+        
+        ordNo_ = getDefaultInstance().getOrdNo();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string ord_no = 2;</code>
+       *
+       * <pre>
+       * 业务订单号
+       * </pre>
+       */
+      public Builder setOrdNoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        ordNo_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int money_ ;
+      /**
+       * <code>optional int32 money = 3;</code>
+       *
+       * <pre>
+       * 金额(单位：分)
+       * </pre>
+       */
+      public int getMoney() {
+        return money_;
+      }
+      /**
+       * <code>optional int32 money = 3;</code>
+       *
+       * <pre>
+       * 金额(单位：分)
+       * </pre>
+       */
+      public Builder setMoney(int value) {
+        
+        money_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 money = 3;</code>
+       *
+       * <pre>
+       * 金额(单位：分)
+       * </pre>
+       */
+      public Builder clearMoney() {
+        
+        money_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object content_ = "";
+      /**
+       * <code>optional string content = 4;</code>
+       *
+       * <pre>
+       * 描述
+       * </pre>
+       */
+      public java.lang.String getContent() {
+        java.lang.Object ref = content_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            content_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string content = 4;</code>
+       *
+       * <pre>
+       * 描述
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getContentBytes() {
+        java.lang.Object ref = content_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          content_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string content = 4;</code>
+       *
+       * <pre>
+       * 描述
+       * </pre>
+       */
+      public Builder setContent(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        content_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string content = 4;</code>
+       *
+       * <pre>
+       * 描述
+       * </pre>
+       */
+      public Builder clearContent() {
+        
+        content_ = getDefaultInstance().getContent();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string content = 4;</code>
+       *
+       * <pre>
+       * 描述
+       * </pre>
+       */
+      public Builder setContentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        content_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long time_ ;
+      /**
+       * <code>optional int64 time = 5;</code>
+       *
+       * <pre>
+       * 打赏时间
+       * </pre>
+       */
+      public long getTime() {
+        return time_;
+      }
+      /**
+       * <code>optional int64 time = 5;</code>
+       *
+       * <pre>
+       * 打赏时间
+       * </pre>
+       */
+      public Builder setTime(long value) {
+        
+        time_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 time = 5;</code>
+       *
+       * <pre>
+       * 打赏时间
+       * </pre>
+       */
+      public Builder clearTime() {
+        
+        time_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.blemobi.sep.probuf.AccountProtos.PUserBase userBase_ = null;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> userBaseBuilder_;
+      /**
+       * <code>optional .bbproto.PUserBase userBase = 6;</code>
+       *
+       * <pre>
+       * 打赏人或领赏人信息
+       * </pre>
+       */
+      public boolean hasUserBase() {
+        return userBaseBuilder_ != null || userBase_ != null;
+      }
+      /**
+       * <code>optional .bbproto.PUserBase userBase = 6;</code>
+       *
+       * <pre>
+       * 打赏人或领赏人信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUserBase getUserBase() {
+        if (userBaseBuilder_ == null) {
+          return userBase_ == null ? com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : userBase_;
+        } else {
+          return userBaseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .bbproto.PUserBase userBase = 6;</code>
+       *
+       * <pre>
+       * 打赏人或领赏人信息
+       * </pre>
+       */
+      public Builder setUserBase(com.blemobi.sep.probuf.AccountProtos.PUserBase value) {
+        if (userBaseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          userBase_ = value;
+          onChanged();
+        } else {
+          userBaseBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PUserBase userBase = 6;</code>
+       *
+       * <pre>
+       * 打赏人或领赏人信息
+       * </pre>
+       */
+      public Builder setUserBase(
+          com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder builderForValue) {
+        if (userBaseBuilder_ == null) {
+          userBase_ = builderForValue.build();
+          onChanged();
+        } else {
+          userBaseBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PUserBase userBase = 6;</code>
+       *
+       * <pre>
+       * 打赏人或领赏人信息
+       * </pre>
+       */
+      public Builder mergeUserBase(com.blemobi.sep.probuf.AccountProtos.PUserBase value) {
+        if (userBaseBuilder_ == null) {
+          if (userBase_ != null) {
+            userBase_ =
+              com.blemobi.sep.probuf.AccountProtos.PUserBase.newBuilder(userBase_).mergeFrom(value).buildPartial();
+          } else {
+            userBase_ = value;
+          }
+          onChanged();
+        } else {
+          userBaseBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PUserBase userBase = 6;</code>
+       *
+       * <pre>
+       * 打赏人或领赏人信息
+       * </pre>
+       */
+      public Builder clearUserBase() {
+        if (userBaseBuilder_ == null) {
+          userBase_ = null;
+          onChanged();
+        } else {
+          userBase_ = null;
+          userBaseBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PUserBase userBase = 6;</code>
+       *
+       * <pre>
+       * 打赏人或领赏人信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder getUserBaseBuilder() {
+        
+        onChanged();
+        return getUserBaseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .bbproto.PUserBase userBase = 6;</code>
+       *
+       * <pre>
+       * 打赏人或领赏人信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserBaseOrBuilder() {
+        if (userBaseBuilder_ != null) {
+          return userBaseBuilder_.getMessageOrBuilder();
+        } else {
+          return userBase_ == null ?
+              com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : userBase_;
+        }
+      }
+      /**
+       * <code>optional .bbproto.PUserBase userBase = 6;</code>
+       *
+       * <pre>
+       * 打赏人或领赏人信息
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> 
+          getUserBaseFieldBuilder() {
+        if (userBaseBuilder_ == null) {
+          userBaseBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder>(
+                  getUserBase(),
+                  getParentForChildren(),
+                  isClean());
+          userBase_ = null;
+        }
+        return userBaseBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PRewardInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PRewardInfo)
+    private static final com.blemobi.sep.probuf.PaymentProtos.PRewardInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.PaymentProtos.PRewardInfo();
+    }
+
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PRewardInfo> PARSER =
+        new com.google.protobuf.AbstractParser<PRewardInfo>() {
+      public PRewardInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PRewardInfo(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PRewardInfo> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.PaymentProtos.PRewardInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PRewardInfoListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PRewardInfoList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .bbproto.PRewardInfo rewardInfo = 1;</code>
+     *
+     * <pre>
+     * 打赏信息
+     * </pre>
+     */
+    boolean hasRewardInfo();
+    /**
+     * <code>optional .bbproto.PRewardInfo rewardInfo = 1;</code>
+     *
+     * <pre>
+     * 打赏信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.PaymentProtos.PRewardInfo getRewardInfo();
+    /**
+     * <code>optional .bbproto.PRewardInfo rewardInfo = 1;</code>
+     *
+     * <pre>
+     * 打赏信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder getRewardInfoOrBuilder();
+
+    /**
+     * <code>optional int32 money = 2;</code>
+     *
+     * <pre>
+     * 打赏总金额
+     * </pre>
+     */
+    int getMoney();
+
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+     *
+     * <pre>
+     * 历史打赏信息
+     * </pre>
+     */
+    java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo> 
+        getRewardListList();
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+     *
+     * <pre>
+     * 历史打赏信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.PaymentProtos.PRewardInfo getRewardList(int index);
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+     *
+     * <pre>
+     * 历史打赏信息
+     * </pre>
+     */
+    int getRewardListCount();
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+     *
+     * <pre>
+     * 历史打赏信息
+     * </pre>
+     */
+    java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder> 
+        getRewardListOrBuilderList();
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+     *
+     * <pre>
+     * 历史打赏信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder getRewardListOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code bbproto.PRewardInfoList}
+   *
+   * <pre>
+   ** 打赏详情以及打赏人历史打赏列表 
+   * </pre>
+   */
+  public  static final class PRewardInfoList extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PRewardInfoList)
+      PRewardInfoListOrBuilder {
+    // Use PRewardInfoList.newBuilder() to construct.
+    private PRewardInfoList(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PRewardInfoList() {
+      money_ = 0;
+      rewardList_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PRewardInfoList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder subBuilder = null;
+              if (rewardInfo_ != null) {
+                subBuilder = rewardInfo_.toBuilder();
+              }
+              rewardInfo_ = input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rewardInfo_);
+                rewardInfo_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 16: {
+
+              money_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                rewardList_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              rewardList_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          rewardList_ = java.util.Collections.unmodifiableList(rewardList_);
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRewardInfoList_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRewardInfoList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList.class, com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int REWARDINFO_FIELD_NUMBER = 1;
+    private com.blemobi.sep.probuf.PaymentProtos.PRewardInfo rewardInfo_;
+    /**
+     * <code>optional .bbproto.PRewardInfo rewardInfo = 1;</code>
+     *
+     * <pre>
+     * 打赏信息
+     * </pre>
+     */
+    public boolean hasRewardInfo() {
+      return rewardInfo_ != null;
+    }
+    /**
+     * <code>optional .bbproto.PRewardInfo rewardInfo = 1;</code>
+     *
+     * <pre>
+     * 打赏信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.PaymentProtos.PRewardInfo getRewardInfo() {
+      return rewardInfo_ == null ? com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.getDefaultInstance() : rewardInfo_;
+    }
+    /**
+     * <code>optional .bbproto.PRewardInfo rewardInfo = 1;</code>
+     *
+     * <pre>
+     * 打赏信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder getRewardInfoOrBuilder() {
+      return getRewardInfo();
+    }
+
+    public static final int MONEY_FIELD_NUMBER = 2;
+    private int money_;
+    /**
+     * <code>optional int32 money = 2;</code>
+     *
+     * <pre>
+     * 打赏总金额
+     * </pre>
+     */
+    public int getMoney() {
+      return money_;
+    }
+
+    public static final int REWARDLIST_FIELD_NUMBER = 3;
+    private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo> rewardList_;
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+     *
+     * <pre>
+     * 历史打赏信息
+     * </pre>
+     */
+    public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo> getRewardListList() {
+      return rewardList_;
+    }
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+     *
+     * <pre>
+     * 历史打赏信息
+     * </pre>
+     */
+    public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder> 
+        getRewardListOrBuilderList() {
+      return rewardList_;
+    }
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+     *
+     * <pre>
+     * 历史打赏信息
+     * </pre>
+     */
+    public int getRewardListCount() {
+      return rewardList_.size();
+    }
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+     *
+     * <pre>
+     * 历史打赏信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.PaymentProtos.PRewardInfo getRewardList(int index) {
+      return rewardList_.get(index);
+    }
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+     *
+     * <pre>
+     * 历史打赏信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder getRewardListOrBuilder(
+        int index) {
+      return rewardList_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (rewardInfo_ != null) {
+        output.writeMessage(1, getRewardInfo());
+      }
+      if (money_ != 0) {
+        output.writeInt32(2, money_);
+      }
+      for (int i = 0; i < rewardList_.size(); i++) {
+        output.writeMessage(3, rewardList_.get(i));
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (rewardInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getRewardInfo());
+      }
+      if (money_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, money_);
+      }
+      for (int i = 0; i < rewardList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, rewardList_.get(i));
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PRewardInfoList}
+     *
+     * <pre>
+     ** 打赏详情以及打赏人历史打赏列表 
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PRewardInfoList)
+        com.blemobi.sep.probuf.PaymentProtos.PRewardInfoListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRewardInfoList_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRewardInfoList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList.class, com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getRewardListFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (rewardInfoBuilder_ == null) {
+          rewardInfo_ = null;
+        } else {
+          rewardInfo_ = null;
+          rewardInfoBuilder_ = null;
+        }
+        money_ = 0;
+
+        if (rewardListBuilder_ == null) {
+          rewardList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          rewardListBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PRewardInfoList_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList build() {
+        com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList buildPartial() {
+        com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList result = new com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (rewardInfoBuilder_ == null) {
+          result.rewardInfo_ = rewardInfo_;
+        } else {
+          result.rewardInfo_ = rewardInfoBuilder_.build();
+        }
+        result.money_ = money_;
+        if (rewardListBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            rewardList_ = java.util.Collections.unmodifiableList(rewardList_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.rewardList_ = rewardList_;
+        } else {
+          result.rewardList_ = rewardListBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList) {
+          return mergeFrom((com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList other) {
+        if (other == com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList.getDefaultInstance()) return this;
+        if (other.hasRewardInfo()) {
+          mergeRewardInfo(other.getRewardInfo());
+        }
+        if (other.getMoney() != 0) {
+          setMoney(other.getMoney());
+        }
+        if (rewardListBuilder_ == null) {
+          if (!other.rewardList_.isEmpty()) {
+            if (rewardList_.isEmpty()) {
+              rewardList_ = other.rewardList_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureRewardListIsMutable();
+              rewardList_.addAll(other.rewardList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rewardList_.isEmpty()) {
+            if (rewardListBuilder_.isEmpty()) {
+              rewardListBuilder_.dispose();
+              rewardListBuilder_ = null;
+              rewardList_ = other.rewardList_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              rewardListBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getRewardListFieldBuilder() : null;
+            } else {
+              rewardListBuilder_.addAllMessages(other.rewardList_);
+            }
+          }
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.blemobi.sep.probuf.PaymentProtos.PRewardInfo rewardInfo_ = null;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.PaymentProtos.PRewardInfo, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder> rewardInfoBuilder_;
+      /**
+       * <code>optional .bbproto.PRewardInfo rewardInfo = 1;</code>
+       *
+       * <pre>
+       * 打赏信息
+       * </pre>
+       */
+      public boolean hasRewardInfo() {
+        return rewardInfoBuilder_ != null || rewardInfo_ != null;
+      }
+      /**
+       * <code>optional .bbproto.PRewardInfo rewardInfo = 1;</code>
+       *
+       * <pre>
+       * 打赏信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardInfo getRewardInfo() {
+        if (rewardInfoBuilder_ == null) {
+          return rewardInfo_ == null ? com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.getDefaultInstance() : rewardInfo_;
+        } else {
+          return rewardInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .bbproto.PRewardInfo rewardInfo = 1;</code>
+       *
+       * <pre>
+       * 打赏信息
+       * </pre>
+       */
+      public Builder setRewardInfo(com.blemobi.sep.probuf.PaymentProtos.PRewardInfo value) {
+        if (rewardInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rewardInfo_ = value;
+          onChanged();
+        } else {
+          rewardInfoBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PRewardInfo rewardInfo = 1;</code>
+       *
+       * <pre>
+       * 打赏信息
+       * </pre>
+       */
+      public Builder setRewardInfo(
+          com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder builderForValue) {
+        if (rewardInfoBuilder_ == null) {
+          rewardInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          rewardInfoBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PRewardInfo rewardInfo = 1;</code>
+       *
+       * <pre>
+       * 打赏信息
+       * </pre>
+       */
+      public Builder mergeRewardInfo(com.blemobi.sep.probuf.PaymentProtos.PRewardInfo value) {
+        if (rewardInfoBuilder_ == null) {
+          if (rewardInfo_ != null) {
+            rewardInfo_ =
+              com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.newBuilder(rewardInfo_).mergeFrom(value).buildPartial();
+          } else {
+            rewardInfo_ = value;
+          }
+          onChanged();
+        } else {
+          rewardInfoBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PRewardInfo rewardInfo = 1;</code>
+       *
+       * <pre>
+       * 打赏信息
+       * </pre>
+       */
+      public Builder clearRewardInfo() {
+        if (rewardInfoBuilder_ == null) {
+          rewardInfo_ = null;
+          onChanged();
+        } else {
+          rewardInfo_ = null;
+          rewardInfoBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PRewardInfo rewardInfo = 1;</code>
+       *
+       * <pre>
+       * 打赏信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder getRewardInfoBuilder() {
+        
+        onChanged();
+        return getRewardInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .bbproto.PRewardInfo rewardInfo = 1;</code>
+       *
+       * <pre>
+       * 打赏信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder getRewardInfoOrBuilder() {
+        if (rewardInfoBuilder_ != null) {
+          return rewardInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return rewardInfo_ == null ?
+              com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.getDefaultInstance() : rewardInfo_;
+        }
+      }
+      /**
+       * <code>optional .bbproto.PRewardInfo rewardInfo = 1;</code>
+       *
+       * <pre>
+       * 打赏信息
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.PaymentProtos.PRewardInfo, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder> 
+          getRewardInfoFieldBuilder() {
+        if (rewardInfoBuilder_ == null) {
+          rewardInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.blemobi.sep.probuf.PaymentProtos.PRewardInfo, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder>(
+                  getRewardInfo(),
+                  getParentForChildren(),
+                  isClean());
+          rewardInfo_ = null;
+        }
+        return rewardInfoBuilder_;
+      }
+
+      private int money_ ;
+      /**
+       * <code>optional int32 money = 2;</code>
+       *
+       * <pre>
+       * 打赏总金额
+       * </pre>
+       */
+      public int getMoney() {
+        return money_;
+      }
+      /**
+       * <code>optional int32 money = 2;</code>
+       *
+       * <pre>
+       * 打赏总金额
+       * </pre>
+       */
+      public Builder setMoney(int value) {
+        
+        money_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 money = 2;</code>
+       *
+       * <pre>
+       * 打赏总金额
+       * </pre>
+       */
+      public Builder clearMoney() {
+        
+        money_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo> rewardList_ =
+        java.util.Collections.emptyList();
+      private void ensureRewardListIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          rewardList_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo>(rewardList_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.PaymentProtos.PRewardInfo, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder> rewardListBuilder_;
+
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+       *
+       * <pre>
+       * 历史打赏信息
+       * </pre>
+       */
+      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo> getRewardListList() {
+        if (rewardListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rewardList_);
+        } else {
+          return rewardListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+       *
+       * <pre>
+       * 历史打赏信息
+       * </pre>
+       */
+      public int getRewardListCount() {
+        if (rewardListBuilder_ == null) {
+          return rewardList_.size();
+        } else {
+          return rewardListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+       *
+       * <pre>
+       * 历史打赏信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardInfo getRewardList(int index) {
+        if (rewardListBuilder_ == null) {
+          return rewardList_.get(index);
+        } else {
+          return rewardListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+       *
+       * <pre>
+       * 历史打赏信息
+       * </pre>
+       */
+      public Builder setRewardList(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo value) {
+        if (rewardListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardListIsMutable();
+          rewardList_.set(index, value);
+          onChanged();
+        } else {
+          rewardListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+       *
+       * <pre>
+       * 历史打赏信息
+       * </pre>
+       */
+      public Builder setRewardList(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder builderForValue) {
+        if (rewardListBuilder_ == null) {
+          ensureRewardListIsMutable();
+          rewardList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+       *
+       * <pre>
+       * 历史打赏信息
+       * </pre>
+       */
+      public Builder addRewardList(com.blemobi.sep.probuf.PaymentProtos.PRewardInfo value) {
+        if (rewardListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardListIsMutable();
+          rewardList_.add(value);
+          onChanged();
+        } else {
+          rewardListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+       *
+       * <pre>
+       * 历史打赏信息
+       * </pre>
+       */
+      public Builder addRewardList(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo value) {
+        if (rewardListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardListIsMutable();
+          rewardList_.add(index, value);
+          onChanged();
+        } else {
+          rewardListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+       *
+       * <pre>
+       * 历史打赏信息
+       * </pre>
+       */
+      public Builder addRewardList(
+          com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder builderForValue) {
+        if (rewardListBuilder_ == null) {
+          ensureRewardListIsMutable();
+          rewardList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rewardListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+       *
+       * <pre>
+       * 历史打赏信息
+       * </pre>
+       */
+      public Builder addRewardList(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder builderForValue) {
+        if (rewardListBuilder_ == null) {
+          ensureRewardListIsMutable();
+          rewardList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+       *
+       * <pre>
+       * 历史打赏信息
+       * </pre>
+       */
+      public Builder addAllRewardList(
+          java.lang.Iterable<? extends com.blemobi.sep.probuf.PaymentProtos.PRewardInfo> values) {
+        if (rewardListBuilder_ == null) {
+          ensureRewardListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rewardList_);
+          onChanged();
+        } else {
+          rewardListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+       *
+       * <pre>
+       * 历史打赏信息
+       * </pre>
+       */
+      public Builder clearRewardList() {
+        if (rewardListBuilder_ == null) {
+          rewardList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          rewardListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+       *
+       * <pre>
+       * 历史打赏信息
+       * </pre>
+       */
+      public Builder removeRewardList(int index) {
+        if (rewardListBuilder_ == null) {
+          ensureRewardListIsMutable();
+          rewardList_.remove(index);
+          onChanged();
+        } else {
+          rewardListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+       *
+       * <pre>
+       * 历史打赏信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder getRewardListBuilder(
+          int index) {
+        return getRewardListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+       *
+       * <pre>
+       * 历史打赏信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder getRewardListOrBuilder(
+          int index) {
+        if (rewardListBuilder_ == null) {
+          return rewardList_.get(index);  } else {
+          return rewardListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+       *
+       * <pre>
+       * 历史打赏信息
+       * </pre>
+       */
+      public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder> 
+           getRewardListOrBuilderList() {
+        if (rewardListBuilder_ != null) {
+          return rewardListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rewardList_);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+       *
+       * <pre>
+       * 历史打赏信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder addRewardListBuilder() {
+        return getRewardListFieldBuilder().addBuilder(
+            com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+       *
+       * <pre>
+       * 历史打赏信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder addRewardListBuilder(
+          int index) {
+        return getRewardListFieldBuilder().addBuilder(
+            index, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardList = 3;</code>
+       *
+       * <pre>
+       * 历史打赏信息
+       * </pre>
+       */
+      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder> 
+           getRewardListBuilderList() {
+        return getRewardListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.PaymentProtos.PRewardInfo, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder> 
+          getRewardListFieldBuilder() {
+        if (rewardListBuilder_ == null) {
+          rewardListBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.blemobi.sep.probuf.PaymentProtos.PRewardInfo, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder>(
+                  rewardList_,
+                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  getParentForChildren(),
+                  isClean());
+          rewardList_ = null;
+        }
+        return rewardListBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PRewardInfoList)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PRewardInfoList)
+    private static final com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList();
+    }
+
+    public static com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PRewardInfoList> PARSER =
+        new com.google.protobuf.AbstractParser<PRewardInfoList>() {
+      public PRewardInfoList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PRewardInfoList(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PRewardInfoList> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.PaymentProtos.PRewardInfoList getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PSreachListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PSreachList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+     *
+     * <pre>
+     * 搜索到的红包信息
+     * </pre>
+     */
+    java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo> 
+        getRedEnveBaseInfoList();
+    /**
+     * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+     *
+     * <pre>
+     * 搜索到的红包信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo getRedEnveBaseInfo(int index);
+    /**
+     * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+     *
+     * <pre>
+     * 搜索到的红包信息
+     * </pre>
+     */
+    int getRedEnveBaseInfoCount();
+    /**
+     * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+     *
+     * <pre>
+     * 搜索到的红包信息
+     * </pre>
+     */
+    java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfoOrBuilder> 
+        getRedEnveBaseInfoOrBuilderList();
+    /**
+     * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+     *
+     * <pre>
+     * 搜索到的红包信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfoOrBuilder getRedEnveBaseInfoOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+     *
+     * <pre>
+     * 搜索到的打赏信息
+     * </pre>
+     */
+    java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo> 
+        getRewardInfoList();
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+     *
+     * <pre>
+     * 搜索到的打赏信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.PaymentProtos.PRewardInfo getRewardInfo(int index);
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+     *
+     * <pre>
+     * 搜索到的打赏信息
+     * </pre>
+     */
+    int getRewardInfoCount();
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+     *
+     * <pre>
+     * 搜索到的打赏信息
+     * </pre>
+     */
+    java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder> 
+        getRewardInfoOrBuilderList();
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+     *
+     * <pre>
+     * 搜索到的打赏信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder getRewardInfoOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code bbproto.PSreachList}
+   *
+   * <pre>
+   ** 搜索的红包和打赏信息 
+   * </pre>
+   */
+  public  static final class PSreachList extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PSreachList)
+      PSreachListOrBuilder {
+    // Use PSreachList.newBuilder() to construct.
+    private PSreachList(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PSreachList() {
+      redEnveBaseInfo_ = java.util.Collections.emptyList();
+      rewardInfo_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PSreachList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                redEnveBaseInfo_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              redEnveBaseInfo_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.PARSER, extensionRegistry));
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                rewardInfo_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              rewardInfo_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          redEnveBaseInfo_ = java.util.Collections.unmodifiableList(redEnveBaseInfo_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          rewardInfo_ = java.util.Collections.unmodifiableList(rewardInfo_);
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PSreachList_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PSreachList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.PaymentProtos.PSreachList.class, com.blemobi.sep.probuf.PaymentProtos.PSreachList.Builder.class);
+    }
+
+    public static final int REDENVEBASEINFO_FIELD_NUMBER = 1;
+    private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo> redEnveBaseInfo_;
+    /**
+     * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+     *
+     * <pre>
+     * 搜索到的红包信息
+     * </pre>
+     */
+    public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo> getRedEnveBaseInfoList() {
+      return redEnveBaseInfo_;
+    }
+    /**
+     * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+     *
+     * <pre>
+     * 搜索到的红包信息
+     * </pre>
+     */
+    public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfoOrBuilder> 
+        getRedEnveBaseInfoOrBuilderList() {
+      return redEnveBaseInfo_;
+    }
+    /**
+     * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+     *
+     * <pre>
+     * 搜索到的红包信息
+     * </pre>
+     */
+    public int getRedEnveBaseInfoCount() {
+      return redEnveBaseInfo_.size();
+    }
+    /**
+     * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+     *
+     * <pre>
+     * 搜索到的红包信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo getRedEnveBaseInfo(int index) {
+      return redEnveBaseInfo_.get(index);
+    }
+    /**
+     * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+     *
+     * <pre>
+     * 搜索到的红包信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfoOrBuilder getRedEnveBaseInfoOrBuilder(
+        int index) {
+      return redEnveBaseInfo_.get(index);
+    }
+
+    public static final int REWARDINFO_FIELD_NUMBER = 2;
+    private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo> rewardInfo_;
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+     *
+     * <pre>
+     * 搜索到的打赏信息
+     * </pre>
+     */
+    public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo> getRewardInfoList() {
+      return rewardInfo_;
+    }
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+     *
+     * <pre>
+     * 搜索到的打赏信息
+     * </pre>
+     */
+    public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder> 
+        getRewardInfoOrBuilderList() {
+      return rewardInfo_;
+    }
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+     *
+     * <pre>
+     * 搜索到的打赏信息
+     * </pre>
+     */
+    public int getRewardInfoCount() {
+      return rewardInfo_.size();
+    }
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+     *
+     * <pre>
+     * 搜索到的打赏信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.PaymentProtos.PRewardInfo getRewardInfo(int index) {
+      return rewardInfo_.get(index);
+    }
+    /**
+     * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+     *
+     * <pre>
+     * 搜索到的打赏信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder getRewardInfoOrBuilder(
+        int index) {
+      return rewardInfo_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < redEnveBaseInfo_.size(); i++) {
+        output.writeMessage(1, redEnveBaseInfo_.get(i));
+      }
+      for (int i = 0; i < rewardInfo_.size(); i++) {
+        output.writeMessage(2, rewardInfo_.get(i));
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < redEnveBaseInfo_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, redEnveBaseInfo_.get(i));
+      }
+      for (int i = 0; i < rewardInfo_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, rewardInfo_.get(i));
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.PaymentProtos.PSreachList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PSreachList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PSreachList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PSreachList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PSreachList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PSreachList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PSreachList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PSreachList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PSreachList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PSreachList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.PaymentProtos.PSreachList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PSreachList}
+     *
+     * <pre>
+     ** 搜索的红包和打赏信息 
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PSreachList)
+        com.blemobi.sep.probuf.PaymentProtos.PSreachListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PSreachList_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PSreachList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.PaymentProtos.PSreachList.class, com.blemobi.sep.probuf.PaymentProtos.PSreachList.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.PaymentProtos.PSreachList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getRedEnveBaseInfoFieldBuilder();
+          getRewardInfoFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (redEnveBaseInfoBuilder_ == null) {
+          redEnveBaseInfo_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          redEnveBaseInfoBuilder_.clear();
+        }
+        if (rewardInfoBuilder_ == null) {
+          rewardInfo_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          rewardInfoBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PSreachList_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PSreachList getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.PSreachList.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PSreachList build() {
+        com.blemobi.sep.probuf.PaymentProtos.PSreachList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PSreachList buildPartial() {
+        com.blemobi.sep.probuf.PaymentProtos.PSreachList result = new com.blemobi.sep.probuf.PaymentProtos.PSreachList(this);
+        int from_bitField0_ = bitField0_;
+        if (redEnveBaseInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            redEnveBaseInfo_ = java.util.Collections.unmodifiableList(redEnveBaseInfo_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.redEnveBaseInfo_ = redEnveBaseInfo_;
+        } else {
+          result.redEnveBaseInfo_ = redEnveBaseInfoBuilder_.build();
+        }
+        if (rewardInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            rewardInfo_ = java.util.Collections.unmodifiableList(rewardInfo_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.rewardInfo_ = rewardInfo_;
+        } else {
+          result.rewardInfo_ = rewardInfoBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.PaymentProtos.PSreachList) {
+          return mergeFrom((com.blemobi.sep.probuf.PaymentProtos.PSreachList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.PaymentProtos.PSreachList other) {
+        if (other == com.blemobi.sep.probuf.PaymentProtos.PSreachList.getDefaultInstance()) return this;
+        if (redEnveBaseInfoBuilder_ == null) {
+          if (!other.redEnveBaseInfo_.isEmpty()) {
+            if (redEnveBaseInfo_.isEmpty()) {
+              redEnveBaseInfo_ = other.redEnveBaseInfo_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRedEnveBaseInfoIsMutable();
+              redEnveBaseInfo_.addAll(other.redEnveBaseInfo_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.redEnveBaseInfo_.isEmpty()) {
+            if (redEnveBaseInfoBuilder_.isEmpty()) {
+              redEnveBaseInfoBuilder_.dispose();
+              redEnveBaseInfoBuilder_ = null;
+              redEnveBaseInfo_ = other.redEnveBaseInfo_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              redEnveBaseInfoBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getRedEnveBaseInfoFieldBuilder() : null;
+            } else {
+              redEnveBaseInfoBuilder_.addAllMessages(other.redEnveBaseInfo_);
+            }
+          }
+        }
+        if (rewardInfoBuilder_ == null) {
+          if (!other.rewardInfo_.isEmpty()) {
+            if (rewardInfo_.isEmpty()) {
+              rewardInfo_ = other.rewardInfo_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureRewardInfoIsMutable();
+              rewardInfo_.addAll(other.rewardInfo_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rewardInfo_.isEmpty()) {
+            if (rewardInfoBuilder_.isEmpty()) {
+              rewardInfoBuilder_.dispose();
+              rewardInfoBuilder_ = null;
+              rewardInfo_ = other.rewardInfo_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              rewardInfoBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getRewardInfoFieldBuilder() : null;
+            } else {
+              rewardInfoBuilder_.addAllMessages(other.rewardInfo_);
+            }
+          }
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.PaymentProtos.PSreachList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.PaymentProtos.PSreachList) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo> redEnveBaseInfo_ =
+        java.util.Collections.emptyList();
+      private void ensureRedEnveBaseInfoIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          redEnveBaseInfo_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo>(redEnveBaseInfo_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo, com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfoOrBuilder> redEnveBaseInfoBuilder_;
+
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       *
+       * <pre>
+       * 搜索到的红包信息
+       * </pre>
+       */
+      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo> getRedEnveBaseInfoList() {
+        if (redEnveBaseInfoBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(redEnveBaseInfo_);
+        } else {
+          return redEnveBaseInfoBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       *
+       * <pre>
+       * 搜索到的红包信息
+       * </pre>
+       */
+      public int getRedEnveBaseInfoCount() {
+        if (redEnveBaseInfoBuilder_ == null) {
+          return redEnveBaseInfo_.size();
+        } else {
+          return redEnveBaseInfoBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       *
+       * <pre>
+       * 搜索到的红包信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo getRedEnveBaseInfo(int index) {
+        if (redEnveBaseInfoBuilder_ == null) {
+          return redEnveBaseInfo_.get(index);
+        } else {
+          return redEnveBaseInfoBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       *
+       * <pre>
+       * 搜索到的红包信息
+       * </pre>
+       */
+      public Builder setRedEnveBaseInfo(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo value) {
+        if (redEnveBaseInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRedEnveBaseInfoIsMutable();
+          redEnveBaseInfo_.set(index, value);
+          onChanged();
+        } else {
+          redEnveBaseInfoBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       *
+       * <pre>
+       * 搜索到的红包信息
+       * </pre>
+       */
+      public Builder setRedEnveBaseInfo(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.Builder builderForValue) {
+        if (redEnveBaseInfoBuilder_ == null) {
+          ensureRedEnveBaseInfoIsMutable();
+          redEnveBaseInfo_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          redEnveBaseInfoBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       *
+       * <pre>
+       * 搜索到的红包信息
+       * </pre>
+       */
+      public Builder addRedEnveBaseInfo(com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo value) {
+        if (redEnveBaseInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRedEnveBaseInfoIsMutable();
+          redEnveBaseInfo_.add(value);
+          onChanged();
+        } else {
+          redEnveBaseInfoBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       *
+       * <pre>
+       * 搜索到的红包信息
+       * </pre>
+       */
+      public Builder addRedEnveBaseInfo(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo value) {
+        if (redEnveBaseInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRedEnveBaseInfoIsMutable();
+          redEnveBaseInfo_.add(index, value);
+          onChanged();
+        } else {
+          redEnveBaseInfoBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       *
+       * <pre>
+       * 搜索到的红包信息
+       * </pre>
+       */
+      public Builder addRedEnveBaseInfo(
+          com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.Builder builderForValue) {
+        if (redEnveBaseInfoBuilder_ == null) {
+          ensureRedEnveBaseInfoIsMutable();
+          redEnveBaseInfo_.add(builderForValue.build());
+          onChanged();
+        } else {
+          redEnveBaseInfoBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       *
+       * <pre>
+       * 搜索到的红包信息
+       * </pre>
+       */
+      public Builder addRedEnveBaseInfo(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.Builder builderForValue) {
+        if (redEnveBaseInfoBuilder_ == null) {
+          ensureRedEnveBaseInfoIsMutable();
+          redEnveBaseInfo_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          redEnveBaseInfoBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       *
+       * <pre>
+       * 搜索到的红包信息
+       * </pre>
+       */
+      public Builder addAllRedEnveBaseInfo(
+          java.lang.Iterable<? extends com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo> values) {
+        if (redEnveBaseInfoBuilder_ == null) {
+          ensureRedEnveBaseInfoIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, redEnveBaseInfo_);
+          onChanged();
+        } else {
+          redEnveBaseInfoBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       *
+       * <pre>
+       * 搜索到的红包信息
+       * </pre>
+       */
+      public Builder clearRedEnveBaseInfo() {
+        if (redEnveBaseInfoBuilder_ == null) {
+          redEnveBaseInfo_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          redEnveBaseInfoBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       *
+       * <pre>
+       * 搜索到的红包信息
+       * </pre>
+       */
+      public Builder removeRedEnveBaseInfo(int index) {
+        if (redEnveBaseInfoBuilder_ == null) {
+          ensureRedEnveBaseInfoIsMutable();
+          redEnveBaseInfo_.remove(index);
+          onChanged();
+        } else {
+          redEnveBaseInfoBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       *
+       * <pre>
+       * 搜索到的红包信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.Builder getRedEnveBaseInfoBuilder(
+          int index) {
+        return getRedEnveBaseInfoFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       *
+       * <pre>
+       * 搜索到的红包信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfoOrBuilder getRedEnveBaseInfoOrBuilder(
+          int index) {
+        if (redEnveBaseInfoBuilder_ == null) {
+          return redEnveBaseInfo_.get(index);  } else {
+          return redEnveBaseInfoBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       *
+       * <pre>
+       * 搜索到的红包信息
+       * </pre>
+       */
+      public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfoOrBuilder> 
+           getRedEnveBaseInfoOrBuilderList() {
+        if (redEnveBaseInfoBuilder_ != null) {
+          return redEnveBaseInfoBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(redEnveBaseInfo_);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       *
+       * <pre>
+       * 搜索到的红包信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.Builder addRedEnveBaseInfoBuilder() {
+        return getRedEnveBaseInfoFieldBuilder().addBuilder(
+            com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       *
+       * <pre>
+       * 搜索到的红包信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.Builder addRedEnveBaseInfoBuilder(
+          int index) {
+        return getRedEnveBaseInfoFieldBuilder().addBuilder(
+            index, com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PRedEnveBaseInfo redEnveBaseInfo = 1;</code>
+       *
+       * <pre>
+       * 搜索到的红包信息
+       * </pre>
+       */
+      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.Builder> 
+           getRedEnveBaseInfoBuilderList() {
+        return getRedEnveBaseInfoFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo, com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfoOrBuilder> 
+          getRedEnveBaseInfoFieldBuilder() {
+        if (redEnveBaseInfoBuilder_ == null) {
+          redEnveBaseInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo, com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfoOrBuilder>(
+                  redEnveBaseInfo_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          redEnveBaseInfo_ = null;
+        }
+        return redEnveBaseInfoBuilder_;
+      }
+
+      private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo> rewardInfo_ =
+        java.util.Collections.emptyList();
+      private void ensureRewardInfoIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          rewardInfo_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo>(rewardInfo_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.PaymentProtos.PRewardInfo, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder> rewardInfoBuilder_;
+
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+       *
+       * <pre>
+       * 搜索到的打赏信息
+       * </pre>
+       */
+      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo> getRewardInfoList() {
+        if (rewardInfoBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rewardInfo_);
+        } else {
+          return rewardInfoBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+       *
+       * <pre>
+       * 搜索到的打赏信息
+       * </pre>
+       */
+      public int getRewardInfoCount() {
+        if (rewardInfoBuilder_ == null) {
+          return rewardInfo_.size();
+        } else {
+          return rewardInfoBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+       *
+       * <pre>
+       * 搜索到的打赏信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardInfo getRewardInfo(int index) {
+        if (rewardInfoBuilder_ == null) {
+          return rewardInfo_.get(index);
+        } else {
+          return rewardInfoBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+       *
+       * <pre>
+       * 搜索到的打赏信息
+       * </pre>
+       */
+      public Builder setRewardInfo(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo value) {
+        if (rewardInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardInfoIsMutable();
+          rewardInfo_.set(index, value);
+          onChanged();
+        } else {
+          rewardInfoBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+       *
+       * <pre>
+       * 搜索到的打赏信息
+       * </pre>
+       */
+      public Builder setRewardInfo(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder builderForValue) {
+        if (rewardInfoBuilder_ == null) {
+          ensureRewardInfoIsMutable();
+          rewardInfo_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardInfoBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+       *
+       * <pre>
+       * 搜索到的打赏信息
+       * </pre>
+       */
+      public Builder addRewardInfo(com.blemobi.sep.probuf.PaymentProtos.PRewardInfo value) {
+        if (rewardInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardInfoIsMutable();
+          rewardInfo_.add(value);
+          onChanged();
+        } else {
+          rewardInfoBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+       *
+       * <pre>
+       * 搜索到的打赏信息
+       * </pre>
+       */
+      public Builder addRewardInfo(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo value) {
+        if (rewardInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardInfoIsMutable();
+          rewardInfo_.add(index, value);
+          onChanged();
+        } else {
+          rewardInfoBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+       *
+       * <pre>
+       * 搜索到的打赏信息
+       * </pre>
+       */
+      public Builder addRewardInfo(
+          com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder builderForValue) {
+        if (rewardInfoBuilder_ == null) {
+          ensureRewardInfoIsMutable();
+          rewardInfo_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rewardInfoBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+       *
+       * <pre>
+       * 搜索到的打赏信息
+       * </pre>
+       */
+      public Builder addRewardInfo(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder builderForValue) {
+        if (rewardInfoBuilder_ == null) {
+          ensureRewardInfoIsMutable();
+          rewardInfo_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardInfoBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+       *
+       * <pre>
+       * 搜索到的打赏信息
+       * </pre>
+       */
+      public Builder addAllRewardInfo(
+          java.lang.Iterable<? extends com.blemobi.sep.probuf.PaymentProtos.PRewardInfo> values) {
+        if (rewardInfoBuilder_ == null) {
+          ensureRewardInfoIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rewardInfo_);
+          onChanged();
+        } else {
+          rewardInfoBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+       *
+       * <pre>
+       * 搜索到的打赏信息
+       * </pre>
+       */
+      public Builder clearRewardInfo() {
+        if (rewardInfoBuilder_ == null) {
+          rewardInfo_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          rewardInfoBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+       *
+       * <pre>
+       * 搜索到的打赏信息
+       * </pre>
+       */
+      public Builder removeRewardInfo(int index) {
+        if (rewardInfoBuilder_ == null) {
+          ensureRewardInfoIsMutable();
+          rewardInfo_.remove(index);
+          onChanged();
+        } else {
+          rewardInfoBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+       *
+       * <pre>
+       * 搜索到的打赏信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder getRewardInfoBuilder(
+          int index) {
+        return getRewardInfoFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+       *
+       * <pre>
+       * 搜索到的打赏信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder getRewardInfoOrBuilder(
+          int index) {
+        if (rewardInfoBuilder_ == null) {
+          return rewardInfo_.get(index);  } else {
+          return rewardInfoBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+       *
+       * <pre>
+       * 搜索到的打赏信息
+       * </pre>
+       */
+      public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder> 
+           getRewardInfoOrBuilderList() {
+        if (rewardInfoBuilder_ != null) {
+          return rewardInfoBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rewardInfo_);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+       *
+       * <pre>
+       * 搜索到的打赏信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder addRewardInfoBuilder() {
+        return getRewardInfoFieldBuilder().addBuilder(
+            com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+       *
+       * <pre>
+       * 搜索到的打赏信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder addRewardInfoBuilder(
+          int index) {
+        return getRewardInfoFieldBuilder().addBuilder(
+            index, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PRewardInfo rewardInfo = 2;</code>
+       *
+       * <pre>
+       * 搜索到的打赏信息
+       * </pre>
+       */
+      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder> 
+           getRewardInfoBuilderList() {
+        return getRewardInfoFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.PaymentProtos.PRewardInfo, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder> 
+          getRewardInfoFieldBuilder() {
+        if (rewardInfoBuilder_ == null) {
+          rewardInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.blemobi.sep.probuf.PaymentProtos.PRewardInfo, com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PRewardInfoOrBuilder>(
+                  rewardInfo_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          rewardInfo_ = null;
+        }
+        return rewardInfoBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PSreachList)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PSreachList)
+    private static final com.blemobi.sep.probuf.PaymentProtos.PSreachList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.PaymentProtos.PSreachList();
+    }
+
+    public static com.blemobi.sep.probuf.PaymentProtos.PSreachList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PSreachList> PARSER =
+        new com.google.protobuf.AbstractParser<PSreachList>() {
+      public PSreachList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PSreachList(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PSreachList> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.PaymentProtos.PSreachList getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9465,13 +15811,17 @@ public final class PaymentProtos {
   }
   /**
    * Protobuf type {@code bbproto.PLottery}
+   *
+   * <pre>
+   * ----------------- 以下是抽奖协议 （潘有良）-----------------
+   * </pre>
    */
   public  static final class PLottery extends
       com.google.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:bbproto.PLottery)
       PLotteryOrBuilder {
     // Use PLottery.newBuilder() to construct.
-    private PLottery(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PLottery(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PLottery() {
@@ -9509,9 +15859,9 @@ public final class PaymentProtos {
               break;
             }
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              title_ = s;
+              title_ = bs;
               break;
             }
             case 16: {
@@ -9539,16 +15889,16 @@ public final class PaymentProtos {
                 locs_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PLocation>();
                 mutable_bitField0_ |= 0x00000020;
               }
-              locs_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PLocation.parser(), extensionRegistry));
+              locs_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PLocation.PARSER, extensionRegistry));
               break;
             }
             case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
               if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
                 uuidList_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000040;
               }
-              uuidList_.add(s);
+              uuidList_.add(bs);
               break;
             }
           }
@@ -9599,7 +15949,9 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        title_ = s;
+        if (bs.isValidUtf8()) {
+          title_ = s;
+        }
         return s;
       }
     }
@@ -9789,7 +16141,7 @@ public final class PaymentProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getTitleBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, title_);
+        output.writeBytes(1, getTitleBytes());
       }
       if (type_ != 0) {
         output.writeInt32(2, type_);
@@ -9807,17 +16159,19 @@ public final class PaymentProtos {
         output.writeMessage(6, locs_.get(i));
       }
       for (int i = 0; i < uuidList_.size(); i++) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 7, uuidList_.getRaw(i));
+        output.writeBytes(7, uuidList_.getByteString(i));
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getTitleBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, title_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getTitleBytes());
       }
       if (type_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -9842,12 +16196,13 @@ public final class PaymentProtos {
       {
         int dataSize = 0;
         for (int i = 0; i < uuidList_.size(); i++) {
-          dataSize += computeStringSizeNoTag(uuidList_.getRaw(i));
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(uuidList_.getByteString(i));
         }
         size += dataSize;
         size += 1 * getUuidListList().size();
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -9925,6 +16280,10 @@ public final class PaymentProtos {
     }
     /**
      * Protobuf type {@code bbproto.PLottery}
+     *
+     * <pre>
+     * ----------------- 以下是抽奖协议 （潘有良）-----------------
+     * </pre>
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -10129,7 +16488,9 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          title_ = s;
+          if (bs.isValidUtf8()) {
+            title_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -10197,8 +16558,7 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         title_ = value;
         onChanged();
         return this;
@@ -10791,8 +17151,7 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        ensureUuidListIsMutable();
+  ensureUuidListIsMutable();
         uuidList_.add(value);
         onChanged();
         return this;
@@ -10821,8 +17180,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PLottery>
-        PARSER = new com.google.protobuf.AbstractParser<PLottery>() {
+    public static final com.google.protobuf.Parser<PLottery> PARSER =
+        new com.google.protobuf.AbstractParser<PLottery>() {
       public PLottery parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10839,10 +17198,6 @@ public final class PaymentProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PLottery> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PLottery> getParserForType() {
@@ -10911,7 +17266,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PLotteryListRet)
       PLotteryListRetOrBuilder {
     // Use PLotteryListRet.newBuilder() to construct.
-    private PLotteryListRet(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PLotteryListRet(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PLotteryListRet() {
@@ -10947,7 +17302,7 @@ public final class PaymentProtos {
                 lotteries_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              lotteries_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet.parser(), extensionRegistry));
+              lotteries_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet.PARSER, extensionRegistry));
               break;
             }
           }
@@ -11049,8 +17404,9 @@ public final class PaymentProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -11058,7 +17414,7 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, lotteries_.get(i));
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -11611,8 +17967,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PLotteryListRet>
-        PARSER = new com.google.protobuf.AbstractParser<PLotteryListRet>() {
+    public static final com.google.protobuf.Parser<PLotteryListRet> PARSER =
+        new com.google.protobuf.AbstractParser<PLotteryListRet>() {
       public PLotteryListRet parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11629,10 +17985,6 @@ public final class PaymentProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PLotteryListRet> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PLotteryListRet> getParserForType() {
@@ -11675,7 +18027,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PAcceptPrize)
       PAcceptPrizeOrBuilder {
     // Use PAcceptPrize.newBuilder() to construct.
-    private PAcceptPrize(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PAcceptPrize(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PAcceptPrize() {
@@ -11707,9 +18059,9 @@ public final class PaymentProtos {
               break;
             }
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              lotteryId_ = s;
+              lotteryId_ = bs;
               break;
             }
           }
@@ -11753,7 +18105,9 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        lotteryId_ = s;
+        if (bs.isValidUtf8()) {
+          lotteryId_ = s;
+        }
         return s;
       }
     }
@@ -11791,19 +18145,21 @@ public final class PaymentProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getLotteryIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, lotteryId_);
+        output.writeBytes(1, getLotteryIdBytes());
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getLotteryIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, lotteryId_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getLotteryIdBytes());
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -11998,7 +18354,9 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          lotteryId_ = s;
+          if (bs.isValidUtf8()) {
+            lotteryId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -12066,8 +18424,7 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         lotteryId_ = value;
         onChanged();
         return this;
@@ -12096,8 +18453,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PAcceptPrize>
-        PARSER = new com.google.protobuf.AbstractParser<PAcceptPrize>() {
+    public static final com.google.protobuf.Parser<PAcceptPrize> PARSER =
+        new com.google.protobuf.AbstractParser<PAcceptPrize>() {
       public PAcceptPrize parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12114,10 +18471,6 @@ public final class PaymentProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PAcceptPrize> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PAcceptPrize> getParserForType() {
@@ -12293,7 +18646,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PLotteryDetailRet)
       PLotteryDetailRetOrBuilder {
     // Use PLotteryDetailRet.newBuilder() to construct.
-    private PLotteryDetailRet(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PLotteryDetailRet(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PLotteryDetailRet() {
@@ -12331,9 +18684,9 @@ public final class PaymentProtos {
               break;
             }
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              lotteryId_ = s;
+              lotteryId_ = bs;
               break;
             }
             case 16: {
@@ -12342,9 +18695,9 @@ public final class PaymentProtos {
               break;
             }
             case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              crtTm_ = s;
+              crtTm_ = bs;
               break;
             }
             case 32: {
@@ -12362,7 +18715,7 @@ public final class PaymentProtos {
                 locs_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PLocation>();
                 mutable_bitField0_ |= 0x00000020;
               }
-              locs_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PLocation.parser(), extensionRegistry));
+              locs_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PLocation.PARSER, extensionRegistry));
               break;
             }
             case 58: {
@@ -12370,7 +18723,7 @@ public final class PaymentProtos {
                 users_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx>();
                 mutable_bitField0_ |= 0x00000040;
               }
-              users_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.parser(), extensionRegistry));
+              users_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.PARSER, extensionRegistry));
               break;
             }
           }
@@ -12421,7 +18774,9 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        lotteryId_ = s;
+        if (bs.isValidUtf8()) {
+          lotteryId_ = s;
+        }
         return s;
       }
     }
@@ -12476,7 +18831,9 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        crtTm_ = s;
+        if (bs.isValidUtf8()) {
+          crtTm_ = s;
+        }
         return s;
       }
     }
@@ -12650,13 +19007,13 @@ public final class PaymentProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getLotteryIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, lotteryId_);
+        output.writeBytes(1, getLotteryIdBytes());
       }
       if (totAmt_ != 0) {
         output.writeInt32(2, totAmt_);
       }
       if (!getCrtTmBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 3, crtTm_);
+        output.writeBytes(3, getCrtTmBytes());
       }
       if (type_ != 0) {
         output.writeInt32(4, type_);
@@ -12672,20 +19029,23 @@ public final class PaymentProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getLotteryIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, lotteryId_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getLotteryIdBytes());
       }
       if (totAmt_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, totAmt_);
       }
       if (!getCrtTmBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, crtTm_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getCrtTmBytes());
       }
       if (type_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -12703,7 +19063,7 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, users_.get(i));
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -13011,7 +19371,9 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          lotteryId_ = s;
+          if (bs.isValidUtf8()) {
+            lotteryId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -13079,8 +19441,7 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         lotteryId_ = value;
         onChanged();
         return this;
@@ -13138,7 +19499,9 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          crtTm_ = s;
+          if (bs.isValidUtf8()) {
+            crtTm_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -13206,8 +19569,7 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         crtTm_ = value;
         onChanged();
         return this;
@@ -13936,8 +20298,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PLotteryDetailRet>
-        PARSER = new com.google.protobuf.AbstractParser<PLotteryDetailRet>() {
+    public static final com.google.protobuf.Parser<PLotteryDetailRet> PARSER =
+        new com.google.protobuf.AbstractParser<PLotteryDetailRet>() {
       public PLotteryDetailRet parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -13954,10 +20316,6 @@ public final class PaymentProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PLotteryDetailRet> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PLotteryDetailRet> getParserForType() {
@@ -14080,7 +20438,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PLotterySingleRet)
       PLotterySingleRetOrBuilder {
     // Use PLotterySingleRet.newBuilder() to construct.
-    private PLotterySingleRet(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PLotterySingleRet(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PLotterySingleRet() {
@@ -14116,15 +20474,15 @@ public final class PaymentProtos {
               break;
             }
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              lotteryId_ = s;
+              lotteryId_ = bs;
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              title_ = s;
+              title_ = bs;
               break;
             }
             case 24: {
@@ -14133,18 +20491,18 @@ public final class PaymentProtos {
               break;
             }
             case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              crtTm_ = s;
+              crtTm_ = bs;
               break;
             }
             case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
               if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
                 icons_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000010;
               }
-              icons_.add(s);
+              icons_.add(bs);
               break;
             }
           }
@@ -14192,7 +20550,9 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        lotteryId_ = s;
+        if (bs.isValidUtf8()) {
+          lotteryId_ = s;
+        }
         return s;
       }
     }
@@ -14234,7 +20594,9 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        title_ = s;
+        if (bs.isValidUtf8()) {
+          title_ = s;
+        }
         return s;
       }
     }
@@ -14289,7 +20651,9 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        crtTm_ = s;
+        if (bs.isValidUtf8()) {
+          crtTm_ = s;
+        }
         return s;
       }
     }
@@ -14372,49 +20736,54 @@ public final class PaymentProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getLotteryIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, lotteryId_);
+        output.writeBytes(1, getLotteryIdBytes());
       }
       if (!getTitleBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 2, title_);
+        output.writeBytes(2, getTitleBytes());
       }
       if (winners_ != 0) {
         output.writeInt32(3, winners_);
       }
       if (!getCrtTmBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 4, crtTm_);
+        output.writeBytes(4, getCrtTmBytes());
       }
       for (int i = 0; i < icons_.size(); i++) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 5, icons_.getRaw(i));
+        output.writeBytes(5, icons_.getByteString(i));
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getLotteryIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, lotteryId_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getLotteryIdBytes());
       }
       if (!getTitleBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, title_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getTitleBytes());
       }
       if (winners_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, winners_);
       }
       if (!getCrtTmBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, crtTm_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getCrtTmBytes());
       }
       {
         int dataSize = 0;
         for (int i = 0; i < icons_.size(); i++) {
-          dataSize += computeStringSizeNoTag(icons_.getRaw(i));
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(icons_.getByteString(i));
         }
         size += dataSize;
         size += 1 * getIconsList().size();
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -14650,7 +21019,9 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          lotteryId_ = s;
+          if (bs.isValidUtf8()) {
+            lotteryId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -14718,8 +21089,7 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         lotteryId_ = value;
         onChanged();
         return this;
@@ -14739,7 +21109,9 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          title_ = s;
+          if (bs.isValidUtf8()) {
+            title_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -14807,8 +21179,7 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         title_ = value;
         onChanged();
         return this;
@@ -14866,7 +21237,9 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          crtTm_ = s;
+          if (bs.isValidUtf8()) {
+            crtTm_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -14934,8 +21307,7 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         crtTm_ = value;
         onChanged();
         return this;
@@ -15064,8 +21436,7 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        ensureIconsIsMutable();
+  ensureIconsIsMutable();
         icons_.add(value);
         onChanged();
         return this;
@@ -15094,8 +21465,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PLotterySingleRet>
-        PARSER = new com.google.protobuf.AbstractParser<PLotterySingleRet>() {
+    public static final com.google.protobuf.Parser<PLotterySingleRet> PARSER =
+        new com.google.protobuf.AbstractParser<PLotterySingleRet>() {
       public PLotterySingleRet parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -15112,10 +21483,6 @@ public final class PaymentProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PLotterySingleRet> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PLotterySingleRet> getParserForType() {
@@ -15176,7 +21543,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PLocation)
       PLocationOrBuilder {
     // Use PLocation.newBuilder() to construct.
-    private PLocation(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PLocation(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PLocation() {
@@ -15209,15 +21576,15 @@ public final class PaymentProtos {
               break;
             }
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              locCd_ = s;
+              locCd_ = bs;
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              locNm_ = s;
+              locNm_ = bs;
               break;
             }
           }
@@ -15261,7 +21628,9 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        locCd_ = s;
+        if (bs.isValidUtf8()) {
+          locCd_ = s;
+        }
         return s;
       }
     }
@@ -15303,7 +21672,9 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        locNm_ = s;
+        if (bs.isValidUtf8()) {
+          locNm_ = s;
+        }
         return s;
       }
     }
@@ -15341,25 +21712,28 @@ public final class PaymentProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getLocCdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, locCd_);
+        output.writeBytes(1, getLocCdBytes());
       }
       if (!getLocNmBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 2, locNm_);
+        output.writeBytes(2, getLocNmBytes());
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getLocCdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, locCd_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getLocCdBytes());
       }
       if (!getLocNmBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, locNm_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getLocNmBytes());
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -15561,7 +21935,9 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          locCd_ = s;
+          if (bs.isValidUtf8()) {
+            locCd_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -15629,8 +22005,7 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         locCd_ = value;
         onChanged();
         return this;
@@ -15650,7 +22025,9 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          locNm_ = s;
+          if (bs.isValidUtf8()) {
+            locNm_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -15718,8 +22095,7 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         locNm_ = value;
         onChanged();
         return this;
@@ -15748,8 +22124,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PLocation>
-        PARSER = new com.google.protobuf.AbstractParser<PLocation>() {
+    public static final com.google.protobuf.Parser<PLocation> PARSER =
+        new com.google.protobuf.AbstractParser<PLocation>() {
       public PLocation parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -15766,10 +22142,6 @@ public final class PaymentProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PLocation> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PLocation> getParserForType() {
@@ -15837,7 +22209,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PUserBaseEx)
       PUserBaseExOrBuilder {
     // Use PUserBaseEx.newBuilder() to construct.
-    private PUserBaseEx(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PUserBaseEx(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PUserBaseEx() {
@@ -15874,7 +22246,7 @@ public final class PaymentProtos {
               if (info_ != null) {
                 subBuilder = info_.toBuilder();
               }
-              info_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.parser(), extensionRegistry);
+              info_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(info_);
                 info_ = subBuilder.buildPartial();
@@ -15998,8 +22370,9 @@ public final class PaymentProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -16015,7 +22388,7 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, amt_);
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -16467,8 +22840,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PUserBaseEx>
-        PARSER = new com.google.protobuf.AbstractParser<PUserBaseEx>() {
+    public static final com.google.protobuf.Parser<PUserBaseEx> PARSER =
+        new com.google.protobuf.AbstractParser<PUserBaseEx>() {
       public PUserBaseEx parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -16485,10 +22858,6 @@ public final class PaymentProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PUserBaseEx> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PUserBaseEx> getParserForType() {
@@ -16522,15 +22891,20 @@ public final class PaymentProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_bbproto_PRedEnveInfo_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_bbproto_PRedEnveHistory_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_bbproto_PRedEnveHistory_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
     internal_static_bbproto_PRedEnveRece_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_bbproto_PRedEnveRece_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PRedEnveStatus_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PRedEnveStatus_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PRedEnveReceList_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PRedEnveReceList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_bbproto_PBill_descriptor;
   private static
@@ -16541,6 +22915,36 @@ public final class PaymentProtos {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_bbproto_PBillInfo_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PRedEnveList_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PRedEnveList_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PRedEnveBaseInfo_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PRedEnveBaseInfo_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PRewardList_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PRewardList_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PRewardInfo_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PRewardInfo_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PRewardInfoList_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PRewardInfoList_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PSreachList_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PSreachList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_bbproto_PLottery_descriptor;
   private static
@@ -16585,52 +22989,69 @@ public final class PaymentProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\rpayment.proto\022\007bbproto\032\raccount.proto\"" +
-      "B\n\rPOrdinRedEnve\022\r\n\005money\030\001 \001(\005\022\017\n\007conte" +
-      "nt\030\002 \001(\t\022\021\n\trece_uuid\030\003 \001(\t\"d\n\rPGroupRed" +
-      "Enve\022\016\n\006number\030\001 \001(\005\022\r\n\005money\030\002 \001(\005\022\020\n\010i" +
-      "sRandom\030\003 \001(\010\022\017\n\007content\030\004 \001(\t\022\021\n\trece_u" +
-      "uid\030\005 \003(\t\"\266\001\n\tPOrderPay\022\024\n\014fromActivity\030" +
-      "\001 \001(\t\022\026\n\016recAccountType\030\002 \001(\005\022\r\n\005cusId\030\003" +
-      " \001(\t\022\022\n\nreceivedId\030\004 \001(\t\022\020\n\010fenMoney\030\005 \001" +
-      "(\005\022\020\n\010orderNum\030\006 \001(\t\022\021\n\tgoodsName\030\007 \001(\t\022" +
-      "\014\n\004sign\030\010 \001(\t\022\023\n\013requestCode\030\t \001(\005\"\202\002\n\014P",
-      "RedEnveInfo\022\016\n\006ord_no\030\001 \001(\t\022\016\n\006status\030\002 " +
-      "\001(\005\022\014\n\004type\030\003 \001(\005\022\022\n\ntota_money\030\004 \001(\005\022\023\n" +
-      "\013tota_number\030\005 \001(\005\022\022\n\nrece_money\030\006 \001(\005\022\023" +
-      "\n\013rece_number\030\007 \001(\005\022\017\n\007content\030\010 \001(\t\022\017\n\007" +
-      "send_tm\030\t \001(\003\022$\n\010userBase\030\n \001(\0132\022.bbprot" +
-      "o.PUserBase\022*\n\013redEnveRece\030\013 \003(\0132\025.bbpro" +
-      "to.PRedEnveRece\"=\n\017PRedEnveHistory\022*\n\013re" +
-      "dEnveInfo\030\001 \003(\0132\025.bbproto.PRedEnveInfo\"`" +
-      "\n\014PRedEnveRece\022\n\n\002id\030\001 \001(\005\022\r\n\005money\030\002 \001(" +
-      "\005\022\017\n\007rece_tm\030\003 \001(\003\022$\n\010userBase\030\004 \001(\0132\022.b",
-      "bproto.PUserBase\"\261\001\n\005PBill\022\024\n\014income_mon" +
-      "ey\030\001 \001(\005\022\024\n\014expend_money\030\002 \001(\005\022\025\n\rincome" +
-      "_number\030\003 \001(\005\022\025\n\rexpend_number\030\004 \001(\005\022&\n\n" +
-      "incomeBill\030\005 \003(\0132\022.bbproto.PBillInfo\022&\n\n" +
-      "expendBill\030\006 \003(\0132\022.bbproto.PBillInfo\"}\n\t" +
-      "PBillInfo\022\n\n\002id\030\001 \001(\005\022\016\n\006ord_no\030\002 \001(\t\022\022\n" +
-      "\nrece_money\030\003 \001(\005\022\014\n\004time\030\004 \001(\003\022\014\n\004type\030" +
-      "\005 \001(\005\022$\n\010userBase\030\006 \001(\0132\022.bbproto.PUserB" +
-      "ase\"\213\001\n\010PLottery\022\r\n\005title\030\001 \001(\t\022\014\n\004type\030" +
-      "\002 \001(\005\022\017\n\007winners\030\003 \001(\005\022\016\n\006totAmt\030\004 \001(\005\022\r",
-      "\n\005bonus\030\005 \001(\005\022 \n\004locs\030\006 \003(\0132\022.bbproto.PL" +
-      "ocation\022\020\n\010uuidList\030\007 \003(\t\"@\n\017PLotteryLis" +
-      "tRet\022-\n\tlotteries\030\001 \003(\0132\032.bbproto.PLotte" +
-      "rySingleRet\"!\n\014PAcceptPrize\022\021\n\tlotteryId" +
-      "\030\001 \001(\t\"\253\001\n\021PLotteryDetailRet\022\021\n\tlotteryI" +
-      "d\030\001 \001(\t\022\016\n\006totAmt\030\002 \001(\005\022\r\n\005crtTm\030\003 \001(\t\022\014" +
-      "\n\004type\030\004 \001(\005\022\017\n\007winners\030\005 \001(\005\022 \n\004locs\030\006 " +
-      "\003(\0132\022.bbproto.PLocation\022#\n\005users\030\007 \003(\0132\024" +
-      ".bbproto.PUserBaseEx\"d\n\021PLotterySingleRe" +
-      "t\022\021\n\tlotteryId\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022\017\n\007w",
-      "inners\030\003 \001(\005\022\r\n\005crtTm\030\004 \001(\t\022\r\n\005icons\030\005 \003" +
-      "(\t\")\n\tPLocation\022\r\n\005locCd\030\001 \001(\t\022\r\n\005locNm\030" +
-      "\002 \001(\t\"I\n\013PUserBaseEx\022 \n\004info\030\001 \001(\0132\022.bbp" +
-      "roto.PUserBase\022\013\n\003sex\030\002 \001(\005\022\013\n\003amt\030\003 \001(\005" +
-      "B\'\n\026com.blemobi.sep.probufB\rPaymentProto" +
-      "sb\006proto3"
+      "\n\rpayment.proto\022\007bbproto\032\raccount.proto\032" +
+      "\024datapublishing.proto\"B\n\rPOrdinRedEnve\022\r" +
+      "\n\005money\030\001 \001(\005\022\017\n\007content\030\002 \001(\t\022\021\n\trece_u" +
+      "uid\030\003 \001(\t\"|\n\rPGroupRedEnve\022\016\n\006number\030\001 \001" +
+      "(\005\022\r\n\005money\030\002 \001(\005\022\020\n\010isRandom\030\003 \001(\010\022\017\n\007c" +
+      "ontent\030\004 \001(\t\022)\n\006filter\030\005 \001(\0132\031.bbproto.P" +
+      "FansFilterParam\"\211\001\n\tPOrderPay\022\026\n\016recAcco" +
+      "untType\030\001 \001(\005\022\r\n\005cusId\030\002 \001(\t\022\022\n\nreceived" +
+      "Id\030\003 \001(\t\022\020\n\010fenMoney\030\004 \001(\005\022\016\n\006ord_no\030\005 \001" +
+      "(\t\022\021\n\tgoodsName\030\006 \001(\t\022\014\n\004sign\030\007 \001(\t\"\233\002\n\014",
+      "PRedEnveInfo\022\016\n\006ord_no\030\001 \001(\t\022\027\n\017user_rec" +
+      "e_money\030\002 \001(\005\022\014\n\004type\030\003 \001(\005\022\022\n\ntota_mone" +
+      "y\030\004 \001(\005\022\023\n\013tota_number\030\005 \001(\005\022\022\n\nrece_mon" +
+      "ey\030\006 \001(\005\022\023\n\013rece_number\030\007 \001(\005\022\017\n\007content" +
+      "\030\010 \001(\t\022\017\n\007send_tm\030\t \001(\003\022$\n\010userBase\030\n \001(" +
+      "\0132\022.bbproto.PUserBase\022\016\n\006status\030\013 \001(\010\022*\n" +
+      "\013redEnveRece\030\014 \003(\0132\025.bbproto.PRedEnveRec" +
+      "e\"t\n\014PRedEnveRece\022\n\n\002id\030\001 \001(\005\022\r\n\005money\030\002" +
+      " \001(\005\022\017\n\007rece_tm\030\003 \001(\003\022\022\n\nluck_level\030\004 \001(" +
+      "\005\022$\n\010userBase\030\005 \001(\0132\022.bbproto.PUserBase\"",
+      "4\n\016PRedEnveStatus\022\016\n\006status\030\001 \001(\005\022\022\n\nrec" +
+      "e_money\030\002 \001(\005\">\n\020PRedEnveReceList\022*\n\013red" +
+      "EnveRece\030\001 \003(\0132\025.bbproto.PRedEnveRece\"\207\001" +
+      "\n\005PBill\022\024\n\014income_money\030\001 \001(\005\022\024\n\014expend_" +
+      "money\030\002 \001(\005\022\025\n\rincome_number\030\003 \001(\005\022\025\n\rex" +
+      "pend_number\030\004 \001(\005\022$\n\010billInfo\030\005 \003(\0132\022.bb" +
+      "proto.PBillInfo\"x\n\tPBillInfo\022\n\n\002id\030\001 \001(\005" +
+      "\022\016\n\006ord_no\030\002 \001(\t\022\r\n\005money\030\003 \001(\005\022\014\n\004time\030" +
+      "\004 \001(\003\022\014\n\004type\030\005 \001(\005\022$\n\010userBase\030\006 \001(\0132\022." +
+      "bbproto.PUserBase\"B\n\014PRedEnveList\0222\n\017red",
+      "EnveBaseInfo\030\001 \003(\0132\031.bbproto.PRedEnveBas" +
+      "eInfo\"\224\001\n\020PRedEnveBaseInfo\022\n\n\002id\030\001 \001(\005\022\016" +
+      "\n\006ord_no\030\002 \001(\t\022\014\n\004type\030\003 \001(\005\022\017\n\007content\030" +
+      "\004 \001(\t\022\017\n\007send_tm\030\005 \001(\003\022\016\n\006number\030\006 \001(\005\022$" +
+      "\n\010userBase\030\007 \003(\0132\022.bbproto.PUserBase\"7\n\013" +
+      "PRewardList\022(\n\nrewardInfo\030\001 \003(\0132\024.bbprot" +
+      "o.PRewardInfo\"}\n\013PRewardInfo\022\n\n\002id\030\001 \001(\005" +
+      "\022\016\n\006ord_no\030\002 \001(\t\022\r\n\005money\030\003 \001(\005\022\017\n\007conte" +
+      "nt\030\004 \001(\t\022\014\n\004time\030\005 \001(\003\022$\n\010userBase\030\006 \001(\013" +
+      "2\022.bbproto.PUserBase\"t\n\017PRewardInfoList\022",
+      "(\n\nrewardInfo\030\001 \001(\0132\024.bbproto.PRewardInf" +
+      "o\022\r\n\005money\030\002 \001(\005\022(\n\nrewardList\030\003 \003(\0132\024.b" +
+      "bproto.PRewardInfo\"k\n\013PSreachList\0222\n\017red" +
+      "EnveBaseInfo\030\001 \003(\0132\031.bbproto.PRedEnveBas" +
+      "eInfo\022(\n\nrewardInfo\030\002 \003(\0132\024.bbproto.PRew" +
+      "ardInfo\"\213\001\n\010PLottery\022\r\n\005title\030\001 \001(\t\022\014\n\004t" +
+      "ype\030\002 \001(\005\022\017\n\007winners\030\003 \001(\005\022\016\n\006totAmt\030\004 \001" +
+      "(\005\022\r\n\005bonus\030\005 \001(\005\022 \n\004locs\030\006 \003(\0132\022.bbprot" +
+      "o.PLocation\022\020\n\010uuidList\030\007 \003(\t\"@\n\017PLotter" +
+      "yListRet\022-\n\tlotteries\030\001 \003(\0132\032.bbproto.PL",
+      "otterySingleRet\"!\n\014PAcceptPrize\022\021\n\tlotte" +
+      "ryId\030\001 \001(\t\"\253\001\n\021PLotteryDetailRet\022\021\n\tlott" +
+      "eryId\030\001 \001(\t\022\016\n\006totAmt\030\002 \001(\005\022\r\n\005crtTm\030\003 \001" +
+      "(\t\022\014\n\004type\030\004 \001(\005\022\017\n\007winners\030\005 \001(\005\022 \n\004loc" +
+      "s\030\006 \003(\0132\022.bbproto.PLocation\022#\n\005users\030\007 \003" +
+      "(\0132\024.bbproto.PUserBaseEx\"d\n\021PLotterySing" +
+      "leRet\022\021\n\tlotteryId\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022" +
+      "\017\n\007winners\030\003 \001(\005\022\r\n\005crtTm\030\004 \001(\t\022\r\n\005icons" +
+      "\030\005 \003(\t\")\n\tPLocation\022\r\n\005locCd\030\001 \001(\t\022\r\n\005lo" +
+      "cNm\030\002 \001(\t\"I\n\013PUserBaseEx\022 \n\004info\030\001 \001(\0132\022",
+      ".bbproto.PUserBase\022\013\n\003sex\030\002 \001(\005\022\013\n\003amt\030\003" +
+      " \001(\005B\'\n\026com.blemobi.sep.probufB\rPaymentP" +
+      "rotosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -16644,6 +23065,7 @@ public final class PaymentProtos {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.blemobi.sep.probuf.AccountProtos.getDescriptor(),
+          com.blemobi.sep.probuf.DataPublishingProtos.getDescriptor(),
         }, assigner);
     internal_static_bbproto_POrdinRedEnve_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -16656,86 +23078,129 @@ public final class PaymentProtos {
     internal_static_bbproto_PGroupRedEnve_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PGroupRedEnve_descriptor,
-        new java.lang.String[] { "Number", "Money", "IsRandom", "Content", "ReceUuid", });
+        new java.lang.String[] { "Number", "Money", "IsRandom", "Content", "Filter", });
     internal_static_bbproto_POrderPay_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_bbproto_POrderPay_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_POrderPay_descriptor,
-        new java.lang.String[] { "FromActivity", "RecAccountType", "CusId", "ReceivedId", "FenMoney", "OrderNum", "GoodsName", "Sign", "RequestCode", });
+        new java.lang.String[] { "RecAccountType", "CusId", "ReceivedId", "FenMoney", "OrdNo", "GoodsName", "Sign", });
     internal_static_bbproto_PRedEnveInfo_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_bbproto_PRedEnveInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PRedEnveInfo_descriptor,
-        new java.lang.String[] { "OrdNo", "Status", "Type", "TotaMoney", "TotaNumber", "ReceMoney", "ReceNumber", "Content", "SendTm", "UserBase", "RedEnveRece", });
-    internal_static_bbproto_PRedEnveHistory_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_bbproto_PRedEnveHistory_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_bbproto_PRedEnveHistory_descriptor,
-        new java.lang.String[] { "RedEnveInfo", });
+        new java.lang.String[] { "OrdNo", "UserReceMoney", "Type", "TotaMoney", "TotaNumber", "ReceMoney", "ReceNumber", "Content", "SendTm", "UserBase", "Status", "RedEnveRece", });
     internal_static_bbproto_PRedEnveRece_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_bbproto_PRedEnveRece_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PRedEnveRece_descriptor,
-        new java.lang.String[] { "Id", "Money", "ReceTm", "UserBase", });
-    internal_static_bbproto_PBill_descriptor =
+        new java.lang.String[] { "Id", "Money", "ReceTm", "LuckLevel", "UserBase", });
+    internal_static_bbproto_PRedEnveStatus_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_bbproto_PRedEnveStatus_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PRedEnveStatus_descriptor,
+        new java.lang.String[] { "Status", "ReceMoney", });
+    internal_static_bbproto_PRedEnveReceList_descriptor =
       getDescriptor().getMessageTypes().get(6);
+    internal_static_bbproto_PRedEnveReceList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PRedEnveReceList_descriptor,
+        new java.lang.String[] { "RedEnveRece", });
+    internal_static_bbproto_PBill_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_bbproto_PBill_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PBill_descriptor,
-        new java.lang.String[] { "IncomeMoney", "ExpendMoney", "IncomeNumber", "ExpendNumber", "IncomeBill", "ExpendBill", });
+        new java.lang.String[] { "IncomeMoney", "ExpendMoney", "IncomeNumber", "ExpendNumber", "BillInfo", });
     internal_static_bbproto_PBillInfo_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_bbproto_PBillInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PBillInfo_descriptor,
-        new java.lang.String[] { "Id", "OrdNo", "ReceMoney", "Time", "Type", "UserBase", });
+        new java.lang.String[] { "Id", "OrdNo", "Money", "Time", "Type", "UserBase", });
+    internal_static_bbproto_PRedEnveList_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_bbproto_PRedEnveList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PRedEnveList_descriptor,
+        new java.lang.String[] { "RedEnveBaseInfo", });
+    internal_static_bbproto_PRedEnveBaseInfo_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_bbproto_PRedEnveBaseInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PRedEnveBaseInfo_descriptor,
+        new java.lang.String[] { "Id", "OrdNo", "Type", "Content", "SendTm", "Number", "UserBase", });
+    internal_static_bbproto_PRewardList_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_bbproto_PRewardList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PRewardList_descriptor,
+        new java.lang.String[] { "RewardInfo", });
+    internal_static_bbproto_PRewardInfo_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_bbproto_PRewardInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PRewardInfo_descriptor,
+        new java.lang.String[] { "Id", "OrdNo", "Money", "Content", "Time", "UserBase", });
+    internal_static_bbproto_PRewardInfoList_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_bbproto_PRewardInfoList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PRewardInfoList_descriptor,
+        new java.lang.String[] { "RewardInfo", "Money", "RewardList", });
+    internal_static_bbproto_PSreachList_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_bbproto_PSreachList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PSreachList_descriptor,
+        new java.lang.String[] { "RedEnveBaseInfo", "RewardInfo", });
     internal_static_bbproto_PLottery_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_bbproto_PLottery_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PLottery_descriptor,
         new java.lang.String[] { "Title", "Type", "Winners", "TotAmt", "Bonus", "Locs", "UuidList", });
     internal_static_bbproto_PLotteryListRet_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_bbproto_PLotteryListRet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PLotteryListRet_descriptor,
         new java.lang.String[] { "Lotteries", });
     internal_static_bbproto_PAcceptPrize_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_bbproto_PAcceptPrize_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PAcceptPrize_descriptor,
         new java.lang.String[] { "LotteryId", });
     internal_static_bbproto_PLotteryDetailRet_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_bbproto_PLotteryDetailRet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PLotteryDetailRet_descriptor,
         new java.lang.String[] { "LotteryId", "TotAmt", "CrtTm", "Type", "Winners", "Locs", "Users", });
     internal_static_bbproto_PLotterySingleRet_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_bbproto_PLotterySingleRet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PLotterySingleRet_descriptor,
         new java.lang.String[] { "LotteryId", "Title", "Winners", "CrtTm", "Icons", });
     internal_static_bbproto_PLocation_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_bbproto_PLocation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PLocation_descriptor,
         new java.lang.String[] { "LocCd", "LocNm", });
     internal_static_bbproto_PUserBaseEx_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_bbproto_PUserBaseEx_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PUserBaseEx_descriptor,
         new java.lang.String[] { "Info", "Sex", "Amt", });
     com.blemobi.sep.probuf.AccountProtos.getDescriptor();
+    com.blemobi.sep.probuf.DataPublishingProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
