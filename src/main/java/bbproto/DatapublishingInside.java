@@ -3884,6 +3884,1161 @@ public final class DatapublishingInside {
 
   }
 
+  public interface PFansSaveParamOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PFansSaveParam)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string uuid = 1;</code>
+     *
+     * <pre>
+     * 勾选少部分用户时填充此字段，否则使用filter进行查询
+     * </pre>
+     */
+    com.google.protobuf.ProtocolStringList
+        getUuidList();
+    /**
+     * <code>repeated string uuid = 1;</code>
+     *
+     * <pre>
+     * 勾选少部分用户时填充此字段，否则使用filter进行查询
+     * </pre>
+     */
+    int getUuidCount();
+    /**
+     * <code>repeated string uuid = 1;</code>
+     *
+     * <pre>
+     * 勾选少部分用户时填充此字段，否则使用filter进行查询
+     * </pre>
+     */
+    java.lang.String getUuid(int index);
+    /**
+     * <code>repeated string uuid = 1;</code>
+     *
+     * <pre>
+     * 勾选少部分用户时填充此字段，否则使用filter进行查询
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUuidBytes(int index);
+
+    /**
+     * <code>optional .bbproto.PFansFilterParam filter = 2;</code>
+     *
+     * <pre>
+     * 筛选条件
+     * </pre>
+     */
+    boolean hasFilter();
+    /**
+     * <code>optional .bbproto.PFansFilterParam filter = 2;</code>
+     *
+     * <pre>
+     * 筛选条件
+     * </pre>
+     */
+    com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam getFilter();
+    /**
+     * <code>optional .bbproto.PFansFilterParam filter = 2;</code>
+     *
+     * <pre>
+     * 筛选条件
+     * </pre>
+     */
+    com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParamOrBuilder getFilterOrBuilder();
+
+    /**
+     * <code>optional string key = 3;</code>
+     *
+     * <pre>
+     * 主键
+     * </pre>
+     */
+    java.lang.String getKey();
+    /**
+     * <code>optional string key = 3;</code>
+     *
+     * <pre>
+     * 主键
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
+
+    /**
+     * <code>optional string content = 4;</code>
+     *
+     * <pre>
+     * 其它扩展内容
+     * </pre>
+     */
+    java.lang.String getContent();
+    /**
+     * <code>optional string content = 4;</code>
+     *
+     * <pre>
+     * 其它扩展内容
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getContentBytes();
+  }
+  /**
+   * Protobuf type {@code bbproto.PFansSaveParam}
+   */
+  public  static final class PFansSaveParam extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PFansSaveParam)
+      PFansSaveParamOrBuilder {
+    // Use PFansSaveParam.newBuilder() to construct.
+    private PFansSaveParam(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PFansSaveParam() {
+      uuid_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      key_ = "";
+      content_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PFansSaveParam(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                uuid_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              uuid_.add(s);
+              break;
+            }
+            case 18: {
+              com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.Builder subBuilder = null;
+              if (filter_ != null) {
+                subBuilder = filter_.toBuilder();
+              }
+              filter_ = input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(filter_);
+                filter_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              key_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              content_ = s;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          uuid_ = uuid_.getUnmodifiableView();
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return bbproto.DatapublishingInside.internal_static_bbproto_PFansSaveParam_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return bbproto.DatapublishingInside.internal_static_bbproto_PFansSaveParam_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              bbproto.DatapublishingInside.PFansSaveParam.class, bbproto.DatapublishingInside.PFansSaveParam.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int UUID_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList uuid_;
+    /**
+     * <code>repeated string uuid = 1;</code>
+     *
+     * <pre>
+     * 勾选少部分用户时填充此字段，否则使用filter进行查询
+     * </pre>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getUuidList() {
+      return uuid_;
+    }
+    /**
+     * <code>repeated string uuid = 1;</code>
+     *
+     * <pre>
+     * 勾选少部分用户时填充此字段，否则使用filter进行查询
+     * </pre>
+     */
+    public int getUuidCount() {
+      return uuid_.size();
+    }
+    /**
+     * <code>repeated string uuid = 1;</code>
+     *
+     * <pre>
+     * 勾选少部分用户时填充此字段，否则使用filter进行查询
+     * </pre>
+     */
+    public java.lang.String getUuid(int index) {
+      return uuid_.get(index);
+    }
+    /**
+     * <code>repeated string uuid = 1;</code>
+     *
+     * <pre>
+     * 勾选少部分用户时填充此字段，否则使用filter进行查询
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUuidBytes(int index) {
+      return uuid_.getByteString(index);
+    }
+
+    public static final int FILTER_FIELD_NUMBER = 2;
+    private com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam filter_;
+    /**
+     * <code>optional .bbproto.PFansFilterParam filter = 2;</code>
+     *
+     * <pre>
+     * 筛选条件
+     * </pre>
+     */
+    public boolean hasFilter() {
+      return filter_ != null;
+    }
+    /**
+     * <code>optional .bbproto.PFansFilterParam filter = 2;</code>
+     *
+     * <pre>
+     * 筛选条件
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam getFilter() {
+      return filter_ == null ? com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.getDefaultInstance() : filter_;
+    }
+    /**
+     * <code>optional .bbproto.PFansFilterParam filter = 2;</code>
+     *
+     * <pre>
+     * 筛选条件
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParamOrBuilder getFilterOrBuilder() {
+      return getFilter();
+    }
+
+    public static final int KEY_FIELD_NUMBER = 3;
+    private volatile java.lang.Object key_;
+    /**
+     * <code>optional string key = 3;</code>
+     *
+     * <pre>
+     * 主键
+     * </pre>
+     */
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        key_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string key = 3;</code>
+     *
+     * <pre>
+     * 主键
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        key_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTENT_FIELD_NUMBER = 4;
+    private volatile java.lang.Object content_;
+    /**
+     * <code>optional string content = 4;</code>
+     *
+     * <pre>
+     * 其它扩展内容
+     * </pre>
+     */
+    public java.lang.String getContent() {
+      java.lang.Object ref = content_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        content_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string content = 4;</code>
+     *
+     * <pre>
+     * 其它扩展内容
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getContentBytes() {
+      java.lang.Object ref = content_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        content_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < uuid_.size(); i++) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, uuid_.getRaw(i));
+      }
+      if (filter_ != null) {
+        output.writeMessage(2, getFilter());
+      }
+      if (!getKeyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, key_);
+      }
+      if (!getContentBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, content_);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < uuid_.size(); i++) {
+          dataSize += computeStringSizeNoTag(uuid_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getUuidList().size();
+      }
+      if (filter_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getFilter());
+      }
+      if (!getKeyBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, key_);
+      }
+      if (!getContentBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, content_);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static bbproto.DatapublishingInside.PFansSaveParam parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static bbproto.DatapublishingInside.PFansSaveParam parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static bbproto.DatapublishingInside.PFansSaveParam parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static bbproto.DatapublishingInside.PFansSaveParam parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static bbproto.DatapublishingInside.PFansSaveParam parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static bbproto.DatapublishingInside.PFansSaveParam parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static bbproto.DatapublishingInside.PFansSaveParam parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static bbproto.DatapublishingInside.PFansSaveParam parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static bbproto.DatapublishingInside.PFansSaveParam parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static bbproto.DatapublishingInside.PFansSaveParam parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(bbproto.DatapublishingInside.PFansSaveParam prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PFansSaveParam}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PFansSaveParam)
+        bbproto.DatapublishingInside.PFansSaveParamOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return bbproto.DatapublishingInside.internal_static_bbproto_PFansSaveParam_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return bbproto.DatapublishingInside.internal_static_bbproto_PFansSaveParam_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                bbproto.DatapublishingInside.PFansSaveParam.class, bbproto.DatapublishingInside.PFansSaveParam.Builder.class);
+      }
+
+      // Construct using bbproto.DatapublishingInside.PFansSaveParam.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        uuid_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (filterBuilder_ == null) {
+          filter_ = null;
+        } else {
+          filter_ = null;
+          filterBuilder_ = null;
+        }
+        key_ = "";
+
+        content_ = "";
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return bbproto.DatapublishingInside.internal_static_bbproto_PFansSaveParam_descriptor;
+      }
+
+      public bbproto.DatapublishingInside.PFansSaveParam getDefaultInstanceForType() {
+        return bbproto.DatapublishingInside.PFansSaveParam.getDefaultInstance();
+      }
+
+      public bbproto.DatapublishingInside.PFansSaveParam build() {
+        bbproto.DatapublishingInside.PFansSaveParam result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public bbproto.DatapublishingInside.PFansSaveParam buildPartial() {
+        bbproto.DatapublishingInside.PFansSaveParam result = new bbproto.DatapublishingInside.PFansSaveParam(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          uuid_ = uuid_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.uuid_ = uuid_;
+        if (filterBuilder_ == null) {
+          result.filter_ = filter_;
+        } else {
+          result.filter_ = filterBuilder_.build();
+        }
+        result.key_ = key_;
+        result.content_ = content_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof bbproto.DatapublishingInside.PFansSaveParam) {
+          return mergeFrom((bbproto.DatapublishingInside.PFansSaveParam)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(bbproto.DatapublishingInside.PFansSaveParam other) {
+        if (other == bbproto.DatapublishingInside.PFansSaveParam.getDefaultInstance()) return this;
+        if (!other.uuid_.isEmpty()) {
+          if (uuid_.isEmpty()) {
+            uuid_ = other.uuid_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureUuidIsMutable();
+            uuid_.addAll(other.uuid_);
+          }
+          onChanged();
+        }
+        if (other.hasFilter()) {
+          mergeFilter(other.getFilter());
+        }
+        if (!other.getKey().isEmpty()) {
+          key_ = other.key_;
+          onChanged();
+        }
+        if (!other.getContent().isEmpty()) {
+          content_ = other.content_;
+          onChanged();
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        bbproto.DatapublishingInside.PFansSaveParam parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (bbproto.DatapublishingInside.PFansSaveParam) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList uuid_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureUuidIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          uuid_ = new com.google.protobuf.LazyStringArrayList(uuid_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string uuid = 1;</code>
+       *
+       * <pre>
+       * 勾选少部分用户时填充此字段，否则使用filter进行查询
+       * </pre>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getUuidList() {
+        return uuid_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string uuid = 1;</code>
+       *
+       * <pre>
+       * 勾选少部分用户时填充此字段，否则使用filter进行查询
+       * </pre>
+       */
+      public int getUuidCount() {
+        return uuid_.size();
+      }
+      /**
+       * <code>repeated string uuid = 1;</code>
+       *
+       * <pre>
+       * 勾选少部分用户时填充此字段，否则使用filter进行查询
+       * </pre>
+       */
+      public java.lang.String getUuid(int index) {
+        return uuid_.get(index);
+      }
+      /**
+       * <code>repeated string uuid = 1;</code>
+       *
+       * <pre>
+       * 勾选少部分用户时填充此字段，否则使用filter进行查询
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUuidBytes(int index) {
+        return uuid_.getByteString(index);
+      }
+      /**
+       * <code>repeated string uuid = 1;</code>
+       *
+       * <pre>
+       * 勾选少部分用户时填充此字段，否则使用filter进行查询
+       * </pre>
+       */
+      public Builder setUuid(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureUuidIsMutable();
+        uuid_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string uuid = 1;</code>
+       *
+       * <pre>
+       * 勾选少部分用户时填充此字段，否则使用filter进行查询
+       * </pre>
+       */
+      public Builder addUuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureUuidIsMutable();
+        uuid_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string uuid = 1;</code>
+       *
+       * <pre>
+       * 勾选少部分用户时填充此字段，否则使用filter进行查询
+       * </pre>
+       */
+      public Builder addAllUuid(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureUuidIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, uuid_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string uuid = 1;</code>
+       *
+       * <pre>
+       * 勾选少部分用户时填充此字段，否则使用filter进行查询
+       * </pre>
+       */
+      public Builder clearUuid() {
+        uuid_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string uuid = 1;</code>
+       *
+       * <pre>
+       * 勾选少部分用户时填充此字段，否则使用filter进行查询
+       * </pre>
+       */
+      public Builder addUuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureUuidIsMutable();
+        uuid_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam filter_ = null;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam, com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.Builder, com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParamOrBuilder> filterBuilder_;
+      /**
+       * <code>optional .bbproto.PFansFilterParam filter = 2;</code>
+       *
+       * <pre>
+       * 筛选条件
+       * </pre>
+       */
+      public boolean hasFilter() {
+        return filterBuilder_ != null || filter_ != null;
+      }
+      /**
+       * <code>optional .bbproto.PFansFilterParam filter = 2;</code>
+       *
+       * <pre>
+       * 筛选条件
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam getFilter() {
+        if (filterBuilder_ == null) {
+          return filter_ == null ? com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.getDefaultInstance() : filter_;
+        } else {
+          return filterBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .bbproto.PFansFilterParam filter = 2;</code>
+       *
+       * <pre>
+       * 筛选条件
+       * </pre>
+       */
+      public Builder setFilter(com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam value) {
+        if (filterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          filter_ = value;
+          onChanged();
+        } else {
+          filterBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PFansFilterParam filter = 2;</code>
+       *
+       * <pre>
+       * 筛选条件
+       * </pre>
+       */
+      public Builder setFilter(
+          com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.Builder builderForValue) {
+        if (filterBuilder_ == null) {
+          filter_ = builderForValue.build();
+          onChanged();
+        } else {
+          filterBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PFansFilterParam filter = 2;</code>
+       *
+       * <pre>
+       * 筛选条件
+       * </pre>
+       */
+      public Builder mergeFilter(com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam value) {
+        if (filterBuilder_ == null) {
+          if (filter_ != null) {
+            filter_ =
+              com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.newBuilder(filter_).mergeFrom(value).buildPartial();
+          } else {
+            filter_ = value;
+          }
+          onChanged();
+        } else {
+          filterBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PFansFilterParam filter = 2;</code>
+       *
+       * <pre>
+       * 筛选条件
+       * </pre>
+       */
+      public Builder clearFilter() {
+        if (filterBuilder_ == null) {
+          filter_ = null;
+          onChanged();
+        } else {
+          filter_ = null;
+          filterBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PFansFilterParam filter = 2;</code>
+       *
+       * <pre>
+       * 筛选条件
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.Builder getFilterBuilder() {
+        
+        onChanged();
+        return getFilterFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .bbproto.PFansFilterParam filter = 2;</code>
+       *
+       * <pre>
+       * 筛选条件
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParamOrBuilder getFilterOrBuilder() {
+        if (filterBuilder_ != null) {
+          return filterBuilder_.getMessageOrBuilder();
+        } else {
+          return filter_ == null ?
+              com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.getDefaultInstance() : filter_;
+        }
+      }
+      /**
+       * <code>optional .bbproto.PFansFilterParam filter = 2;</code>
+       *
+       * <pre>
+       * 筛选条件
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam, com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.Builder, com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParamOrBuilder> 
+          getFilterFieldBuilder() {
+        if (filterBuilder_ == null) {
+          filterBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam, com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.Builder, com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParamOrBuilder>(
+                  getFilter(),
+                  getParentForChildren(),
+                  isClean());
+          filter_ = null;
+        }
+        return filterBuilder_;
+      }
+
+      private java.lang.Object key_ = "";
+      /**
+       * <code>optional string key = 3;</code>
+       *
+       * <pre>
+       * 主键
+       * </pre>
+       */
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          key_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string key = 3;</code>
+       *
+       * <pre>
+       * 主键
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        java.lang.Object ref = key_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          key_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string key = 3;</code>
+       *
+       * <pre>
+       * 主键
+       * </pre>
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        key_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string key = 3;</code>
+       *
+       * <pre>
+       * 主键
+       * </pre>
+       */
+      public Builder clearKey() {
+        
+        key_ = getDefaultInstance().getKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string key = 3;</code>
+       *
+       * <pre>
+       * 主键
+       * </pre>
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        key_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object content_ = "";
+      /**
+       * <code>optional string content = 4;</code>
+       *
+       * <pre>
+       * 其它扩展内容
+       * </pre>
+       */
+      public java.lang.String getContent() {
+        java.lang.Object ref = content_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          content_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string content = 4;</code>
+       *
+       * <pre>
+       * 其它扩展内容
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getContentBytes() {
+        java.lang.Object ref = content_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          content_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string content = 4;</code>
+       *
+       * <pre>
+       * 其它扩展内容
+       * </pre>
+       */
+      public Builder setContent(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        content_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string content = 4;</code>
+       *
+       * <pre>
+       * 其它扩展内容
+       * </pre>
+       */
+      public Builder clearContent() {
+        
+        content_ = getDefaultInstance().getContent();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string content = 4;</code>
+       *
+       * <pre>
+       * 其它扩展内容
+       * </pre>
+       */
+      public Builder setContentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        content_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PFansSaveParam)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PFansSaveParam)
+    private static final bbproto.DatapublishingInside.PFansSaveParam DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new bbproto.DatapublishingInside.PFansSaveParam();
+    }
+
+    public static bbproto.DatapublishingInside.PFansSaveParam getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PFansSaveParam>
+        PARSER = new com.google.protobuf.AbstractParser<PFansSaveParam>() {
+      public PFansSaveParam parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PFansSaveParam(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<PFansSaveParam> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PFansSaveParam> getParserForType() {
+      return PARSER;
+    }
+
+    public bbproto.DatapublishingInside.PFansSaveParam getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_bbproto_POnlineData_descriptor;
   private static
@@ -3914,6 +5069,11 @@ public final class DatapublishingInside {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_bbproto_PGroupStringList_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PFansSaveParam_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PFansSaveParam_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3933,19 +5093,23 @@ public final class DatapublishingInside {
       "\004size\030\004 \001(\005\"+\n\rPScrollResult\022\n\n\002id\030\001 \003(\t" +
       "\022\016\n\006cursor\030\002 \001(\t\"+\n\014PGroupString\022\r\n\005grou" +
       "p\030\001 \001(\t\022\014\n\004list\030\002 \003(\t\"7\n\020PGroupStringLis",
-      "t\022#\n\004list\030\001 \003(\0132\025.bbproto.PGroupString2\265" +
-      "\003\n\022grpcDataPublishing\022?\n\nSelectFans\022\031.bb" +
-      "proto.PFansFilterParam\032\026.bbproto.PScroll" +
-      "Result\022<\n\nScrollMore\022\026.bbproto.PStringSi" +
-      "ngle\032\026.bbproto.PScrollResult\022B\n\013SelectVU" +
-      "ser\022\030.bbproto.PQueryUserParam\032\031.bbproto." +
-      "PGroupStringList\022I\n\027SelectTodayBirthdayF" +
-      "ans\022\026.bbproto.PStringSingle\032\026.bbproto.PS" +
-      "crollResult\022F\n\026Select7DayBirthdayFans\022\030." +
-      "bbproto.PQueryUserParam\032\022.bbproto.PUserL",
-      "ist\022I\n SelectVUserHaveTodayBirthdayFans\022" +
-      "\017.bbproto.PEmpty\032\024.bbproto.PStringListb\006" +
-      "proto3"
+      "t\022#\n\004list\030\001 \003(\0132\025.bbproto.PGroupString\"g" +
+      "\n\016PFansSaveParam\022\014\n\004uuid\030\001 \003(\t\022)\n\006filter" +
+      "\030\002 \001(\0132\031.bbproto.PFansFilterParam\022\013\n\003key" +
+      "\030\003 \001(\t\022\017\n\007content\030\004 \001(\t2\353\003\n\022grpcDataPubl" +
+      "ishing\022?\n\nSelectFans\022\031.bbproto.PFansFilt" +
+      "erParam\032\026.bbproto.PScrollResult\0224\n\010SaveF" +
+      "ans\022\027.bbproto.PFansSaveParam\032\017.bbproto.P" +
+      "Empty\022<\n\nScrollMore\022\026.bbproto.PStringSin" +
+      "gle\032\026.bbproto.PScrollResult\022B\n\013SelectVUs" +
+      "er\022\030.bbproto.PQueryUserParam\032\031.bbproto.P",
+      "GroupStringList\022I\n\027SelectTodayBirthdayFa" +
+      "ns\022\026.bbproto.PStringSingle\032\026.bbproto.PSc" +
+      "rollResult\022F\n\026Select7DayBirthdayFans\022\030.b" +
+      "bproto.PQueryUserParam\032\022.bbproto.PUserLi" +
+      "st\022I\n SelectVUserHaveTodayBirthdayFans\022\017" +
+      ".bbproto.PEmpty\032\024.bbproto.PStringListb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3999,6 +5163,12 @@ public final class DatapublishingInside {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PGroupStringList_descriptor,
         new java.lang.String[] { "List", });
+    internal_static_bbproto_PFansSaveParam_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_bbproto_PFansSaveParam_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PFansSaveParam_descriptor,
+        new java.lang.String[] { "Uuid", "Filter", "Key", "Content", });
     com.blemobi.sep.probuf.DataPublishingProtos.getDescriptor();
     com.blemobi.sep.probuf.ResultProtos.getDescriptor();
     com.blemobi.sep.probuf.AccountProtos.getDescriptor();
