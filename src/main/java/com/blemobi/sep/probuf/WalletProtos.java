@@ -9,7 +9,7 @@ public final class WalletProtos {
       com.google.protobuf.ExtensionRegistry registry) {
   }
   public interface PDiamondTotalCountOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PDiamondTotalCount)
+      // @@protoc_insertion_point(interface_extends:bbproto.PDiamondTotalCount)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -22,7 +22,7 @@ public final class WalletProtos {
     long getTotalVMoney();
   }
   /**
-   * Protobuf type {@code common.PDiamondTotalCount}
+   * Protobuf type {@code bbproto.PDiamondTotalCount}
    *
    * <pre>
    * 钻石数量信息
@@ -30,10 +30,10 @@ public final class WalletProtos {
    */
   public  static final class PDiamondTotalCount extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PDiamondTotalCount)
+      // @@protoc_insertion_point(message_implements:bbproto.PDiamondTotalCount)
       PDiamondTotalCountOrBuilder {
     // Use PDiamondTotalCount.newBuilder() to construct.
-    private PDiamondTotalCount(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PDiamondTotalCount(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PDiamondTotalCount() {
@@ -83,12 +83,12 @@ public final class WalletProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PDiamondTotalCount_descriptor;
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PDiamondTotalCount_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PDiamondTotalCount_fieldAccessorTable
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PDiamondTotalCount_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.WalletProtos.PDiamondTotalCount.class, com.blemobi.sep.probuf.WalletProtos.PDiamondTotalCount.Builder.class);
     }
@@ -123,9 +123,8 @@ public final class WalletProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -133,7 +132,7 @@ public final class WalletProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, totalVMoney_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -210,7 +209,7 @@ public final class WalletProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PDiamondTotalCount}
+     * Protobuf type {@code bbproto.PDiamondTotalCount}
      *
      * <pre>
      * 钻石数量信息
@@ -218,16 +217,16 @@ public final class WalletProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PDiamondTotalCount)
+        // @@protoc_insertion_point(builder_implements:bbproto.PDiamondTotalCount)
         com.blemobi.sep.probuf.WalletProtos.PDiamondTotalCountOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PDiamondTotalCount_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PDiamondTotalCount_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PDiamondTotalCount_fieldAccessorTable
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PDiamondTotalCount_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.WalletProtos.PDiamondTotalCount.class, com.blemobi.sep.probuf.WalletProtos.PDiamondTotalCount.Builder.class);
       }
@@ -255,7 +254,7 @@ public final class WalletProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PDiamondTotalCount_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PDiamondTotalCount_descriptor;
       }
 
       public com.blemobi.sep.probuf.WalletProtos.PDiamondTotalCount getDefaultInstanceForType() {
@@ -365,10 +364,10 @@ public final class WalletProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PDiamondTotalCount)
+      // @@protoc_insertion_point(builder_scope:bbproto.PDiamondTotalCount)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PDiamondTotalCount)
+    // @@protoc_insertion_point(class_scope:bbproto.PDiamondTotalCount)
     private static final com.blemobi.sep.probuf.WalletProtos.PDiamondTotalCount DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.WalletProtos.PDiamondTotalCount();
@@ -378,8 +377,8 @@ public final class WalletProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PDiamondTotalCount> PARSER =
-        new com.google.protobuf.AbstractParser<PDiamondTotalCount>() {
+    private static final com.google.protobuf.Parser<PDiamondTotalCount>
+        PARSER = new com.google.protobuf.AbstractParser<PDiamondTotalCount>() {
       public PDiamondTotalCount parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -397,6 +396,10 @@ public final class WalletProtos {
       }
     };
 
+    public static com.google.protobuf.Parser<PDiamondTotalCount> parser() {
+      return PARSER;
+    }
+
     @java.lang.Override
     public com.google.protobuf.Parser<PDiamondTotalCount> getParserForType() {
       return PARSER;
@@ -409,7 +412,7 @@ public final class WalletProtos {
   }
 
   public interface PDiamondCountOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PDiamondCount)
+      // @@protoc_insertion_point(interface_extends:bbproto.PDiamondCount)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -440,7 +443,7 @@ public final class WalletProtos {
     int getExpendVMoney();
   }
   /**
-   * Protobuf type {@code common.PDiamondCount}
+   * Protobuf type {@code bbproto.PDiamondCount}
    *
    * <pre>
    * 钻石数量信息
@@ -448,10 +451,10 @@ public final class WalletProtos {
    */
   public  static final class PDiamondCount extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PDiamondCount)
+      // @@protoc_insertion_point(message_implements:bbproto.PDiamondCount)
       PDiamondCountOrBuilder {
     // Use PDiamondCount.newBuilder() to construct.
-    private PDiamondCount(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PDiamondCount(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PDiamondCount() {
@@ -513,12 +516,12 @@ public final class WalletProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PDiamondCount_descriptor;
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PDiamondCount_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PDiamondCount_fieldAccessorTable
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PDiamondCount_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.WalletProtos.PDiamondCount.class, com.blemobi.sep.probuf.WalletProtos.PDiamondCount.Builder.class);
     }
@@ -585,9 +588,8 @@ public final class WalletProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -603,7 +605,7 @@ public final class WalletProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, expendVMoney_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -680,7 +682,7 @@ public final class WalletProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PDiamondCount}
+     * Protobuf type {@code bbproto.PDiamondCount}
      *
      * <pre>
      * 钻石数量信息
@@ -688,16 +690,16 @@ public final class WalletProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PDiamondCount)
+        // @@protoc_insertion_point(builder_implements:bbproto.PDiamondCount)
         com.blemobi.sep.probuf.WalletProtos.PDiamondCountOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PDiamondCount_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PDiamondCount_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PDiamondCount_fieldAccessorTable
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PDiamondCount_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.WalletProtos.PDiamondCount.class, com.blemobi.sep.probuf.WalletProtos.PDiamondCount.Builder.class);
       }
@@ -729,7 +731,7 @@ public final class WalletProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PDiamondCount_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PDiamondCount_descriptor;
       }
 
       public com.blemobi.sep.probuf.WalletProtos.PDiamondCount getDefaultInstanceForType() {
@@ -923,10 +925,10 @@ public final class WalletProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PDiamondCount)
+      // @@protoc_insertion_point(builder_scope:bbproto.PDiamondCount)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PDiamondCount)
+    // @@protoc_insertion_point(class_scope:bbproto.PDiamondCount)
     private static final com.blemobi.sep.probuf.WalletProtos.PDiamondCount DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.WalletProtos.PDiamondCount();
@@ -936,8 +938,8 @@ public final class WalletProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PDiamondCount> PARSER =
-        new com.google.protobuf.AbstractParser<PDiamondCount>() {
+    private static final com.google.protobuf.Parser<PDiamondCount>
+        PARSER = new com.google.protobuf.AbstractParser<PDiamondCount>() {
       public PDiamondCount parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -955,6 +957,10 @@ public final class WalletProtos {
       }
     };
 
+    public static com.google.protobuf.Parser<PDiamondCount> parser() {
+      return PARSER;
+    }
+
     @java.lang.Override
     public com.google.protobuf.Parser<PDiamondCount> getParserForType() {
       return PARSER;
@@ -967,7 +973,7 @@ public final class WalletProtos {
   }
 
   public interface PDiamondInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PDiamondInfo)
+      // @@protoc_insertion_point(interface_extends:bbproto.PDiamondInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1079,7 +1085,7 @@ public final class WalletProtos {
     long getCreateTime();
   }
   /**
-   * Protobuf type {@code common.PDiamondInfo}
+   * Protobuf type {@code bbproto.PDiamondInfo}
    *
    * <pre>
    * 钻石信息
@@ -1087,10 +1093,10 @@ public final class WalletProtos {
    */
   public  static final class PDiamondInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PDiamondInfo)
+      // @@protoc_insertion_point(message_implements:bbproto.PDiamondInfo)
       PDiamondInfoOrBuilder {
     // Use PDiamondInfo.newBuilder() to construct.
-    private PDiamondInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PDiamondInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PDiamondInfo() {
@@ -1129,21 +1135,21 @@ public final class WalletProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              sid_ = bs;
+              sid_ = s;
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              uuid_ = bs;
+              uuid_ = s;
               break;
             }
             case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              name_ = bs;
+              name_ = s;
               break;
             }
             case 32: {
@@ -1157,9 +1163,9 @@ public final class WalletProtos {
               break;
             }
             case 50: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              headImgURL_ = bs;
+              headImgURL_ = s;
               break;
             }
             case 56: {
@@ -1186,12 +1192,12 @@ public final class WalletProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PDiamondInfo_descriptor;
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PDiamondInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PDiamondInfo_fieldAccessorTable
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PDiamondInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.WalletProtos.PDiamondInfo.class, com.blemobi.sep.probuf.WalletProtos.PDiamondInfo.Builder.class);
     }
@@ -1213,9 +1219,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          sid_ = s;
-        }
+        sid_ = s;
         return s;
       }
     }
@@ -1257,9 +1261,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          uuid_ = s;
-        }
+        uuid_ = s;
         return s;
       }
     }
@@ -1301,9 +1303,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          name_ = s;
-        }
+        name_ = s;
         return s;
       }
     }
@@ -1371,9 +1371,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          headImgURL_ = s;
-        }
+        headImgURL_ = s;
         return s;
       }
     }
@@ -1437,13 +1435,13 @@ public final class WalletProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getSidBytes().isEmpty()) {
-        output.writeBytes(1, getSidBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, sid_);
       }
       if (!getUuidBytes().isEmpty()) {
-        output.writeBytes(2, getUuidBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, uuid_);
       }
       if (!getNameBytes().isEmpty()) {
-        output.writeBytes(3, getNameBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, name_);
       }
       if (type_ != 0) {
         output.writeInt32(4, type_);
@@ -1452,7 +1450,7 @@ public final class WalletProtos {
         output.writeInt32(5, target_);
       }
       if (!getHeadImgURLBytes().isEmpty()) {
-        output.writeBytes(6, getHeadImgURLBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 6, headImgURL_);
       }
       if (vMoney_ != 0) {
         output.writeInt32(7, vMoney_);
@@ -1462,23 +1460,19 @@ public final class WalletProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getSidBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getSidBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, sid_);
       }
       if (!getUuidBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getUuidBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, uuid_);
       }
       if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getNameBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, name_);
       }
       if (type_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -1489,8 +1483,7 @@ public final class WalletProtos {
           .computeInt32Size(5, target_);
       }
       if (!getHeadImgURLBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(6, getHeadImgURLBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, headImgURL_);
       }
       if (vMoney_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -1500,7 +1493,7 @@ public final class WalletProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(8, createTime_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -1577,7 +1570,7 @@ public final class WalletProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PDiamondInfo}
+     * Protobuf type {@code bbproto.PDiamondInfo}
      *
      * <pre>
      * 钻石信息
@@ -1585,16 +1578,16 @@ public final class WalletProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PDiamondInfo)
+        // @@protoc_insertion_point(builder_implements:bbproto.PDiamondInfo)
         com.blemobi.sep.probuf.WalletProtos.PDiamondInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PDiamondInfo_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PDiamondInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PDiamondInfo_fieldAccessorTable
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PDiamondInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.WalletProtos.PDiamondInfo.class, com.blemobi.sep.probuf.WalletProtos.PDiamondInfo.Builder.class);
       }
@@ -1636,7 +1629,7 @@ public final class WalletProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PDiamondInfo_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PDiamondInfo_descriptor;
       }
 
       public com.blemobi.sep.probuf.WalletProtos.PDiamondInfo getDefaultInstanceForType() {
@@ -1744,9 +1737,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            sid_ = s;
-          }
+          sid_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1814,7 +1805,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         sid_ = value;
         onChanged();
         return this;
@@ -1834,9 +1826,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            uuid_ = s;
-          }
+          uuid_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1904,7 +1894,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         uuid_ = value;
         onChanged();
         return this;
@@ -1924,9 +1915,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            name_ = s;
-          }
+          name_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1994,7 +1983,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         name_ = value;
         onChanged();
         return this;
@@ -2090,9 +2080,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            headImgURL_ = s;
-          }
+          headImgURL_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -2160,7 +2148,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         headImgURL_ = value;
         onChanged();
         return this;
@@ -2252,10 +2241,10 @@ public final class WalletProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PDiamondInfo)
+      // @@protoc_insertion_point(builder_scope:bbproto.PDiamondInfo)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PDiamondInfo)
+    // @@protoc_insertion_point(class_scope:bbproto.PDiamondInfo)
     private static final com.blemobi.sep.probuf.WalletProtos.PDiamondInfo DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.WalletProtos.PDiamondInfo();
@@ -2265,8 +2254,8 @@ public final class WalletProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PDiamondInfo> PARSER =
-        new com.google.protobuf.AbstractParser<PDiamondInfo>() {
+    private static final com.google.protobuf.Parser<PDiamondInfo>
+        PARSER = new com.google.protobuf.AbstractParser<PDiamondInfo>() {
       public PDiamondInfo parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2284,6 +2273,10 @@ public final class WalletProtos {
       }
     };
 
+    public static com.google.protobuf.Parser<PDiamondInfo> parser() {
+      return PARSER;
+    }
+
     @java.lang.Override
     public com.google.protobuf.Parser<PDiamondInfo> getParserForType() {
       return PARSER;
@@ -2296,11 +2289,11 @@ public final class WalletProtos {
   }
 
   public interface PDiamondInfoListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PDiamondInfoList)
+      // @@protoc_insertion_point(interface_extends:bbproto.PDiamondInfoList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .common.PDiamondInfo list = 1;</code>
+     * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
      *
      * <pre>
      * 列表
@@ -2309,7 +2302,7 @@ public final class WalletProtos {
     java.util.List<com.blemobi.sep.probuf.WalletProtos.PDiamondInfo> 
         getListList();
     /**
-     * <code>repeated .common.PDiamondInfo list = 1;</code>
+     * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
      *
      * <pre>
      * 列表
@@ -2317,7 +2310,7 @@ public final class WalletProtos {
      */
     com.blemobi.sep.probuf.WalletProtos.PDiamondInfo getList(int index);
     /**
-     * <code>repeated .common.PDiamondInfo list = 1;</code>
+     * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
      *
      * <pre>
      * 列表
@@ -2325,7 +2318,7 @@ public final class WalletProtos {
      */
     int getListCount();
     /**
-     * <code>repeated .common.PDiamondInfo list = 1;</code>
+     * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
      *
      * <pre>
      * 列表
@@ -2334,7 +2327,7 @@ public final class WalletProtos {
     java.util.List<? extends com.blemobi.sep.probuf.WalletProtos.PDiamondInfoOrBuilder> 
         getListOrBuilderList();
     /**
-     * <code>repeated .common.PDiamondInfo list = 1;</code>
+     * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
      *
      * <pre>
      * 列表
@@ -2344,7 +2337,7 @@ public final class WalletProtos {
         int index);
   }
   /**
-   * Protobuf type {@code common.PDiamondInfoList}
+   * Protobuf type {@code bbproto.PDiamondInfoList}
    *
    * <pre>
    * 钻石信息列表
@@ -2352,10 +2345,10 @@ public final class WalletProtos {
    */
   public  static final class PDiamondInfoList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PDiamondInfoList)
+      // @@protoc_insertion_point(message_implements:bbproto.PDiamondInfoList)
       PDiamondInfoListOrBuilder {
     // Use PDiamondInfoList.newBuilder() to construct.
-    private PDiamondInfoList(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PDiamondInfoList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PDiamondInfoList() {
@@ -2391,7 +2384,7 @@ public final class WalletProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.WalletProtos.PDiamondInfo>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.WalletProtos.PDiamondInfo.PARSER, extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.WalletProtos.PDiamondInfo.parser(), extensionRegistry));
               break;
             }
           }
@@ -2411,12 +2404,12 @@ public final class WalletProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PDiamondInfoList_descriptor;
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PDiamondInfoList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PDiamondInfoList_fieldAccessorTable
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PDiamondInfoList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.WalletProtos.PDiamondInfoList.class, com.blemobi.sep.probuf.WalletProtos.PDiamondInfoList.Builder.class);
     }
@@ -2424,7 +2417,7 @@ public final class WalletProtos {
     public static final int LIST_FIELD_NUMBER = 1;
     private java.util.List<com.blemobi.sep.probuf.WalletProtos.PDiamondInfo> list_;
     /**
-     * <code>repeated .common.PDiamondInfo list = 1;</code>
+     * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
      *
      * <pre>
      * 列表
@@ -2434,7 +2427,7 @@ public final class WalletProtos {
       return list_;
     }
     /**
-     * <code>repeated .common.PDiamondInfo list = 1;</code>
+     * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
      *
      * <pre>
      * 列表
@@ -2445,7 +2438,7 @@ public final class WalletProtos {
       return list_;
     }
     /**
-     * <code>repeated .common.PDiamondInfo list = 1;</code>
+     * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
      *
      * <pre>
      * 列表
@@ -2455,7 +2448,7 @@ public final class WalletProtos {
       return list_.size();
     }
     /**
-     * <code>repeated .common.PDiamondInfo list = 1;</code>
+     * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
      *
      * <pre>
      * 列表
@@ -2465,7 +2458,7 @@ public final class WalletProtos {
       return list_.get(index);
     }
     /**
-     * <code>repeated .common.PDiamondInfo list = 1;</code>
+     * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
      *
      * <pre>
      * 列表
@@ -2493,9 +2486,8 @@ public final class WalletProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -2503,7 +2495,7 @@ public final class WalletProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, list_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -2580,7 +2572,7 @@ public final class WalletProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PDiamondInfoList}
+     * Protobuf type {@code bbproto.PDiamondInfoList}
      *
      * <pre>
      * 钻石信息列表
@@ -2588,16 +2580,16 @@ public final class WalletProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PDiamondInfoList)
+        // @@protoc_insertion_point(builder_implements:bbproto.PDiamondInfoList)
         com.blemobi.sep.probuf.WalletProtos.PDiamondInfoListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PDiamondInfoList_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PDiamondInfoList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PDiamondInfoList_fieldAccessorTable
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PDiamondInfoList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.WalletProtos.PDiamondInfoList.class, com.blemobi.sep.probuf.WalletProtos.PDiamondInfoList.Builder.class);
       }
@@ -2630,7 +2622,7 @@ public final class WalletProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PDiamondInfoList_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PDiamondInfoList_descriptor;
       }
 
       public com.blemobi.sep.probuf.WalletProtos.PDiamondInfoList getDefaultInstanceForType() {
@@ -2738,7 +2730,7 @@ public final class WalletProtos {
           com.blemobi.sep.probuf.WalletProtos.PDiamondInfo, com.blemobi.sep.probuf.WalletProtos.PDiamondInfo.Builder, com.blemobi.sep.probuf.WalletProtos.PDiamondInfoOrBuilder> listBuilder_;
 
       /**
-       * <code>repeated .common.PDiamondInfo list = 1;</code>
+       * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -2752,7 +2744,7 @@ public final class WalletProtos {
         }
       }
       /**
-       * <code>repeated .common.PDiamondInfo list = 1;</code>
+       * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -2766,7 +2758,7 @@ public final class WalletProtos {
         }
       }
       /**
-       * <code>repeated .common.PDiamondInfo list = 1;</code>
+       * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -2780,7 +2772,7 @@ public final class WalletProtos {
         }
       }
       /**
-       * <code>repeated .common.PDiamondInfo list = 1;</code>
+       * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -2801,7 +2793,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PDiamondInfo list = 1;</code>
+       * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -2819,7 +2811,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PDiamondInfo list = 1;</code>
+       * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -2839,7 +2831,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PDiamondInfo list = 1;</code>
+       * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -2860,7 +2852,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PDiamondInfo list = 1;</code>
+       * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -2878,7 +2870,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PDiamondInfo list = 1;</code>
+       * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -2896,7 +2888,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PDiamondInfo list = 1;</code>
+       * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -2915,7 +2907,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PDiamondInfo list = 1;</code>
+       * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -2932,7 +2924,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PDiamondInfo list = 1;</code>
+       * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -2949,7 +2941,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PDiamondInfo list = 1;</code>
+       * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -2960,7 +2952,7 @@ public final class WalletProtos {
         return getListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PDiamondInfo list = 1;</code>
+       * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -2974,7 +2966,7 @@ public final class WalletProtos {
         }
       }
       /**
-       * <code>repeated .common.PDiamondInfo list = 1;</code>
+       * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -2989,7 +2981,7 @@ public final class WalletProtos {
         }
       }
       /**
-       * <code>repeated .common.PDiamondInfo list = 1;</code>
+       * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -3000,7 +2992,7 @@ public final class WalletProtos {
             com.blemobi.sep.probuf.WalletProtos.PDiamondInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PDiamondInfo list = 1;</code>
+       * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -3012,7 +3004,7 @@ public final class WalletProtos {
             index, com.blemobi.sep.probuf.WalletProtos.PDiamondInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PDiamondInfo list = 1;</code>
+       * <code>repeated .bbproto.PDiamondInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -3047,10 +3039,10 @@ public final class WalletProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PDiamondInfoList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PDiamondInfoList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PDiamondInfoList)
+    // @@protoc_insertion_point(class_scope:bbproto.PDiamondInfoList)
     private static final com.blemobi.sep.probuf.WalletProtos.PDiamondInfoList DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.WalletProtos.PDiamondInfoList();
@@ -3060,8 +3052,8 @@ public final class WalletProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PDiamondInfoList> PARSER =
-        new com.google.protobuf.AbstractParser<PDiamondInfoList>() {
+    private static final com.google.protobuf.Parser<PDiamondInfoList>
+        PARSER = new com.google.protobuf.AbstractParser<PDiamondInfoList>() {
       public PDiamondInfoList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3079,6 +3071,10 @@ public final class WalletProtos {
       }
     };
 
+    public static com.google.protobuf.Parser<PDiamondInfoList> parser() {
+      return PARSER;
+    }
+
     @java.lang.Override
     public com.google.protobuf.Parser<PDiamondInfoList> getParserForType() {
       return PARSER;
@@ -3091,7 +3087,7 @@ public final class WalletProtos {
   }
 
   public interface PRedPacketCountOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PRedPacketCount)
+      // @@protoc_insertion_point(interface_extends:bbproto.PRedPacketCount)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3131,7 +3127,7 @@ public final class WalletProtos {
     int getSendCount();
   }
   /**
-   * Protobuf type {@code common.PRedPacketCount}
+   * Protobuf type {@code bbproto.PRedPacketCount}
    *
    * <pre>
    * 钻石数量信息
@@ -3139,10 +3135,10 @@ public final class WalletProtos {
    */
   public  static final class PRedPacketCount extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PRedPacketCount)
+      // @@protoc_insertion_point(message_implements:bbproto.PRedPacketCount)
       PRedPacketCountOrBuilder {
     // Use PRedPacketCount.newBuilder() to construct.
-    private PRedPacketCount(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PRedPacketCount(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PRedPacketCount() {
@@ -3210,12 +3206,12 @@ public final class WalletProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketCount_descriptor;
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketCount_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketCount_fieldAccessorTable
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketCount_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.WalletProtos.PRedPacketCount.class, com.blemobi.sep.probuf.WalletProtos.PRedPacketCount.Builder.class);
     }
@@ -3298,9 +3294,8 @@ public final class WalletProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -3320,7 +3315,7 @@ public final class WalletProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(4, sendCount_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -3397,7 +3392,7 @@ public final class WalletProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PRedPacketCount}
+     * Protobuf type {@code bbproto.PRedPacketCount}
      *
      * <pre>
      * 钻石数量信息
@@ -3405,16 +3400,16 @@ public final class WalletProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PRedPacketCount)
+        // @@protoc_insertion_point(builder_implements:bbproto.PRedPacketCount)
         com.blemobi.sep.probuf.WalletProtos.PRedPacketCountOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketCount_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketCount_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketCount_fieldAccessorTable
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketCount_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.WalletProtos.PRedPacketCount.class, com.blemobi.sep.probuf.WalletProtos.PRedPacketCount.Builder.class);
       }
@@ -3448,7 +3443,7 @@ public final class WalletProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketCount_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketCount_descriptor;
       }
 
       public com.blemobi.sep.probuf.WalletProtos.PRedPacketCount getDefaultInstanceForType() {
@@ -3684,10 +3679,10 @@ public final class WalletProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PRedPacketCount)
+      // @@protoc_insertion_point(builder_scope:bbproto.PRedPacketCount)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PRedPacketCount)
+    // @@protoc_insertion_point(class_scope:bbproto.PRedPacketCount)
     private static final com.blemobi.sep.probuf.WalletProtos.PRedPacketCount DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.WalletProtos.PRedPacketCount();
@@ -3697,8 +3692,8 @@ public final class WalletProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PRedPacketCount> PARSER =
-        new com.google.protobuf.AbstractParser<PRedPacketCount>() {
+    private static final com.google.protobuf.Parser<PRedPacketCount>
+        PARSER = new com.google.protobuf.AbstractParser<PRedPacketCount>() {
       public PRedPacketCount parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3716,6 +3711,10 @@ public final class WalletProtos {
       }
     };
 
+    public static com.google.protobuf.Parser<PRedPacketCount> parser() {
+      return PARSER;
+    }
+
     @java.lang.Override
     public com.google.protobuf.Parser<PRedPacketCount> getParserForType() {
       return PARSER;
@@ -3728,7 +3727,7 @@ public final class WalletProtos {
   }
 
   public interface PRedPacketIDOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PRedPacketID)
+      // @@protoc_insertion_point(interface_extends:bbproto.PRedPacketID)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3750,7 +3749,7 @@ public final class WalletProtos {
         getRidBytes();
   }
   /**
-   * Protobuf type {@code common.PRedPacketID}
+   * Protobuf type {@code bbproto.PRedPacketID}
    *
    * <pre>
    * 红包ID
@@ -3758,10 +3757,10 @@ public final class WalletProtos {
    */
   public  static final class PRedPacketID extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PRedPacketID)
+      // @@protoc_insertion_point(message_implements:bbproto.PRedPacketID)
       PRedPacketIDOrBuilder {
     // Use PRedPacketID.newBuilder() to construct.
-    private PRedPacketID(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PRedPacketID(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PRedPacketID() {
@@ -3793,9 +3792,9 @@ public final class WalletProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              rid_ = bs;
+              rid_ = s;
               break;
             }
           }
@@ -3812,12 +3811,12 @@ public final class WalletProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketID_descriptor;
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketID_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketID_fieldAccessorTable
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketID_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.WalletProtos.PRedPacketID.class, com.blemobi.sep.probuf.WalletProtos.PRedPacketID.Builder.class);
     }
@@ -3839,9 +3838,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          rid_ = s;
-        }
+        rid_ = s;
         return s;
       }
     }
@@ -3879,21 +3876,19 @@ public final class WalletProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getRidBytes().isEmpty()) {
-        output.writeBytes(1, getRidBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, rid_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getRidBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getRidBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, rid_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -3970,7 +3965,7 @@ public final class WalletProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PRedPacketID}
+     * Protobuf type {@code bbproto.PRedPacketID}
      *
      * <pre>
      * 红包ID
@@ -3978,16 +3973,16 @@ public final class WalletProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PRedPacketID)
+        // @@protoc_insertion_point(builder_implements:bbproto.PRedPacketID)
         com.blemobi.sep.probuf.WalletProtos.PRedPacketIDOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketID_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketID_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketID_fieldAccessorTable
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketID_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.WalletProtos.PRedPacketID.class, com.blemobi.sep.probuf.WalletProtos.PRedPacketID.Builder.class);
       }
@@ -4015,7 +4010,7 @@ public final class WalletProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketID_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketID_descriptor;
       }
 
       public com.blemobi.sep.probuf.WalletProtos.PRedPacketID getDefaultInstanceForType() {
@@ -4092,9 +4087,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            rid_ = s;
-          }
+          rid_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -4162,7 +4155,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         rid_ = value;
         onChanged();
         return this;
@@ -4178,10 +4172,10 @@ public final class WalletProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PRedPacketID)
+      // @@protoc_insertion_point(builder_scope:bbproto.PRedPacketID)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PRedPacketID)
+    // @@protoc_insertion_point(class_scope:bbproto.PRedPacketID)
     private static final com.blemobi.sep.probuf.WalletProtos.PRedPacketID DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.WalletProtos.PRedPacketID();
@@ -4191,8 +4185,8 @@ public final class WalletProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PRedPacketID> PARSER =
-        new com.google.protobuf.AbstractParser<PRedPacketID>() {
+    private static final com.google.protobuf.Parser<PRedPacketID>
+        PARSER = new com.google.protobuf.AbstractParser<PRedPacketID>() {
       public PRedPacketID parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4210,6 +4204,10 @@ public final class WalletProtos {
       }
     };
 
+    public static com.google.protobuf.Parser<PRedPacketID> parser() {
+      return PARSER;
+    }
+
     @java.lang.Override
     public com.google.protobuf.Parser<PRedPacketID> getParserForType() {
       return PARSER;
@@ -4222,7 +4220,7 @@ public final class WalletProtos {
   }
 
   public interface PSendRedPacketOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PSendRedPacket)
+      // @@protoc_insertion_point(interface_extends:bbproto.PSendRedPacket)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4316,7 +4314,7 @@ public final class WalletProtos {
         getTargetIDBytes();
   }
   /**
-   * Protobuf type {@code common.PSendRedPacket}
+   * Protobuf type {@code bbproto.PSendRedPacket}
    *
    * <pre>
    * 发红包参数结构
@@ -4324,10 +4322,10 @@ public final class WalletProtos {
    */
   public  static final class PSendRedPacket extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PSendRedPacket)
+      // @@protoc_insertion_point(message_implements:bbproto.PSendRedPacket)
       PSendRedPacketOrBuilder {
     // Use PSendRedPacket.newBuilder() to construct.
-    private PSendRedPacket(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PSendRedPacket(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PSendRedPacket() {
@@ -4365,9 +4363,9 @@ public final class WalletProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              paytoken_ = bs;
+              paytoken_ = s;
               break;
             }
             case 16: {
@@ -4386,9 +4384,9 @@ public final class WalletProtos {
               break;
             }
             case 42: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              remark_ = bs;
+              remark_ = s;
               break;
             }
             case 48: {
@@ -4397,9 +4395,9 @@ public final class WalletProtos {
               break;
             }
             case 58: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              targetID_ = bs;
+              targetID_ = s;
               break;
             }
           }
@@ -4416,12 +4414,12 @@ public final class WalletProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PSendRedPacket_descriptor;
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PSendRedPacket_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PSendRedPacket_fieldAccessorTable
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PSendRedPacket_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.WalletProtos.PSendRedPacket.class, com.blemobi.sep.probuf.WalletProtos.PSendRedPacket.Builder.class);
     }
@@ -4443,9 +4441,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          paytoken_ = s;
-        }
+        paytoken_ = s;
         return s;
       }
     }
@@ -4526,9 +4522,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          remark_ = s;
-        }
+        remark_ = s;
         return s;
       }
     }
@@ -4583,9 +4577,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          targetID_ = s;
-        }
+        targetID_ = s;
         return s;
       }
     }
@@ -4623,7 +4615,7 @@ public final class WalletProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getPaytokenBytes().isEmpty()) {
-        output.writeBytes(1, getPaytokenBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, paytoken_);
       }
       if (type_ != 0) {
         output.writeInt32(2, type_);
@@ -4635,25 +4627,23 @@ public final class WalletProtos {
         output.writeInt32(4, vMoney_);
       }
       if (!getRemarkBytes().isEmpty()) {
-        output.writeBytes(5, getRemarkBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, remark_);
       }
       if (target_ != 0) {
         output.writeInt32(6, target_);
       }
       if (!getTargetIDBytes().isEmpty()) {
-        output.writeBytes(7, getTargetIDBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 7, targetID_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getPaytokenBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getPaytokenBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, paytoken_);
       }
       if (type_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -4668,18 +4658,16 @@ public final class WalletProtos {
           .computeInt32Size(4, vMoney_);
       }
       if (!getRemarkBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(5, getRemarkBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, remark_);
       }
       if (target_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(6, target_);
       }
       if (!getTargetIDBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(7, getTargetIDBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, targetID_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -4756,7 +4744,7 @@ public final class WalletProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PSendRedPacket}
+     * Protobuf type {@code bbproto.PSendRedPacket}
      *
      * <pre>
      * 发红包参数结构
@@ -4764,16 +4752,16 @@ public final class WalletProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PSendRedPacket)
+        // @@protoc_insertion_point(builder_implements:bbproto.PSendRedPacket)
         com.blemobi.sep.probuf.WalletProtos.PSendRedPacketOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PSendRedPacket_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PSendRedPacket_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PSendRedPacket_fieldAccessorTable
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PSendRedPacket_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.WalletProtos.PSendRedPacket.class, com.blemobi.sep.probuf.WalletProtos.PSendRedPacket.Builder.class);
       }
@@ -4813,7 +4801,7 @@ public final class WalletProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PSendRedPacket_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PSendRedPacket_descriptor;
       }
 
       public com.blemobi.sep.probuf.WalletProtos.PSendRedPacket getDefaultInstanceForType() {
@@ -4916,9 +4904,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            paytoken_ = s;
-          }
+          paytoken_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -4986,7 +4972,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         paytoken_ = value;
         onChanged();
         return this;
@@ -5120,9 +5107,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            remark_ = s;
-          }
+          remark_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -5190,7 +5175,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         remark_ = value;
         onChanged();
         return this;
@@ -5248,9 +5234,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            targetID_ = s;
-          }
+          targetID_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -5318,7 +5302,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         targetID_ = value;
         onChanged();
         return this;
@@ -5334,10 +5319,10 @@ public final class WalletProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PSendRedPacket)
+      // @@protoc_insertion_point(builder_scope:bbproto.PSendRedPacket)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PSendRedPacket)
+    // @@protoc_insertion_point(class_scope:bbproto.PSendRedPacket)
     private static final com.blemobi.sep.probuf.WalletProtos.PSendRedPacket DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.WalletProtos.PSendRedPacket();
@@ -5347,8 +5332,8 @@ public final class WalletProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PSendRedPacket> PARSER =
-        new com.google.protobuf.AbstractParser<PSendRedPacket>() {
+    private static final com.google.protobuf.Parser<PSendRedPacket>
+        PARSER = new com.google.protobuf.AbstractParser<PSendRedPacket>() {
       public PSendRedPacket parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5366,6 +5351,10 @@ public final class WalletProtos {
       }
     };
 
+    public static com.google.protobuf.Parser<PSendRedPacket> parser() {
+      return PARSER;
+    }
+
     @java.lang.Override
     public com.google.protobuf.Parser<PSendRedPacket> getParserForType() {
       return PARSER;
@@ -5378,7 +5367,7 @@ public final class WalletProtos {
   }
 
   public interface PRedPacketInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PRedPacketInfo)
+      // @@protoc_insertion_point(interface_extends:bbproto.PRedPacketInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -5526,7 +5515,7 @@ public final class WalletProtos {
     long getCreateTime();
   }
   /**
-   * Protobuf type {@code common.PRedPacketInfo}
+   * Protobuf type {@code bbproto.PRedPacketInfo}
    *
    * <pre>
    * 红包信息
@@ -5534,10 +5523,10 @@ public final class WalletProtos {
    */
   public  static final class PRedPacketInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PRedPacketInfo)
+      // @@protoc_insertion_point(message_implements:bbproto.PRedPacketInfo)
       PRedPacketInfoOrBuilder {
     // Use PRedPacketInfo.newBuilder() to construct.
-    private PRedPacketInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PRedPacketInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PRedPacketInfo() {
@@ -5578,27 +5567,27 @@ public final class WalletProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              sid_ = bs;
+              sid_ = s;
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              rid_ = bs;
+              rid_ = s;
               break;
             }
             case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              uuid_ = bs;
+              uuid_ = s;
               break;
             }
             case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              name_ = bs;
+              name_ = s;
               break;
             }
             case 40: {
@@ -5612,9 +5601,9 @@ public final class WalletProtos {
               break;
             }
             case 58: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              headImgURL_ = bs;
+              headImgURL_ = s;
               break;
             }
             case 64: {
@@ -5623,9 +5612,9 @@ public final class WalletProtos {
               break;
             }
             case 74: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              remark_ = bs;
+              remark_ = s;
               break;
             }
             case 80: {
@@ -5647,12 +5636,12 @@ public final class WalletProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketInfo_descriptor;
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketInfo_fieldAccessorTable
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.WalletProtos.PRedPacketInfo.class, com.blemobi.sep.probuf.WalletProtos.PRedPacketInfo.Builder.class);
     }
@@ -5674,9 +5663,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          sid_ = s;
-        }
+        sid_ = s;
         return s;
       }
     }
@@ -5718,9 +5705,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          rid_ = s;
-        }
+        rid_ = s;
         return s;
       }
     }
@@ -5762,9 +5747,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          uuid_ = s;
-        }
+        uuid_ = s;
         return s;
       }
     }
@@ -5806,9 +5789,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          name_ = s;
-        }
+        name_ = s;
         return s;
       }
     }
@@ -5876,9 +5857,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          headImgURL_ = s;
-        }
+        headImgURL_ = s;
         return s;
       }
     }
@@ -5933,9 +5912,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          remark_ = s;
-        }
+        remark_ = s;
         return s;
       }
     }
@@ -5986,16 +5963,16 @@ public final class WalletProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getSidBytes().isEmpty()) {
-        output.writeBytes(1, getSidBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, sid_);
       }
       if (!getRidBytes().isEmpty()) {
-        output.writeBytes(2, getRidBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, rid_);
       }
       if (!getUuidBytes().isEmpty()) {
-        output.writeBytes(3, getUuidBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, uuid_);
       }
       if (!getNameBytes().isEmpty()) {
-        output.writeBytes(4, getNameBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, name_);
       }
       if (type_ != 0) {
         output.writeInt32(5, type_);
@@ -6004,40 +5981,35 @@ public final class WalletProtos {
         output.writeInt32(6, target_);
       }
       if (!getHeadImgURLBytes().isEmpty()) {
-        output.writeBytes(7, getHeadImgURLBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 7, headImgURL_);
       }
       if (vMoney_ != 0L) {
         output.writeInt64(8, vMoney_);
       }
       if (!getRemarkBytes().isEmpty()) {
-        output.writeBytes(9, getRemarkBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 9, remark_);
       }
       if (createTime_ != 0L) {
         output.writeInt64(10, createTime_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getSidBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getSidBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, sid_);
       }
       if (!getRidBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getRidBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, rid_);
       }
       if (!getUuidBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getUuidBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, uuid_);
       }
       if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getNameBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, name_);
       }
       if (type_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -6048,22 +6020,20 @@ public final class WalletProtos {
           .computeInt32Size(6, target_);
       }
       if (!getHeadImgURLBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(7, getHeadImgURLBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, headImgURL_);
       }
       if (vMoney_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(8, vMoney_);
       }
       if (!getRemarkBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(9, getRemarkBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(9, remark_);
       }
       if (createTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(10, createTime_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -6140,7 +6110,7 @@ public final class WalletProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PRedPacketInfo}
+     * Protobuf type {@code bbproto.PRedPacketInfo}
      *
      * <pre>
      * 红包信息
@@ -6148,16 +6118,16 @@ public final class WalletProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PRedPacketInfo)
+        // @@protoc_insertion_point(builder_implements:bbproto.PRedPacketInfo)
         com.blemobi.sep.probuf.WalletProtos.PRedPacketInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketInfo_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketInfo_fieldAccessorTable
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.WalletProtos.PRedPacketInfo.class, com.blemobi.sep.probuf.WalletProtos.PRedPacketInfo.Builder.class);
       }
@@ -6203,7 +6173,7 @@ public final class WalletProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketInfo_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketInfo_descriptor;
       }
 
       public com.blemobi.sep.probuf.WalletProtos.PRedPacketInfo getDefaultInstanceForType() {
@@ -6321,9 +6291,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            sid_ = s;
-          }
+          sid_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -6391,7 +6359,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         sid_ = value;
         onChanged();
         return this;
@@ -6411,9 +6380,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            rid_ = s;
-          }
+          rid_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -6481,7 +6448,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         rid_ = value;
         onChanged();
         return this;
@@ -6501,9 +6469,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            uuid_ = s;
-          }
+          uuid_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -6571,7 +6537,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         uuid_ = value;
         onChanged();
         return this;
@@ -6591,9 +6558,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            name_ = s;
-          }
+          name_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -6661,7 +6626,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         name_ = value;
         onChanged();
         return this;
@@ -6757,9 +6723,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            headImgURL_ = s;
-          }
+          headImgURL_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -6827,7 +6791,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         headImgURL_ = value;
         onChanged();
         return this;
@@ -6885,9 +6850,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            remark_ = s;
-          }
+          remark_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -6955,7 +6918,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         remark_ = value;
         onChanged();
         return this;
@@ -7009,10 +6973,10 @@ public final class WalletProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PRedPacketInfo)
+      // @@protoc_insertion_point(builder_scope:bbproto.PRedPacketInfo)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PRedPacketInfo)
+    // @@protoc_insertion_point(class_scope:bbproto.PRedPacketInfo)
     private static final com.blemobi.sep.probuf.WalletProtos.PRedPacketInfo DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.WalletProtos.PRedPacketInfo();
@@ -7022,8 +6986,8 @@ public final class WalletProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PRedPacketInfo> PARSER =
-        new com.google.protobuf.AbstractParser<PRedPacketInfo>() {
+    private static final com.google.protobuf.Parser<PRedPacketInfo>
+        PARSER = new com.google.protobuf.AbstractParser<PRedPacketInfo>() {
       public PRedPacketInfo parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7041,6 +7005,10 @@ public final class WalletProtos {
       }
     };
 
+    public static com.google.protobuf.Parser<PRedPacketInfo> parser() {
+      return PARSER;
+    }
+
     @java.lang.Override
     public com.google.protobuf.Parser<PRedPacketInfo> getParserForType() {
       return PARSER;
@@ -7053,7 +7021,7 @@ public final class WalletProtos {
   }
 
   public interface PSendRedPacketInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PSendRedPacketInfo)
+      // @@protoc_insertion_point(interface_extends:bbproto.PSendRedPacketInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -7138,7 +7106,7 @@ public final class WalletProtos {
     long getCreateTime();
   }
   /**
-   * Protobuf type {@code common.PSendRedPacketInfo}
+   * Protobuf type {@code bbproto.PSendRedPacketInfo}
    *
    * <pre>
    * 发红包信息
@@ -7146,10 +7114,10 @@ public final class WalletProtos {
    */
   public  static final class PSendRedPacketInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PSendRedPacketInfo)
+      // @@protoc_insertion_point(message_implements:bbproto.PSendRedPacketInfo)
       PSendRedPacketInfoOrBuilder {
     // Use PSendRedPacketInfo.newBuilder() to construct.
-    private PSendRedPacketInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PSendRedPacketInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PSendRedPacketInfo() {
@@ -7187,9 +7155,9 @@ public final class WalletProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              uuid_ = bs;
+              uuid_ = s;
               break;
             }
             case 16: {
@@ -7213,9 +7181,9 @@ public final class WalletProtos {
               break;
             }
             case 50: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              remark_ = bs;
+              remark_ = s;
               break;
             }
             case 56: {
@@ -7237,12 +7205,12 @@ public final class WalletProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PSendRedPacketInfo_descriptor;
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PSendRedPacketInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PSendRedPacketInfo_fieldAccessorTable
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PSendRedPacketInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.WalletProtos.PSendRedPacketInfo.class, com.blemobi.sep.probuf.WalletProtos.PSendRedPacketInfo.Builder.class);
     }
@@ -7264,9 +7232,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          uuid_ = s;
-        }
+        uuid_ = s;
         return s;
       }
     }
@@ -7360,9 +7326,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          remark_ = s;
-        }
+        remark_ = s;
         return s;
       }
     }
@@ -7413,7 +7377,7 @@ public final class WalletProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUuidBytes().isEmpty()) {
-        output.writeBytes(1, getUuidBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, uuid_);
       }
       if (type_ != 0) {
         output.writeInt32(2, type_);
@@ -7428,22 +7392,20 @@ public final class WalletProtos {
         output.writeInt32(5, count_);
       }
       if (!getRemarkBytes().isEmpty()) {
-        output.writeBytes(6, getRemarkBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 6, remark_);
       }
       if (createTime_ != 0L) {
         output.writeInt64(7, createTime_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getUuidBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getUuidBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, uuid_);
       }
       if (type_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -7462,14 +7424,13 @@ public final class WalletProtos {
           .computeInt32Size(5, count_);
       }
       if (!getRemarkBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(6, getRemarkBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, remark_);
       }
       if (createTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(7, createTime_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -7546,7 +7507,7 @@ public final class WalletProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PSendRedPacketInfo}
+     * Protobuf type {@code bbproto.PSendRedPacketInfo}
      *
      * <pre>
      * 发红包信息
@@ -7554,16 +7515,16 @@ public final class WalletProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PSendRedPacketInfo)
+        // @@protoc_insertion_point(builder_implements:bbproto.PSendRedPacketInfo)
         com.blemobi.sep.probuf.WalletProtos.PSendRedPacketInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PSendRedPacketInfo_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PSendRedPacketInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PSendRedPacketInfo_fieldAccessorTable
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PSendRedPacketInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.WalletProtos.PSendRedPacketInfo.class, com.blemobi.sep.probuf.WalletProtos.PSendRedPacketInfo.Builder.class);
       }
@@ -7603,7 +7564,7 @@ public final class WalletProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PSendRedPacketInfo_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PSendRedPacketInfo_descriptor;
       }
 
       public com.blemobi.sep.probuf.WalletProtos.PSendRedPacketInfo getDefaultInstanceForType() {
@@ -7705,9 +7666,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            uuid_ = s;
-          }
+          uuid_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -7775,7 +7734,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         uuid_ = value;
         onChanged();
         return this;
@@ -7947,9 +7907,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            remark_ = s;
-          }
+          remark_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -8017,7 +7975,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         remark_ = value;
         onChanged();
         return this;
@@ -8071,10 +8030,10 @@ public final class WalletProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PSendRedPacketInfo)
+      // @@protoc_insertion_point(builder_scope:bbproto.PSendRedPacketInfo)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PSendRedPacketInfo)
+    // @@protoc_insertion_point(class_scope:bbproto.PSendRedPacketInfo)
     private static final com.blemobi.sep.probuf.WalletProtos.PSendRedPacketInfo DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.WalletProtos.PSendRedPacketInfo();
@@ -8084,8 +8043,8 @@ public final class WalletProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PSendRedPacketInfo> PARSER =
-        new com.google.protobuf.AbstractParser<PSendRedPacketInfo>() {
+    private static final com.google.protobuf.Parser<PSendRedPacketInfo>
+        PARSER = new com.google.protobuf.AbstractParser<PSendRedPacketInfo>() {
       public PSendRedPacketInfo parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8103,6 +8062,10 @@ public final class WalletProtos {
       }
     };
 
+    public static com.google.protobuf.Parser<PSendRedPacketInfo> parser() {
+      return PARSER;
+    }
+
     @java.lang.Override
     public com.google.protobuf.Parser<PSendRedPacketInfo> getParserForType() {
       return PARSER;
@@ -8115,11 +8078,11 @@ public final class WalletProtos {
   }
 
   public interface PRedPacketInfoListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PRedPacketInfoList)
+      // @@protoc_insertion_point(interface_extends:bbproto.PRedPacketInfoList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .common.PRedPacketInfo list = 1;</code>
+     * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
      *
      * <pre>
      * 列表
@@ -8128,7 +8091,7 @@ public final class WalletProtos {
     java.util.List<com.blemobi.sep.probuf.WalletProtos.PRedPacketInfo> 
         getListList();
     /**
-     * <code>repeated .common.PRedPacketInfo list = 1;</code>
+     * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
      *
      * <pre>
      * 列表
@@ -8136,7 +8099,7 @@ public final class WalletProtos {
      */
     com.blemobi.sep.probuf.WalletProtos.PRedPacketInfo getList(int index);
     /**
-     * <code>repeated .common.PRedPacketInfo list = 1;</code>
+     * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
      *
      * <pre>
      * 列表
@@ -8144,7 +8107,7 @@ public final class WalletProtos {
      */
     int getListCount();
     /**
-     * <code>repeated .common.PRedPacketInfo list = 1;</code>
+     * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
      *
      * <pre>
      * 列表
@@ -8153,7 +8116,7 @@ public final class WalletProtos {
     java.util.List<? extends com.blemobi.sep.probuf.WalletProtos.PRedPacketInfoOrBuilder> 
         getListOrBuilderList();
     /**
-     * <code>repeated .common.PRedPacketInfo list = 1;</code>
+     * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
      *
      * <pre>
      * 列表
@@ -8163,7 +8126,7 @@ public final class WalletProtos {
         int index);
   }
   /**
-   * Protobuf type {@code common.PRedPacketInfoList}
+   * Protobuf type {@code bbproto.PRedPacketInfoList}
    *
    * <pre>
    * 红包信息列表
@@ -8171,10 +8134,10 @@ public final class WalletProtos {
    */
   public  static final class PRedPacketInfoList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PRedPacketInfoList)
+      // @@protoc_insertion_point(message_implements:bbproto.PRedPacketInfoList)
       PRedPacketInfoListOrBuilder {
     // Use PRedPacketInfoList.newBuilder() to construct.
-    private PRedPacketInfoList(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PRedPacketInfoList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PRedPacketInfoList() {
@@ -8210,7 +8173,7 @@ public final class WalletProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.WalletProtos.PRedPacketInfo>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.WalletProtos.PRedPacketInfo.PARSER, extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.WalletProtos.PRedPacketInfo.parser(), extensionRegistry));
               break;
             }
           }
@@ -8230,12 +8193,12 @@ public final class WalletProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketInfoList_descriptor;
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketInfoList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketInfoList_fieldAccessorTable
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketInfoList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.WalletProtos.PRedPacketInfoList.class, com.blemobi.sep.probuf.WalletProtos.PRedPacketInfoList.Builder.class);
     }
@@ -8243,7 +8206,7 @@ public final class WalletProtos {
     public static final int LIST_FIELD_NUMBER = 1;
     private java.util.List<com.blemobi.sep.probuf.WalletProtos.PRedPacketInfo> list_;
     /**
-     * <code>repeated .common.PRedPacketInfo list = 1;</code>
+     * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
      *
      * <pre>
      * 列表
@@ -8253,7 +8216,7 @@ public final class WalletProtos {
       return list_;
     }
     /**
-     * <code>repeated .common.PRedPacketInfo list = 1;</code>
+     * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
      *
      * <pre>
      * 列表
@@ -8264,7 +8227,7 @@ public final class WalletProtos {
       return list_;
     }
     /**
-     * <code>repeated .common.PRedPacketInfo list = 1;</code>
+     * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
      *
      * <pre>
      * 列表
@@ -8274,7 +8237,7 @@ public final class WalletProtos {
       return list_.size();
     }
     /**
-     * <code>repeated .common.PRedPacketInfo list = 1;</code>
+     * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
      *
      * <pre>
      * 列表
@@ -8284,7 +8247,7 @@ public final class WalletProtos {
       return list_.get(index);
     }
     /**
-     * <code>repeated .common.PRedPacketInfo list = 1;</code>
+     * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
      *
      * <pre>
      * 列表
@@ -8312,9 +8275,8 @@ public final class WalletProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -8322,7 +8284,7 @@ public final class WalletProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, list_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -8399,7 +8361,7 @@ public final class WalletProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PRedPacketInfoList}
+     * Protobuf type {@code bbproto.PRedPacketInfoList}
      *
      * <pre>
      * 红包信息列表
@@ -8407,16 +8369,16 @@ public final class WalletProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PRedPacketInfoList)
+        // @@protoc_insertion_point(builder_implements:bbproto.PRedPacketInfoList)
         com.blemobi.sep.probuf.WalletProtos.PRedPacketInfoListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketInfoList_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketInfoList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketInfoList_fieldAccessorTable
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketInfoList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.WalletProtos.PRedPacketInfoList.class, com.blemobi.sep.probuf.WalletProtos.PRedPacketInfoList.Builder.class);
       }
@@ -8449,7 +8411,7 @@ public final class WalletProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketInfoList_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketInfoList_descriptor;
       }
 
       public com.blemobi.sep.probuf.WalletProtos.PRedPacketInfoList getDefaultInstanceForType() {
@@ -8557,7 +8519,7 @@ public final class WalletProtos {
           com.blemobi.sep.probuf.WalletProtos.PRedPacketInfo, com.blemobi.sep.probuf.WalletProtos.PRedPacketInfo.Builder, com.blemobi.sep.probuf.WalletProtos.PRedPacketInfoOrBuilder> listBuilder_;
 
       /**
-       * <code>repeated .common.PRedPacketInfo list = 1;</code>
+       * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -8571,7 +8533,7 @@ public final class WalletProtos {
         }
       }
       /**
-       * <code>repeated .common.PRedPacketInfo list = 1;</code>
+       * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -8585,7 +8547,7 @@ public final class WalletProtos {
         }
       }
       /**
-       * <code>repeated .common.PRedPacketInfo list = 1;</code>
+       * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -8599,7 +8561,7 @@ public final class WalletProtos {
         }
       }
       /**
-       * <code>repeated .common.PRedPacketInfo list = 1;</code>
+       * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -8620,7 +8582,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PRedPacketInfo list = 1;</code>
+       * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -8638,7 +8600,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PRedPacketInfo list = 1;</code>
+       * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -8658,7 +8620,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PRedPacketInfo list = 1;</code>
+       * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -8679,7 +8641,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PRedPacketInfo list = 1;</code>
+       * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -8697,7 +8659,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PRedPacketInfo list = 1;</code>
+       * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -8715,7 +8677,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PRedPacketInfo list = 1;</code>
+       * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -8734,7 +8696,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PRedPacketInfo list = 1;</code>
+       * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -8751,7 +8713,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PRedPacketInfo list = 1;</code>
+       * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -8768,7 +8730,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PRedPacketInfo list = 1;</code>
+       * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -8779,7 +8741,7 @@ public final class WalletProtos {
         return getListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PRedPacketInfo list = 1;</code>
+       * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -8793,7 +8755,7 @@ public final class WalletProtos {
         }
       }
       /**
-       * <code>repeated .common.PRedPacketInfo list = 1;</code>
+       * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -8808,7 +8770,7 @@ public final class WalletProtos {
         }
       }
       /**
-       * <code>repeated .common.PRedPacketInfo list = 1;</code>
+       * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -8819,7 +8781,7 @@ public final class WalletProtos {
             com.blemobi.sep.probuf.WalletProtos.PRedPacketInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PRedPacketInfo list = 1;</code>
+       * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -8831,7 +8793,7 @@ public final class WalletProtos {
             index, com.blemobi.sep.probuf.WalletProtos.PRedPacketInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PRedPacketInfo list = 1;</code>
+       * <code>repeated .bbproto.PRedPacketInfo list = 1;</code>
        *
        * <pre>
        * 列表
@@ -8866,10 +8828,10 @@ public final class WalletProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PRedPacketInfoList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PRedPacketInfoList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PRedPacketInfoList)
+    // @@protoc_insertion_point(class_scope:bbproto.PRedPacketInfoList)
     private static final com.blemobi.sep.probuf.WalletProtos.PRedPacketInfoList DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.WalletProtos.PRedPacketInfoList();
@@ -8879,8 +8841,8 @@ public final class WalletProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PRedPacketInfoList> PARSER =
-        new com.google.protobuf.AbstractParser<PRedPacketInfoList>() {
+    private static final com.google.protobuf.Parser<PRedPacketInfoList>
+        PARSER = new com.google.protobuf.AbstractParser<PRedPacketInfoList>() {
       public PRedPacketInfoList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8898,6 +8860,10 @@ public final class WalletProtos {
       }
     };
 
+    public static com.google.protobuf.Parser<PRedPacketInfoList> parser() {
+      return PARSER;
+    }
+
     @java.lang.Override
     public com.google.protobuf.Parser<PRedPacketInfoList> getParserForType() {
       return PARSER;
@@ -8910,7 +8876,7 @@ public final class WalletProtos {
   }
 
   public interface PRedPacketParticipantOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PRedPacketParticipant)
+      // @@protoc_insertion_point(interface_extends:bbproto.PRedPacketParticipant)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -9004,7 +8970,7 @@ public final class WalletProtos {
     long getCreateTime();
   }
   /**
-   * Protobuf type {@code common.PRedPacketParticipant}
+   * Protobuf type {@code bbproto.PRedPacketParticipant}
    *
    * <pre>
    * 抢红包成员
@@ -9012,10 +8978,10 @@ public final class WalletProtos {
    */
   public  static final class PRedPacketParticipant extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PRedPacketParticipant)
+      // @@protoc_insertion_point(message_implements:bbproto.PRedPacketParticipant)
       PRedPacketParticipantOrBuilder {
     // Use PRedPacketParticipant.newBuilder() to construct.
-    private PRedPacketParticipant(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PRedPacketParticipant(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PRedPacketParticipant() {
@@ -9052,21 +9018,21 @@ public final class WalletProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              uuid_ = bs;
+              uuid_ = s;
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              name_ = bs;
+              name_ = s;
               break;
             }
             case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              headImgURL_ = bs;
+              headImgURL_ = s;
               break;
             }
             case 32: {
@@ -9075,9 +9041,9 @@ public final class WalletProtos {
               break;
             }
             case 42: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              remark_ = bs;
+              remark_ = s;
               break;
             }
             case 48: {
@@ -9099,12 +9065,12 @@ public final class WalletProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketParticipant_descriptor;
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketParticipant_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketParticipant_fieldAccessorTable
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketParticipant_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.WalletProtos.PRedPacketParticipant.class, com.blemobi.sep.probuf.WalletProtos.PRedPacketParticipant.Builder.class);
     }
@@ -9126,9 +9092,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          uuid_ = s;
-        }
+        uuid_ = s;
         return s;
       }
     }
@@ -9170,9 +9134,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          name_ = s;
-        }
+        name_ = s;
         return s;
       }
     }
@@ -9214,9 +9176,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          headImgURL_ = s;
-        }
+        headImgURL_ = s;
         return s;
       }
     }
@@ -9271,9 +9231,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          remark_ = s;
-        }
+        remark_ = s;
         return s;
       }
     }
@@ -9324,56 +9282,51 @@ public final class WalletProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUuidBytes().isEmpty()) {
-        output.writeBytes(1, getUuidBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, uuid_);
       }
       if (!getNameBytes().isEmpty()) {
-        output.writeBytes(2, getNameBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, name_);
       }
       if (!getHeadImgURLBytes().isEmpty()) {
-        output.writeBytes(3, getHeadImgURLBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, headImgURL_);
       }
       if (vMoney_ != 0) {
         output.writeInt32(4, vMoney_);
       }
       if (!getRemarkBytes().isEmpty()) {
-        output.writeBytes(5, getRemarkBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, remark_);
       }
       if (createTime_ != 0L) {
         output.writeInt64(6, createTime_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getUuidBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getUuidBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, uuid_);
       }
       if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getNameBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, name_);
       }
       if (!getHeadImgURLBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getHeadImgURLBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, headImgURL_);
       }
       if (vMoney_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(4, vMoney_);
       }
       if (!getRemarkBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(5, getRemarkBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, remark_);
       }
       if (createTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(6, createTime_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -9450,7 +9403,7 @@ public final class WalletProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PRedPacketParticipant}
+     * Protobuf type {@code bbproto.PRedPacketParticipant}
      *
      * <pre>
      * 抢红包成员
@@ -9458,16 +9411,16 @@ public final class WalletProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PRedPacketParticipant)
+        // @@protoc_insertion_point(builder_implements:bbproto.PRedPacketParticipant)
         com.blemobi.sep.probuf.WalletProtos.PRedPacketParticipantOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketParticipant_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketParticipant_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketParticipant_fieldAccessorTable
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketParticipant_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.WalletProtos.PRedPacketParticipant.class, com.blemobi.sep.probuf.WalletProtos.PRedPacketParticipant.Builder.class);
       }
@@ -9505,7 +9458,7 @@ public final class WalletProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketParticipant_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketParticipant_descriptor;
       }
 
       public com.blemobi.sep.probuf.WalletProtos.PRedPacketParticipant getDefaultInstanceForType() {
@@ -9605,9 +9558,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            uuid_ = s;
-          }
+          uuid_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -9675,7 +9626,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         uuid_ = value;
         onChanged();
         return this;
@@ -9695,9 +9647,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            name_ = s;
-          }
+          name_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -9765,7 +9715,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         name_ = value;
         onChanged();
         return this;
@@ -9785,9 +9736,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            headImgURL_ = s;
-          }
+          headImgURL_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -9855,7 +9804,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         headImgURL_ = value;
         onChanged();
         return this;
@@ -9913,9 +9863,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            remark_ = s;
-          }
+          remark_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -9983,7 +9931,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         remark_ = value;
         onChanged();
         return this;
@@ -10037,10 +9986,10 @@ public final class WalletProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PRedPacketParticipant)
+      // @@protoc_insertion_point(builder_scope:bbproto.PRedPacketParticipant)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PRedPacketParticipant)
+    // @@protoc_insertion_point(class_scope:bbproto.PRedPacketParticipant)
     private static final com.blemobi.sep.probuf.WalletProtos.PRedPacketParticipant DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.WalletProtos.PRedPacketParticipant();
@@ -10050,8 +9999,8 @@ public final class WalletProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PRedPacketParticipant> PARSER =
-        new com.google.protobuf.AbstractParser<PRedPacketParticipant>() {
+    private static final com.google.protobuf.Parser<PRedPacketParticipant>
+        PARSER = new com.google.protobuf.AbstractParser<PRedPacketParticipant>() {
       public PRedPacketParticipant parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10069,6 +10018,10 @@ public final class WalletProtos {
       }
     };
 
+    public static com.google.protobuf.Parser<PRedPacketParticipant> parser() {
+      return PARSER;
+    }
+
     @java.lang.Override
     public com.google.protobuf.Parser<PRedPacketParticipant> getParserForType() {
       return PARSER;
@@ -10081,7 +10034,7 @@ public final class WalletProtos {
   }
 
   public interface PRedPacketDetailOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PRedPacketDetail)
+      // @@protoc_insertion_point(interface_extends:bbproto.PRedPacketDetail)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -10193,7 +10146,7 @@ public final class WalletProtos {
         getRemarkBytes();
 
     /**
-     * <code>optional .common.PSendRedPacketInfo info = 8;</code>
+     * <code>optional .bbproto.PSendRedPacketInfo info = 8;</code>
      *
      * <pre>
      * 红包信息
@@ -10201,7 +10154,7 @@ public final class WalletProtos {
      */
     boolean hasInfo();
     /**
-     * <code>optional .common.PSendRedPacketInfo info = 8;</code>
+     * <code>optional .bbproto.PSendRedPacketInfo info = 8;</code>
      *
      * <pre>
      * 红包信息
@@ -10209,7 +10162,7 @@ public final class WalletProtos {
      */
     com.blemobi.sep.probuf.WalletProtos.PSendRedPacketInfo getInfo();
     /**
-     * <code>optional .common.PSendRedPacketInfo info = 8;</code>
+     * <code>optional .bbproto.PSendRedPacketInfo info = 8;</code>
      *
      * <pre>
      * 红包信息
@@ -10218,7 +10171,7 @@ public final class WalletProtos {
     com.blemobi.sep.probuf.WalletProtos.PSendRedPacketInfoOrBuilder getInfoOrBuilder();
 
     /**
-     * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+     * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
      *
      * <pre>
      * 抢红包参与者
@@ -10227,7 +10180,7 @@ public final class WalletProtos {
     java.util.List<com.blemobi.sep.probuf.WalletProtos.PRedPacketParticipant> 
         getListList();
     /**
-     * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+     * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
      *
      * <pre>
      * 抢红包参与者
@@ -10235,7 +10188,7 @@ public final class WalletProtos {
      */
     com.blemobi.sep.probuf.WalletProtos.PRedPacketParticipant getList(int index);
     /**
-     * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+     * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
      *
      * <pre>
      * 抢红包参与者
@@ -10243,7 +10196,7 @@ public final class WalletProtos {
      */
     int getListCount();
     /**
-     * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+     * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
      *
      * <pre>
      * 抢红包参与者
@@ -10252,7 +10205,7 @@ public final class WalletProtos {
     java.util.List<? extends com.blemobi.sep.probuf.WalletProtos.PRedPacketParticipantOrBuilder> 
         getListOrBuilderList();
     /**
-     * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+     * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
      *
      * <pre>
      * 抢红包参与者
@@ -10262,7 +10215,7 @@ public final class WalletProtos {
         int index);
   }
   /**
-   * Protobuf type {@code common.PRedPacketDetail}
+   * Protobuf type {@code bbproto.PRedPacketDetail}
    *
    * <pre>
    * 红包详细信息
@@ -10270,10 +10223,10 @@ public final class WalletProtos {
    */
   public  static final class PRedPacketDetail extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PRedPacketDetail)
+      // @@protoc_insertion_point(message_implements:bbproto.PRedPacketDetail)
       PRedPacketDetailOrBuilder {
     // Use PRedPacketDetail.newBuilder() to construct.
-    private PRedPacketDetail(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PRedPacketDetail(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PRedPacketDetail() {
@@ -10312,27 +10265,27 @@ public final class WalletProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              rid_ = bs;
+              rid_ = s;
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              uuid_ = bs;
+              uuid_ = s;
               break;
             }
             case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              name_ = bs;
+              name_ = s;
               break;
             }
             case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              headImgURL_ = bs;
+              headImgURL_ = s;
               break;
             }
             case 40: {
@@ -10346,9 +10299,9 @@ public final class WalletProtos {
               break;
             }
             case 58: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              remark_ = bs;
+              remark_ = s;
               break;
             }
             case 66: {
@@ -10356,7 +10309,7 @@ public final class WalletProtos {
               if (info_ != null) {
                 subBuilder = info_.toBuilder();
               }
-              info_ = input.readMessage(com.blemobi.sep.probuf.WalletProtos.PSendRedPacketInfo.PARSER, extensionRegistry);
+              info_ = input.readMessage(com.blemobi.sep.probuf.WalletProtos.PSendRedPacketInfo.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(info_);
                 info_ = subBuilder.buildPartial();
@@ -10369,7 +10322,7 @@ public final class WalletProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.WalletProtos.PRedPacketParticipant>();
                 mutable_bitField0_ |= 0x00000100;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.WalletProtos.PRedPacketParticipant.PARSER, extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.WalletProtos.PRedPacketParticipant.parser(), extensionRegistry));
               break;
             }
           }
@@ -10389,12 +10342,12 @@ public final class WalletProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketDetail_descriptor;
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketDetail_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketDetail_fieldAccessorTable
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketDetail_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.WalletProtos.PRedPacketDetail.class, com.blemobi.sep.probuf.WalletProtos.PRedPacketDetail.Builder.class);
     }
@@ -10417,9 +10370,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          rid_ = s;
-        }
+        rid_ = s;
         return s;
       }
     }
@@ -10461,9 +10412,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          uuid_ = s;
-        }
+        uuid_ = s;
         return s;
       }
     }
@@ -10505,9 +10454,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          name_ = s;
-        }
+        name_ = s;
         return s;
       }
     }
@@ -10549,9 +10496,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          headImgURL_ = s;
-        }
+        headImgURL_ = s;
         return s;
       }
     }
@@ -10619,9 +10564,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          remark_ = s;
-        }
+        remark_ = s;
         return s;
       }
     }
@@ -10649,7 +10592,7 @@ public final class WalletProtos {
     public static final int INFO_FIELD_NUMBER = 8;
     private com.blemobi.sep.probuf.WalletProtos.PSendRedPacketInfo info_;
     /**
-     * <code>optional .common.PSendRedPacketInfo info = 8;</code>
+     * <code>optional .bbproto.PSendRedPacketInfo info = 8;</code>
      *
      * <pre>
      * 红包信息
@@ -10659,7 +10602,7 @@ public final class WalletProtos {
       return info_ != null;
     }
     /**
-     * <code>optional .common.PSendRedPacketInfo info = 8;</code>
+     * <code>optional .bbproto.PSendRedPacketInfo info = 8;</code>
      *
      * <pre>
      * 红包信息
@@ -10669,7 +10612,7 @@ public final class WalletProtos {
       return info_ == null ? com.blemobi.sep.probuf.WalletProtos.PSendRedPacketInfo.getDefaultInstance() : info_;
     }
     /**
-     * <code>optional .common.PSendRedPacketInfo info = 8;</code>
+     * <code>optional .bbproto.PSendRedPacketInfo info = 8;</code>
      *
      * <pre>
      * 红包信息
@@ -10682,7 +10625,7 @@ public final class WalletProtos {
     public static final int LIST_FIELD_NUMBER = 9;
     private java.util.List<com.blemobi.sep.probuf.WalletProtos.PRedPacketParticipant> list_;
     /**
-     * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+     * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
      *
      * <pre>
      * 抢红包参与者
@@ -10692,7 +10635,7 @@ public final class WalletProtos {
       return list_;
     }
     /**
-     * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+     * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
      *
      * <pre>
      * 抢红包参与者
@@ -10703,7 +10646,7 @@ public final class WalletProtos {
       return list_;
     }
     /**
-     * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+     * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
      *
      * <pre>
      * 抢红包参与者
@@ -10713,7 +10656,7 @@ public final class WalletProtos {
       return list_.size();
     }
     /**
-     * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+     * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
      *
      * <pre>
      * 抢红包参与者
@@ -10723,7 +10666,7 @@ public final class WalletProtos {
       return list_.get(index);
     }
     /**
-     * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+     * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
      *
      * <pre>
      * 抢红包参与者
@@ -10747,16 +10690,16 @@ public final class WalletProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getRidBytes().isEmpty()) {
-        output.writeBytes(1, getRidBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, rid_);
       }
       if (!getUuidBytes().isEmpty()) {
-        output.writeBytes(2, getUuidBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, uuid_);
       }
       if (!getNameBytes().isEmpty()) {
-        output.writeBytes(3, getNameBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, name_);
       }
       if (!getHeadImgURLBytes().isEmpty()) {
-        output.writeBytes(4, getHeadImgURLBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, headImgURL_);
       }
       if (vMoney_ != 0) {
         output.writeInt32(5, vMoney_);
@@ -10765,7 +10708,7 @@ public final class WalletProtos {
         output.writeInt32(6, status_);
       }
       if (!getRemarkBytes().isEmpty()) {
-        output.writeBytes(7, getRemarkBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 7, remark_);
       }
       if (info_ != null) {
         output.writeMessage(8, getInfo());
@@ -10775,27 +10718,22 @@ public final class WalletProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getRidBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getRidBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, rid_);
       }
       if (!getUuidBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getUuidBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, uuid_);
       }
       if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getNameBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, name_);
       }
       if (!getHeadImgURLBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getHeadImgURLBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, headImgURL_);
       }
       if (vMoney_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -10806,8 +10744,7 @@ public final class WalletProtos {
           .computeInt32Size(6, status_);
       }
       if (!getRemarkBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(7, getRemarkBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, remark_);
       }
       if (info_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -10817,7 +10754,7 @@ public final class WalletProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, list_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -10894,7 +10831,7 @@ public final class WalletProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PRedPacketDetail}
+     * Protobuf type {@code bbproto.PRedPacketDetail}
      *
      * <pre>
      * 红包详细信息
@@ -10902,16 +10839,16 @@ public final class WalletProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PRedPacketDetail)
+        // @@protoc_insertion_point(builder_implements:bbproto.PRedPacketDetail)
         com.blemobi.sep.probuf.WalletProtos.PRedPacketDetailOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketDetail_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketDetail_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketDetail_fieldAccessorTable
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketDetail_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.WalletProtos.PRedPacketDetail.class, com.blemobi.sep.probuf.WalletProtos.PRedPacketDetail.Builder.class);
       }
@@ -10964,7 +10901,7 @@ public final class WalletProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketDetail_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketDetail_descriptor;
       }
 
       public com.blemobi.sep.probuf.WalletProtos.PRedPacketDetail getDefaultInstanceForType() {
@@ -11116,9 +11053,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            rid_ = s;
-          }
+          rid_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -11186,7 +11121,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         rid_ = value;
         onChanged();
         return this;
@@ -11206,9 +11142,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            uuid_ = s;
-          }
+          uuid_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -11276,7 +11210,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         uuid_ = value;
         onChanged();
         return this;
@@ -11296,9 +11231,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            name_ = s;
-          }
+          name_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -11366,7 +11299,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         name_ = value;
         onChanged();
         return this;
@@ -11386,9 +11320,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            headImgURL_ = s;
-          }
+          headImgURL_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -11456,7 +11388,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         headImgURL_ = value;
         onChanged();
         return this;
@@ -11552,9 +11485,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            remark_ = s;
-          }
+          remark_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -11622,7 +11553,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         remark_ = value;
         onChanged();
         return this;
@@ -11632,7 +11564,7 @@ public final class WalletProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.WalletProtos.PSendRedPacketInfo, com.blemobi.sep.probuf.WalletProtos.PSendRedPacketInfo.Builder, com.blemobi.sep.probuf.WalletProtos.PSendRedPacketInfoOrBuilder> infoBuilder_;
       /**
-       * <code>optional .common.PSendRedPacketInfo info = 8;</code>
+       * <code>optional .bbproto.PSendRedPacketInfo info = 8;</code>
        *
        * <pre>
        * 红包信息
@@ -11642,7 +11574,7 @@ public final class WalletProtos {
         return infoBuilder_ != null || info_ != null;
       }
       /**
-       * <code>optional .common.PSendRedPacketInfo info = 8;</code>
+       * <code>optional .bbproto.PSendRedPacketInfo info = 8;</code>
        *
        * <pre>
        * 红包信息
@@ -11656,7 +11588,7 @@ public final class WalletProtos {
         }
       }
       /**
-       * <code>optional .common.PSendRedPacketInfo info = 8;</code>
+       * <code>optional .bbproto.PSendRedPacketInfo info = 8;</code>
        *
        * <pre>
        * 红包信息
@@ -11676,7 +11608,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>optional .common.PSendRedPacketInfo info = 8;</code>
+       * <code>optional .bbproto.PSendRedPacketInfo info = 8;</code>
        *
        * <pre>
        * 红包信息
@@ -11694,7 +11626,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>optional .common.PSendRedPacketInfo info = 8;</code>
+       * <code>optional .bbproto.PSendRedPacketInfo info = 8;</code>
        *
        * <pre>
        * 红包信息
@@ -11716,7 +11648,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>optional .common.PSendRedPacketInfo info = 8;</code>
+       * <code>optional .bbproto.PSendRedPacketInfo info = 8;</code>
        *
        * <pre>
        * 红包信息
@@ -11734,7 +11666,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>optional .common.PSendRedPacketInfo info = 8;</code>
+       * <code>optional .bbproto.PSendRedPacketInfo info = 8;</code>
        *
        * <pre>
        * 红包信息
@@ -11746,7 +11678,7 @@ public final class WalletProtos {
         return getInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.PSendRedPacketInfo info = 8;</code>
+       * <code>optional .bbproto.PSendRedPacketInfo info = 8;</code>
        *
        * <pre>
        * 红包信息
@@ -11761,7 +11693,7 @@ public final class WalletProtos {
         }
       }
       /**
-       * <code>optional .common.PSendRedPacketInfo info = 8;</code>
+       * <code>optional .bbproto.PSendRedPacketInfo info = 8;</code>
        *
        * <pre>
        * 红包信息
@@ -11794,7 +11726,7 @@ public final class WalletProtos {
           com.blemobi.sep.probuf.WalletProtos.PRedPacketParticipant, com.blemobi.sep.probuf.WalletProtos.PRedPacketParticipant.Builder, com.blemobi.sep.probuf.WalletProtos.PRedPacketParticipantOrBuilder> listBuilder_;
 
       /**
-       * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+       * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
        *
        * <pre>
        * 抢红包参与者
@@ -11808,7 +11740,7 @@ public final class WalletProtos {
         }
       }
       /**
-       * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+       * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
        *
        * <pre>
        * 抢红包参与者
@@ -11822,7 +11754,7 @@ public final class WalletProtos {
         }
       }
       /**
-       * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+       * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
        *
        * <pre>
        * 抢红包参与者
@@ -11836,7 +11768,7 @@ public final class WalletProtos {
         }
       }
       /**
-       * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+       * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
        *
        * <pre>
        * 抢红包参与者
@@ -11857,7 +11789,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+       * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
        *
        * <pre>
        * 抢红包参与者
@@ -11875,7 +11807,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+       * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
        *
        * <pre>
        * 抢红包参与者
@@ -11895,7 +11827,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+       * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
        *
        * <pre>
        * 抢红包参与者
@@ -11916,7 +11848,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+       * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
        *
        * <pre>
        * 抢红包参与者
@@ -11934,7 +11866,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+       * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
        *
        * <pre>
        * 抢红包参与者
@@ -11952,7 +11884,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+       * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
        *
        * <pre>
        * 抢红包参与者
@@ -11971,7 +11903,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+       * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
        *
        * <pre>
        * 抢红包参与者
@@ -11988,7 +11920,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+       * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
        *
        * <pre>
        * 抢红包参与者
@@ -12005,7 +11937,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+       * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
        *
        * <pre>
        * 抢红包参与者
@@ -12016,7 +11948,7 @@ public final class WalletProtos {
         return getListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+       * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
        *
        * <pre>
        * 抢红包参与者
@@ -12030,7 +11962,7 @@ public final class WalletProtos {
         }
       }
       /**
-       * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+       * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
        *
        * <pre>
        * 抢红包参与者
@@ -12045,7 +11977,7 @@ public final class WalletProtos {
         }
       }
       /**
-       * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+       * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
        *
        * <pre>
        * 抢红包参与者
@@ -12056,7 +11988,7 @@ public final class WalletProtos {
             com.blemobi.sep.probuf.WalletProtos.PRedPacketParticipant.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+       * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
        *
        * <pre>
        * 抢红包参与者
@@ -12068,7 +12000,7 @@ public final class WalletProtos {
             index, com.blemobi.sep.probuf.WalletProtos.PRedPacketParticipant.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PRedPacketParticipant list = 9;</code>
+       * <code>repeated .bbproto.PRedPacketParticipant list = 9;</code>
        *
        * <pre>
        * 抢红包参与者
@@ -12103,10 +12035,10 @@ public final class WalletProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PRedPacketDetail)
+      // @@protoc_insertion_point(builder_scope:bbproto.PRedPacketDetail)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PRedPacketDetail)
+    // @@protoc_insertion_point(class_scope:bbproto.PRedPacketDetail)
     private static final com.blemobi.sep.probuf.WalletProtos.PRedPacketDetail DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.WalletProtos.PRedPacketDetail();
@@ -12116,8 +12048,8 @@ public final class WalletProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PRedPacketDetail> PARSER =
-        new com.google.protobuf.AbstractParser<PRedPacketDetail>() {
+    private static final com.google.protobuf.Parser<PRedPacketDetail>
+        PARSER = new com.google.protobuf.AbstractParser<PRedPacketDetail>() {
       public PRedPacketDetail parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12135,6 +12067,10 @@ public final class WalletProtos {
       }
     };
 
+    public static com.google.protobuf.Parser<PRedPacketDetail> parser() {
+      return PARSER;
+    }
+
     @java.lang.Override
     public com.google.protobuf.Parser<PRedPacketDetail> getParserForType() {
       return PARSER;
@@ -12147,7 +12083,7 @@ public final class WalletProtos {
   }
 
   public interface PWalletGiftTotalCountOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PWalletGiftTotalCount)
+      // @@protoc_insertion_point(interface_extends:bbproto.PWalletGiftTotalCount)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -12160,7 +12096,7 @@ public final class WalletProtos {
     int getTotalCount();
   }
   /**
-   * Protobuf type {@code common.PWalletGiftTotalCount}
+   * Protobuf type {@code bbproto.PWalletGiftTotalCount}
    *
    * <pre>
    * 礼物数量信息
@@ -12168,10 +12104,10 @@ public final class WalletProtos {
    */
   public  static final class PWalletGiftTotalCount extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PWalletGiftTotalCount)
+      // @@protoc_insertion_point(message_implements:bbproto.PWalletGiftTotalCount)
       PWalletGiftTotalCountOrBuilder {
     // Use PWalletGiftTotalCount.newBuilder() to construct.
-    private PWalletGiftTotalCount(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PWalletGiftTotalCount(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PWalletGiftTotalCount() {
@@ -12221,12 +12157,12 @@ public final class WalletProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletGiftTotalCount_descriptor;
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletGiftTotalCount_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletGiftTotalCount_fieldAccessorTable
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletGiftTotalCount_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.WalletProtos.PWalletGiftTotalCount.class, com.blemobi.sep.probuf.WalletProtos.PWalletGiftTotalCount.Builder.class);
     }
@@ -12261,9 +12197,8 @@ public final class WalletProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -12271,7 +12206,7 @@ public final class WalletProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, totalCount_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -12348,7 +12283,7 @@ public final class WalletProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PWalletGiftTotalCount}
+     * Protobuf type {@code bbproto.PWalletGiftTotalCount}
      *
      * <pre>
      * 礼物数量信息
@@ -12356,16 +12291,16 @@ public final class WalletProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PWalletGiftTotalCount)
+        // @@protoc_insertion_point(builder_implements:bbproto.PWalletGiftTotalCount)
         com.blemobi.sep.probuf.WalletProtos.PWalletGiftTotalCountOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletGiftTotalCount_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletGiftTotalCount_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletGiftTotalCount_fieldAccessorTable
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletGiftTotalCount_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.WalletProtos.PWalletGiftTotalCount.class, com.blemobi.sep.probuf.WalletProtos.PWalletGiftTotalCount.Builder.class);
       }
@@ -12393,7 +12328,7 @@ public final class WalletProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletGiftTotalCount_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletGiftTotalCount_descriptor;
       }
 
       public com.blemobi.sep.probuf.WalletProtos.PWalletGiftTotalCount getDefaultInstanceForType() {
@@ -12503,10 +12438,10 @@ public final class WalletProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PWalletGiftTotalCount)
+      // @@protoc_insertion_point(builder_scope:bbproto.PWalletGiftTotalCount)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PWalletGiftTotalCount)
+    // @@protoc_insertion_point(class_scope:bbproto.PWalletGiftTotalCount)
     private static final com.blemobi.sep.probuf.WalletProtos.PWalletGiftTotalCount DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.WalletProtos.PWalletGiftTotalCount();
@@ -12516,8 +12451,8 @@ public final class WalletProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PWalletGiftTotalCount> PARSER =
-        new com.google.protobuf.AbstractParser<PWalletGiftTotalCount>() {
+    private static final com.google.protobuf.Parser<PWalletGiftTotalCount>
+        PARSER = new com.google.protobuf.AbstractParser<PWalletGiftTotalCount>() {
       public PWalletGiftTotalCount parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12535,6 +12470,10 @@ public final class WalletProtos {
       }
     };
 
+    public static com.google.protobuf.Parser<PWalletGiftTotalCount> parser() {
+      return PARSER;
+    }
+
     @java.lang.Override
     public com.google.protobuf.Parser<PWalletGiftTotalCount> getParserForType() {
       return PARSER;
@@ -12547,7 +12486,7 @@ public final class WalletProtos {
   }
 
   public interface PWalletGiftCountOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PWalletGiftCount)
+      // @@protoc_insertion_point(interface_extends:bbproto.PWalletGiftCount)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -12596,7 +12535,7 @@ public final class WalletProtos {
     int getSendCount();
   }
   /**
-   * Protobuf type {@code common.PWalletGiftCount}
+   * Protobuf type {@code bbproto.PWalletGiftCount}
    *
    * <pre>
    * 礼物数量信息
@@ -12604,10 +12543,10 @@ public final class WalletProtos {
    */
   public  static final class PWalletGiftCount extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PWalletGiftCount)
+      // @@protoc_insertion_point(message_implements:bbproto.PWalletGiftCount)
       PWalletGiftCountOrBuilder {
     // Use PWalletGiftCount.newBuilder() to construct.
-    private PWalletGiftCount(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PWalletGiftCount(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PWalletGiftCount() {
@@ -12681,12 +12620,12 @@ public final class WalletProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletGiftCount_descriptor;
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletGiftCount_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletGiftCount_fieldAccessorTable
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletGiftCount_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.WalletProtos.PWalletGiftCount.class, com.blemobi.sep.probuf.WalletProtos.PWalletGiftCount.Builder.class);
     }
@@ -12785,9 +12724,8 @@ public final class WalletProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -12811,7 +12749,7 @@ public final class WalletProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(5, sendCount_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -12888,7 +12826,7 @@ public final class WalletProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PWalletGiftCount}
+     * Protobuf type {@code bbproto.PWalletGiftCount}
      *
      * <pre>
      * 礼物数量信息
@@ -12896,16 +12834,16 @@ public final class WalletProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PWalletGiftCount)
+        // @@protoc_insertion_point(builder_implements:bbproto.PWalletGiftCount)
         com.blemobi.sep.probuf.WalletProtos.PWalletGiftCountOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletGiftCount_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletGiftCount_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletGiftCount_fieldAccessorTable
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletGiftCount_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.WalletProtos.PWalletGiftCount.class, com.blemobi.sep.probuf.WalletProtos.PWalletGiftCount.Builder.class);
       }
@@ -12941,7 +12879,7 @@ public final class WalletProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletGiftCount_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletGiftCount_descriptor;
       }
 
       public com.blemobi.sep.probuf.WalletProtos.PWalletGiftCount getDefaultInstanceForType() {
@@ -13219,10 +13157,10 @@ public final class WalletProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PWalletGiftCount)
+      // @@protoc_insertion_point(builder_scope:bbproto.PWalletGiftCount)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PWalletGiftCount)
+    // @@protoc_insertion_point(class_scope:bbproto.PWalletGiftCount)
     private static final com.blemobi.sep.probuf.WalletProtos.PWalletGiftCount DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.WalletProtos.PWalletGiftCount();
@@ -13232,8 +13170,8 @@ public final class WalletProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PWalletGiftCount> PARSER =
-        new com.google.protobuf.AbstractParser<PWalletGiftCount>() {
+    private static final com.google.protobuf.Parser<PWalletGiftCount>
+        PARSER = new com.google.protobuf.AbstractParser<PWalletGiftCount>() {
       public PWalletGiftCount parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -13251,6 +13189,10 @@ public final class WalletProtos {
       }
     };
 
+    public static com.google.protobuf.Parser<PWalletGiftCount> parser() {
+      return PARSER;
+    }
+
     @java.lang.Override
     public com.google.protobuf.Parser<PWalletGiftCount> getParserForType() {
       return PARSER;
@@ -13263,7 +13205,7 @@ public final class WalletProtos {
   }
 
   public interface PWalletGiftInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PWalletGiftInfo)
+      // @@protoc_insertion_point(interface_extends:bbproto.PWalletGiftInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -13375,7 +13317,7 @@ public final class WalletProtos {
     long getCreateTime();
   }
   /**
-   * Protobuf type {@code common.PWalletGiftInfo}
+   * Protobuf type {@code bbproto.PWalletGiftInfo}
    *
    * <pre>
    * 礼物信息
@@ -13383,10 +13325,10 @@ public final class WalletProtos {
    */
   public  static final class PWalletGiftInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PWalletGiftInfo)
+      // @@protoc_insertion_point(message_implements:bbproto.PWalletGiftInfo)
       PWalletGiftInfoOrBuilder {
     // Use PWalletGiftInfo.newBuilder() to construct.
-    private PWalletGiftInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PWalletGiftInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PWalletGiftInfo() {
@@ -13425,27 +13367,27 @@ public final class WalletProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              sid_ = bs;
+              sid_ = s;
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              uuid_ = bs;
+              uuid_ = s;
               break;
             }
             case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              name_ = bs;
+              name_ = s;
               break;
             }
             case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              headImgURL_ = bs;
+              headImgURL_ = s;
               break;
             }
             case 40: {
@@ -13482,12 +13424,12 @@ public final class WalletProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletGiftInfo_descriptor;
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletGiftInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletGiftInfo_fieldAccessorTable
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletGiftInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo.class, com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo.Builder.class);
     }
@@ -13509,9 +13451,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          sid_ = s;
-        }
+        sid_ = s;
         return s;
       }
     }
@@ -13553,9 +13493,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          uuid_ = s;
-        }
+        uuid_ = s;
         return s;
       }
     }
@@ -13597,9 +13535,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          name_ = s;
-        }
+        name_ = s;
         return s;
       }
     }
@@ -13641,9 +13577,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          headImgURL_ = s;
-        }
+        headImgURL_ = s;
         return s;
       }
     }
@@ -13733,16 +13667,16 @@ public final class WalletProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getSidBytes().isEmpty()) {
-        output.writeBytes(1, getSidBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, sid_);
       }
       if (!getUuidBytes().isEmpty()) {
-        output.writeBytes(2, getUuidBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, uuid_);
       }
       if (!getNameBytes().isEmpty()) {
-        output.writeBytes(3, getNameBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, name_);
       }
       if (!getHeadImgURLBytes().isEmpty()) {
-        output.writeBytes(4, getHeadImgURLBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, headImgURL_);
       }
       if (gid_ != 0) {
         output.writeInt32(5, gid_);
@@ -13758,27 +13692,22 @@ public final class WalletProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getSidBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getSidBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, sid_);
       }
       if (!getUuidBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getUuidBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, uuid_);
       }
       if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getNameBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, name_);
       }
       if (!getHeadImgURLBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getHeadImgURLBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, headImgURL_);
       }
       if (gid_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -13796,7 +13725,7 @@ public final class WalletProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(8, createTime_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -13873,7 +13802,7 @@ public final class WalletProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PWalletGiftInfo}
+     * Protobuf type {@code bbproto.PWalletGiftInfo}
      *
      * <pre>
      * 礼物信息
@@ -13881,16 +13810,16 @@ public final class WalletProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PWalletGiftInfo)
+        // @@protoc_insertion_point(builder_implements:bbproto.PWalletGiftInfo)
         com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletGiftInfo_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletGiftInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletGiftInfo_fieldAccessorTable
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletGiftInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo.class, com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo.Builder.class);
       }
@@ -13932,7 +13861,7 @@ public final class WalletProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletGiftInfo_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletGiftInfo_descriptor;
       }
 
       public com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo getDefaultInstanceForType() {
@@ -14040,9 +13969,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            sid_ = s;
-          }
+          sid_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -14110,7 +14037,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         sid_ = value;
         onChanged();
         return this;
@@ -14130,9 +14058,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            uuid_ = s;
-          }
+          uuid_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -14200,7 +14126,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         uuid_ = value;
         onChanged();
         return this;
@@ -14220,9 +14147,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            name_ = s;
-          }
+          name_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -14290,7 +14215,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         name_ = value;
         onChanged();
         return this;
@@ -14310,9 +14236,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            headImgURL_ = s;
-          }
+          headImgURL_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -14380,7 +14304,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         headImgURL_ = value;
         onChanged();
         return this;
@@ -14548,10 +14473,10 @@ public final class WalletProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PWalletGiftInfo)
+      // @@protoc_insertion_point(builder_scope:bbproto.PWalletGiftInfo)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PWalletGiftInfo)
+    // @@protoc_insertion_point(class_scope:bbproto.PWalletGiftInfo)
     private static final com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo();
@@ -14561,8 +14486,8 @@ public final class WalletProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PWalletGiftInfo> PARSER =
-        new com.google.protobuf.AbstractParser<PWalletGiftInfo>() {
+    private static final com.google.protobuf.Parser<PWalletGiftInfo>
+        PARSER = new com.google.protobuf.AbstractParser<PWalletGiftInfo>() {
       public PWalletGiftInfo parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -14580,6 +14505,10 @@ public final class WalletProtos {
       }
     };
 
+    public static com.google.protobuf.Parser<PWalletGiftInfo> parser() {
+      return PARSER;
+    }
+
     @java.lang.Override
     public com.google.protobuf.Parser<PWalletGiftInfo> getParserForType() {
       return PARSER;
@@ -14592,35 +14521,35 @@ public final class WalletProtos {
   }
 
   public interface PWalletGiftInfoListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PWalletGiftInfoList)
+      // @@protoc_insertion_point(interface_extends:bbproto.PWalletGiftInfoList)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+     * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
      */
     java.util.List<com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo> 
         getListList();
     /**
-     * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+     * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
      */
     com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo getList(int index);
     /**
-     * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+     * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
      */
     int getListCount();
     /**
-     * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+     * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
      */
     java.util.List<? extends com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfoOrBuilder> 
         getListOrBuilderList();
     /**
-     * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+     * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
      */
     com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfoOrBuilder getListOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code common.PWalletGiftInfoList}
+   * Protobuf type {@code bbproto.PWalletGiftInfoList}
    *
    * <pre>
    * 礼物信息列表
@@ -14628,10 +14557,10 @@ public final class WalletProtos {
    */
   public  static final class PWalletGiftInfoList extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PWalletGiftInfoList)
+      // @@protoc_insertion_point(message_implements:bbproto.PWalletGiftInfoList)
       PWalletGiftInfoListOrBuilder {
     // Use PWalletGiftInfoList.newBuilder() to construct.
-    private PWalletGiftInfoList(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PWalletGiftInfoList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PWalletGiftInfoList() {
@@ -14667,7 +14596,7 @@ public final class WalletProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo.PARSER, extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo.parser(), extensionRegistry));
               break;
             }
           }
@@ -14687,12 +14616,12 @@ public final class WalletProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletGiftInfoList_descriptor;
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletGiftInfoList_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletGiftInfoList_fieldAccessorTable
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletGiftInfoList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfoList.class, com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfoList.Builder.class);
     }
@@ -14700,32 +14629,32 @@ public final class WalletProtos {
     public static final int LIST_FIELD_NUMBER = 1;
     private java.util.List<com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo> list_;
     /**
-     * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+     * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
      */
     public java.util.List<com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo> getListList() {
       return list_;
     }
     /**
-     * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+     * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
      */
     public java.util.List<? extends com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfoOrBuilder> 
         getListOrBuilderList() {
       return list_;
     }
     /**
-     * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+     * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
      */
     public int getListCount() {
       return list_.size();
     }
     /**
-     * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+     * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
      */
     public com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo getList(int index) {
       return list_.get(index);
     }
     /**
-     * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+     * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
      */
     public com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfoOrBuilder getListOrBuilder(
         int index) {
@@ -14749,9 +14678,8 @@ public final class WalletProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -14759,7 +14687,7 @@ public final class WalletProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, list_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -14836,7 +14764,7 @@ public final class WalletProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PWalletGiftInfoList}
+     * Protobuf type {@code bbproto.PWalletGiftInfoList}
      *
      * <pre>
      * 礼物信息列表
@@ -14844,16 +14772,16 @@ public final class WalletProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PWalletGiftInfoList)
+        // @@protoc_insertion_point(builder_implements:bbproto.PWalletGiftInfoList)
         com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfoListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletGiftInfoList_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletGiftInfoList_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletGiftInfoList_fieldAccessorTable
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletGiftInfoList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfoList.class, com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfoList.Builder.class);
       }
@@ -14886,7 +14814,7 @@ public final class WalletProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletGiftInfoList_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletGiftInfoList_descriptor;
       }
 
       public com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfoList getDefaultInstanceForType() {
@@ -14994,7 +14922,7 @@ public final class WalletProtos {
           com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo, com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo.Builder, com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfoOrBuilder> listBuilder_;
 
       /**
-       * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+       * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo> getListList() {
         if (listBuilder_ == null) {
@@ -15004,7 +14932,7 @@ public final class WalletProtos {
         }
       }
       /**
-       * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+       * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
        */
       public int getListCount() {
         if (listBuilder_ == null) {
@@ -15014,7 +14942,7 @@ public final class WalletProtos {
         }
       }
       /**
-       * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+       * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
        */
       public com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo getList(int index) {
         if (listBuilder_ == null) {
@@ -15024,7 +14952,7 @@ public final class WalletProtos {
         }
       }
       /**
-       * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+       * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
        */
       public Builder setList(
           int index, com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo value) {
@@ -15041,7 +14969,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+       * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
        */
       public Builder setList(
           int index, com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo.Builder builderForValue) {
@@ -15055,7 +14983,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+       * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
        */
       public Builder addList(com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo value) {
         if (listBuilder_ == null) {
@@ -15071,7 +14999,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+       * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
        */
       public Builder addList(
           int index, com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo value) {
@@ -15088,7 +15016,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+       * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
        */
       public Builder addList(
           com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo.Builder builderForValue) {
@@ -15102,7 +15030,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+       * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
        */
       public Builder addList(
           int index, com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo.Builder builderForValue) {
@@ -15116,7 +15044,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+       * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
        */
       public Builder addAllList(
           java.lang.Iterable<? extends com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo> values) {
@@ -15131,7 +15059,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+       * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
        */
       public Builder clearList() {
         if (listBuilder_ == null) {
@@ -15144,7 +15072,7 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+       * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
        */
       public Builder removeList(int index) {
         if (listBuilder_ == null) {
@@ -15157,14 +15085,14 @@ public final class WalletProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+       * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
        */
       public com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo.Builder getListBuilder(
           int index) {
         return getListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+       * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
        */
       public com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfoOrBuilder getListOrBuilder(
           int index) {
@@ -15174,7 +15102,7 @@ public final class WalletProtos {
         }
       }
       /**
-       * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+       * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
        */
       public java.util.List<? extends com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfoOrBuilder> 
            getListOrBuilderList() {
@@ -15185,14 +15113,14 @@ public final class WalletProtos {
         }
       }
       /**
-       * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+       * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
        */
       public com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo.Builder addListBuilder() {
         return getListFieldBuilder().addBuilder(
             com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+       * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
        */
       public com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo.Builder addListBuilder(
           int index) {
@@ -15200,7 +15128,7 @@ public final class WalletProtos {
             index, com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PWalletGiftInfo list = 1;</code>
+       * <code>repeated .bbproto.PWalletGiftInfo list = 1;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfo.Builder> 
            getListBuilderList() {
@@ -15231,10 +15159,10 @@ public final class WalletProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PWalletGiftInfoList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PWalletGiftInfoList)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PWalletGiftInfoList)
+    // @@protoc_insertion_point(class_scope:bbproto.PWalletGiftInfoList)
     private static final com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfoList DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.WalletProtos.PWalletGiftInfoList();
@@ -15244,8 +15172,8 @@ public final class WalletProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PWalletGiftInfoList> PARSER =
-        new com.google.protobuf.AbstractParser<PWalletGiftInfoList>() {
+    private static final com.google.protobuf.Parser<PWalletGiftInfoList>
+        PARSER = new com.google.protobuf.AbstractParser<PWalletGiftInfoList>() {
       public PWalletGiftInfoList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -15263,6 +15191,10 @@ public final class WalletProtos {
       }
     };
 
+    public static com.google.protobuf.Parser<PWalletGiftInfoList> parser() {
+      return PARSER;
+    }
+
     @java.lang.Override
     public com.google.protobuf.Parser<PWalletGiftInfoList> getParserForType() {
       return PARSER;
@@ -15275,7 +15207,7 @@ public final class WalletProtos {
   }
 
   public interface PWalletPayPwdIsSetOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PWalletPayPwdIsSet)
+      // @@protoc_insertion_point(interface_extends:bbproto.PWalletPayPwdIsSet)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -15284,7 +15216,7 @@ public final class WalletProtos {
     boolean getIsset();
   }
   /**
-   * Protobuf type {@code common.PWalletPayPwdIsSet}
+   * Protobuf type {@code bbproto.PWalletPayPwdIsSet}
    *
    * <pre>
    * 是否设置支付密码
@@ -15292,10 +15224,10 @@ public final class WalletProtos {
    */
   public  static final class PWalletPayPwdIsSet extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PWalletPayPwdIsSet)
+      // @@protoc_insertion_point(message_implements:bbproto.PWalletPayPwdIsSet)
       PWalletPayPwdIsSetOrBuilder {
     // Use PWalletPayPwdIsSet.newBuilder() to construct.
-    private PWalletPayPwdIsSet(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PWalletPayPwdIsSet(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PWalletPayPwdIsSet() {
@@ -15345,12 +15277,12 @@ public final class WalletProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletPayPwdIsSet_descriptor;
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletPayPwdIsSet_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletPayPwdIsSet_fieldAccessorTable
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletPayPwdIsSet_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.WalletProtos.PWalletPayPwdIsSet.class, com.blemobi.sep.probuf.WalletProtos.PWalletPayPwdIsSet.Builder.class);
     }
@@ -15381,9 +15313,8 @@ public final class WalletProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -15391,7 +15322,7 @@ public final class WalletProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, isset_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -15468,7 +15399,7 @@ public final class WalletProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PWalletPayPwdIsSet}
+     * Protobuf type {@code bbproto.PWalletPayPwdIsSet}
      *
      * <pre>
      * 是否设置支付密码
@@ -15476,16 +15407,16 @@ public final class WalletProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PWalletPayPwdIsSet)
+        // @@protoc_insertion_point(builder_implements:bbproto.PWalletPayPwdIsSet)
         com.blemobi.sep.probuf.WalletProtos.PWalletPayPwdIsSetOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletPayPwdIsSet_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletPayPwdIsSet_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletPayPwdIsSet_fieldAccessorTable
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletPayPwdIsSet_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.WalletProtos.PWalletPayPwdIsSet.class, com.blemobi.sep.probuf.WalletProtos.PWalletPayPwdIsSet.Builder.class);
       }
@@ -15513,7 +15444,7 @@ public final class WalletProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletPayPwdIsSet_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletPayPwdIsSet_descriptor;
       }
 
       public com.blemobi.sep.probuf.WalletProtos.PWalletPayPwdIsSet getDefaultInstanceForType() {
@@ -15611,10 +15542,10 @@ public final class WalletProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PWalletPayPwdIsSet)
+      // @@protoc_insertion_point(builder_scope:bbproto.PWalletPayPwdIsSet)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PWalletPayPwdIsSet)
+    // @@protoc_insertion_point(class_scope:bbproto.PWalletPayPwdIsSet)
     private static final com.blemobi.sep.probuf.WalletProtos.PWalletPayPwdIsSet DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.WalletProtos.PWalletPayPwdIsSet();
@@ -15624,8 +15555,8 @@ public final class WalletProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PWalletPayPwdIsSet> PARSER =
-        new com.google.protobuf.AbstractParser<PWalletPayPwdIsSet>() {
+    private static final com.google.protobuf.Parser<PWalletPayPwdIsSet>
+        PARSER = new com.google.protobuf.AbstractParser<PWalletPayPwdIsSet>() {
       public PWalletPayPwdIsSet parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -15643,6 +15574,10 @@ public final class WalletProtos {
       }
     };
 
+    public static com.google.protobuf.Parser<PWalletPayPwdIsSet> parser() {
+      return PARSER;
+    }
+
     @java.lang.Override
     public com.google.protobuf.Parser<PWalletPayPwdIsSet> getParserForType() {
       return PARSER;
@@ -15655,7 +15590,7 @@ public final class WalletProtos {
   }
 
   public interface PWalletTokenOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PWalletToken)
+      // @@protoc_insertion_point(interface_extends:bbproto.PWalletToken)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -15669,7 +15604,7 @@ public final class WalletProtos {
         getTokenBytes();
   }
   /**
-   * Protobuf type {@code common.PWalletToken}
+   * Protobuf type {@code bbproto.PWalletToken}
    *
    * <pre>
    * 支付安全码
@@ -15677,10 +15612,10 @@ public final class WalletProtos {
    */
   public  static final class PWalletToken extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PWalletToken)
+      // @@protoc_insertion_point(message_implements:bbproto.PWalletToken)
       PWalletTokenOrBuilder {
     // Use PWalletToken.newBuilder() to construct.
-    private PWalletToken(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PWalletToken(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PWalletToken() {
@@ -15712,9 +15647,9 @@ public final class WalletProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              token_ = bs;
+              token_ = s;
               break;
             }
           }
@@ -15731,12 +15666,12 @@ public final class WalletProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletToken_descriptor;
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletToken_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletToken_fieldAccessorTable
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletToken_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.WalletProtos.PWalletToken.class, com.blemobi.sep.probuf.WalletProtos.PWalletToken.Builder.class);
     }
@@ -15754,9 +15689,7 @@ public final class WalletProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          token_ = s;
-        }
+        token_ = s;
         return s;
       }
     }
@@ -15790,21 +15723,19 @@ public final class WalletProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getTokenBytes().isEmpty()) {
-        output.writeBytes(1, getTokenBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, token_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getTokenBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getTokenBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, token_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -15881,7 +15812,7 @@ public final class WalletProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PWalletToken}
+     * Protobuf type {@code bbproto.PWalletToken}
      *
      * <pre>
      * 支付安全码
@@ -15889,16 +15820,16 @@ public final class WalletProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PWalletToken)
+        // @@protoc_insertion_point(builder_implements:bbproto.PWalletToken)
         com.blemobi.sep.probuf.WalletProtos.PWalletTokenOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletToken_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletToken_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletToken_fieldAccessorTable
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletToken_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.WalletProtos.PWalletToken.class, com.blemobi.sep.probuf.WalletProtos.PWalletToken.Builder.class);
       }
@@ -15926,7 +15857,7 @@ public final class WalletProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PWalletToken_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PWalletToken_descriptor;
       }
 
       public com.blemobi.sep.probuf.WalletProtos.PWalletToken getDefaultInstanceForType() {
@@ -15999,9 +15930,7 @@ public final class WalletProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            token_ = s;
-          }
+          token_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -16053,7 +15982,8 @@ public final class WalletProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         token_ = value;
         onChanged();
         return this;
@@ -16069,10 +15999,10 @@ public final class WalletProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PWalletToken)
+      // @@protoc_insertion_point(builder_scope:bbproto.PWalletToken)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PWalletToken)
+    // @@protoc_insertion_point(class_scope:bbproto.PWalletToken)
     private static final com.blemobi.sep.probuf.WalletProtos.PWalletToken DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.WalletProtos.PWalletToken();
@@ -16082,8 +16012,8 @@ public final class WalletProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PWalletToken> PARSER =
-        new com.google.protobuf.AbstractParser<PWalletToken>() {
+    private static final com.google.protobuf.Parser<PWalletToken>
+        PARSER = new com.google.protobuf.AbstractParser<PWalletToken>() {
       public PWalletToken parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -16101,6 +16031,10 @@ public final class WalletProtos {
       }
     };
 
+    public static com.google.protobuf.Parser<PWalletToken> parser() {
+      return PARSER;
+    }
+
     @java.lang.Override
     public com.google.protobuf.Parser<PWalletToken> getParserForType() {
       return PARSER;
@@ -16113,7 +16047,7 @@ public final class WalletProtos {
   }
 
   public interface PRedPacketStatusOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PRedPacketStatus)
+      // @@protoc_insertion_point(interface_extends:bbproto.PRedPacketStatus)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -16126,7 +16060,7 @@ public final class WalletProtos {
     int getStatus();
   }
   /**
-   * Protobuf type {@code common.PRedPacketStatus}
+   * Protobuf type {@code bbproto.PRedPacketStatus}
    *
    * <pre>
    * 红包状态
@@ -16134,10 +16068,10 @@ public final class WalletProtos {
    */
   public  static final class PRedPacketStatus extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PRedPacketStatus)
+      // @@protoc_insertion_point(message_implements:bbproto.PRedPacketStatus)
       PRedPacketStatusOrBuilder {
     // Use PRedPacketStatus.newBuilder() to construct.
-    private PRedPacketStatus(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PRedPacketStatus(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PRedPacketStatus() {
@@ -16187,12 +16121,12 @@ public final class WalletProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketStatus_descriptor;
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketStatus_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketStatus_fieldAccessorTable
+      return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketStatus_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.WalletProtos.PRedPacketStatus.class, com.blemobi.sep.probuf.WalletProtos.PRedPacketStatus.Builder.class);
     }
@@ -16227,9 +16161,8 @@ public final class WalletProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -16237,7 +16170,7 @@ public final class WalletProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, status_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -16314,7 +16247,7 @@ public final class WalletProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PRedPacketStatus}
+     * Protobuf type {@code bbproto.PRedPacketStatus}
      *
      * <pre>
      * 红包状态
@@ -16322,16 +16255,16 @@ public final class WalletProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PRedPacketStatus)
+        // @@protoc_insertion_point(builder_implements:bbproto.PRedPacketStatus)
         com.blemobi.sep.probuf.WalletProtos.PRedPacketStatusOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketStatus_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketStatus_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketStatus_fieldAccessorTable
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketStatus_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.WalletProtos.PRedPacketStatus.class, com.blemobi.sep.probuf.WalletProtos.PRedPacketStatus.Builder.class);
       }
@@ -16359,7 +16292,7 @@ public final class WalletProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.WalletProtos.internal_static_common_PRedPacketStatus_descriptor;
+        return com.blemobi.sep.probuf.WalletProtos.internal_static_bbproto_PRedPacketStatus_descriptor;
       }
 
       public com.blemobi.sep.probuf.WalletProtos.PRedPacketStatus getDefaultInstanceForType() {
@@ -16469,10 +16402,10 @@ public final class WalletProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PRedPacketStatus)
+      // @@protoc_insertion_point(builder_scope:bbproto.PRedPacketStatus)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PRedPacketStatus)
+    // @@protoc_insertion_point(class_scope:bbproto.PRedPacketStatus)
     private static final com.blemobi.sep.probuf.WalletProtos.PRedPacketStatus DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.WalletProtos.PRedPacketStatus();
@@ -16482,8 +16415,8 @@ public final class WalletProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PRedPacketStatus> PARSER =
-        new com.google.protobuf.AbstractParser<PRedPacketStatus>() {
+    private static final com.google.protobuf.Parser<PRedPacketStatus>
+        PARSER = new com.google.protobuf.AbstractParser<PRedPacketStatus>() {
       public PRedPacketStatus parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -16501,6 +16434,10 @@ public final class WalletProtos {
       }
     };
 
+    public static com.google.protobuf.Parser<PRedPacketStatus> parser() {
+      return PARSER;
+    }
+
     @java.lang.Override
     public com.google.protobuf.Parser<PRedPacketStatus> getParserForType() {
       return PARSER;
@@ -16513,100 +16450,100 @@ public final class WalletProtos {
   }
 
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PDiamondTotalCount_descriptor;
+    internal_static_bbproto_PDiamondTotalCount_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PDiamondTotalCount_fieldAccessorTable;
+      internal_static_bbproto_PDiamondTotalCount_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PDiamondCount_descriptor;
+    internal_static_bbproto_PDiamondCount_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PDiamondCount_fieldAccessorTable;
+      internal_static_bbproto_PDiamondCount_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PDiamondInfo_descriptor;
+    internal_static_bbproto_PDiamondInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PDiamondInfo_fieldAccessorTable;
+      internal_static_bbproto_PDiamondInfo_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PDiamondInfoList_descriptor;
+    internal_static_bbproto_PDiamondInfoList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PDiamondInfoList_fieldAccessorTable;
+      internal_static_bbproto_PDiamondInfoList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PRedPacketCount_descriptor;
+    internal_static_bbproto_PRedPacketCount_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PRedPacketCount_fieldAccessorTable;
+      internal_static_bbproto_PRedPacketCount_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PRedPacketID_descriptor;
+    internal_static_bbproto_PRedPacketID_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PRedPacketID_fieldAccessorTable;
+      internal_static_bbproto_PRedPacketID_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PSendRedPacket_descriptor;
+    internal_static_bbproto_PSendRedPacket_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PSendRedPacket_fieldAccessorTable;
+      internal_static_bbproto_PSendRedPacket_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PRedPacketInfo_descriptor;
+    internal_static_bbproto_PRedPacketInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PRedPacketInfo_fieldAccessorTable;
+      internal_static_bbproto_PRedPacketInfo_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PSendRedPacketInfo_descriptor;
+    internal_static_bbproto_PSendRedPacketInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PSendRedPacketInfo_fieldAccessorTable;
+      internal_static_bbproto_PSendRedPacketInfo_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PRedPacketInfoList_descriptor;
+    internal_static_bbproto_PRedPacketInfoList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PRedPacketInfoList_fieldAccessorTable;
+      internal_static_bbproto_PRedPacketInfoList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PRedPacketParticipant_descriptor;
+    internal_static_bbproto_PRedPacketParticipant_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PRedPacketParticipant_fieldAccessorTable;
+      internal_static_bbproto_PRedPacketParticipant_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PRedPacketDetail_descriptor;
+    internal_static_bbproto_PRedPacketDetail_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PRedPacketDetail_fieldAccessorTable;
+      internal_static_bbproto_PRedPacketDetail_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PWalletGiftTotalCount_descriptor;
+    internal_static_bbproto_PWalletGiftTotalCount_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PWalletGiftTotalCount_fieldAccessorTable;
+      internal_static_bbproto_PWalletGiftTotalCount_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PWalletGiftCount_descriptor;
+    internal_static_bbproto_PWalletGiftCount_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PWalletGiftCount_fieldAccessorTable;
+      internal_static_bbproto_PWalletGiftCount_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PWalletGiftInfo_descriptor;
+    internal_static_bbproto_PWalletGiftInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PWalletGiftInfo_fieldAccessorTable;
+      internal_static_bbproto_PWalletGiftInfo_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PWalletGiftInfoList_descriptor;
+    internal_static_bbproto_PWalletGiftInfoList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PWalletGiftInfoList_fieldAccessorTable;
+      internal_static_bbproto_PWalletGiftInfoList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PWalletPayPwdIsSet_descriptor;
+    internal_static_bbproto_PWalletPayPwdIsSet_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PWalletPayPwdIsSet_fieldAccessorTable;
+      internal_static_bbproto_PWalletPayPwdIsSet_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PWalletToken_descriptor;
+    internal_static_bbproto_PWalletToken_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PWalletToken_fieldAccessorTable;
+      internal_static_bbproto_PWalletToken_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PRedPacketStatus_descriptor;
+    internal_static_bbproto_PRedPacketStatus_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PRedPacketStatus_fieldAccessorTable;
+      internal_static_bbproto_PRedPacketStatus_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -16616,52 +16553,53 @@ public final class WalletProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014wallet.proto\022\006common\")\n\022PDiamondTotalC" +
-      "ount\022\023\n\013totalVMoney\030\001 \001(\003\"P\n\rPDiamondCou" +
-      "nt\022\023\n\013totalVMoney\030\001 \001(\003\022\024\n\014incomeVMoney\030" +
-      "\002 \001(\005\022\024\n\014expendVMoney\030\003 \001(\005\"\215\001\n\014PDiamond" +
-      "Info\022\013\n\003sid\030\001 \001(\t\022\014\n\004uuid\030\002 \001(\t\022\014\n\004name\030" +
-      "\003 \001(\t\022\014\n\004type\030\004 \001(\005\022\016\n\006target\030\005 \001(\005\022\022\n\nh" +
-      "eadImgURL\030\006 \001(\t\022\016\n\006vMoney\030\007 \001(\005\022\022\n\ncreat" +
-      "eTime\030\010 \001(\003\"6\n\020PDiamondInfoList\022\"\n\004list\030" +
-      "\001 \003(\0132\024.common.PDiamondInfo\"_\n\017PRedPacke" +
-      "tCount\022\022\n\nrecvVMoney\030\001 \001(\005\022\021\n\trecvCount\030",
-      "\002 \001(\005\022\022\n\nsendVMoney\030\003 \001(\005\022\021\n\tsendCount\030\004" +
-      " \001(\005\"\033\n\014PRedPacketID\022\013\n\003rid\030\001 \001(\t\"\201\001\n\016PS" +
-      "endRedPacket\022\020\n\010paytoken\030\001 \001(\t\022\014\n\004type\030\002" +
-      " \001(\005\022\r\n\005count\030\003 \001(\005\022\016\n\006vMoney\030\004 \001(\005\022\016\n\006r" +
-      "emark\030\005 \001(\t\022\016\n\006target\030\006 \001(\005\022\020\n\010targetID\030" +
-      "\007 \001(\t\"\254\001\n\016PRedPacketInfo\022\013\n\003sid\030\001 \001(\t\022\013\n" +
-      "\003rid\030\002 \001(\t\022\014\n\004uuid\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\022\014" +
-      "\n\004type\030\005 \001(\005\022\016\n\006target\030\006 \001(\005\022\022\n\nheadImgU" +
-      "RL\030\007 \001(\t\022\016\n\006vMoney\030\010 \001(\003\022\016\n\006remark\030\t \001(\t" +
-      "\022\022\n\ncreateTime\030\n \001(\003\"\203\001\n\022PSendRedPacketI",
-      "nfo\022\014\n\004uuid\030\001 \001(\t\022\014\n\004type\030\002 \001(\005\022\016\n\006targe" +
-      "t\030\003 \001(\005\022\016\n\006vMoney\030\004 \001(\003\022\r\n\005count\030\005 \001(\005\022\016" +
-      "\n\006remark\030\006 \001(\t\022\022\n\ncreateTime\030\007 \001(\003\":\n\022PR" +
-      "edPacketInfoList\022$\n\004list\030\001 \003(\0132\026.common." +
-      "PRedPacketInfo\"{\n\025PRedPacketParticipant\022" +
-      "\014\n\004uuid\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\022\n\nheadImgUR" +
-      "L\030\003 \001(\t\022\016\n\006vMoney\030\004 \001(\005\022\016\n\006remark\030\005 \001(\t\022" +
-      "\022\n\ncreateTime\030\006 \001(\003\"\326\001\n\020PRedPacketDetail" +
-      "\022\013\n\003rid\030\001 \001(\t\022\014\n\004uuid\030\002 \001(\t\022\014\n\004name\030\003 \001(" +
-      "\t\022\022\n\nheadImgURL\030\004 \001(\t\022\016\n\006vMoney\030\005 \001(\005\022\016\n",
-      "\006status\030\006 \001(\005\022\016\n\006remark\030\007 \001(\t\022(\n\004info\030\010 " +
-      "\001(\0132\032.common.PSendRedPacketInfo\022+\n\004list\030" +
-      "\t \003(\0132\035.common.PRedPacketParticipant\"+\n\025" +
-      "PWalletGiftTotalCount\022\022\n\ntotalCount\030\001 \001(" +
-      "\005\"t\n\020PWalletGiftCount\022\022\n\ntotalCount\030\001 \001(" +
-      "\005\022\022\n\nrecvVMoney\030\002 \001(\005\022\021\n\trecvCount\030\003 \001(\005" +
-      "\022\022\n\nsendVMoney\030\004 \001(\005\022\021\n\tsendCount\030\005 \001(\005\"" +
-      "\216\001\n\017PWalletGiftInfo\022\013\n\003sid\030\001 \001(\t\022\014\n\004uuid" +
-      "\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\022\n\nheadImgURL\030\004 \001(\t" +
-      "\022\013\n\003gid\030\005 \001(\005\022\016\n\006vMoney\030\006 \001(\005\022\r\n\005count\030\007",
-      " \001(\005\022\022\n\ncreateTime\030\010 \001(\003\"<\n\023PWalletGiftI" +
-      "nfoList\022%\n\004list\030\001 \003(\0132\027.common.PWalletGi" +
-      "ftInfo\"#\n\022PWalletPayPwdIsSet\022\r\n\005isset\030\001 " +
-      "\001(\010\"\035\n\014PWalletToken\022\r\n\005token\030\001 \001(\t\"\"\n\020PR" +
-      "edPacketStatus\022\016\n\006status\030\001 \001(\005B&\n\026com.bl" +
-      "emobi.sep.probufB\014WalletProtosb\006proto3"
+      "\n\014wallet.proto\022\007bbproto\")\n\022PDiamondTotal" +
+      "Count\022\023\n\013totalVMoney\030\001 \001(\003\"P\n\rPDiamondCo" +
+      "unt\022\023\n\013totalVMoney\030\001 \001(\003\022\024\n\014incomeVMoney" +
+      "\030\002 \001(\005\022\024\n\014expendVMoney\030\003 \001(\005\"\215\001\n\014PDiamon" +
+      "dInfo\022\013\n\003sid\030\001 \001(\t\022\014\n\004uuid\030\002 \001(\t\022\014\n\004name" +
+      "\030\003 \001(\t\022\014\n\004type\030\004 \001(\005\022\016\n\006target\030\005 \001(\005\022\022\n\n" +
+      "headImgURL\030\006 \001(\t\022\016\n\006vMoney\030\007 \001(\005\022\022\n\ncrea" +
+      "teTime\030\010 \001(\003\"7\n\020PDiamondInfoList\022#\n\004list" +
+      "\030\001 \003(\0132\025.bbproto.PDiamondInfo\"_\n\017PRedPac" +
+      "ketCount\022\022\n\nrecvVMoney\030\001 \001(\005\022\021\n\trecvCoun",
+      "t\030\002 \001(\005\022\022\n\nsendVMoney\030\003 \001(\005\022\021\n\tsendCount" +
+      "\030\004 \001(\005\"\033\n\014PRedPacketID\022\013\n\003rid\030\001 \001(\t\"\201\001\n\016" +
+      "PSendRedPacket\022\020\n\010paytoken\030\001 \001(\t\022\014\n\004type" +
+      "\030\002 \001(\005\022\r\n\005count\030\003 \001(\005\022\016\n\006vMoney\030\004 \001(\005\022\016\n" +
+      "\006remark\030\005 \001(\t\022\016\n\006target\030\006 \001(\005\022\020\n\010targetI" +
+      "D\030\007 \001(\t\"\254\001\n\016PRedPacketInfo\022\013\n\003sid\030\001 \001(\t\022" +
+      "\013\n\003rid\030\002 \001(\t\022\014\n\004uuid\030\003 \001(\t\022\014\n\004name\030\004 \001(\t" +
+      "\022\014\n\004type\030\005 \001(\005\022\016\n\006target\030\006 \001(\005\022\022\n\nheadIm" +
+      "gURL\030\007 \001(\t\022\016\n\006vMoney\030\010 \001(\003\022\016\n\006remark\030\t \001" +
+      "(\t\022\022\n\ncreateTime\030\n \001(\003\"\203\001\n\022PSendRedPacke",
+      "tInfo\022\014\n\004uuid\030\001 \001(\t\022\014\n\004type\030\002 \001(\005\022\016\n\006tar" +
+      "get\030\003 \001(\005\022\016\n\006vMoney\030\004 \001(\003\022\r\n\005count\030\005 \001(\005" +
+      "\022\016\n\006remark\030\006 \001(\t\022\022\n\ncreateTime\030\007 \001(\003\";\n\022" +
+      "PRedPacketInfoList\022%\n\004list\030\001 \003(\0132\027.bbpro" +
+      "to.PRedPacketInfo\"{\n\025PRedPacketParticipa" +
+      "nt\022\014\n\004uuid\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\022\n\nheadIm" +
+      "gURL\030\003 \001(\t\022\016\n\006vMoney\030\004 \001(\005\022\016\n\006remark\030\005 \001" +
+      "(\t\022\022\n\ncreateTime\030\006 \001(\003\"\330\001\n\020PRedPacketDet" +
+      "ail\022\013\n\003rid\030\001 \001(\t\022\014\n\004uuid\030\002 \001(\t\022\014\n\004name\030\003" +
+      " \001(\t\022\022\n\nheadImgURL\030\004 \001(\t\022\016\n\006vMoney\030\005 \001(\005",
+      "\022\016\n\006status\030\006 \001(\005\022\016\n\006remark\030\007 \001(\t\022)\n\004info" +
+      "\030\010 \001(\0132\033.bbproto.PSendRedPacketInfo\022,\n\004l" +
+      "ist\030\t \003(\0132\036.bbproto.PRedPacketParticipan" +
+      "t\"+\n\025PWalletGiftTotalCount\022\022\n\ntotalCount" +
+      "\030\001 \001(\005\"t\n\020PWalletGiftCount\022\022\n\ntotalCount" +
+      "\030\001 \001(\005\022\022\n\nrecvVMoney\030\002 \001(\005\022\021\n\trecvCount\030" +
+      "\003 \001(\005\022\022\n\nsendVMoney\030\004 \001(\005\022\021\n\tsendCount\030\005" +
+      " \001(\005\"\216\001\n\017PWalletGiftInfo\022\013\n\003sid\030\001 \001(\t\022\014\n" +
+      "\004uuid\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\022\n\nheadImgURL\030" +
+      "\004 \001(\t\022\013\n\003gid\030\005 \001(\005\022\016\n\006vMoney\030\006 \001(\005\022\r\n\005co",
+      "unt\030\007 \001(\005\022\022\n\ncreateTime\030\010 \001(\003\"=\n\023PWallet" +
+      "GiftInfoList\022&\n\004list\030\001 \003(\0132\030.bbproto.PWa" +
+      "lletGiftInfo\"#\n\022PWalletPayPwdIsSet\022\r\n\005is" +
+      "set\030\001 \001(\010\"\035\n\014PWalletToken\022\r\n\005token\030\001 \001(\t" +
+      "\"\"\n\020PRedPacketStatus\022\016\n\006status\030\001 \001(\005B&\n\026" +
+      "com.blemobi.sep.probufB\014WalletProtosb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -16675,119 +16613,119 @@ public final class WalletProtos {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_common_PDiamondTotalCount_descriptor =
+    internal_static_bbproto_PDiamondTotalCount_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_common_PDiamondTotalCount_fieldAccessorTable = new
+    internal_static_bbproto_PDiamondTotalCount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PDiamondTotalCount_descriptor,
+        internal_static_bbproto_PDiamondTotalCount_descriptor,
         new java.lang.String[] { "TotalVMoney", });
-    internal_static_common_PDiamondCount_descriptor =
+    internal_static_bbproto_PDiamondCount_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_common_PDiamondCount_fieldAccessorTable = new
+    internal_static_bbproto_PDiamondCount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PDiamondCount_descriptor,
+        internal_static_bbproto_PDiamondCount_descriptor,
         new java.lang.String[] { "TotalVMoney", "IncomeVMoney", "ExpendVMoney", });
-    internal_static_common_PDiamondInfo_descriptor =
+    internal_static_bbproto_PDiamondInfo_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_common_PDiamondInfo_fieldAccessorTable = new
+    internal_static_bbproto_PDiamondInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PDiamondInfo_descriptor,
+        internal_static_bbproto_PDiamondInfo_descriptor,
         new java.lang.String[] { "Sid", "Uuid", "Name", "Type", "Target", "HeadImgURL", "VMoney", "CreateTime", });
-    internal_static_common_PDiamondInfoList_descriptor =
+    internal_static_bbproto_PDiamondInfoList_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_common_PDiamondInfoList_fieldAccessorTable = new
+    internal_static_bbproto_PDiamondInfoList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PDiamondInfoList_descriptor,
+        internal_static_bbproto_PDiamondInfoList_descriptor,
         new java.lang.String[] { "List", });
-    internal_static_common_PRedPacketCount_descriptor =
+    internal_static_bbproto_PRedPacketCount_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_common_PRedPacketCount_fieldAccessorTable = new
+    internal_static_bbproto_PRedPacketCount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PRedPacketCount_descriptor,
+        internal_static_bbproto_PRedPacketCount_descriptor,
         new java.lang.String[] { "RecvVMoney", "RecvCount", "SendVMoney", "SendCount", });
-    internal_static_common_PRedPacketID_descriptor =
+    internal_static_bbproto_PRedPacketID_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_common_PRedPacketID_fieldAccessorTable = new
+    internal_static_bbproto_PRedPacketID_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PRedPacketID_descriptor,
+        internal_static_bbproto_PRedPacketID_descriptor,
         new java.lang.String[] { "Rid", });
-    internal_static_common_PSendRedPacket_descriptor =
+    internal_static_bbproto_PSendRedPacket_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_common_PSendRedPacket_fieldAccessorTable = new
+    internal_static_bbproto_PSendRedPacket_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PSendRedPacket_descriptor,
+        internal_static_bbproto_PSendRedPacket_descriptor,
         new java.lang.String[] { "Paytoken", "Type", "Count", "VMoney", "Remark", "Target", "TargetID", });
-    internal_static_common_PRedPacketInfo_descriptor =
+    internal_static_bbproto_PRedPacketInfo_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_common_PRedPacketInfo_fieldAccessorTable = new
+    internal_static_bbproto_PRedPacketInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PRedPacketInfo_descriptor,
+        internal_static_bbproto_PRedPacketInfo_descriptor,
         new java.lang.String[] { "Sid", "Rid", "Uuid", "Name", "Type", "Target", "HeadImgURL", "VMoney", "Remark", "CreateTime", });
-    internal_static_common_PSendRedPacketInfo_descriptor =
+    internal_static_bbproto_PSendRedPacketInfo_descriptor =
       getDescriptor().getMessageTypes().get(8);
-    internal_static_common_PSendRedPacketInfo_fieldAccessorTable = new
+    internal_static_bbproto_PSendRedPacketInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PSendRedPacketInfo_descriptor,
+        internal_static_bbproto_PSendRedPacketInfo_descriptor,
         new java.lang.String[] { "Uuid", "Type", "Target", "VMoney", "Count", "Remark", "CreateTime", });
-    internal_static_common_PRedPacketInfoList_descriptor =
+    internal_static_bbproto_PRedPacketInfoList_descriptor =
       getDescriptor().getMessageTypes().get(9);
-    internal_static_common_PRedPacketInfoList_fieldAccessorTable = new
+    internal_static_bbproto_PRedPacketInfoList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PRedPacketInfoList_descriptor,
+        internal_static_bbproto_PRedPacketInfoList_descriptor,
         new java.lang.String[] { "List", });
-    internal_static_common_PRedPacketParticipant_descriptor =
+    internal_static_bbproto_PRedPacketParticipant_descriptor =
       getDescriptor().getMessageTypes().get(10);
-    internal_static_common_PRedPacketParticipant_fieldAccessorTable = new
+    internal_static_bbproto_PRedPacketParticipant_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PRedPacketParticipant_descriptor,
+        internal_static_bbproto_PRedPacketParticipant_descriptor,
         new java.lang.String[] { "Uuid", "Name", "HeadImgURL", "VMoney", "Remark", "CreateTime", });
-    internal_static_common_PRedPacketDetail_descriptor =
+    internal_static_bbproto_PRedPacketDetail_descriptor =
       getDescriptor().getMessageTypes().get(11);
-    internal_static_common_PRedPacketDetail_fieldAccessorTable = new
+    internal_static_bbproto_PRedPacketDetail_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PRedPacketDetail_descriptor,
+        internal_static_bbproto_PRedPacketDetail_descriptor,
         new java.lang.String[] { "Rid", "Uuid", "Name", "HeadImgURL", "VMoney", "Status", "Remark", "Info", "List", });
-    internal_static_common_PWalletGiftTotalCount_descriptor =
+    internal_static_bbproto_PWalletGiftTotalCount_descriptor =
       getDescriptor().getMessageTypes().get(12);
-    internal_static_common_PWalletGiftTotalCount_fieldAccessorTable = new
+    internal_static_bbproto_PWalletGiftTotalCount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PWalletGiftTotalCount_descriptor,
+        internal_static_bbproto_PWalletGiftTotalCount_descriptor,
         new java.lang.String[] { "TotalCount", });
-    internal_static_common_PWalletGiftCount_descriptor =
+    internal_static_bbproto_PWalletGiftCount_descriptor =
       getDescriptor().getMessageTypes().get(13);
-    internal_static_common_PWalletGiftCount_fieldAccessorTable = new
+    internal_static_bbproto_PWalletGiftCount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PWalletGiftCount_descriptor,
+        internal_static_bbproto_PWalletGiftCount_descriptor,
         new java.lang.String[] { "TotalCount", "RecvVMoney", "RecvCount", "SendVMoney", "SendCount", });
-    internal_static_common_PWalletGiftInfo_descriptor =
+    internal_static_bbproto_PWalletGiftInfo_descriptor =
       getDescriptor().getMessageTypes().get(14);
-    internal_static_common_PWalletGiftInfo_fieldAccessorTable = new
+    internal_static_bbproto_PWalletGiftInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PWalletGiftInfo_descriptor,
+        internal_static_bbproto_PWalletGiftInfo_descriptor,
         new java.lang.String[] { "Sid", "Uuid", "Name", "HeadImgURL", "Gid", "VMoney", "Count", "CreateTime", });
-    internal_static_common_PWalletGiftInfoList_descriptor =
+    internal_static_bbproto_PWalletGiftInfoList_descriptor =
       getDescriptor().getMessageTypes().get(15);
-    internal_static_common_PWalletGiftInfoList_fieldAccessorTable = new
+    internal_static_bbproto_PWalletGiftInfoList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PWalletGiftInfoList_descriptor,
+        internal_static_bbproto_PWalletGiftInfoList_descriptor,
         new java.lang.String[] { "List", });
-    internal_static_common_PWalletPayPwdIsSet_descriptor =
+    internal_static_bbproto_PWalletPayPwdIsSet_descriptor =
       getDescriptor().getMessageTypes().get(16);
-    internal_static_common_PWalletPayPwdIsSet_fieldAccessorTable = new
+    internal_static_bbproto_PWalletPayPwdIsSet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PWalletPayPwdIsSet_descriptor,
+        internal_static_bbproto_PWalletPayPwdIsSet_descriptor,
         new java.lang.String[] { "Isset", });
-    internal_static_common_PWalletToken_descriptor =
+    internal_static_bbproto_PWalletToken_descriptor =
       getDescriptor().getMessageTypes().get(17);
-    internal_static_common_PWalletToken_fieldAccessorTable = new
+    internal_static_bbproto_PWalletToken_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PWalletToken_descriptor,
+        internal_static_bbproto_PWalletToken_descriptor,
         new java.lang.String[] { "Token", });
-    internal_static_common_PRedPacketStatus_descriptor =
+    internal_static_bbproto_PRedPacketStatus_descriptor =
       getDescriptor().getMessageTypes().get(18);
-    internal_static_common_PRedPacketStatus_fieldAccessorTable = new
+    internal_static_bbproto_PRedPacketStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PRedPacketStatus_descriptor,
+        internal_static_bbproto_PRedPacketStatus_descriptor,
         new java.lang.String[] { "Status", });
   }
 
