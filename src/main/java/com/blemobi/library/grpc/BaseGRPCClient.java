@@ -44,7 +44,8 @@ public abstract class BaseGRPCClient {
     }
     
     private void initial(){
-        channel = NettyChannelBuilder.forAddress(getHost(), getPort()).negotiationType(NegotiationType.PLAINTEXT).build();
+        SocketInfo info = getSocketInfo();
+        channel = NettyChannelBuilder.forAddress(info.getIpAddr(), info.getPort()).negotiationType(NegotiationType.PLAINTEXT).build();
     }
     
     public <T> T doExec(Object... obj){
@@ -69,13 +70,8 @@ public abstract class BaseGRPCClient {
     }
 
     
-    protected String getHost(){
-        SocketInfo socketInfo = BaseService.getActiveServer(serverName);
-        return socketInfo.getIpAddr();
+    protected SocketInfo getSocketInfo(){
+        return BaseService.getActiveServer(serverName);
     }
     
-    protected Integer getPort(){
-        SocketInfo socketInfo = BaseService.getActiveServer(serverName);
-        return socketInfo.getPort();
-    }
 }
