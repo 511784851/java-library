@@ -236,7 +236,7 @@ public final class NetdiskProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PNetFileInfo)
       PNetFileInfoOrBuilder {
     // Use PNetFileInfo.newBuilder() to construct.
-    private PNetFileInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PNetFileInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PNetFileInfo() {
@@ -279,75 +279,75 @@ public final class NetdiskProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              objectKey_ = bs;
+              objectKey_ = s;
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              extension_ = bs;
+              extension_ = s;
               break;
             }
             case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              fileSize_ = bs;
+              fileSize_ = s;
               break;
             }
             case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              fileDigest_ = bs;
+              fileDigest_ = s;
               break;
             }
             case 42: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              createTime_ = bs;
+              createTime_ = s;
               break;
             }
             case 50: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              transferFlag_ = bs;
+              transferFlag_ = s;
               break;
             }
             case 58: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              shareFlag_ = bs;
+              shareFlag_ = s;
               break;
             }
             case 66: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              conserveFlag_ = bs;
+              conserveFlag_ = s;
               break;
             }
             case 74: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              title_ = bs;
+              title_ = s;
               break;
             }
             case 82: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              desc_ = bs;
+              desc_ = s;
               break;
             }
             case 90: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              remark_ = bs;
+              remark_ = s;
               break;
             }
             case 98: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              miniPic_ = bs;
+              miniPic_ = s;
               break;
             }
           }
@@ -391,9 +391,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          objectKey_ = s;
-        }
+        objectKey_ = s;
         return s;
       }
     }
@@ -435,9 +433,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          extension_ = s;
-        }
+        extension_ = s;
         return s;
       }
     }
@@ -479,9 +475,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          fileSize_ = s;
-        }
+        fileSize_ = s;
         return s;
       }
     }
@@ -523,9 +517,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          fileDigest_ = s;
-        }
+        fileDigest_ = s;
         return s;
       }
     }
@@ -567,9 +559,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          createTime_ = s;
-        }
+        createTime_ = s;
         return s;
       }
     }
@@ -611,9 +601,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          transferFlag_ = s;
-        }
+        transferFlag_ = s;
         return s;
       }
     }
@@ -655,9 +643,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          shareFlag_ = s;
-        }
+        shareFlag_ = s;
         return s;
       }
     }
@@ -699,9 +685,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          conserveFlag_ = s;
-        }
+        conserveFlag_ = s;
         return s;
       }
     }
@@ -743,9 +727,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          title_ = s;
-        }
+        title_ = s;
         return s;
       }
     }
@@ -787,9 +769,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          desc_ = s;
-        }
+        desc_ = s;
         return s;
       }
     }
@@ -831,9 +811,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          remark_ = s;
-        }
+        remark_ = s;
         return s;
       }
     }
@@ -875,9 +853,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          miniPic_ = s;
-        }
+        miniPic_ = s;
         return s;
       }
     }
@@ -915,98 +891,85 @@ public final class NetdiskProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getObjectKeyBytes().isEmpty()) {
-        output.writeBytes(1, getObjectKeyBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, objectKey_);
       }
       if (!getExtensionBytes().isEmpty()) {
-        output.writeBytes(2, getExtensionBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, extension_);
       }
       if (!getFileSizeBytes().isEmpty()) {
-        output.writeBytes(3, getFileSizeBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, fileSize_);
       }
       if (!getFileDigestBytes().isEmpty()) {
-        output.writeBytes(4, getFileDigestBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, fileDigest_);
       }
       if (!getCreateTimeBytes().isEmpty()) {
-        output.writeBytes(5, getCreateTimeBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, createTime_);
       }
       if (!getTransferFlagBytes().isEmpty()) {
-        output.writeBytes(6, getTransferFlagBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 6, transferFlag_);
       }
       if (!getShareFlagBytes().isEmpty()) {
-        output.writeBytes(7, getShareFlagBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 7, shareFlag_);
       }
       if (!getConserveFlagBytes().isEmpty()) {
-        output.writeBytes(8, getConserveFlagBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 8, conserveFlag_);
       }
       if (!getTitleBytes().isEmpty()) {
-        output.writeBytes(9, getTitleBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 9, title_);
       }
       if (!getDescBytes().isEmpty()) {
-        output.writeBytes(10, getDescBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 10, desc_);
       }
       if (!getRemarkBytes().isEmpty()) {
-        output.writeBytes(11, getRemarkBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 11, remark_);
       }
       if (!getMiniPicBytes().isEmpty()) {
-        output.writeBytes(12, getMiniPicBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 12, miniPic_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getObjectKeyBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getObjectKeyBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, objectKey_);
       }
       if (!getExtensionBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getExtensionBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, extension_);
       }
       if (!getFileSizeBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getFileSizeBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, fileSize_);
       }
       if (!getFileDigestBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getFileDigestBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, fileDigest_);
       }
       if (!getCreateTimeBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(5, getCreateTimeBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, createTime_);
       }
       if (!getTransferFlagBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(6, getTransferFlagBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, transferFlag_);
       }
       if (!getShareFlagBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(7, getShareFlagBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, shareFlag_);
       }
       if (!getConserveFlagBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(8, getConserveFlagBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(8, conserveFlag_);
       }
       if (!getTitleBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(9, getTitleBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(9, title_);
       }
       if (!getDescBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(10, getDescBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(10, desc_);
       }
       if (!getRemarkBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(11, getRemarkBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(11, remark_);
       }
       if (!getMiniPicBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(12, getMiniPicBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(12, miniPic_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -1278,9 +1241,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            objectKey_ = s;
-          }
+          objectKey_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1348,7 +1309,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         objectKey_ = value;
         onChanged();
         return this;
@@ -1368,9 +1330,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            extension_ = s;
-          }
+          extension_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1438,7 +1398,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         extension_ = value;
         onChanged();
         return this;
@@ -1458,9 +1419,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            fileSize_ = s;
-          }
+          fileSize_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1528,7 +1487,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         fileSize_ = value;
         onChanged();
         return this;
@@ -1548,9 +1508,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            fileDigest_ = s;
-          }
+          fileDigest_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1618,7 +1576,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         fileDigest_ = value;
         onChanged();
         return this;
@@ -1638,9 +1597,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            createTime_ = s;
-          }
+          createTime_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1708,7 +1665,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         createTime_ = value;
         onChanged();
         return this;
@@ -1728,9 +1686,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            transferFlag_ = s;
-          }
+          transferFlag_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1798,7 +1754,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         transferFlag_ = value;
         onChanged();
         return this;
@@ -1818,9 +1775,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            shareFlag_ = s;
-          }
+          shareFlag_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1888,7 +1843,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         shareFlag_ = value;
         onChanged();
         return this;
@@ -1908,9 +1864,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            conserveFlag_ = s;
-          }
+          conserveFlag_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1978,7 +1932,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         conserveFlag_ = value;
         onChanged();
         return this;
@@ -1998,9 +1953,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            title_ = s;
-          }
+          title_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -2068,7 +2021,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         title_ = value;
         onChanged();
         return this;
@@ -2088,9 +2042,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            desc_ = s;
-          }
+          desc_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -2158,7 +2110,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         desc_ = value;
         onChanged();
         return this;
@@ -2178,9 +2131,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            remark_ = s;
-          }
+          remark_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -2248,7 +2199,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         remark_ = value;
         onChanged();
         return this;
@@ -2268,9 +2220,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            miniPic_ = s;
-          }
+          miniPic_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -2338,7 +2288,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         miniPic_ = value;
         onChanged();
         return this;
@@ -2367,8 +2318,8 @@ public final class NetdiskProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PNetFileInfo> PARSER =
-        new com.google.protobuf.AbstractParser<PNetFileInfo>() {
+    private static final com.google.protobuf.Parser<PNetFileInfo>
+        PARSER = new com.google.protobuf.AbstractParser<PNetFileInfo>() {
       public PNetFileInfo parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2385,6 +2336,10 @@ public final class NetdiskProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PNetFileInfo> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PNetFileInfo> getParserForType() {
@@ -2451,7 +2406,7 @@ public final class NetdiskProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PListNetFileInfo)
       PListNetFileInfoOrBuilder {
     // Use PListNetFileInfo.newBuilder() to construct.
-    private PListNetFileInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PListNetFileInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PListNetFileInfo() {
@@ -2488,13 +2443,13 @@ public final class NetdiskProtos {
                 netFiles_ = new java.util.ArrayList<com.blemobi.sep.probuf.NetdiskProtos.PNetFileInfo>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              netFiles_.add(input.readMessage(com.blemobi.sep.probuf.NetdiskProtos.PNetFileInfo.PARSER, extensionRegistry));
+              netFiles_.add(input.readMessage(com.blemobi.sep.probuf.NetdiskProtos.PNetFileInfo.parser(), extensionRegistry));
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              diskSize_ = bs;
+              diskSize_ = s;
               break;
             }
           }
@@ -2577,9 +2532,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          diskSize_ = s;
-        }
+        diskSize_ = s;
         return s;
       }
     }
@@ -2620,13 +2573,12 @@ public final class NetdiskProtos {
         output.writeMessage(1, netFiles_.get(i));
       }
       if (!getDiskSizeBytes().isEmpty()) {
-        output.writeBytes(2, getDiskSizeBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, diskSize_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -2635,10 +2587,9 @@ public final class NetdiskProtos {
           .computeMessageSize(1, netFiles_.get(i));
       }
       if (!getDiskSizeBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getDiskSizeBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, diskSize_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -3119,9 +3070,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            diskSize_ = s;
-          }
+          diskSize_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -3189,7 +3138,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         diskSize_ = value;
         onChanged();
         return this;
@@ -3218,8 +3168,8 @@ public final class NetdiskProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PListNetFileInfo> PARSER =
-        new com.google.protobuf.AbstractParser<PListNetFileInfo>() {
+    private static final com.google.protobuf.Parser<PListNetFileInfo>
+        PARSER = new com.google.protobuf.AbstractParser<PListNetFileInfo>() {
       public PListNetFileInfo parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3236,6 +3186,10 @@ public final class NetdiskProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PListNetFileInfo> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PListNetFileInfo> getParserForType() {
@@ -3278,7 +3232,7 @@ public final class NetdiskProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PBuildUrlInfo)
       PBuildUrlInfoOrBuilder {
     // Use PBuildUrlInfo.newBuilder() to construct.
-    private PBuildUrlInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PBuildUrlInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PBuildUrlInfo() {
@@ -3310,9 +3264,9 @@ public final class NetdiskProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              publicURL_ = bs;
+              publicURL_ = s;
               break;
             }
           }
@@ -3356,9 +3310,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          publicURL_ = s;
-        }
+        publicURL_ = s;
         return s;
       }
     }
@@ -3396,21 +3348,19 @@ public final class NetdiskProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getPublicURLBytes().isEmpty()) {
-        output.writeBytes(1, getPublicURLBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, publicURL_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getPublicURLBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getPublicURLBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, publicURL_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -3605,9 +3555,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            publicURL_ = s;
-          }
+          publicURL_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -3675,7 +3623,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         publicURL_ = value;
         onChanged();
         return this;
@@ -3704,8 +3653,8 @@ public final class NetdiskProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PBuildUrlInfo> PARSER =
-        new com.google.protobuf.AbstractParser<PBuildUrlInfo>() {
+    private static final com.google.protobuf.Parser<PBuildUrlInfo>
+        PARSER = new com.google.protobuf.AbstractParser<PBuildUrlInfo>() {
       public PBuildUrlInfo parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3722,6 +3671,10 @@ public final class NetdiskProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PBuildUrlInfo> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PBuildUrlInfo> getParserForType() {
@@ -3764,7 +3717,7 @@ public final class NetdiskProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PCommunityCreator)
       PCommunityCreatorOrBuilder {
     // Use PCommunityCreator.newBuilder() to construct.
-    private PCommunityCreator(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PCommunityCreator(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PCommunityCreator() {
@@ -3796,9 +3749,9 @@ public final class NetdiskProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              cUuid_ = bs;
+              cUuid_ = s;
               break;
             }
           }
@@ -3842,9 +3795,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          cUuid_ = s;
-        }
+        cUuid_ = s;
         return s;
       }
     }
@@ -3882,21 +3833,19 @@ public final class NetdiskProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getCUuidBytes().isEmpty()) {
-        output.writeBytes(1, getCUuidBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, cUuid_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getCUuidBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getCUuidBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, cUuid_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -4091,9 +4040,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            cUuid_ = s;
-          }
+          cUuid_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -4161,7 +4108,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         cUuid_ = value;
         onChanged();
         return this;
@@ -4190,8 +4138,8 @@ public final class NetdiskProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PCommunityCreator> PARSER =
-        new com.google.protobuf.AbstractParser<PCommunityCreator>() {
+    private static final com.google.protobuf.Parser<PCommunityCreator>
+        PARSER = new com.google.protobuf.AbstractParser<PCommunityCreator>() {
       public PCommunityCreator parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4208,6 +4156,10 @@ public final class NetdiskProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PCommunityCreator> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PCommunityCreator> getParserForType() {
@@ -4497,7 +4449,7 @@ public final class NetdiskProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PNetFile)
       PNetFileOrBuilder {
     // Use PNetFile.newBuilder() to construct.
-    private PNetFile(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PNetFile(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PNetFile() {
@@ -4545,39 +4497,39 @@ public final class NetdiskProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              fileId_ = bs;
+              fileId_ = s;
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              communityId_ = bs;
+              communityId_ = s;
               break;
             }
             case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              uuid_ = bs;
+              uuid_ = s;
               break;
             }
             case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              objectKey_ = bs;
+              objectKey_ = s;
               break;
             }
             case 42: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              url_ = bs;
+              url_ = s;
               break;
             }
             case 50: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              extension_ = bs;
+              extension_ = s;
               break;
             }
             case 56: {
@@ -4586,9 +4538,9 @@ public final class NetdiskProtos {
               break;
             }
             case 66: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              fileDigest_ = bs;
+              fileDigest_ = s;
               break;
             }
             case 72: {
@@ -4612,33 +4564,33 @@ public final class NetdiskProtos {
               break;
             }
             case 106: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              title_ = bs;
+              title_ = s;
               break;
             }
             case 114: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              desc_ = bs;
+              desc_ = s;
               break;
             }
             case 122: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              remark_ = bs;
+              remark_ = s;
               break;
             }
             case 130: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              miniObjectKey_ = bs;
+              miniObjectKey_ = s;
               break;
             }
             case 138: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              miniUrl_ = bs;
+              miniUrl_ = s;
               break;
             }
           }
@@ -4682,9 +4634,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          fileId_ = s;
-        }
+        fileId_ = s;
         return s;
       }
     }
@@ -4726,9 +4676,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          communityId_ = s;
-        }
+        communityId_ = s;
         return s;
       }
     }
@@ -4770,9 +4718,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          uuid_ = s;
-        }
+        uuid_ = s;
         return s;
       }
     }
@@ -4814,9 +4760,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          objectKey_ = s;
-        }
+        objectKey_ = s;
         return s;
       }
     }
@@ -4858,9 +4802,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          url_ = s;
-        }
+        url_ = s;
         return s;
       }
     }
@@ -4902,9 +4844,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          extension_ = s;
-        }
+        extension_ = s;
         return s;
       }
     }
@@ -4959,9 +4899,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          fileDigest_ = s;
-        }
+        fileDigest_ = s;
         return s;
       }
     }
@@ -5055,9 +4993,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          title_ = s;
-        }
+        title_ = s;
         return s;
       }
     }
@@ -5099,9 +5035,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          desc_ = s;
-        }
+        desc_ = s;
         return s;
       }
     }
@@ -5143,9 +5077,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          remark_ = s;
-        }
+        remark_ = s;
         return s;
       }
     }
@@ -5187,9 +5119,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          miniObjectKey_ = s;
-        }
+        miniObjectKey_ = s;
         return s;
       }
     }
@@ -5231,9 +5161,7 @@ public final class NetdiskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          miniUrl_ = s;
-        }
+        miniUrl_ = s;
         return s;
       }
     }
@@ -5271,28 +5199,28 @@ public final class NetdiskProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getFileIdBytes().isEmpty()) {
-        output.writeBytes(1, getFileIdBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, fileId_);
       }
       if (!getCommunityIdBytes().isEmpty()) {
-        output.writeBytes(2, getCommunityIdBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, communityId_);
       }
       if (!getUuidBytes().isEmpty()) {
-        output.writeBytes(3, getUuidBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, uuid_);
       }
       if (!getObjectKeyBytes().isEmpty()) {
-        output.writeBytes(4, getObjectKeyBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, objectKey_);
       }
       if (!getUrlBytes().isEmpty()) {
-        output.writeBytes(5, getUrlBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, url_);
       }
       if (!getExtensionBytes().isEmpty()) {
-        output.writeBytes(6, getExtensionBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 6, extension_);
       }
       if (fileSize_ != 0L) {
         output.writeInt64(7, fileSize_);
       }
       if (!getFileDigestBytes().isEmpty()) {
-        output.writeBytes(8, getFileDigestBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 8, fileDigest_);
       }
       if (createTime_ != 0L) {
         output.writeInt64(9, createTime_);
@@ -5307,59 +5235,51 @@ public final class NetdiskProtos {
         output.writeBool(12, conserveFlag_);
       }
       if (!getTitleBytes().isEmpty()) {
-        output.writeBytes(13, getTitleBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 13, title_);
       }
       if (!getDescBytes().isEmpty()) {
-        output.writeBytes(14, getDescBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 14, desc_);
       }
       if (!getRemarkBytes().isEmpty()) {
-        output.writeBytes(15, getRemarkBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 15, remark_);
       }
       if (!getMiniObjectKeyBytes().isEmpty()) {
-        output.writeBytes(16, getMiniObjectKeyBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 16, miniObjectKey_);
       }
       if (!getMiniUrlBytes().isEmpty()) {
-        output.writeBytes(17, getMiniUrlBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 17, miniUrl_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getFileIdBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getFileIdBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, fileId_);
       }
       if (!getCommunityIdBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getCommunityIdBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, communityId_);
       }
       if (!getUuidBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getUuidBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, uuid_);
       }
       if (!getObjectKeyBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getObjectKeyBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, objectKey_);
       }
       if (!getUrlBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(5, getUrlBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, url_);
       }
       if (!getExtensionBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(6, getExtensionBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, extension_);
       }
       if (fileSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(7, fileSize_);
       }
       if (!getFileDigestBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(8, getFileDigestBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(8, fileDigest_);
       }
       if (createTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -5378,26 +5298,21 @@ public final class NetdiskProtos {
           .computeBoolSize(12, conserveFlag_);
       }
       if (!getTitleBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(13, getTitleBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(13, title_);
       }
       if (!getDescBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(14, getDescBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(14, desc_);
       }
       if (!getRemarkBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(15, getRemarkBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(15, remark_);
       }
       if (!getMiniObjectKeyBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(16, getMiniObjectKeyBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(16, miniObjectKey_);
       }
       if (!getMiniUrlBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(17, getMiniUrlBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(17, miniUrl_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -5703,9 +5618,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            fileId_ = s;
-          }
+          fileId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -5773,7 +5686,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         fileId_ = value;
         onChanged();
         return this;
@@ -5793,9 +5707,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            communityId_ = s;
-          }
+          communityId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -5863,7 +5775,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         communityId_ = value;
         onChanged();
         return this;
@@ -5883,9 +5796,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            uuid_ = s;
-          }
+          uuid_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -5953,7 +5864,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         uuid_ = value;
         onChanged();
         return this;
@@ -5973,9 +5885,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            objectKey_ = s;
-          }
+          objectKey_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -6043,7 +5953,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         objectKey_ = value;
         onChanged();
         return this;
@@ -6063,9 +5974,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            url_ = s;
-          }
+          url_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -6133,7 +6042,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         url_ = value;
         onChanged();
         return this;
@@ -6153,9 +6063,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            extension_ = s;
-          }
+          extension_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -6223,7 +6131,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         extension_ = value;
         onChanged();
         return this;
@@ -6281,9 +6190,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            fileDigest_ = s;
-          }
+          fileDigest_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -6351,7 +6258,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         fileDigest_ = value;
         onChanged();
         return this;
@@ -6523,9 +6431,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            title_ = s;
-          }
+          title_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -6593,7 +6499,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         title_ = value;
         onChanged();
         return this;
@@ -6613,9 +6520,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            desc_ = s;
-          }
+          desc_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -6683,7 +6588,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         desc_ = value;
         onChanged();
         return this;
@@ -6703,9 +6609,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            remark_ = s;
-          }
+          remark_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -6773,7 +6677,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         remark_ = value;
         onChanged();
         return this;
@@ -6793,9 +6698,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            miniObjectKey_ = s;
-          }
+          miniObjectKey_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -6863,7 +6766,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         miniObjectKey_ = value;
         onChanged();
         return this;
@@ -6883,9 +6787,7 @@ public final class NetdiskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            miniUrl_ = s;
-          }
+          miniUrl_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -6953,7 +6855,8 @@ public final class NetdiskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         miniUrl_ = value;
         onChanged();
         return this;
@@ -6982,8 +6885,8 @@ public final class NetdiskProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PNetFile> PARSER =
-        new com.google.protobuf.AbstractParser<PNetFile>() {
+    private static final com.google.protobuf.Parser<PNetFile>
+        PARSER = new com.google.protobuf.AbstractParser<PNetFile>() {
       public PNetFile parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7000,6 +6903,10 @@ public final class NetdiskProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PNetFile> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PNetFile> getParserForType() {
@@ -7057,7 +6964,7 @@ public final class NetdiskProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PNetFilelist)
       PNetFilelistOrBuilder {
     // Use PNetFilelist.newBuilder() to construct.
-    private PNetFilelist(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PNetFilelist(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PNetFilelist() {
@@ -7094,7 +7001,7 @@ public final class NetdiskProtos {
                 netFile_ = new java.util.ArrayList<com.blemobi.sep.probuf.NetdiskProtos.PNetFile>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              netFile_.add(input.readMessage(com.blemobi.sep.probuf.NetdiskProtos.PNetFile.PARSER, extensionRegistry));
+              netFile_.add(input.readMessage(com.blemobi.sep.probuf.NetdiskProtos.PNetFile.parser(), extensionRegistry));
               break;
             }
             case 16: {
@@ -7198,9 +7105,8 @@ public final class NetdiskProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -7212,7 +7118,7 @@ public final class NetdiskProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, diskSize_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -7739,8 +7645,8 @@ public final class NetdiskProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PNetFilelist> PARSER =
-        new com.google.protobuf.AbstractParser<PNetFilelist>() {
+    private static final com.google.protobuf.Parser<PNetFilelist>
+        PARSER = new com.google.protobuf.AbstractParser<PNetFilelist>() {
       public PNetFilelist parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7757,6 +7663,10 @@ public final class NetdiskProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PNetFilelist> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PNetFilelist> getParserForType() {

@@ -1,4 +1,4 @@
-package bbproto;
+package com.blemobi.sep.grpc;
 
 import static io.grpc.stub.ClientCalls.asyncUnaryCall;
 import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
@@ -13,6 +13,17 @@ import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+
+import com.blemobi.sep.probuf.AccountProtos;
+import com.blemobi.sep.probuf.CommonApiProtos;
+import com.blemobi.sep.probuf.DataPublishingProtos;
+import com.blemobi.sep.probuf.ResultProtos;
+import com.blemobi.sep.probuf.AccountProtos.PUserList;
+import com.blemobi.sep.probuf.CommonApiProtos.PEmpty;
+import com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam;
+import com.blemobi.sep.probuf.ResultProtos.PStringList;
+import com.blemobi.sep.probuf.ResultProtos.PStringSingle;
+
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 
 /**
@@ -29,66 +40,66 @@ public class grpcDataPublishingGrpc {
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam,
-      bbproto.DatapublishingInside.PScrollResult> METHOD_SELECT_FANS =
+      com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult> METHOD_SELECT_FANS =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.grpcDataPublishing", "SelectFans"),
           io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(bbproto.DatapublishingInside.PScrollResult.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<bbproto.DatapublishingInside.PFansSaveParam,
-      bbproto.CommonInside.PEmpty> METHOD_SAVE_FANS =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.DataPublishingApiProtos.PFansSaveParam,
+      com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_SAVE_FANS =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.grpcDataPublishing", "SaveFans"),
-          io.grpc.protobuf.ProtoUtils.marshaller(bbproto.DatapublishingInside.PFansSaveParam.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(bbproto.CommonInside.PEmpty.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.DataPublishingApiProtos.PFansSaveParam.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringSingle,
-      bbproto.DatapublishingInside.PScrollResult> METHOD_SCROLL_MORE =
+      com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult> METHOD_SCROLL_MORE =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.grpcDataPublishing", "ScrollMore"),
           io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringSingle.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(bbproto.DatapublishingInside.PScrollResult.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<bbproto.DatapublishingInside.PQueryUserParam,
-      bbproto.DatapublishingInside.PGroupStringList> METHOD_SELECT_VUSER =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.DataPublishingApiProtos.PQueryUserParam,
+      com.blemobi.sep.probuf.DataPublishingApiProtos.PGroupStringList> METHOD_SELECT_VUSER =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.grpcDataPublishing", "SelectVUser"),
-          io.grpc.protobuf.ProtoUtils.marshaller(bbproto.DatapublishingInside.PQueryUserParam.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(bbproto.DatapublishingInside.PGroupStringList.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.DataPublishingApiProtos.PQueryUserParam.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.DataPublishingApiProtos.PGroupStringList.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringSingle,
-      bbproto.DatapublishingInside.PScrollResult> METHOD_SELECT_TODAY_BIRTHDAY_FANS =
+      com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult> METHOD_SELECT_TODAY_BIRTHDAY_FANS =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.grpcDataPublishing", "SelectTodayBirthdayFans"),
           io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringSingle.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(bbproto.DatapublishingInside.PScrollResult.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<bbproto.DatapublishingInside.PQueryUserParam,
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.DataPublishingApiProtos.PQueryUserParam,
       com.blemobi.sep.probuf.AccountProtos.PUserList> METHOD_SELECT7DAY_BIRTHDAY_FANS =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.grpcDataPublishing", "Select7DayBirthdayFans"),
-          io.grpc.protobuf.ProtoUtils.marshaller(bbproto.DatapublishingInside.PQueryUserParam.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.DataPublishingApiProtos.PQueryUserParam.getDefaultInstance()),
           io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.AccountProtos.PUserList.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<bbproto.CommonInside.PEmpty,
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.CommonApiProtos.PEmpty,
       com.blemobi.sep.probuf.ResultProtos.PStringList> METHOD_SELECT_VUSER_HAVE_TODAY_BIRTHDAY_FANS =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.grpcDataPublishing", "SelectVUserHaveTodayBirthdayFans"),
-          io.grpc.protobuf.ProtoUtils.marshaller(bbproto.CommonInside.PEmpty.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()),
           io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringList.getDefaultInstance()));
 
   /**
@@ -124,14 +135,14 @@ public class grpcDataPublishingGrpc {
      * </pre>
      */
     public void selectFans(com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam request,
-        io.grpc.stub.StreamObserver<bbproto.DatapublishingInside.PScrollResult> responseObserver) {
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_SELECT_FANS, responseObserver);
     }
 
     /**
      */
-    public void saveFans(bbproto.DatapublishingInside.PFansSaveParam request,
-        io.grpc.stub.StreamObserver<bbproto.CommonInside.PEmpty> responseObserver) {
+    public void saveFans(com.blemobi.sep.probuf.DataPublishingApiProtos.PFansSaveParam request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_SAVE_FANS, responseObserver);
     }
 
@@ -141,7 +152,7 @@ public class grpcDataPublishingGrpc {
      * </pre>
      */
     public void scrollMore(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
-        io.grpc.stub.StreamObserver<bbproto.DatapublishingInside.PScrollResult> responseObserver) {
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_SCROLL_MORE, responseObserver);
     }
 
@@ -150,8 +161,8 @@ public class grpcDataPublishingGrpc {
      * 用户关注的网红列表，含搜索
      * </pre>
      */
-    public void selectVUser(bbproto.DatapublishingInside.PQueryUserParam request,
-        io.grpc.stub.StreamObserver<bbproto.DatapublishingInside.PGroupStringList> responseObserver) {
+    public void selectVUser(com.blemobi.sep.probuf.DataPublishingApiProtos.PQueryUserParam request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.DataPublishingApiProtos.PGroupStringList> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_SELECT_VUSER, responseObserver);
     }
 
@@ -161,7 +172,7 @@ public class grpcDataPublishingGrpc {
      * </pre>
      */
     public void selectTodayBirthdayFans(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
-        io.grpc.stub.StreamObserver<bbproto.DatapublishingInside.PScrollResult> responseObserver) {
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_SELECT_TODAY_BIRTHDAY_FANS, responseObserver);
     }
 
@@ -170,7 +181,7 @@ public class grpcDataPublishingGrpc {
      * 网红7天内过生日的粉丝uuid
      * </pre>
      */
-    public void select7DayBirthdayFans(bbproto.DatapublishingInside.PQueryUserParam request,
+    public void select7DayBirthdayFans(com.blemobi.sep.probuf.DataPublishingApiProtos.PQueryUserParam request,
         io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.AccountProtos.PUserList> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_SELECT7DAY_BIRTHDAY_FANS, responseObserver);
     }
@@ -180,7 +191,7 @@ public class grpcDataPublishingGrpc {
      * 当天有粉丝过生日的网红uuid
      * </pre>
      */
-    public void selectVUserHaveTodayBirthdayFans(bbproto.CommonInside.PEmpty request,
+    public void selectVUserHaveTodayBirthdayFans(com.blemobi.sep.probuf.CommonApiProtos.PEmpty request,
         io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PStringList> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_SELECT_VUSER_HAVE_TODAY_BIRTHDAY_FANS, responseObserver);
     }
@@ -192,48 +203,48 @@ public class grpcDataPublishingGrpc {
             asyncUnaryCall(
               new MethodHandlers<
                 com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam,
-                bbproto.DatapublishingInside.PScrollResult>(
+                com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult>(
                   this, METHODID_SELECT_FANS)))
           .addMethod(
             METHOD_SAVE_FANS,
             asyncUnaryCall(
               new MethodHandlers<
-                bbproto.DatapublishingInside.PFansSaveParam,
-                bbproto.CommonInside.PEmpty>(
+                com.blemobi.sep.probuf.DataPublishingApiProtos.PFansSaveParam,
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
                   this, METHODID_SAVE_FANS)))
           .addMethod(
             METHOD_SCROLL_MORE,
             asyncUnaryCall(
               new MethodHandlers<
                 com.blemobi.sep.probuf.ResultProtos.PStringSingle,
-                bbproto.DatapublishingInside.PScrollResult>(
+                com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult>(
                   this, METHODID_SCROLL_MORE)))
           .addMethod(
             METHOD_SELECT_VUSER,
             asyncUnaryCall(
               new MethodHandlers<
-                bbproto.DatapublishingInside.PQueryUserParam,
-                bbproto.DatapublishingInside.PGroupStringList>(
+                com.blemobi.sep.probuf.DataPublishingApiProtos.PQueryUserParam,
+                com.blemobi.sep.probuf.DataPublishingApiProtos.PGroupStringList>(
                   this, METHODID_SELECT_VUSER)))
           .addMethod(
             METHOD_SELECT_TODAY_BIRTHDAY_FANS,
             asyncUnaryCall(
               new MethodHandlers<
                 com.blemobi.sep.probuf.ResultProtos.PStringSingle,
-                bbproto.DatapublishingInside.PScrollResult>(
+                com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult>(
                   this, METHODID_SELECT_TODAY_BIRTHDAY_FANS)))
           .addMethod(
             METHOD_SELECT7DAY_BIRTHDAY_FANS,
             asyncUnaryCall(
               new MethodHandlers<
-                bbproto.DatapublishingInside.PQueryUserParam,
+                com.blemobi.sep.probuf.DataPublishingApiProtos.PQueryUserParam,
                 com.blemobi.sep.probuf.AccountProtos.PUserList>(
                   this, METHODID_SELECT7DAY_BIRTHDAY_FANS)))
           .addMethod(
             METHOD_SELECT_VUSER_HAVE_TODAY_BIRTHDAY_FANS,
             asyncUnaryCall(
               new MethodHandlers<
-                bbproto.CommonInside.PEmpty,
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty,
                 com.blemobi.sep.probuf.ResultProtos.PStringList>(
                   this, METHODID_SELECT_VUSER_HAVE_TODAY_BIRTHDAY_FANS)))
           .build();
@@ -264,15 +275,15 @@ public class grpcDataPublishingGrpc {
      * </pre>
      */
     public void selectFans(com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam request,
-        io.grpc.stub.StreamObserver<bbproto.DatapublishingInside.PScrollResult> responseObserver) {
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_SELECT_FANS, getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void saveFans(bbproto.DatapublishingInside.PFansSaveParam request,
-        io.grpc.stub.StreamObserver<bbproto.CommonInside.PEmpty> responseObserver) {
+    public void saveFans(com.blemobi.sep.probuf.DataPublishingApiProtos.PFansSaveParam request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_SAVE_FANS, getCallOptions()), request, responseObserver);
     }
@@ -283,7 +294,7 @@ public class grpcDataPublishingGrpc {
      * </pre>
      */
     public void scrollMore(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
-        io.grpc.stub.StreamObserver<bbproto.DatapublishingInside.PScrollResult> responseObserver) {
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_SCROLL_MORE, getCallOptions()), request, responseObserver);
     }
@@ -293,8 +304,8 @@ public class grpcDataPublishingGrpc {
      * 用户关注的网红列表，含搜索
      * </pre>
      */
-    public void selectVUser(bbproto.DatapublishingInside.PQueryUserParam request,
-        io.grpc.stub.StreamObserver<bbproto.DatapublishingInside.PGroupStringList> responseObserver) {
+    public void selectVUser(com.blemobi.sep.probuf.DataPublishingApiProtos.PQueryUserParam request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.DataPublishingApiProtos.PGroupStringList> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_SELECT_VUSER, getCallOptions()), request, responseObserver);
     }
@@ -305,7 +316,7 @@ public class grpcDataPublishingGrpc {
      * </pre>
      */
     public void selectTodayBirthdayFans(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
-        io.grpc.stub.StreamObserver<bbproto.DatapublishingInside.PScrollResult> responseObserver) {
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_SELECT_TODAY_BIRTHDAY_FANS, getCallOptions()), request, responseObserver);
     }
@@ -315,7 +326,7 @@ public class grpcDataPublishingGrpc {
      * 网红7天内过生日的粉丝uuid
      * </pre>
      */
-    public void select7DayBirthdayFans(bbproto.DatapublishingInside.PQueryUserParam request,
+    public void select7DayBirthdayFans(com.blemobi.sep.probuf.DataPublishingApiProtos.PQueryUserParam request,
         io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.AccountProtos.PUserList> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_SELECT7DAY_BIRTHDAY_FANS, getCallOptions()), request, responseObserver);
@@ -326,7 +337,7 @@ public class grpcDataPublishingGrpc {
      * 当天有粉丝过生日的网红uuid
      * </pre>
      */
-    public void selectVUserHaveTodayBirthdayFans(bbproto.CommonInside.PEmpty request,
+    public void selectVUserHaveTodayBirthdayFans(com.blemobi.sep.probuf.CommonApiProtos.PEmpty request,
         io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PStringList> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_SELECT_VUSER_HAVE_TODAY_BIRTHDAY_FANS, getCallOptions()), request, responseObserver);
@@ -356,14 +367,14 @@ public class grpcDataPublishingGrpc {
      * 查询粉丝
      * </pre>
      */
-    public bbproto.DatapublishingInside.PScrollResult selectFans(com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam request) {
+    public com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult selectFans(com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam request) {
       return blockingUnaryCall(
           getChannel(), METHOD_SELECT_FANS, getCallOptions(), request);
     }
 
     /**
      */
-    public bbproto.CommonInside.PEmpty saveFans(bbproto.DatapublishingInside.PFansSaveParam request) {
+    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty saveFans(com.blemobi.sep.probuf.DataPublishingApiProtos.PFansSaveParam request) {
       return blockingUnaryCall(
           getChannel(), METHOD_SAVE_FANS, getCallOptions(), request);
     }
@@ -373,7 +384,7 @@ public class grpcDataPublishingGrpc {
      * 用PScrollResult.scrollId查询下一页粉丝，直到PScrollResult.id为空
      * </pre>
      */
-    public bbproto.DatapublishingInside.PScrollResult scrollMore(com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
+    public com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult scrollMore(com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
       return blockingUnaryCall(
           getChannel(), METHOD_SCROLL_MORE, getCallOptions(), request);
     }
@@ -383,7 +394,7 @@ public class grpcDataPublishingGrpc {
      * 用户关注的网红列表，含搜索
      * </pre>
      */
-    public bbproto.DatapublishingInside.PGroupStringList selectVUser(bbproto.DatapublishingInside.PQueryUserParam request) {
+    public com.blemobi.sep.probuf.DataPublishingApiProtos.PGroupStringList selectVUser(com.blemobi.sep.probuf.DataPublishingApiProtos.PQueryUserParam request) {
       return blockingUnaryCall(
           getChannel(), METHOD_SELECT_VUSER, getCallOptions(), request);
     }
@@ -393,7 +404,7 @@ public class grpcDataPublishingGrpc {
      * 网红当天过生日的粉丝uuid
      * </pre>
      */
-    public bbproto.DatapublishingInside.PScrollResult selectTodayBirthdayFans(com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
+    public com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult selectTodayBirthdayFans(com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
       return blockingUnaryCall(
           getChannel(), METHOD_SELECT_TODAY_BIRTHDAY_FANS, getCallOptions(), request);
     }
@@ -403,7 +414,7 @@ public class grpcDataPublishingGrpc {
      * 网红7天内过生日的粉丝uuid
      * </pre>
      */
-    public com.blemobi.sep.probuf.AccountProtos.PUserList select7DayBirthdayFans(bbproto.DatapublishingInside.PQueryUserParam request) {
+    public com.blemobi.sep.probuf.AccountProtos.PUserList select7DayBirthdayFans(com.blemobi.sep.probuf.DataPublishingApiProtos.PQueryUserParam request) {
       return blockingUnaryCall(
           getChannel(), METHOD_SELECT7DAY_BIRTHDAY_FANS, getCallOptions(), request);
     }
@@ -413,7 +424,7 @@ public class grpcDataPublishingGrpc {
      * 当天有粉丝过生日的网红uuid
      * </pre>
      */
-    public com.blemobi.sep.probuf.ResultProtos.PStringList selectVUserHaveTodayBirthdayFans(bbproto.CommonInside.PEmpty request) {
+    public com.blemobi.sep.probuf.ResultProtos.PStringList selectVUserHaveTodayBirthdayFans(com.blemobi.sep.probuf.CommonApiProtos.PEmpty request) {
       return blockingUnaryCall(
           getChannel(), METHOD_SELECT_VUSER_HAVE_TODAY_BIRTHDAY_FANS, getCallOptions(), request);
     }
@@ -442,7 +453,7 @@ public class grpcDataPublishingGrpc {
      * 查询粉丝
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<bbproto.DatapublishingInside.PScrollResult> selectFans(
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult> selectFans(
         com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_SELECT_FANS, getCallOptions()), request);
@@ -450,8 +461,8 @@ public class grpcDataPublishingGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<bbproto.CommonInside.PEmpty> saveFans(
-        bbproto.DatapublishingInside.PFansSaveParam request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> saveFans(
+        com.blemobi.sep.probuf.DataPublishingApiProtos.PFansSaveParam request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_SAVE_FANS, getCallOptions()), request);
     }
@@ -461,7 +472,7 @@ public class grpcDataPublishingGrpc {
      * 用PScrollResult.scrollId查询下一页粉丝，直到PScrollResult.id为空
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<bbproto.DatapublishingInside.PScrollResult> scrollMore(
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult> scrollMore(
         com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_SCROLL_MORE, getCallOptions()), request);
@@ -472,8 +483,8 @@ public class grpcDataPublishingGrpc {
      * 用户关注的网红列表，含搜索
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<bbproto.DatapublishingInside.PGroupStringList> selectVUser(
-        bbproto.DatapublishingInside.PQueryUserParam request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.DataPublishingApiProtos.PGroupStringList> selectVUser(
+        com.blemobi.sep.probuf.DataPublishingApiProtos.PQueryUserParam request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_SELECT_VUSER, getCallOptions()), request);
     }
@@ -483,7 +494,7 @@ public class grpcDataPublishingGrpc {
      * 网红当天过生日的粉丝uuid
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<bbproto.DatapublishingInside.PScrollResult> selectTodayBirthdayFans(
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult> selectTodayBirthdayFans(
         com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_SELECT_TODAY_BIRTHDAY_FANS, getCallOptions()), request);
@@ -495,7 +506,7 @@ public class grpcDataPublishingGrpc {
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.AccountProtos.PUserList> select7DayBirthdayFans(
-        bbproto.DatapublishingInside.PQueryUserParam request) {
+        com.blemobi.sep.probuf.DataPublishingApiProtos.PQueryUserParam request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_SELECT7DAY_BIRTHDAY_FANS, getCallOptions()), request);
     }
@@ -506,7 +517,7 @@ public class grpcDataPublishingGrpc {
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.ResultProtos.PStringList> selectVUserHaveTodayBirthdayFans(
-        bbproto.CommonInside.PEmpty request) {
+        com.blemobi.sep.probuf.CommonApiProtos.PEmpty request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_SELECT_VUSER_HAVE_TODAY_BIRTHDAY_FANS, getCallOptions()), request);
     }
@@ -538,30 +549,30 @@ public class grpcDataPublishingGrpc {
       switch (methodId) {
         case METHODID_SELECT_FANS:
           serviceImpl.selectFans((com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam) request,
-              (io.grpc.stub.StreamObserver<bbproto.DatapublishingInside.PScrollResult>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult>) responseObserver);
           break;
         case METHODID_SAVE_FANS:
-          serviceImpl.saveFans((bbproto.DatapublishingInside.PFansSaveParam) request,
-              (io.grpc.stub.StreamObserver<bbproto.CommonInside.PEmpty>) responseObserver);
+          serviceImpl.saveFans((com.blemobi.sep.probuf.DataPublishingApiProtos.PFansSaveParam) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
           break;
         case METHODID_SCROLL_MORE:
           serviceImpl.scrollMore((com.blemobi.sep.probuf.ResultProtos.PStringSingle) request,
-              (io.grpc.stub.StreamObserver<bbproto.DatapublishingInside.PScrollResult>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult>) responseObserver);
           break;
         case METHODID_SELECT_VUSER:
-          serviceImpl.selectVUser((bbproto.DatapublishingInside.PQueryUserParam) request,
-              (io.grpc.stub.StreamObserver<bbproto.DatapublishingInside.PGroupStringList>) responseObserver);
+          serviceImpl.selectVUser((com.blemobi.sep.probuf.DataPublishingApiProtos.PQueryUserParam) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.DataPublishingApiProtos.PGroupStringList>) responseObserver);
           break;
         case METHODID_SELECT_TODAY_BIRTHDAY_FANS:
           serviceImpl.selectTodayBirthdayFans((com.blemobi.sep.probuf.ResultProtos.PStringSingle) request,
-              (io.grpc.stub.StreamObserver<bbproto.DatapublishingInside.PScrollResult>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult>) responseObserver);
           break;
         case METHODID_SELECT7DAY_BIRTHDAY_FANS:
-          serviceImpl.select7DayBirthdayFans((bbproto.DatapublishingInside.PQueryUserParam) request,
+          serviceImpl.select7DayBirthdayFans((com.blemobi.sep.probuf.DataPublishingApiProtos.PQueryUserParam) request,
               (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.AccountProtos.PUserList>) responseObserver);
           break;
         case METHODID_SELECT_VUSER_HAVE_TODAY_BIRTHDAY_FANS:
-          serviceImpl.selectVUserHaveTodayBirthdayFans((bbproto.CommonInside.PEmpty) request,
+          serviceImpl.selectVUserHaveTodayBirthdayFans((com.blemobi.sep.probuf.CommonApiProtos.PEmpty) request,
               (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PStringList>) responseObserver);
           break;
         default:

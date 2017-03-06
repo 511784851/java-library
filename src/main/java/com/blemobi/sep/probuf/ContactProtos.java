@@ -119,7 +119,7 @@ public final class ContactProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PContactLinkInfo)
       PContactLinkInfoOrBuilder {
     // Use PContactLinkInfo.newBuilder() to construct.
-    private PContactLinkInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PContactLinkInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PContactLinkInfo() {
@@ -156,33 +156,33 @@ public final class ContactProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              uuid_ = bs;
+              uuid_ = s;
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              mobile_ = bs;
+              mobile_ = s;
               break;
             }
             case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              nickName_ = bs;
+              nickName_ = s;
               break;
             }
             case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              hasLink_ = bs;
+              hasLink_ = s;
               break;
             }
             case 42: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              headImgURL_ = bs;
+              headImgURL_ = s;
               break;
             }
             case 48: {
@@ -231,9 +231,7 @@ public final class ContactProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          uuid_ = s;
-        }
+        uuid_ = s;
         return s;
       }
     }
@@ -275,9 +273,7 @@ public final class ContactProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          mobile_ = s;
-        }
+        mobile_ = s;
         return s;
       }
     }
@@ -319,9 +315,7 @@ public final class ContactProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          nickName_ = s;
-        }
+        nickName_ = s;
         return s;
       }
     }
@@ -363,9 +357,7 @@ public final class ContactProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          hasLink_ = s;
-        }
+        hasLink_ = s;
         return s;
       }
     }
@@ -407,9 +399,7 @@ public final class ContactProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          headImgURL_ = s;
-        }
+        headImgURL_ = s;
         return s;
       }
     }
@@ -460,56 +450,50 @@ public final class ContactProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUuidBytes().isEmpty()) {
-        output.writeBytes(1, getUuidBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, uuid_);
       }
       if (!getMobileBytes().isEmpty()) {
-        output.writeBytes(2, getMobileBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, mobile_);
       }
       if (!getNickNameBytes().isEmpty()) {
-        output.writeBytes(3, getNickNameBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, nickName_);
       }
       if (!getHasLinkBytes().isEmpty()) {
-        output.writeBytes(4, getHasLinkBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, hasLink_);
       }
       if (!getHeadImgURLBytes().isEmpty()) {
-        output.writeBytes(5, getHeadImgURLBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, headImgURL_);
       }
       if (levelType_ != 0) {
         output.writeInt32(6, levelType_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getUuidBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getUuidBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, uuid_);
       }
       if (!getMobileBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getMobileBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, mobile_);
       }
       if (!getNickNameBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getNickNameBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, nickName_);
       }
       if (!getHasLinkBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getHasLinkBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, hasLink_);
       }
       if (!getHeadImgURLBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(5, getHeadImgURLBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, headImgURL_);
       }
       if (levelType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(6, levelType_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -738,9 +722,7 @@ public final class ContactProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            uuid_ = s;
-          }
+          uuid_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -808,7 +790,8 @@ public final class ContactProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         uuid_ = value;
         onChanged();
         return this;
@@ -828,9 +811,7 @@ public final class ContactProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            mobile_ = s;
-          }
+          mobile_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -898,7 +879,8 @@ public final class ContactProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         mobile_ = value;
         onChanged();
         return this;
@@ -918,9 +900,7 @@ public final class ContactProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            nickName_ = s;
-          }
+          nickName_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -988,7 +968,8 @@ public final class ContactProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         nickName_ = value;
         onChanged();
         return this;
@@ -1008,9 +989,7 @@ public final class ContactProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            hasLink_ = s;
-          }
+          hasLink_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1078,7 +1057,8 @@ public final class ContactProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         hasLink_ = value;
         onChanged();
         return this;
@@ -1098,9 +1078,7 @@ public final class ContactProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            headImgURL_ = s;
-          }
+          headImgURL_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1168,7 +1146,8 @@ public final class ContactProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         headImgURL_ = value;
         onChanged();
         return this;
@@ -1235,8 +1214,8 @@ public final class ContactProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PContactLinkInfo> PARSER =
-        new com.google.protobuf.AbstractParser<PContactLinkInfo>() {
+    private static final com.google.protobuf.Parser<PContactLinkInfo>
+        PARSER = new com.google.protobuf.AbstractParser<PContactLinkInfo>() {
       public PContactLinkInfo parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1253,6 +1232,10 @@ public final class ContactProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PContactLinkInfo> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PContactLinkInfo> getParserForType() {
@@ -1323,7 +1306,7 @@ public final class ContactProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PContactLinkInfoList)
       PContactLinkInfoListOrBuilder {
     // Use PContactLinkInfoList.newBuilder() to construct.
-    private PContactLinkInfoList(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PContactLinkInfoList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PContactLinkInfoList() {
@@ -1360,13 +1343,13 @@ public final class ContactProtos {
                 contactUsers_ = new java.util.ArrayList<com.blemobi.sep.probuf.ContactProtos.PContactLinkInfo>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              contactUsers_.add(input.readMessage(com.blemobi.sep.probuf.ContactProtos.PContactLinkInfo.PARSER, extensionRegistry));
+              contactUsers_.add(input.readMessage(com.blemobi.sep.probuf.ContactProtos.PContactLinkInfo.parser(), extensionRegistry));
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              totalCount_ = bs;
+              totalCount_ = s;
               break;
             }
           }
@@ -1449,9 +1432,7 @@ public final class ContactProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          totalCount_ = s;
-        }
+        totalCount_ = s;
         return s;
       }
     }
@@ -1492,13 +1473,12 @@ public final class ContactProtos {
         output.writeMessage(1, contactUsers_.get(i));
       }
       if (!getTotalCountBytes().isEmpty()) {
-        output.writeBytes(2, getTotalCountBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, totalCount_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -1507,10 +1487,9 @@ public final class ContactProtos {
           .computeMessageSize(1, contactUsers_.get(i));
       }
       if (!getTotalCountBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getTotalCountBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, totalCount_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -1995,9 +1974,7 @@ public final class ContactProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            totalCount_ = s;
-          }
+          totalCount_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -2065,7 +2042,8 @@ public final class ContactProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         totalCount_ = value;
         onChanged();
         return this;
@@ -2094,8 +2072,8 @@ public final class ContactProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PContactLinkInfoList> PARSER =
-        new com.google.protobuf.AbstractParser<PContactLinkInfoList>() {
+    private static final com.google.protobuf.Parser<PContactLinkInfoList>
+        PARSER = new com.google.protobuf.AbstractParser<PContactLinkInfoList>() {
       public PContactLinkInfoList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2112,6 +2090,10 @@ public final class ContactProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PContactLinkInfoList> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PContactLinkInfoList> getParserForType() {
@@ -2176,7 +2158,7 @@ public final class ContactProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PLastModifyInfo)
       PLastModifyInfoOrBuilder {
     // Use PLastModifyInfo.newBuilder() to construct.
-    private PLastModifyInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PLastModifyInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PLastModifyInfo() {
@@ -2209,15 +2191,15 @@ public final class ContactProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              devSerial_ = bs;
+              devSerial_ = s;
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              modifyTime_ = bs;
+              modifyTime_ = s;
               break;
             }
           }
@@ -2261,9 +2243,7 @@ public final class ContactProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          devSerial_ = s;
-        }
+        devSerial_ = s;
         return s;
       }
     }
@@ -2305,9 +2285,7 @@ public final class ContactProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          modifyTime_ = s;
-        }
+        modifyTime_ = s;
         return s;
       }
     }
@@ -2345,28 +2323,25 @@ public final class ContactProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getDevSerialBytes().isEmpty()) {
-        output.writeBytes(1, getDevSerialBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, devSerial_);
       }
       if (!getModifyTimeBytes().isEmpty()) {
-        output.writeBytes(2, getModifyTimeBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, modifyTime_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getDevSerialBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getDevSerialBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, devSerial_);
       }
       if (!getModifyTimeBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getModifyTimeBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, modifyTime_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -2572,9 +2547,7 @@ public final class ContactProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            devSerial_ = s;
-          }
+          devSerial_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -2642,7 +2615,8 @@ public final class ContactProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         devSerial_ = value;
         onChanged();
         return this;
@@ -2662,9 +2636,7 @@ public final class ContactProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            modifyTime_ = s;
-          }
+          modifyTime_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -2732,7 +2704,8 @@ public final class ContactProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         modifyTime_ = value;
         onChanged();
         return this;
@@ -2761,8 +2734,8 @@ public final class ContactProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PLastModifyInfo> PARSER =
-        new com.google.protobuf.AbstractParser<PLastModifyInfo>() {
+    private static final com.google.protobuf.Parser<PLastModifyInfo>
+        PARSER = new com.google.protobuf.AbstractParser<PLastModifyInfo>() {
       public PLastModifyInfo parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2779,6 +2752,10 @@ public final class ContactProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PLastModifyInfo> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PLastModifyInfo> getParserForType() {

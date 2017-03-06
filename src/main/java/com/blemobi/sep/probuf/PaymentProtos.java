@@ -69,7 +69,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.POrdinRedEnve)
       POrdinRedEnveOrBuilder {
     // Use POrdinRedEnve.newBuilder() to construct.
-    private POrdinRedEnve(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private POrdinRedEnve(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private POrdinRedEnve() {
@@ -108,15 +108,15 @@ public final class PaymentProtos {
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              content_ = bs;
+              content_ = s;
               break;
             }
             case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              receUuid_ = bs;
+              receUuid_ = s;
               break;
             }
           }
@@ -173,9 +173,7 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          content_ = s;
-        }
+        content_ = s;
         return s;
       }
     }
@@ -217,9 +215,7 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          receUuid_ = s;
-        }
+        receUuid_ = s;
         return s;
       }
     }
@@ -260,16 +256,15 @@ public final class PaymentProtos {
         output.writeInt32(1, money_);
       }
       if (!getContentBytes().isEmpty()) {
-        output.writeBytes(2, getContentBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, content_);
       }
       if (!getReceUuidBytes().isEmpty()) {
-        output.writeBytes(3, getReceUuidBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, receUuid_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -278,14 +273,12 @@ public final class PaymentProtos {
           .computeInt32Size(1, money_);
       }
       if (!getContentBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getContentBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, content_);
       }
       if (!getReceUuidBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getReceUuidBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, receUuid_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -535,9 +528,7 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            content_ = s;
-          }
+          content_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -605,7 +596,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         content_ = value;
         onChanged();
         return this;
@@ -625,9 +617,7 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            receUuid_ = s;
-          }
+          receUuid_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -695,7 +685,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         receUuid_ = value;
         onChanged();
         return this;
@@ -724,8 +715,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<POrdinRedEnve> PARSER =
-        new com.google.protobuf.AbstractParser<POrdinRedEnve>() {
+    private static final com.google.protobuf.Parser<POrdinRedEnve>
+        PARSER = new com.google.protobuf.AbstractParser<POrdinRedEnve>() {
       public POrdinRedEnve parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -742,6 +733,10 @@ public final class PaymentProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<POrdinRedEnve> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<POrdinRedEnve> getParserForType() {
@@ -875,7 +870,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PGroupRedEnve)
       PGroupRedEnveOrBuilder {
     // Use PGroupRedEnve.newBuilder() to construct.
-    private PGroupRedEnve(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PGroupRedEnve(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PGroupRedEnve() {
@@ -926,9 +921,9 @@ public final class PaymentProtos {
               break;
             }
             case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              content_ = bs;
+              content_ = s;
               break;
             }
             case 42: {
@@ -936,7 +931,7 @@ public final class PaymentProtos {
               if (filter_ != null) {
                 subBuilder = filter_.toBuilder();
               }
-              filter_ = input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.PARSER, extensionRegistry);
+              filter_ = input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(filter_);
                 filter_ = subBuilder.buildPartial();
@@ -945,12 +940,12 @@ public final class PaymentProtos {
               break;
             }
             case 50: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
                 uuid_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000020;
               }
-              uuid_.add(bs);
+              uuid_.add(s);
               break;
             }
           }
@@ -1037,9 +1032,7 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          content_ = s;
-        }
+        content_ = s;
         return s;
       }
     }
@@ -1164,19 +1157,18 @@ public final class PaymentProtos {
         output.writeBool(3, isRandom_);
       }
       if (!getContentBytes().isEmpty()) {
-        output.writeBytes(4, getContentBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, content_);
       }
       if (filter_ != null) {
         output.writeMessage(5, getFilter());
       }
       for (int i = 0; i < uuid_.size(); i++) {
-        output.writeBytes(6, uuid_.getByteString(i));
+        com.google.protobuf.GeneratedMessage.writeString(output, 6, uuid_.getRaw(i));
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -1193,8 +1185,7 @@ public final class PaymentProtos {
           .computeBoolSize(3, isRandom_);
       }
       if (!getContentBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getContentBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, content_);
       }
       if (filter_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -1203,13 +1194,12 @@ public final class PaymentProtos {
       {
         int dataSize = 0;
         for (int i = 0; i < uuid_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(uuid_.getByteString(i));
+          dataSize += computeStringSizeNoTag(uuid_.getRaw(i));
         }
         size += dataSize;
         size += 1 * getUuidList().size();
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -1575,9 +1565,7 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            content_ = s;
-          }
+          content_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1645,7 +1633,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         content_ = value;
         onChanged();
         return this;
@@ -1927,7 +1916,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureUuidIsMutable();
+  checkByteStringIsUtf8(value);
+        ensureUuidIsMutable();
         uuid_.add(value);
         onChanged();
         return this;
@@ -1956,8 +1946,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PGroupRedEnve> PARSER =
-        new com.google.protobuf.AbstractParser<PGroupRedEnve>() {
+    private static final com.google.protobuf.Parser<PGroupRedEnve>
+        PARSER = new com.google.protobuf.AbstractParser<PGroupRedEnve>() {
       public PGroupRedEnve parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1974,6 +1964,10 @@ public final class PaymentProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PGroupRedEnve> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PGroupRedEnve> getParserForType() {
@@ -2110,7 +2104,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.POrderPay)
       POrderPayOrBuilder {
     // Use POrderPay.newBuilder() to construct.
-    private POrderPay(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private POrderPay(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private POrderPay() {
@@ -2153,15 +2147,15 @@ public final class PaymentProtos {
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              cusId_ = bs;
+              cusId_ = s;
               break;
             }
             case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              receivedId_ = bs;
+              receivedId_ = s;
               break;
             }
             case 32: {
@@ -2170,21 +2164,21 @@ public final class PaymentProtos {
               break;
             }
             case 42: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              ordNo_ = bs;
+              ordNo_ = s;
               break;
             }
             case 50: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              goodsName_ = bs;
+              goodsName_ = s;
               break;
             }
             case 58: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              sign_ = bs;
+              sign_ = s;
               break;
             }
           }
@@ -2241,9 +2235,7 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          cusId_ = s;
-        }
+        cusId_ = s;
         return s;
       }
     }
@@ -2285,9 +2277,7 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          receivedId_ = s;
-        }
+        receivedId_ = s;
         return s;
       }
     }
@@ -2342,9 +2332,7 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          ordNo_ = s;
-        }
+        ordNo_ = s;
         return s;
       }
     }
@@ -2386,9 +2374,7 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          goodsName_ = s;
-        }
+        goodsName_ = s;
         return s;
       }
     }
@@ -2430,9 +2416,7 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          sign_ = s;
-        }
+        sign_ = s;
         return s;
       }
     }
@@ -2473,28 +2457,27 @@ public final class PaymentProtos {
         output.writeInt32(1, recAccountType_);
       }
       if (!getCusIdBytes().isEmpty()) {
-        output.writeBytes(2, getCusIdBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, cusId_);
       }
       if (!getReceivedIdBytes().isEmpty()) {
-        output.writeBytes(3, getReceivedIdBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, receivedId_);
       }
       if (fenMoney_ != 0) {
         output.writeInt32(4, fenMoney_);
       }
       if (!getOrdNoBytes().isEmpty()) {
-        output.writeBytes(5, getOrdNoBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, ordNo_);
       }
       if (!getGoodsNameBytes().isEmpty()) {
-        output.writeBytes(6, getGoodsNameBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 6, goodsName_);
       }
       if (!getSignBytes().isEmpty()) {
-        output.writeBytes(7, getSignBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 7, sign_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -2503,30 +2486,25 @@ public final class PaymentProtos {
           .computeInt32Size(1, recAccountType_);
       }
       if (!getCusIdBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getCusIdBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, cusId_);
       }
       if (!getReceivedIdBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getReceivedIdBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, receivedId_);
       }
       if (fenMoney_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(4, fenMoney_);
       }
       if (!getOrdNoBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(5, getOrdNoBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, ordNo_);
       }
       if (!getGoodsNameBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(6, getGoodsNameBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, goodsName_);
       }
       if (!getSignBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(7, getSignBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, sign_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -2803,9 +2781,7 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            cusId_ = s;
-          }
+          cusId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -2873,7 +2849,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         cusId_ = value;
         onChanged();
         return this;
@@ -2893,9 +2870,7 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            receivedId_ = s;
-          }
+          receivedId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -2963,7 +2938,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         receivedId_ = value;
         onChanged();
         return this;
@@ -3021,9 +2997,7 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            ordNo_ = s;
-          }
+          ordNo_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -3091,7 +3065,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         ordNo_ = value;
         onChanged();
         return this;
@@ -3111,9 +3086,7 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            goodsName_ = s;
-          }
+          goodsName_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -3181,7 +3154,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         goodsName_ = value;
         onChanged();
         return this;
@@ -3201,9 +3175,7 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            sign_ = s;
-          }
+          sign_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -3271,7 +3243,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         sign_ = value;
         onChanged();
         return this;
@@ -3300,8 +3273,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<POrderPay> PARSER =
-        new com.google.protobuf.AbstractParser<POrderPay>() {
+    private static final com.google.protobuf.Parser<POrderPay>
+        PARSER = new com.google.protobuf.AbstractParser<POrderPay>() {
       public POrderPay parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3318,6 +3291,10 @@ public final class PaymentProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<POrderPay> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<POrderPay> getParserForType() {
@@ -3523,7 +3500,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PRedEnveInfo)
       PRedEnveInfoOrBuilder {
     // Use PRedEnveInfo.newBuilder() to construct.
-    private PRedEnveInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PRedEnveInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PRedEnveInfo() {
@@ -3565,9 +3542,9 @@ public final class PaymentProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              ordNo_ = bs;
+              ordNo_ = s;
               break;
             }
             case 16: {
@@ -3601,9 +3578,9 @@ public final class PaymentProtos {
               break;
             }
             case 66: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              content_ = bs;
+              content_ = s;
               break;
             }
             case 72: {
@@ -3616,7 +3593,7 @@ public final class PaymentProtos {
               if (userBase_ != null) {
                 subBuilder = userBase_.toBuilder();
               }
-              userBase_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.PARSER, extensionRegistry);
+              userBase_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(userBase_);
                 userBase_ = subBuilder.buildPartial();
@@ -3634,7 +3611,7 @@ public final class PaymentProtos {
                 redEnveRece_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece>();
                 mutable_bitField0_ |= 0x00000800;
               }
-              redEnveRece_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.PARSER, extensionRegistry));
+              redEnveRece_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.parser(), extensionRegistry));
               break;
             }
           }
@@ -3682,9 +3659,7 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          ordNo_ = s;
-        }
+        ordNo_ = s;
         return s;
       }
     }
@@ -3804,9 +3779,7 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          content_ = s;
-        }
+        content_ = s;
         return s;
       }
     }
@@ -3958,7 +3931,7 @@ public final class PaymentProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getOrdNoBytes().isEmpty()) {
-        output.writeBytes(1, getOrdNoBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, ordNo_);
       }
       if (userReceMoney_ != 0) {
         output.writeInt32(2, userReceMoney_);
@@ -3979,7 +3952,7 @@ public final class PaymentProtos {
         output.writeInt32(7, receNumber_);
       }
       if (!getContentBytes().isEmpty()) {
-        output.writeBytes(8, getContentBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 8, content_);
       }
       if (sendTm_ != 0L) {
         output.writeInt64(9, sendTm_);
@@ -3995,15 +3968,13 @@ public final class PaymentProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getOrdNoBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getOrdNoBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, ordNo_);
       }
       if (userReceMoney_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -4030,8 +4001,7 @@ public final class PaymentProtos {
           .computeInt32Size(7, receNumber_);
       }
       if (!getContentBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(8, getContentBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(8, content_);
       }
       if (sendTm_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -4049,7 +4019,7 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, redEnveRece_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -4363,9 +4333,7 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            ordNo_ = s;
-          }
+          ordNo_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -4433,7 +4401,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         ordNo_ = value;
         onChanged();
         return this;
@@ -4681,9 +4650,7 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            content_ = s;
-          }
+          content_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -4751,7 +4718,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         content_ = value;
         onChanged();
         return this;
@@ -5321,8 +5289,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PRedEnveInfo> PARSER =
-        new com.google.protobuf.AbstractParser<PRedEnveInfo>() {
+    private static final com.google.protobuf.Parser<PRedEnveInfo>
+        PARSER = new com.google.protobuf.AbstractParser<PRedEnveInfo>() {
       public PRedEnveInfo parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5339,6 +5307,10 @@ public final class PaymentProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PRedEnveInfo> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PRedEnveInfo> getParserForType() {
@@ -5428,7 +5400,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PRedEnveRece)
       PRedEnveReceOrBuilder {
     // Use PRedEnveRece.newBuilder() to construct.
-    private PRedEnveRece(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PRedEnveRece(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PRedEnveRece() {
@@ -5487,7 +5459,7 @@ public final class PaymentProtos {
               if (userBase_ != null) {
                 subBuilder = userBase_.toBuilder();
               }
-              userBase_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.PARSER, extensionRegistry);
+              userBase_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(userBase_);
                 userBase_ = subBuilder.buildPartial();
@@ -5633,9 +5605,8 @@ public final class PaymentProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -5659,7 +5630,7 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getUserBase());
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -6203,8 +6174,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PRedEnveRece> PARSER =
-        new com.google.protobuf.AbstractParser<PRedEnveRece>() {
+    private static final com.google.protobuf.Parser<PRedEnveRece>
+        PARSER = new com.google.protobuf.AbstractParser<PRedEnveRece>() {
       public PRedEnveRece parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6221,6 +6192,10 @@ public final class PaymentProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PRedEnveRece> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PRedEnveRece> getParserForType() {
@@ -6267,7 +6242,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PRedEnveStatus)
       PRedEnveStatusOrBuilder {
     // Use PRedEnveStatus.newBuilder() to construct.
-    private PRedEnveStatus(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PRedEnveStatus(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PRedEnveStatus() {
@@ -6379,9 +6354,8 @@ public final class PaymentProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -6393,7 +6367,7 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, receMoney_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -6682,8 +6656,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PRedEnveStatus> PARSER =
-        new com.google.protobuf.AbstractParser<PRedEnveStatus>() {
+    private static final com.google.protobuf.Parser<PRedEnveStatus>
+        PARSER = new com.google.protobuf.AbstractParser<PRedEnveStatus>() {
       public PRedEnveStatus parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6700,6 +6674,10 @@ public final class PaymentProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PRedEnveStatus> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PRedEnveStatus> getParserForType() {
@@ -6752,7 +6730,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PRedEnveReceList)
       PRedEnveReceListOrBuilder {
     // Use PRedEnveReceList.newBuilder() to construct.
-    private PRedEnveReceList(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PRedEnveReceList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PRedEnveReceList() {
@@ -6788,7 +6766,7 @@ public final class PaymentProtos {
                 redEnveRece_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              redEnveRece_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.PARSER, extensionRegistry));
+              redEnveRece_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PRedEnveRece.parser(), extensionRegistry));
               break;
             }
           }
@@ -6870,9 +6848,8 @@ public final class PaymentProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -6880,7 +6857,7 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, redEnveRece_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -7365,8 +7342,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PRedEnveReceList> PARSER =
-        new com.google.protobuf.AbstractParser<PRedEnveReceList>() {
+    private static final com.google.protobuf.Parser<PRedEnveReceList>
+        PARSER = new com.google.protobuf.AbstractParser<PRedEnveReceList>() {
       public PRedEnveReceList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7383,6 +7360,10 @@ public final class PaymentProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PRedEnveReceList> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PRedEnveReceList> getParserForType() {
@@ -7491,7 +7472,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PBill)
       PBillOrBuilder {
     // Use PBill.newBuilder() to construct.
-    private PBill(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PBill(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PBill() {
@@ -7551,7 +7532,7 @@ public final class PaymentProtos {
                 billInfo_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PBillInfo>();
                 mutable_bitField0_ |= 0x00000010;
               }
-              billInfo_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PBillInfo.PARSER, extensionRegistry));
+              billInfo_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PBillInfo.parser(), extensionRegistry));
               break;
             }
           }
@@ -7718,9 +7699,8 @@ public final class PaymentProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -7744,7 +7724,7 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, billInfo_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -8479,8 +8459,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PBill> PARSER =
-        new com.google.protobuf.AbstractParser<PBill>() {
+    private static final com.google.protobuf.Parser<PBill>
+        PARSER = new com.google.protobuf.AbstractParser<PBill>() {
       public PBill parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8497,6 +8477,10 @@ public final class PaymentProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PBill> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PBill> getParserForType() {
@@ -8604,7 +8588,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PBillInfo)
       PBillInfoOrBuilder {
     // Use PBillInfo.newBuilder() to construct.
-    private PBillInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PBillInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PBillInfo() {
@@ -8645,9 +8629,9 @@ public final class PaymentProtos {
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              ordNo_ = bs;
+              ordNo_ = s;
               break;
             }
             case 24: {
@@ -8670,7 +8654,7 @@ public final class PaymentProtos {
               if (userBase_ != null) {
                 subBuilder = userBase_.toBuilder();
               }
-              userBase_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.PARSER, extensionRegistry);
+              userBase_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(userBase_);
                 userBase_ = subBuilder.buildPartial();
@@ -8732,9 +8716,7 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          ordNo_ = s;
-        }
+        ordNo_ = s;
         return s;
       }
     }
@@ -8847,7 +8829,7 @@ public final class PaymentProtos {
         output.writeInt32(1, id_);
       }
       if (!getOrdNoBytes().isEmpty()) {
-        output.writeBytes(2, getOrdNoBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, ordNo_);
       }
       if (money_ != 0) {
         output.writeInt32(3, money_);
@@ -8863,9 +8845,8 @@ public final class PaymentProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -8874,8 +8855,7 @@ public final class PaymentProtos {
           .computeInt32Size(1, id_);
       }
       if (!getOrdNoBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getOrdNoBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, ordNo_);
       }
       if (money_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -8893,7 +8873,7 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getUserBase());
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -9168,9 +9148,7 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            ordNo_ = s;
-          }
+          ordNo_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -9238,7 +9216,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         ordNo_ = value;
         onChanged();
         return this;
@@ -9534,8 +9513,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PBillInfo> PARSER =
-        new com.google.protobuf.AbstractParser<PBillInfo>() {
+    private static final com.google.protobuf.Parser<PBillInfo>
+        PARSER = new com.google.protobuf.AbstractParser<PBillInfo>() {
       public PBillInfo parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9552,6 +9531,10 @@ public final class PaymentProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PBillInfo> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PBillInfo> getParserForType() {
@@ -9604,7 +9587,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PRedEnveList)
       PRedEnveListOrBuilder {
     // Use PRedEnveList.newBuilder() to construct.
-    private PRedEnveList(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PRedEnveList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PRedEnveList() {
@@ -9640,7 +9623,7 @@ public final class PaymentProtos {
                 redEnveBaseInfo_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              redEnveBaseInfo_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.PARSER, extensionRegistry));
+              redEnveBaseInfo_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.parser(), extensionRegistry));
               break;
             }
           }
@@ -9722,9 +9705,8 @@ public final class PaymentProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -9732,7 +9714,7 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, redEnveBaseInfo_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -10217,8 +10199,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PRedEnveList> PARSER =
-        new com.google.protobuf.AbstractParser<PRedEnveList>() {
+    private static final com.google.protobuf.Parser<PRedEnveList>
+        PARSER = new com.google.protobuf.AbstractParser<PRedEnveList>() {
       public PRedEnveList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10235,6 +10217,10 @@ public final class PaymentProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PRedEnveList> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PRedEnveList> getParserForType() {
@@ -10379,7 +10365,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PRedEnveBaseInfo)
       PRedEnveBaseInfoOrBuilder {
     // Use PRedEnveBaseInfo.newBuilder() to construct.
-    private PRedEnveBaseInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PRedEnveBaseInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PRedEnveBaseInfo() {
@@ -10422,9 +10408,9 @@ public final class PaymentProtos {
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              ordNo_ = bs;
+              ordNo_ = s;
               break;
             }
             case 24: {
@@ -10433,9 +10419,9 @@ public final class PaymentProtos {
               break;
             }
             case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              content_ = bs;
+              content_ = s;
               break;
             }
             case 40: {
@@ -10453,7 +10439,7 @@ public final class PaymentProtos {
                 userBase_ = new java.util.ArrayList<com.blemobi.sep.probuf.AccountProtos.PUserBase>();
                 mutable_bitField0_ |= 0x00000040;
               }
-              userBase_.add(input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.PARSER, extensionRegistry));
+              userBase_.add(input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.parser(), extensionRegistry));
               break;
             }
           }
@@ -10514,9 +10500,7 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          ordNo_ = s;
-        }
+        ordNo_ = s;
         return s;
       }
     }
@@ -10571,9 +10555,7 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          content_ = s;
-        }
+        content_ = s;
         return s;
       }
     }
@@ -10695,13 +10677,13 @@ public final class PaymentProtos {
         output.writeInt32(1, id_);
       }
       if (!getOrdNoBytes().isEmpty()) {
-        output.writeBytes(2, getOrdNoBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, ordNo_);
       }
       if (type_ != 0) {
         output.writeInt32(3, type_);
       }
       if (!getContentBytes().isEmpty()) {
-        output.writeBytes(4, getContentBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, content_);
       }
       if (sendTm_ != 0L) {
         output.writeInt64(5, sendTm_);
@@ -10714,9 +10696,8 @@ public final class PaymentProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -10725,16 +10706,14 @@ public final class PaymentProtos {
           .computeInt32Size(1, id_);
       }
       if (!getOrdNoBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getOrdNoBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, ordNo_);
       }
       if (type_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, type_);
       }
       if (!getContentBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getContentBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, content_);
       }
       if (sendTm_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -10748,7 +10727,7 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, userBase_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -11062,9 +11041,7 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            ordNo_ = s;
-          }
+          ordNo_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -11132,7 +11109,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         ordNo_ = value;
         onChanged();
         return this;
@@ -11190,9 +11168,7 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            content_ = s;
-          }
+          content_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -11260,7 +11236,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         content_ = value;
         onChanged();
         return this;
@@ -11677,8 +11654,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PRedEnveBaseInfo> PARSER =
-        new com.google.protobuf.AbstractParser<PRedEnveBaseInfo>() {
+    private static final com.google.protobuf.Parser<PRedEnveBaseInfo>
+        PARSER = new com.google.protobuf.AbstractParser<PRedEnveBaseInfo>() {
       public PRedEnveBaseInfo parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11695,6 +11672,10 @@ public final class PaymentProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PRedEnveBaseInfo> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PRedEnveBaseInfo> getParserForType() {
@@ -11747,7 +11728,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PRewardList)
       PRewardListOrBuilder {
     // Use PRewardList.newBuilder() to construct.
-    private PRewardList(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PRewardList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PRewardList() {
@@ -11783,7 +11764,7 @@ public final class PaymentProtos {
                 rewardInfo_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              rewardInfo_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.PARSER, extensionRegistry));
+              rewardInfo_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.parser(), extensionRegistry));
               break;
             }
           }
@@ -11865,9 +11846,8 @@ public final class PaymentProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -11875,7 +11855,7 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, rewardInfo_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -12360,8 +12340,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PRewardList> PARSER =
-        new com.google.protobuf.AbstractParser<PRewardList>() {
+    private static final com.google.protobuf.Parser<PRewardList>
+        PARSER = new com.google.protobuf.AbstractParser<PRewardList>() {
       public PRewardList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12378,6 +12358,10 @@ public final class PaymentProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PRewardList> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PRewardList> getParserForType() {
@@ -12494,7 +12478,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PRewardInfo)
       PRewardInfoOrBuilder {
     // Use PRewardInfo.newBuilder() to construct.
-    private PRewardInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PRewardInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PRewardInfo() {
@@ -12535,9 +12519,9 @@ public final class PaymentProtos {
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              ordNo_ = bs;
+              ordNo_ = s;
               break;
             }
             case 24: {
@@ -12546,9 +12530,9 @@ public final class PaymentProtos {
               break;
             }
             case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              content_ = bs;
+              content_ = s;
               break;
             }
             case 40: {
@@ -12561,7 +12545,7 @@ public final class PaymentProtos {
               if (userBase_ != null) {
                 subBuilder = userBase_.toBuilder();
               }
-              userBase_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.PARSER, extensionRegistry);
+              userBase_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(userBase_);
                 userBase_ = subBuilder.buildPartial();
@@ -12623,9 +12607,7 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          ordNo_ = s;
-        }
+        ordNo_ = s;
         return s;
       }
     }
@@ -12680,9 +12662,7 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          content_ = s;
-        }
+        content_ = s;
         return s;
       }
     }
@@ -12769,13 +12749,13 @@ public final class PaymentProtos {
         output.writeInt32(1, id_);
       }
       if (!getOrdNoBytes().isEmpty()) {
-        output.writeBytes(2, getOrdNoBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, ordNo_);
       }
       if (money_ != 0) {
         output.writeInt32(3, money_);
       }
       if (!getContentBytes().isEmpty()) {
-        output.writeBytes(4, getContentBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, content_);
       }
       if (time_ != 0L) {
         output.writeInt64(5, time_);
@@ -12785,9 +12765,8 @@ public final class PaymentProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -12796,16 +12775,14 @@ public final class PaymentProtos {
           .computeInt32Size(1, id_);
       }
       if (!getOrdNoBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getOrdNoBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, ordNo_);
       }
       if (money_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, money_);
       }
       if (!getContentBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getContentBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, content_);
       }
       if (time_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -12815,7 +12792,7 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getUserBase());
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -13091,9 +13068,7 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            ordNo_ = s;
-          }
+          ordNo_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -13161,7 +13136,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         ordNo_ = value;
         onChanged();
         return this;
@@ -13219,9 +13195,7 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            content_ = s;
-          }
+          content_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -13289,7 +13263,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         content_ = value;
         onChanged();
         return this;
@@ -13509,8 +13484,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PRewardInfo> PARSER =
-        new com.google.protobuf.AbstractParser<PRewardInfo>() {
+    private static final com.google.protobuf.Parser<PRewardInfo>
+        PARSER = new com.google.protobuf.AbstractParser<PRewardInfo>() {
       public PRewardInfo parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -13527,6 +13502,10 @@ public final class PaymentProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PRewardInfo> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PRewardInfo> getParserForType() {
@@ -13633,7 +13612,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PRewardInfoList)
       PRewardInfoListOrBuilder {
     // Use PRewardInfoList.newBuilder() to construct.
-    private PRewardInfoList(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PRewardInfoList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PRewardInfoList() {
@@ -13670,7 +13649,7 @@ public final class PaymentProtos {
               if (rewardInfo_ != null) {
                 subBuilder = rewardInfo_.toBuilder();
               }
-              rewardInfo_ = input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.PARSER, extensionRegistry);
+              rewardInfo_ = input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(rewardInfo_);
                 rewardInfo_ = subBuilder.buildPartial();
@@ -13688,7 +13667,7 @@ public final class PaymentProtos {
                 rewardList_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo>();
                 mutable_bitField0_ |= 0x00000004;
               }
-              rewardList_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.PARSER, extensionRegistry));
+              rewardList_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.parser(), extensionRegistry));
               break;
             }
           }
@@ -13843,9 +13822,8 @@ public final class PaymentProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -13861,7 +13839,7 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, rewardList_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -14631,8 +14609,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PRewardInfoList> PARSER =
-        new com.google.protobuf.AbstractParser<PRewardInfoList>() {
+    private static final com.google.protobuf.Parser<PRewardInfoList>
+        PARSER = new com.google.protobuf.AbstractParser<PRewardInfoList>() {
       public PRewardInfoList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -14649,6 +14627,10 @@ public final class PaymentProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PRewardInfoList> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PRewardInfoList> getParserForType() {
@@ -14765,7 +14747,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PSreachList)
       PSreachListOrBuilder {
     // Use PSreachList.newBuilder() to construct.
-    private PSreachList(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PSreachList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PSreachList() {
@@ -14802,7 +14784,7 @@ public final class PaymentProtos {
                 redEnveBaseInfo_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              redEnveBaseInfo_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.PARSER, extensionRegistry));
+              redEnveBaseInfo_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PRedEnveBaseInfo.parser(), extensionRegistry));
               break;
             }
             case 18: {
@@ -14810,7 +14792,7 @@ public final class PaymentProtos {
                 rewardInfo_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PRewardInfo>();
                 mutable_bitField0_ |= 0x00000002;
               }
-              rewardInfo_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.PARSER, extensionRegistry));
+              rewardInfo_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PRewardInfo.parser(), extensionRegistry));
               break;
             }
           }
@@ -14973,9 +14955,8 @@ public final class PaymentProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -14987,7 +14968,7 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, rewardInfo_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -15898,8 +15879,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PSreachList> PARSER =
-        new com.google.protobuf.AbstractParser<PSreachList>() {
+    private static final com.google.protobuf.Parser<PSreachList>
+        PARSER = new com.google.protobuf.AbstractParser<PSreachList>() {
       public PSreachList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -15916,6 +15897,10 @@ public final class PaymentProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PSreachList> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PSreachList> getParserForType() {
@@ -16007,17 +15992,7 @@ public final class PaymentProtos {
    * Protobuf type {@code bbproto.PShuffle}
    *
    * <pre>
-   **抽奖（限制5mins/2times） 
-   *message PShuffle {
-   *string title = 1; //标题
-   *int32 gender = 2;//性别0:不限，1:男，2:女
-   *repeated string region = 3;//地区筛选，格式如CN;4403、CN;44，配合下面的negate使用
-   *bool negate = 4;// true表示要对region取反，即排除
-   *int32 winners = 5;	//中奖人数
-   *repeated string skipUuid = 6;// 反选掉的用户
-   *int32 totAmt = 7;   //总金额
-   *string remark = 8;//描述
-   *}
+   * ----------------- 以下是抽奖协议 （潘有良）-----------------
    * </pre>
    */
   public  static final class PShuffle extends
@@ -16025,7 +16000,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PShuffle)
       PShuffleOrBuilder {
     // Use PShuffle.newBuilder() to construct.
-    private PShuffle(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PShuffle(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PShuffle() {
@@ -16066,12 +16041,12 @@ public final class PaymentProtos {
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
                 region_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000002;
               }
-              region_.add(bs);
+              region_.add(s);
               break;
             }
             case 24: {
@@ -16230,7 +16205,7 @@ public final class PaymentProtos {
         output.writeInt32(1, gender_);
       }
       for (int i = 0; i < region_.size(); i++) {
-        output.writeBytes(2, region_.getByteString(i));
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, region_.getRaw(i));
       }
       if (winners_ != 0) {
         output.writeInt32(3, winners_);
@@ -16243,9 +16218,8 @@ public final class PaymentProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -16256,8 +16230,7 @@ public final class PaymentProtos {
       {
         int dataSize = 0;
         for (int i = 0; i < region_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(region_.getByteString(i));
+          dataSize += computeStringSizeNoTag(region_.getRaw(i));
         }
         size += dataSize;
         size += 1 * getRegionList().size();
@@ -16274,7 +16247,7 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(5, totAmt_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -16354,17 +16327,7 @@ public final class PaymentProtos {
      * Protobuf type {@code bbproto.PShuffle}
      *
      * <pre>
-     **抽奖（限制5mins/2times） 
-     *message PShuffle {
-     *string title = 1; //标题
-     *int32 gender = 2;//性别0:不限，1:男，2:女
-     *repeated string region = 3;//地区筛选，格式如CN;4403、CN;44，配合下面的negate使用
-     *bool negate = 4;// true表示要对region取反，即排除
-     *int32 winners = 5;	//中奖人数
-     *repeated string skipUuid = 6;// 反选掉的用户
-     *int32 totAmt = 7;   //总金额
-     *string remark = 8;//描述
-     *}
+     * ----------------- 以下是抽奖协议 （潘有良）-----------------
      * </pre>
      */
     public static final class Builder extends
@@ -16668,7 +16631,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureRegionIsMutable();
+  checkByteStringIsUtf8(value);
+        ensureRegionIsMutable();
         region_.add(value);
         onChanged();
         return this;
@@ -16811,8 +16775,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PShuffle> PARSER =
-        new com.google.protobuf.AbstractParser<PShuffle>() {
+    private static final com.google.protobuf.Parser<PShuffle>
+        PARSER = new com.google.protobuf.AbstractParser<PShuffle>() {
       public PShuffle parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -16829,6 +16793,10 @@ public final class PaymentProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PShuffle> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PShuffle> getParserForType() {
@@ -16915,7 +16883,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PShuffleRet)
       PShuffleRetOrBuilder {
     // Use PShuffleRet.newBuilder() to construct.
-    private PShuffleRet(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PShuffleRet(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PShuffleRet() {
@@ -16952,13 +16920,13 @@ public final class PaymentProtos {
                 userList_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              userList_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.PARSER, extensionRegistry));
+              userList_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.parser(), extensionRegistry));
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              crtTm_ = bs;
+              crtTm_ = s;
               break;
             }
           }
@@ -17061,9 +17029,7 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          crtTm_ = s;
-        }
+        crtTm_ = s;
         return s;
       }
     }
@@ -17104,13 +17070,12 @@ public final class PaymentProtos {
         output.writeMessage(1, userList_.get(i));
       }
       if (!getCrtTmBytes().isEmpty()) {
-        output.writeBytes(2, getCrtTmBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, crtTm_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -17119,10 +17084,9 @@ public final class PaymentProtos {
           .computeMessageSize(1, userList_.get(i));
       }
       if (!getCrtTmBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getCrtTmBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, crtTm_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -17675,9 +17639,7 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            crtTm_ = s;
-          }
+          crtTm_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -17745,7 +17707,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         crtTm_ = value;
         onChanged();
         return this;
@@ -17774,8 +17737,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PShuffleRet> PARSER =
-        new com.google.protobuf.AbstractParser<PShuffleRet>() {
+    private static final com.google.protobuf.Parser<PShuffleRet>
+        PARSER = new com.google.protobuf.AbstractParser<PShuffleRet>() {
       public PShuffleRet parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -17792,6 +17755,10 @@ public final class PaymentProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PShuffleRet> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PShuffleRet> getParserForType() {
@@ -17971,7 +17938,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PLotteryConfirm)
       PLotteryConfirmOrBuilder {
     // Use PLotteryConfirm.newBuilder() to construct.
-    private PLotteryConfirm(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PLotteryConfirm(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PLotteryConfirm() {
@@ -18010,9 +17977,9 @@ public final class PaymentProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              title_ = bs;
+              title_ = s;
               break;
             }
             case 16: {
@@ -18021,12 +17988,12 @@ public final class PaymentProtos {
               break;
             }
             case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 region_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000004;
               }
-              region_.add(bs);
+              region_.add(s);
               break;
             }
             case 32: {
@@ -18045,9 +18012,9 @@ public final class PaymentProtos {
               break;
             }
             case 58: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              remark_ = bs;
+              remark_ = s;
               break;
             }
             case 66: {
@@ -18055,7 +18022,7 @@ public final class PaymentProtos {
                 userList_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx>();
                 mutable_bitField0_ |= 0x00000080;
               }
-              userList_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.PARSER, extensionRegistry));
+              userList_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.parser(), extensionRegistry));
               break;
             }
           }
@@ -18106,9 +18073,7 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          title_ = s;
-        }
+        title_ = s;
         return s;
       }
     }
@@ -18247,9 +18212,7 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          remark_ = s;
-        }
+        remark_ = s;
         return s;
       }
     }
@@ -18342,13 +18305,13 @@ public final class PaymentProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getTitleBytes().isEmpty()) {
-        output.writeBytes(1, getTitleBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, title_);
       }
       if (gender_ != 0) {
         output.writeInt32(2, gender_);
       }
       for (int i = 0; i < region_.size(); i++) {
-        output.writeBytes(3, region_.getByteString(i));
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, region_.getRaw(i));
       }
       if (totAmt_ != 0) {
         output.writeInt32(4, totAmt_);
@@ -18360,22 +18323,20 @@ public final class PaymentProtos {
         output.writeInt32(6, bonus_);
       }
       if (!getRemarkBytes().isEmpty()) {
-        output.writeBytes(7, getRemarkBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 7, remark_);
       }
       for (int i = 0; i < userList_.size(); i++) {
         output.writeMessage(8, userList_.get(i));
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getTitleBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getTitleBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, title_);
       }
       if (gender_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -18384,8 +18345,7 @@ public final class PaymentProtos {
       {
         int dataSize = 0;
         for (int i = 0; i < region_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(region_.getByteString(i));
+          dataSize += computeStringSizeNoTag(region_.getRaw(i));
         }
         size += dataSize;
         size += 1 * getRegionList().size();
@@ -18403,14 +18363,13 @@ public final class PaymentProtos {
           .computeInt32Size(6, bonus_);
       }
       if (!getRemarkBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(7, getRemarkBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, remark_);
       }
       for (int i = 0; i < userList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, userList_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -18703,9 +18662,7 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            title_ = s;
-          }
+          title_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -18773,7 +18730,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         title_ = value;
         onChanged();
         return this;
@@ -18940,7 +18898,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureRegionIsMutable();
+  checkByteStringIsUtf8(value);
+        ensureRegionIsMutable();
         region_.add(value);
         onChanged();
         return this;
@@ -19074,9 +19033,7 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            remark_ = s;
-          }
+          remark_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -19144,7 +19101,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         remark_ = value;
         onChanged();
         return this;
@@ -19485,8 +19443,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PLotteryConfirm> PARSER =
-        new com.google.protobuf.AbstractParser<PLotteryConfirm>() {
+    private static final com.google.protobuf.Parser<PLotteryConfirm>
+        PARSER = new com.google.protobuf.AbstractParser<PLotteryConfirm>() {
       public PLotteryConfirm parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -19503,6 +19461,10 @@ public final class PaymentProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PLotteryConfirm> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PLotteryConfirm> getParserForType() {
@@ -19575,7 +19537,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PLotteryListRet)
       PLotteryListRetOrBuilder {
     // Use PLotteryListRet.newBuilder() to construct.
-    private PLotteryListRet(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PLotteryListRet(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PLotteryListRet() {
@@ -19611,7 +19573,7 @@ public final class PaymentProtos {
                 lotteries_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              lotteries_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet.PARSER, extensionRegistry));
+              lotteries_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PLotterySingleRet.parser(), extensionRegistry));
               break;
             }
           }
@@ -19713,9 +19675,8 @@ public final class PaymentProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -19723,7 +19684,7 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, lotteries_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -20280,8 +20241,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PLotteryListRet> PARSER =
-        new com.google.protobuf.AbstractParser<PLotteryListRet>() {
+    private static final com.google.protobuf.Parser<PLotteryListRet>
+        PARSER = new com.google.protobuf.AbstractParser<PLotteryListRet>() {
       public PLotteryListRet parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -20298,6 +20259,10 @@ public final class PaymentProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PLotteryListRet> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PLotteryListRet> getParserForType() {
@@ -20344,7 +20309,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PAcceptPrize)
       PAcceptPrizeOrBuilder {
     // Use PAcceptPrize.newBuilder() to construct.
-    private PAcceptPrize(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PAcceptPrize(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PAcceptPrize() {
@@ -20376,9 +20341,9 @@ public final class PaymentProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              lotteryId_ = bs;
+              lotteryId_ = s;
               break;
             }
           }
@@ -20422,9 +20387,7 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          lotteryId_ = s;
-        }
+        lotteryId_ = s;
         return s;
       }
     }
@@ -20462,21 +20425,19 @@ public final class PaymentProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getLotteryIdBytes().isEmpty()) {
-        output.writeBytes(1, getLotteryIdBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, lotteryId_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getLotteryIdBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getLotteryIdBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, lotteryId_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -20675,9 +20636,7 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            lotteryId_ = s;
-          }
+          lotteryId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -20745,7 +20704,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         lotteryId_ = value;
         onChanged();
         return this;
@@ -20774,8 +20734,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PAcceptPrize> PARSER =
-        new com.google.protobuf.AbstractParser<PAcceptPrize>() {
+    private static final com.google.protobuf.Parser<PAcceptPrize>
+        PARSER = new com.google.protobuf.AbstractParser<PAcceptPrize>() {
       public PAcceptPrize parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -20792,6 +20752,10 @@ public final class PaymentProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PAcceptPrize> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PAcceptPrize> getParserForType() {
@@ -20998,7 +20962,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PLotteryDetailRet)
       PLotteryDetailRetOrBuilder {
     // Use PLotteryDetailRet.newBuilder() to construct.
-    private PLotteryDetailRet(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PLotteryDetailRet(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PLotteryDetailRet() {
@@ -21038,15 +21002,15 @@ public final class PaymentProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              lotteryId_ = bs;
+              lotteryId_ = s;
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              title_ = bs;
+              title_ = s;
               break;
             }
             case 24: {
@@ -21055,9 +21019,9 @@ public final class PaymentProtos {
               break;
             }
             case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              crtTm_ = bs;
+              crtTm_ = s;
               break;
             }
             case 40: {
@@ -21071,12 +21035,12 @@ public final class PaymentProtos {
               break;
             }
             case 58: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
                 region_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000040;
               }
-              region_.add(bs);
+              region_.add(s);
               break;
             }
             case 66: {
@@ -21084,13 +21048,13 @@ public final class PaymentProtos {
                 userList_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx>();
                 mutable_bitField0_ |= 0x00000080;
               }
-              userList_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.PARSER, extensionRegistry));
+              userList_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PUserBaseEx.parser(), extensionRegistry));
               break;
             }
             case 74: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              remark_ = bs;
+              remark_ = s;
               break;
             }
           }
@@ -21141,9 +21105,7 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          lotteryId_ = s;
-        }
+        lotteryId_ = s;
         return s;
       }
     }
@@ -21185,9 +21147,7 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          title_ = s;
-        }
+        title_ = s;
         return s;
       }
     }
@@ -21242,9 +21202,7 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          crtTm_ = s;
-        }
+        crtTm_ = s;
         return s;
       }
     }
@@ -21412,9 +21370,7 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          remark_ = s;
-        }
+        remark_ = s;
         return s;
       }
     }
@@ -21452,16 +21408,16 @@ public final class PaymentProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getLotteryIdBytes().isEmpty()) {
-        output.writeBytes(1, getLotteryIdBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, lotteryId_);
       }
       if (!getTitleBytes().isEmpty()) {
-        output.writeBytes(2, getTitleBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, title_);
       }
       if (totAmt_ != 0) {
         output.writeInt32(3, totAmt_);
       }
       if (!getCrtTmBytes().isEmpty()) {
-        output.writeBytes(4, getCrtTmBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, crtTm_);
       }
       if (type_ != 0) {
         output.writeInt32(5, type_);
@@ -21470,37 +21426,33 @@ public final class PaymentProtos {
         output.writeInt32(6, winners_);
       }
       for (int i = 0; i < region_.size(); i++) {
-        output.writeBytes(7, region_.getByteString(i));
+        com.google.protobuf.GeneratedMessage.writeString(output, 7, region_.getRaw(i));
       }
       for (int i = 0; i < userList_.size(); i++) {
         output.writeMessage(8, userList_.get(i));
       }
       if (!getRemarkBytes().isEmpty()) {
-        output.writeBytes(9, getRemarkBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 9, remark_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getLotteryIdBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getLotteryIdBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, lotteryId_);
       }
       if (!getTitleBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getTitleBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, title_);
       }
       if (totAmt_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, totAmt_);
       }
       if (!getCrtTmBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getCrtTmBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, crtTm_);
       }
       if (type_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -21513,8 +21465,7 @@ public final class PaymentProtos {
       {
         int dataSize = 0;
         for (int i = 0; i < region_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(region_.getByteString(i));
+          dataSize += computeStringSizeNoTag(region_.getRaw(i));
         }
         size += dataSize;
         size += 1 * getRegionList().size();
@@ -21524,10 +21475,9 @@ public final class PaymentProtos {
           .computeMessageSize(8, userList_.get(i));
       }
       if (!getRemarkBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(9, getRemarkBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(9, remark_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -21828,9 +21778,7 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            lotteryId_ = s;
-          }
+          lotteryId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -21898,7 +21846,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         lotteryId_ = value;
         onChanged();
         return this;
@@ -21918,9 +21867,7 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            title_ = s;
-          }
+          title_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -21988,7 +21935,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         title_ = value;
         onChanged();
         return this;
@@ -22046,9 +21994,7 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            crtTm_ = s;
-          }
+          crtTm_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -22116,7 +22062,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         crtTm_ = value;
         onChanged();
         return this;
@@ -22321,7 +22268,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureRegionIsMutable();
+  checkByteStringIsUtf8(value);
+        ensureRegionIsMutable();
         region_.add(value);
         onChanged();
         return this;
@@ -22653,9 +22601,7 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            remark_ = s;
-          }
+          remark_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -22723,7 +22669,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         remark_ = value;
         onChanged();
         return this;
@@ -22752,8 +22699,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PLotteryDetailRet> PARSER =
-        new com.google.protobuf.AbstractParser<PLotteryDetailRet>() {
+    private static final com.google.protobuf.Parser<PLotteryDetailRet>
+        PARSER = new com.google.protobuf.AbstractParser<PLotteryDetailRet>() {
       public PLotteryDetailRet parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -22770,6 +22717,10 @@ public final class PaymentProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PLotteryDetailRet> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PLotteryDetailRet> getParserForType() {
@@ -22901,7 +22852,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PLotterySingleRet)
       PLotterySingleRetOrBuilder {
     // Use PLotterySingleRet.newBuilder() to construct.
-    private PLotterySingleRet(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PLotterySingleRet(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PLotterySingleRet() {
@@ -22937,15 +22888,15 @@ public final class PaymentProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              lotteryId_ = bs;
+              lotteryId_ = s;
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              title_ = bs;
+              title_ = s;
               break;
             }
             case 24: {
@@ -22954,9 +22905,9 @@ public final class PaymentProtos {
               break;
             }
             case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              crtTm_ = bs;
+              crtTm_ = s;
               break;
             }
             case 42: {
@@ -22964,7 +22915,7 @@ public final class PaymentProtos {
                 userList_ = new java.util.ArrayList<com.blemobi.sep.probuf.AccountProtos.PUserBase>();
                 mutable_bitField0_ |= 0x00000010;
               }
-              userList_.add(input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.PARSER, extensionRegistry));
+              userList_.add(input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.parser(), extensionRegistry));
               break;
             }
           }
@@ -23012,9 +22963,7 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          lotteryId_ = s;
-        }
+        lotteryId_ = s;
         return s;
       }
     }
@@ -23056,9 +23005,7 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          title_ = s;
-        }
+        title_ = s;
         return s;
       }
     }
@@ -23113,9 +23060,7 @@ public final class PaymentProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          crtTm_ = s;
-        }
+        crtTm_ = s;
         return s;
       }
     }
@@ -23208,49 +23153,45 @@ public final class PaymentProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getLotteryIdBytes().isEmpty()) {
-        output.writeBytes(1, getLotteryIdBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, lotteryId_);
       }
       if (!getTitleBytes().isEmpty()) {
-        output.writeBytes(2, getTitleBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, title_);
       }
       if (winners_ != 0) {
         output.writeInt32(3, winners_);
       }
       if (!getCrtTmBytes().isEmpty()) {
-        output.writeBytes(4, getCrtTmBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, crtTm_);
       }
       for (int i = 0; i < userList_.size(); i++) {
         output.writeMessage(5, userList_.get(i));
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getLotteryIdBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getLotteryIdBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, lotteryId_);
       }
       if (!getTitleBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getTitleBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, title_);
       }
       if (winners_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, winners_);
       }
       if (!getCrtTmBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getCrtTmBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, crtTm_);
       }
       for (int i = 0; i < userList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, userList_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -23511,9 +23452,7 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            lotteryId_ = s;
-          }
+          lotteryId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -23581,7 +23520,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         lotteryId_ = value;
         onChanged();
         return this;
@@ -23601,9 +23541,7 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            title_ = s;
-          }
+          title_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -23671,7 +23609,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         title_ = value;
         onChanged();
         return this;
@@ -23729,9 +23668,7 @@ public final class PaymentProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            crtTm_ = s;
-          }
+          crtTm_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -23799,7 +23736,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         crtTm_ = value;
         onChanged();
         return this;
@@ -24140,8 +24078,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PLotterySingleRet> PARSER =
-        new com.google.protobuf.AbstractParser<PLotterySingleRet>() {
+    private static final com.google.protobuf.Parser<PLotterySingleRet>
+        PARSER = new com.google.protobuf.AbstractParser<PLotterySingleRet>() {
       public PLotterySingleRet parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -24158,6 +24096,10 @@ public final class PaymentProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PLotterySingleRet> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PLotterySingleRet> getParserForType() {
@@ -24225,7 +24167,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PUserBaseEx)
       PUserBaseExOrBuilder {
     // Use PUserBaseEx.newBuilder() to construct.
-    private PUserBaseEx(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PUserBaseEx(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PUserBaseEx() {
@@ -24262,7 +24204,7 @@ public final class PaymentProtos {
               if (info_ != null) {
                 subBuilder = info_.toBuilder();
               }
-              info_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.PARSER, extensionRegistry);
+              info_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(info_);
                 info_ = subBuilder.buildPartial();
@@ -24386,9 +24328,8 @@ public final class PaymentProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -24404,7 +24345,7 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, amt_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -24856,8 +24797,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PUserBaseEx> PARSER =
-        new com.google.protobuf.AbstractParser<PUserBaseEx>() {
+    private static final com.google.protobuf.Parser<PUserBaseEx>
+        PARSER = new com.google.protobuf.AbstractParser<PUserBaseEx>() {
       public PUserBaseEx parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -24874,6 +24815,10 @@ public final class PaymentProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PUserBaseEx> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PUserBaseEx> getParserForType() {
@@ -24937,7 +24882,7 @@ public final class PaymentProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PLotteryDel)
       PLotteryDelOrBuilder {
     // Use PLotteryDel.newBuilder() to construct.
-    private PLotteryDel(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PLotteryDel(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PLotteryDel() {
@@ -24969,12 +24914,12 @@ public final class PaymentProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 lotteryId_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000001;
               }
-              lotteryId_.add(bs);
+              lotteryId_.add(s);
               break;
             }
           }
@@ -25062,26 +25007,24 @@ public final class PaymentProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < lotteryId_.size(); i++) {
-        output.writeBytes(1, lotteryId_.getByteString(i));
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, lotteryId_.getRaw(i));
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       {
         int dataSize = 0;
         for (int i = 0; i < lotteryId_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(lotteryId_.getByteString(i));
+          dataSize += computeStringSizeNoTag(lotteryId_.getRaw(i));
         }
         size += dataSize;
         size += 1 * getLotteryIdList().size();
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -25401,7 +25344,8 @@ public final class PaymentProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureLotteryIdIsMutable();
+  checkByteStringIsUtf8(value);
+        ensureLotteryIdIsMutable();
         lotteryId_.add(value);
         onChanged();
         return this;
@@ -25430,8 +25374,8 @@ public final class PaymentProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PLotteryDel> PARSER =
-        new com.google.protobuf.AbstractParser<PLotteryDel>() {
+    private static final com.google.protobuf.Parser<PLotteryDel>
+        PARSER = new com.google.protobuf.AbstractParser<PLotteryDel>() {
       public PLotteryDel parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -25448,6 +25392,10 @@ public final class PaymentProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PLotteryDel> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PLotteryDel> getParserForType() {

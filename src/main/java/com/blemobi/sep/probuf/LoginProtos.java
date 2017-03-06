@@ -153,7 +153,7 @@ public final class LoginProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PLogin)
       PLoginOrBuilder {
     // Use PLogin.newBuilder() to construct.
-    private PLogin(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PLogin(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PLogin() {
@@ -201,33 +201,33 @@ public final class LoginProtos {
               break;
             }
             case 50: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              uuid_ = bs;
+              uuid_ = s;
               break;
             }
             case 58: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              token_ = bs;
+              token_ = s;
               break;
             }
             case 66: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              nickname_ = bs;
+              nickname_ = s;
               break;
             }
             case 74: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              imgURL_ = bs;
+              imgURL_ = s;
               break;
             }
             case 82: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              username_ = bs;
+              username_ = s;
               break;
             }
             case 98: {
@@ -235,7 +235,7 @@ public final class LoginProtos {
               if (levelInfo_ != null) {
                 subBuilder = levelInfo_.toBuilder();
               }
-              levelInfo_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PLevelInfo.PARSER, extensionRegistry);
+              levelInfo_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PLevelInfo.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(levelInfo_);
                 levelInfo_ = subBuilder.buildPartial();
@@ -310,9 +310,7 @@ public final class LoginProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          uuid_ = s;
-        }
+        uuid_ = s;
         return s;
       }
     }
@@ -354,9 +352,7 @@ public final class LoginProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          token_ = s;
-        }
+        token_ = s;
         return s;
       }
     }
@@ -398,9 +394,7 @@ public final class LoginProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          nickname_ = s;
-        }
+        nickname_ = s;
         return s;
       }
     }
@@ -442,9 +436,7 @@ public final class LoginProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          imgURL_ = s;
-        }
+        imgURL_ = s;
         return s;
       }
     }
@@ -486,9 +478,7 @@ public final class LoginProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          username_ = s;
-        }
+        username_ = s;
         return s;
       }
     }
@@ -565,28 +555,27 @@ public final class LoginProtos {
         output.writeBool(5, newUser_);
       }
       if (!getUuidBytes().isEmpty()) {
-        output.writeBytes(6, getUuidBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 6, uuid_);
       }
       if (!getTokenBytes().isEmpty()) {
-        output.writeBytes(7, getTokenBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 7, token_);
       }
       if (!getNicknameBytes().isEmpty()) {
-        output.writeBytes(8, getNicknameBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 8, nickname_);
       }
       if (!getImgURLBytes().isEmpty()) {
-        output.writeBytes(9, getImgURLBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 9, imgURL_);
       }
       if (!getUsernameBytes().isEmpty()) {
-        output.writeBytes(10, getUsernameBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 10, username_);
       }
       if (levelInfo_ != null) {
         output.writeMessage(12, getLevelInfo());
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -599,30 +588,25 @@ public final class LoginProtos {
           .computeBoolSize(5, newUser_);
       }
       if (!getUuidBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(6, getUuidBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, uuid_);
       }
       if (!getTokenBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(7, getTokenBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, token_);
       }
       if (!getNicknameBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(8, getNicknameBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(8, nickname_);
       }
       if (!getImgURLBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(9, getImgURLBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(9, imgURL_);
       }
       if (!getUsernameBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(10, getUsernameBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(10, username_);
       }
       if (levelInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getLevelInfo());
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -947,9 +931,7 @@ public final class LoginProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            uuid_ = s;
-          }
+          uuid_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1017,7 +999,8 @@ public final class LoginProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         uuid_ = value;
         onChanged();
         return this;
@@ -1037,9 +1020,7 @@ public final class LoginProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            token_ = s;
-          }
+          token_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1107,7 +1088,8 @@ public final class LoginProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         token_ = value;
         onChanged();
         return this;
@@ -1127,9 +1109,7 @@ public final class LoginProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            nickname_ = s;
-          }
+          nickname_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1197,7 +1177,8 @@ public final class LoginProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         nickname_ = value;
         onChanged();
         return this;
@@ -1217,9 +1198,7 @@ public final class LoginProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            imgURL_ = s;
-          }
+          imgURL_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1287,7 +1266,8 @@ public final class LoginProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         imgURL_ = value;
         onChanged();
         return this;
@@ -1307,9 +1287,7 @@ public final class LoginProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            username_ = s;
-          }
+          username_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1377,7 +1355,8 @@ public final class LoginProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         username_ = value;
         onChanged();
         return this;
@@ -1559,8 +1538,8 @@ public final class LoginProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PLogin> PARSER =
-        new com.google.protobuf.AbstractParser<PLogin>() {
+    private static final com.google.protobuf.Parser<PLogin>
+        PARSER = new com.google.protobuf.AbstractParser<PLogin>() {
       public PLogin parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1577,6 +1556,10 @@ public final class LoginProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PLogin> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PLogin> getParserForType() {

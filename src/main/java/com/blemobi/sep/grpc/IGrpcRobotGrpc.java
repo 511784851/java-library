@@ -1,4 +1,4 @@
-package bbproto;
+package com.blemobi.sep.grpc;
 
 import static io.grpc.stub.ClientCalls.asyncUnaryCall;
 import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
@@ -13,6 +13,22 @@ import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+
+import com.blemobi.sep.probuf.CommonApiProtos;
+import com.blemobi.sep.probuf.ResultProtos;
+import com.blemobi.sep.probuf.RobotApiProtos;
+import com.blemobi.sep.probuf.RobotProtos;
+import com.blemobi.sep.probuf.CommonApiProtos.PEmpty;
+import com.blemobi.sep.probuf.ResultProtos.PInt32Single;
+import com.blemobi.sep.probuf.ResultProtos.PStringSingle;
+import com.blemobi.sep.probuf.RobotApiProtos.PMsgNumLimitParma;
+import com.blemobi.sep.probuf.RobotApiProtos.PPayOrderParma;
+import com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam;
+import com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery;
+import com.blemobi.sep.probuf.RobotApiProtos.PRobotNotifyMsgList;
+import com.blemobi.sep.probuf.RobotProtos.PBRemind;
+import com.blemobi.sep.probuf.RobotProtos.PBRemindList;
+
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 
 /**
@@ -28,58 +44,67 @@ public class IGrpcRobotGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PInt32Single,
-      bbproto.CommonInside.PEmpty> METHOD_GRPC_SET_MSG_NUM_PER_DAY =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.RobotApiProtos.PMsgNumLimitParma,
+      com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_GRPC_SET_MSG_NUM_PER_DAY =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcRobot", "GrpcSetMsgNumPerDay"),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PInt32Single.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(bbproto.CommonInside.PEmpty.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.RobotApiProtos.PMsgNumLimitParma.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.RobotProtos.PBRemind,
-      bbproto.CommonInside.PEmpty> METHOD_GRP_CREATE_REMIND =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringSingle,
+      com.blemobi.sep.probuf.ResultProtos.PInt32Single> METHOD_GRPC_GET_MSG_NUM_PER_DAY =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
-              "bbproto.IGrpcRobot", "GrpCreateRemind"),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.RobotProtos.PBRemind.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(bbproto.CommonInside.PEmpty.getDefaultInstance()));
+              "bbproto.IGrpcRobot", "GrpcGetMsgNumPerDay"),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringSingle.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PInt32Single.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<bbproto.RobotInside.PRemindQuery,
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.RobotProtos.PBRemind,
+      com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_GRPC_CREATE_REMIND =
+      io.grpc.MethodDescriptor.create(
+          io.grpc.MethodDescriptor.MethodType.UNARY,
+          generateFullMethodName(
+              "bbproto.IGrpcRobot", "GrpcCreateRemind"),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.RobotProtos.PBRemind.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery,
       com.blemobi.sep.probuf.RobotProtos.PBRemindList> METHOD_GRPC_GET_REMIND =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcRobot", "GrpcGetRemind"),
-          io.grpc.protobuf.ProtoUtils.marshaller(bbproto.RobotInside.PRemindQuery.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery.getDefaultInstance()),
           io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.RobotProtos.PBRemindList.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringList,
-      bbproto.CommonInside.PEmpty> METHOD_GRPC_DELETE_REMIND =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam,
+      com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_GRPC_DELETE_REMIND =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcRobot", "GrpcDeleteRemind"),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringList.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(bbproto.CommonInside.PEmpty.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<bbproto.RobotInside.PRobotNotifyMsgList,
-      bbproto.CommonInside.PEmpty> METHOD_GRPC_PUSH =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.RobotApiProtos.PRobotNotifyMsgList,
+      com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_GRPC_PUSH =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcRobot", "GrpcPush"),
-          io.grpc.protobuf.ProtoUtils.marshaller(bbproto.RobotInside.PRobotNotifyMsgList.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(bbproto.CommonInside.PEmpty.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.RobotApiProtos.PRobotNotifyMsgList.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<bbproto.RobotInside.PPayOrderParma,
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.RobotApiProtos.PPayOrderParma,
       com.blemobi.sep.probuf.ResultProtos.PStringSingle> METHOD_GRPC_GENERATE_ORDER =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcRobot", "GrpcGenerateOrder"),
-          io.grpc.protobuf.ProtoUtils.marshaller(bbproto.RobotInside.PPayOrderParma.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.RobotApiProtos.PPayOrderParma.getDefaultInstance()),
           io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringSingle.getDefaultInstance()));
 
   /**
@@ -116,9 +141,21 @@ public class IGrpcRobotGrpc {
      *&#64;return PEmpty
      * </pre>
      */
-    public void grpcSetMsgNumPerDay(com.blemobi.sep.probuf.ResultProtos.PInt32Single request,
-        io.grpc.stub.StreamObserver<bbproto.CommonInside.PEmpty> responseObserver) {
+    public void grpcSetMsgNumPerDay(com.blemobi.sep.probuf.RobotApiProtos.PMsgNumLimitParma request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GRPC_SET_MSG_NUM_PER_DAY, responseObserver);
+    }
+
+    /**
+     * <pre>
+     *&#64;note 获取B端每天(0-24时)推送消息数
+     *&#64;param PStringSingle 网红UUID
+     *&#64;return PInt32Single
+     * </pre>
+     */
+    public void grpcGetMsgNumPerDay(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PInt32Single> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_GRPC_GET_MSG_NUM_PER_DAY, responseObserver);
     }
 
     /**
@@ -128,9 +165,9 @@ public class IGrpcRobotGrpc {
      *&#64;return PEmpty
      * </pre>
      */
-    public void grpCreateRemind(com.blemobi.sep.probuf.RobotProtos.PBRemind request,
-        io.grpc.stub.StreamObserver<bbproto.CommonInside.PEmpty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_GRP_CREATE_REMIND, responseObserver);
+    public void grpcCreateRemind(com.blemobi.sep.probuf.RobotProtos.PBRemind request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_GRPC_CREATE_REMIND, responseObserver);
     }
 
     /**
@@ -140,7 +177,7 @@ public class IGrpcRobotGrpc {
      *&#64;return PRemindList
      * </pre>
      */
-    public void grpcGetRemind(bbproto.RobotInside.PRemindQuery request,
+    public void grpcGetRemind(com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery request,
         io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.RobotProtos.PBRemindList> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GRPC_GET_REMIND, responseObserver);
     }
@@ -148,12 +185,12 @@ public class IGrpcRobotGrpc {
     /**
      * <pre>
      *&#64;note 监管:删除提醒消息
-     *&#64;param  PStringList      提醒消息id
+     *&#64;param  PRemindDeleteParam      提醒消息创建者和id
      *&#64;return PEmpty
      * </pre>
      */
-    public void grpcDeleteRemind(com.blemobi.sep.probuf.ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<bbproto.CommonInside.PEmpty> responseObserver) {
+    public void grpcDeleteRemind(com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GRPC_DELETE_REMIND, responseObserver);
     }
 
@@ -164,8 +201,8 @@ public class IGrpcRobotGrpc {
      *&#64;return PEmpty
      * </pre>
      */
-    public void grpcPush(bbproto.RobotInside.PRobotNotifyMsgList request,
-        io.grpc.stub.StreamObserver<bbproto.CommonInside.PEmpty> responseObserver) {
+    public void grpcPush(com.blemobi.sep.probuf.RobotApiProtos.PRobotNotifyMsgList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GRPC_PUSH, responseObserver);
     }
 
@@ -176,7 +213,7 @@ public class IGrpcRobotGrpc {
      *&#64;return PStringSingle
      * </pre>
      */
-    public void grpcGenerateOrder(bbproto.RobotInside.PPayOrderParma request,
+    public void grpcGenerateOrder(com.blemobi.sep.probuf.RobotApiProtos.PPayOrderParma request,
         io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PStringSingle> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GRPC_GENERATE_ORDER, responseObserver);
     }
@@ -187,42 +224,49 @@ public class IGrpcRobotGrpc {
             METHOD_GRPC_SET_MSG_NUM_PER_DAY,
             asyncUnaryCall(
               new MethodHandlers<
-                com.blemobi.sep.probuf.ResultProtos.PInt32Single,
-                bbproto.CommonInside.PEmpty>(
+                com.blemobi.sep.probuf.RobotApiProtos.PMsgNumLimitParma,
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
                   this, METHODID_GRPC_SET_MSG_NUM_PER_DAY)))
           .addMethod(
-            METHOD_GRP_CREATE_REMIND,
+            METHOD_GRPC_GET_MSG_NUM_PER_DAY,
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.blemobi.sep.probuf.ResultProtos.PStringSingle,
+                com.blemobi.sep.probuf.ResultProtos.PInt32Single>(
+                  this, METHODID_GRPC_GET_MSG_NUM_PER_DAY)))
+          .addMethod(
+            METHOD_GRPC_CREATE_REMIND,
             asyncUnaryCall(
               new MethodHandlers<
                 com.blemobi.sep.probuf.RobotProtos.PBRemind,
-                bbproto.CommonInside.PEmpty>(
-                  this, METHODID_GRP_CREATE_REMIND)))
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
+                  this, METHODID_GRPC_CREATE_REMIND)))
           .addMethod(
             METHOD_GRPC_GET_REMIND,
             asyncUnaryCall(
               new MethodHandlers<
-                bbproto.RobotInside.PRemindQuery,
+                com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery,
                 com.blemobi.sep.probuf.RobotProtos.PBRemindList>(
                   this, METHODID_GRPC_GET_REMIND)))
           .addMethod(
             METHOD_GRPC_DELETE_REMIND,
             asyncUnaryCall(
               new MethodHandlers<
-                com.blemobi.sep.probuf.ResultProtos.PStringList,
-                bbproto.CommonInside.PEmpty>(
+                com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam,
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
                   this, METHODID_GRPC_DELETE_REMIND)))
           .addMethod(
             METHOD_GRPC_PUSH,
             asyncUnaryCall(
               new MethodHandlers<
-                bbproto.RobotInside.PRobotNotifyMsgList,
-                bbproto.CommonInside.PEmpty>(
+                com.blemobi.sep.probuf.RobotApiProtos.PRobotNotifyMsgList,
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
                   this, METHODID_GRPC_PUSH)))
           .addMethod(
             METHOD_GRPC_GENERATE_ORDER,
             asyncUnaryCall(
               new MethodHandlers<
-                bbproto.RobotInside.PPayOrderParma,
+                com.blemobi.sep.probuf.RobotApiProtos.PPayOrderParma,
                 com.blemobi.sep.probuf.ResultProtos.PStringSingle>(
                   this, METHODID_GRPC_GENERATE_ORDER)))
           .build();
@@ -254,10 +298,23 @@ public class IGrpcRobotGrpc {
      *&#64;return PEmpty
      * </pre>
      */
-    public void grpcSetMsgNumPerDay(com.blemobi.sep.probuf.ResultProtos.PInt32Single request,
-        io.grpc.stub.StreamObserver<bbproto.CommonInside.PEmpty> responseObserver) {
+    public void grpcSetMsgNumPerDay(com.blemobi.sep.probuf.RobotApiProtos.PMsgNumLimitParma request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GRPC_SET_MSG_NUM_PER_DAY, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     *&#64;note 获取B端每天(0-24时)推送消息数
+     *&#64;param PStringSingle 网红UUID
+     *&#64;return PInt32Single
+     * </pre>
+     */
+    public void grpcGetMsgNumPerDay(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PInt32Single> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_GRPC_GET_MSG_NUM_PER_DAY, getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -267,10 +324,10 @@ public class IGrpcRobotGrpc {
      *&#64;return PEmpty
      * </pre>
      */
-    public void grpCreateRemind(com.blemobi.sep.probuf.RobotProtos.PBRemind request,
-        io.grpc.stub.StreamObserver<bbproto.CommonInside.PEmpty> responseObserver) {
+    public void grpcCreateRemind(com.blemobi.sep.probuf.RobotProtos.PBRemind request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_GRP_CREATE_REMIND, getCallOptions()), request, responseObserver);
+          getChannel().newCall(METHOD_GRPC_CREATE_REMIND, getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -280,7 +337,7 @@ public class IGrpcRobotGrpc {
      *&#64;return PRemindList
      * </pre>
      */
-    public void grpcGetRemind(bbproto.RobotInside.PRemindQuery request,
+    public void grpcGetRemind(com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery request,
         io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.RobotProtos.PBRemindList> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GRPC_GET_REMIND, getCallOptions()), request, responseObserver);
@@ -289,12 +346,12 @@ public class IGrpcRobotGrpc {
     /**
      * <pre>
      *&#64;note 监管:删除提醒消息
-     *&#64;param  PStringList      提醒消息id
+     *&#64;param  PRemindDeleteParam      提醒消息创建者和id
      *&#64;return PEmpty
      * </pre>
      */
-    public void grpcDeleteRemind(com.blemobi.sep.probuf.ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<bbproto.CommonInside.PEmpty> responseObserver) {
+    public void grpcDeleteRemind(com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GRPC_DELETE_REMIND, getCallOptions()), request, responseObserver);
     }
@@ -306,8 +363,8 @@ public class IGrpcRobotGrpc {
      *&#64;return PEmpty
      * </pre>
      */
-    public void grpcPush(bbproto.RobotInside.PRobotNotifyMsgList request,
-        io.grpc.stub.StreamObserver<bbproto.CommonInside.PEmpty> responseObserver) {
+    public void grpcPush(com.blemobi.sep.probuf.RobotApiProtos.PRobotNotifyMsgList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GRPC_PUSH, getCallOptions()), request, responseObserver);
     }
@@ -319,7 +376,7 @@ public class IGrpcRobotGrpc {
      *&#64;return PStringSingle
      * </pre>
      */
-    public void grpcGenerateOrder(bbproto.RobotInside.PPayOrderParma request,
+    public void grpcGenerateOrder(com.blemobi.sep.probuf.RobotApiProtos.PPayOrderParma request,
         io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PStringSingle> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GRPC_GENERATE_ORDER, getCallOptions()), request, responseObserver);
@@ -351,9 +408,21 @@ public class IGrpcRobotGrpc {
      *&#64;return PEmpty
      * </pre>
      */
-    public bbproto.CommonInside.PEmpty grpcSetMsgNumPerDay(com.blemobi.sep.probuf.ResultProtos.PInt32Single request) {
+    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty grpcSetMsgNumPerDay(com.blemobi.sep.probuf.RobotApiProtos.PMsgNumLimitParma request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GRPC_SET_MSG_NUM_PER_DAY, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     *&#64;note 获取B端每天(0-24时)推送消息数
+     *&#64;param PStringSingle 网红UUID
+     *&#64;return PInt32Single
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.ResultProtos.PInt32Single grpcGetMsgNumPerDay(com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_GRPC_GET_MSG_NUM_PER_DAY, getCallOptions(), request);
     }
 
     /**
@@ -363,9 +432,9 @@ public class IGrpcRobotGrpc {
      *&#64;return PEmpty
      * </pre>
      */
-    public bbproto.CommonInside.PEmpty grpCreateRemind(com.blemobi.sep.probuf.RobotProtos.PBRemind request) {
+    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty grpcCreateRemind(com.blemobi.sep.probuf.RobotProtos.PBRemind request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_GRP_CREATE_REMIND, getCallOptions(), request);
+          getChannel(), METHOD_GRPC_CREATE_REMIND, getCallOptions(), request);
     }
 
     /**
@@ -375,7 +444,7 @@ public class IGrpcRobotGrpc {
      *&#64;return PRemindList
      * </pre>
      */
-    public com.blemobi.sep.probuf.RobotProtos.PBRemindList grpcGetRemind(bbproto.RobotInside.PRemindQuery request) {
+    public com.blemobi.sep.probuf.RobotProtos.PBRemindList grpcGetRemind(com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GRPC_GET_REMIND, getCallOptions(), request);
     }
@@ -383,11 +452,11 @@ public class IGrpcRobotGrpc {
     /**
      * <pre>
      *&#64;note 监管:删除提醒消息
-     *&#64;param  PStringList      提醒消息id
+     *&#64;param  PRemindDeleteParam      提醒消息创建者和id
      *&#64;return PEmpty
      * </pre>
      */
-    public bbproto.CommonInside.PEmpty grpcDeleteRemind(com.blemobi.sep.probuf.ResultProtos.PStringList request) {
+    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty grpcDeleteRemind(com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GRPC_DELETE_REMIND, getCallOptions(), request);
     }
@@ -399,7 +468,7 @@ public class IGrpcRobotGrpc {
      *&#64;return PEmpty
      * </pre>
      */
-    public bbproto.CommonInside.PEmpty grpcPush(bbproto.RobotInside.PRobotNotifyMsgList request) {
+    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty grpcPush(com.blemobi.sep.probuf.RobotApiProtos.PRobotNotifyMsgList request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GRPC_PUSH, getCallOptions(), request);
     }
@@ -411,7 +480,7 @@ public class IGrpcRobotGrpc {
      *&#64;return PStringSingle
      * </pre>
      */
-    public com.blemobi.sep.probuf.ResultProtos.PStringSingle grpcGenerateOrder(bbproto.RobotInside.PPayOrderParma request) {
+    public com.blemobi.sep.probuf.ResultProtos.PStringSingle grpcGenerateOrder(com.blemobi.sep.probuf.RobotApiProtos.PPayOrderParma request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GRPC_GENERATE_ORDER, getCallOptions(), request);
     }
@@ -442,10 +511,23 @@ public class IGrpcRobotGrpc {
      *&#64;return PEmpty
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<bbproto.CommonInside.PEmpty> grpcSetMsgNumPerDay(
-        com.blemobi.sep.probuf.ResultProtos.PInt32Single request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> grpcSetMsgNumPerDay(
+        com.blemobi.sep.probuf.RobotApiProtos.PMsgNumLimitParma request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GRPC_SET_MSG_NUM_PER_DAY, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     *&#64;note 获取B端每天(0-24时)推送消息数
+     *&#64;param PStringSingle 网红UUID
+     *&#64;return PInt32Single
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.ResultProtos.PInt32Single> grpcGetMsgNumPerDay(
+        com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_GRPC_GET_MSG_NUM_PER_DAY, getCallOptions()), request);
     }
 
     /**
@@ -455,10 +537,10 @@ public class IGrpcRobotGrpc {
      *&#64;return PEmpty
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<bbproto.CommonInside.PEmpty> grpCreateRemind(
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> grpcCreateRemind(
         com.blemobi.sep.probuf.RobotProtos.PBRemind request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_GRP_CREATE_REMIND, getCallOptions()), request);
+          getChannel().newCall(METHOD_GRPC_CREATE_REMIND, getCallOptions()), request);
     }
 
     /**
@@ -469,7 +551,7 @@ public class IGrpcRobotGrpc {
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.RobotProtos.PBRemindList> grpcGetRemind(
-        bbproto.RobotInside.PRemindQuery request) {
+        com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GRPC_GET_REMIND, getCallOptions()), request);
     }
@@ -477,12 +559,12 @@ public class IGrpcRobotGrpc {
     /**
      * <pre>
      *&#64;note 监管:删除提醒消息
-     *&#64;param  PStringList      提醒消息id
+     *&#64;param  PRemindDeleteParam      提醒消息创建者和id
      *&#64;return PEmpty
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<bbproto.CommonInside.PEmpty> grpcDeleteRemind(
-        com.blemobi.sep.probuf.ResultProtos.PStringList request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> grpcDeleteRemind(
+        com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GRPC_DELETE_REMIND, getCallOptions()), request);
     }
@@ -494,8 +576,8 @@ public class IGrpcRobotGrpc {
      *&#64;return PEmpty
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<bbproto.CommonInside.PEmpty> grpcPush(
-        bbproto.RobotInside.PRobotNotifyMsgList request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> grpcPush(
+        com.blemobi.sep.probuf.RobotApiProtos.PRobotNotifyMsgList request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GRPC_PUSH, getCallOptions()), request);
     }
@@ -508,18 +590,19 @@ public class IGrpcRobotGrpc {
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.ResultProtos.PStringSingle> grpcGenerateOrder(
-        bbproto.RobotInside.PPayOrderParma request) {
+        com.blemobi.sep.probuf.RobotApiProtos.PPayOrderParma request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GRPC_GENERATE_ORDER, getCallOptions()), request);
     }
   }
 
   private static final int METHODID_GRPC_SET_MSG_NUM_PER_DAY = 0;
-  private static final int METHODID_GRP_CREATE_REMIND = 1;
-  private static final int METHODID_GRPC_GET_REMIND = 2;
-  private static final int METHODID_GRPC_DELETE_REMIND = 3;
-  private static final int METHODID_GRPC_PUSH = 4;
-  private static final int METHODID_GRPC_GENERATE_ORDER = 5;
+  private static final int METHODID_GRPC_GET_MSG_NUM_PER_DAY = 1;
+  private static final int METHODID_GRPC_CREATE_REMIND = 2;
+  private static final int METHODID_GRPC_GET_REMIND = 3;
+  private static final int METHODID_GRPC_DELETE_REMIND = 4;
+  private static final int METHODID_GRPC_PUSH = 5;
+  private static final int METHODID_GRPC_GENERATE_ORDER = 6;
 
   private static class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -538,27 +621,31 @@ public class IGrpcRobotGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GRPC_SET_MSG_NUM_PER_DAY:
-          serviceImpl.grpcSetMsgNumPerDay((com.blemobi.sep.probuf.ResultProtos.PInt32Single) request,
-              (io.grpc.stub.StreamObserver<bbproto.CommonInside.PEmpty>) responseObserver);
+          serviceImpl.grpcSetMsgNumPerDay((com.blemobi.sep.probuf.RobotApiProtos.PMsgNumLimitParma) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
           break;
-        case METHODID_GRP_CREATE_REMIND:
-          serviceImpl.grpCreateRemind((com.blemobi.sep.probuf.RobotProtos.PBRemind) request,
-              (io.grpc.stub.StreamObserver<bbproto.CommonInside.PEmpty>) responseObserver);
+        case METHODID_GRPC_GET_MSG_NUM_PER_DAY:
+          serviceImpl.grpcGetMsgNumPerDay((com.blemobi.sep.probuf.ResultProtos.PStringSingle) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PInt32Single>) responseObserver);
+          break;
+        case METHODID_GRPC_CREATE_REMIND:
+          serviceImpl.grpcCreateRemind((com.blemobi.sep.probuf.RobotProtos.PBRemind) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
           break;
         case METHODID_GRPC_GET_REMIND:
-          serviceImpl.grpcGetRemind((bbproto.RobotInside.PRemindQuery) request,
+          serviceImpl.grpcGetRemind((com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery) request,
               (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.RobotProtos.PBRemindList>) responseObserver);
           break;
         case METHODID_GRPC_DELETE_REMIND:
-          serviceImpl.grpcDeleteRemind((com.blemobi.sep.probuf.ResultProtos.PStringList) request,
-              (io.grpc.stub.StreamObserver<bbproto.CommonInside.PEmpty>) responseObserver);
+          serviceImpl.grpcDeleteRemind((com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
           break;
         case METHODID_GRPC_PUSH:
-          serviceImpl.grpcPush((bbproto.RobotInside.PRobotNotifyMsgList) request,
-              (io.grpc.stub.StreamObserver<bbproto.CommonInside.PEmpty>) responseObserver);
+          serviceImpl.grpcPush((com.blemobi.sep.probuf.RobotApiProtos.PRobotNotifyMsgList) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
           break;
         case METHODID_GRPC_GENERATE_ORDER:
-          serviceImpl.grpcGenerateOrder((bbproto.RobotInside.PPayOrderParma) request,
+          serviceImpl.grpcGenerateOrder((com.blemobi.sep.probuf.RobotApiProtos.PPayOrderParma) request,
               (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PStringSingle>) responseObserver);
           break;
         default:
@@ -579,7 +666,8 @@ public class IGrpcRobotGrpc {
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     return new io.grpc.ServiceDescriptor(SERVICE_NAME,
         METHOD_GRPC_SET_MSG_NUM_PER_DAY,
-        METHOD_GRP_CREATE_REMIND,
+        METHOD_GRPC_GET_MSG_NUM_PER_DAY,
+        METHOD_GRPC_CREATE_REMIND,
         METHOD_GRPC_GET_REMIND,
         METHOD_GRPC_DELETE_REMIND,
         METHOD_GRPC_PUSH,

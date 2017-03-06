@@ -3,7 +3,7 @@ package com.blemobi.library.client;
 import java.io.IOException;
 
 import com.blemobi.library.jetty.JettyServer;
-import com.blemobi.sep.probuf.AchievementProtos.PAchievementActions;
+import com.blemobi.sep.probuf.AchievementApiProtos.PAchievementActions;
 import com.blemobi.sep.probuf.ResultProtos.PMessage;
 
 /**

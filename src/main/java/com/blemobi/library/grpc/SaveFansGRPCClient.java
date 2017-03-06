@@ -22,11 +22,11 @@ package com.blemobi.library.grpc;
 
 import java.util.List;
 
+import com.blemobi.sep.grpc.grpcDataPublishingGrpc;
+import com.blemobi.sep.grpc.grpcDataPublishingGrpc.grpcDataPublishingBlockingStub;
+import com.blemobi.sep.probuf.DataPublishingApiProtos;
 import com.blemobi.sep.probuf.DataPublishingProtos;
 
-import bbproto.DatapublishingInside;
-import bbproto.grpcDataPublishingGrpc;
-import bbproto.grpcDataPublishingGrpc.grpcDataPublishingBlockingStub;
 
 /**
  * @ClassName SaveFansGRPCClient
@@ -49,10 +49,10 @@ public class SaveFansGRPCClient extends BaseGRPCClient {
         filterBuilder.addAllRegion((List<String>) obj[2]);
         // builder.addSkipUuid(value);
         filterBuilder.setUuid((String) obj[3]);
-        DatapublishingInside.PFansSaveParam.Builder saveParam = DatapublishingInside.PFansSaveParam.newBuilder();
+        DataPublishingApiProtos.PFansSaveParam.Builder saveParam = DataPublishingApiProtos.PFansSaveParam.newBuilder();
         saveParam.setFilter(filterBuilder.build());
         saveParam.setKey(obj[0].toString());
-        DatapublishingInside.PFansSaveParam request = saveParam.build();
+        DataPublishingApiProtos.PFansSaveParam request = saveParam.build();
         stub.saveFans(request);
         return true;
     }

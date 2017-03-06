@@ -29,7 +29,7 @@ public final class SocialProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PFriendCount)
       PFriendCountOrBuilder {
     // Use PFriendCount.newBuilder() to construct.
-    private PFriendCount(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PFriendCount(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PFriendCount() {
@@ -119,9 +119,8 @@ public final class SocialProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -129,7 +128,7 @@ public final class SocialProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, count_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -370,8 +369,8 @@ public final class SocialProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PFriendCount> PARSER =
-        new com.google.protobuf.AbstractParser<PFriendCount>() {
+    private static final com.google.protobuf.Parser<PFriendCount>
+        PARSER = new com.google.protobuf.AbstractParser<PFriendCount>() {
       public PFriendCount parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -388,6 +387,10 @@ public final class SocialProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PFriendCount> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PFriendCount> getParserForType() {
@@ -459,7 +462,7 @@ public final class SocialProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PSearchUser)
       PSearchUserOrBuilder {
     // Use PSearchUser.newBuilder() to construct.
-    private PSearchUser(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PSearchUser(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PSearchUser() {
@@ -506,7 +509,7 @@ public final class SocialProtos {
               if (user_ != null) {
                 subBuilder = user_.toBuilder();
               }
-              user_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUser.PARSER, extensionRegistry);
+              user_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUser.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(user_);
                 user_ = subBuilder.buildPartial();
@@ -620,9 +623,8 @@ public final class SocialProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -638,7 +640,7 @@ public final class SocialProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getUser());
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -1094,8 +1096,8 @@ public final class SocialProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PSearchUser> PARSER =
-        new com.google.protobuf.AbstractParser<PSearchUser>() {
+    private static final com.google.protobuf.Parser<PSearchUser>
+        PARSER = new com.google.protobuf.AbstractParser<PSearchUser>() {
       public PSearchUser parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1112,6 +1114,10 @@ public final class SocialProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PSearchUser> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PSearchUser> getParserForType() {
@@ -1164,7 +1170,7 @@ public final class SocialProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PSearchUserList)
       PSearchUserListOrBuilder {
     // Use PSearchUserList.newBuilder() to construct.
-    private PSearchUserList(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PSearchUserList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PSearchUserList() {
@@ -1200,7 +1206,7 @@ public final class SocialProtos {
                 searchUsers_ = new java.util.ArrayList<com.blemobi.sep.probuf.SocialProtos.PSearchUser>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              searchUsers_.add(input.readMessage(com.blemobi.sep.probuf.SocialProtos.PSearchUser.PARSER, extensionRegistry));
+              searchUsers_.add(input.readMessage(com.blemobi.sep.probuf.SocialProtos.PSearchUser.parser(), extensionRegistry));
               break;
             }
           }
@@ -1282,9 +1288,8 @@ public final class SocialProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -1292,7 +1297,7 @@ public final class SocialProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, searchUsers_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -1777,8 +1782,8 @@ public final class SocialProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PSearchUserList> PARSER =
-        new com.google.protobuf.AbstractParser<PSearchUserList>() {
+    private static final com.google.protobuf.Parser<PSearchUserList>
+        PARSER = new com.google.protobuf.AbstractParser<PSearchUserList>() {
       public PSearchUserList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1795,6 +1800,10 @@ public final class SocialProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PSearchUserList> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PSearchUserList> getParserForType() {
@@ -1848,7 +1857,7 @@ public final class SocialProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PIsFriendList)
       PIsFriendListOrBuilder {
     // Use PIsFriendList.newBuilder() to construct.
-    private PIsFriendList(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PIsFriendList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PIsFriendList() {
@@ -1984,9 +1993,8 @@ public final class SocialProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -2001,7 +2009,7 @@ public final class SocialProtos {
         }
         isFriendMemoizedSerializedSize = dataSize;
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -2315,8 +2323,8 @@ public final class SocialProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PIsFriendList> PARSER =
-        new com.google.protobuf.AbstractParser<PIsFriendList>() {
+    private static final com.google.protobuf.Parser<PIsFriendList>
+        PARSER = new com.google.protobuf.AbstractParser<PIsFriendList>() {
       public PIsFriendList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2333,6 +2341,10 @@ public final class SocialProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PIsFriendList> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PIsFriendList> getParserForType() {

@@ -128,7 +128,7 @@ public final class TaskProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PTaskUserBasic)
       PTaskUserBasicOrBuilder {
     // Use PTaskUserBasic.newBuilder() to construct.
-    private PTaskUserBasic(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PTaskUserBasic(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PTaskUserBasic() {
@@ -172,9 +172,9 @@ public final class TaskProtos {
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              levelName_ = bs;
+              levelName_ = s;
               break;
             }
             case 24: {
@@ -188,9 +188,9 @@ public final class TaskProtos {
               break;
             }
             case 42: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              nextLevelName_ = bs;
+              nextLevelName_ = s;
               break;
             }
             case 48: {
@@ -199,15 +199,15 @@ public final class TaskProtos {
               break;
             }
             case 58: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              nickname_ = bs;
+              nickname_ = s;
               break;
             }
             case 66: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              headimg_ = bs;
+              headimg_ = s;
               break;
             }
           }
@@ -264,9 +264,7 @@ public final class TaskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          levelName_ = s;
-        }
+        levelName_ = s;
         return s;
       }
     }
@@ -334,9 +332,7 @@ public final class TaskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          nextLevelName_ = s;
-        }
+        nextLevelName_ = s;
         return s;
       }
     }
@@ -391,9 +387,7 @@ public final class TaskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          nickname_ = s;
-        }
+        nickname_ = s;
         return s;
       }
     }
@@ -435,9 +429,7 @@ public final class TaskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          headimg_ = s;
-        }
+        headimg_ = s;
         return s;
       }
     }
@@ -478,7 +470,7 @@ public final class TaskProtos {
         output.writeInt32(1, level_);
       }
       if (!getLevelNameBytes().isEmpty()) {
-        output.writeBytes(2, getLevelNameBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, levelName_);
       }
       if (exp_ != 0L) {
         output.writeInt64(3, exp_);
@@ -487,22 +479,21 @@ public final class TaskProtos {
         output.writeInt32(4, nextLevel_);
       }
       if (!getNextLevelNameBytes().isEmpty()) {
-        output.writeBytes(5, getNextLevelNameBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, nextLevelName_);
       }
       if (nextLevelExp_ != 0L) {
         output.writeInt64(6, nextLevelExp_);
       }
       if (!getNicknameBytes().isEmpty()) {
-        output.writeBytes(7, getNicknameBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 7, nickname_);
       }
       if (!getHeadimgBytes().isEmpty()) {
-        output.writeBytes(8, getHeadimgBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 8, headimg_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -511,8 +502,7 @@ public final class TaskProtos {
           .computeInt32Size(1, level_);
       }
       if (!getLevelNameBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getLevelNameBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, levelName_);
       }
       if (exp_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -523,22 +513,19 @@ public final class TaskProtos {
           .computeInt32Size(4, nextLevel_);
       }
       if (!getNextLevelNameBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(5, getNextLevelNameBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, nextLevelName_);
       }
       if (nextLevelExp_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(6, nextLevelExp_);
       }
       if (!getNicknameBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(7, getNicknameBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, nickname_);
       }
       if (!getHeadimgBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(8, getHeadimgBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(8, headimg_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -816,9 +803,7 @@ public final class TaskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            levelName_ = s;
-          }
+          levelName_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -886,7 +871,8 @@ public final class TaskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         levelName_ = value;
         onChanged();
         return this;
@@ -982,9 +968,7 @@ public final class TaskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            nextLevelName_ = s;
-          }
+          nextLevelName_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1052,7 +1036,8 @@ public final class TaskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         nextLevelName_ = value;
         onChanged();
         return this;
@@ -1110,9 +1095,7 @@ public final class TaskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            nickname_ = s;
-          }
+          nickname_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1180,7 +1163,8 @@ public final class TaskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         nickname_ = value;
         onChanged();
         return this;
@@ -1200,9 +1184,7 @@ public final class TaskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            headimg_ = s;
-          }
+          headimg_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1270,7 +1252,8 @@ public final class TaskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         headimg_ = value;
         onChanged();
         return this;
@@ -1299,8 +1282,8 @@ public final class TaskProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PTaskUserBasic> PARSER =
-        new com.google.protobuf.AbstractParser<PTaskUserBasic>() {
+    private static final com.google.protobuf.Parser<PTaskUserBasic>
+        PARSER = new com.google.protobuf.AbstractParser<PTaskUserBasic>() {
       public PTaskUserBasic parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1317,6 +1300,10 @@ public final class TaskProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PTaskUserBasic> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PTaskUserBasic> getParserForType() {
@@ -1481,7 +1468,7 @@ public final class TaskProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PTaskList)
       PTaskListOrBuilder {
     // Use PTaskList.newBuilder() to construct.
-    private PTaskList(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PTaskList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PTaskList() {
@@ -1521,7 +1508,7 @@ public final class TaskProtos {
               if (userBasic_ != null) {
                 subBuilder = userBasic_.toBuilder();
               }
-              userBasic_ = input.readMessage(com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.PARSER, extensionRegistry);
+              userBasic_ = input.readMessage(com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(userBasic_);
                 userBasic_ = subBuilder.buildPartial();
@@ -1549,7 +1536,7 @@ public final class TaskProtos {
                 mainTask_ = new java.util.ArrayList<com.blemobi.sep.probuf.TaskProtos.PTaskInfo>();
                 mutable_bitField0_ |= 0x00000010;
               }
-              mainTask_.add(input.readMessage(com.blemobi.sep.probuf.TaskProtos.PTaskInfo.PARSER, extensionRegistry));
+              mainTask_.add(input.readMessage(com.blemobi.sep.probuf.TaskProtos.PTaskInfo.parser(), extensionRegistry));
               break;
             }
             case 50: {
@@ -1557,7 +1544,7 @@ public final class TaskProtos {
                 dailyTask_ = new java.util.ArrayList<com.blemobi.sep.probuf.TaskProtos.PTaskInfo>();
                 mutable_bitField0_ |= 0x00000020;
               }
-              dailyTask_.add(input.readMessage(com.blemobi.sep.probuf.TaskProtos.PTaskInfo.PARSER, extensionRegistry));
+              dailyTask_.add(input.readMessage(com.blemobi.sep.probuf.TaskProtos.PTaskInfo.parser(), extensionRegistry));
               break;
             }
           }
@@ -1805,9 +1792,8 @@ public final class TaskProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -1835,7 +1821,7 @@ public final class TaskProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, dailyTask_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -3043,8 +3029,8 @@ public final class TaskProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PTaskList> PARSER =
-        new com.google.protobuf.AbstractParser<PTaskList>() {
+    private static final com.google.protobuf.Parser<PTaskList>
+        PARSER = new com.google.protobuf.AbstractParser<PTaskList>() {
       public PTaskList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3061,6 +3047,10 @@ public final class TaskProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PTaskList> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PTaskList> getParserForType() {
@@ -3157,7 +3147,7 @@ public final class TaskProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PTaskInfo)
       PTaskInfoOrBuilder {
     // Use PTaskInfo.newBuilder() to construct.
-    private PTaskInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PTaskInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PTaskInfo() {
@@ -3225,9 +3215,9 @@ public final class TaskProtos {
               break;
             }
             case 58: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              desc_ = bs;
+              desc_ = s;
               break;
             }
           }
@@ -3349,9 +3339,7 @@ public final class TaskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          desc_ = s;
-        }
+        desc_ = s;
         return s;
       }
     }
@@ -3407,13 +3395,12 @@ public final class TaskProtos {
         output.writeInt32(6, num_);
       }
       if (!getDescBytes().isEmpty()) {
-        output.writeBytes(7, getDescBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 7, desc_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -3442,10 +3429,9 @@ public final class TaskProtos {
           .computeInt32Size(6, num_);
       }
       if (!getDescBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(7, getDescBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, desc_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -3904,9 +3890,7 @@ public final class TaskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            desc_ = s;
-          }
+          desc_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -3974,7 +3958,8 @@ public final class TaskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         desc_ = value;
         onChanged();
         return this;
@@ -4003,8 +3988,8 @@ public final class TaskProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PTaskInfo> PARSER =
-        new com.google.protobuf.AbstractParser<PTaskInfo>() {
+    private static final com.google.protobuf.Parser<PTaskInfo>
+        PARSER = new com.google.protobuf.AbstractParser<PTaskInfo>() {
       public PTaskInfo parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4021,6 +4006,10 @@ public final class TaskProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PTaskInfo> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PTaskInfo> getParserForType() {
@@ -4114,7 +4103,7 @@ public final class TaskProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PTaskLevelList)
       PTaskLevelListOrBuilder {
     // Use PTaskLevelList.newBuilder() to construct.
-    private PTaskLevelList(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PTaskLevelList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PTaskLevelList() {
@@ -4150,7 +4139,7 @@ public final class TaskProtos {
               if (userBasic_ != null) {
                 subBuilder = userBasic_.toBuilder();
               }
-              userBasic_ = input.readMessage(com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.PARSER, extensionRegistry);
+              userBasic_ = input.readMessage(com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(userBasic_);
                 userBasic_ = subBuilder.buildPartial();
@@ -4163,7 +4152,7 @@ public final class TaskProtos {
                 taskLevel_ = new java.util.ArrayList<com.blemobi.sep.probuf.TaskProtos.PTaskLevel>();
                 mutable_bitField0_ |= 0x00000002;
               }
-              taskLevel_.add(input.readMessage(com.blemobi.sep.probuf.TaskProtos.PTaskLevel.PARSER, extensionRegistry));
+              taskLevel_.add(input.readMessage(com.blemobi.sep.probuf.TaskProtos.PTaskLevel.parser(), extensionRegistry));
               break;
             }
           }
@@ -4302,9 +4291,8 @@ public final class TaskProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -4316,7 +4304,7 @@ public final class TaskProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, taskLevel_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -5038,8 +5026,8 @@ public final class TaskProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PTaskLevelList> PARSER =
-        new com.google.protobuf.AbstractParser<PTaskLevelList>() {
+    private static final com.google.protobuf.Parser<PTaskLevelList>
+        PARSER = new com.google.protobuf.AbstractParser<PTaskLevelList>() {
       public PTaskLevelList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5056,6 +5044,10 @@ public final class TaskProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PTaskLevelList> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PTaskLevelList> getParserForType() {
@@ -5125,7 +5117,7 @@ public final class TaskProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PTaskLevel)
       PTaskLevelOrBuilder {
     // Use PTaskLevel.newBuilder() to construct.
-    private PTaskLevel(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PTaskLevel(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PTaskLevel() {
@@ -5165,9 +5157,9 @@ public final class TaskProtos {
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              name_ = bs;
+              name_ = s;
               break;
             }
             case 24: {
@@ -5234,9 +5226,7 @@ public final class TaskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          name_ = s;
-        }
+        name_ = s;
         return s;
       }
     }
@@ -5303,7 +5293,7 @@ public final class TaskProtos {
         output.writeInt32(1, id_);
       }
       if (!getNameBytes().isEmpty()) {
-        output.writeBytes(2, getNameBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, name_);
       }
       if (minExp_ != 0L) {
         output.writeInt64(3, minExp_);
@@ -5313,9 +5303,8 @@ public final class TaskProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -5324,8 +5313,7 @@ public final class TaskProtos {
           .computeInt32Size(1, id_);
       }
       if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getNameBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, name_);
       }
       if (minExp_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -5335,7 +5323,7 @@ public final class TaskProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(4, maxExp_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -5586,9 +5574,7 @@ public final class TaskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            name_ = s;
-          }
+          name_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -5656,7 +5642,8 @@ public final class TaskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         name_ = value;
         onChanged();
         return this;
@@ -5761,8 +5748,8 @@ public final class TaskProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PTaskLevel> PARSER =
-        new com.google.protobuf.AbstractParser<PTaskLevel>() {
+    private static final com.google.protobuf.Parser<PTaskLevel>
+        PARSER = new com.google.protobuf.AbstractParser<PTaskLevel>() {
       public PTaskLevel parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5779,6 +5766,10 @@ public final class TaskProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PTaskLevel> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PTaskLevel> getParserForType() {
@@ -5871,7 +5862,7 @@ public final class TaskProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PTaskUserPk)
       PTaskUserPkOrBuilder {
     // Use PTaskUserPk.newBuilder() to construct.
-    private PTaskUserPk(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PTaskUserPk(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PTaskUserPk() {
@@ -5908,7 +5899,7 @@ public final class TaskProtos {
               if (userBasic_ != null) {
                 subBuilder = userBasic_.toBuilder();
               }
-              userBasic_ = input.readMessage(com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.PARSER, extensionRegistry);
+              userBasic_ = input.readMessage(com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(userBasic_);
                 userBasic_ = subBuilder.buildPartial();
@@ -5921,7 +5912,7 @@ public final class TaskProtos {
               if (pkUserBasic_ != null) {
                 subBuilder = pkUserBasic_.toBuilder();
               }
-              pkUserBasic_ = input.readMessage(com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.PARSER, extensionRegistry);
+              pkUserBasic_ = input.readMessage(com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(pkUserBasic_);
                 pkUserBasic_ = subBuilder.buildPartial();
@@ -6081,9 +6072,8 @@ public final class TaskProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -6103,7 +6093,7 @@ public final class TaskProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(4, pkUserTaskTotol_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -6722,8 +6712,8 @@ public final class TaskProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PTaskUserPk> PARSER =
-        new com.google.protobuf.AbstractParser<PTaskUserPk>() {
+    private static final com.google.protobuf.Parser<PTaskUserPk>
+        PARSER = new com.google.protobuf.AbstractParser<PTaskUserPk>() {
       public PTaskUserPk parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6740,6 +6730,10 @@ public final class TaskProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PTaskUserPk> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PTaskUserPk> getParserForType() {
@@ -6808,7 +6802,7 @@ public final class TaskProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PExpLevelList)
       PExpLevelListOrBuilder {
     // Use PExpLevelList.newBuilder() to construct.
-    private PExpLevelList(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PExpLevelList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PExpLevelList() {
@@ -6844,7 +6838,7 @@ public final class TaskProtos {
                 expLevel_ = new java.util.ArrayList<com.blemobi.sep.probuf.TaskProtos.PExpLevel>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              expLevel_.add(input.readMessage(com.blemobi.sep.probuf.TaskProtos.PExpLevel.PARSER, extensionRegistry));
+              expLevel_.add(input.readMessage(com.blemobi.sep.probuf.TaskProtos.PExpLevel.parser(), extensionRegistry));
               break;
             }
           }
@@ -6946,9 +6940,8 @@ public final class TaskProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -6956,7 +6949,7 @@ public final class TaskProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, expLevel_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -7509,8 +7502,8 @@ public final class TaskProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PExpLevelList> PARSER =
-        new com.google.protobuf.AbstractParser<PExpLevelList>() {
+    private static final com.google.protobuf.Parser<PExpLevelList>
+        PARSER = new com.google.protobuf.AbstractParser<PExpLevelList>() {
       public PExpLevelList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7527,6 +7520,10 @@ public final class TaskProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PExpLevelList> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PExpLevelList> getParserForType() {
@@ -7632,7 +7629,7 @@ public final class TaskProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PExpLevel)
       PExpLevelOrBuilder {
     // Use PExpLevel.newBuilder() to construct.
-    private PExpLevel(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PExpLevel(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PExpLevel() {
@@ -7673,27 +7670,27 @@ public final class TaskProtos {
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              titleSc_ = bs;
+              titleSc_ = s;
               break;
             }
             case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              titleTc_ = bs;
+              titleTc_ = s;
               break;
             }
             case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              titleEn_ = bs;
+              titleEn_ = s;
               break;
             }
             case 42: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              titleKr_ = bs;
+              titleKr_ = s;
               break;
             }
           }
@@ -7750,9 +7747,7 @@ public final class TaskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          titleSc_ = s;
-        }
+        titleSc_ = s;
         return s;
       }
     }
@@ -7794,9 +7789,7 @@ public final class TaskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          titleTc_ = s;
-        }
+        titleTc_ = s;
         return s;
       }
     }
@@ -7838,9 +7831,7 @@ public final class TaskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          titleEn_ = s;
-        }
+        titleEn_ = s;
         return s;
       }
     }
@@ -7882,9 +7873,7 @@ public final class TaskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          titleKr_ = s;
-        }
+        titleKr_ = s;
         return s;
       }
     }
@@ -7925,22 +7914,21 @@ public final class TaskProtos {
         output.writeInt32(1, id_);
       }
       if (!getTitleScBytes().isEmpty()) {
-        output.writeBytes(2, getTitleScBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, titleSc_);
       }
       if (!getTitleTcBytes().isEmpty()) {
-        output.writeBytes(3, getTitleTcBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, titleTc_);
       }
       if (!getTitleEnBytes().isEmpty()) {
-        output.writeBytes(4, getTitleEnBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, titleEn_);
       }
       if (!getTitleKrBytes().isEmpty()) {
-        output.writeBytes(5, getTitleKrBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, titleKr_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -7949,22 +7937,18 @@ public final class TaskProtos {
           .computeInt32Size(1, id_);
       }
       if (!getTitleScBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getTitleScBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, titleSc_);
       }
       if (!getTitleTcBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getTitleTcBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, titleTc_);
       }
       if (!getTitleEnBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getTitleEnBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, titleEn_);
       }
       if (!getTitleKrBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(5, getTitleKrBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, titleKr_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -8224,9 +8208,7 @@ public final class TaskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            titleSc_ = s;
-          }
+          titleSc_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -8294,7 +8276,8 @@ public final class TaskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         titleSc_ = value;
         onChanged();
         return this;
@@ -8314,9 +8297,7 @@ public final class TaskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            titleTc_ = s;
-          }
+          titleTc_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -8384,7 +8365,8 @@ public final class TaskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         titleTc_ = value;
         onChanged();
         return this;
@@ -8404,9 +8386,7 @@ public final class TaskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            titleEn_ = s;
-          }
+          titleEn_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -8474,7 +8454,8 @@ public final class TaskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         titleEn_ = value;
         onChanged();
         return this;
@@ -8494,9 +8475,7 @@ public final class TaskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            titleKr_ = s;
-          }
+          titleKr_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -8564,7 +8543,8 @@ public final class TaskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         titleKr_ = value;
         onChanged();
         return this;
@@ -8593,8 +8573,8 @@ public final class TaskProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PExpLevel> PARSER =
-        new com.google.protobuf.AbstractParser<PExpLevel>() {
+    private static final com.google.protobuf.Parser<PExpLevel>
+        PARSER = new com.google.protobuf.AbstractParser<PExpLevel>() {
       public PExpLevel parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8611,6 +8591,10 @@ public final class TaskProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PExpLevel> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PExpLevel> getParserForType() {
@@ -8659,7 +8643,7 @@ public final class TaskProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PSubscribeArray)
       PSubscribeArrayOrBuilder {
     // Use PSubscribeArray.newBuilder() to construct.
-    private PSubscribeArray(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PSubscribeArray(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PSubscribeArray() {
@@ -8695,7 +8679,7 @@ public final class TaskProtos {
                 subscribe_ = new java.util.ArrayList<com.blemobi.sep.probuf.TaskProtos.PSubscribe>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              subscribe_.add(input.readMessage(com.blemobi.sep.probuf.TaskProtos.PSubscribe.PARSER, extensionRegistry));
+              subscribe_.add(input.readMessage(com.blemobi.sep.probuf.TaskProtos.PSubscribe.parser(), extensionRegistry));
               break;
             }
           }
@@ -8777,9 +8761,8 @@ public final class TaskProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -8787,7 +8770,7 @@ public final class TaskProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, subscribe_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -9268,8 +9251,8 @@ public final class TaskProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PSubscribeArray> PARSER =
-        new com.google.protobuf.AbstractParser<PSubscribeArray>() {
+    private static final com.google.protobuf.Parser<PSubscribeArray>
+        PARSER = new com.google.protobuf.AbstractParser<PSubscribeArray>() {
       public PSubscribeArray parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9286,6 +9269,10 @@ public final class TaskProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PSubscribeArray> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PSubscribeArray> getParserForType() {
@@ -9346,7 +9333,7 @@ public final class TaskProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PSubscribe)
       PSubscribeOrBuilder {
     // Use PSubscribe.newBuilder() to construct.
-    private PSubscribe(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PSubscribe(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PSubscribe() {
@@ -9380,9 +9367,9 @@ public final class TaskProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              uuid_ = bs;
+              uuid_ = s;
               break;
             }
             case 16: {
@@ -9436,9 +9423,7 @@ public final class TaskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          uuid_ = s;
-        }
+        uuid_ = s;
         return s;
       }
     }
@@ -9502,7 +9487,7 @@ public final class TaskProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUuidBytes().isEmpty()) {
-        output.writeBytes(1, getUuidBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, uuid_);
       }
       if (msgid_ != 0) {
         output.writeInt32(2, msgid_);
@@ -9512,15 +9497,13 @@ public final class TaskProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getUuidBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getUuidBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, uuid_);
       }
       if (msgid_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -9530,7 +9513,7 @@ public final class TaskProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, time_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -9737,9 +9720,7 @@ public final class TaskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            uuid_ = s;
-          }
+          uuid_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -9807,7 +9788,8 @@ public final class TaskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         uuid_ = value;
         onChanged();
         return this;
@@ -9912,8 +9894,8 @@ public final class TaskProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PSubscribe> PARSER =
-        new com.google.protobuf.AbstractParser<PSubscribe>() {
+    private static final com.google.protobuf.Parser<PSubscribe>
+        PARSER = new com.google.protobuf.AbstractParser<PSubscribe>() {
       public PSubscribe parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9930,6 +9912,10 @@ public final class TaskProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PSubscribe> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PSubscribe> getParserForType() {
@@ -9978,7 +9964,7 @@ public final class TaskProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PCallbackArray)
       PCallbackArrayOrBuilder {
     // Use PCallbackArray.newBuilder() to construct.
-    private PCallbackArray(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PCallbackArray(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PCallbackArray() {
@@ -10014,7 +10000,7 @@ public final class TaskProtos {
                 callback_ = new java.util.ArrayList<com.blemobi.sep.probuf.TaskProtos.PCallback>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              callback_.add(input.readMessage(com.blemobi.sep.probuf.TaskProtos.PCallback.PARSER, extensionRegistry));
+              callback_.add(input.readMessage(com.blemobi.sep.probuf.TaskProtos.PCallback.parser(), extensionRegistry));
               break;
             }
           }
@@ -10096,9 +10082,8 @@ public final class TaskProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -10106,7 +10091,7 @@ public final class TaskProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, callback_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -10587,8 +10572,8 @@ public final class TaskProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PCallbackArray> PARSER =
-        new com.google.protobuf.AbstractParser<PCallbackArray>() {
+    private static final com.google.protobuf.Parser<PCallbackArray>
+        PARSER = new com.google.protobuf.AbstractParser<PCallbackArray>() {
       public PCallbackArray parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10605,6 +10590,10 @@ public final class TaskProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PCallbackArray> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PCallbackArray> getParserForType() {
@@ -10665,7 +10654,7 @@ public final class TaskProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PCallback)
       PCallbackOrBuilder {
     // Use PCallback.newBuilder() to construct.
-    private PCallback(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PCallback(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PCallback() {
@@ -10699,9 +10688,9 @@ public final class TaskProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              uuid_ = bs;
+              uuid_ = s;
               break;
             }
             case 16: {
@@ -10755,9 +10744,7 @@ public final class TaskProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          uuid_ = s;
-        }
+        uuid_ = s;
         return s;
       }
     }
@@ -10821,7 +10808,7 @@ public final class TaskProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUuidBytes().isEmpty()) {
-        output.writeBytes(1, getUuidBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, uuid_);
       }
       if (msgid_ != 0) {
         output.writeInt32(2, msgid_);
@@ -10831,15 +10818,13 @@ public final class TaskProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getUuidBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getUuidBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, uuid_);
       }
       if (msgid_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -10849,7 +10834,7 @@ public final class TaskProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, time_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -11056,9 +11041,7 @@ public final class TaskProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            uuid_ = s;
-          }
+          uuid_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -11126,7 +11109,8 @@ public final class TaskProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         uuid_ = value;
         onChanged();
         return this;
@@ -11231,8 +11215,8 @@ public final class TaskProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PCallback> PARSER =
-        new com.google.protobuf.AbstractParser<PCallback>() {
+    private static final com.google.protobuf.Parser<PCallback>
+        PARSER = new com.google.protobuf.AbstractParser<PCallback>() {
       public PCallback parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11249,6 +11233,10 @@ public final class TaskProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PCallback> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PCallback> getParserForType() {

@@ -104,7 +104,7 @@ public final class OssProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PUpload)
       PUploadOrBuilder {
     // Use PUpload.newBuilder() to construct.
-    private PUpload(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PUpload(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PUpload() {
@@ -144,24 +144,24 @@ public final class OssProtos {
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              url_ = bs;
+              url_ = s;
               break;
             }
             case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 headers_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000004;
               }
-              headers_.add(bs);
+              headers_.add(s);
               break;
             }
             case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              objectKey_ = bs;
+              objectKey_ = s;
               break;
             }
           }
@@ -222,9 +222,7 @@ public final class OssProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          url_ = s;
-        }
+        url_ = s;
         return s;
       }
     }
@@ -311,9 +309,7 @@ public final class OssProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          objectKey_ = s;
-        }
+        objectKey_ = s;
         return s;
       }
     }
@@ -354,19 +350,18 @@ public final class OssProtos {
         output.writeBool(1, exists_);
       }
       if (!getUrlBytes().isEmpty()) {
-        output.writeBytes(2, getUrlBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, url_);
       }
       for (int i = 0; i < headers_.size(); i++) {
-        output.writeBytes(3, headers_.getByteString(i));
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, headers_.getRaw(i));
       }
       if (!getObjectKeyBytes().isEmpty()) {
-        output.writeBytes(4, getObjectKeyBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, objectKey_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -375,23 +370,20 @@ public final class OssProtos {
           .computeBoolSize(1, exists_);
       }
       if (!getUrlBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getUrlBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, url_);
       }
       {
         int dataSize = 0;
         for (int i = 0; i < headers_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(headers_.getByteString(i));
+          dataSize += computeStringSizeNoTag(headers_.getRaw(i));
         }
         size += dataSize;
         size += 1 * getHeadersList().size();
       }
       if (!getObjectKeyBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getObjectKeyBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, objectKey_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -662,9 +654,7 @@ public final class OssProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            url_ = s;
-          }
+          url_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -732,7 +722,8 @@ public final class OssProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         url_ = value;
         onChanged();
         return this;
@@ -861,7 +852,8 @@ public final class OssProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureHeadersIsMutable();
+  checkByteStringIsUtf8(value);
+        ensureHeadersIsMutable();
         headers_.add(value);
         onChanged();
         return this;
@@ -881,9 +873,7 @@ public final class OssProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            objectKey_ = s;
-          }
+          objectKey_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -951,7 +941,8 @@ public final class OssProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         objectKey_ = value;
         onChanged();
         return this;
@@ -980,8 +971,8 @@ public final class OssProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PUpload> PARSER =
-        new com.google.protobuf.AbstractParser<PUpload>() {
+    private static final com.google.protobuf.Parser<PUpload>
+        PARSER = new com.google.protobuf.AbstractParser<PUpload>() {
       public PUpload parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -998,6 +989,10 @@ public final class OssProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PUpload> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PUpload> getParserForType() {
@@ -1062,7 +1057,7 @@ public final class OssProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PDownload)
       PDownloadOrBuilder {
     // Use PDownload.newBuilder() to construct.
-    private PDownload(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PDownload(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PDownload() {
@@ -1095,15 +1090,15 @@ public final class OssProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              url_ = bs;
+              url_ = s;
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              thumb_ = bs;
+              thumb_ = s;
               break;
             }
           }
@@ -1147,9 +1142,7 @@ public final class OssProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          url_ = s;
-        }
+        url_ = s;
         return s;
       }
     }
@@ -1191,9 +1184,7 @@ public final class OssProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          thumb_ = s;
-        }
+        thumb_ = s;
         return s;
       }
     }
@@ -1231,28 +1222,25 @@ public final class OssProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUrlBytes().isEmpty()) {
-        output.writeBytes(1, getUrlBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, url_);
       }
       if (!getThumbBytes().isEmpty()) {
-        output.writeBytes(2, getThumbBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, thumb_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getUrlBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getUrlBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, url_);
       }
       if (!getThumbBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getThumbBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, thumb_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -1458,9 +1446,7 @@ public final class OssProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            url_ = s;
-          }
+          url_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1528,7 +1514,8 @@ public final class OssProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         url_ = value;
         onChanged();
         return this;
@@ -1548,9 +1535,7 @@ public final class OssProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            thumb_ = s;
-          }
+          thumb_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1618,7 +1603,8 @@ public final class OssProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         thumb_ = value;
         onChanged();
         return this;
@@ -1647,8 +1633,8 @@ public final class OssProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PDownload> PARSER =
-        new com.google.protobuf.AbstractParser<PDownload>() {
+    private static final com.google.protobuf.Parser<PDownload>
+        PARSER = new com.google.protobuf.AbstractParser<PDownload>() {
       public PDownload parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1665,6 +1651,10 @@ public final class OssProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PDownload> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PDownload> getParserForType() {
@@ -1717,7 +1707,7 @@ public final class OssProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PUploadArray)
       PUploadArrayOrBuilder {
     // Use PUploadArray.newBuilder() to construct.
-    private PUploadArray(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PUploadArray(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PUploadArray() {
@@ -1753,7 +1743,7 @@ public final class OssProtos {
                 uploads_ = new java.util.ArrayList<com.blemobi.sep.probuf.OssProtos.PUpload>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              uploads_.add(input.readMessage(com.blemobi.sep.probuf.OssProtos.PUpload.PARSER, extensionRegistry));
+              uploads_.add(input.readMessage(com.blemobi.sep.probuf.OssProtos.PUpload.parser(), extensionRegistry));
               break;
             }
           }
@@ -1835,9 +1825,8 @@ public final class OssProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -1845,7 +1834,7 @@ public final class OssProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, uploads_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -2330,8 +2319,8 @@ public final class OssProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PUploadArray> PARSER =
-        new com.google.protobuf.AbstractParser<PUploadArray>() {
+    private static final com.google.protobuf.Parser<PUploadArray>
+        PARSER = new com.google.protobuf.AbstractParser<PUploadArray>() {
       public PUploadArray parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2348,6 +2337,10 @@ public final class OssProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PUploadArray> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PUploadArray> getParserForType() {
@@ -2400,7 +2393,7 @@ public final class OssProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PDownloadArray)
       PDownloadArrayOrBuilder {
     // Use PDownloadArray.newBuilder() to construct.
-    private PDownloadArray(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PDownloadArray(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PDownloadArray() {
@@ -2436,7 +2429,7 @@ public final class OssProtos {
                 downloads_ = new java.util.ArrayList<com.blemobi.sep.probuf.OssProtos.PDownload>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              downloads_.add(input.readMessage(com.blemobi.sep.probuf.OssProtos.PDownload.PARSER, extensionRegistry));
+              downloads_.add(input.readMessage(com.blemobi.sep.probuf.OssProtos.PDownload.parser(), extensionRegistry));
               break;
             }
           }
@@ -2518,9 +2511,8 @@ public final class OssProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -2528,7 +2520,7 @@ public final class OssProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, downloads_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -3013,8 +3005,8 @@ public final class OssProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PDownloadArray> PARSER =
-        new com.google.protobuf.AbstractParser<PDownloadArray>() {
+    private static final com.google.protobuf.Parser<PDownloadArray>
+        PARSER = new com.google.protobuf.AbstractParser<PDownloadArray>() {
       public PDownloadArray parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3031,6 +3023,10 @@ public final class OssProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PDownloadArray> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PDownloadArray> getParserForType() {
@@ -3100,7 +3096,7 @@ public final class OssProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PFileInfo)
       PFileInfoOrBuilder {
     // Use PFileInfo.newBuilder() to construct.
-    private PFileInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PFileInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PFileInfo() {
@@ -3134,9 +3130,9 @@ public final class OssProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              digest_ = bs;
+              digest_ = s;
               break;
             }
             case 16: {
@@ -3145,9 +3141,9 @@ public final class OssProtos {
               break;
             }
             case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              extension_ = bs;
+              extension_ = s;
               break;
             }
           }
@@ -3191,9 +3187,7 @@ public final class OssProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          digest_ = s;
-        }
+        digest_ = s;
         return s;
       }
     }
@@ -3248,9 +3242,7 @@ public final class OssProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          extension_ = s;
-        }
+        extension_ = s;
         return s;
       }
     }
@@ -3288,35 +3280,32 @@ public final class OssProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getDigestBytes().isEmpty()) {
-        output.writeBytes(1, getDigestBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, digest_);
       }
       if (length_ != 0) {
         output.writeInt32(2, length_);
       }
       if (!getExtensionBytes().isEmpty()) {
-        output.writeBytes(3, getExtensionBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, extension_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getDigestBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getDigestBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, digest_);
       }
       if (length_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, length_);
       }
       if (!getExtensionBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getExtensionBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, extension_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -3524,9 +3513,7 @@ public final class OssProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            digest_ = s;
-          }
+          digest_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -3594,7 +3581,8 @@ public final class OssProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         digest_ = value;
         onChanged();
         return this;
@@ -3652,9 +3640,7 @@ public final class OssProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            extension_ = s;
-          }
+          extension_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -3722,7 +3708,8 @@ public final class OssProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         extension_ = value;
         onChanged();
         return this;
@@ -3751,8 +3738,8 @@ public final class OssProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PFileInfo> PARSER =
-        new com.google.protobuf.AbstractParser<PFileInfo>() {
+    private static final com.google.protobuf.Parser<PFileInfo>
+        PARSER = new com.google.protobuf.AbstractParser<PFileInfo>() {
       public PFileInfo parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3769,6 +3756,10 @@ public final class OssProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PFileInfo> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PFileInfo> getParserForType() {
@@ -3817,7 +3808,7 @@ public final class OssProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PFileInfoArray)
       PFileInfoArrayOrBuilder {
     // Use PFileInfoArray.newBuilder() to construct.
-    private PFileInfoArray(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PFileInfoArray(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PFileInfoArray() {
@@ -3853,7 +3844,7 @@ public final class OssProtos {
                 fileInfos_ = new java.util.ArrayList<com.blemobi.sep.probuf.OssProtos.PFileInfo>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              fileInfos_.add(input.readMessage(com.blemobi.sep.probuf.OssProtos.PFileInfo.PARSER, extensionRegistry));
+              fileInfos_.add(input.readMessage(com.blemobi.sep.probuf.OssProtos.PFileInfo.parser(), extensionRegistry));
               break;
             }
           }
@@ -3935,9 +3926,8 @@ public final class OssProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -3945,7 +3935,7 @@ public final class OssProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, fileInfos_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -4426,8 +4416,8 @@ public final class OssProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PFileInfoArray> PARSER =
-        new com.google.protobuf.AbstractParser<PFileInfoArray>() {
+    private static final com.google.protobuf.Parser<PFileInfoArray>
+        PARSER = new com.google.protobuf.AbstractParser<PFileInfoArray>() {
       public PFileInfoArray parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4444,6 +4434,10 @@ public final class OssProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PFileInfoArray> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PFileInfoArray> getParserForType() {
@@ -4586,7 +4580,7 @@ public final class OssProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PMultiPartUpload)
       PMultiPartUploadOrBuilder {
     // Use PMultiPartUpload.newBuilder() to construct.
-    private PMultiPartUpload(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PMultiPartUpload(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PMultiPartUpload() {
@@ -4629,42 +4623,42 @@ public final class OssProtos {
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              objectKey_ = bs;
+              objectKey_ = s;
               break;
             }
             case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              uploadId_ = bs;
+              uploadId_ = s;
               break;
             }
             case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              domain_ = bs;
+              domain_ = s;
               break;
             }
             case 42: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              accessKeyId_ = bs;
+              accessKeyId_ = s;
               break;
             }
             case 50: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              expires_ = bs;
+              expires_ = s;
               break;
             }
             case 58: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
                 sign_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000040;
               }
-              sign_.add(bs);
+              sign_.add(s);
               break;
             }
           }
@@ -4725,9 +4719,7 @@ public final class OssProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          objectKey_ = s;
-        }
+        objectKey_ = s;
         return s;
       }
     }
@@ -4769,9 +4761,7 @@ public final class OssProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          uploadId_ = s;
-        }
+        uploadId_ = s;
         return s;
       }
     }
@@ -4813,9 +4803,7 @@ public final class OssProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          domain_ = s;
-        }
+        domain_ = s;
         return s;
       }
     }
@@ -4853,9 +4841,7 @@ public final class OssProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          accessKeyId_ = s;
-        }
+        accessKeyId_ = s;
         return s;
       }
     }
@@ -4889,9 +4875,7 @@ public final class OssProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          expires_ = s;
-        }
+        expires_ = s;
         return s;
       }
     }
@@ -4973,28 +4957,27 @@ public final class OssProtos {
         output.writeBool(1, exists_);
       }
       if (!getObjectKeyBytes().isEmpty()) {
-        output.writeBytes(2, getObjectKeyBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, objectKey_);
       }
       if (!getUploadIdBytes().isEmpty()) {
-        output.writeBytes(3, getUploadIdBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, uploadId_);
       }
       if (!getDomainBytes().isEmpty()) {
-        output.writeBytes(4, getDomainBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, domain_);
       }
       if (!getAccessKeyIdBytes().isEmpty()) {
-        output.writeBytes(5, getAccessKeyIdBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, accessKeyId_);
       }
       if (!getExpiresBytes().isEmpty()) {
-        output.writeBytes(6, getExpiresBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 6, expires_);
       }
       for (int i = 0; i < sign_.size(); i++) {
-        output.writeBytes(7, sign_.getByteString(i));
+        com.google.protobuf.GeneratedMessage.writeString(output, 7, sign_.getRaw(i));
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -5003,35 +4986,29 @@ public final class OssProtos {
           .computeBoolSize(1, exists_);
       }
       if (!getObjectKeyBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getObjectKeyBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, objectKey_);
       }
       if (!getUploadIdBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getUploadIdBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, uploadId_);
       }
       if (!getDomainBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getDomainBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, domain_);
       }
       if (!getAccessKeyIdBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(5, getAccessKeyIdBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, accessKeyId_);
       }
       if (!getExpiresBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(6, getExpiresBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, expires_);
       }
       {
         int dataSize = 0;
         for (int i = 0; i < sign_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(sign_.getByteString(i));
+          dataSize += computeStringSizeNoTag(sign_.getRaw(i));
         }
         size += dataSize;
         size += 1 * getSignList().size();
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -5319,9 +5296,7 @@ public final class OssProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            objectKey_ = s;
-          }
+          objectKey_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -5389,7 +5364,8 @@ public final class OssProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         objectKey_ = value;
         onChanged();
         return this;
@@ -5409,9 +5385,7 @@ public final class OssProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            uploadId_ = s;
-          }
+          uploadId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -5479,7 +5453,8 @@ public final class OssProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         uploadId_ = value;
         onChanged();
         return this;
@@ -5499,9 +5474,7 @@ public final class OssProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            domain_ = s;
-          }
+          domain_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -5569,7 +5542,8 @@ public final class OssProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         domain_ = value;
         onChanged();
         return this;
@@ -5585,9 +5559,7 @@ public final class OssProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            accessKeyId_ = s;
-          }
+          accessKeyId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -5639,7 +5611,8 @@ public final class OssProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         accessKeyId_ = value;
         onChanged();
         return this;
@@ -5655,9 +5628,7 @@ public final class OssProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            expires_ = s;
-          }
+          expires_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -5709,7 +5680,8 @@ public final class OssProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         expires_ = value;
         onChanged();
         return this;
@@ -5838,7 +5810,8 @@ public final class OssProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureSignIsMutable();
+  checkByteStringIsUtf8(value);
+        ensureSignIsMutable();
         sign_.add(value);
         onChanged();
         return this;
@@ -5867,8 +5840,8 @@ public final class OssProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PMultiPartUpload> PARSER =
-        new com.google.protobuf.AbstractParser<PMultiPartUpload>() {
+    private static final com.google.protobuf.Parser<PMultiPartUpload>
+        PARSER = new com.google.protobuf.AbstractParser<PMultiPartUpload>() {
       public PMultiPartUpload parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5885,6 +5858,10 @@ public final class OssProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PMultiPartUpload> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PMultiPartUpload> getParserForType() {

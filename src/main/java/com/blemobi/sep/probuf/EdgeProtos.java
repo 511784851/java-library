@@ -83,7 +83,7 @@ public final class EdgeProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PEdgeVersion)
       PEdgeVersionOrBuilder {
     // Use PEdgeVersion.newBuilder() to construct.
-    private PEdgeVersion(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PEdgeVersion(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PEdgeVersion() {
@@ -134,15 +134,15 @@ public final class EdgeProtos {
               break;
             }
             case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              latestVersion_ = bs;
+              latestVersion_ = s;
               break;
             }
             case 42: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              updateLink_ = bs;
+              updateLink_ = s;
               break;
             }
           }
@@ -225,9 +225,7 @@ public final class EdgeProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          latestVersion_ = s;
-        }
+        latestVersion_ = s;
         return s;
       }
     }
@@ -269,9 +267,7 @@ public final class EdgeProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          updateLink_ = s;
-        }
+        updateLink_ = s;
         return s;
       }
     }
@@ -318,16 +314,15 @@ public final class EdgeProtos {
         output.writeBool(3, updateInAppStore_);
       }
       if (!getLatestVersionBytes().isEmpty()) {
-        output.writeBytes(4, getLatestVersionBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, latestVersion_);
       }
       if (!getUpdateLinkBytes().isEmpty()) {
-        output.writeBytes(5, getUpdateLinkBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, updateLink_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -344,14 +339,12 @@ public final class EdgeProtos {
           .computeBoolSize(3, updateInAppStore_);
       }
       if (!getLatestVersionBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getLatestVersionBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, latestVersion_);
       }
       if (!getUpdateLinkBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(5, getUpdateLinkBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, updateLink_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -685,9 +678,7 @@ public final class EdgeProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            latestVersion_ = s;
-          }
+          latestVersion_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -755,7 +746,8 @@ public final class EdgeProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         latestVersion_ = value;
         onChanged();
         return this;
@@ -775,9 +767,7 @@ public final class EdgeProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            updateLink_ = s;
-          }
+          updateLink_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -845,7 +835,8 @@ public final class EdgeProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         updateLink_ = value;
         onChanged();
         return this;
@@ -874,8 +865,8 @@ public final class EdgeProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PEdgeVersion> PARSER =
-        new com.google.protobuf.AbstractParser<PEdgeVersion>() {
+    private static final com.google.protobuf.Parser<PEdgeVersion>
+        PARSER = new com.google.protobuf.AbstractParser<PEdgeVersion>() {
       public PEdgeVersion parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -892,6 +883,10 @@ public final class EdgeProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PEdgeVersion> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PEdgeVersion> getParserForType() {

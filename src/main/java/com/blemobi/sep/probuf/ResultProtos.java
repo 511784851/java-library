@@ -69,7 +69,7 @@ public final class ResultProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PResult)
       PResultOrBuilder {
     // Use PResult.newBuilder() to construct.
-    private PResult(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PResult(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PResult() {
@@ -108,15 +108,15 @@ public final class ResultProtos {
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              errorMsg_ = bs;
+              errorMsg_ = s;
               break;
             }
             case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              extraInfo_ = bs;
+              extraInfo_ = s;
               break;
             }
           }
@@ -173,9 +173,7 @@ public final class ResultProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          errorMsg_ = s;
-        }
+        errorMsg_ = s;
         return s;
       }
     }
@@ -217,9 +215,7 @@ public final class ResultProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          extraInfo_ = s;
-        }
+        extraInfo_ = s;
         return s;
       }
     }
@@ -260,16 +256,15 @@ public final class ResultProtos {
         output.writeInt32(1, errorCode_);
       }
       if (!getErrorMsgBytes().isEmpty()) {
-        output.writeBytes(2, getErrorMsgBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, errorMsg_);
       }
       if (!getExtraInfoBytes().isEmpty()) {
-        output.writeBytes(3, getExtraInfoBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, extraInfo_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -278,14 +273,12 @@ public final class ResultProtos {
           .computeInt32Size(1, errorCode_);
       }
       if (!getErrorMsgBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getErrorMsgBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, errorMsg_);
       }
       if (!getExtraInfoBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getExtraInfoBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, extraInfo_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -535,9 +528,7 @@ public final class ResultProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            errorMsg_ = s;
-          }
+          errorMsg_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -605,7 +596,8 @@ public final class ResultProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         errorMsg_ = value;
         onChanged();
         return this;
@@ -625,9 +617,7 @@ public final class ResultProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            extraInfo_ = s;
-          }
+          extraInfo_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -695,7 +685,8 @@ public final class ResultProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         extraInfo_ = value;
         onChanged();
         return this;
@@ -724,8 +715,8 @@ public final class ResultProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PResult> PARSER =
-        new com.google.protobuf.AbstractParser<PResult>() {
+    private static final com.google.protobuf.Parser<PResult>
+        PARSER = new com.google.protobuf.AbstractParser<PResult>() {
       public PResult parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -742,6 +733,10 @@ public final class ResultProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PResult> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PResult> getParserForType() {
@@ -775,7 +770,7 @@ public final class ResultProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PJResult)
       PJResultOrBuilder {
     // Use PJResult.newBuilder() to construct.
-    private PJResult(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PJResult(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PJResult() {
@@ -865,9 +860,8 @@ public final class ResultProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -875,7 +869,7 @@ public final class ResultProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, code_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -1116,8 +1110,8 @@ public final class ResultProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PJResult> PARSER =
-        new com.google.protobuf.AbstractParser<PJResult>() {
+    private static final com.google.protobuf.Parser<PJResult>
+        PARSER = new com.google.protobuf.AbstractParser<PJResult>() {
       public PJResult parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1134,6 +1128,10 @@ public final class ResultProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PJResult> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PJResult> getParserForType() {
@@ -1198,7 +1196,7 @@ public final class ResultProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PMessage)
       PMessageOrBuilder {
     // Use PMessage.newBuilder() to construct.
-    private PMessage(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PMessage() {
@@ -1237,9 +1235,9 @@ public final class ResultProtos {
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              type_ = bs;
+              type_ = s;
               break;
             }
             case 26: {
@@ -1301,9 +1299,7 @@ public final class ResultProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          type_ = s;
-        }
+        type_ = s;
         return s;
       }
     }
@@ -1357,16 +1353,15 @@ public final class ResultProtos {
         output.writeInt32(1, magic_);
       }
       if (!getTypeBytes().isEmpty()) {
-        output.writeBytes(2, getTypeBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, type_);
       }
       if (!data_.isEmpty()) {
         output.writeBytes(3, data_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -1375,14 +1370,13 @@ public final class ResultProtos {
           .computeInt32Size(1, magic_);
       }
       if (!getTypeBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getTypeBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, type_);
       }
       if (!data_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, data_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -1631,9 +1625,7 @@ public final class ResultProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            type_ = s;
-          }
+          type_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1701,7 +1693,8 @@ public final class ResultProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         type_ = value;
         onChanged();
         return this;
@@ -1771,8 +1764,8 @@ public final class ResultProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PMessage> PARSER =
-        new com.google.protobuf.AbstractParser<PMessage>() {
+    private static final com.google.protobuf.Parser<PMessage>
+        PARSER = new com.google.protobuf.AbstractParser<PMessage>() {
       public PMessage parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1789,6 +1782,10 @@ public final class ResultProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PMessage> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PMessage> getParserForType() {
@@ -1852,7 +1849,7 @@ public final class ResultProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PManyUUID)
       PManyUUIDOrBuilder {
     // Use PManyUUID.newBuilder() to construct.
-    private PManyUUID(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PManyUUID(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PManyUUID() {
@@ -1884,12 +1881,12 @@ public final class ResultProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 manyUUID_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000001;
               }
-              manyUUID_.add(bs);
+              manyUUID_.add(s);
               break;
             }
           }
@@ -1977,26 +1974,24 @@ public final class ResultProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < manyUUID_.size(); i++) {
-        output.writeBytes(1, manyUUID_.getByteString(i));
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, manyUUID_.getRaw(i));
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       {
         int dataSize = 0;
         for (int i = 0; i < manyUUID_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(manyUUID_.getByteString(i));
+          dataSize += computeStringSizeNoTag(manyUUID_.getRaw(i));
         }
         size += dataSize;
         size += 1 * getManyUUIDList().size();
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -2316,7 +2311,8 @@ public final class ResultProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureManyUUIDIsMutable();
+  checkByteStringIsUtf8(value);
+        ensureManyUUIDIsMutable();
         manyUUID_.add(value);
         onChanged();
         return this;
@@ -2345,8 +2341,8 @@ public final class ResultProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PManyUUID> PARSER =
-        new com.google.protobuf.AbstractParser<PManyUUID>() {
+    private static final com.google.protobuf.Parser<PManyUUID>
+        PARSER = new com.google.protobuf.AbstractParser<PManyUUID>() {
       public PManyUUID parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2363,6 +2359,10 @@ public final class ResultProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PManyUUID> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PManyUUID> getParserForType() {
@@ -2416,7 +2416,7 @@ public final class ResultProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PManyErrorCode)
       PManyErrorCodeOrBuilder {
     // Use PManyErrorCode.newBuilder() to construct.
-    private PManyErrorCode(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PManyErrorCode(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PManyErrorCode() {
@@ -2552,9 +2552,8 @@ public final class ResultProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -2572,7 +2571,7 @@ public final class ResultProtos {
         }
         manyErrorCodeMemoizedSerializedSize = dataSize;
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -2886,8 +2885,8 @@ public final class ResultProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PManyErrorCode> PARSER =
-        new com.google.protobuf.AbstractParser<PManyErrorCode>() {
+    private static final com.google.protobuf.Parser<PManyErrorCode>
+        PARSER = new com.google.protobuf.AbstractParser<PManyErrorCode>() {
       public PManyErrorCode parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2904,6 +2903,10 @@ public final class ResultProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PManyErrorCode> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PManyErrorCode> getParserForType() {
@@ -2951,7 +2954,7 @@ public final class ResultProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PStringList)
       PStringListOrBuilder {
     // Use PStringList.newBuilder() to construct.
-    private PStringList(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PStringList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PStringList() {
@@ -2983,12 +2986,12 @@ public final class ResultProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 list_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(bs);
+              list_.add(s);
               break;
             }
           }
@@ -3060,26 +3063,24 @@ public final class ResultProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < list_.size(); i++) {
-        output.writeBytes(1, list_.getByteString(i));
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, list_.getRaw(i));
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       {
         int dataSize = 0;
         for (int i = 0; i < list_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(list_.getByteString(i));
+          dataSize += computeStringSizeNoTag(list_.getRaw(i));
         }
         size += dataSize;
         size += 1 * getListList().size();
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -3363,7 +3364,8 @@ public final class ResultProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureListIsMutable();
+  checkByteStringIsUtf8(value);
+        ensureListIsMutable();
         list_.add(value);
         onChanged();
         return this;
@@ -3392,8 +3394,8 @@ public final class ResultProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PStringList> PARSER =
-        new com.google.protobuf.AbstractParser<PStringList>() {
+    private static final com.google.protobuf.Parser<PStringList>
+        PARSER = new com.google.protobuf.AbstractParser<PStringList>() {
       public PStringList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3410,6 +3412,10 @@ public final class ResultProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PStringList> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PStringList> getParserForType() {
@@ -3451,7 +3457,7 @@ public final class ResultProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PInt64List)
       PInt64ListOrBuilder {
     // Use PInt64List.newBuilder() to construct.
-    private PInt64List(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PInt64List(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PInt64List() {
@@ -3575,9 +3581,8 @@ public final class ResultProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -3595,7 +3600,7 @@ public final class ResultProtos {
         }
         listMemoizedSerializedSize = dataSize;
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -3881,8 +3886,8 @@ public final class ResultProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PInt64List> PARSER =
-        new com.google.protobuf.AbstractParser<PInt64List>() {
+    private static final com.google.protobuf.Parser<PInt64List>
+        PARSER = new com.google.protobuf.AbstractParser<PInt64List>() {
       public PInt64List parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3899,6 +3904,10 @@ public final class ResultProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PInt64List> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PInt64List> getParserForType() {
@@ -3940,7 +3949,7 @@ public final class ResultProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PInt32List)
       PInt32ListOrBuilder {
     // Use PInt32List.newBuilder() to construct.
-    private PInt32List(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PInt32List(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PInt32List() {
@@ -4064,9 +4073,8 @@ public final class ResultProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -4084,7 +4092,7 @@ public final class ResultProtos {
         }
         listMemoizedSerializedSize = dataSize;
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -4370,8 +4378,8 @@ public final class ResultProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PInt32List> PARSER =
-        new com.google.protobuf.AbstractParser<PInt32List>() {
+    private static final com.google.protobuf.Parser<PInt32List>
+        PARSER = new com.google.protobuf.AbstractParser<PInt32List>() {
       public PInt32List parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4388,6 +4396,10 @@ public final class ResultProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PInt32List> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PInt32List> getParserForType() {
@@ -4429,7 +4441,7 @@ public final class ResultProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PBoolList)
       PBoolListOrBuilder {
     // Use PBoolList.newBuilder() to construct.
-    private PBoolList(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PBoolList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PBoolList() {
@@ -4553,9 +4565,8 @@ public final class ResultProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -4570,7 +4581,7 @@ public final class ResultProtos {
         }
         listMemoizedSerializedSize = dataSize;
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -4856,8 +4867,8 @@ public final class ResultProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PBoolList> PARSER =
-        new com.google.protobuf.AbstractParser<PBoolList>() {
+    private static final com.google.protobuf.Parser<PBoolList>
+        PARSER = new com.google.protobuf.AbstractParser<PBoolList>() {
       public PBoolList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4874,6 +4885,10 @@ public final class ResultProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PBoolList> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PBoolList> getParserForType() {
@@ -4915,7 +4930,7 @@ public final class ResultProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PFloat64List)
       PFloat64ListOrBuilder {
     // Use PFloat64List.newBuilder() to construct.
-    private PFloat64List(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PFloat64List(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PFloat64List() {
@@ -5039,9 +5054,8 @@ public final class ResultProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -5056,7 +5070,7 @@ public final class ResultProtos {
         }
         listMemoizedSerializedSize = dataSize;
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -5342,8 +5356,8 @@ public final class ResultProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PFloat64List> PARSER =
-        new com.google.protobuf.AbstractParser<PFloat64List>() {
+    private static final com.google.protobuf.Parser<PFloat64List>
+        PARSER = new com.google.protobuf.AbstractParser<PFloat64List>() {
       public PFloat64List parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5360,6 +5374,10 @@ public final class ResultProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PFloat64List> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PFloat64List> getParserForType() {
@@ -5398,7 +5416,7 @@ public final class ResultProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PStringSingle)
       PStringSingleOrBuilder {
     // Use PStringSingle.newBuilder() to construct.
-    private PStringSingle(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PStringSingle(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PStringSingle() {
@@ -5430,9 +5448,9 @@ public final class ResultProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              val_ = bs;
+              val_ = s;
               break;
             }
           }
@@ -5472,9 +5490,7 @@ public final class ResultProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          val_ = s;
-        }
+        val_ = s;
         return s;
       }
     }
@@ -5508,21 +5524,19 @@ public final class ResultProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getValBytes().isEmpty()) {
-        output.writeBytes(1, getValBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, val_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getValBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getValBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, val_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -5717,9 +5731,7 @@ public final class ResultProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            val_ = s;
-          }
+          val_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -5771,7 +5783,8 @@ public final class ResultProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         val_ = value;
         onChanged();
         return this;
@@ -5800,8 +5813,8 @@ public final class ResultProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PStringSingle> PARSER =
-        new com.google.protobuf.AbstractParser<PStringSingle>() {
+    private static final com.google.protobuf.Parser<PStringSingle>
+        PARSER = new com.google.protobuf.AbstractParser<PStringSingle>() {
       public PStringSingle parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5818,6 +5831,10 @@ public final class ResultProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PStringSingle> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PStringSingle> getParserForType() {
@@ -5851,7 +5868,7 @@ public final class ResultProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PInt64Single)
       PInt64SingleOrBuilder {
     // Use PInt64Single.newBuilder() to construct.
-    private PInt64Single(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PInt64Single(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PInt64Single() {
@@ -5937,9 +5954,8 @@ public final class ResultProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -5947,7 +5963,7 @@ public final class ResultProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, val_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -6180,8 +6196,8 @@ public final class ResultProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PInt64Single> PARSER =
-        new com.google.protobuf.AbstractParser<PInt64Single>() {
+    private static final com.google.protobuf.Parser<PInt64Single>
+        PARSER = new com.google.protobuf.AbstractParser<PInt64Single>() {
       public PInt64Single parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6198,6 +6214,10 @@ public final class ResultProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PInt64Single> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PInt64Single> getParserForType() {
@@ -6231,7 +6251,7 @@ public final class ResultProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PInt32Single)
       PInt32SingleOrBuilder {
     // Use PInt32Single.newBuilder() to construct.
-    private PInt32Single(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PInt32Single(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PInt32Single() {
@@ -6317,9 +6337,8 @@ public final class ResultProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -6327,7 +6346,7 @@ public final class ResultProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, val_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -6560,8 +6579,8 @@ public final class ResultProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PInt32Single> PARSER =
-        new com.google.protobuf.AbstractParser<PInt32Single>() {
+    private static final com.google.protobuf.Parser<PInt32Single>
+        PARSER = new com.google.protobuf.AbstractParser<PInt32Single>() {
       public PInt32Single parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6578,6 +6597,10 @@ public final class ResultProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PInt32Single> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PInt32Single> getParserForType() {
@@ -6611,7 +6634,7 @@ public final class ResultProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PBoolSingle)
       PBoolSingleOrBuilder {
     // Use PBoolSingle.newBuilder() to construct.
-    private PBoolSingle(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PBoolSingle(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PBoolSingle() {
@@ -6697,9 +6720,8 @@ public final class ResultProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -6707,7 +6729,7 @@ public final class ResultProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, val_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -6940,8 +6962,8 @@ public final class ResultProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PBoolSingle> PARSER =
-        new com.google.protobuf.AbstractParser<PBoolSingle>() {
+    private static final com.google.protobuf.Parser<PBoolSingle>
+        PARSER = new com.google.protobuf.AbstractParser<PBoolSingle>() {
       public PBoolSingle parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6958,6 +6980,10 @@ public final class ResultProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PBoolSingle> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PBoolSingle> getParserForType() {
@@ -6991,7 +7017,7 @@ public final class ResultProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PFloat64Single)
       PFloat64SingleOrBuilder {
     // Use PFloat64Single.newBuilder() to construct.
-    private PFloat64Single(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PFloat64Single(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PFloat64Single() {
@@ -7077,9 +7103,8 @@ public final class ResultProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -7087,7 +7112,7 @@ public final class ResultProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(1, val_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -7320,8 +7345,8 @@ public final class ResultProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PFloat64Single> PARSER =
-        new com.google.protobuf.AbstractParser<PFloat64Single>() {
+    private static final com.google.protobuf.Parser<PFloat64Single>
+        PARSER = new com.google.protobuf.AbstractParser<PFloat64Single>() {
       public PFloat64Single parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7338,6 +7363,10 @@ public final class ResultProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PFloat64Single> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PFloat64Single> getParserForType() {
@@ -7376,7 +7405,7 @@ public final class ResultProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PBinaryMsg)
       PBinaryMsgOrBuilder {
     // Use PBinaryMsg.newBuilder() to construct.
-    private PBinaryMsg(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PBinaryMsg(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PBinaryMsg() {
@@ -7480,9 +7509,8 @@ public final class ResultProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -7494,7 +7522,7 @@ public final class ResultProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, msgData_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -7762,8 +7790,8 @@ public final class ResultProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PBinaryMsg> PARSER =
-        new com.google.protobuf.AbstractParser<PBinaryMsg>() {
+    private static final com.google.protobuf.Parser<PBinaryMsg>
+        PARSER = new com.google.protobuf.AbstractParser<PBinaryMsg>() {
       public PBinaryMsg parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7780,6 +7808,10 @@ public final class ResultProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PBinaryMsg> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PBinaryMsg> getParserForType() {
@@ -7832,7 +7864,7 @@ public final class ResultProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PBinaryMsgList)
       PBinaryMsgListOrBuilder {
     // Use PBinaryMsgList.newBuilder() to construct.
-    private PBinaryMsgList(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PBinaryMsgList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PBinaryMsgList() {
@@ -7868,7 +7900,7 @@ public final class ResultProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.ResultProtos.PBinaryMsg>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.ResultProtos.PBinaryMsg.PARSER, extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.ResultProtos.PBinaryMsg.parser(), extensionRegistry));
               break;
             }
           }
@@ -7950,9 +7982,8 @@ public final class ResultProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -7960,7 +7991,7 @@ public final class ResultProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, list_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -8445,8 +8476,8 @@ public final class ResultProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PBinaryMsgList> PARSER =
-        new com.google.protobuf.AbstractParser<PBinaryMsgList>() {
+    private static final com.google.protobuf.Parser<PBinaryMsgList>
+        PARSER = new com.google.protobuf.AbstractParser<PBinaryMsgList>() {
       public PBinaryMsgList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8463,6 +8494,10 @@ public final class ResultProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PBinaryMsgList> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PBinaryMsgList> getParserForType() {
@@ -8524,7 +8559,7 @@ public final class ResultProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PHealthItem)
       PHealthItemOrBuilder {
     // Use PHealthItem.newBuilder() to construct.
-    private PHealthItem(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PHealthItem(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PHealthItem() {
@@ -8557,9 +8592,9 @@ public final class ResultProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              name_ = bs;
+              name_ = s;
               break;
             }
             case 16: {
@@ -8632,9 +8667,7 @@ public final class ResultProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          name_ = s;
-        }
+        name_ = s;
         return s;
       }
     }
@@ -8715,7 +8748,7 @@ public final class ResultProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getNameBytes().isEmpty()) {
-        output.writeBytes(1, getNameBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, name_);
       }
       if (status_ != 0) {
         output.writeInt32(2, status_);
@@ -8731,15 +8764,13 @@ public final class ResultProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getNameBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, name_);
       }
       if (status_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -8755,7 +8786,7 @@ public final class ResultProtos {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(3, detail);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -8991,9 +9022,7 @@ public final class ResultProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            name_ = s;
-          }
+          name_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -9061,7 +9090,8 @@ public final class ResultProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         name_ = value;
         onChanged();
         return this;
@@ -9140,6 +9170,14 @@ public final class ResultProtos {
       getMutableDetail() {
         return internalGetMutableDetail().getMutableMap();
       }
+      /**
+       * <code>map&lt;string, string&gt; detail = 3;</code>
+       */
+      public Builder putAllDetail(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        getMutableDetail().putAll(values);
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return this;
@@ -9164,8 +9202,8 @@ public final class ResultProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PHealthItem> PARSER =
-        new com.google.protobuf.AbstractParser<PHealthItem>() {
+    private static final com.google.protobuf.Parser<PHealthItem>
+        PARSER = new com.google.protobuf.AbstractParser<PHealthItem>() {
       public PHealthItem parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9182,6 +9220,10 @@ public final class ResultProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PHealthItem> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PHealthItem> getParserForType() {
@@ -9281,7 +9323,7 @@ public final class ResultProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PServiceHealth)
       PServiceHealthOrBuilder {
     // Use PServiceHealth.newBuilder() to construct.
-    private PServiceHealth(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PServiceHealth(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PServiceHealth() {
@@ -9320,9 +9362,9 @@ public final class ResultProtos {
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              serviceName_ = bs;
+              serviceName_ = s;
               break;
             }
             case 26: {
@@ -9330,7 +9372,7 @@ public final class ResultProtos {
                 healInfoList_ = new java.util.ArrayList<com.blemobi.sep.probuf.ResultProtos.PHealthItem>();
                 mutable_bitField0_ |= 0x00000004;
               }
-              healInfoList_.add(input.readMessage(com.blemobi.sep.probuf.ResultProtos.PHealthItem.PARSER, extensionRegistry));
+              healInfoList_.add(input.readMessage(com.blemobi.sep.probuf.ResultProtos.PHealthItem.parser(), extensionRegistry));
               break;
             }
           }
@@ -9391,9 +9433,7 @@ public final class ResultProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          serviceName_ = s;
-        }
+        serviceName_ = s;
         return s;
       }
     }
@@ -9489,16 +9529,15 @@ public final class ResultProtos {
         output.writeInt32(1, status_);
       }
       if (!getServiceNameBytes().isEmpty()) {
-        output.writeBytes(2, getServiceNameBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, serviceName_);
       }
       for (int i = 0; i < healInfoList_.size(); i++) {
         output.writeMessage(3, healInfoList_.get(i));
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -9507,14 +9546,13 @@ public final class ResultProtos {
           .computeInt32Size(1, status_);
       }
       if (!getServiceNameBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getServiceNameBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, serviceName_);
       }
       for (int i = 0; i < healInfoList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, healInfoList_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -9803,9 +9841,7 @@ public final class ResultProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            serviceName_ = s;
-          }
+          serviceName_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -9873,7 +9909,8 @@ public final class ResultProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         serviceName_ = value;
         onChanged();
         return this;
@@ -10214,8 +10251,8 @@ public final class ResultProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PServiceHealth> PARSER =
-        new com.google.protobuf.AbstractParser<PServiceHealth>() {
+    private static final com.google.protobuf.Parser<PServiceHealth>
+        PARSER = new com.google.protobuf.AbstractParser<PServiceHealth>() {
       public PServiceHealth parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10232,6 +10269,10 @@ public final class ResultProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PServiceHealth> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PServiceHealth> getParserForType() {
@@ -10304,7 +10345,7 @@ public final class ResultProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PServiceHealthList)
       PServiceHealthListOrBuilder {
     // Use PServiceHealthList.newBuilder() to construct.
-    private PServiceHealthList(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PServiceHealthList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PServiceHealthList() {
@@ -10340,7 +10381,7 @@ public final class ResultProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.ResultProtos.PServiceHealth>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.ResultProtos.PServiceHealth.PARSER, extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.ResultProtos.PServiceHealth.parser(), extensionRegistry));
               break;
             }
           }
@@ -10442,9 +10483,8 @@ public final class ResultProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -10452,7 +10492,7 @@ public final class ResultProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, list_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -11009,8 +11049,8 @@ public final class ResultProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PServiceHealthList> PARSER =
-        new com.google.protobuf.AbstractParser<PServiceHealthList>() {
+    private static final com.google.protobuf.Parser<PServiceHealthList>
+        PARSER = new com.google.protobuf.AbstractParser<PServiceHealthList>() {
       public PServiceHealthList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11027,6 +11067,10 @@ public final class ResultProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PServiceHealthList> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PServiceHealthList> getParserForType() {
@@ -11064,7 +11108,7 @@ public final class ResultProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PServicesStatus)
       PServicesStatusOrBuilder {
     // Use PServicesStatus.newBuilder() to construct.
-    private PServicesStatus(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PServicesStatus(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PServicesStatus() {
@@ -11154,9 +11198,8 @@ public final class ResultProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -11164,7 +11207,7 @@ public final class ResultProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, status_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -11409,8 +11452,8 @@ public final class ResultProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PServicesStatus> PARSER =
-        new com.google.protobuf.AbstractParser<PServicesStatus>() {
+    private static final com.google.protobuf.Parser<PServicesStatus>
+        PARSER = new com.google.protobuf.AbstractParser<PServicesStatus>() {
       public PServicesStatus parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11427,6 +11470,10 @@ public final class ResultProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PServicesStatus> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PServicesStatus> getParserForType() {
@@ -11498,7 +11545,7 @@ public final class ResultProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PServiceHeartbeatInfo)
       PServiceHeartbeatInfoOrBuilder {
     // Use PServiceHeartbeatInfo.newBuilder() to construct.
-    private PServiceHeartbeatInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PServiceHeartbeatInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PServiceHeartbeatInfo() {
@@ -11679,9 +11726,8 @@ public final class ResultProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -11707,7 +11753,7 @@ public final class ResultProtos {
         }
         abnormalIdListMemoizedSerializedSize = dataSize;
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -12111,8 +12157,8 @@ public final class ResultProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PServiceHeartbeatInfo> PARSER =
-        new com.google.protobuf.AbstractParser<PServiceHeartbeatInfo>() {
+    private static final com.google.protobuf.Parser<PServiceHeartbeatInfo>
+        PARSER = new com.google.protobuf.AbstractParser<PServiceHeartbeatInfo>() {
       public PServiceHeartbeatInfo parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12129,6 +12175,10 @@ public final class ResultProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PServiceHeartbeatInfo> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PServiceHeartbeatInfo> getParserForType() {

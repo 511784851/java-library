@@ -23,12 +23,11 @@ package com.blemobi.library.grpc;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.blemobi.sep.grpc.grpcDataPublishingGrpc;
+import com.blemobi.sep.grpc.grpcDataPublishingGrpc.grpcDataPublishingBlockingStub;
+import com.blemobi.sep.probuf.DataPublishingApiProtos;
 import com.blemobi.sep.probuf.DataPublishingProtos;
 import com.blemobi.sep.probuf.ResultProtos;
-
-import bbproto.DatapublishingInside;
-import bbproto.grpcDataPublishingGrpc;
-import bbproto.grpcDataPublishingGrpc.grpcDataPublishingBlockingStub;
 
 /**
  * @ClassName DataPublishGRPCClient
@@ -54,7 +53,7 @@ public class SelectFansGRPCClient extends BaseGRPCClient {
         // builder.addSkipUuid(value);
         builder.setUuid((String) obj[2]);
         DataPublishingProtos.PFansFilterParam request = builder.build();
-        DatapublishingInside.PScrollResult result = stub.selectFans(request);
+        DataPublishingApiProtos.PScrollResult result = stub.selectFans(request);
         while (true) {
             String cursor = result.getCursor();
             List<String> idList = result.getIdList();

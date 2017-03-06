@@ -39,7 +39,7 @@ public final class DataPublishingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PWords)
       PWordsOrBuilder {
     // Use PWords.newBuilder() to construct.
-    private PWords(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PWords(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PWords() {
@@ -71,12 +71,12 @@ public final class DataPublishingProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 word_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000001;
               }
-              word_.add(bs);
+              word_.add(s);
               break;
             }
           }
@@ -148,26 +148,24 @@ public final class DataPublishingProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < word_.size(); i++) {
-        output.writeBytes(1, word_.getByteString(i));
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, word_.getRaw(i));
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       {
         int dataSize = 0;
         for (int i = 0; i < word_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(word_.getByteString(i));
+          dataSize += computeStringSizeNoTag(word_.getRaw(i));
         }
         size += dataSize;
         size += 1 * getWordList().size();
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -447,7 +445,8 @@ public final class DataPublishingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureWordIsMutable();
+  checkByteStringIsUtf8(value);
+        ensureWordIsMutable();
         word_.add(value);
         onChanged();
         return this;
@@ -476,8 +475,8 @@ public final class DataPublishingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PWords> PARSER =
-        new com.google.protobuf.AbstractParser<PWords>() {
+    private static final com.google.protobuf.Parser<PWords>
+        PARSER = new com.google.protobuf.AbstractParser<PWords>() {
       public PWords parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -494,6 +493,10 @@ public final class DataPublishingProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PWords> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PWords> getParserForType() {
@@ -672,7 +675,7 @@ public final class DataPublishingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PGuy)
       PGuyOrBuilder {
     // Use PGuy.newBuilder() to construct.
-    private PGuy(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PGuy(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PGuy() {
@@ -715,39 +718,39 @@ public final class DataPublishingProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              uuid_ = bs;
+              uuid_ = s;
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              username_ = bs;
+              username_ = s;
               break;
             }
             case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              nickname_ = bs;
+              nickname_ = s;
               break;
             }
             case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              realname_ = bs;
+              realname_ = s;
               break;
             }
             case 42: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              whatsup_ = bs;
+              whatsup_ = s;
               break;
             }
             case 50: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              headImgURL_ = bs;
+              headImgURL_ = s;
               break;
             }
             case 56: {
@@ -817,9 +820,7 @@ public final class DataPublishingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          uuid_ = s;
-        }
+        uuid_ = s;
         return s;
       }
     }
@@ -857,9 +858,7 @@ public final class DataPublishingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          username_ = s;
-        }
+        username_ = s;
         return s;
       }
     }
@@ -901,9 +900,7 @@ public final class DataPublishingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          nickname_ = s;
-        }
+        nickname_ = s;
         return s;
       }
     }
@@ -945,9 +942,7 @@ public final class DataPublishingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          realname_ = s;
-        }
+        realname_ = s;
         return s;
       }
     }
@@ -989,9 +984,7 @@ public final class DataPublishingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          whatsup_ = s;
-        }
+        whatsup_ = s;
         return s;
       }
     }
@@ -1033,9 +1026,7 @@ public final class DataPublishingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          headImgURL_ = s;
-        }
+        headImgURL_ = s;
         return s;
       }
     }
@@ -1151,22 +1142,22 @@ public final class DataPublishingProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUuidBytes().isEmpty()) {
-        output.writeBytes(1, getUuidBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, uuid_);
       }
       if (!getUsernameBytes().isEmpty()) {
-        output.writeBytes(2, getUsernameBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, username_);
       }
       if (!getNicknameBytes().isEmpty()) {
-        output.writeBytes(3, getNicknameBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, nickname_);
       }
       if (!getRealnameBytes().isEmpty()) {
-        output.writeBytes(4, getRealnameBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, realname_);
       }
       if (!getWhatsupBytes().isEmpty()) {
-        output.writeBytes(5, getWhatsupBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, whatsup_);
       }
       if (!getHeadImgURLBytes().isEmpty()) {
-        output.writeBytes(6, getHeadImgURLBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 6, headImgURL_);
       }
       if (level_ != 0) {
         output.writeInt32(7, level_);
@@ -1188,35 +1179,28 @@ public final class DataPublishingProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getUuidBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getUuidBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, uuid_);
       }
       if (!getUsernameBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getUsernameBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, username_);
       }
       if (!getNicknameBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getNicknameBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, nickname_);
       }
       if (!getRealnameBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getRealnameBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, realname_);
       }
       if (!getWhatsupBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(5, getWhatsupBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, whatsup_);
       }
       if (!getHeadImgURLBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(6, getHeadImgURLBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, headImgURL_);
       }
       if (level_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -1242,7 +1226,7 @@ public final class DataPublishingProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(15, distance_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -1504,9 +1488,7 @@ public final class DataPublishingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            uuid_ = s;
-          }
+          uuid_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1558,7 +1540,8 @@ public final class DataPublishingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         uuid_ = value;
         onChanged();
         return this;
@@ -1578,9 +1561,7 @@ public final class DataPublishingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            username_ = s;
-          }
+          username_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1648,7 +1629,8 @@ public final class DataPublishingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         username_ = value;
         onChanged();
         return this;
@@ -1668,9 +1650,7 @@ public final class DataPublishingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            nickname_ = s;
-          }
+          nickname_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1738,7 +1718,8 @@ public final class DataPublishingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         nickname_ = value;
         onChanged();
         return this;
@@ -1758,9 +1739,7 @@ public final class DataPublishingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            realname_ = s;
-          }
+          realname_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1828,7 +1807,8 @@ public final class DataPublishingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         realname_ = value;
         onChanged();
         return this;
@@ -1848,9 +1828,7 @@ public final class DataPublishingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            whatsup_ = s;
-          }
+          whatsup_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1918,7 +1896,8 @@ public final class DataPublishingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         whatsup_ = value;
         onChanged();
         return this;
@@ -1938,9 +1917,7 @@ public final class DataPublishingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            headImgURL_ = s;
-          }
+          headImgURL_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -2008,7 +1985,8 @@ public final class DataPublishingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         headImgURL_ = value;
         onChanged();
         return this;
@@ -2265,8 +2243,8 @@ public final class DataPublishingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PGuy> PARSER =
-        new com.google.protobuf.AbstractParser<PGuy>() {
+    private static final com.google.protobuf.Parser<PGuy>
+        PARSER = new com.google.protobuf.AbstractParser<PGuy>() {
       public PGuy parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2283,6 +2261,10 @@ public final class DataPublishingProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PGuy> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PGuy> getParserForType() {
@@ -2340,7 +2322,7 @@ public final class DataPublishingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PGuyList)
       PGuyListOrBuilder {
     // Use PGuyList.newBuilder() to construct.
-    private PGuyList(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PGuyList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PGuyList() {
@@ -2377,7 +2359,7 @@ public final class DataPublishingProtos {
                 guy_ = new java.util.ArrayList<com.blemobi.sep.probuf.DataPublishingProtos.PGuy>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              guy_.add(input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PGuy.PARSER, extensionRegistry));
+              guy_.add(input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PGuy.parser(), extensionRegistry));
               break;
             }
             case 16: {
@@ -2481,9 +2463,8 @@ public final class DataPublishingProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -2495,7 +2476,7 @@ public final class DataPublishingProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, total_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -3022,8 +3003,8 @@ public final class DataPublishingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PGuyList> PARSER =
-        new com.google.protobuf.AbstractParser<PGuyList>() {
+    private static final com.google.protobuf.Parser<PGuyList>
+        PARSER = new com.google.protobuf.AbstractParser<PGuyList>() {
       public PGuyList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3040,6 +3021,10 @@ public final class DataPublishingProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PGuyList> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PGuyList> getParserForType() {
@@ -3179,7 +3164,7 @@ public final class DataPublishingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PTopicNews)
       PTopicNewsOrBuilder {
     // Use PTopicNews.newBuilder() to construct.
-    private PTopicNews(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PTopicNews(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PTopicNews() {
@@ -3215,18 +3200,18 @@ public final class DataPublishingProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              topic_ = bs;
+              topic_ = s;
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
                 rel_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000002;
               }
-              rel_.add(bs);
+              rel_.add(s);
               break;
             }
             case 24: {
@@ -3244,7 +3229,7 @@ public final class DataPublishingProtos {
                 articles_ = new java.util.ArrayList<com.blemobi.sep.probuf.NewsProtos.PPostInfo>();
                 mutable_bitField0_ |= 0x00000010;
               }
-              articles_.add(input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostInfo.PARSER, extensionRegistry));
+              articles_.add(input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostInfo.parser(), extensionRegistry));
               break;
             }
           }
@@ -3295,9 +3280,7 @@ public final class DataPublishingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          topic_ = s;
-        }
+        topic_ = s;
         return s;
       }
     }
@@ -3461,10 +3444,10 @@ public final class DataPublishingProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getTopicBytes().isEmpty()) {
-        output.writeBytes(1, getTopicBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, topic_);
       }
       for (int i = 0; i < rel_.size(); i++) {
-        output.writeBytes(2, rel_.getByteString(i));
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, rel_.getRaw(i));
       }
       if (views_ != 0) {
         output.writeInt32(3, views_);
@@ -3477,21 +3460,18 @@ public final class DataPublishingProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getTopicBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getTopicBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, topic_);
       }
       {
         int dataSize = 0;
         for (int i = 0; i < rel_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(rel_.getByteString(i));
+          dataSize += computeStringSizeNoTag(rel_.getRaw(i));
         }
         size += dataSize;
         size += 1 * getRelList().size();
@@ -3508,7 +3488,7 @@ public final class DataPublishingProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, articles_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -3778,9 +3758,7 @@ public final class DataPublishingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            topic_ = s;
-          }
+          topic_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -3848,7 +3826,8 @@ public final class DataPublishingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         topic_ = value;
         onChanged();
         return this;
@@ -3977,7 +3956,8 @@ public final class DataPublishingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureRelIsMutable();
+  checkByteStringIsUtf8(value);
+        ensureRelIsMutable();
         rel_.add(value);
         onChanged();
         return this;
@@ -4394,8 +4374,8 @@ public final class DataPublishingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PTopicNews> PARSER =
-        new com.google.protobuf.AbstractParser<PTopicNews>() {
+    private static final com.google.protobuf.Parser<PTopicNews>
+        PARSER = new com.google.protobuf.AbstractParser<PTopicNews>() {
       public PTopicNews parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4412,6 +4392,10 @@ public final class DataPublishingProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PTopicNews> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PTopicNews> getParserForType() {
@@ -4481,7 +4465,7 @@ public final class DataPublishingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PPostData)
       PPostDataOrBuilder {
     // Use PPostData.newBuilder() to construct.
-    private PPostData(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PPostData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PPostData() {
@@ -4659,9 +4643,8 @@ public final class DataPublishingProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -4685,7 +4668,7 @@ public final class DataPublishingProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(5, shares_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -5102,8 +5085,8 @@ public final class DataPublishingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PPostData> PARSER =
-        new com.google.protobuf.AbstractParser<PPostData>() {
+    private static final com.google.protobuf.Parser<PPostData>
+        PARSER = new com.google.protobuf.AbstractParser<PPostData>() {
       public PPostData parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5120,6 +5103,10 @@ public final class DataPublishingProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PPostData> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PPostData> getParserForType() {
@@ -5169,7 +5156,7 @@ public final class DataPublishingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PRegionData)
       PRegionDataOrBuilder {
     // Use PRegionData.newBuilder() to construct.
-    private PRegionData(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PRegionData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PRegionData() {
@@ -5202,9 +5189,9 @@ public final class DataPublishingProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              region_ = bs;
+              region_ = s;
               break;
             }
             case 16: {
@@ -5254,9 +5241,7 @@ public final class DataPublishingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          region_ = s;
-        }
+        region_ = s;
         return s;
       }
     }
@@ -5304,28 +5289,26 @@ public final class DataPublishingProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getRegionBytes().isEmpty()) {
-        output.writeBytes(1, getRegionBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, region_);
       }
       if (count_ != 0) {
         output.writeInt32(2, count_);
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getRegionBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getRegionBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, region_);
       }
       if (count_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, count_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -5527,9 +5510,7 @@ public final class DataPublishingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            region_ = s;
-          }
+          region_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -5601,7 +5582,8 @@ public final class DataPublishingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         region_ = value;
         onChanged();
         return this;
@@ -5656,8 +5638,8 @@ public final class DataPublishingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PRegionData> PARSER =
-        new com.google.protobuf.AbstractParser<PRegionData>() {
+    private static final com.google.protobuf.Parser<PRegionData>
+        PARSER = new com.google.protobuf.AbstractParser<PRegionData>() {
       public PRegionData parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5674,6 +5656,10 @@ public final class DataPublishingProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PRegionData> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PRegionData> getParserForType() {
@@ -5708,7 +5694,7 @@ public final class DataPublishingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PAgeData)
       PAgeDataOrBuilder {
     // Use PAgeData.newBuilder() to construct.
-    private PAgeData(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PAgeData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PAgeData() {
@@ -5812,9 +5798,8 @@ public final class DataPublishingProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -5826,7 +5811,7 @@ public final class DataPublishingProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, count_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -6087,8 +6072,8 @@ public final class DataPublishingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PAgeData> PARSER =
-        new com.google.protobuf.AbstractParser<PAgeData>() {
+    private static final com.google.protobuf.Parser<PAgeData>
+        PARSER = new com.google.protobuf.AbstractParser<PAgeData>() {
       public PAgeData parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6105,6 +6090,10 @@ public final class DataPublishingProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PAgeData> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PAgeData> getParserForType() {
@@ -6253,7 +6242,7 @@ public final class DataPublishingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PFollowData)
       PFollowDataOrBuilder {
     // Use PFollowData.newBuilder() to construct.
-    private PFollowData(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PFollowData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PFollowData() {
@@ -6314,7 +6303,7 @@ public final class DataPublishingProtos {
                 region_ = new java.util.ArrayList<com.blemobi.sep.probuf.DataPublishingProtos.PRegionData>();
                 mutable_bitField0_ |= 0x00000010;
               }
-              region_.add(input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PRegionData.PARSER, extensionRegistry));
+              region_.add(input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PRegionData.parser(), extensionRegistry));
               break;
             }
             case 50: {
@@ -6322,7 +6311,7 @@ public final class DataPublishingProtos {
                 age_ = new java.util.ArrayList<com.blemobi.sep.probuf.DataPublishingProtos.PAgeData>();
                 mutable_bitField0_ |= 0x00000020;
               }
-              age_.add(input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PAgeData.PARSER, extensionRegistry));
+              age_.add(input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PAgeData.parser(), extensionRegistry));
               break;
             }
           }
@@ -6550,9 +6539,8 @@ public final class DataPublishingProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -6580,7 +6568,7 @@ public final class DataPublishingProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, age_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -7665,8 +7653,8 @@ public final class DataPublishingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PFollowData> PARSER =
-        new com.google.protobuf.AbstractParser<PFollowData>() {
+    private static final com.google.protobuf.Parser<PFollowData>
+        PARSER = new com.google.protobuf.AbstractParser<PFollowData>() {
       public PFollowData parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7683,6 +7671,10 @@ public final class DataPublishingProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PFollowData> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PFollowData> getParserForType() {
@@ -7784,7 +7776,7 @@ public final class DataPublishingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PDayData)
       PDayDataOrBuilder {
     // Use PDayData.newBuilder() to construct.
-    private PDayData(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PDayData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PDayData() {
@@ -7817,9 +7809,9 @@ public final class DataPublishingProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              date_ = bs;
+              date_ = s;
               break;
             }
             case 16: {
@@ -7832,7 +7824,7 @@ public final class DataPublishingProtos {
               if (follow_ != null) {
                 subBuilder = follow_.toBuilder();
               }
-              follow_ = input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PFollowData.PARSER, extensionRegistry);
+              follow_ = input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PFollowData.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(follow_);
                 follow_ = subBuilder.buildPartial();
@@ -7845,7 +7837,7 @@ public final class DataPublishingProtos {
               if (post_ != null) {
                 subBuilder = post_.toBuilder();
               }
-              post_ = input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PPostData.PARSER, extensionRegistry);
+              post_ = input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PPostData.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(post_);
                 post_ = subBuilder.buildPartial();
@@ -7894,9 +7886,7 @@ public final class DataPublishingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          date_ = s;
-        }
+        date_ = s;
         return s;
       }
     }
@@ -8013,7 +8003,7 @@ public final class DataPublishingProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getDateBytes().isEmpty()) {
-        output.writeBytes(1, getDateBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, date_);
       }
       if (worth_ != 0) {
         output.writeInt32(2, worth_);
@@ -8026,15 +8016,13 @@ public final class DataPublishingProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getDateBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getDateBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, date_);
       }
       if (worth_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -8048,7 +8036,7 @@ public final class DataPublishingProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getPost());
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -8277,9 +8265,7 @@ public final class DataPublishingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            date_ = s;
-          }
+          date_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -8347,7 +8333,8 @@ public final class DataPublishingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         date_ = value;
         onChanged();
         return this;
@@ -8720,8 +8707,8 @@ public final class DataPublishingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PDayData> PARSER =
-        new com.google.protobuf.AbstractParser<PDayData>() {
+    private static final com.google.protobuf.Parser<PDayData>
+        PARSER = new com.google.protobuf.AbstractParser<PDayData>() {
       public PDayData parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8738,6 +8725,10 @@ public final class DataPublishingProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PDayData> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PDayData> getParserForType() {
@@ -8786,7 +8777,7 @@ public final class DataPublishingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PDaysData)
       PDaysDataOrBuilder {
     // Use PDaysData.newBuilder() to construct.
-    private PDaysData(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PDaysData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PDaysData() {
@@ -8822,7 +8813,7 @@ public final class DataPublishingProtos {
                 data_ = new java.util.ArrayList<com.blemobi.sep.probuf.DataPublishingProtos.PDayData>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              data_.add(input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PDayData.PARSER, extensionRegistry));
+              data_.add(input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PDayData.parser(), extensionRegistry));
               break;
             }
           }
@@ -8904,9 +8895,8 @@ public final class DataPublishingProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -8914,7 +8904,7 @@ public final class DataPublishingProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, data_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -9395,8 +9385,8 @@ public final class DataPublishingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PDaysData> PARSER =
-        new com.google.protobuf.AbstractParser<PDaysData>() {
+    private static final com.google.protobuf.Parser<PDaysData>
+        PARSER = new com.google.protobuf.AbstractParser<PDaysData>() {
       public PDaysData parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9413,6 +9403,10 @@ public final class DataPublishingProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PDaysData> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PDaysData> getParserForType() {
@@ -9477,7 +9471,7 @@ public final class DataPublishingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PNewestData)
       PNewestDataOrBuilder {
     // Use PNewestData.newBuilder() to construct.
-    private PNewestData(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PNewestData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PNewestData() {
@@ -9511,9 +9505,9 @@ public final class DataPublishingProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              date_ = bs;
+              date_ = s;
               break;
             }
             case 16: {
@@ -9567,9 +9561,7 @@ public final class DataPublishingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          date_ = s;
-        }
+        date_ = s;
         return s;
       }
     }
@@ -9633,7 +9625,7 @@ public final class DataPublishingProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getDateBytes().isEmpty()) {
-        output.writeBytes(1, getDateBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, date_);
       }
       if (follows_ != 0) {
         output.writeInt32(2, follows_);
@@ -9643,15 +9635,13 @@ public final class DataPublishingProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getDateBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getDateBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, date_);
       }
       if (follows_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -9661,7 +9651,7 @@ public final class DataPublishingProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, posts_);
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -9872,9 +9862,7 @@ public final class DataPublishingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            date_ = s;
-          }
+          date_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -9942,7 +9930,8 @@ public final class DataPublishingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         date_ = value;
         onChanged();
         return this;
@@ -10047,8 +10036,8 @@ public final class DataPublishingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PNewestData> PARSER =
-        new com.google.protobuf.AbstractParser<PNewestData>() {
+    private static final com.google.protobuf.Parser<PNewestData>
+        PARSER = new com.google.protobuf.AbstractParser<PNewestData>() {
       public PNewestData parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10065,6 +10054,10 @@ public final class DataPublishingProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PNewestData> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PNewestData> getParserForType() {
@@ -10246,7 +10239,7 @@ public final class DataPublishingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PGame)
       PGameOrBuilder {
     // Use PGame.newBuilder() to construct.
-    private PGame(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PGame(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PGame() {
@@ -10284,7 +10277,7 @@ public final class DataPublishingProtos {
               if (info_ != null) {
                 subBuilder = info_.toBuilder();
               }
-              info_ = input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PGuy.PARSER, extensionRegistry);
+              info_ = input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PGuy.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(info_);
                 info_ = subBuilder.buildPartial();
@@ -10297,7 +10290,7 @@ public final class DataPublishingProtos {
                 club_ = new java.util.ArrayList<com.blemobi.sep.probuf.DataPublishingProtos.PGuy>();
                 mutable_bitField0_ |= 0x00000002;
               }
-              club_.add(input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PGuy.PARSER, extensionRegistry));
+              club_.add(input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PGuy.parser(), extensionRegistry));
               break;
             }
             case 34: {
@@ -10305,7 +10298,7 @@ public final class DataPublishingProtos {
                 player_ = new java.util.ArrayList<com.blemobi.sep.probuf.DataPublishingProtos.PGuy>();
                 mutable_bitField0_ |= 0x00000004;
               }
-              player_.add(input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PGuy.PARSER, extensionRegistry));
+              player_.add(input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PGuy.parser(), extensionRegistry));
               break;
             }
             case 42: {
@@ -10313,7 +10306,7 @@ public final class DataPublishingProtos {
                 famous_ = new java.util.ArrayList<com.blemobi.sep.probuf.DataPublishingProtos.PGuy>();
                 mutable_bitField0_ |= 0x00000008;
               }
-              famous_.add(input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PGuy.PARSER, extensionRegistry));
+              famous_.add(input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PGuy.parser(), extensionRegistry));
               break;
             }
           }
@@ -10574,9 +10567,8 @@ public final class DataPublishingProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -10596,7 +10588,7 @@ public final class DataPublishingProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, famous_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -12026,8 +12018,8 @@ public final class DataPublishingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PGame> PARSER =
-        new com.google.protobuf.AbstractParser<PGame>() {
+    private static final com.google.protobuf.Parser<PGame>
+        PARSER = new com.google.protobuf.AbstractParser<PGame>() {
       public PGame parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12044,6 +12036,10 @@ public final class DataPublishingProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PGame> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PGame> getParserForType() {
@@ -12110,7 +12106,7 @@ public final class DataPublishingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PGameList)
       PGameListOrBuilder {
     // Use PGameList.newBuilder() to construct.
-    private PGameList(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PGameList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PGameList() {
@@ -12143,9 +12139,9 @@ public final class DataPublishingProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              type_ = bs;
+              type_ = s;
               break;
             }
             case 18: {
@@ -12153,7 +12149,7 @@ public final class DataPublishingProtos {
                 game_ = new java.util.ArrayList<com.blemobi.sep.probuf.DataPublishingProtos.PGame>();
                 mutable_bitField0_ |= 0x00000002;
               }
-              game_.add(input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PGame.PARSER, extensionRegistry));
+              game_.add(input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PGame.parser(), extensionRegistry));
               break;
             }
           }
@@ -12201,9 +12197,7 @@ public final class DataPublishingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          type_ = s;
-        }
+        type_ = s;
         return s;
       }
     }
@@ -12276,28 +12270,26 @@ public final class DataPublishingProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getTypeBytes().isEmpty()) {
-        output.writeBytes(1, getTypeBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, type_);
       }
       for (int i = 0; i < game_.size(); i++) {
         output.writeMessage(2, game_.get(i));
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getTypeBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getTypeBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, type_);
       }
       for (int i = 0; i < game_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, game_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -12538,9 +12530,7 @@ public final class DataPublishingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            type_ = s;
-          }
+          type_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -12608,7 +12598,8 @@ public final class DataPublishingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         type_ = value;
         onChanged();
         return this;
@@ -12877,8 +12868,8 @@ public final class DataPublishingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PGameList> PARSER =
-        new com.google.protobuf.AbstractParser<PGameList>() {
+    private static final com.google.protobuf.Parser<PGameList>
+        PARSER = new com.google.protobuf.AbstractParser<PGameList>() {
       public PGameList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12895,6 +12886,10 @@ public final class DataPublishingProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PGameList> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PGameList> getParserForType() {
@@ -12981,7 +12976,7 @@ public final class DataPublishingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PRank)
       PRankOrBuilder {
     // Use PRank.newBuilder() to construct.
-    private PRank(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PRank(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PRank() {
@@ -13029,7 +13024,7 @@ public final class DataPublishingProtos {
                 guys_ = new java.util.ArrayList<com.blemobi.sep.probuf.DataPublishingProtos.PGuy>();
                 mutable_bitField0_ |= 0x00000004;
               }
-              guys_.add(input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PGuy.PARSER, extensionRegistry));
+              guys_.add(input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PGuy.parser(), extensionRegistry));
               break;
             }
           }
@@ -13164,9 +13159,8 @@ public final class DataPublishingProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -13182,7 +13176,7 @@ public final class DataPublishingProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, guys_.get(i));
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -13825,8 +13819,8 @@ public final class DataPublishingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PRank> PARSER =
-        new com.google.protobuf.AbstractParser<PRank>() {
+    private static final com.google.protobuf.Parser<PRank>
+        PARSER = new com.google.protobuf.AbstractParser<PRank>() {
       public PRank parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -13843,6 +13837,10 @@ public final class DataPublishingProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PRank> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PRank> getParserForType() {
@@ -13906,7 +13904,7 @@ public final class DataPublishingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PDiscover)
       PDiscoverOrBuilder {
     // Use PDiscover.newBuilder() to construct.
-    private PDiscover(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PDiscover(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PDiscover() {
@@ -13941,7 +13939,7 @@ public final class DataPublishingProtos {
               if (user_ != null) {
                 subBuilder = user_.toBuilder();
               }
-              user_ = input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PGuyList.PARSER, extensionRegistry);
+              user_ = input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PGuyList.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(user_);
                 user_ = subBuilder.buildPartial();
@@ -13954,7 +13952,7 @@ public final class DataPublishingProtos {
               if (community_ != null) {
                 subBuilder = community_.toBuilder();
               }
-              community_ = input.readMessage(com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList.PARSER, extensionRegistry);
+              community_ = input.readMessage(com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(community_);
                 community_ = subBuilder.buildPartial();
@@ -13967,7 +13965,7 @@ public final class DataPublishingProtos {
               if (topic_ != null) {
                 subBuilder = topic_.toBuilder();
               }
-              topic_ = input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PWords.PARSER, extensionRegistry);
+              topic_ = input.readMessage(com.blemobi.sep.probuf.DataPublishingProtos.PWords.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(topic_);
                 topic_ = subBuilder.buildPartial();
@@ -14085,9 +14083,8 @@ public final class DataPublishingProtos {
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -14103,7 +14100,7 @@ public final class DataPublishingProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getTopic());
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -14693,8 +14690,8 @@ public final class DataPublishingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PDiscover> PARSER =
-        new com.google.protobuf.AbstractParser<PDiscover>() {
+    private static final com.google.protobuf.Parser<PDiscover>
+        PARSER = new com.google.protobuf.AbstractParser<PDiscover>() {
       public PDiscover parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -14711,6 +14708,10 @@ public final class DataPublishingProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PDiscover> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PDiscover> getParserForType() {
@@ -14841,7 +14842,7 @@ public final class DataPublishingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PFansFilterParam)
       PFansFilterParamOrBuilder {
     // Use PFansFilterParam.newBuilder() to construct.
-    private PFansFilterParam(com.google.protobuf.GeneratedMessage.Builder builder) {
+    private PFansFilterParam(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
     private PFansFilterParam() {
@@ -14877,9 +14878,9 @@ public final class DataPublishingProtos {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
 
-              uuid_ = bs;
+              uuid_ = s;
               break;
             }
             case 16: {
@@ -14888,12 +14889,12 @@ public final class DataPublishingProtos {
               break;
             }
             case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 region_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000004;
               }
-              region_.add(bs);
+              region_.add(s);
               break;
             }
             case 32: {
@@ -14902,12 +14903,12 @@ public final class DataPublishingProtos {
               break;
             }
             case 42: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              java.lang.String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
                 skipUuid_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000010;
               }
-              skipUuid_.add(bs);
+              skipUuid_.add(s);
               break;
             }
           }
@@ -14958,9 +14959,7 @@ public final class DataPublishingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          uuid_ = s;
-        }
+        uuid_ = s;
         return s;
       }
     }
@@ -15114,31 +15113,29 @@ public final class DataPublishingProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUuidBytes().isEmpty()) {
-        output.writeBytes(1, getUuidBytes());
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, uuid_);
       }
       if (gender_ != 0) {
         output.writeInt32(2, gender_);
       }
       for (int i = 0; i < region_.size(); i++) {
-        output.writeBytes(3, region_.getByteString(i));
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, region_.getRaw(i));
       }
       if (negate_ != false) {
         output.writeBool(4, negate_);
       }
       for (int i = 0; i < skipUuid_.size(); i++) {
-        output.writeBytes(5, skipUuid_.getByteString(i));
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, skipUuid_.getRaw(i));
       }
     }
 
-    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSerializedSize;
+      int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getUuidBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getUuidBytes());
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, uuid_);
       }
       if (gender_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -15147,8 +15144,7 @@ public final class DataPublishingProtos {
       {
         int dataSize = 0;
         for (int i = 0; i < region_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(region_.getByteString(i));
+          dataSize += computeStringSizeNoTag(region_.getRaw(i));
         }
         size += dataSize;
         size += 1 * getRegionList().size();
@@ -15160,13 +15156,12 @@ public final class DataPublishingProtos {
       {
         int dataSize = 0;
         for (int i = 0; i < skipUuid_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(skipUuid_.getByteString(i));
+          dataSize += computeStringSizeNoTag(skipUuid_.getRaw(i));
         }
         size += dataSize;
         size += 1 * getSkipUuidList().size();
       }
-      memoizedSerializedSize = size;
+      memoizedSize = size;
       return size;
     }
 
@@ -15411,9 +15406,7 @@ public final class DataPublishingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            uuid_ = s;
-          }
+          uuid_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -15481,7 +15474,8 @@ public final class DataPublishingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  checkByteStringIsUtf8(value);
+        
         uuid_ = value;
         onChanged();
         return this;
@@ -15648,7 +15642,8 @@ public final class DataPublishingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureRegionIsMutable();
+  checkByteStringIsUtf8(value);
+        ensureRegionIsMutable();
         region_.add(value);
         onChanged();
         return this;
@@ -15815,7 +15810,8 @@ public final class DataPublishingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureSkipUuidIsMutable();
+  checkByteStringIsUtf8(value);
+        ensureSkipUuidIsMutable();
         skipUuid_.add(value);
         onChanged();
         return this;
@@ -15844,8 +15840,8 @@ public final class DataPublishingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    public static final com.google.protobuf.Parser<PFansFilterParam> PARSER =
-        new com.google.protobuf.AbstractParser<PFansFilterParam>() {
+    private static final com.google.protobuf.Parser<PFansFilterParam>
+        PARSER = new com.google.protobuf.AbstractParser<PFansFilterParam>() {
       public PFansFilterParam parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -15862,6 +15858,10 @@ public final class DataPublishingProtos {
         }
       }
     };
+
+    public static com.google.protobuf.Parser<PFansFilterParam> parser() {
+      return PARSER;
+    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PFansFilterParam> getParserForType() {
