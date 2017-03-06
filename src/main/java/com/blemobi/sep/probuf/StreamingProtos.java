@@ -101,7 +101,7 @@ public final class StreamingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PStreamingWebSite)
       PStreamingWebSiteOrBuilder {
     // Use PStreamingWebSite.newBuilder() to construct.
-    private PStreamingWebSite(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PStreamingWebSite(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PStreamingWebSite() {
@@ -137,15 +137,15 @@ public final class StreamingProtos {
               break;
             }
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              name_ = s;
+              name_ = bs;
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              url_ = s;
+              url_ = bs;
               break;
             }
             case 24: {
@@ -154,15 +154,15 @@ public final class StreamingProtos {
               break;
             }
             case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              bigIconUrl_ = s;
+              bigIconUrl_ = bs;
               break;
             }
             case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              smallIconUrl_ = s;
+              smallIconUrl_ = bs;
               break;
             }
           }
@@ -206,7 +206,9 @@ public final class StreamingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        name_ = s;
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
         return s;
       }
     }
@@ -248,7 +250,9 @@ public final class StreamingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        url_ = s;
+        if (bs.isValidUtf8()) {
+          url_ = s;
+        }
         return s;
       }
     }
@@ -303,7 +307,9 @@ public final class StreamingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        bigIconUrl_ = s;
+        if (bs.isValidUtf8()) {
+          bigIconUrl_ = s;
+        }
         return s;
       }
     }
@@ -345,7 +351,9 @@ public final class StreamingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        smallIconUrl_ = s;
+        if (bs.isValidUtf8()) {
+          smallIconUrl_ = s;
+        }
         return s;
       }
     }
@@ -383,44 +391,49 @@ public final class StreamingProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, name_);
+        output.writeBytes(1, getNameBytes());
       }
       if (!getUrlBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 2, url_);
+        output.writeBytes(2, getUrlBytes());
       }
       if (id_ != 0L) {
         output.writeInt64(3, id_);
       }
       if (!getBigIconUrlBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 4, bigIconUrl_);
+        output.writeBytes(4, getBigIconUrlBytes());
       }
       if (!getSmallIconUrlBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 5, smallIconUrl_);
+        output.writeBytes(5, getSmallIconUrlBytes());
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, name_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getNameBytes());
       }
       if (!getUrlBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, url_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getUrlBytes());
       }
       if (id_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, id_);
       }
       if (!getBigIconUrlBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, bigIconUrl_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getBigIconUrlBytes());
       }
       if (!getSmallIconUrlBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, smallIconUrl_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, getSmallIconUrlBytes());
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -642,7 +655,9 @@ public final class StreamingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          name_ = s;
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -710,8 +725,7 @@ public final class StreamingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         name_ = value;
         onChanged();
         return this;
@@ -731,7 +745,9 @@ public final class StreamingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          url_ = s;
+          if (bs.isValidUtf8()) {
+            url_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -799,8 +815,7 @@ public final class StreamingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         url_ = value;
         onChanged();
         return this;
@@ -858,7 +873,9 @@ public final class StreamingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          bigIconUrl_ = s;
+          if (bs.isValidUtf8()) {
+            bigIconUrl_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -926,8 +943,7 @@ public final class StreamingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         bigIconUrl_ = value;
         onChanged();
         return this;
@@ -947,7 +963,9 @@ public final class StreamingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          smallIconUrl_ = s;
+          if (bs.isValidUtf8()) {
+            smallIconUrl_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1015,8 +1033,7 @@ public final class StreamingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         smallIconUrl_ = value;
         onChanged();
         return this;
@@ -1045,8 +1062,8 @@ public final class StreamingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PStreamingWebSite>
-        PARSER = new com.google.protobuf.AbstractParser<PStreamingWebSite>() {
+    public static final com.google.protobuf.Parser<PStreamingWebSite> PARSER =
+        new com.google.protobuf.AbstractParser<PStreamingWebSite>() {
       public PStreamingWebSite parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1063,10 +1080,6 @@ public final class StreamingProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PStreamingWebSite> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PStreamingWebSite> getParserForType() {
@@ -1119,7 +1132,7 @@ public final class StreamingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PStreamingWebSiteList)
       PStreamingWebSiteListOrBuilder {
     // Use PStreamingWebSiteList.newBuilder() to construct.
-    private PStreamingWebSiteList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PStreamingWebSiteList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PStreamingWebSiteList() {
@@ -1155,7 +1168,7 @@ public final class StreamingProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.StreamingProtos.PStreamingWebSite>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingWebSite.parser(), extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingWebSite.PARSER, extensionRegistry));
               break;
             }
           }
@@ -1237,8 +1250,9 @@ public final class StreamingProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -1246,7 +1260,7 @@ public final class StreamingProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, list_.get(i));
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -1731,8 +1745,8 @@ public final class StreamingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PStreamingWebSiteList>
-        PARSER = new com.google.protobuf.AbstractParser<PStreamingWebSiteList>() {
+    public static final com.google.protobuf.Parser<PStreamingWebSiteList> PARSER =
+        new com.google.protobuf.AbstractParser<PStreamingWebSiteList>() {
       public PStreamingWebSiteList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1749,10 +1763,6 @@ public final class StreamingProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PStreamingWebSiteList> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PStreamingWebSiteList> getParserForType() {
@@ -1842,7 +1852,7 @@ public final class StreamingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PStreamingRoom)
       PStreamingRoomOrBuilder {
     // Use PStreamingRoom.newBuilder() to construct.
-    private PStreamingRoom(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PStreamingRoom(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PStreamingRoom() {
@@ -1879,7 +1889,7 @@ public final class StreamingProtos {
               if (webSite_ != null) {
                 subBuilder = webSite_.toBuilder();
               }
-              webSite_ = input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingWebSite.parser(), extensionRegistry);
+              webSite_ = input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingWebSite.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(webSite_);
                 webSite_ = subBuilder.buildPartial();
@@ -1888,15 +1898,15 @@ public final class StreamingProtos {
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              number_ = s;
+              number_ = bs;
               break;
             }
             case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              url_ = s;
+              url_ = bs;
               break;
             }
           }
@@ -1973,7 +1983,9 @@ public final class StreamingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        number_ = s;
+        if (bs.isValidUtf8()) {
+          number_ = s;
+        }
         return s;
       }
     }
@@ -2015,7 +2027,9 @@ public final class StreamingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        url_ = s;
+        if (bs.isValidUtf8()) {
+          url_ = s;
+        }
         return s;
       }
     }
@@ -2056,15 +2070,16 @@ public final class StreamingProtos {
         output.writeMessage(1, getWebSite());
       }
       if (!getNumberBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 2, number_);
+        output.writeBytes(2, getNumberBytes());
       }
       if (!getUrlBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 3, url_);
+        output.writeBytes(3, getUrlBytes());
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -2073,12 +2088,14 @@ public final class StreamingProtos {
           .computeMessageSize(1, getWebSite());
       }
       if (!getNumberBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, number_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getNumberBytes());
       }
       if (!getUrlBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, url_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getUrlBytes());
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -2451,7 +2468,9 @@ public final class StreamingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          number_ = s;
+          if (bs.isValidUtf8()) {
+            number_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -2519,8 +2538,7 @@ public final class StreamingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         number_ = value;
         onChanged();
         return this;
@@ -2540,7 +2558,9 @@ public final class StreamingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          url_ = s;
+          if (bs.isValidUtf8()) {
+            url_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -2608,8 +2628,7 @@ public final class StreamingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         url_ = value;
         onChanged();
         return this;
@@ -2638,8 +2657,8 @@ public final class StreamingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PStreamingRoom>
-        PARSER = new com.google.protobuf.AbstractParser<PStreamingRoom>() {
+    public static final com.google.protobuf.Parser<PStreamingRoom> PARSER =
+        new com.google.protobuf.AbstractParser<PStreamingRoom>() {
       public PStreamingRoom parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2656,10 +2675,6 @@ public final class StreamingProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PStreamingRoom> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PStreamingRoom> getParserForType() {
@@ -2708,7 +2723,7 @@ public final class StreamingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PStreamingRoomList)
       PStreamingRoomListOrBuilder {
     // Use PStreamingRoomList.newBuilder() to construct.
-    private PStreamingRoomList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PStreamingRoomList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PStreamingRoomList() {
@@ -2744,7 +2759,7 @@ public final class StreamingProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.StreamingProtos.PStreamingRoom>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingRoom.parser(), extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingRoom.PARSER, extensionRegistry));
               break;
             }
           }
@@ -2826,8 +2841,9 @@ public final class StreamingProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -2835,7 +2851,7 @@ public final class StreamingProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, list_.get(i));
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -3316,8 +3332,8 @@ public final class StreamingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PStreamingRoomList>
-        PARSER = new com.google.protobuf.AbstractParser<PStreamingRoomList>() {
+    public static final com.google.protobuf.Parser<PStreamingRoomList> PARSER =
+        new com.google.protobuf.AbstractParser<PStreamingRoomList>() {
       public PStreamingRoomList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3334,10 +3350,6 @@ public final class StreamingProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PStreamingRoomList> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PStreamingRoomList> getParserForType() {
@@ -3461,7 +3473,7 @@ public final class StreamingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PStreamingLive)
       PStreamingLiveOrBuilder {
     // Use PStreamingLive.newBuilder() to construct.
-    private PStreamingLive(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PStreamingLive(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PStreamingLive() {
@@ -3496,9 +3508,9 @@ public final class StreamingProtos {
               break;
             }
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              id_ = s;
+              id_ = bs;
               break;
             }
             case 18: {
@@ -3506,7 +3518,7 @@ public final class StreamingProtos {
               if (anchor_ != null) {
                 subBuilder = anchor_.toBuilder();
               }
-              anchor_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserSupervisor.parser(), extensionRegistry);
+              anchor_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserSupervisor.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(anchor_);
                 anchor_ = subBuilder.buildPartial();
@@ -3519,7 +3531,7 @@ public final class StreamingProtos {
               if (room_ != null) {
                 subBuilder = room_.toBuilder();
               }
-              room_ = input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingRoom.parser(), extensionRegistry);
+              room_ = input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingRoom.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(room_);
                 room_ = subBuilder.buildPartial();
@@ -3583,7 +3595,9 @@ public final class StreamingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        id_ = s;
+        if (bs.isValidUtf8()) {
+          id_ = s;
+        }
         return s;
       }
     }
@@ -3726,7 +3740,7 @@ public final class StreamingProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, id_);
+        output.writeBytes(1, getIdBytes());
       }
       if (anchor_ != null) {
         output.writeMessage(2, getAnchor());
@@ -3745,13 +3759,15 @@ public final class StreamingProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, id_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getIdBytes());
       }
       if (anchor_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -3773,7 +3789,7 @@ public final class StreamingProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(6, nextLiveTime_);
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -4018,7 +4034,9 @@ public final class StreamingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          id_ = s;
+          if (bs.isValidUtf8()) {
+            id_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -4086,8 +4104,7 @@ public final class StreamingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         id_ = value;
         onChanged();
         return this;
@@ -4536,8 +4553,8 @@ public final class StreamingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PStreamingLive>
-        PARSER = new com.google.protobuf.AbstractParser<PStreamingLive>() {
+    public static final com.google.protobuf.Parser<PStreamingLive> PARSER =
+        new com.google.protobuf.AbstractParser<PStreamingLive>() {
       public PStreamingLive parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4554,10 +4571,6 @@ public final class StreamingProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PStreamingLive> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PStreamingLive> getParserForType() {
@@ -4633,7 +4646,7 @@ public final class StreamingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PStreamingLiveList)
       PStreamingLiveListOrBuilder {
     // Use PStreamingLiveList.newBuilder() to construct.
-    private PStreamingLiveList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PStreamingLiveList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PStreamingLiveList() {
@@ -4672,7 +4685,7 @@ public final class StreamingProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.StreamingProtos.PStreamingLive>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingLive.parser(), extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingLive.PARSER, extensionRegistry));
               break;
             }
             case 16: {
@@ -4818,8 +4831,9 @@ public final class StreamingProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -4839,7 +4853,7 @@ public final class StreamingProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(4, allCount_);
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -5454,8 +5468,8 @@ public final class StreamingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PStreamingLiveList>
-        PARSER = new com.google.protobuf.AbstractParser<PStreamingLiveList>() {
+    public static final com.google.protobuf.Parser<PStreamingLiveList> PARSER =
+        new com.google.protobuf.AbstractParser<PStreamingLiveList>() {
       public PStreamingLiveList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5472,10 +5486,6 @@ public final class StreamingProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PStreamingLiveList> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PStreamingLiveList> getParserForType() {
@@ -5545,7 +5555,7 @@ public final class StreamingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PStreamingConfig)
       PStreamingConfigOrBuilder {
     // Use PStreamingConfig.newBuilder() to construct.
-    private PStreamingConfig(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PStreamingConfig(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PStreamingConfig() {
@@ -5579,15 +5589,15 @@ public final class StreamingProtos {
               break;
             }
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              chinese_ = s;
+              chinese_ = bs;
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              english_ = s;
+              english_ = bs;
               break;
             }
             case 24: {
@@ -5636,7 +5646,9 @@ public final class StreamingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        chinese_ = s;
+        if (bs.isValidUtf8()) {
+          chinese_ = s;
+        }
         return s;
       }
     }
@@ -5678,7 +5690,9 @@ public final class StreamingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        english_ = s;
+        if (bs.isValidUtf8()) {
+          english_ = s;
+        }
         return s;
       }
     }
@@ -5729,32 +5743,35 @@ public final class StreamingProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getChineseBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, chinese_);
+        output.writeBytes(1, getChineseBytes());
       }
       if (!getEnglishBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 2, english_);
+        output.writeBytes(2, getEnglishBytes());
       }
       if (value_ != 0L) {
         output.writeInt64(3, value_);
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getChineseBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, chinese_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getChineseBytes());
       }
       if (!getEnglishBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, english_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getEnglishBytes());
       }
       if (value_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, value_);
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -5962,7 +5979,9 @@ public final class StreamingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          chinese_ = s;
+          if (bs.isValidUtf8()) {
+            chinese_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -6030,8 +6049,7 @@ public final class StreamingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         chinese_ = value;
         onChanged();
         return this;
@@ -6051,7 +6069,9 @@ public final class StreamingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          english_ = s;
+          if (bs.isValidUtf8()) {
+            english_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -6119,8 +6139,7 @@ public final class StreamingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         english_ = value;
         onChanged();
         return this;
@@ -6187,8 +6206,8 @@ public final class StreamingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PStreamingConfig>
-        PARSER = new com.google.protobuf.AbstractParser<PStreamingConfig>() {
+    public static final com.google.protobuf.Parser<PStreamingConfig> PARSER =
+        new com.google.protobuf.AbstractParser<PStreamingConfig>() {
       public PStreamingConfig parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6205,10 +6224,6 @@ public final class StreamingProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PStreamingConfig> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PStreamingConfig> getParserForType() {
@@ -6261,7 +6276,7 @@ public final class StreamingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PStreamingConfigList)
       PStreamingConfigListOrBuilder {
     // Use PStreamingConfigList.newBuilder() to construct.
-    private PStreamingConfigList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PStreamingConfigList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PStreamingConfigList() {
@@ -6297,7 +6312,7 @@ public final class StreamingProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.StreamingProtos.PStreamingConfig>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingConfig.parser(), extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingConfig.PARSER, extensionRegistry));
               break;
             }
           }
@@ -6379,8 +6394,9 @@ public final class StreamingProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -6388,7 +6404,7 @@ public final class StreamingProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, list_.get(i));
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -6873,8 +6889,8 @@ public final class StreamingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PStreamingConfigList>
-        PARSER = new com.google.protobuf.AbstractParser<PStreamingConfigList>() {
+    public static final com.google.protobuf.Parser<PStreamingConfigList> PARSER =
+        new com.google.protobuf.AbstractParser<PStreamingConfigList>() {
       public PStreamingConfigList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6891,10 +6907,6 @@ public final class StreamingProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PStreamingConfigList> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PStreamingConfigList> getParserForType() {
@@ -6987,7 +6999,7 @@ public final class StreamingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PStreamingAnchor)
       PStreamingAnchorOrBuilder {
     // Use PStreamingAnchor.newBuilder() to construct.
-    private PStreamingAnchor(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PStreamingAnchor(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PStreamingAnchor() {
@@ -7024,7 +7036,7 @@ public final class StreamingProtos {
               if (user_ != null) {
                 subBuilder = user_.toBuilder();
               }
-              user_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserSupervisor.parser(), extensionRegistry);
+              user_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserSupervisor.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(user_);
                 user_ = subBuilder.buildPartial();
@@ -7047,7 +7059,7 @@ public final class StreamingProtos {
               if (room_ != null) {
                 subBuilder = room_.toBuilder();
               }
-              room_ = input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingRoom.parser(), extensionRegistry);
+              room_ = input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingRoom.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(room_);
                 room_ = subBuilder.buildPartial();
@@ -7197,8 +7209,9 @@ public final class StreamingProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -7218,7 +7231,7 @@ public final class StreamingProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getRoom());
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -7837,8 +7850,8 @@ public final class StreamingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PStreamingAnchor>
-        PARSER = new com.google.protobuf.AbstractParser<PStreamingAnchor>() {
+    public static final com.google.protobuf.Parser<PStreamingAnchor> PARSER =
+        new com.google.protobuf.AbstractParser<PStreamingAnchor>() {
       public PStreamingAnchor parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7855,10 +7868,6 @@ public final class StreamingProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PStreamingAnchor> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PStreamingAnchor> getParserForType() {
@@ -7907,7 +7916,7 @@ public final class StreamingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PStreamingAnchorList)
       PStreamingAnchorListOrBuilder {
     // Use PStreamingAnchorList.newBuilder() to construct.
-    private PStreamingAnchorList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PStreamingAnchorList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PStreamingAnchorList() {
@@ -7943,7 +7952,7 @@ public final class StreamingProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.StreamingProtos.PStreamingAnchor>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingAnchor.parser(), extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingAnchor.PARSER, extensionRegistry));
               break;
             }
           }
@@ -8025,8 +8034,9 @@ public final class StreamingProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -8034,7 +8044,7 @@ public final class StreamingProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, list_.get(i));
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -8515,8 +8525,8 @@ public final class StreamingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PStreamingAnchorList>
-        PARSER = new com.google.protobuf.AbstractParser<PStreamingAnchorList>() {
+    public static final com.google.protobuf.Parser<PStreamingAnchorList> PARSER =
+        new com.google.protobuf.AbstractParser<PStreamingAnchorList>() {
       public PStreamingAnchorList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8533,10 +8543,6 @@ public final class StreamingProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PStreamingAnchorList> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PStreamingAnchorList> getParserForType() {
@@ -8643,7 +8649,7 @@ public final class StreamingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PStreamingFan)
       PStreamingFanOrBuilder {
     // Use PStreamingFan.newBuilder() to construct.
-    private PStreamingFan(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PStreamingFan(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PStreamingFan() {
@@ -8682,12 +8688,12 @@ public final class StreamingProtos {
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
               if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
                 refuseWebSites_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000002;
               }
-              refuseWebSites_.add(s);
+              refuseWebSites_.add(bs);
               break;
             }
             case 24: {
@@ -8700,7 +8706,7 @@ public final class StreamingProtos {
               if (room_ != null) {
                 subBuilder = room_.toBuilder();
               }
-              room_ = input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingRoom.parser(), extensionRegistry);
+              room_ = input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingRoom.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(room_);
                 room_ = subBuilder.buildPartial();
@@ -8856,7 +8862,7 @@ public final class StreamingProtos {
         output.writeBool(1, refuseAll_);
       }
       for (int i = 0; i < refuseWebSites_.size(); i++) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 2, refuseWebSites_.getRaw(i));
+        output.writeBytes(2, refuseWebSites_.getByteString(i));
       }
       if (isSend_ != false) {
         output.writeBool(3, isSend_);
@@ -8866,8 +8872,9 @@ public final class StreamingProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -8878,7 +8885,8 @@ public final class StreamingProtos {
       {
         int dataSize = 0;
         for (int i = 0; i < refuseWebSites_.size(); i++) {
-          dataSize += computeStringSizeNoTag(refuseWebSites_.getRaw(i));
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(refuseWebSites_.getByteString(i));
         }
         size += dataSize;
         size += 1 * getRefuseWebSitesList().size();
@@ -8891,7 +8899,7 @@ public final class StreamingProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getRoom());
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -9277,8 +9285,7 @@ public final class StreamingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        ensureRefuseWebSitesIsMutable();
+  ensureRefuseWebSitesIsMutable();
         refuseWebSites_.add(value);
         onChanged();
         return this;
@@ -9498,8 +9505,8 @@ public final class StreamingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PStreamingFan>
-        PARSER = new com.google.protobuf.AbstractParser<PStreamingFan>() {
+    public static final com.google.protobuf.Parser<PStreamingFan> PARSER =
+        new com.google.protobuf.AbstractParser<PStreamingFan>() {
       public PStreamingFan parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9516,10 +9523,6 @@ public final class StreamingProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PStreamingFan> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PStreamingFan> getParserForType() {
@@ -9614,7 +9617,7 @@ public final class StreamingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PStreamingRest)
       PStreamingRestOrBuilder {
     // Use PStreamingRest.newBuilder() to construct.
-    private PStreamingRest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PStreamingRest(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PStreamingRest() {
@@ -9658,7 +9661,7 @@ public final class StreamingProtos {
               if (room_ != null) {
                 subBuilder = room_.toBuilder();
               }
-              room_ = input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingRoom.parser(), extensionRegistry);
+              room_ = input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingRoom.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(room_);
                 room_ = subBuilder.buildPartial();
@@ -9672,9 +9675,9 @@ public final class StreamingProtos {
               break;
             }
             case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              nick_ = s;
+              nick_ = bs;
               break;
             }
             case 40: {
@@ -9782,7 +9785,9 @@ public final class StreamingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        nick_ = s;
+        if (bs.isValidUtf8()) {
+          nick_ = s;
+        }
         return s;
       }
     }
@@ -9842,15 +9847,16 @@ public final class StreamingProtos {
         output.writeBool(3, isSend_);
       }
       if (!getNickBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 4, nick_);
+        output.writeBytes(4, getNickBytes());
       }
       if (dayCount_ != 0L) {
         output.writeInt64(5, dayCount_);
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -9867,13 +9873,14 @@ public final class StreamingProtos {
           .computeBoolSize(3, isSend_);
       }
       if (!getNickBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, nick_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getNickBytes());
       }
       if (dayCount_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(5, dayCount_);
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -10329,7 +10336,9 @@ public final class StreamingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          nick_ = s;
+          if (bs.isValidUtf8()) {
+            nick_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -10397,8 +10406,7 @@ public final class StreamingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         nick_ = value;
         onChanged();
         return this;
@@ -10465,8 +10473,8 @@ public final class StreamingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PStreamingRest>
-        PARSER = new com.google.protobuf.AbstractParser<PStreamingRest>() {
+    public static final com.google.protobuf.Parser<PStreamingRest> PARSER =
+        new com.google.protobuf.AbstractParser<PStreamingRest>() {
       public PStreamingRest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10483,10 +10491,6 @@ public final class StreamingProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PStreamingRest> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PStreamingRest> getParserForType() {
@@ -10560,7 +10564,7 @@ public final class StreamingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PStreamingManual)
       PStreamingManualOrBuilder {
     // Use PStreamingManual.newBuilder() to construct.
-    private PStreamingManual(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PStreamingManual(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PStreamingManual() {
@@ -10595,9 +10599,9 @@ public final class StreamingProtos {
               break;
             }
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              id_ = s;
+              id_ = bs;
               break;
             }
             case 16: {
@@ -10656,7 +10660,9 @@ public final class StreamingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        id_ = s;
+        if (bs.isValidUtf8()) {
+          id_ = s;
+        }
         return s;
       }
     }
@@ -10733,7 +10739,7 @@ public final class StreamingProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, id_);
+        output.writeBytes(1, getIdBytes());
       }
       if (createTime_ != 0L) {
         output.writeInt64(2, createTime_);
@@ -10746,13 +10752,15 @@ public final class StreamingProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, id_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getIdBytes());
       }
       if (createTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -10766,7 +10774,7 @@ public final class StreamingProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(4, noticeTime_);
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -10983,7 +10991,9 @@ public final class StreamingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          id_ = s;
+          if (bs.isValidUtf8()) {
+            id_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -11051,8 +11061,7 @@ public final class StreamingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         id_ = value;
         onChanged();
         return this;
@@ -11195,8 +11204,8 @@ public final class StreamingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PStreamingManual>
-        PARSER = new com.google.protobuf.AbstractParser<PStreamingManual>() {
+    public static final com.google.protobuf.Parser<PStreamingManual> PARSER =
+        new com.google.protobuf.AbstractParser<PStreamingManual>() {
       public PStreamingManual parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11213,10 +11222,6 @@ public final class StreamingProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PStreamingManual> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PStreamingManual> getParserForType() {
@@ -11265,7 +11270,7 @@ public final class StreamingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PStreamingManualList)
       PStreamingManualListOrBuilder {
     // Use PStreamingManualList.newBuilder() to construct.
-    private PStreamingManualList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PStreamingManualList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PStreamingManualList() {
@@ -11301,7 +11306,7 @@ public final class StreamingProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.StreamingProtos.PStreamingManual>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingManual.parser(), extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingManual.PARSER, extensionRegistry));
               break;
             }
           }
@@ -11383,8 +11388,9 @@ public final class StreamingProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -11392,7 +11398,7 @@ public final class StreamingProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, list_.get(i));
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -11873,8 +11879,8 @@ public final class StreamingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PStreamingManualList>
-        PARSER = new com.google.protobuf.AbstractParser<PStreamingManualList>() {
+    public static final com.google.protobuf.Parser<PStreamingManualList> PARSER =
+        new com.google.protobuf.AbstractParser<PStreamingManualList>() {
       public PStreamingManualList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11891,10 +11897,6 @@ public final class StreamingProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PStreamingManualList> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PStreamingManualList> getParserForType() {
@@ -12067,7 +12069,7 @@ public final class StreamingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PStreamingAnchorInside)
       PStreamingAnchorInsideOrBuilder {
     // Use PStreamingAnchorInside.newBuilder() to construct.
-    private PStreamingAnchorInside(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PStreamingAnchorInside(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PStreamingAnchorInside() {
@@ -12107,33 +12109,33 @@ public final class StreamingProtos {
               break;
             }
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              uuid_ = s;
+              uuid_ = bs;
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              imageUrl_ = s;
+              imageUrl_ = bs;
               break;
             }
             case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              nick_ = s;
+              nick_ = bs;
               break;
             }
             case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              iconThumb_ = s;
+              iconThumb_ = bs;
               break;
             }
             case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              room_ = s;
+              room_ = bs;
               break;
             }
             case 48: {
@@ -12147,15 +12149,15 @@ public final class StreamingProtos {
               break;
             }
             case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              username_ = s;
+              username_ = bs;
               break;
             }
             case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              cellphone_ = s;
+              cellphone_ = bs;
               break;
             }
           }
@@ -12199,7 +12201,9 @@ public final class StreamingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        uuid_ = s;
+        if (bs.isValidUtf8()) {
+          uuid_ = s;
+        }
         return s;
       }
     }
@@ -12241,7 +12245,9 @@ public final class StreamingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        imageUrl_ = s;
+        if (bs.isValidUtf8()) {
+          imageUrl_ = s;
+        }
         return s;
       }
     }
@@ -12283,7 +12289,9 @@ public final class StreamingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        nick_ = s;
+        if (bs.isValidUtf8()) {
+          nick_ = s;
+        }
         return s;
       }
     }
@@ -12325,7 +12333,9 @@ public final class StreamingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        iconThumb_ = s;
+        if (bs.isValidUtf8()) {
+          iconThumb_ = s;
+        }
         return s;
       }
     }
@@ -12367,7 +12377,9 @@ public final class StreamingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        room_ = s;
+        if (bs.isValidUtf8()) {
+          room_ = s;
+        }
         return s;
       }
     }
@@ -12435,7 +12447,9 @@ public final class StreamingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        username_ = s;
+        if (bs.isValidUtf8()) {
+          username_ = s;
+        }
         return s;
       }
     }
@@ -12477,7 +12491,9 @@ public final class StreamingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        cellphone_ = s;
+        if (bs.isValidUtf8()) {
+          cellphone_ = s;
+        }
         return s;
       }
     }
@@ -12515,19 +12531,19 @@ public final class StreamingProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUuidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, uuid_);
+        output.writeBytes(1, getUuidBytes());
       }
       if (!getImageUrlBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 2, imageUrl_);
+        output.writeBytes(2, getImageUrlBytes());
       }
       if (!getNickBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 3, nick_);
+        output.writeBytes(3, getNickBytes());
       }
       if (!getIconThumbBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 4, iconThumb_);
+        output.writeBytes(4, getIconThumbBytes());
       }
       if (!getRoomBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 5, room_);
+        output.writeBytes(5, getRoomBytes());
       }
       if (isEnable_ != false) {
         output.writeBool(6, isEnable_);
@@ -12536,32 +12552,38 @@ public final class StreamingProtos {
         output.writeInt64(7, liveCount_);
       }
       if (!getUsernameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 8, username_);
+        output.writeBytes(8, getUsernameBytes());
       }
       if (!getCellphoneBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 9, cellphone_);
+        output.writeBytes(9, getCellphoneBytes());
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getUuidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, uuid_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getUuidBytes());
       }
       if (!getImageUrlBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, imageUrl_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getImageUrlBytes());
       }
       if (!getNickBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, nick_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getNickBytes());
       }
       if (!getIconThumbBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, iconThumb_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getIconThumbBytes());
       }
       if (!getRoomBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, room_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, getRoomBytes());
       }
       if (isEnable_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -12572,12 +12594,14 @@ public final class StreamingProtos {
           .computeInt64Size(7, liveCount_);
       }
       if (!getUsernameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(8, username_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(8, getUsernameBytes());
       }
       if (!getCellphoneBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(9, cellphone_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(9, getCellphoneBytes());
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -12830,7 +12854,9 @@ public final class StreamingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          uuid_ = s;
+          if (bs.isValidUtf8()) {
+            uuid_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -12898,8 +12924,7 @@ public final class StreamingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         uuid_ = value;
         onChanged();
         return this;
@@ -12919,7 +12944,9 @@ public final class StreamingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          imageUrl_ = s;
+          if (bs.isValidUtf8()) {
+            imageUrl_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -12987,8 +13014,7 @@ public final class StreamingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         imageUrl_ = value;
         onChanged();
         return this;
@@ -13008,7 +13034,9 @@ public final class StreamingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          nick_ = s;
+          if (bs.isValidUtf8()) {
+            nick_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -13076,8 +13104,7 @@ public final class StreamingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         nick_ = value;
         onChanged();
         return this;
@@ -13097,7 +13124,9 @@ public final class StreamingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          iconThumb_ = s;
+          if (bs.isValidUtf8()) {
+            iconThumb_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -13165,8 +13194,7 @@ public final class StreamingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         iconThumb_ = value;
         onChanged();
         return this;
@@ -13186,7 +13214,9 @@ public final class StreamingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          room_ = s;
+          if (bs.isValidUtf8()) {
+            room_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -13254,8 +13284,7 @@ public final class StreamingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         room_ = value;
         onChanged();
         return this;
@@ -13351,7 +13380,9 @@ public final class StreamingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          username_ = s;
+          if (bs.isValidUtf8()) {
+            username_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -13419,8 +13450,7 @@ public final class StreamingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         username_ = value;
         onChanged();
         return this;
@@ -13440,7 +13470,9 @@ public final class StreamingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          cellphone_ = s;
+          if (bs.isValidUtf8()) {
+            cellphone_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -13508,8 +13540,7 @@ public final class StreamingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         cellphone_ = value;
         onChanged();
         return this;
@@ -13538,8 +13569,8 @@ public final class StreamingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PStreamingAnchorInside>
-        PARSER = new com.google.protobuf.AbstractParser<PStreamingAnchorInside>() {
+    public static final com.google.protobuf.Parser<PStreamingAnchorInside> PARSER =
+        new com.google.protobuf.AbstractParser<PStreamingAnchorInside>() {
       public PStreamingAnchorInside parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -13556,10 +13587,6 @@ public final class StreamingProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PStreamingAnchorInside> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PStreamingAnchorInside> getParserForType() {
@@ -13617,7 +13644,7 @@ public final class StreamingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PStreamingAnchorInsideList)
       PStreamingAnchorInsideListOrBuilder {
     // Use PStreamingAnchorInsideList.newBuilder() to construct.
-    private PStreamingAnchorInsideList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PStreamingAnchorInsideList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PStreamingAnchorInsideList() {
@@ -13654,7 +13681,7 @@ public final class StreamingProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.StreamingProtos.PStreamingAnchorInside>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingAnchorInside.parser(), extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingAnchorInside.PARSER, extensionRegistry));
               break;
             }
             case 16: {
@@ -13758,8 +13785,9 @@ public final class StreamingProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -13771,7 +13799,7 @@ public final class StreamingProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, count_);
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -14298,8 +14326,8 @@ public final class StreamingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PStreamingAnchorInsideList>
-        PARSER = new com.google.protobuf.AbstractParser<PStreamingAnchorInsideList>() {
+    public static final com.google.protobuf.Parser<PStreamingAnchorInsideList> PARSER =
+        new com.google.protobuf.AbstractParser<PStreamingAnchorInsideList>() {
       public PStreamingAnchorInsideList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -14316,10 +14344,6 @@ public final class StreamingProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PStreamingAnchorInsideList> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PStreamingAnchorInsideList> getParserForType() {
@@ -14409,7 +14433,7 @@ public final class StreamingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PStreamingLiveInside)
       PStreamingLiveInsideOrBuilder {
     // Use PStreamingLiveInside.newBuilder() to construct.
-    private PStreamingLiveInside(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PStreamingLiveInside(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PStreamingLiveInside() {
@@ -14443,9 +14467,9 @@ public final class StreamingProtos {
               break;
             }
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              id_ = s;
+              id_ = bs;
               break;
             }
             case 18: {
@@ -14453,7 +14477,7 @@ public final class StreamingProtos {
               if (anchor_ != null) {
                 subBuilder = anchor_.toBuilder();
               }
-              anchor_ = input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingAnchorInside.parser(), extensionRegistry);
+              anchor_ = input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingAnchorInside.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(anchor_);
                 anchor_ = subBuilder.buildPartial();
@@ -14512,7 +14536,9 @@ public final class StreamingProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        id_ = s;
+        if (bs.isValidUtf8()) {
+          id_ = s;
+        }
         return s;
       }
     }
@@ -14609,7 +14635,7 @@ public final class StreamingProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, id_);
+        output.writeBytes(1, getIdBytes());
       }
       if (anchor_ != null) {
         output.writeMessage(2, getAnchor());
@@ -14622,13 +14648,15 @@ public final class StreamingProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, id_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getIdBytes());
       }
       if (anchor_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -14642,7 +14670,7 @@ public final class StreamingProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(4, liveTime_);
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -14867,7 +14895,9 @@ public final class StreamingProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          id_ = s;
+          if (bs.isValidUtf8()) {
+            id_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -14935,8 +14965,7 @@ public final class StreamingProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         id_ = value;
         onChanged();
         return this;
@@ -15194,8 +15223,8 @@ public final class StreamingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PStreamingLiveInside>
-        PARSER = new com.google.protobuf.AbstractParser<PStreamingLiveInside>() {
+    public static final com.google.protobuf.Parser<PStreamingLiveInside> PARSER =
+        new com.google.protobuf.AbstractParser<PStreamingLiveInside>() {
       public PStreamingLiveInside parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -15212,10 +15241,6 @@ public final class StreamingProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PStreamingLiveInside> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PStreamingLiveInside> getParserForType() {
@@ -15273,7 +15298,7 @@ public final class StreamingProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PStreamingLiveInsideList)
       PStreamingLiveInsideListOrBuilder {
     // Use PStreamingLiveInsideList.newBuilder() to construct.
-    private PStreamingLiveInsideList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PStreamingLiveInsideList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PStreamingLiveInsideList() {
@@ -15310,7 +15335,7 @@ public final class StreamingProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.StreamingProtos.PStreamingLiveInside>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingLiveInside.parser(), extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingLiveInside.PARSER, extensionRegistry));
               break;
             }
             case 16: {
@@ -15414,8 +15439,9 @@ public final class StreamingProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -15427,7 +15453,7 @@ public final class StreamingProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, count_);
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -15954,8 +15980,8 @@ public final class StreamingProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PStreamingLiveInsideList>
-        PARSER = new com.google.protobuf.AbstractParser<PStreamingLiveInsideList>() {
+    public static final com.google.protobuf.Parser<PStreamingLiveInsideList> PARSER =
+        new com.google.protobuf.AbstractParser<PStreamingLiveInsideList>() {
       public PStreamingLiveInsideList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -15972,10 +15998,6 @@ public final class StreamingProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PStreamingLiveInsideList> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PStreamingLiveInsideList> getParserForType() {

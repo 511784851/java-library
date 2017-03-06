@@ -8,877 +8,8 @@ public final class OssProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface PStsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PSts)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional string accessKeyId = 1;</code>
-     */
-    java.lang.String getAccessKeyId();
-    /**
-     * <code>optional string accessKeyId = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getAccessKeyIdBytes();
-
-    /**
-     * <code>optional string accessKeySecret = 2;</code>
-     */
-    java.lang.String getAccessKeySecret();
-    /**
-     * <code>optional string accessKeySecret = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getAccessKeySecretBytes();
-
-    /**
-     * <code>optional string securityToken = 3;</code>
-     */
-    java.lang.String getSecurityToken();
-    /**
-     * <code>optional string securityToken = 3;</code>
-     */
-    com.google.protobuf.ByteString
-        getSecurityTokenBytes();
-
-    /**
-     * <code>optional string expiration = 4;</code>
-     */
-    java.lang.String getExpiration();
-    /**
-     * <code>optional string expiration = 4;</code>
-     */
-    com.google.protobuf.ByteString
-        getExpirationBytes();
-  }
-  /**
-   * Protobuf type {@code common.PSts}
-   *
-   * <pre>
-   * OSS STS凭证传输结构
-   * </pre>
-   */
-  public  static final class PSts extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PSts)
-      PStsOrBuilder {
-    // Use PSts.newBuilder() to construct.
-    private PSts(com.google.protobuf.GeneratedMessage.Builder builder) {
-      super(builder);
-    }
-    private PSts() {
-      accessKeyId_ = "";
-      accessKeySecret_ = "";
-      securityToken_ = "";
-      expiration_ = "";
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-    }
-    private PSts(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
-      this();
-      int mutable_bitField0_ = 0;
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-
-              accessKeyId_ = bs;
-              break;
-            }
-            case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-
-              accessKeySecret_ = bs;
-              break;
-            }
-            case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-
-              securityToken_ = bs;
-              break;
-            }
-            case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-
-              expiration_ = bs;
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
-      } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
-      } finally {
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.blemobi.sep.probuf.OssProtos.internal_static_common_PSts_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.OssProtos.internal_static_common_PSts_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.OssProtos.PSts.class, com.blemobi.sep.probuf.OssProtos.PSts.Builder.class);
-    }
-
-    public static final int ACCESSKEYID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object accessKeyId_;
-    /**
-     * <code>optional string accessKeyId = 1;</code>
-     */
-    public java.lang.String getAccessKeyId() {
-      java.lang.Object ref = accessKeyId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          accessKeyId_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string accessKeyId = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getAccessKeyIdBytes() {
-      java.lang.Object ref = accessKeyId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        accessKeyId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int ACCESSKEYSECRET_FIELD_NUMBER = 2;
-    private volatile java.lang.Object accessKeySecret_;
-    /**
-     * <code>optional string accessKeySecret = 2;</code>
-     */
-    public java.lang.String getAccessKeySecret() {
-      java.lang.Object ref = accessKeySecret_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          accessKeySecret_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string accessKeySecret = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getAccessKeySecretBytes() {
-      java.lang.Object ref = accessKeySecret_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        accessKeySecret_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int SECURITYTOKEN_FIELD_NUMBER = 3;
-    private volatile java.lang.Object securityToken_;
-    /**
-     * <code>optional string securityToken = 3;</code>
-     */
-    public java.lang.String getSecurityToken() {
-      java.lang.Object ref = securityToken_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          securityToken_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string securityToken = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getSecurityTokenBytes() {
-      java.lang.Object ref = securityToken_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        securityToken_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int EXPIRATION_FIELD_NUMBER = 4;
-    private volatile java.lang.Object expiration_;
-    /**
-     * <code>optional string expiration = 4;</code>
-     */
-    public java.lang.String getExpiration() {
-      java.lang.Object ref = expiration_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          expiration_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string expiration = 4;</code>
-     */
-    public com.google.protobuf.ByteString
-        getExpirationBytes() {
-      java.lang.Object ref = expiration_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        expiration_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getAccessKeyIdBytes().isEmpty()) {
-        output.writeBytes(1, getAccessKeyIdBytes());
-      }
-      if (!getAccessKeySecretBytes().isEmpty()) {
-        output.writeBytes(2, getAccessKeySecretBytes());
-      }
-      if (!getSecurityTokenBytes().isEmpty()) {
-        output.writeBytes(3, getSecurityTokenBytes());
-      }
-      if (!getExpirationBytes().isEmpty()) {
-        output.writeBytes(4, getExpirationBytes());
-      }
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getAccessKeyIdBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getAccessKeyIdBytes());
-      }
-      if (!getAccessKeySecretBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getAccessKeySecretBytes());
-      }
-      if (!getSecurityTokenBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getSecurityTokenBytes());
-      }
-      if (!getExpirationBytes().isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getExpirationBytes());
-      }
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.OssProtos.PSts parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.OssProtos.PSts parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.OssProtos.PSts parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.OssProtos.PSts parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.OssProtos.PSts parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.OssProtos.PSts parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.OssProtos.PSts parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.blemobi.sep.probuf.OssProtos.PSts parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.OssProtos.PSts parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.OssProtos.PSts parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.blemobi.sep.probuf.OssProtos.PSts prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code common.PSts}
-     *
-     * <pre>
-     * OSS STS凭证传输结构
-     * </pre>
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PSts)
-        com.blemobi.sep.probuf.OssProtos.PStsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.blemobi.sep.probuf.OssProtos.internal_static_common_PSts_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.OssProtos.internal_static_common_PSts_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.OssProtos.PSts.class, com.blemobi.sep.probuf.OssProtos.PSts.Builder.class);
-      }
-
-      // Construct using com.blemobi.sep.probuf.OssProtos.PSts.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        accessKeyId_ = "";
-
-        accessKeySecret_ = "";
-
-        securityToken_ = "";
-
-        expiration_ = "";
-
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.blemobi.sep.probuf.OssProtos.internal_static_common_PSts_descriptor;
-      }
-
-      public com.blemobi.sep.probuf.OssProtos.PSts getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.OssProtos.PSts.getDefaultInstance();
-      }
-
-      public com.blemobi.sep.probuf.OssProtos.PSts build() {
-        com.blemobi.sep.probuf.OssProtos.PSts result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.blemobi.sep.probuf.OssProtos.PSts buildPartial() {
-        com.blemobi.sep.probuf.OssProtos.PSts result = new com.blemobi.sep.probuf.OssProtos.PSts(this);
-        result.accessKeyId_ = accessKeyId_;
-        result.accessKeySecret_ = accessKeySecret_;
-        result.securityToken_ = securityToken_;
-        result.expiration_ = expiration_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.OssProtos.PSts) {
-          return mergeFrom((com.blemobi.sep.probuf.OssProtos.PSts)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.blemobi.sep.probuf.OssProtos.PSts other) {
-        if (other == com.blemobi.sep.probuf.OssProtos.PSts.getDefaultInstance()) return this;
-        if (!other.getAccessKeyId().isEmpty()) {
-          accessKeyId_ = other.accessKeyId_;
-          onChanged();
-        }
-        if (!other.getAccessKeySecret().isEmpty()) {
-          accessKeySecret_ = other.accessKeySecret_;
-          onChanged();
-        }
-        if (!other.getSecurityToken().isEmpty()) {
-          securityToken_ = other.securityToken_;
-          onChanged();
-        }
-        if (!other.getExpiration().isEmpty()) {
-          expiration_ = other.expiration_;
-          onChanged();
-        }
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.blemobi.sep.probuf.OssProtos.PSts parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.OssProtos.PSts) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object accessKeyId_ = "";
-      /**
-       * <code>optional string accessKeyId = 1;</code>
-       */
-      public java.lang.String getAccessKeyId() {
-        java.lang.Object ref = accessKeyId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            accessKeyId_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string accessKeyId = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getAccessKeyIdBytes() {
-        java.lang.Object ref = accessKeyId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          accessKeyId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string accessKeyId = 1;</code>
-       */
-      public Builder setAccessKeyId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        accessKeyId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string accessKeyId = 1;</code>
-       */
-      public Builder clearAccessKeyId() {
-        
-        accessKeyId_ = getDefaultInstance().getAccessKeyId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string accessKeyId = 1;</code>
-       */
-      public Builder setAccessKeyIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        accessKeyId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object accessKeySecret_ = "";
-      /**
-       * <code>optional string accessKeySecret = 2;</code>
-       */
-      public java.lang.String getAccessKeySecret() {
-        java.lang.Object ref = accessKeySecret_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            accessKeySecret_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string accessKeySecret = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getAccessKeySecretBytes() {
-        java.lang.Object ref = accessKeySecret_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          accessKeySecret_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string accessKeySecret = 2;</code>
-       */
-      public Builder setAccessKeySecret(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        accessKeySecret_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string accessKeySecret = 2;</code>
-       */
-      public Builder clearAccessKeySecret() {
-        
-        accessKeySecret_ = getDefaultInstance().getAccessKeySecret();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string accessKeySecret = 2;</code>
-       */
-      public Builder setAccessKeySecretBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        accessKeySecret_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object securityToken_ = "";
-      /**
-       * <code>optional string securityToken = 3;</code>
-       */
-      public java.lang.String getSecurityToken() {
-        java.lang.Object ref = securityToken_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            securityToken_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string securityToken = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getSecurityTokenBytes() {
-        java.lang.Object ref = securityToken_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          securityToken_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string securityToken = 3;</code>
-       */
-      public Builder setSecurityToken(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        securityToken_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string securityToken = 3;</code>
-       */
-      public Builder clearSecurityToken() {
-        
-        securityToken_ = getDefaultInstance().getSecurityToken();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string securityToken = 3;</code>
-       */
-      public Builder setSecurityTokenBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        securityToken_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object expiration_ = "";
-      /**
-       * <code>optional string expiration = 4;</code>
-       */
-      public java.lang.String getExpiration() {
-        java.lang.Object ref = expiration_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            expiration_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string expiration = 4;</code>
-       */
-      public com.google.protobuf.ByteString
-          getExpirationBytes() {
-        java.lang.Object ref = expiration_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          expiration_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string expiration = 4;</code>
-       */
-      public Builder setExpiration(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        expiration_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string expiration = 4;</code>
-       */
-      public Builder clearExpiration() {
-        
-        expiration_ = getDefaultInstance().getExpiration();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string expiration = 4;</code>
-       */
-      public Builder setExpirationBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        expiration_ = value;
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:common.PSts)
-    }
-
-    // @@protoc_insertion_point(class_scope:common.PSts)
-    private static final com.blemobi.sep.probuf.OssProtos.PSts DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.OssProtos.PSts();
-    }
-
-    public static com.blemobi.sep.probuf.OssProtos.PSts getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    public static final com.google.protobuf.Parser<PSts> PARSER =
-        new com.google.protobuf.AbstractParser<PSts>() {
-      public PSts parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
-          return new PSts(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PSts> getParserForType() {
-      return PARSER;
-    }
-
-    public com.blemobi.sep.probuf.OssProtos.PSts getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface PUploadOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PUpload)
+      // @@protoc_insertion_point(interface_extends:bbproto.PUpload)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -962,7 +93,7 @@ public final class OssProtos {
         getObjectKeyBytes();
   }
   /**
-   * Protobuf type {@code common.PUpload}
+   * Protobuf type {@code bbproto.PUpload}
    *
    * <pre>
    * 用于构造上传文件HTTP请求的信息
@@ -970,7 +101,7 @@ public final class OssProtos {
    */
   public  static final class PUpload extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PUpload)
+      // @@protoc_insertion_point(message_implements:bbproto.PUpload)
       PUploadOrBuilder {
     // Use PUpload.newBuilder() to construct.
     private PUpload(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -1050,12 +181,12 @@ public final class OssProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.OssProtos.internal_static_common_PUpload_descriptor;
+      return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PUpload_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.OssProtos.internal_static_common_PUpload_fieldAccessorTable
+      return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PUpload_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.OssProtos.PUpload.class, com.blemobi.sep.probuf.OssProtos.PUpload.Builder.class);
     }
@@ -1337,7 +468,7 @@ public final class OssProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PUpload}
+     * Protobuf type {@code bbproto.PUpload}
      *
      * <pre>
      * 用于构造上传文件HTTP请求的信息
@@ -1345,16 +476,16 @@ public final class OssProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PUpload)
+        // @@protoc_insertion_point(builder_implements:bbproto.PUpload)
         com.blemobi.sep.probuf.OssProtos.PUploadOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.OssProtos.internal_static_common_PUpload_descriptor;
+        return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PUpload_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.OssProtos.internal_static_common_PUpload_fieldAccessorTable
+        return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PUpload_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.OssProtos.PUpload.class, com.blemobi.sep.probuf.OssProtos.PUpload.Builder.class);
       }
@@ -1388,7 +519,7 @@ public final class OssProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.OssProtos.internal_static_common_PUpload_descriptor;
+        return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PUpload_descriptor;
       }
 
       public com.blemobi.sep.probuf.OssProtos.PUpload getDefaultInstanceForType() {
@@ -1836,10 +967,10 @@ public final class OssProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PUpload)
+      // @@protoc_insertion_point(builder_scope:bbproto.PUpload)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PUpload)
+    // @@protoc_insertion_point(class_scope:bbproto.PUpload)
     private static final com.blemobi.sep.probuf.OssProtos.PUpload DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.OssProtos.PUpload();
@@ -1880,7 +1011,7 @@ public final class OssProtos {
   }
 
   public interface PDownloadOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PDownload)
+      // @@protoc_insertion_point(interface_extends:bbproto.PDownload)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1920,7 +1051,7 @@ public final class OssProtos {
         getThumbBytes();
   }
   /**
-   * Protobuf type {@code common.PDownload}
+   * Protobuf type {@code bbproto.PDownload}
    *
    * <pre>
    * 用于构造下载文件HTTP请求的信息
@@ -1928,7 +1059,7 @@ public final class OssProtos {
    */
   public  static final class PDownload extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PDownload)
+      // @@protoc_insertion_point(message_implements:bbproto.PDownload)
       PDownloadOrBuilder {
     // Use PDownload.newBuilder() to construct.
     private PDownload(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -1989,12 +1120,12 @@ public final class OssProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.OssProtos.internal_static_common_PDownload_descriptor;
+      return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PDownload_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.OssProtos.internal_static_common_PDownload_fieldAccessorTable
+      return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PDownload_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.OssProtos.PDownload.class, com.blemobi.sep.probuf.OssProtos.PDownload.Builder.class);
     }
@@ -2198,7 +1329,7 @@ public final class OssProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PDownload}
+     * Protobuf type {@code bbproto.PDownload}
      *
      * <pre>
      * 用于构造下载文件HTTP请求的信息
@@ -2206,16 +1337,16 @@ public final class OssProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PDownload)
+        // @@protoc_insertion_point(builder_implements:bbproto.PDownload)
         com.blemobi.sep.probuf.OssProtos.PDownloadOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.OssProtos.internal_static_common_PDownload_descriptor;
+        return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PDownload_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.OssProtos.internal_static_common_PDownload_fieldAccessorTable
+        return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PDownload_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.OssProtos.PDownload.class, com.blemobi.sep.probuf.OssProtos.PDownload.Builder.class);
       }
@@ -2245,7 +1376,7 @@ public final class OssProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.OssProtos.internal_static_common_PDownload_descriptor;
+        return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PDownload_descriptor;
       }
 
       public com.blemobi.sep.probuf.OssProtos.PDownload getDefaultInstanceForType() {
@@ -2503,10 +1634,10 @@ public final class OssProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PDownload)
+      // @@protoc_insertion_point(builder_scope:bbproto.PDownload)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PDownload)
+    // @@protoc_insertion_point(class_scope:bbproto.PDownload)
     private static final com.blemobi.sep.probuf.OssProtos.PDownload DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.OssProtos.PDownload();
@@ -2547,35 +1678,35 @@ public final class OssProtos {
   }
 
   public interface PUploadArrayOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PUploadArray)
+      // @@protoc_insertion_point(interface_extends:bbproto.PUploadArray)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .common.PUpload uploads = 1;</code>
+     * <code>repeated .bbproto.PUpload uploads = 1;</code>
      */
     java.util.List<com.blemobi.sep.probuf.OssProtos.PUpload> 
         getUploadsList();
     /**
-     * <code>repeated .common.PUpload uploads = 1;</code>
+     * <code>repeated .bbproto.PUpload uploads = 1;</code>
      */
     com.blemobi.sep.probuf.OssProtos.PUpload getUploads(int index);
     /**
-     * <code>repeated .common.PUpload uploads = 1;</code>
+     * <code>repeated .bbproto.PUpload uploads = 1;</code>
      */
     int getUploadsCount();
     /**
-     * <code>repeated .common.PUpload uploads = 1;</code>
+     * <code>repeated .bbproto.PUpload uploads = 1;</code>
      */
     java.util.List<? extends com.blemobi.sep.probuf.OssProtos.PUploadOrBuilder> 
         getUploadsOrBuilderList();
     /**
-     * <code>repeated .common.PUpload uploads = 1;</code>
+     * <code>repeated .bbproto.PUpload uploads = 1;</code>
      */
     com.blemobi.sep.probuf.OssProtos.PUploadOrBuilder getUploadsOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code common.PUploadArray}
+   * Protobuf type {@code bbproto.PUploadArray}
    *
    * <pre>
    * 多个文件的上传信息
@@ -2583,7 +1714,7 @@ public final class OssProtos {
    */
   public  static final class PUploadArray extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PUploadArray)
+      // @@protoc_insertion_point(message_implements:bbproto.PUploadArray)
       PUploadArrayOrBuilder {
     // Use PUploadArray.newBuilder() to construct.
     private PUploadArray(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -2642,12 +1773,12 @@ public final class OssProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.OssProtos.internal_static_common_PUploadArray_descriptor;
+      return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PUploadArray_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.OssProtos.internal_static_common_PUploadArray_fieldAccessorTable
+      return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PUploadArray_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.OssProtos.PUploadArray.class, com.blemobi.sep.probuf.OssProtos.PUploadArray.Builder.class);
     }
@@ -2655,32 +1786,32 @@ public final class OssProtos {
     public static final int UPLOADS_FIELD_NUMBER = 1;
     private java.util.List<com.blemobi.sep.probuf.OssProtos.PUpload> uploads_;
     /**
-     * <code>repeated .common.PUpload uploads = 1;</code>
+     * <code>repeated .bbproto.PUpload uploads = 1;</code>
      */
     public java.util.List<com.blemobi.sep.probuf.OssProtos.PUpload> getUploadsList() {
       return uploads_;
     }
     /**
-     * <code>repeated .common.PUpload uploads = 1;</code>
+     * <code>repeated .bbproto.PUpload uploads = 1;</code>
      */
     public java.util.List<? extends com.blemobi.sep.probuf.OssProtos.PUploadOrBuilder> 
         getUploadsOrBuilderList() {
       return uploads_;
     }
     /**
-     * <code>repeated .common.PUpload uploads = 1;</code>
+     * <code>repeated .bbproto.PUpload uploads = 1;</code>
      */
     public int getUploadsCount() {
       return uploads_.size();
     }
     /**
-     * <code>repeated .common.PUpload uploads = 1;</code>
+     * <code>repeated .bbproto.PUpload uploads = 1;</code>
      */
     public com.blemobi.sep.probuf.OssProtos.PUpload getUploads(int index) {
       return uploads_.get(index);
     }
     /**
-     * <code>repeated .common.PUpload uploads = 1;</code>
+     * <code>repeated .bbproto.PUpload uploads = 1;</code>
      */
     public com.blemobi.sep.probuf.OssProtos.PUploadOrBuilder getUploadsOrBuilder(
         int index) {
@@ -2791,7 +1922,7 @@ public final class OssProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PUploadArray}
+     * Protobuf type {@code bbproto.PUploadArray}
      *
      * <pre>
      * 多个文件的上传信息
@@ -2799,16 +1930,16 @@ public final class OssProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PUploadArray)
+        // @@protoc_insertion_point(builder_implements:bbproto.PUploadArray)
         com.blemobi.sep.probuf.OssProtos.PUploadArrayOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.OssProtos.internal_static_common_PUploadArray_descriptor;
+        return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PUploadArray_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.OssProtos.internal_static_common_PUploadArray_fieldAccessorTable
+        return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PUploadArray_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.OssProtos.PUploadArray.class, com.blemobi.sep.probuf.OssProtos.PUploadArray.Builder.class);
       }
@@ -2841,7 +1972,7 @@ public final class OssProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.OssProtos.internal_static_common_PUploadArray_descriptor;
+        return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PUploadArray_descriptor;
       }
 
       public com.blemobi.sep.probuf.OssProtos.PUploadArray getDefaultInstanceForType() {
@@ -2949,7 +2080,7 @@ public final class OssProtos {
           com.blemobi.sep.probuf.OssProtos.PUpload, com.blemobi.sep.probuf.OssProtos.PUpload.Builder, com.blemobi.sep.probuf.OssProtos.PUploadOrBuilder> uploadsBuilder_;
 
       /**
-       * <code>repeated .common.PUpload uploads = 1;</code>
+       * <code>repeated .bbproto.PUpload uploads = 1;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.OssProtos.PUpload> getUploadsList() {
         if (uploadsBuilder_ == null) {
@@ -2959,7 +2090,7 @@ public final class OssProtos {
         }
       }
       /**
-       * <code>repeated .common.PUpload uploads = 1;</code>
+       * <code>repeated .bbproto.PUpload uploads = 1;</code>
        */
       public int getUploadsCount() {
         if (uploadsBuilder_ == null) {
@@ -2969,7 +2100,7 @@ public final class OssProtos {
         }
       }
       /**
-       * <code>repeated .common.PUpload uploads = 1;</code>
+       * <code>repeated .bbproto.PUpload uploads = 1;</code>
        */
       public com.blemobi.sep.probuf.OssProtos.PUpload getUploads(int index) {
         if (uploadsBuilder_ == null) {
@@ -2979,7 +2110,7 @@ public final class OssProtos {
         }
       }
       /**
-       * <code>repeated .common.PUpload uploads = 1;</code>
+       * <code>repeated .bbproto.PUpload uploads = 1;</code>
        */
       public Builder setUploads(
           int index, com.blemobi.sep.probuf.OssProtos.PUpload value) {
@@ -2996,7 +2127,7 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PUpload uploads = 1;</code>
+       * <code>repeated .bbproto.PUpload uploads = 1;</code>
        */
       public Builder setUploads(
           int index, com.blemobi.sep.probuf.OssProtos.PUpload.Builder builderForValue) {
@@ -3010,7 +2141,7 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PUpload uploads = 1;</code>
+       * <code>repeated .bbproto.PUpload uploads = 1;</code>
        */
       public Builder addUploads(com.blemobi.sep.probuf.OssProtos.PUpload value) {
         if (uploadsBuilder_ == null) {
@@ -3026,7 +2157,7 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PUpload uploads = 1;</code>
+       * <code>repeated .bbproto.PUpload uploads = 1;</code>
        */
       public Builder addUploads(
           int index, com.blemobi.sep.probuf.OssProtos.PUpload value) {
@@ -3043,7 +2174,7 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PUpload uploads = 1;</code>
+       * <code>repeated .bbproto.PUpload uploads = 1;</code>
        */
       public Builder addUploads(
           com.blemobi.sep.probuf.OssProtos.PUpload.Builder builderForValue) {
@@ -3057,7 +2188,7 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PUpload uploads = 1;</code>
+       * <code>repeated .bbproto.PUpload uploads = 1;</code>
        */
       public Builder addUploads(
           int index, com.blemobi.sep.probuf.OssProtos.PUpload.Builder builderForValue) {
@@ -3071,7 +2202,7 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PUpload uploads = 1;</code>
+       * <code>repeated .bbproto.PUpload uploads = 1;</code>
        */
       public Builder addAllUploads(
           java.lang.Iterable<? extends com.blemobi.sep.probuf.OssProtos.PUpload> values) {
@@ -3086,7 +2217,7 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PUpload uploads = 1;</code>
+       * <code>repeated .bbproto.PUpload uploads = 1;</code>
        */
       public Builder clearUploads() {
         if (uploadsBuilder_ == null) {
@@ -3099,7 +2230,7 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PUpload uploads = 1;</code>
+       * <code>repeated .bbproto.PUpload uploads = 1;</code>
        */
       public Builder removeUploads(int index) {
         if (uploadsBuilder_ == null) {
@@ -3112,14 +2243,14 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PUpload uploads = 1;</code>
+       * <code>repeated .bbproto.PUpload uploads = 1;</code>
        */
       public com.blemobi.sep.probuf.OssProtos.PUpload.Builder getUploadsBuilder(
           int index) {
         return getUploadsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PUpload uploads = 1;</code>
+       * <code>repeated .bbproto.PUpload uploads = 1;</code>
        */
       public com.blemobi.sep.probuf.OssProtos.PUploadOrBuilder getUploadsOrBuilder(
           int index) {
@@ -3129,7 +2260,7 @@ public final class OssProtos {
         }
       }
       /**
-       * <code>repeated .common.PUpload uploads = 1;</code>
+       * <code>repeated .bbproto.PUpload uploads = 1;</code>
        */
       public java.util.List<? extends com.blemobi.sep.probuf.OssProtos.PUploadOrBuilder> 
            getUploadsOrBuilderList() {
@@ -3140,14 +2271,14 @@ public final class OssProtos {
         }
       }
       /**
-       * <code>repeated .common.PUpload uploads = 1;</code>
+       * <code>repeated .bbproto.PUpload uploads = 1;</code>
        */
       public com.blemobi.sep.probuf.OssProtos.PUpload.Builder addUploadsBuilder() {
         return getUploadsFieldBuilder().addBuilder(
             com.blemobi.sep.probuf.OssProtos.PUpload.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PUpload uploads = 1;</code>
+       * <code>repeated .bbproto.PUpload uploads = 1;</code>
        */
       public com.blemobi.sep.probuf.OssProtos.PUpload.Builder addUploadsBuilder(
           int index) {
@@ -3155,7 +2286,7 @@ public final class OssProtos {
             index, com.blemobi.sep.probuf.OssProtos.PUpload.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PUpload uploads = 1;</code>
+       * <code>repeated .bbproto.PUpload uploads = 1;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.OssProtos.PUpload.Builder> 
            getUploadsBuilderList() {
@@ -3186,10 +2317,10 @@ public final class OssProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PUploadArray)
+      // @@protoc_insertion_point(builder_scope:bbproto.PUploadArray)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PUploadArray)
+    // @@protoc_insertion_point(class_scope:bbproto.PUploadArray)
     private static final com.blemobi.sep.probuf.OssProtos.PUploadArray DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.OssProtos.PUploadArray();
@@ -3230,35 +2361,35 @@ public final class OssProtos {
   }
 
   public interface PDownloadArrayOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PDownloadArray)
+      // @@protoc_insertion_point(interface_extends:bbproto.PDownloadArray)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .common.PDownload downloads = 1;</code>
+     * <code>repeated .bbproto.PDownload downloads = 1;</code>
      */
     java.util.List<com.blemobi.sep.probuf.OssProtos.PDownload> 
         getDownloadsList();
     /**
-     * <code>repeated .common.PDownload downloads = 1;</code>
+     * <code>repeated .bbproto.PDownload downloads = 1;</code>
      */
     com.blemobi.sep.probuf.OssProtos.PDownload getDownloads(int index);
     /**
-     * <code>repeated .common.PDownload downloads = 1;</code>
+     * <code>repeated .bbproto.PDownload downloads = 1;</code>
      */
     int getDownloadsCount();
     /**
-     * <code>repeated .common.PDownload downloads = 1;</code>
+     * <code>repeated .bbproto.PDownload downloads = 1;</code>
      */
     java.util.List<? extends com.blemobi.sep.probuf.OssProtos.PDownloadOrBuilder> 
         getDownloadsOrBuilderList();
     /**
-     * <code>repeated .common.PDownload downloads = 1;</code>
+     * <code>repeated .bbproto.PDownload downloads = 1;</code>
      */
     com.blemobi.sep.probuf.OssProtos.PDownloadOrBuilder getDownloadsOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code common.PDownloadArray}
+   * Protobuf type {@code bbproto.PDownloadArray}
    *
    * <pre>
    * 多个文件的下载信息
@@ -3266,7 +2397,7 @@ public final class OssProtos {
    */
   public  static final class PDownloadArray extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PDownloadArray)
+      // @@protoc_insertion_point(message_implements:bbproto.PDownloadArray)
       PDownloadArrayOrBuilder {
     // Use PDownloadArray.newBuilder() to construct.
     private PDownloadArray(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -3325,12 +2456,12 @@ public final class OssProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.OssProtos.internal_static_common_PDownloadArray_descriptor;
+      return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PDownloadArray_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.OssProtos.internal_static_common_PDownloadArray_fieldAccessorTable
+      return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PDownloadArray_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.OssProtos.PDownloadArray.class, com.blemobi.sep.probuf.OssProtos.PDownloadArray.Builder.class);
     }
@@ -3338,32 +2469,32 @@ public final class OssProtos {
     public static final int DOWNLOADS_FIELD_NUMBER = 1;
     private java.util.List<com.blemobi.sep.probuf.OssProtos.PDownload> downloads_;
     /**
-     * <code>repeated .common.PDownload downloads = 1;</code>
+     * <code>repeated .bbproto.PDownload downloads = 1;</code>
      */
     public java.util.List<com.blemobi.sep.probuf.OssProtos.PDownload> getDownloadsList() {
       return downloads_;
     }
     /**
-     * <code>repeated .common.PDownload downloads = 1;</code>
+     * <code>repeated .bbproto.PDownload downloads = 1;</code>
      */
     public java.util.List<? extends com.blemobi.sep.probuf.OssProtos.PDownloadOrBuilder> 
         getDownloadsOrBuilderList() {
       return downloads_;
     }
     /**
-     * <code>repeated .common.PDownload downloads = 1;</code>
+     * <code>repeated .bbproto.PDownload downloads = 1;</code>
      */
     public int getDownloadsCount() {
       return downloads_.size();
     }
     /**
-     * <code>repeated .common.PDownload downloads = 1;</code>
+     * <code>repeated .bbproto.PDownload downloads = 1;</code>
      */
     public com.blemobi.sep.probuf.OssProtos.PDownload getDownloads(int index) {
       return downloads_.get(index);
     }
     /**
-     * <code>repeated .common.PDownload downloads = 1;</code>
+     * <code>repeated .bbproto.PDownload downloads = 1;</code>
      */
     public com.blemobi.sep.probuf.OssProtos.PDownloadOrBuilder getDownloadsOrBuilder(
         int index) {
@@ -3474,7 +2605,7 @@ public final class OssProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PDownloadArray}
+     * Protobuf type {@code bbproto.PDownloadArray}
      *
      * <pre>
      * 多个文件的下载信息
@@ -3482,16 +2613,16 @@ public final class OssProtos {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PDownloadArray)
+        // @@protoc_insertion_point(builder_implements:bbproto.PDownloadArray)
         com.blemobi.sep.probuf.OssProtos.PDownloadArrayOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.OssProtos.internal_static_common_PDownloadArray_descriptor;
+        return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PDownloadArray_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.OssProtos.internal_static_common_PDownloadArray_fieldAccessorTable
+        return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PDownloadArray_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.OssProtos.PDownloadArray.class, com.blemobi.sep.probuf.OssProtos.PDownloadArray.Builder.class);
       }
@@ -3524,7 +2655,7 @@ public final class OssProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.OssProtos.internal_static_common_PDownloadArray_descriptor;
+        return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PDownloadArray_descriptor;
       }
 
       public com.blemobi.sep.probuf.OssProtos.PDownloadArray getDefaultInstanceForType() {
@@ -3632,7 +2763,7 @@ public final class OssProtos {
           com.blemobi.sep.probuf.OssProtos.PDownload, com.blemobi.sep.probuf.OssProtos.PDownload.Builder, com.blemobi.sep.probuf.OssProtos.PDownloadOrBuilder> downloadsBuilder_;
 
       /**
-       * <code>repeated .common.PDownload downloads = 1;</code>
+       * <code>repeated .bbproto.PDownload downloads = 1;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.OssProtos.PDownload> getDownloadsList() {
         if (downloadsBuilder_ == null) {
@@ -3642,7 +2773,7 @@ public final class OssProtos {
         }
       }
       /**
-       * <code>repeated .common.PDownload downloads = 1;</code>
+       * <code>repeated .bbproto.PDownload downloads = 1;</code>
        */
       public int getDownloadsCount() {
         if (downloadsBuilder_ == null) {
@@ -3652,7 +2783,7 @@ public final class OssProtos {
         }
       }
       /**
-       * <code>repeated .common.PDownload downloads = 1;</code>
+       * <code>repeated .bbproto.PDownload downloads = 1;</code>
        */
       public com.blemobi.sep.probuf.OssProtos.PDownload getDownloads(int index) {
         if (downloadsBuilder_ == null) {
@@ -3662,7 +2793,7 @@ public final class OssProtos {
         }
       }
       /**
-       * <code>repeated .common.PDownload downloads = 1;</code>
+       * <code>repeated .bbproto.PDownload downloads = 1;</code>
        */
       public Builder setDownloads(
           int index, com.blemobi.sep.probuf.OssProtos.PDownload value) {
@@ -3679,7 +2810,7 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PDownload downloads = 1;</code>
+       * <code>repeated .bbproto.PDownload downloads = 1;</code>
        */
       public Builder setDownloads(
           int index, com.blemobi.sep.probuf.OssProtos.PDownload.Builder builderForValue) {
@@ -3693,7 +2824,7 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PDownload downloads = 1;</code>
+       * <code>repeated .bbproto.PDownload downloads = 1;</code>
        */
       public Builder addDownloads(com.blemobi.sep.probuf.OssProtos.PDownload value) {
         if (downloadsBuilder_ == null) {
@@ -3709,7 +2840,7 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PDownload downloads = 1;</code>
+       * <code>repeated .bbproto.PDownload downloads = 1;</code>
        */
       public Builder addDownloads(
           int index, com.blemobi.sep.probuf.OssProtos.PDownload value) {
@@ -3726,7 +2857,7 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PDownload downloads = 1;</code>
+       * <code>repeated .bbproto.PDownload downloads = 1;</code>
        */
       public Builder addDownloads(
           com.blemobi.sep.probuf.OssProtos.PDownload.Builder builderForValue) {
@@ -3740,7 +2871,7 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PDownload downloads = 1;</code>
+       * <code>repeated .bbproto.PDownload downloads = 1;</code>
        */
       public Builder addDownloads(
           int index, com.blemobi.sep.probuf.OssProtos.PDownload.Builder builderForValue) {
@@ -3754,7 +2885,7 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PDownload downloads = 1;</code>
+       * <code>repeated .bbproto.PDownload downloads = 1;</code>
        */
       public Builder addAllDownloads(
           java.lang.Iterable<? extends com.blemobi.sep.probuf.OssProtos.PDownload> values) {
@@ -3769,7 +2900,7 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PDownload downloads = 1;</code>
+       * <code>repeated .bbproto.PDownload downloads = 1;</code>
        */
       public Builder clearDownloads() {
         if (downloadsBuilder_ == null) {
@@ -3782,7 +2913,7 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PDownload downloads = 1;</code>
+       * <code>repeated .bbproto.PDownload downloads = 1;</code>
        */
       public Builder removeDownloads(int index) {
         if (downloadsBuilder_ == null) {
@@ -3795,14 +2926,14 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PDownload downloads = 1;</code>
+       * <code>repeated .bbproto.PDownload downloads = 1;</code>
        */
       public com.blemobi.sep.probuf.OssProtos.PDownload.Builder getDownloadsBuilder(
           int index) {
         return getDownloadsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PDownload downloads = 1;</code>
+       * <code>repeated .bbproto.PDownload downloads = 1;</code>
        */
       public com.blemobi.sep.probuf.OssProtos.PDownloadOrBuilder getDownloadsOrBuilder(
           int index) {
@@ -3812,7 +2943,7 @@ public final class OssProtos {
         }
       }
       /**
-       * <code>repeated .common.PDownload downloads = 1;</code>
+       * <code>repeated .bbproto.PDownload downloads = 1;</code>
        */
       public java.util.List<? extends com.blemobi.sep.probuf.OssProtos.PDownloadOrBuilder> 
            getDownloadsOrBuilderList() {
@@ -3823,14 +2954,14 @@ public final class OssProtos {
         }
       }
       /**
-       * <code>repeated .common.PDownload downloads = 1;</code>
+       * <code>repeated .bbproto.PDownload downloads = 1;</code>
        */
       public com.blemobi.sep.probuf.OssProtos.PDownload.Builder addDownloadsBuilder() {
         return getDownloadsFieldBuilder().addBuilder(
             com.blemobi.sep.probuf.OssProtos.PDownload.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PDownload downloads = 1;</code>
+       * <code>repeated .bbproto.PDownload downloads = 1;</code>
        */
       public com.blemobi.sep.probuf.OssProtos.PDownload.Builder addDownloadsBuilder(
           int index) {
@@ -3838,7 +2969,7 @@ public final class OssProtos {
             index, com.blemobi.sep.probuf.OssProtos.PDownload.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PDownload downloads = 1;</code>
+       * <code>repeated .bbproto.PDownload downloads = 1;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.OssProtos.PDownload.Builder> 
            getDownloadsBuilderList() {
@@ -3869,10 +3000,10 @@ public final class OssProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PDownloadArray)
+      // @@protoc_insertion_point(builder_scope:bbproto.PDownloadArray)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PDownloadArray)
+    // @@protoc_insertion_point(class_scope:bbproto.PDownloadArray)
     private static final com.blemobi.sep.probuf.OssProtos.PDownloadArray DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.OssProtos.PDownloadArray();
@@ -3913,7 +3044,7 @@ public final class OssProtos {
   }
 
   public interface PFileInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PFileInfo)
+      // @@protoc_insertion_point(interface_extends:bbproto.PFileInfo)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3962,11 +3093,11 @@ public final class OssProtos {
         getExtensionBytes();
   }
   /**
-   * Protobuf type {@code common.PFileInfo}
+   * Protobuf type {@code bbproto.PFileInfo}
    */
   public  static final class PFileInfo extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PFileInfo)
+      // @@protoc_insertion_point(message_implements:bbproto.PFileInfo)
       PFileInfoOrBuilder {
     // Use PFileInfo.newBuilder() to construct.
     private PFileInfo(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -4033,12 +3164,12 @@ public final class OssProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.OssProtos.internal_static_common_PFileInfo_descriptor;
+      return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PFileInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.OssProtos.internal_static_common_PFileInfo_fieldAccessorTable
+      return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PFileInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.OssProtos.PFileInfo.class, com.blemobi.sep.probuf.OssProtos.PFileInfo.Builder.class);
     }
@@ -4262,20 +3393,20 @@ public final class OssProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PFileInfo}
+     * Protobuf type {@code bbproto.PFileInfo}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PFileInfo)
+        // @@protoc_insertion_point(builder_implements:bbproto.PFileInfo)
         com.blemobi.sep.probuf.OssProtos.PFileInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.OssProtos.internal_static_common_PFileInfo_descriptor;
+        return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PFileInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.OssProtos.internal_static_common_PFileInfo_fieldAccessorTable
+        return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PFileInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.OssProtos.PFileInfo.class, com.blemobi.sep.probuf.OssProtos.PFileInfo.Builder.class);
       }
@@ -4307,7 +3438,7 @@ public final class OssProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.OssProtos.internal_static_common_PFileInfo_descriptor;
+        return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PFileInfo_descriptor;
       }
 
       public com.blemobi.sep.probuf.OssProtos.PFileInfo getDefaultInstanceForType() {
@@ -4607,10 +3738,10 @@ public final class OssProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PFileInfo)
+      // @@protoc_insertion_point(builder_scope:bbproto.PFileInfo)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PFileInfo)
+    // @@protoc_insertion_point(class_scope:bbproto.PFileInfo)
     private static final com.blemobi.sep.probuf.OssProtos.PFileInfo DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.OssProtos.PFileInfo();
@@ -4651,39 +3782,39 @@ public final class OssProtos {
   }
 
   public interface PFileInfoArrayOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:common.PFileInfoArray)
+      // @@protoc_insertion_point(interface_extends:bbproto.PFileInfoArray)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+     * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
      */
     java.util.List<com.blemobi.sep.probuf.OssProtos.PFileInfo> 
         getFileInfosList();
     /**
-     * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+     * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
      */
     com.blemobi.sep.probuf.OssProtos.PFileInfo getFileInfos(int index);
     /**
-     * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+     * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
      */
     int getFileInfosCount();
     /**
-     * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+     * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
      */
     java.util.List<? extends com.blemobi.sep.probuf.OssProtos.PFileInfoOrBuilder> 
         getFileInfosOrBuilderList();
     /**
-     * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+     * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
      */
     com.blemobi.sep.probuf.OssProtos.PFileInfoOrBuilder getFileInfosOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code common.PFileInfoArray}
+   * Protobuf type {@code bbproto.PFileInfoArray}
    */
   public  static final class PFileInfoArray extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:common.PFileInfoArray)
+      // @@protoc_insertion_point(message_implements:bbproto.PFileInfoArray)
       PFileInfoArrayOrBuilder {
     // Use PFileInfoArray.newBuilder() to construct.
     private PFileInfoArray(com.google.protobuf.GeneratedMessage.Builder builder) {
@@ -4742,12 +3873,12 @@ public final class OssProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.OssProtos.internal_static_common_PFileInfoArray_descriptor;
+      return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PFileInfoArray_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.OssProtos.internal_static_common_PFileInfoArray_fieldAccessorTable
+      return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PFileInfoArray_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.blemobi.sep.probuf.OssProtos.PFileInfoArray.class, com.blemobi.sep.probuf.OssProtos.PFileInfoArray.Builder.class);
     }
@@ -4755,32 +3886,32 @@ public final class OssProtos {
     public static final int FILEINFOS_FIELD_NUMBER = 1;
     private java.util.List<com.blemobi.sep.probuf.OssProtos.PFileInfo> fileInfos_;
     /**
-     * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+     * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
      */
     public java.util.List<com.blemobi.sep.probuf.OssProtos.PFileInfo> getFileInfosList() {
       return fileInfos_;
     }
     /**
-     * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+     * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
      */
     public java.util.List<? extends com.blemobi.sep.probuf.OssProtos.PFileInfoOrBuilder> 
         getFileInfosOrBuilderList() {
       return fileInfos_;
     }
     /**
-     * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+     * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
      */
     public int getFileInfosCount() {
       return fileInfos_.size();
     }
     /**
-     * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+     * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
      */
     public com.blemobi.sep.probuf.OssProtos.PFileInfo getFileInfos(int index) {
       return fileInfos_.get(index);
     }
     /**
-     * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+     * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
      */
     public com.blemobi.sep.probuf.OssProtos.PFileInfoOrBuilder getFileInfosOrBuilder(
         int index) {
@@ -4891,20 +4022,20 @@ public final class OssProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code common.PFileInfoArray}
+     * Protobuf type {@code bbproto.PFileInfoArray}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:common.PFileInfoArray)
+        // @@protoc_insertion_point(builder_implements:bbproto.PFileInfoArray)
         com.blemobi.sep.probuf.OssProtos.PFileInfoArrayOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.OssProtos.internal_static_common_PFileInfoArray_descriptor;
+        return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PFileInfoArray_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.OssProtos.internal_static_common_PFileInfoArray_fieldAccessorTable
+        return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PFileInfoArray_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.blemobi.sep.probuf.OssProtos.PFileInfoArray.class, com.blemobi.sep.probuf.OssProtos.PFileInfoArray.Builder.class);
       }
@@ -4937,7 +4068,7 @@ public final class OssProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.OssProtos.internal_static_common_PFileInfoArray_descriptor;
+        return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PFileInfoArray_descriptor;
       }
 
       public com.blemobi.sep.probuf.OssProtos.PFileInfoArray getDefaultInstanceForType() {
@@ -5045,7 +4176,7 @@ public final class OssProtos {
           com.blemobi.sep.probuf.OssProtos.PFileInfo, com.blemobi.sep.probuf.OssProtos.PFileInfo.Builder, com.blemobi.sep.probuf.OssProtos.PFileInfoOrBuilder> fileInfosBuilder_;
 
       /**
-       * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+       * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.OssProtos.PFileInfo> getFileInfosList() {
         if (fileInfosBuilder_ == null) {
@@ -5055,7 +4186,7 @@ public final class OssProtos {
         }
       }
       /**
-       * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+       * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
        */
       public int getFileInfosCount() {
         if (fileInfosBuilder_ == null) {
@@ -5065,7 +4196,7 @@ public final class OssProtos {
         }
       }
       /**
-       * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+       * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
        */
       public com.blemobi.sep.probuf.OssProtos.PFileInfo getFileInfos(int index) {
         if (fileInfosBuilder_ == null) {
@@ -5075,7 +4206,7 @@ public final class OssProtos {
         }
       }
       /**
-       * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+       * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
        */
       public Builder setFileInfos(
           int index, com.blemobi.sep.probuf.OssProtos.PFileInfo value) {
@@ -5092,7 +4223,7 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+       * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
        */
       public Builder setFileInfos(
           int index, com.blemobi.sep.probuf.OssProtos.PFileInfo.Builder builderForValue) {
@@ -5106,7 +4237,7 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+       * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
        */
       public Builder addFileInfos(com.blemobi.sep.probuf.OssProtos.PFileInfo value) {
         if (fileInfosBuilder_ == null) {
@@ -5122,7 +4253,7 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+       * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
        */
       public Builder addFileInfos(
           int index, com.blemobi.sep.probuf.OssProtos.PFileInfo value) {
@@ -5139,7 +4270,7 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+       * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
        */
       public Builder addFileInfos(
           com.blemobi.sep.probuf.OssProtos.PFileInfo.Builder builderForValue) {
@@ -5153,7 +4284,7 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+       * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
        */
       public Builder addFileInfos(
           int index, com.blemobi.sep.probuf.OssProtos.PFileInfo.Builder builderForValue) {
@@ -5167,7 +4298,7 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+       * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
        */
       public Builder addAllFileInfos(
           java.lang.Iterable<? extends com.blemobi.sep.probuf.OssProtos.PFileInfo> values) {
@@ -5182,7 +4313,7 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+       * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
        */
       public Builder clearFileInfos() {
         if (fileInfosBuilder_ == null) {
@@ -5195,7 +4326,7 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+       * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
        */
       public Builder removeFileInfos(int index) {
         if (fileInfosBuilder_ == null) {
@@ -5208,14 +4339,14 @@ public final class OssProtos {
         return this;
       }
       /**
-       * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+       * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
        */
       public com.blemobi.sep.probuf.OssProtos.PFileInfo.Builder getFileInfosBuilder(
           int index) {
         return getFileInfosFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+       * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
        */
       public com.blemobi.sep.probuf.OssProtos.PFileInfoOrBuilder getFileInfosOrBuilder(
           int index) {
@@ -5225,7 +4356,7 @@ public final class OssProtos {
         }
       }
       /**
-       * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+       * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
        */
       public java.util.List<? extends com.blemobi.sep.probuf.OssProtos.PFileInfoOrBuilder> 
            getFileInfosOrBuilderList() {
@@ -5236,14 +4367,14 @@ public final class OssProtos {
         }
       }
       /**
-       * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+       * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
        */
       public com.blemobi.sep.probuf.OssProtos.PFileInfo.Builder addFileInfosBuilder() {
         return getFileInfosFieldBuilder().addBuilder(
             com.blemobi.sep.probuf.OssProtos.PFileInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+       * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
        */
       public com.blemobi.sep.probuf.OssProtos.PFileInfo.Builder addFileInfosBuilder(
           int index) {
@@ -5251,7 +4382,7 @@ public final class OssProtos {
             index, com.blemobi.sep.probuf.OssProtos.PFileInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .common.PFileInfo fileInfos = 1;</code>
+       * <code>repeated .bbproto.PFileInfo fileInfos = 1;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.OssProtos.PFileInfo.Builder> 
            getFileInfosBuilderList() {
@@ -5282,10 +4413,10 @@ public final class OssProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:common.PFileInfoArray)
+      // @@protoc_insertion_point(builder_scope:bbproto.PFileInfoArray)
     }
 
-    // @@protoc_insertion_point(class_scope:common.PFileInfoArray)
+    // @@protoc_insertion_point(class_scope:bbproto.PFileInfoArray)
     private static final com.blemobi.sep.probuf.OssProtos.PFileInfoArray DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.blemobi.sep.probuf.OssProtos.PFileInfoArray();
@@ -5325,41 +4456,1482 @@ public final class OssProtos {
 
   }
 
+  public interface PMultiPartUploadOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PMultiPartUpload)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional bool exists = 1;</code>
+     *
+     * <pre>
+     *要上传的文件是否存在
+     * </pre>
+     */
+    boolean getExists();
+
+    /**
+     * <code>optional string objectKey = 2;</code>
+     *
+     * <pre>
+     *最终的文件名，一般与init接口指定的objectkey一致
+     * </pre>
+     */
+    java.lang.String getObjectKey();
+    /**
+     * <code>optional string objectKey = 2;</code>
+     *
+     * <pre>
+     *最终的文件名，一般与init接口指定的objectkey一致
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getObjectKeyBytes();
+
+    /**
+     * <code>optional string uploadId = 3;</code>
+     *
+     * <pre>
+     *阿里oss返回的上传ID，请于上传期间保存
+     * </pre>
+     */
+    java.lang.String getUploadId();
+    /**
+     * <code>optional string uploadId = 3;</code>
+     *
+     * <pre>
+     *阿里oss返回的上传ID，请于上传期间保存
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUploadIdBytes();
+
+    /**
+     * <code>optional string domain = 4;</code>
+     *
+     * <pre>
+     *与阿里oss交互的域名
+     * </pre>
+     */
+    java.lang.String getDomain();
+    /**
+     * <code>optional string domain = 4;</code>
+     *
+     * <pre>
+     *与阿里oss交互的域名
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+
+    /**
+     * <code>optional string accessKeyId = 5;</code>
+     */
+    java.lang.String getAccessKeyId();
+    /**
+     * <code>optional string accessKeyId = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getAccessKeyIdBytes();
+
+    /**
+     * <code>optional string expires = 6;</code>
+     */
+    java.lang.String getExpires();
+    /**
+     * <code>optional string expires = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getExpiresBytes();
+
+    /**
+     * <code>repeated string sign = 7;</code>
+     *
+     * <pre>
+     *签名数组
+     * </pre>
+     */
+    com.google.protobuf.ProtocolStringList
+        getSignList();
+    /**
+     * <code>repeated string sign = 7;</code>
+     *
+     * <pre>
+     *签名数组
+     * </pre>
+     */
+    int getSignCount();
+    /**
+     * <code>repeated string sign = 7;</code>
+     *
+     * <pre>
+     *签名数组
+     * </pre>
+     */
+    java.lang.String getSign(int index);
+    /**
+     * <code>repeated string sign = 7;</code>
+     *
+     * <pre>
+     *签名数组
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getSignBytes(int index);
+  }
+  /**
+   * Protobuf type {@code bbproto.PMultiPartUpload}
+   */
+  public  static final class PMultiPartUpload extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PMultiPartUpload)
+      PMultiPartUploadOrBuilder {
+    // Use PMultiPartUpload.newBuilder() to construct.
+    private PMultiPartUpload(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private PMultiPartUpload() {
+      exists_ = false;
+      objectKey_ = "";
+      uploadId_ = "";
+      domain_ = "";
+      accessKeyId_ = "";
+      expires_ = "";
+      sign_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PMultiPartUpload(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              exists_ = input.readBool();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              objectKey_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              uploadId_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              domain_ = bs;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              accessKeyId_ = bs;
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              expires_ = bs;
+              break;
+            }
+            case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+                sign_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              sign_.add(bs);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+          sign_ = sign_.getUnmodifiableView();
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PMultiPartUpload_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PMultiPartUpload_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.OssProtos.PMultiPartUpload.class, com.blemobi.sep.probuf.OssProtos.PMultiPartUpload.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int EXISTS_FIELD_NUMBER = 1;
+    private boolean exists_;
+    /**
+     * <code>optional bool exists = 1;</code>
+     *
+     * <pre>
+     *要上传的文件是否存在
+     * </pre>
+     */
+    public boolean getExists() {
+      return exists_;
+    }
+
+    public static final int OBJECTKEY_FIELD_NUMBER = 2;
+    private volatile java.lang.Object objectKey_;
+    /**
+     * <code>optional string objectKey = 2;</code>
+     *
+     * <pre>
+     *最终的文件名，一般与init接口指定的objectkey一致
+     * </pre>
+     */
+    public java.lang.String getObjectKey() {
+      java.lang.Object ref = objectKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          objectKey_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string objectKey = 2;</code>
+     *
+     * <pre>
+     *最终的文件名，一般与init接口指定的objectkey一致
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getObjectKeyBytes() {
+      java.lang.Object ref = objectKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        objectKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UPLOADID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object uploadId_;
+    /**
+     * <code>optional string uploadId = 3;</code>
+     *
+     * <pre>
+     *阿里oss返回的上传ID，请于上传期间保存
+     * </pre>
+     */
+    public java.lang.String getUploadId() {
+      java.lang.Object ref = uploadId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          uploadId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string uploadId = 3;</code>
+     *
+     * <pre>
+     *阿里oss返回的上传ID，请于上传期间保存
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUploadIdBytes() {
+      java.lang.Object ref = uploadId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uploadId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 4;
+    private volatile java.lang.Object domain_;
+    /**
+     * <code>optional string domain = 4;</code>
+     *
+     * <pre>
+     *与阿里oss交互的域名
+     * </pre>
+     */
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          domain_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string domain = 4;</code>
+     *
+     * <pre>
+     *与阿里oss交互的域名
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCESSKEYID_FIELD_NUMBER = 5;
+    private volatile java.lang.Object accessKeyId_;
+    /**
+     * <code>optional string accessKeyId = 5;</code>
+     */
+    public java.lang.String getAccessKeyId() {
+      java.lang.Object ref = accessKeyId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          accessKeyId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string accessKeyId = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAccessKeyIdBytes() {
+      java.lang.Object ref = accessKeyId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accessKeyId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXPIRES_FIELD_NUMBER = 6;
+    private volatile java.lang.Object expires_;
+    /**
+     * <code>optional string expires = 6;</code>
+     */
+    public java.lang.String getExpires() {
+      java.lang.Object ref = expires_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          expires_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string expires = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getExpiresBytes() {
+      java.lang.Object ref = expires_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        expires_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIGN_FIELD_NUMBER = 7;
+    private com.google.protobuf.LazyStringList sign_;
+    /**
+     * <code>repeated string sign = 7;</code>
+     *
+     * <pre>
+     *签名数组
+     * </pre>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSignList() {
+      return sign_;
+    }
+    /**
+     * <code>repeated string sign = 7;</code>
+     *
+     * <pre>
+     *签名数组
+     * </pre>
+     */
+    public int getSignCount() {
+      return sign_.size();
+    }
+    /**
+     * <code>repeated string sign = 7;</code>
+     *
+     * <pre>
+     *签名数组
+     * </pre>
+     */
+    public java.lang.String getSign(int index) {
+      return sign_.get(index);
+    }
+    /**
+     * <code>repeated string sign = 7;</code>
+     *
+     * <pre>
+     *签名数组
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getSignBytes(int index) {
+      return sign_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (exists_ != false) {
+        output.writeBool(1, exists_);
+      }
+      if (!getObjectKeyBytes().isEmpty()) {
+        output.writeBytes(2, getObjectKeyBytes());
+      }
+      if (!getUploadIdBytes().isEmpty()) {
+        output.writeBytes(3, getUploadIdBytes());
+      }
+      if (!getDomainBytes().isEmpty()) {
+        output.writeBytes(4, getDomainBytes());
+      }
+      if (!getAccessKeyIdBytes().isEmpty()) {
+        output.writeBytes(5, getAccessKeyIdBytes());
+      }
+      if (!getExpiresBytes().isEmpty()) {
+        output.writeBytes(6, getExpiresBytes());
+      }
+      for (int i = 0; i < sign_.size(); i++) {
+        output.writeBytes(7, sign_.getByteString(i));
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (exists_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, exists_);
+      }
+      if (!getObjectKeyBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getObjectKeyBytes());
+      }
+      if (!getUploadIdBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getUploadIdBytes());
+      }
+      if (!getDomainBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getDomainBytes());
+      }
+      if (!getAccessKeyIdBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, getAccessKeyIdBytes());
+      }
+      if (!getExpiresBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, getExpiresBytes());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < sign_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(sign_.getByteString(i));
+        }
+        size += dataSize;
+        size += 1 * getSignList().size();
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.OssProtos.PMultiPartUpload parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.OssProtos.PMultiPartUpload parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.OssProtos.PMultiPartUpload parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.OssProtos.PMultiPartUpload parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.OssProtos.PMultiPartUpload parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.OssProtos.PMultiPartUpload parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.OssProtos.PMultiPartUpload parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.OssProtos.PMultiPartUpload parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.OssProtos.PMultiPartUpload parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.OssProtos.PMultiPartUpload parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.OssProtos.PMultiPartUpload prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PMultiPartUpload}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PMultiPartUpload)
+        com.blemobi.sep.probuf.OssProtos.PMultiPartUploadOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PMultiPartUpload_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PMultiPartUpload_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.OssProtos.PMultiPartUpload.class, com.blemobi.sep.probuf.OssProtos.PMultiPartUpload.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.OssProtos.PMultiPartUpload.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        exists_ = false;
+
+        objectKey_ = "";
+
+        uploadId_ = "";
+
+        domain_ = "";
+
+        accessKeyId_ = "";
+
+        expires_ = "";
+
+        sign_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.OssProtos.internal_static_bbproto_PMultiPartUpload_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.OssProtos.PMultiPartUpload getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.OssProtos.PMultiPartUpload.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.OssProtos.PMultiPartUpload build() {
+        com.blemobi.sep.probuf.OssProtos.PMultiPartUpload result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.OssProtos.PMultiPartUpload buildPartial() {
+        com.blemobi.sep.probuf.OssProtos.PMultiPartUpload result = new com.blemobi.sep.probuf.OssProtos.PMultiPartUpload(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.exists_ = exists_;
+        result.objectKey_ = objectKey_;
+        result.uploadId_ = uploadId_;
+        result.domain_ = domain_;
+        result.accessKeyId_ = accessKeyId_;
+        result.expires_ = expires_;
+        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          sign_ = sign_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000040);
+        }
+        result.sign_ = sign_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.OssProtos.PMultiPartUpload) {
+          return mergeFrom((com.blemobi.sep.probuf.OssProtos.PMultiPartUpload)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.OssProtos.PMultiPartUpload other) {
+        if (other == com.blemobi.sep.probuf.OssProtos.PMultiPartUpload.getDefaultInstance()) return this;
+        if (other.getExists() != false) {
+          setExists(other.getExists());
+        }
+        if (!other.getObjectKey().isEmpty()) {
+          objectKey_ = other.objectKey_;
+          onChanged();
+        }
+        if (!other.getUploadId().isEmpty()) {
+          uploadId_ = other.uploadId_;
+          onChanged();
+        }
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          onChanged();
+        }
+        if (!other.getAccessKeyId().isEmpty()) {
+          accessKeyId_ = other.accessKeyId_;
+          onChanged();
+        }
+        if (!other.getExpires().isEmpty()) {
+          expires_ = other.expires_;
+          onChanged();
+        }
+        if (!other.sign_.isEmpty()) {
+          if (sign_.isEmpty()) {
+            sign_ = other.sign_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+          } else {
+            ensureSignIsMutable();
+            sign_.addAll(other.sign_);
+          }
+          onChanged();
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.OssProtos.PMultiPartUpload parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.OssProtos.PMultiPartUpload) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean exists_ ;
+      /**
+       * <code>optional bool exists = 1;</code>
+       *
+       * <pre>
+       *要上传的文件是否存在
+       * </pre>
+       */
+      public boolean getExists() {
+        return exists_;
+      }
+      /**
+       * <code>optional bool exists = 1;</code>
+       *
+       * <pre>
+       *要上传的文件是否存在
+       * </pre>
+       */
+      public Builder setExists(boolean value) {
+        
+        exists_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool exists = 1;</code>
+       *
+       * <pre>
+       *要上传的文件是否存在
+       * </pre>
+       */
+      public Builder clearExists() {
+        
+        exists_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object objectKey_ = "";
+      /**
+       * <code>optional string objectKey = 2;</code>
+       *
+       * <pre>
+       *最终的文件名，一般与init接口指定的objectkey一致
+       * </pre>
+       */
+      public java.lang.String getObjectKey() {
+        java.lang.Object ref = objectKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            objectKey_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string objectKey = 2;</code>
+       *
+       * <pre>
+       *最终的文件名，一般与init接口指定的objectkey一致
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getObjectKeyBytes() {
+        java.lang.Object ref = objectKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          objectKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string objectKey = 2;</code>
+       *
+       * <pre>
+       *最终的文件名，一般与init接口指定的objectkey一致
+       * </pre>
+       */
+      public Builder setObjectKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        objectKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string objectKey = 2;</code>
+       *
+       * <pre>
+       *最终的文件名，一般与init接口指定的objectkey一致
+       * </pre>
+       */
+      public Builder clearObjectKey() {
+        
+        objectKey_ = getDefaultInstance().getObjectKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string objectKey = 2;</code>
+       *
+       * <pre>
+       *最终的文件名，一般与init接口指定的objectkey一致
+       * </pre>
+       */
+      public Builder setObjectKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        objectKey_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object uploadId_ = "";
+      /**
+       * <code>optional string uploadId = 3;</code>
+       *
+       * <pre>
+       *阿里oss返回的上传ID，请于上传期间保存
+       * </pre>
+       */
+      public java.lang.String getUploadId() {
+        java.lang.Object ref = uploadId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            uploadId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string uploadId = 3;</code>
+       *
+       * <pre>
+       *阿里oss返回的上传ID，请于上传期间保存
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUploadIdBytes() {
+        java.lang.Object ref = uploadId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uploadId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string uploadId = 3;</code>
+       *
+       * <pre>
+       *阿里oss返回的上传ID，请于上传期间保存
+       * </pre>
+       */
+      public Builder setUploadId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uploadId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uploadId = 3;</code>
+       *
+       * <pre>
+       *阿里oss返回的上传ID，请于上传期间保存
+       * </pre>
+       */
+      public Builder clearUploadId() {
+        
+        uploadId_ = getDefaultInstance().getUploadId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uploadId = 3;</code>
+       *
+       * <pre>
+       *阿里oss返回的上传ID，请于上传期间保存
+       * </pre>
+       */
+      public Builder setUploadIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uploadId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <code>optional string domain = 4;</code>
+       *
+       * <pre>
+       *与阿里oss交互的域名
+       * </pre>
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            domain_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string domain = 4;</code>
+       *
+       * <pre>
+       *与阿里oss交互的域名
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string domain = 4;</code>
+       *
+       * <pre>
+       *与阿里oss交互的域名
+       * </pre>
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        domain_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string domain = 4;</code>
+       *
+       * <pre>
+       *与阿里oss交互的域名
+       * </pre>
+       */
+      public Builder clearDomain() {
+        
+        domain_ = getDefaultInstance().getDomain();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string domain = 4;</code>
+       *
+       * <pre>
+       *与阿里oss交互的域名
+       * </pre>
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        domain_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object accessKeyId_ = "";
+      /**
+       * <code>optional string accessKeyId = 5;</code>
+       */
+      public java.lang.String getAccessKeyId() {
+        java.lang.Object ref = accessKeyId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            accessKeyId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string accessKeyId = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAccessKeyIdBytes() {
+        java.lang.Object ref = accessKeyId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accessKeyId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string accessKeyId = 5;</code>
+       */
+      public Builder setAccessKeyId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        accessKeyId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string accessKeyId = 5;</code>
+       */
+      public Builder clearAccessKeyId() {
+        
+        accessKeyId_ = getDefaultInstance().getAccessKeyId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string accessKeyId = 5;</code>
+       */
+      public Builder setAccessKeyIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        accessKeyId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object expires_ = "";
+      /**
+       * <code>optional string expires = 6;</code>
+       */
+      public java.lang.String getExpires() {
+        java.lang.Object ref = expires_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            expires_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string expires = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getExpiresBytes() {
+        java.lang.Object ref = expires_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          expires_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string expires = 6;</code>
+       */
+      public Builder setExpires(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        expires_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string expires = 6;</code>
+       */
+      public Builder clearExpires() {
+        
+        expires_ = getDefaultInstance().getExpires();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string expires = 6;</code>
+       */
+      public Builder setExpiresBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        expires_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList sign_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSignIsMutable() {
+        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+          sign_ = new com.google.protobuf.LazyStringArrayList(sign_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+      /**
+       * <code>repeated string sign = 7;</code>
+       *
+       * <pre>
+       *签名数组
+       * </pre>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSignList() {
+        return sign_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string sign = 7;</code>
+       *
+       * <pre>
+       *签名数组
+       * </pre>
+       */
+      public int getSignCount() {
+        return sign_.size();
+      }
+      /**
+       * <code>repeated string sign = 7;</code>
+       *
+       * <pre>
+       *签名数组
+       * </pre>
+       */
+      public java.lang.String getSign(int index) {
+        return sign_.get(index);
+      }
+      /**
+       * <code>repeated string sign = 7;</code>
+       *
+       * <pre>
+       *签名数组
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getSignBytes(int index) {
+        return sign_.getByteString(index);
+      }
+      /**
+       * <code>repeated string sign = 7;</code>
+       *
+       * <pre>
+       *签名数组
+       * </pre>
+       */
+      public Builder setSign(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSignIsMutable();
+        sign_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string sign = 7;</code>
+       *
+       * <pre>
+       *签名数组
+       * </pre>
+       */
+      public Builder addSign(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSignIsMutable();
+        sign_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string sign = 7;</code>
+       *
+       * <pre>
+       *签名数组
+       * </pre>
+       */
+      public Builder addAllSign(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSignIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, sign_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string sign = 7;</code>
+       *
+       * <pre>
+       *签名数组
+       * </pre>
+       */
+      public Builder clearSign() {
+        sign_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string sign = 7;</code>
+       *
+       * <pre>
+       *签名数组
+       * </pre>
+       */
+      public Builder addSignBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSignIsMutable();
+        sign_.add(value);
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PMultiPartUpload)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PMultiPartUpload)
+    private static final com.blemobi.sep.probuf.OssProtos.PMultiPartUpload DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.OssProtos.PMultiPartUpload();
+    }
+
+    public static com.blemobi.sep.probuf.OssProtos.PMultiPartUpload getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<PMultiPartUpload> PARSER =
+        new com.google.protobuf.AbstractParser<PMultiPartUpload>() {
+      public PMultiPartUpload parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PMultiPartUpload(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PMultiPartUpload> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.OssProtos.PMultiPartUpload getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PSts_descriptor;
+    internal_static_bbproto_PUpload_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PSts_fieldAccessorTable;
+      internal_static_bbproto_PUpload_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PUpload_descriptor;
+    internal_static_bbproto_PDownload_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PUpload_fieldAccessorTable;
+      internal_static_bbproto_PDownload_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PDownload_descriptor;
+    internal_static_bbproto_PUploadArray_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PDownload_fieldAccessorTable;
+      internal_static_bbproto_PUploadArray_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PUploadArray_descriptor;
+    internal_static_bbproto_PDownloadArray_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PUploadArray_fieldAccessorTable;
+      internal_static_bbproto_PDownloadArray_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PDownloadArray_descriptor;
+    internal_static_bbproto_PFileInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PDownloadArray_fieldAccessorTable;
+      internal_static_bbproto_PFileInfo_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PFileInfo_descriptor;
+    internal_static_bbproto_PFileInfoArray_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PFileInfo_fieldAccessorTable;
+      internal_static_bbproto_PFileInfoArray_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_common_PFileInfoArray_descriptor;
+    internal_static_bbproto_PMultiPartUpload_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_common_PFileInfoArray_fieldAccessorTable;
+      internal_static_bbproto_PMultiPartUpload_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5369,19 +5941,20 @@ public final class OssProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\toss.proto\022\006common\"_\n\004PSts\022\023\n\013accessKey" +
-      "Id\030\001 \001(\t\022\027\n\017accessKeySecret\030\002 \001(\t\022\025\n\rsec" +
-      "urityToken\030\003 \001(\t\022\022\n\nexpiration\030\004 \001(\t\"J\n\007" +
-      "PUpload\022\016\n\006exists\030\001 \001(\010\022\013\n\003url\030\002 \001(\t\022\017\n\007" +
-      "headers\030\003 \003(\t\022\021\n\tobjectKey\030\004 \001(\t\"\'\n\tPDow" +
-      "nload\022\013\n\003url\030\001 \001(\t\022\r\n\005thumb\030\002 \001(\t\"0\n\014PUp" +
-      "loadArray\022 \n\007uploads\030\001 \003(\0132\017.common.PUpl" +
-      "oad\"6\n\016PDownloadArray\022$\n\tdownloads\030\001 \003(\013" +
-      "2\021.common.PDownload\">\n\tPFileInfo\022\016\n\006dige" +
-      "st\030\001 \001(\t\022\016\n\006length\030\002 \001(\005\022\021\n\textension\030\003 ",
-      "\001(\t\"6\n\016PFileInfoArray\022$\n\tfileInfos\030\001 \003(\013" +
-      "2\021.common.PFileInfoB#\n\026com.blemobi.sep.p" +
-      "robufB\tOssProtosb\006proto3"
+      "\n\toss.proto\022\007bbproto\"J\n\007PUpload\022\016\n\006exist" +
+      "s\030\001 \001(\010\022\013\n\003url\030\002 \001(\t\022\017\n\007headers\030\003 \003(\t\022\021\n" +
+      "\tobjectKey\030\004 \001(\t\"\'\n\tPDownload\022\013\n\003url\030\001 \001" +
+      "(\t\022\r\n\005thumb\030\002 \001(\t\"1\n\014PUploadArray\022!\n\007upl" +
+      "oads\030\001 \003(\0132\020.bbproto.PUpload\"7\n\016PDownloa" +
+      "dArray\022%\n\tdownloads\030\001 \003(\0132\022.bbproto.PDow" +
+      "nload\">\n\tPFileInfo\022\016\n\006digest\030\001 \001(\t\022\016\n\006le" +
+      "ngth\030\002 \001(\005\022\021\n\textension\030\003 \001(\t\"7\n\016PFileIn" +
+      "foArray\022%\n\tfileInfos\030\001 \003(\0132\022.bbproto.PFi" +
+      "leInfo\"\213\001\n\020PMultiPartUpload\022\016\n\006exists\030\001 ",
+      "\001(\010\022\021\n\tobjectKey\030\002 \001(\t\022\020\n\010uploadId\030\003 \001(\t" +
+      "\022\016\n\006domain\030\004 \001(\t\022\023\n\013accessKeyId\030\005 \001(\t\022\017\n" +
+      "\007expires\030\006 \001(\t\022\014\n\004sign\030\007 \003(\tB#\n\026com.blem" +
+      "obi.sep.probufB\tOssProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5395,48 +5968,48 @@ public final class OssProtos {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_common_PSts_descriptor =
+    internal_static_bbproto_PUpload_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_common_PSts_fieldAccessorTable = new
+    internal_static_bbproto_PUpload_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PSts_descriptor,
-        new java.lang.String[] { "AccessKeyId", "AccessKeySecret", "SecurityToken", "Expiration", });
-    internal_static_common_PUpload_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_common_PUpload_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PUpload_descriptor,
+        internal_static_bbproto_PUpload_descriptor,
         new java.lang.String[] { "Exists", "Url", "Headers", "ObjectKey", });
-    internal_static_common_PDownload_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_common_PDownload_fieldAccessorTable = new
+    internal_static_bbproto_PDownload_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_bbproto_PDownload_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PDownload_descriptor,
+        internal_static_bbproto_PDownload_descriptor,
         new java.lang.String[] { "Url", "Thumb", });
-    internal_static_common_PUploadArray_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_common_PUploadArray_fieldAccessorTable = new
+    internal_static_bbproto_PUploadArray_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_bbproto_PUploadArray_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PUploadArray_descriptor,
+        internal_static_bbproto_PUploadArray_descriptor,
         new java.lang.String[] { "Uploads", });
-    internal_static_common_PDownloadArray_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_common_PDownloadArray_fieldAccessorTable = new
+    internal_static_bbproto_PDownloadArray_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_bbproto_PDownloadArray_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PDownloadArray_descriptor,
+        internal_static_bbproto_PDownloadArray_descriptor,
         new java.lang.String[] { "Downloads", });
-    internal_static_common_PFileInfo_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_common_PFileInfo_fieldAccessorTable = new
+    internal_static_bbproto_PFileInfo_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_bbproto_PFileInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PFileInfo_descriptor,
+        internal_static_bbproto_PFileInfo_descriptor,
         new java.lang.String[] { "Digest", "Length", "Extension", });
-    internal_static_common_PFileInfoArray_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_common_PFileInfoArray_fieldAccessorTable = new
+    internal_static_bbproto_PFileInfoArray_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_bbproto_PFileInfoArray_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_common_PFileInfoArray_descriptor,
+        internal_static_bbproto_PFileInfoArray_descriptor,
         new java.lang.String[] { "FileInfos", });
+    internal_static_bbproto_PMultiPartUpload_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_bbproto_PMultiPartUpload_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PMultiPartUpload_descriptor,
+        new java.lang.String[] { "Exists", "ObjectKey", "UploadId", "Domain", "AccessKeyId", "Expires", "Sign", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
