@@ -431,8 +431,8 @@ public final class NotificationProtos {
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        ENotifyType> internalValueMap =
+    private static com.google.protobuf.Internal.EnumLiteMap<ENotifyType>
+        internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<ENotifyType>() {
             public ENotifyType findValueByNumber(int number) {
               return ENotifyType.valueOf(number);
@@ -594,8 +594,8 @@ public final class NotificationProtos {
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        ENotifyState> internalValueMap =
+    private static com.google.protobuf.Internal.EnumLiteMap<ENotifyState>
+        internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<ENotifyState>() {
             public ENotifyState findValueByNumber(int number) {
               return ENotifyState.valueOf(number);
@@ -774,8 +774,8 @@ public final class NotificationProtos {
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        ENotifyCategory> internalValueMap =
+    private static com.google.protobuf.Internal.EnumLiteMap<ENotifyCategory>
+        internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<ENotifyCategory>() {
             public ENotifyCategory findValueByNumber(int number) {
               return ENotifyCategory.valueOf(number);
@@ -913,7 +913,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.SimpleUser)
       SimpleUserOrBuilder {
     // Use SimpleUser.newBuilder() to construct.
-    private SimpleUser(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private SimpleUser(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private SimpleUser() {
@@ -954,27 +954,27 @@ public final class NotificationProtos {
               break;
             }
             case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              uuid_ = s;
+              uuid_ = bs;
               break;
             }
             case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              username_ = s;
+              username_ = bs;
               break;
             }
             case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              nickname_ = s;
+              nickname_ = bs;
               break;
             }
             case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              headImgURL_ = s;
+              headImgURL_ = bs;
               break;
             }
           }
@@ -1031,7 +1031,9 @@ public final class NotificationProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        uuid_ = s;
+        if (bs.isValidUtf8()) {
+          uuid_ = s;
+        }
         return s;
       }
     }
@@ -1073,7 +1075,9 @@ public final class NotificationProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        username_ = s;
+        if (bs.isValidUtf8()) {
+          username_ = s;
+        }
         return s;
       }
     }
@@ -1115,7 +1119,9 @@ public final class NotificationProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        nickname_ = s;
+        if (bs.isValidUtf8()) {
+          nickname_ = s;
+        }
         return s;
       }
     }
@@ -1157,7 +1163,9 @@ public final class NotificationProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        headImgURL_ = s;
+        if (bs.isValidUtf8()) {
+          headImgURL_ = s;
+        }
         return s;
       }
     }
@@ -1198,21 +1206,22 @@ public final class NotificationProtos {
         output.writeInt32(5, level_);
       }
       if (!getUuidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 6, uuid_);
+        output.writeBytes(6, getUuidBytes());
       }
       if (!getUsernameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 7, username_);
+        output.writeBytes(7, getUsernameBytes());
       }
       if (!getNicknameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 8, nickname_);
+        output.writeBytes(8, getNicknameBytes());
       }
       if (!getHeadImgURLBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 9, headImgURL_);
+        output.writeBytes(9, getHeadImgURLBytes());
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -1221,18 +1230,22 @@ public final class NotificationProtos {
           .computeInt32Size(5, level_);
       }
       if (!getUuidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, uuid_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, getUuidBytes());
       }
       if (!getUsernameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, username_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(7, getUsernameBytes());
       }
       if (!getNicknameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(8, nickname_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(8, getNicknameBytes());
       }
       if (!getHeadImgURLBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(9, headImgURL_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(9, getHeadImgURLBytes());
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -1492,7 +1505,9 @@ public final class NotificationProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          uuid_ = s;
+          if (bs.isValidUtf8()) {
+            uuid_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1560,8 +1575,7 @@ public final class NotificationProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         uuid_ = value;
         onChanged();
         return this;
@@ -1581,7 +1595,9 @@ public final class NotificationProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          username_ = s;
+          if (bs.isValidUtf8()) {
+            username_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1649,8 +1665,7 @@ public final class NotificationProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         username_ = value;
         onChanged();
         return this;
@@ -1670,7 +1685,9 @@ public final class NotificationProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          nickname_ = s;
+          if (bs.isValidUtf8()) {
+            nickname_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1738,8 +1755,7 @@ public final class NotificationProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         nickname_ = value;
         onChanged();
         return this;
@@ -1759,7 +1775,9 @@ public final class NotificationProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          headImgURL_ = s;
+          if (bs.isValidUtf8()) {
+            headImgURL_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1827,8 +1845,7 @@ public final class NotificationProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         headImgURL_ = value;
         onChanged();
         return this;
@@ -1857,8 +1874,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<SimpleUser>
-        PARSER = new com.google.protobuf.AbstractParser<SimpleUser>() {
+    public static final com.google.protobuf.Parser<SimpleUser> PARSER =
+        new com.google.protobuf.AbstractParser<SimpleUser>() {
       public SimpleUser parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1875,10 +1892,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<SimpleUser> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<SimpleUser> getParserForType() {
@@ -2009,7 +2022,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.NotifyComment)
       NotifyCommentOrBuilder {
     // Use NotifyComment.newBuilder() to construct.
-    private NotifyComment(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private NotifyComment(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private NotifyComment() {
@@ -2052,7 +2065,7 @@ public final class NotificationProtos {
               if (commentUser_ != null) {
                 subBuilder = commentUser_.toBuilder();
               }
-              commentUser_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.SimpleUser.parser(), extensionRegistry);
+              commentUser_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.SimpleUser.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(commentUser_);
                 commentUser_ = subBuilder.buildPartial();
@@ -2065,7 +2078,7 @@ public final class NotificationProtos {
               if (comment_ != null) {
                 subBuilder = comment_.toBuilder();
               }
-              comment_ = input.readMessage(com.blemobi.sep.probuf.CommentProtos.PComment.parser(), extensionRegistry);
+              comment_ = input.readMessage(com.blemobi.sep.probuf.CommentProtos.PComment.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(comment_);
                 comment_ = subBuilder.buildPartial();
@@ -2078,7 +2091,7 @@ public final class NotificationProtos {
               if (article_ != null) {
                 subBuilder = article_.toBuilder();
               }
-              article_ = input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostInfo.parser(), extensionRegistry);
+              article_ = input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostInfo.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(article_);
                 article_ = subBuilder.buildPartial();
@@ -2290,8 +2303,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -2319,7 +2333,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(6, status_);
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -3153,8 +3167,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<NotifyComment>
-        PARSER = new com.google.protobuf.AbstractParser<NotifyComment>() {
+    public static final com.google.protobuf.Parser<NotifyComment> PARSER =
+        new com.google.protobuf.AbstractParser<NotifyComment>() {
       public NotifyComment parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3171,10 +3185,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<NotifyComment> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<NotifyComment> getParserForType() {
@@ -3305,7 +3315,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.NotifyCommentExt)
       NotifyCommentExtOrBuilder {
     // Use NotifyCommentExt.newBuilder() to construct.
-    private NotifyCommentExt(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private NotifyCommentExt(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private NotifyCommentExt() {
@@ -3348,7 +3358,7 @@ public final class NotificationProtos {
               if (commentUser_ != null) {
                 subBuilder = commentUser_.toBuilder();
               }
-              commentUser_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.SimpleUser.parser(), extensionRegistry);
+              commentUser_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.SimpleUser.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(commentUser_);
                 commentUser_ = subBuilder.buildPartial();
@@ -3361,7 +3371,7 @@ public final class NotificationProtos {
               if (commentExt_ != null) {
                 subBuilder = commentExt_.toBuilder();
               }
-              commentExt_ = input.readMessage(com.blemobi.sep.probuf.CommentProtos.PCommentExt.parser(), extensionRegistry);
+              commentExt_ = input.readMessage(com.blemobi.sep.probuf.CommentProtos.PCommentExt.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(commentExt_);
                 commentExt_ = subBuilder.buildPartial();
@@ -3374,7 +3384,7 @@ public final class NotificationProtos {
               if (article_ != null) {
                 subBuilder = article_.toBuilder();
               }
-              article_ = input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostInfo.parser(), extensionRegistry);
+              article_ = input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostInfo.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(article_);
                 article_ = subBuilder.buildPartial();
@@ -3586,8 +3596,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -3615,7 +3626,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(6, status_);
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -4449,8 +4460,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<NotifyCommentExt>
-        PARSER = new com.google.protobuf.AbstractParser<NotifyCommentExt>() {
+    public static final com.google.protobuf.Parser<NotifyCommentExt> PARSER =
+        new com.google.protobuf.AbstractParser<NotifyCommentExt>() {
       public NotifyCommentExt parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4467,10 +4478,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<NotifyCommentExt> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<NotifyCommentExt> getParserForType() {
@@ -4543,7 +4550,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.NotifyCommentList)
       NotifyCommentListOrBuilder {
     // Use NotifyCommentList.newBuilder() to construct.
-    private NotifyCommentList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private NotifyCommentList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private NotifyCommentList() {
@@ -4579,7 +4586,7 @@ public final class NotificationProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.NotificationProtos.NotifyComment>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.NotifyComment.parser(), extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.NotifyComment.PARSER, extensionRegistry));
               break;
             }
           }
@@ -4681,8 +4688,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -4690,7 +4698,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, list_.get(i));
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -5247,8 +5255,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<NotifyCommentList>
-        PARSER = new com.google.protobuf.AbstractParser<NotifyCommentList>() {
+    public static final com.google.protobuf.Parser<NotifyCommentList> PARSER =
+        new com.google.protobuf.AbstractParser<NotifyCommentList>() {
       public NotifyCommentList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5265,10 +5273,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<NotifyCommentList> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<NotifyCommentList> getParserForType() {
@@ -5341,7 +5345,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.NotifyCommentExtList)
       NotifyCommentExtListOrBuilder {
     // Use NotifyCommentExtList.newBuilder() to construct.
-    private NotifyCommentExtList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private NotifyCommentExtList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private NotifyCommentExtList() {
@@ -5377,7 +5381,7 @@ public final class NotificationProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.NotificationProtos.NotifyCommentExt>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.NotifyCommentExt.parser(), extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.NotifyCommentExt.PARSER, extensionRegistry));
               break;
             }
           }
@@ -5479,8 +5483,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -5488,7 +5493,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, list_.get(i));
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -6045,8 +6050,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<NotifyCommentExtList>
-        PARSER = new com.google.protobuf.AbstractParser<NotifyCommentExtList>() {
+    public static final com.google.protobuf.Parser<NotifyCommentExtList> PARSER =
+        new com.google.protobuf.AbstractParser<NotifyCommentExtList>() {
       public NotifyCommentExtList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6063,10 +6068,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<NotifyCommentExtList> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<NotifyCommentExtList> getParserForType() {
@@ -6247,7 +6248,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.NotifyCommentReply)
       NotifyCommentReplyOrBuilder {
     // Use NotifyCommentReply.newBuilder() to construct.
-    private NotifyCommentReply(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private NotifyCommentReply(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private NotifyCommentReply() {
@@ -6290,7 +6291,7 @@ public final class NotificationProtos {
               if (commentUser_ != null) {
                 subBuilder = commentUser_.toBuilder();
               }
-              commentUser_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.SimpleUser.parser(), extensionRegistry);
+              commentUser_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.SimpleUser.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(commentUser_);
                 commentUser_ = subBuilder.buildPartial();
@@ -6303,7 +6304,7 @@ public final class NotificationProtos {
               if (commentExt_ != null) {
                 subBuilder = commentExt_.toBuilder();
               }
-              commentExt_ = input.readMessage(com.blemobi.sep.probuf.CommentProtos.PCommentExt.parser(), extensionRegistry);
+              commentExt_ = input.readMessage(com.blemobi.sep.probuf.CommentProtos.PCommentExt.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(commentExt_);
                 commentExt_ = subBuilder.buildPartial();
@@ -6316,7 +6317,7 @@ public final class NotificationProtos {
               if (replyExt_ != null) {
                 subBuilder = replyExt_.toBuilder();
               }
-              replyExt_ = input.readMessage(com.blemobi.sep.probuf.CommentProtos.PCommentExt.parser(), extensionRegistry);
+              replyExt_ = input.readMessage(com.blemobi.sep.probuf.CommentProtos.PCommentExt.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(replyExt_);
                 replyExt_ = subBuilder.buildPartial();
@@ -6339,7 +6340,7 @@ public final class NotificationProtos {
               if (replyUser_ != null) {
                 subBuilder = replyUser_.toBuilder();
               }
-              replyUser_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.SimpleUser.parser(), extensionRegistry);
+              replyUser_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.SimpleUser.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(replyUser_);
                 replyUser_ = subBuilder.buildPartial();
@@ -6352,7 +6353,7 @@ public final class NotificationProtos {
               if (article_ != null) {
                 subBuilder = article_.toBuilder();
               }
-              article_ = input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostInfo.parser(), extensionRegistry);
+              article_ = input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostInfo.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(article_);
                 article_ = subBuilder.buildPartial();
@@ -6626,8 +6627,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -6663,7 +6665,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getArticle());
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -7831,8 +7833,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<NotifyCommentReply>
-        PARSER = new com.google.protobuf.AbstractParser<NotifyCommentReply>() {
+    public static final com.google.protobuf.Parser<NotifyCommentReply> PARSER =
+        new com.google.protobuf.AbstractParser<NotifyCommentReply>() {
       public NotifyCommentReply parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7849,10 +7851,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<NotifyCommentReply> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<NotifyCommentReply> getParserForType() {
@@ -7925,7 +7923,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.NotifyCommentReplyList)
       NotifyCommentReplyListOrBuilder {
     // Use NotifyCommentReplyList.newBuilder() to construct.
-    private NotifyCommentReplyList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private NotifyCommentReplyList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private NotifyCommentReplyList() {
@@ -7961,7 +7959,7 @@ public final class NotificationProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.NotificationProtos.NotifyCommentReply>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.NotifyCommentReply.parser(), extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.NotifyCommentReply.PARSER, extensionRegistry));
               break;
             }
           }
@@ -8063,8 +8061,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -8072,7 +8071,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, list_.get(i));
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -8629,8 +8628,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<NotifyCommentReplyList>
-        PARSER = new com.google.protobuf.AbstractParser<NotifyCommentReplyList>() {
+    public static final com.google.protobuf.Parser<NotifyCommentReplyList> PARSER =
+        new com.google.protobuf.AbstractParser<NotifyCommentReplyList>() {
       public NotifyCommentReplyList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8647,10 +8646,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<NotifyCommentReplyList> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<NotifyCommentReplyList> getParserForType() {
@@ -8790,7 +8785,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.NotifyCommentVote)
       NotifyCommentVoteOrBuilder {
     // Use NotifyCommentVote.newBuilder() to construct.
-    private NotifyCommentVote(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private NotifyCommentVote(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private NotifyCommentVote() {
@@ -8834,7 +8829,7 @@ public final class NotificationProtos {
               if (voteUser_ != null) {
                 subBuilder = voteUser_.toBuilder();
               }
-              voteUser_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.SimpleUser.parser(), extensionRegistry);
+              voteUser_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.SimpleUser.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(voteUser_);
                 voteUser_ = subBuilder.buildPartial();
@@ -8847,7 +8842,7 @@ public final class NotificationProtos {
               if (comment_ != null) {
                 subBuilder = comment_.toBuilder();
               }
-              comment_ = input.readMessage(com.blemobi.sep.probuf.CommentProtos.PComment.parser(), extensionRegistry);
+              comment_ = input.readMessage(com.blemobi.sep.probuf.CommentProtos.PComment.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(comment_);
                 comment_ = subBuilder.buildPartial();
@@ -8860,7 +8855,7 @@ public final class NotificationProtos {
               if (article_ != null) {
                 subBuilder = article_.toBuilder();
               }
-              article_ = input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostInfo.parser(), extensionRegistry);
+              article_ = input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostInfo.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(article_);
                 article_ = subBuilder.buildPartial();
@@ -9093,8 +9088,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -9126,7 +9122,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(7, status_);
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -10004,8 +10000,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<NotifyCommentVote>
-        PARSER = new com.google.protobuf.AbstractParser<NotifyCommentVote>() {
+    public static final com.google.protobuf.Parser<NotifyCommentVote> PARSER =
+        new com.google.protobuf.AbstractParser<NotifyCommentVote>() {
       public NotifyCommentVote parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10022,10 +10018,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<NotifyCommentVote> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<NotifyCommentVote> getParserForType() {
@@ -10165,7 +10157,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.NotifyCommentVoteExt)
       NotifyCommentVoteExtOrBuilder {
     // Use NotifyCommentVoteExt.newBuilder() to construct.
-    private NotifyCommentVoteExt(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private NotifyCommentVoteExt(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private NotifyCommentVoteExt() {
@@ -10209,7 +10201,7 @@ public final class NotificationProtos {
               if (voteUser_ != null) {
                 subBuilder = voteUser_.toBuilder();
               }
-              voteUser_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.SimpleUser.parser(), extensionRegistry);
+              voteUser_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.SimpleUser.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(voteUser_);
                 voteUser_ = subBuilder.buildPartial();
@@ -10222,7 +10214,7 @@ public final class NotificationProtos {
               if (commentExt_ != null) {
                 subBuilder = commentExt_.toBuilder();
               }
-              commentExt_ = input.readMessage(com.blemobi.sep.probuf.CommentProtos.PCommentExt.parser(), extensionRegistry);
+              commentExt_ = input.readMessage(com.blemobi.sep.probuf.CommentProtos.PCommentExt.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(commentExt_);
                 commentExt_ = subBuilder.buildPartial();
@@ -10235,7 +10227,7 @@ public final class NotificationProtos {
               if (article_ != null) {
                 subBuilder = article_.toBuilder();
               }
-              article_ = input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostInfo.parser(), extensionRegistry);
+              article_ = input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostInfo.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(article_);
                 article_ = subBuilder.buildPartial();
@@ -10468,8 +10460,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -10501,7 +10494,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(7, status_);
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -11379,8 +11372,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<NotifyCommentVoteExt>
-        PARSER = new com.google.protobuf.AbstractParser<NotifyCommentVoteExt>() {
+    public static final com.google.protobuf.Parser<NotifyCommentVoteExt> PARSER =
+        new com.google.protobuf.AbstractParser<NotifyCommentVoteExt>() {
       public NotifyCommentVoteExt parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11397,10 +11390,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<NotifyCommentVoteExt> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<NotifyCommentVoteExt> getParserForType() {
@@ -11473,7 +11462,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.NotifyCommentVoteList)
       NotifyCommentVoteListOrBuilder {
     // Use NotifyCommentVoteList.newBuilder() to construct.
-    private NotifyCommentVoteList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private NotifyCommentVoteList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private NotifyCommentVoteList() {
@@ -11509,7 +11498,7 @@ public final class NotificationProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.NotificationProtos.NotifyCommentVote>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.NotifyCommentVote.parser(), extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.NotifyCommentVote.PARSER, extensionRegistry));
               break;
             }
           }
@@ -11611,8 +11600,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -11620,7 +11610,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, list_.get(i));
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -12177,8 +12167,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<NotifyCommentVoteList>
-        PARSER = new com.google.protobuf.AbstractParser<NotifyCommentVoteList>() {
+    public static final com.google.protobuf.Parser<NotifyCommentVoteList> PARSER =
+        new com.google.protobuf.AbstractParser<NotifyCommentVoteList>() {
       public NotifyCommentVoteList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12195,10 +12185,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<NotifyCommentVoteList> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<NotifyCommentVoteList> getParserForType() {
@@ -12319,7 +12305,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.NotifySocial)
       NotifySocialOrBuilder {
     // Use NotifySocial.newBuilder() to construct.
-    private NotifySocial(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private NotifySocial(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private NotifySocial() {
@@ -12365,7 +12351,7 @@ public final class NotificationProtos {
               if (socialUser_ != null) {
                 subBuilder = socialUser_.toBuilder();
               }
-              socialUser_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.SimpleUser.parser(), extensionRegistry);
+              socialUser_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.SimpleUser.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(socialUser_);
                 socialUser_ = subBuilder.buildPartial();
@@ -12394,9 +12380,9 @@ public final class NotificationProtos {
               break;
             }
             case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              notifyUUID_ = s;
+              notifyUUID_ = bs;
               break;
             }
           }
@@ -12542,7 +12528,9 @@ public final class NotificationProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        notifyUUID_ = s;
+        if (bs.isValidUtf8()) {
+          notifyUUID_ = s;
+        }
         return s;
       }
     }
@@ -12598,12 +12586,13 @@ public final class NotificationProtos {
         output.writeInt32(6, socialRelation_);
       }
       if (!getNotifyUUIDBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 7, notifyUUID_);
+        output.writeBytes(7, getNotifyUUIDBytes());
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -12632,9 +12621,10 @@ public final class NotificationProtos {
           .computeInt32Size(6, socialRelation_);
       }
       if (!getNotifyUUIDBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, notifyUUID_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(7, getNotifyUUIDBytes());
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -13232,7 +13222,9 @@ public final class NotificationProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          notifyUUID_ = s;
+          if (bs.isValidUtf8()) {
+            notifyUUID_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -13300,8 +13292,7 @@ public final class NotificationProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         notifyUUID_ = value;
         onChanged();
         return this;
@@ -13330,8 +13321,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<NotifySocial>
-        PARSER = new com.google.protobuf.AbstractParser<NotifySocial>() {
+    public static final com.google.protobuf.Parser<NotifySocial> PARSER =
+        new com.google.protobuf.AbstractParser<NotifySocial>() {
       public NotifySocial parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -13348,10 +13339,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<NotifySocial> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<NotifySocial> getParserForType() {
@@ -13424,7 +13411,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.NotifySocialList)
       NotifySocialListOrBuilder {
     // Use NotifySocialList.newBuilder() to construct.
-    private NotifySocialList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private NotifySocialList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private NotifySocialList() {
@@ -13460,7 +13447,7 @@ public final class NotificationProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.NotificationProtos.NotifySocial>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.NotifySocial.parser(), extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.NotifySocial.PARSER, extensionRegistry));
               break;
             }
           }
@@ -13562,8 +13549,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -13571,7 +13559,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, list_.get(i));
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -14128,8 +14116,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<NotifySocialList>
-        PARSER = new com.google.protobuf.AbstractParser<NotifySocialList>() {
+    public static final com.google.protobuf.Parser<NotifySocialList> PARSER =
+        new com.google.protobuf.AbstractParser<NotifySocialList>() {
       public NotifySocialList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -14146,10 +14134,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<NotifySocialList> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<NotifySocialList> getParserForType() {
@@ -14239,7 +14223,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.NotifyFollow)
       NotifyFollowOrBuilder {
     // Use NotifyFollow.newBuilder() to construct.
-    private NotifyFollow(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private NotifyFollow(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private NotifyFollow() {
@@ -14283,7 +14267,7 @@ public final class NotificationProtos {
               if (followUser_ != null) {
                 subBuilder = followUser_.toBuilder();
               }
-              followUser_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.SimpleUser.parser(), extensionRegistry);
+              followUser_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.SimpleUser.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(followUser_);
                 followUser_ = subBuilder.buildPartial();
@@ -14444,8 +14428,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -14469,7 +14454,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(5, status_);
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -15013,8 +14998,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<NotifyFollow>
-        PARSER = new com.google.protobuf.AbstractParser<NotifyFollow>() {
+    public static final com.google.protobuf.Parser<NotifyFollow> PARSER =
+        new com.google.protobuf.AbstractParser<NotifyFollow>() {
       public NotifyFollow parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -15031,10 +15016,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<NotifyFollow> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<NotifyFollow> getParserForType() {
@@ -15107,7 +15088,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.NotifyFollowList)
       NotifyFollowListOrBuilder {
     // Use NotifyFollowList.newBuilder() to construct.
-    private NotifyFollowList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private NotifyFollowList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private NotifyFollowList() {
@@ -15143,7 +15124,7 @@ public final class NotificationProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.NotificationProtos.NotifyFollow>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.NotifyFollow.parser(), extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.NotifyFollow.PARSER, extensionRegistry));
               break;
             }
           }
@@ -15245,8 +15226,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -15254,7 +15236,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, list_.get(i));
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -15811,8 +15793,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<NotifyFollowList>
-        PARSER = new com.google.protobuf.AbstractParser<NotifyFollowList>() {
+    public static final com.google.protobuf.Parser<NotifyFollowList> PARSER =
+        new com.google.protobuf.AbstractParser<NotifyFollowList>() {
       public NotifyFollowList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -15829,10 +15811,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<NotifyFollowList> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<NotifyFollowList> getParserForType() {
@@ -15938,7 +15916,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.NotifyNewsVote)
       NotifyNewsVoteOrBuilder {
     // Use NotifyNewsVote.newBuilder() to construct.
-    private NotifyNewsVote(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private NotifyNewsVote(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private NotifyNewsVote() {
@@ -15981,7 +15959,7 @@ public final class NotificationProtos {
               if (voteUser_ != null) {
                 subBuilder = voteUser_.toBuilder();
               }
-              voteUser_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.SimpleUser.parser(), extensionRegistry);
+              voteUser_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.SimpleUser.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(voteUser_);
                 voteUser_ = subBuilder.buildPartial();
@@ -15994,7 +15972,7 @@ public final class NotificationProtos {
               if (article_ != null) {
                 subBuilder = article_.toBuilder();
               }
-              article_ = input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostInfo.parser(), extensionRegistry);
+              article_ = input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostInfo.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(article_);
                 article_ = subBuilder.buildPartial();
@@ -16170,8 +16148,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -16195,7 +16174,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(5, status_);
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -16862,8 +16841,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<NotifyNewsVote>
-        PARSER = new com.google.protobuf.AbstractParser<NotifyNewsVote>() {
+    public static final com.google.protobuf.Parser<NotifyNewsVote> PARSER =
+        new com.google.protobuf.AbstractParser<NotifyNewsVote>() {
       public NotifyNewsVote parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -16880,10 +16859,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<NotifyNewsVote> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<NotifyNewsVote> getParserForType() {
@@ -16956,7 +16931,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.NotifyNewsVoteList)
       NotifyNewsVoteListOrBuilder {
     // Use NotifyNewsVoteList.newBuilder() to construct.
-    private NotifyNewsVoteList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private NotifyNewsVoteList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private NotifyNewsVoteList() {
@@ -16992,7 +16967,7 @@ public final class NotificationProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.NotificationProtos.NotifyNewsVote>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.NotifyNewsVote.parser(), extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.NotifyNewsVote.PARSER, extensionRegistry));
               break;
             }
           }
@@ -17094,8 +17069,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -17103,7 +17079,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, list_.get(i));
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -17660,8 +17636,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<NotifyNewsVoteList>
-        PARSER = new com.google.protobuf.AbstractParser<NotifyNewsVoteList>() {
+    public static final com.google.protobuf.Parser<NotifyNewsVoteList> PARSER =
+        new com.google.protobuf.AbstractParser<NotifyNewsVoteList>() {
       public NotifyNewsVoteList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -17678,10 +17654,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<NotifyNewsVoteList> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<NotifyNewsVoteList> getParserForType() {
@@ -17758,7 +17730,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.NotifyNewsAt)
       NotifyNewsAtOrBuilder {
     // Use NotifyNewsAt.newBuilder() to construct.
-    private NotifyNewsAt(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private NotifyNewsAt(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private NotifyNewsAt() {
@@ -17801,7 +17773,7 @@ public final class NotificationProtos {
               if (article_ != null) {
                 subBuilder = article_.toBuilder();
               }
-              article_ = input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostInfo.parser(), extensionRegistry);
+              article_ = input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostInfo.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(article_);
                 article_ = subBuilder.buildPartial();
@@ -17941,8 +17913,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -17962,7 +17935,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(4, status_);
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -18458,8 +18431,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<NotifyNewsAt>
-        PARSER = new com.google.protobuf.AbstractParser<NotifyNewsAt>() {
+    public static final com.google.protobuf.Parser<NotifyNewsAt> PARSER =
+        new com.google.protobuf.AbstractParser<NotifyNewsAt>() {
       public NotifyNewsAt parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -18476,10 +18449,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<NotifyNewsAt> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<NotifyNewsAt> getParserForType() {
@@ -18552,7 +18521,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.NotifyNewsAtList)
       NotifyNewsAtListOrBuilder {
     // Use NotifyNewsAtList.newBuilder() to construct.
-    private NotifyNewsAtList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private NotifyNewsAtList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private NotifyNewsAtList() {
@@ -18588,7 +18557,7 @@ public final class NotificationProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.NotificationProtos.NotifyNewsAt>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.NotifyNewsAt.parser(), extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.NotifyNewsAt.PARSER, extensionRegistry));
               break;
             }
           }
@@ -18690,8 +18659,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -18699,7 +18669,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, list_.get(i));
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -19256,8 +19226,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<NotifyNewsAtList>
-        PARSER = new com.google.protobuf.AbstractParser<NotifyNewsAtList>() {
+    public static final com.google.protobuf.Parser<NotifyNewsAtList> PARSER =
+        new com.google.protobuf.AbstractParser<NotifyNewsAtList>() {
       public NotifyNewsAtList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -19274,10 +19244,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<NotifyNewsAtList> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<NotifyNewsAtList> getParserForType() {
@@ -19385,7 +19351,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PNotifyCommunityInvite)
       PNotifyCommunityInviteOrBuilder {
     // Use PNotifyCommunityInvite.newBuilder() to construct.
-    private PNotifyCommunityInvite(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PNotifyCommunityInvite(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PNotifyCommunityInvite() {
@@ -19441,9 +19407,9 @@ public final class NotificationProtos {
               break;
             }
             case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              communityName_ = s;
+              communityName_ = bs;
               break;
             }
             case 50: {
@@ -19451,7 +19417,7 @@ public final class NotificationProtos {
               if (user_ != null) {
                 subBuilder = user_.toBuilder();
               }
-              user_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.parser(), extensionRegistry);
+              user_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(user_);
                 user_ = subBuilder.buildPartial();
@@ -19552,7 +19518,9 @@ public final class NotificationProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        communityName_ = s;
+        if (bs.isValidUtf8()) {
+          communityName_ = s;
+        }
         return s;
       }
     }
@@ -19635,15 +19603,16 @@ public final class NotificationProtos {
         output.writeInt64(4, communityId_);
       }
       if (!getCommunityNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 5, communityName_);
+        output.writeBytes(5, getCommunityNameBytes());
       }
       if (user_ != null) {
         output.writeMessage(6, getUser());
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -19664,13 +19633,14 @@ public final class NotificationProtos {
           .computeInt64Size(4, communityId_);
       }
       if (!getCommunityNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, communityName_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, getCommunityNameBytes());
       }
       if (user_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getUser());
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -20059,7 +20029,9 @@ public final class NotificationProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          communityName_ = s;
+          if (bs.isValidUtf8()) {
+            communityName_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -20127,8 +20099,7 @@ public final class NotificationProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         communityName_ = value;
         onChanged();
         return this;
@@ -20310,8 +20281,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PNotifyCommunityInvite>
-        PARSER = new com.google.protobuf.AbstractParser<PNotifyCommunityInvite>() {
+    public static final com.google.protobuf.Parser<PNotifyCommunityInvite> PARSER =
+        new com.google.protobuf.AbstractParser<PNotifyCommunityInvite>() {
       public PNotifyCommunityInvite parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -20328,10 +20299,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PNotifyCommunityInvite> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PNotifyCommunityInvite> getParserForType() {
@@ -20404,7 +20371,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PNotifyCommunityInviteList)
       PNotifyCommunityInviteListOrBuilder {
     // Use PNotifyCommunityInviteList.newBuilder() to construct.
-    private PNotifyCommunityInviteList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PNotifyCommunityInviteList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PNotifyCommunityInviteList() {
@@ -20440,7 +20407,7 @@ public final class NotificationProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.NotificationProtos.PNotifyCommunityInvite>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifyCommunityInvite.parser(), extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifyCommunityInvite.PARSER, extensionRegistry));
               break;
             }
           }
@@ -20542,8 +20509,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -20551,7 +20519,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, list_.get(i));
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -21108,8 +21076,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PNotifyCommunityInviteList>
-        PARSER = new com.google.protobuf.AbstractParser<PNotifyCommunityInviteList>() {
+    public static final com.google.protobuf.Parser<PNotifyCommunityInviteList> PARSER =
+        new com.google.protobuf.AbstractParser<PNotifyCommunityInviteList>() {
       public PNotifyCommunityInviteList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -21126,10 +21094,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PNotifyCommunityInviteList> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PNotifyCommunityInviteList> getParserForType() {
@@ -21173,7 +21137,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PMsgCount)
       PMsgCountOrBuilder {
     // Use PMsgCount.newBuilder() to construct.
-    private PMsgCount(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PMsgCount(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PMsgCount() {
@@ -21206,9 +21170,9 @@ public final class NotificationProtos {
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              type_ = s;
+              type_ = bs;
               break;
             }
             case 24: {
@@ -21253,7 +21217,9 @@ public final class NotificationProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        type_ = s;
+        if (bs.isValidUtf8()) {
+          type_ = s;
+        }
         return s;
       }
     }
@@ -21296,26 +21262,28 @@ public final class NotificationProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getTypeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 2, type_);
+        output.writeBytes(2, getTypeBytes());
       }
       if (count_ != 0L) {
         output.writeInt64(3, count_);
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getTypeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, type_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getTypeBytes());
       }
       if (count_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, count_);
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -21516,7 +21484,9 @@ public final class NotificationProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          type_ = s;
+          if (bs.isValidUtf8()) {
+            type_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -21568,8 +21538,7 @@ public final class NotificationProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         type_ = value;
         onChanged();
         return this;
@@ -21624,8 +21593,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PMsgCount>
-        PARSER = new com.google.protobuf.AbstractParser<PMsgCount>() {
+    public static final com.google.protobuf.Parser<PMsgCount> PARSER =
+        new com.google.protobuf.AbstractParser<PMsgCount>() {
       public PMsgCount parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -21642,10 +21611,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PMsgCount> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PMsgCount> getParserForType() {
@@ -21698,7 +21663,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PMsgCountList)
       PMsgCountListOrBuilder {
     // Use PMsgCountList.newBuilder() to construct.
-    private PMsgCountList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PMsgCountList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PMsgCountList() {
@@ -21734,7 +21699,7 @@ public final class NotificationProtos {
                 msgCount_ = new java.util.ArrayList<com.blemobi.sep.probuf.NotificationProtos.PMsgCount>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              msgCount_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PMsgCount.parser(), extensionRegistry));
+              msgCount_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PMsgCount.PARSER, extensionRegistry));
               break;
             }
           }
@@ -21816,8 +21781,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -21825,7 +21791,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, msgCount_.get(i));
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -22310,8 +22276,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PMsgCountList>
-        PARSER = new com.google.protobuf.AbstractParser<PMsgCountList>() {
+    public static final com.google.protobuf.Parser<PMsgCountList> PARSER =
+        new com.google.protobuf.AbstractParser<PMsgCountList>() {
       public PMsgCountList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -22328,10 +22294,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PMsgCountList> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PMsgCountList> getParserForType() {
@@ -22379,7 +22341,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PMsgIDList)
       PMsgIDListOrBuilder {
     // Use PMsgIDList.newBuilder() to construct.
-    private PMsgIDList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PMsgIDList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PMsgIDList() {
@@ -22411,12 +22373,12 @@ public final class NotificationProtos {
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 msgID_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000001;
               }
-              msgID_.add(s);
+              msgID_.add(bs);
               break;
             }
           }
@@ -22488,24 +22450,26 @@ public final class NotificationProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < msgID_.size(); i++) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 2, msgID_.getRaw(i));
+        output.writeBytes(2, msgID_.getByteString(i));
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
       {
         int dataSize = 0;
         for (int i = 0; i < msgID_.size(); i++) {
-          dataSize += computeStringSizeNoTag(msgID_.getRaw(i));
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(msgID_.getByteString(i));
         }
         size += dataSize;
         size += 1 * getMsgIDList().size();
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -22789,8 +22753,7 @@ public final class NotificationProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        ensureMsgIDIsMutable();
+  ensureMsgIDIsMutable();
         msgID_.add(value);
         onChanged();
         return this;
@@ -22819,8 +22782,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PMsgIDList>
-        PARSER = new com.google.protobuf.AbstractParser<PMsgIDList>() {
+    public static final com.google.protobuf.Parser<PMsgIDList> PARSER =
+        new com.google.protobuf.AbstractParser<PMsgIDList>() {
       public PMsgIDList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -22837,10 +22800,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PMsgIDList> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PMsgIDList> getParserForType() {
@@ -22870,7 +22829,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PNotifySetting)
       PNotifySettingOrBuilder {
     // Use PNotifySetting.newBuilder() to construct.
-    private PNotifySetting(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PNotifySetting(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PNotifySetting() {
@@ -22956,8 +22915,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -22965,7 +22925,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, mute_);
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -23194,8 +23154,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PNotifySetting>
-        PARSER = new com.google.protobuf.AbstractParser<PNotifySetting>() {
+    public static final com.google.protobuf.Parser<PNotifySetting> PARSER =
+        new com.google.protobuf.AbstractParser<PNotifySetting>() {
       public PNotifySetting parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -23212,10 +23172,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PNotifySetting> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PNotifySetting> getParserForType() {
@@ -23287,7 +23243,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PStreamingMsg)
       PStreamingMsgOrBuilder {
     // Use PStreamingMsg.newBuilder() to construct.
-    private PStreamingMsg(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PStreamingMsg(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PStreamingMsg() {
@@ -23319,9 +23275,9 @@ public final class NotificationProtos {
               break;
             }
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              messageId_ = s;
+              messageId_ = bs;
               break;
             }
             case 18: {
@@ -23329,7 +23285,7 @@ public final class NotificationProtos {
               if (lives_ != null) {
                 subBuilder = lives_.toBuilder();
               }
-              lives_ = input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingLiveList.parser(), extensionRegistry);
+              lives_ = input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingLiveList.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(lives_);
                 lives_ = subBuilder.buildPartial();
@@ -23378,7 +23334,9 @@ public final class NotificationProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        messageId_ = s;
+        if (bs.isValidUtf8()) {
+          messageId_ = s;
+        }
         return s;
       }
     }
@@ -23449,26 +23407,28 @@ public final class NotificationProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getMessageIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, messageId_);
+        output.writeBytes(1, getMessageIdBytes());
       }
       if (lives_ != null) {
         output.writeMessage(2, getLives());
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getMessageIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, messageId_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getMessageIdBytes());
       }
       if (lives_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getLives());
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -23681,7 +23641,9 @@ public final class NotificationProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          messageId_ = s;
+          if (bs.isValidUtf8()) {
+            messageId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -23749,8 +23711,7 @@ public final class NotificationProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         messageId_ = value;
         onChanged();
         return this;
@@ -23932,8 +23893,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PStreamingMsg>
-        PARSER = new com.google.protobuf.AbstractParser<PStreamingMsg>() {
+    public static final com.google.protobuf.Parser<PStreamingMsg> PARSER =
+        new com.google.protobuf.AbstractParser<PStreamingMsg>() {
       public PStreamingMsg parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -23950,10 +23911,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PStreamingMsg> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PStreamingMsg> getParserForType() {
@@ -24006,7 +23963,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PStreamingMsgList)
       PStreamingMsgListOrBuilder {
     // Use PStreamingMsgList.newBuilder() to construct.
-    private PStreamingMsgList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PStreamingMsgList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PStreamingMsgList() {
@@ -24042,7 +23999,7 @@ public final class NotificationProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.NotificationProtos.PStreamingMsg>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PStreamingMsg.parser(), extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PStreamingMsg.PARSER, extensionRegistry));
               break;
             }
           }
@@ -24124,8 +24081,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -24133,7 +24091,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, list_.get(i));
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -24618,8 +24576,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PStreamingMsgList>
-        PARSER = new com.google.protobuf.AbstractParser<PStreamingMsgList>() {
+    public static final com.google.protobuf.Parser<PStreamingMsgList> PARSER =
+        new com.google.protobuf.AbstractParser<PStreamingMsgList>() {
       public PStreamingMsgList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -24636,10 +24594,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PStreamingMsgList> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PStreamingMsgList> getParserForType() {
@@ -24776,7 +24730,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PGameMsg)
       PGameMsgOrBuilder {
     // Use PGameMsg.newBuilder() to construct.
-    private PGameMsg(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PGameMsg(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PGameMsg() {
@@ -24827,15 +24781,15 @@ public final class NotificationProtos {
               break;
             }
             case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              uuid_ = s;
+              uuid_ = bs;
               break;
             }
             case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              nickname_ = s;
+              nickname_ = bs;
               break;
             }
             case 40: {
@@ -24849,9 +24803,9 @@ public final class NotificationProtos {
               break;
             }
             case 82: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              achievementName_ = s;
+              achievementName_ = bs;
               break;
             }
             case 88: {
@@ -24860,9 +24814,9 @@ public final class NotificationProtos {
               break;
             }
             case 98: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              levelNmae_ = s;
+              levelNmae_ = bs;
               break;
             }
             case 160: {
@@ -24933,7 +24887,9 @@ public final class NotificationProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        uuid_ = s;
+        if (bs.isValidUtf8()) {
+          uuid_ = s;
+        }
         return s;
       }
     }
@@ -24967,7 +24923,9 @@ public final class NotificationProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        nickname_ = s;
+        if (bs.isValidUtf8()) {
+          nickname_ = s;
+        }
         return s;
       }
     }
@@ -25032,7 +24990,9 @@ public final class NotificationProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        achievementName_ = s;
+        if (bs.isValidUtf8()) {
+          achievementName_ = s;
+        }
         return s;
       }
     }
@@ -25088,7 +25048,9 @@ public final class NotificationProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        levelNmae_ = s;
+        if (bs.isValidUtf8()) {
+          levelNmae_ = s;
+        }
         return s;
       }
     }
@@ -25145,10 +25107,10 @@ public final class NotificationProtos {
         output.writeInt64(2, time_);
       }
       if (!getUuidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 3, uuid_);
+        output.writeBytes(3, getUuidBytes());
       }
       if (!getNicknameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 4, nickname_);
+        output.writeBytes(4, getNicknameBytes());
       }
       if (isFriend_ != false) {
         output.writeBool(5, isFriend_);
@@ -25157,21 +25119,22 @@ public final class NotificationProtos {
         output.writeInt32(6, tp_);
       }
       if (!getAchievementNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 10, achievementName_);
+        output.writeBytes(10, getAchievementNameBytes());
       }
       if (level_ != 0) {
         output.writeInt32(11, level_);
       }
       if (!getLevelNmaeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 12, levelNmae_);
+        output.writeBytes(12, getLevelNmaeBytes());
       }
       if (status_ != 0) {
         output.writeInt32(20, status_);
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -25184,10 +25147,12 @@ public final class NotificationProtos {
           .computeInt64Size(2, time_);
       }
       if (!getUuidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, uuid_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getUuidBytes());
       }
       if (!getNicknameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, nickname_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getNicknameBytes());
       }
       if (isFriend_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -25198,20 +25163,22 @@ public final class NotificationProtos {
           .computeInt32Size(6, tp_);
       }
       if (!getAchievementNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(10, achievementName_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(10, getAchievementNameBytes());
       }
       if (level_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(11, level_);
       }
       if (!getLevelNmaeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(12, levelNmae_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(12, getLevelNmaeBytes());
       }
       if (status_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(20, status_);
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -25535,7 +25502,9 @@ public final class NotificationProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          uuid_ = s;
+          if (bs.isValidUtf8()) {
+            uuid_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -25587,8 +25556,7 @@ public final class NotificationProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         uuid_ = value;
         onChanged();
         return this;
@@ -25604,7 +25572,9 @@ public final class NotificationProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          nickname_ = s;
+          if (bs.isValidUtf8()) {
+            nickname_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -25656,8 +25626,7 @@ public final class NotificationProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         nickname_ = value;
         onChanged();
         return this;
@@ -25754,7 +25723,9 @@ public final class NotificationProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          achievementName_ = s;
+          if (bs.isValidUtf8()) {
+            achievementName_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -25826,8 +25797,7 @@ public final class NotificationProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         achievementName_ = value;
         onChanged();
         return this;
@@ -25885,7 +25855,9 @@ public final class NotificationProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          levelNmae_ = s;
+          if (bs.isValidUtf8()) {
+            levelNmae_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -25953,8 +25925,7 @@ public final class NotificationProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         levelNmae_ = value;
         onChanged();
         return this;
@@ -26021,8 +25992,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PGameMsg>
-        PARSER = new com.google.protobuf.AbstractParser<PGameMsg>() {
+    public static final com.google.protobuf.Parser<PGameMsg> PARSER =
+        new com.google.protobuf.AbstractParser<PGameMsg>() {
       public PGameMsg parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -26039,10 +26010,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PGameMsg> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PGameMsg> getParserForType() {
@@ -26095,7 +26062,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PGameMsgList)
       PGameMsgListOrBuilder {
     // Use PGameMsgList.newBuilder() to construct.
-    private PGameMsgList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PGameMsgList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PGameMsgList() {
@@ -26131,7 +26098,7 @@ public final class NotificationProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.NotificationProtos.PGameMsg>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PGameMsg.parser(), extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PGameMsg.PARSER, extensionRegistry));
               break;
             }
           }
@@ -26213,8 +26180,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -26222,7 +26190,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, list_.get(i));
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -26707,8 +26675,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PGameMsgList>
-        PARSER = new com.google.protobuf.AbstractParser<PGameMsgList>() {
+    public static final com.google.protobuf.Parser<PGameMsgList> PARSER =
+        new com.google.protobuf.AbstractParser<PGameMsgList>() {
       public PGameMsgList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -26725,10 +26693,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PGameMsgList> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PGameMsgList> getParserForType() {
@@ -26807,7 +26771,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PNotifyComment)
       PNotifyCommentOrBuilder {
     // Use PNotifyComment.newBuilder() to construct.
-    private PNotifyComment(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PNotifyComment(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PNotifyComment() {
@@ -26842,7 +26806,7 @@ public final class NotificationProtos {
               if (article_ != null) {
                 subBuilder = article_.toBuilder();
               }
-              article_ = input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostInfo.parser(), extensionRegistry);
+              article_ = input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostInfo.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(article_);
                 article_ = subBuilder.buildPartial();
@@ -26855,7 +26819,7 @@ public final class NotificationProtos {
               if (comment_ != null) {
                 subBuilder = comment_.toBuilder();
               }
-              comment_ = input.readMessage(com.blemobi.sep.probuf.CommentProtos.PCommentExt.parser(), extensionRegistry);
+              comment_ = input.readMessage(com.blemobi.sep.probuf.CommentProtos.PCommentExt.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(comment_);
                 comment_ = subBuilder.buildPartial();
@@ -26973,8 +26937,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -26986,7 +26951,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getComment());
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -27521,8 +27486,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PNotifyComment>
-        PARSER = new com.google.protobuf.AbstractParser<PNotifyComment>() {
+    public static final com.google.protobuf.Parser<PNotifyComment> PARSER =
+        new com.google.protobuf.AbstractParser<PNotifyComment>() {
       public PNotifyComment parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -27539,10 +27504,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PNotifyComment> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PNotifyComment> getParserForType() {
@@ -27646,7 +27607,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PNotifyCommentReply)
       PNotifyCommentReplyOrBuilder {
     // Use PNotifyCommentReply.newBuilder() to construct.
-    private PNotifyCommentReply(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PNotifyCommentReply(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PNotifyCommentReply() {
@@ -27681,7 +27642,7 @@ public final class NotificationProtos {
               if (article_ != null) {
                 subBuilder = article_.toBuilder();
               }
-              article_ = input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostInfo.parser(), extensionRegistry);
+              article_ = input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostInfo.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(article_);
                 article_ = subBuilder.buildPartial();
@@ -27694,7 +27655,7 @@ public final class NotificationProtos {
               if (commentExt_ != null) {
                 subBuilder = commentExt_.toBuilder();
               }
-              commentExt_ = input.readMessage(com.blemobi.sep.probuf.CommentProtos.PCommentExt.parser(), extensionRegistry);
+              commentExt_ = input.readMessage(com.blemobi.sep.probuf.CommentProtos.PCommentExt.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(commentExt_);
                 commentExt_ = subBuilder.buildPartial();
@@ -27707,7 +27668,7 @@ public final class NotificationProtos {
               if (replyExt_ != null) {
                 subBuilder = replyExt_.toBuilder();
               }
-              replyExt_ = input.readMessage(com.blemobi.sep.probuf.CommentProtos.PCommentExt.parser(), extensionRegistry);
+              replyExt_ = input.readMessage(com.blemobi.sep.probuf.CommentProtos.PCommentExt.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(replyExt_);
                 replyExt_ = subBuilder.buildPartial();
@@ -27861,8 +27822,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -27878,7 +27840,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getReplyExt());
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -28580,8 +28542,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PNotifyCommentReply>
-        PARSER = new com.google.protobuf.AbstractParser<PNotifyCommentReply>() {
+    public static final com.google.protobuf.Parser<PNotifyCommentReply> PARSER =
+        new com.google.protobuf.AbstractParser<PNotifyCommentReply>() {
       public PNotifyCommentReply parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -28598,10 +28560,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PNotifyCommentReply> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PNotifyCommentReply> getParserForType() {
@@ -28639,7 +28597,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PNotifySocial)
       PNotifySocialOrBuilder {
     // Use PNotifySocial.newBuilder() to construct.
-    private PNotifySocial(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PNotifySocial(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PNotifySocial() {
@@ -28729,8 +28687,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -28738,7 +28697,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, state_);
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -28983,8 +28942,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PNotifySocial>
-        PARSER = new com.google.protobuf.AbstractParser<PNotifySocial>() {
+    public static final com.google.protobuf.Parser<PNotifySocial> PARSER =
+        new com.google.protobuf.AbstractParser<PNotifySocial>() {
       public PNotifySocial parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -29001,10 +28960,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PNotifySocial> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PNotifySocial> getParserForType() {
@@ -29092,7 +29047,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PNotifyCommentVote)
       PNotifyCommentVoteOrBuilder {
     // Use PNotifyCommentVote.newBuilder() to construct.
-    private PNotifyCommentVote(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PNotifyCommentVote(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PNotifyCommentVote() {
@@ -29133,7 +29088,7 @@ public final class NotificationProtos {
               if (article_ != null) {
                 subBuilder = article_.toBuilder();
               }
-              article_ = input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostInfo.parser(), extensionRegistry);
+              article_ = input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostInfo.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(article_);
                 article_ = subBuilder.buildPartial();
@@ -29146,7 +29101,7 @@ public final class NotificationProtos {
               if (commentExt_ != null) {
                 subBuilder = commentExt_.toBuilder();
               }
-              commentExt_ = input.readMessage(com.blemobi.sep.probuf.CommentProtos.PCommentExt.parser(), extensionRegistry);
+              commentExt_ = input.readMessage(com.blemobi.sep.probuf.CommentProtos.PCommentExt.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(commentExt_);
                 commentExt_ = subBuilder.buildPartial();
@@ -29280,8 +29235,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -29297,7 +29253,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCommentExt());
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -29876,8 +29832,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PNotifyCommentVote>
-        PARSER = new com.google.protobuf.AbstractParser<PNotifyCommentVote>() {
+    public static final com.google.protobuf.Parser<PNotifyCommentVote> PARSER =
+        new com.google.protobuf.AbstractParser<PNotifyCommentVote>() {
       public PNotifyCommentVote parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -29894,10 +29850,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PNotifyCommentVote> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PNotifyCommentVote> getParserForType() {
@@ -29960,7 +29912,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PNotifyNewsVote)
       PNotifyNewsVoteOrBuilder {
     // Use PNotifyNewsVote.newBuilder() to construct.
-    private PNotifyNewsVote(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PNotifyNewsVote(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PNotifyNewsVote() {
@@ -30001,7 +29953,7 @@ public final class NotificationProtos {
               if (article_ != null) {
                 subBuilder = article_.toBuilder();
               }
-              article_ = input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostInfo.parser(), extensionRegistry);
+              article_ = input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostInfo.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(article_);
                 article_ = subBuilder.buildPartial();
@@ -30099,8 +30051,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -30112,7 +30065,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getArticle());
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -30524,8 +30477,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PNotifyNewsVote>
-        PARSER = new com.google.protobuf.AbstractParser<PNotifyNewsVote>() {
+    public static final com.google.protobuf.Parser<PNotifyNewsVote> PARSER =
+        new com.google.protobuf.AbstractParser<PNotifyNewsVote>() {
       public PNotifyNewsVote parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -30542,10 +30495,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PNotifyNewsVote> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PNotifyNewsVote> getParserForType() {
@@ -30599,7 +30548,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PNotifyNewsAt)
       PNotifyNewsAtOrBuilder {
     // Use PNotifyNewsAt.newBuilder() to construct.
-    private PNotifyNewsAt(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PNotifyNewsAt(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PNotifyNewsAt() {
@@ -30634,7 +30583,7 @@ public final class NotificationProtos {
               if (article_ != null) {
                 subBuilder = article_.toBuilder();
               }
-              article_ = input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostInfo.parser(), extensionRegistry);
+              article_ = input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostInfo.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(article_);
                 article_ = subBuilder.buildPartial();
@@ -30716,8 +30665,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -30725,7 +30675,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getArticle());
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -31093,8 +31043,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PNotifyNewsAt>
-        PARSER = new com.google.protobuf.AbstractParser<PNotifyNewsAt>() {
+    public static final com.google.protobuf.Parser<PNotifyNewsAt> PARSER =
+        new com.google.protobuf.AbstractParser<PNotifyNewsAt>() {
       public PNotifyNewsAt parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -31111,10 +31061,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PNotifyNewsAt> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PNotifyNewsAt> getParserForType() {
@@ -31168,7 +31114,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PNotifyStreaming)
       PNotifyStreamingOrBuilder {
     // Use PNotifyStreaming.newBuilder() to construct.
-    private PNotifyStreaming(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PNotifyStreaming(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PNotifyStreaming() {
@@ -31203,7 +31149,7 @@ public final class NotificationProtos {
               if (lives_ != null) {
                 subBuilder = lives_.toBuilder();
               }
-              lives_ = input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingLiveList.parser(), extensionRegistry);
+              lives_ = input.readMessage(com.blemobi.sep.probuf.StreamingProtos.PStreamingLiveList.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(lives_);
                 lives_ = subBuilder.buildPartial();
@@ -31285,8 +31231,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -31294,7 +31241,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLives());
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -31662,8 +31609,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PNotifyStreaming>
-        PARSER = new com.google.protobuf.AbstractParser<PNotifyStreaming>() {
+    public static final com.google.protobuf.Parser<PNotifyStreaming> PARSER =
+        new com.google.protobuf.AbstractParser<PNotifyStreaming>() {
       public PNotifyStreaming parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -31680,10 +31627,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PNotifyStreaming> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PNotifyStreaming> getParserForType() {
@@ -31748,7 +31691,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PNotifyCommunity)
       PNotifyCommunityOrBuilder {
     // Use PNotifyCommunity.newBuilder() to construct.
-    private PNotifyCommunity(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PNotifyCommunity(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PNotifyCommunity() {
@@ -31781,15 +31724,15 @@ public final class NotificationProtos {
               break;
             }
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              id_ = s;
+              id_ = bs;
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              name_ = s;
+              name_ = bs;
               break;
             }
           }
@@ -31833,7 +31776,9 @@ public final class NotificationProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        id_ = s;
+        if (bs.isValidUtf8()) {
+          id_ = s;
+        }
         return s;
       }
     }
@@ -31875,7 +31820,9 @@ public final class NotificationProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        name_ = s;
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
         return s;
       }
     }
@@ -31913,25 +31860,28 @@ public final class NotificationProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, id_);
+        output.writeBytes(1, getIdBytes());
       }
       if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 2, name_);
+        output.writeBytes(2, getNameBytes());
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, id_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getIdBytes());
       }
       if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, name_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getNameBytes());
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -32137,7 +32087,9 @@ public final class NotificationProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          id_ = s;
+          if (bs.isValidUtf8()) {
+            id_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -32205,8 +32157,7 @@ public final class NotificationProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         id_ = value;
         onChanged();
         return this;
@@ -32226,7 +32177,9 @@ public final class NotificationProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          name_ = s;
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -32294,8 +32247,7 @@ public final class NotificationProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         name_ = value;
         onChanged();
         return this;
@@ -32324,8 +32276,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PNotifyCommunity>
-        PARSER = new com.google.protobuf.AbstractParser<PNotifyCommunity>() {
+    public static final com.google.protobuf.Parser<PNotifyCommunity> PARSER =
+        new com.google.protobuf.AbstractParser<PNotifyCommunity>() {
       public PNotifyCommunity parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -32342,10 +32294,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PNotifyCommunity> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PNotifyCommunity> getParserForType() {
@@ -32592,7 +32540,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PNotifyRawMessage)
       PNotifyRawMessageOrBuilder {
     // Use PNotifyRawMessage.newBuilder() to construct.
-    private PNotifyRawMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PNotifyRawMessage(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PNotifyRawMessage() {
@@ -32624,9 +32572,9 @@ public final class NotificationProtos {
               break;
             }
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              content_ = s;
+              content_ = bs;
               break;
             }
             case 42: {
@@ -32634,7 +32582,7 @@ public final class NotificationProtos {
               if (commentNews_ != null) {
                 subBuilder = commentNews_.toBuilder();
               }
-              commentNews_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifyComment.parser(), extensionRegistry);
+              commentNews_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifyComment.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(commentNews_);
                 commentNews_ = subBuilder.buildPartial();
@@ -32647,7 +32595,7 @@ public final class NotificationProtos {
               if (commentReply_ != null) {
                 subBuilder = commentReply_.toBuilder();
               }
-              commentReply_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifyCommentReply.parser(), extensionRegistry);
+              commentReply_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifyCommentReply.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(commentReply_);
                 commentReply_ = subBuilder.buildPartial();
@@ -32660,7 +32608,7 @@ public final class NotificationProtos {
               if (socialApply_ != null) {
                 subBuilder = socialApply_.toBuilder();
               }
-              socialApply_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifySocial.parser(), extensionRegistry);
+              socialApply_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifySocial.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(socialApply_);
                 socialApply_ = subBuilder.buildPartial();
@@ -32673,7 +32621,7 @@ public final class NotificationProtos {
               if (commentVote_ != null) {
                 subBuilder = commentVote_.toBuilder();
               }
-              commentVote_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifyCommentVote.parser(), extensionRegistry);
+              commentVote_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifyCommentVote.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(commentVote_);
                 commentVote_ = subBuilder.buildPartial();
@@ -32686,7 +32634,7 @@ public final class NotificationProtos {
               if (newsVote_ != null) {
                 subBuilder = newsVote_.toBuilder();
               }
-              newsVote_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifyNewsVote.parser(), extensionRegistry);
+              newsVote_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifyNewsVote.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(newsVote_);
                 newsVote_ = subBuilder.buildPartial();
@@ -32699,7 +32647,7 @@ public final class NotificationProtos {
               if (newsAt_ != null) {
                 subBuilder = newsAt_.toBuilder();
               }
-              newsAt_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifyNewsAt.parser(), extensionRegistry);
+              newsAt_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifyNewsAt.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(newsAt_);
                 newsAt_ = subBuilder.buildPartial();
@@ -32712,7 +32660,7 @@ public final class NotificationProtos {
               if (streaming_ != null) {
                 subBuilder = streaming_.toBuilder();
               }
-              streaming_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifyStreaming.parser(), extensionRegistry);
+              streaming_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifyStreaming.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(streaming_);
                 streaming_ = subBuilder.buildPartial();
@@ -32725,7 +32673,7 @@ public final class NotificationProtos {
               if (community_ != null) {
                 subBuilder = community_.toBuilder();
               }
-              community_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifyCommunity.parser(), extensionRegistry);
+              community_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifyCommunity.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(community_);
                 community_ = subBuilder.buildPartial();
@@ -32774,7 +32722,9 @@ public final class NotificationProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        content_ = s;
+        if (bs.isValidUtf8()) {
+          content_ = s;
+        }
         return s;
       }
     }
@@ -33076,7 +33026,7 @@ public final class NotificationProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getContentBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, content_);
+        output.writeBytes(1, getContentBytes());
       }
       if (commentNews_ != null) {
         output.writeMessage(5, getCommentNews());
@@ -33104,13 +33054,15 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
       if (!getContentBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, content_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getContentBytes());
       }
       if (commentNews_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -33144,7 +33096,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getCommunity());
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -33455,7 +33407,9 @@ public final class NotificationProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          content_ = s;
+          if (bs.isValidUtf8()) {
+            content_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -33523,8 +33477,7 @@ public final class NotificationProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         content_ = value;
         onChanged();
         return this;
@@ -34777,8 +34730,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PNotifyRawMessage>
-        PARSER = new com.google.protobuf.AbstractParser<PNotifyRawMessage>() {
+    public static final com.google.protobuf.Parser<PNotifyRawMessage> PARSER =
+        new com.google.protobuf.AbstractParser<PNotifyRawMessage>() {
       public PNotifyRawMessage parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -34795,10 +34748,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PNotifyRawMessage> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PNotifyRawMessage> getParserForType() {
@@ -34957,7 +34906,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PNotifyMessage)
       PNotifyMessageOrBuilder {
     // Use PNotifyMessage.newBuilder() to construct.
-    private PNotifyMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PNotifyMessage(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PNotifyMessage() {
@@ -35010,9 +34959,9 @@ public final class NotificationProtos {
               break;
             }
             case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.ByteString bs = input.readBytes();
 
-              iD_ = s;
+              iD_ = bs;
               break;
             }
             case 42: {
@@ -35020,7 +34969,7 @@ public final class NotificationProtos {
               if (from_ != null) {
                 subBuilder = from_.toBuilder();
               }
-              from_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.parser(), extensionRegistry);
+              from_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(from_);
                 from_ = subBuilder.buildPartial();
@@ -35050,7 +34999,7 @@ public final class NotificationProtos {
               if (content_ != null) {
                 subBuilder = content_.toBuilder();
               }
-              content_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifyRawMessage.parser(), extensionRegistry);
+              content_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifyRawMessage.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(content_);
                 content_ = subBuilder.buildPartial();
@@ -35172,7 +35121,9 @@ public final class NotificationProtos {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        iD_ = s;
+        if (bs.isValidUtf8()) {
+          iD_ = s;
+        }
         return s;
       }
     }
@@ -35332,7 +35283,7 @@ public final class NotificationProtos {
         output.writeInt64(3, time_);
       }
       if (!getIDBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 4, iD_);
+        output.writeBytes(4, getIDBytes());
       }
       if (from_ != null) {
         output.writeMessage(5, getFrom());
@@ -35354,8 +35305,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -35372,7 +35324,8 @@ public final class NotificationProtos {
           .computeInt64Size(3, time_);
       }
       if (!getIDBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, iD_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getIDBytes());
       }
       if (from_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -35396,7 +35349,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(20, getContent());
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -35844,7 +35797,9 @@ public final class NotificationProtos {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          iD_ = s;
+          if (bs.isValidUtf8()) {
+            iD_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -35912,8 +35867,7 @@ public final class NotificationProtos {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  
         iD_ = value;
         onChanged();
         return this;
@@ -36114,18 +36068,6 @@ public final class NotificationProtos {
       public java.util.Map<java.lang.String, java.lang.String>
       getMutableArgs() {
         return internalGetMutableArgs().getMutableMap();
-      }
-      /**
-       * <code>map&lt;string, string&gt; args = 6;</code>
-       *
-       * <pre>
-       * 通知参数（服务内部使用）
-       * </pre>
-       */
-      public Builder putAllArgs(
-          java.util.Map<java.lang.String, java.lang.String> values) {
-        getMutableArgs().putAll(values);
-        return this;
       }
 
       private boolean isFriend_ ;
@@ -36342,8 +36284,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PNotifyMessage>
-        PARSER = new com.google.protobuf.AbstractParser<PNotifyMessage>() {
+    public static final com.google.protobuf.Parser<PNotifyMessage> PARSER =
+        new com.google.protobuf.AbstractParser<PNotifyMessage>() {
       public PNotifyMessage parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -36360,10 +36302,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PNotifyMessage> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PNotifyMessage> getParserForType() {
@@ -36436,7 +36374,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PNotifyMessageList)
       PNotifyMessageListOrBuilder {
     // Use PNotifyMessageList.newBuilder() to construct.
-    private PNotifyMessageList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PNotifyMessageList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PNotifyMessageList() {
@@ -36472,7 +36410,7 @@ public final class NotificationProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.NotificationProtos.PNotifyMessage>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifyMessage.parser(), extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifyMessage.PARSER, extensionRegistry));
               break;
             }
           }
@@ -36574,8 +36512,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -36583,7 +36522,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, list_.get(i));
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -37140,8 +37079,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PNotifyMessageList>
-        PARSER = new com.google.protobuf.AbstractParser<PNotifyMessageList>() {
+    public static final com.google.protobuf.Parser<PNotifyMessageList> PARSER =
+        new com.google.protobuf.AbstractParser<PNotifyMessageList>() {
       public PNotifyMessageList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -37158,10 +37097,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PNotifyMessageList> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PNotifyMessageList> getParserForType() {
@@ -37251,7 +37186,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PNotifySummary)
       PNotifySummaryOrBuilder {
     // Use PNotifySummary.newBuilder() to construct.
-    private PNotifySummary(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PNotifySummary(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PNotifySummary() {
@@ -37294,7 +37229,7 @@ public final class NotificationProtos {
                 messageList_ = new java.util.ArrayList<com.blemobi.sep.probuf.NotificationProtos.PNotifyMessage>();
                 mutable_bitField0_ |= 0x00000002;
               }
-              messageList_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifyMessage.parser(), extensionRegistry));
+              messageList_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifyMessage.PARSER, extensionRegistry));
               break;
             }
           }
@@ -37424,8 +37359,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -37437,7 +37373,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, messageList_.get(i));
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -38066,8 +38002,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PNotifySummary>
-        PARSER = new com.google.protobuf.AbstractParser<PNotifySummary>() {
+    public static final com.google.protobuf.Parser<PNotifySummary> PARSER =
+        new com.google.protobuf.AbstractParser<PNotifySummary>() {
       public PNotifySummary parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -38084,10 +38020,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PNotifySummary> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PNotifySummary> getParserForType() {
@@ -38160,7 +38092,7 @@ public final class NotificationProtos {
       // @@protoc_insertion_point(message_implements:bbproto.PNotifySummaryList)
       PNotifySummaryListOrBuilder {
     // Use PNotifySummaryList.newBuilder() to construct.
-    private PNotifySummaryList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PNotifySummaryList(com.google.protobuf.GeneratedMessage.Builder builder) {
       super(builder);
     }
     private PNotifySummaryList() {
@@ -38196,7 +38128,7 @@ public final class NotificationProtos {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.NotificationProtos.PNotifySummary>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              list_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifySummary.parser(), extensionRegistry));
+              list_.add(input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifySummary.PARSER, extensionRegistry));
               break;
             }
           }
@@ -38298,8 +38230,9 @@ public final class NotificationProtos {
       }
     }
 
+    private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
-      int size = memoizedSize;
+      int size = memoizedSerializedSize;
       if (size != -1) return size;
 
       size = 0;
@@ -38307,7 +38240,7 @@ public final class NotificationProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, list_.get(i));
       }
-      memoizedSize = size;
+      memoizedSerializedSize = size;
       return size;
     }
 
@@ -38864,8 +38797,8 @@ public final class NotificationProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PNotifySummaryList>
-        PARSER = new com.google.protobuf.AbstractParser<PNotifySummaryList>() {
+    public static final com.google.protobuf.Parser<PNotifySummaryList> PARSER =
+        new com.google.protobuf.AbstractParser<PNotifySummaryList>() {
       public PNotifySummaryList parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -38882,10 +38815,6 @@ public final class NotificationProtos {
         }
       }
     };
-
-    public static com.google.protobuf.Parser<PNotifySummaryList> parser() {
-      return PARSER;
-    }
 
     @java.lang.Override
     public com.google.protobuf.Parser<PNotifySummaryList> getParserForType() {
