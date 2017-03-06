@@ -45,6 +45,7 @@ public abstract class BaseGRPCClient {
     
     private void initial(){
         SocketInfo info = getSocketInfo();
+        log.info("HOST:[" + info.getIpAddr() + "] PORT:[" + info.getPort() + "]");
         channel = NettyChannelBuilder.forAddress(info.getIpAddr(), info.getPort()).negotiationType(NegotiationType.PLAINTEXT).build();
     }
     
