@@ -6229,6 +6229,24 @@ public final class PaymentProtos {
      * </pre>
      */
     int getReceMoney();
+
+    /**
+     * <code>optional string content = 3;</code>
+     *
+     * <pre>
+     * 描述
+     * </pre>
+     */
+    java.lang.String getContent();
+    /**
+     * <code>optional string content = 3;</code>
+     *
+     * <pre>
+     * 描述
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getContentBytes();
   }
   /**
    * Protobuf type {@code bbproto.PRedEnveStatus}
@@ -6248,6 +6266,7 @@ public final class PaymentProtos {
     private PRedEnveStatus() {
       status_ = 0;
       receMoney_ = 0;
+      content_ = "";
     }
 
     @java.lang.Override
@@ -6282,6 +6301,12 @@ public final class PaymentProtos {
             case 16: {
 
               receMoney_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              content_ = s;
               break;
             }
           }
@@ -6334,6 +6359,48 @@ public final class PaymentProtos {
       return receMoney_;
     }
 
+    public static final int CONTENT_FIELD_NUMBER = 3;
+    private volatile java.lang.Object content_;
+    /**
+     * <code>optional string content = 3;</code>
+     *
+     * <pre>
+     * 描述
+     * </pre>
+     */
+    public java.lang.String getContent() {
+      java.lang.Object ref = content_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        content_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string content = 3;</code>
+     *
+     * <pre>
+     * 描述
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getContentBytes() {
+      java.lang.Object ref = content_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        content_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -6352,6 +6419,9 @@ public final class PaymentProtos {
       if (receMoney_ != 0) {
         output.writeInt32(2, receMoney_);
       }
+      if (!getContentBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, content_);
+      }
     }
 
     public int getSerializedSize() {
@@ -6366,6 +6436,9 @@ public final class PaymentProtos {
       if (receMoney_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, receMoney_);
+      }
+      if (!getContentBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, content_);
       }
       memoizedSize = size;
       return size;
@@ -6486,6 +6559,8 @@ public final class PaymentProtos {
 
         receMoney_ = 0;
 
+        content_ = "";
+
         return this;
       }
 
@@ -6510,6 +6585,7 @@ public final class PaymentProtos {
         com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus result = new com.blemobi.sep.probuf.PaymentProtos.PRedEnveStatus(this);
         result.status_ = status_;
         result.receMoney_ = receMoney_;
+        result.content_ = content_;
         onBuilt();
         return result;
       }
@@ -6530,6 +6606,10 @@ public final class PaymentProtos {
         }
         if (other.getReceMoney() != 0) {
           setReceMoney(other.getReceMoney());
+        }
+        if (!other.getContent().isEmpty()) {
+          content_ = other.content_;
+          onChanged();
         }
         onChanged();
         return this;
@@ -6629,6 +6709,95 @@ public final class PaymentProtos {
       public Builder clearReceMoney() {
         
         receMoney_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object content_ = "";
+      /**
+       * <code>optional string content = 3;</code>
+       *
+       * <pre>
+       * 描述
+       * </pre>
+       */
+      public java.lang.String getContent() {
+        java.lang.Object ref = content_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          content_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string content = 3;</code>
+       *
+       * <pre>
+       * 描述
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getContentBytes() {
+        java.lang.Object ref = content_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          content_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string content = 3;</code>
+       *
+       * <pre>
+       * 描述
+       * </pre>
+       */
+      public Builder setContent(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        content_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string content = 3;</code>
+       *
+       * <pre>
+       * 描述
+       * </pre>
+       */
+      public Builder clearContent() {
+        
+        content_ = getDefaultInstance().getContent();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string content = 3;</code>
+       *
+       * <pre>
+       * 描述
+       * </pre>
+       */
+      public Builder setContentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        content_ = value;
         onChanged();
         return this;
       }
@@ -15913,6 +16082,2476 @@ public final class PaymentProtos {
 
   }
 
+  public interface PCelebrityListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PCelebrityList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+     */
+    java.util.List<com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup> 
+        getCelebrityGroupList();
+    /**
+     * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+     */
+    com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup getCelebrityGroup(int index);
+    /**
+     * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+     */
+    int getCelebrityGroupCount();
+    /**
+     * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+     */
+    java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroupOrBuilder> 
+        getCelebrityGroupOrBuilderList();
+    /**
+     * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+     */
+    com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroupOrBuilder getCelebrityGroupOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code bbproto.PCelebrityList}
+   *
+   * <pre>
+   ** 用户关注的网红列表 
+   * </pre>
+   */
+  public  static final class PCelebrityList extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PCelebrityList)
+      PCelebrityListOrBuilder {
+    // Use PCelebrityList.newBuilder() to construct.
+    private PCelebrityList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PCelebrityList() {
+      celebrityGroup_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PCelebrityList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                celebrityGroup_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              celebrityGroup_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup.parser(), extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          celebrityGroup_ = java.util.Collections.unmodifiableList(celebrityGroup_);
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PCelebrityList_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PCelebrityList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.PaymentProtos.PCelebrityList.class, com.blemobi.sep.probuf.PaymentProtos.PCelebrityList.Builder.class);
+    }
+
+    public static final int CELEBRITYGROUP_FIELD_NUMBER = 1;
+    private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup> celebrityGroup_;
+    /**
+     * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+     */
+    public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup> getCelebrityGroupList() {
+      return celebrityGroup_;
+    }
+    /**
+     * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+     */
+    public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroupOrBuilder> 
+        getCelebrityGroupOrBuilderList() {
+      return celebrityGroup_;
+    }
+    /**
+     * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+     */
+    public int getCelebrityGroupCount() {
+      return celebrityGroup_.size();
+    }
+    /**
+     * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+     */
+    public com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup getCelebrityGroup(int index) {
+      return celebrityGroup_.get(index);
+    }
+    /**
+     * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+     */
+    public com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroupOrBuilder getCelebrityGroupOrBuilder(
+        int index) {
+      return celebrityGroup_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < celebrityGroup_.size(); i++) {
+        output.writeMessage(1, celebrityGroup_.get(i));
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < celebrityGroup_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, celebrityGroup_.get(i));
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.PaymentProtos.PCelebrityList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PCelebrityList}
+     *
+     * <pre>
+     ** 用户关注的网红列表 
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PCelebrityList)
+        com.blemobi.sep.probuf.PaymentProtos.PCelebrityListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PCelebrityList_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PCelebrityList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.PaymentProtos.PCelebrityList.class, com.blemobi.sep.probuf.PaymentProtos.PCelebrityList.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.PaymentProtos.PCelebrityList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getCelebrityGroupFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (celebrityGroupBuilder_ == null) {
+          celebrityGroup_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          celebrityGroupBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PCelebrityList_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PCelebrityList getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.PCelebrityList.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PCelebrityList build() {
+        com.blemobi.sep.probuf.PaymentProtos.PCelebrityList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PCelebrityList buildPartial() {
+        com.blemobi.sep.probuf.PaymentProtos.PCelebrityList result = new com.blemobi.sep.probuf.PaymentProtos.PCelebrityList(this);
+        int from_bitField0_ = bitField0_;
+        if (celebrityGroupBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            celebrityGroup_ = java.util.Collections.unmodifiableList(celebrityGroup_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.celebrityGroup_ = celebrityGroup_;
+        } else {
+          result.celebrityGroup_ = celebrityGroupBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.PaymentProtos.PCelebrityList) {
+          return mergeFrom((com.blemobi.sep.probuf.PaymentProtos.PCelebrityList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.PaymentProtos.PCelebrityList other) {
+        if (other == com.blemobi.sep.probuf.PaymentProtos.PCelebrityList.getDefaultInstance()) return this;
+        if (celebrityGroupBuilder_ == null) {
+          if (!other.celebrityGroup_.isEmpty()) {
+            if (celebrityGroup_.isEmpty()) {
+              celebrityGroup_ = other.celebrityGroup_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureCelebrityGroupIsMutable();
+              celebrityGroup_.addAll(other.celebrityGroup_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.celebrityGroup_.isEmpty()) {
+            if (celebrityGroupBuilder_.isEmpty()) {
+              celebrityGroupBuilder_.dispose();
+              celebrityGroupBuilder_ = null;
+              celebrityGroup_ = other.celebrityGroup_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              celebrityGroupBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getCelebrityGroupFieldBuilder() : null;
+            } else {
+              celebrityGroupBuilder_.addAllMessages(other.celebrityGroup_);
+            }
+          }
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.PaymentProtos.PCelebrityList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.PaymentProtos.PCelebrityList) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup> celebrityGroup_ =
+        java.util.Collections.emptyList();
+      private void ensureCelebrityGroupIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          celebrityGroup_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup>(celebrityGroup_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup, com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup.Builder, com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroupOrBuilder> celebrityGroupBuilder_;
+
+      /**
+       * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+       */
+      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup> getCelebrityGroupList() {
+        if (celebrityGroupBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(celebrityGroup_);
+        } else {
+          return celebrityGroupBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+       */
+      public int getCelebrityGroupCount() {
+        if (celebrityGroupBuilder_ == null) {
+          return celebrityGroup_.size();
+        } else {
+          return celebrityGroupBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup getCelebrityGroup(int index) {
+        if (celebrityGroupBuilder_ == null) {
+          return celebrityGroup_.get(index);
+        } else {
+          return celebrityGroupBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+       */
+      public Builder setCelebrityGroup(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup value) {
+        if (celebrityGroupBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCelebrityGroupIsMutable();
+          celebrityGroup_.set(index, value);
+          onChanged();
+        } else {
+          celebrityGroupBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+       */
+      public Builder setCelebrityGroup(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup.Builder builderForValue) {
+        if (celebrityGroupBuilder_ == null) {
+          ensureCelebrityGroupIsMutable();
+          celebrityGroup_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          celebrityGroupBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+       */
+      public Builder addCelebrityGroup(com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup value) {
+        if (celebrityGroupBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCelebrityGroupIsMutable();
+          celebrityGroup_.add(value);
+          onChanged();
+        } else {
+          celebrityGroupBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+       */
+      public Builder addCelebrityGroup(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup value) {
+        if (celebrityGroupBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCelebrityGroupIsMutable();
+          celebrityGroup_.add(index, value);
+          onChanged();
+        } else {
+          celebrityGroupBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+       */
+      public Builder addCelebrityGroup(
+          com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup.Builder builderForValue) {
+        if (celebrityGroupBuilder_ == null) {
+          ensureCelebrityGroupIsMutable();
+          celebrityGroup_.add(builderForValue.build());
+          onChanged();
+        } else {
+          celebrityGroupBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+       */
+      public Builder addCelebrityGroup(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup.Builder builderForValue) {
+        if (celebrityGroupBuilder_ == null) {
+          ensureCelebrityGroupIsMutable();
+          celebrityGroup_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          celebrityGroupBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+       */
+      public Builder addAllCelebrityGroup(
+          java.lang.Iterable<? extends com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup> values) {
+        if (celebrityGroupBuilder_ == null) {
+          ensureCelebrityGroupIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, celebrityGroup_);
+          onChanged();
+        } else {
+          celebrityGroupBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+       */
+      public Builder clearCelebrityGroup() {
+        if (celebrityGroupBuilder_ == null) {
+          celebrityGroup_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          celebrityGroupBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+       */
+      public Builder removeCelebrityGroup(int index) {
+        if (celebrityGroupBuilder_ == null) {
+          ensureCelebrityGroupIsMutable();
+          celebrityGroup_.remove(index);
+          onChanged();
+        } else {
+          celebrityGroupBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup.Builder getCelebrityGroupBuilder(
+          int index) {
+        return getCelebrityGroupFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroupOrBuilder getCelebrityGroupOrBuilder(
+          int index) {
+        if (celebrityGroupBuilder_ == null) {
+          return celebrityGroup_.get(index);  } else {
+          return celebrityGroupBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+       */
+      public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroupOrBuilder> 
+           getCelebrityGroupOrBuilderList() {
+        if (celebrityGroupBuilder_ != null) {
+          return celebrityGroupBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(celebrityGroup_);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup.Builder addCelebrityGroupBuilder() {
+        return getCelebrityGroupFieldBuilder().addBuilder(
+            com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup.Builder addCelebrityGroupBuilder(
+          int index) {
+        return getCelebrityGroupFieldBuilder().addBuilder(
+            index, com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityGroup celebrityGroup = 1;</code>
+       */
+      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup.Builder> 
+           getCelebrityGroupBuilderList() {
+        return getCelebrityGroupFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup, com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup.Builder, com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroupOrBuilder> 
+          getCelebrityGroupFieldBuilder() {
+        if (celebrityGroupBuilder_ == null) {
+          celebrityGroupBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup, com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup.Builder, com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroupOrBuilder>(
+                  celebrityGroup_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          celebrityGroup_ = null;
+        }
+        return celebrityGroupBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PCelebrityList)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PCelebrityList)
+    private static final com.blemobi.sep.probuf.PaymentProtos.PCelebrityList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.PaymentProtos.PCelebrityList();
+    }
+
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PCelebrityList>
+        PARSER = new com.google.protobuf.AbstractParser<PCelebrityList>() {
+      public PCelebrityList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PCelebrityList(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<PCelebrityList> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PCelebrityList> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.PaymentProtos.PCelebrityList getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PCelebrityGroupOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PCelebrityGroup)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string group = 1;</code>
+     *
+     * <pre>
+     * 分组, A-Z
+     * </pre>
+     */
+    java.lang.String getGroup();
+    /**
+     * <code>optional string group = 1;</code>
+     *
+     * <pre>
+     * 分组, A-Z
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getGroupBytes();
+
+    /**
+     * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+     *
+     * <pre>
+     * 网红信息
+     * </pre>
+     */
+    java.util.List<com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo> 
+        getCelebrityInfoList();
+    /**
+     * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+     *
+     * <pre>
+     * 网红信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo getCelebrityInfo(int index);
+    /**
+     * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+     *
+     * <pre>
+     * 网红信息
+     * </pre>
+     */
+    int getCelebrityInfoCount();
+    /**
+     * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+     *
+     * <pre>
+     * 网红信息
+     * </pre>
+     */
+    java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfoOrBuilder> 
+        getCelebrityInfoOrBuilderList();
+    /**
+     * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+     *
+     * <pre>
+     * 网红信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfoOrBuilder getCelebrityInfoOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code bbproto.PCelebrityGroup}
+   *
+   * <pre>
+   ** 用户关注的网红分组
+   * </pre>
+   */
+  public  static final class PCelebrityGroup extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PCelebrityGroup)
+      PCelebrityGroupOrBuilder {
+    // Use PCelebrityGroup.newBuilder() to construct.
+    private PCelebrityGroup(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PCelebrityGroup() {
+      group_ = "";
+      celebrityInfo_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PCelebrityGroup(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              group_ = s;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                celebrityInfo_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              celebrityInfo_.add(input.readMessage(com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo.parser(), extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          celebrityInfo_ = java.util.Collections.unmodifiableList(celebrityInfo_);
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PCelebrityGroup_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PCelebrityGroup_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup.class, com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int GROUP_FIELD_NUMBER = 1;
+    private volatile java.lang.Object group_;
+    /**
+     * <code>optional string group = 1;</code>
+     *
+     * <pre>
+     * 分组, A-Z
+     * </pre>
+     */
+    public java.lang.String getGroup() {
+      java.lang.Object ref = group_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        group_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string group = 1;</code>
+     *
+     * <pre>
+     * 分组, A-Z
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getGroupBytes() {
+      java.lang.Object ref = group_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        group_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CELEBRITYINFO_FIELD_NUMBER = 2;
+    private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo> celebrityInfo_;
+    /**
+     * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+     *
+     * <pre>
+     * 网红信息
+     * </pre>
+     */
+    public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo> getCelebrityInfoList() {
+      return celebrityInfo_;
+    }
+    /**
+     * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+     *
+     * <pre>
+     * 网红信息
+     * </pre>
+     */
+    public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfoOrBuilder> 
+        getCelebrityInfoOrBuilderList() {
+      return celebrityInfo_;
+    }
+    /**
+     * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+     *
+     * <pre>
+     * 网红信息
+     * </pre>
+     */
+    public int getCelebrityInfoCount() {
+      return celebrityInfo_.size();
+    }
+    /**
+     * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+     *
+     * <pre>
+     * 网红信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo getCelebrityInfo(int index) {
+      return celebrityInfo_.get(index);
+    }
+    /**
+     * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+     *
+     * <pre>
+     * 网红信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfoOrBuilder getCelebrityInfoOrBuilder(
+        int index) {
+      return celebrityInfo_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getGroupBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, group_);
+      }
+      for (int i = 0; i < celebrityInfo_.size(); i++) {
+        output.writeMessage(2, celebrityInfo_.get(i));
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getGroupBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, group_);
+      }
+      for (int i = 0; i < celebrityInfo_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, celebrityInfo_.get(i));
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PCelebrityGroup}
+     *
+     * <pre>
+     ** 用户关注的网红分组
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PCelebrityGroup)
+        com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroupOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PCelebrityGroup_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PCelebrityGroup_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup.class, com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getCelebrityInfoFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        group_ = "";
+
+        if (celebrityInfoBuilder_ == null) {
+          celebrityInfo_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          celebrityInfoBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PCelebrityGroup_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup build() {
+        com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup buildPartial() {
+        com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup result = new com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.group_ = group_;
+        if (celebrityInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            celebrityInfo_ = java.util.Collections.unmodifiableList(celebrityInfo_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.celebrityInfo_ = celebrityInfo_;
+        } else {
+          result.celebrityInfo_ = celebrityInfoBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup) {
+          return mergeFrom((com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup other) {
+        if (other == com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup.getDefaultInstance()) return this;
+        if (!other.getGroup().isEmpty()) {
+          group_ = other.group_;
+          onChanged();
+        }
+        if (celebrityInfoBuilder_ == null) {
+          if (!other.celebrityInfo_.isEmpty()) {
+            if (celebrityInfo_.isEmpty()) {
+              celebrityInfo_ = other.celebrityInfo_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureCelebrityInfoIsMutable();
+              celebrityInfo_.addAll(other.celebrityInfo_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.celebrityInfo_.isEmpty()) {
+            if (celebrityInfoBuilder_.isEmpty()) {
+              celebrityInfoBuilder_.dispose();
+              celebrityInfoBuilder_ = null;
+              celebrityInfo_ = other.celebrityInfo_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              celebrityInfoBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getCelebrityInfoFieldBuilder() : null;
+            } else {
+              celebrityInfoBuilder_.addAllMessages(other.celebrityInfo_);
+            }
+          }
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object group_ = "";
+      /**
+       * <code>optional string group = 1;</code>
+       *
+       * <pre>
+       * 分组, A-Z
+       * </pre>
+       */
+      public java.lang.String getGroup() {
+        java.lang.Object ref = group_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          group_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string group = 1;</code>
+       *
+       * <pre>
+       * 分组, A-Z
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getGroupBytes() {
+        java.lang.Object ref = group_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          group_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string group = 1;</code>
+       *
+       * <pre>
+       * 分组, A-Z
+       * </pre>
+       */
+      public Builder setGroup(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        group_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string group = 1;</code>
+       *
+       * <pre>
+       * 分组, A-Z
+       * </pre>
+       */
+      public Builder clearGroup() {
+        
+        group_ = getDefaultInstance().getGroup();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string group = 1;</code>
+       *
+       * <pre>
+       * 分组, A-Z
+       * </pre>
+       */
+      public Builder setGroupBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        group_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo> celebrityInfo_ =
+        java.util.Collections.emptyList();
+      private void ensureCelebrityInfoIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          celebrityInfo_ = new java.util.ArrayList<com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo>(celebrityInfo_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo, com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfoOrBuilder> celebrityInfoBuilder_;
+
+      /**
+       * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo> getCelebrityInfoList() {
+        if (celebrityInfoBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(celebrityInfo_);
+        } else {
+          return celebrityInfoBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      public int getCelebrityInfoCount() {
+        if (celebrityInfoBuilder_ == null) {
+          return celebrityInfo_.size();
+        } else {
+          return celebrityInfoBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo getCelebrityInfo(int index) {
+        if (celebrityInfoBuilder_ == null) {
+          return celebrityInfo_.get(index);
+        } else {
+          return celebrityInfoBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      public Builder setCelebrityInfo(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo value) {
+        if (celebrityInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCelebrityInfoIsMutable();
+          celebrityInfo_.set(index, value);
+          onChanged();
+        } else {
+          celebrityInfoBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      public Builder setCelebrityInfo(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo.Builder builderForValue) {
+        if (celebrityInfoBuilder_ == null) {
+          ensureCelebrityInfoIsMutable();
+          celebrityInfo_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          celebrityInfoBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      public Builder addCelebrityInfo(com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo value) {
+        if (celebrityInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCelebrityInfoIsMutable();
+          celebrityInfo_.add(value);
+          onChanged();
+        } else {
+          celebrityInfoBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      public Builder addCelebrityInfo(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo value) {
+        if (celebrityInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCelebrityInfoIsMutable();
+          celebrityInfo_.add(index, value);
+          onChanged();
+        } else {
+          celebrityInfoBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      public Builder addCelebrityInfo(
+          com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo.Builder builderForValue) {
+        if (celebrityInfoBuilder_ == null) {
+          ensureCelebrityInfoIsMutable();
+          celebrityInfo_.add(builderForValue.build());
+          onChanged();
+        } else {
+          celebrityInfoBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      public Builder addCelebrityInfo(
+          int index, com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo.Builder builderForValue) {
+        if (celebrityInfoBuilder_ == null) {
+          ensureCelebrityInfoIsMutable();
+          celebrityInfo_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          celebrityInfoBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      public Builder addAllCelebrityInfo(
+          java.lang.Iterable<? extends com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo> values) {
+        if (celebrityInfoBuilder_ == null) {
+          ensureCelebrityInfoIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, celebrityInfo_);
+          onChanged();
+        } else {
+          celebrityInfoBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      public Builder clearCelebrityInfo() {
+        if (celebrityInfoBuilder_ == null) {
+          celebrityInfo_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          celebrityInfoBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      public Builder removeCelebrityInfo(int index) {
+        if (celebrityInfoBuilder_ == null) {
+          ensureCelebrityInfoIsMutable();
+          celebrityInfo_.remove(index);
+          onChanged();
+        } else {
+          celebrityInfoBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo.Builder getCelebrityInfoBuilder(
+          int index) {
+        return getCelebrityInfoFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfoOrBuilder getCelebrityInfoOrBuilder(
+          int index) {
+        if (celebrityInfoBuilder_ == null) {
+          return celebrityInfo_.get(index);  } else {
+          return celebrityInfoBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      public java.util.List<? extends com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfoOrBuilder> 
+           getCelebrityInfoOrBuilderList() {
+        if (celebrityInfoBuilder_ != null) {
+          return celebrityInfoBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(celebrityInfo_);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo.Builder addCelebrityInfoBuilder() {
+        return getCelebrityInfoFieldBuilder().addBuilder(
+            com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo.Builder addCelebrityInfoBuilder(
+          int index) {
+        return getCelebrityInfoFieldBuilder().addBuilder(
+            index, com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PCelebrityInfo celebrityInfo = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      public java.util.List<com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo.Builder> 
+           getCelebrityInfoBuilderList() {
+        return getCelebrityInfoFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo, com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfoOrBuilder> 
+          getCelebrityInfoFieldBuilder() {
+        if (celebrityInfoBuilder_ == null) {
+          celebrityInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo, com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo.Builder, com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfoOrBuilder>(
+                  celebrityInfo_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          celebrityInfo_ = null;
+        }
+        return celebrityInfoBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PCelebrityGroup)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PCelebrityGroup)
+    private static final com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup();
+    }
+
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PCelebrityGroup>
+        PARSER = new com.google.protobuf.AbstractParser<PCelebrityGroup>() {
+      public PCelebrityGroup parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PCelebrityGroup(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<PCelebrityGroup> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PCelebrityGroup> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.PaymentProtos.PCelebrityGroup getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PCelebrityInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PCelebrityInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .bbproto.PUserBase userBaseVO = 1;</code>
+     *
+     * <pre>
+     * 网红的VO信息
+     * </pre>
+     */
+    boolean hasUserBaseVO();
+    /**
+     * <code>optional .bbproto.PUserBase userBaseVO = 1;</code>
+     *
+     * <pre>
+     * 网红的VO信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.AccountProtos.PUserBase getUserBaseVO();
+    /**
+     * <code>optional .bbproto.PUserBase userBaseVO = 1;</code>
+     *
+     * <pre>
+     * 网红的VO信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserBaseVOOrBuilder();
+
+    /**
+     * <code>optional .bbproto.PUserBase userBase = 2;</code>
+     *
+     * <pre>
+     * 网红信息
+     * </pre>
+     */
+    boolean hasUserBase();
+    /**
+     * <code>optional .bbproto.PUserBase userBase = 2;</code>
+     *
+     * <pre>
+     * 网红信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.AccountProtos.PUserBase getUserBase();
+    /**
+     * <code>optional .bbproto.PUserBase userBase = 2;</code>
+     *
+     * <pre>
+     * 网红信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserBaseOrBuilder();
+  }
+  /**
+   * Protobuf type {@code bbproto.PCelebrityInfo}
+   *
+   * <pre>
+   ** 用户关注的网红信息 
+   * </pre>
+   */
+  public  static final class PCelebrityInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PCelebrityInfo)
+      PCelebrityInfoOrBuilder {
+    // Use PCelebrityInfo.newBuilder() to construct.
+    private PCelebrityInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PCelebrityInfo() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PCelebrityInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder subBuilder = null;
+              if (userBaseVO_ != null) {
+                subBuilder = userBaseVO_.toBuilder();
+              }
+              userBaseVO_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(userBaseVO_);
+                userBaseVO_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder subBuilder = null;
+              if (userBase_ != null) {
+                subBuilder = userBase_.toBuilder();
+              }
+              userBase_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(userBase_);
+                userBase_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PCelebrityInfo_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PCelebrityInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo.class, com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo.Builder.class);
+    }
+
+    public static final int USERBASEVO_FIELD_NUMBER = 1;
+    private com.blemobi.sep.probuf.AccountProtos.PUserBase userBaseVO_;
+    /**
+     * <code>optional .bbproto.PUserBase userBaseVO = 1;</code>
+     *
+     * <pre>
+     * 网红的VO信息
+     * </pre>
+     */
+    public boolean hasUserBaseVO() {
+      return userBaseVO_ != null;
+    }
+    /**
+     * <code>optional .bbproto.PUserBase userBaseVO = 1;</code>
+     *
+     * <pre>
+     * 网红的VO信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.AccountProtos.PUserBase getUserBaseVO() {
+      return userBaseVO_ == null ? com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : userBaseVO_;
+    }
+    /**
+     * <code>optional .bbproto.PUserBase userBaseVO = 1;</code>
+     *
+     * <pre>
+     * 网红的VO信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserBaseVOOrBuilder() {
+      return getUserBaseVO();
+    }
+
+    public static final int USERBASE_FIELD_NUMBER = 2;
+    private com.blemobi.sep.probuf.AccountProtos.PUserBase userBase_;
+    /**
+     * <code>optional .bbproto.PUserBase userBase = 2;</code>
+     *
+     * <pre>
+     * 网红信息
+     * </pre>
+     */
+    public boolean hasUserBase() {
+      return userBase_ != null;
+    }
+    /**
+     * <code>optional .bbproto.PUserBase userBase = 2;</code>
+     *
+     * <pre>
+     * 网红信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.AccountProtos.PUserBase getUserBase() {
+      return userBase_ == null ? com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : userBase_;
+    }
+    /**
+     * <code>optional .bbproto.PUserBase userBase = 2;</code>
+     *
+     * <pre>
+     * 网红信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserBaseOrBuilder() {
+      return getUserBase();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (userBaseVO_ != null) {
+        output.writeMessage(1, getUserBaseVO());
+      }
+      if (userBase_ != null) {
+        output.writeMessage(2, getUserBase());
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (userBaseVO_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getUserBaseVO());
+      }
+      if (userBase_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getUserBase());
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PCelebrityInfo}
+     *
+     * <pre>
+     ** 用户关注的网红信息 
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PCelebrityInfo)
+        com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PCelebrityInfo_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PCelebrityInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo.class, com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (userBaseVOBuilder_ == null) {
+          userBaseVO_ = null;
+        } else {
+          userBaseVO_ = null;
+          userBaseVOBuilder_ = null;
+        }
+        if (userBaseBuilder_ == null) {
+          userBase_ = null;
+        } else {
+          userBase_ = null;
+          userBaseBuilder_ = null;
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PCelebrityInfo_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo build() {
+        com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo buildPartial() {
+        com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo result = new com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo(this);
+        if (userBaseVOBuilder_ == null) {
+          result.userBaseVO_ = userBaseVO_;
+        } else {
+          result.userBaseVO_ = userBaseVOBuilder_.build();
+        }
+        if (userBaseBuilder_ == null) {
+          result.userBase_ = userBase_;
+        } else {
+          result.userBase_ = userBaseBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo) {
+          return mergeFrom((com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo other) {
+        if (other == com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo.getDefaultInstance()) return this;
+        if (other.hasUserBaseVO()) {
+          mergeUserBaseVO(other.getUserBaseVO());
+        }
+        if (other.hasUserBase()) {
+          mergeUserBase(other.getUserBase());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.blemobi.sep.probuf.AccountProtos.PUserBase userBaseVO_ = null;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> userBaseVOBuilder_;
+      /**
+       * <code>optional .bbproto.PUserBase userBaseVO = 1;</code>
+       *
+       * <pre>
+       * 网红的VO信息
+       * </pre>
+       */
+      public boolean hasUserBaseVO() {
+        return userBaseVOBuilder_ != null || userBaseVO_ != null;
+      }
+      /**
+       * <code>optional .bbproto.PUserBase userBaseVO = 1;</code>
+       *
+       * <pre>
+       * 网红的VO信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUserBase getUserBaseVO() {
+        if (userBaseVOBuilder_ == null) {
+          return userBaseVO_ == null ? com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : userBaseVO_;
+        } else {
+          return userBaseVOBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .bbproto.PUserBase userBaseVO = 1;</code>
+       *
+       * <pre>
+       * 网红的VO信息
+       * </pre>
+       */
+      public Builder setUserBaseVO(com.blemobi.sep.probuf.AccountProtos.PUserBase value) {
+        if (userBaseVOBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          userBaseVO_ = value;
+          onChanged();
+        } else {
+          userBaseVOBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PUserBase userBaseVO = 1;</code>
+       *
+       * <pre>
+       * 网红的VO信息
+       * </pre>
+       */
+      public Builder setUserBaseVO(
+          com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder builderForValue) {
+        if (userBaseVOBuilder_ == null) {
+          userBaseVO_ = builderForValue.build();
+          onChanged();
+        } else {
+          userBaseVOBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PUserBase userBaseVO = 1;</code>
+       *
+       * <pre>
+       * 网红的VO信息
+       * </pre>
+       */
+      public Builder mergeUserBaseVO(com.blemobi.sep.probuf.AccountProtos.PUserBase value) {
+        if (userBaseVOBuilder_ == null) {
+          if (userBaseVO_ != null) {
+            userBaseVO_ =
+              com.blemobi.sep.probuf.AccountProtos.PUserBase.newBuilder(userBaseVO_).mergeFrom(value).buildPartial();
+          } else {
+            userBaseVO_ = value;
+          }
+          onChanged();
+        } else {
+          userBaseVOBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PUserBase userBaseVO = 1;</code>
+       *
+       * <pre>
+       * 网红的VO信息
+       * </pre>
+       */
+      public Builder clearUserBaseVO() {
+        if (userBaseVOBuilder_ == null) {
+          userBaseVO_ = null;
+          onChanged();
+        } else {
+          userBaseVO_ = null;
+          userBaseVOBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PUserBase userBaseVO = 1;</code>
+       *
+       * <pre>
+       * 网红的VO信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder getUserBaseVOBuilder() {
+        
+        onChanged();
+        return getUserBaseVOFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .bbproto.PUserBase userBaseVO = 1;</code>
+       *
+       * <pre>
+       * 网红的VO信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserBaseVOOrBuilder() {
+        if (userBaseVOBuilder_ != null) {
+          return userBaseVOBuilder_.getMessageOrBuilder();
+        } else {
+          return userBaseVO_ == null ?
+              com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : userBaseVO_;
+        }
+      }
+      /**
+       * <code>optional .bbproto.PUserBase userBaseVO = 1;</code>
+       *
+       * <pre>
+       * 网红的VO信息
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> 
+          getUserBaseVOFieldBuilder() {
+        if (userBaseVOBuilder_ == null) {
+          userBaseVOBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder>(
+                  getUserBaseVO(),
+                  getParentForChildren(),
+                  isClean());
+          userBaseVO_ = null;
+        }
+        return userBaseVOBuilder_;
+      }
+
+      private com.blemobi.sep.probuf.AccountProtos.PUserBase userBase_ = null;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> userBaseBuilder_;
+      /**
+       * <code>optional .bbproto.PUserBase userBase = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      public boolean hasUserBase() {
+        return userBaseBuilder_ != null || userBase_ != null;
+      }
+      /**
+       * <code>optional .bbproto.PUserBase userBase = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUserBase getUserBase() {
+        if (userBaseBuilder_ == null) {
+          return userBase_ == null ? com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : userBase_;
+        } else {
+          return userBaseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .bbproto.PUserBase userBase = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      public Builder setUserBase(com.blemobi.sep.probuf.AccountProtos.PUserBase value) {
+        if (userBaseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          userBase_ = value;
+          onChanged();
+        } else {
+          userBaseBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PUserBase userBase = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      public Builder setUserBase(
+          com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder builderForValue) {
+        if (userBaseBuilder_ == null) {
+          userBase_ = builderForValue.build();
+          onChanged();
+        } else {
+          userBaseBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PUserBase userBase = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      public Builder mergeUserBase(com.blemobi.sep.probuf.AccountProtos.PUserBase value) {
+        if (userBaseBuilder_ == null) {
+          if (userBase_ != null) {
+            userBase_ =
+              com.blemobi.sep.probuf.AccountProtos.PUserBase.newBuilder(userBase_).mergeFrom(value).buildPartial();
+          } else {
+            userBase_ = value;
+          }
+          onChanged();
+        } else {
+          userBaseBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PUserBase userBase = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      public Builder clearUserBase() {
+        if (userBaseBuilder_ == null) {
+          userBase_ = null;
+          onChanged();
+        } else {
+          userBase_ = null;
+          userBaseBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PUserBase userBase = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder getUserBaseBuilder() {
+        
+        onChanged();
+        return getUserBaseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .bbproto.PUserBase userBase = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserBaseOrBuilder() {
+        if (userBaseBuilder_ != null) {
+          return userBaseBuilder_.getMessageOrBuilder();
+        } else {
+          return userBase_ == null ?
+              com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : userBase_;
+        }
+      }
+      /**
+       * <code>optional .bbproto.PUserBase userBase = 2;</code>
+       *
+       * <pre>
+       * 网红信息
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> 
+          getUserBaseFieldBuilder() {
+        if (userBaseBuilder_ == null) {
+          userBaseBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder>(
+                  getUserBase(),
+                  getParentForChildren(),
+                  isClean());
+          userBase_ = null;
+        }
+        return userBaseBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PCelebrityInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PCelebrityInfo)
+    private static final com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo();
+    }
+
+    public static com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PCelebrityInfo>
+        PARSER = new com.google.protobuf.AbstractParser<PCelebrityInfo>() {
+      public PCelebrityInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PCelebrityInfo(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<PCelebrityInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PCelebrityInfo> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.PaymentProtos.PCelebrityInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface PShuffleOrBuilder extends
       // @@protoc_insertion_point(interface_extends:bbproto.PShuffle)
       com.google.protobuf.MessageOrBuilder {
@@ -24860,6 +27499,21 @@ public final class PaymentProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_bbproto_PSreachList_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PCelebrityList_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PCelebrityList_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PCelebrityGroup_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PCelebrityGroup_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PCelebrityInfo_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PCelebrityInfo_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
     internal_static_bbproto_PShuffle_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -24928,54 +27582,60 @@ public final class PaymentProtos {
       "oto.PRedEnveRece\"t\n\014PRedEnveRece\022\n\n\002id\030\001" +
       " \001(\005\022\r\n\005money\030\002 \001(\005\022\017\n\007rece_tm\030\003 \001(\003\022\022\n\n" +
       "luck_level\030\004 \001(\005\022$\n\010userBase\030\005 \001(\0132\022.bbp",
-      "roto.PUserBase\"4\n\016PRedEnveStatus\022\016\n\006stat" +
-      "us\030\001 \001(\005\022\022\n\nrece_money\030\002 \001(\005\">\n\020PRedEnve" +
-      "ReceList\022*\n\013redEnveRece\030\001 \003(\0132\025.bbproto." +
-      "PRedEnveRece\"\207\001\n\005PBill\022\024\n\014income_money\030\001" +
-      " \001(\005\022\024\n\014expend_money\030\002 \001(\005\022\025\n\rincome_num" +
-      "ber\030\003 \001(\005\022\025\n\rexpend_number\030\004 \001(\005\022$\n\010bill" +
-      "Info\030\005 \003(\0132\022.bbproto.PBillInfo\"x\n\tPBillI" +
-      "nfo\022\n\n\002id\030\001 \001(\005\022\016\n\006ord_no\030\002 \001(\t\022\r\n\005money" +
-      "\030\003 \001(\005\022\014\n\004time\030\004 \001(\003\022\014\n\004type\030\005 \001(\005\022$\n\010us" +
-      "erBase\030\006 \001(\0132\022.bbproto.PUserBase\"B\n\014PRed",
-      "EnveList\0222\n\017redEnveBaseInfo\030\001 \003(\0132\031.bbpr" +
-      "oto.PRedEnveBaseInfo\"\224\001\n\020PRedEnveBaseInf" +
-      "o\022\n\n\002id\030\001 \001(\005\022\016\n\006ord_no\030\002 \001(\t\022\014\n\004type\030\003 " +
-      "\001(\005\022\017\n\007content\030\004 \001(\t\022\017\n\007send_tm\030\005 \001(\003\022\016\n" +
-      "\006number\030\006 \001(\005\022$\n\010userBase\030\007 \003(\0132\022.bbprot" +
-      "o.PUserBase\"7\n\013PRewardList\022(\n\nrewardInfo" +
-      "\030\001 \003(\0132\024.bbproto.PRewardInfo\"}\n\013PRewardI" +
-      "nfo\022\n\n\002id\030\001 \001(\005\022\016\n\006ord_no\030\002 \001(\t\022\r\n\005money" +
-      "\030\003 \001(\005\022\017\n\007content\030\004 \001(\t\022\014\n\004time\030\005 \001(\003\022$\n" +
-      "\010userBase\030\006 \001(\0132\022.bbproto.PUserBase\"t\n\017P",
-      "RewardInfoList\022(\n\nrewardInfo\030\001 \001(\0132\024.bbp" +
-      "roto.PRewardInfo\022\r\n\005money\030\002 \001(\005\022(\n\nrewar" +
-      "dList\030\003 \003(\0132\024.bbproto.PRewardInfo\"k\n\013PSr" +
-      "eachList\0222\n\017redEnveBaseInfo\030\001 \003(\0132\031.bbpr" +
-      "oto.PRedEnveBaseInfo\022(\n\nrewardInfo\030\002 \003(\013" +
-      "2\024.bbproto.PRewardInfo\"y\n\010PShuffle\022\r\n\005ti" +
-      "tle\030\001 \001(\t\022\017\n\007winners\030\002 \001(\005\022\016\n\006region\030\003 \003" +
-      "(\t\022\016\n\006remark\030\004 \001(\t\022\016\n\006gender\030\005 \001(\005\022\r\n\005bo" +
-      "nus\030\006 \001(\005\022\016\n\006totAmt\030\007 \001(\005\"\250\001\n\017PLotteryCo" +
-      "nfirm\022\r\n\005title\030\001 \001(\t\022\016\n\006gender\030\002 \001(\005\022\016\n\006",
-      "region\030\003 \003(\t\022\016\n\006totAmt\030\004 \001(\005\022\017\n\007winners\030" +
-      "\005 \001(\005\022\r\n\005bonus\030\006 \001(\005\022\016\n\006remark\030\007 \001(\t\022&\n\010" +
-      "userList\030\010 \003(\0132\024.bbproto.PUserBaseEx\":\n\014" +
-      "PLotteryList\022*\n\tlotteries\030\001 \003(\0132\027.bbprot" +
-      "o.PLotterySingle\"!\n\014PAcceptPrize\022\021\n\tlott" +
-      "eryId\030\001 \001(\t\"\270\001\n\016PLotteryDetail\022\021\n\tlotter" +
-      "yId\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022\016\n\006totAmt\030\003 \001(\005" +
-      "\022\r\n\005crtTm\030\004 \001(\t\022\014\n\004type\030\005 \001(\005\022\017\n\007winners" +
-      "\030\006 \001(\005\022\016\n\006region\030\007 \003(\t\022&\n\010userList\030\010 \003(\013" +
-      "2\024.bbproto.PUserBaseEx\022\016\n\006remark\030\t \001(\t\"x",
-      "\n\016PLotterySingle\022\021\n\tlotteryId\030\001 \001(\t\022\r\n\005t" +
-      "itle\030\002 \001(\t\022\017\n\007winners\030\003 \001(\005\022\r\n\005crtTm\030\004 \001" +
-      "(\t\022$\n\010userList\030\005 \003(\0132\022.bbproto.PUserBase" +
-      "\"L\n\013PUserBaseEx\022 \n\004info\030\001 \001(\0132\022.bbproto." +
-      "PUserBase\022\016\n\006gender\030\002 \001(\005\022\013\n\003amt\030\003 \001(\005\" " +
-      "\n\013PLotteryDel\022\021\n\tlotteryId\030\001 \003(\tB\'\n\026com." +
-      "blemobi.sep.probufB\rPaymentProtosb\006proto" +
-      "3"
+      "roto.PUserBase\"E\n\016PRedEnveStatus\022\016\n\006stat" +
+      "us\030\001 \001(\005\022\022\n\nrece_money\030\002 \001(\005\022\017\n\007content\030" +
+      "\003 \001(\t\">\n\020PRedEnveReceList\022*\n\013redEnveRece" +
+      "\030\001 \003(\0132\025.bbproto.PRedEnveRece\"\207\001\n\005PBill\022" +
+      "\024\n\014income_money\030\001 \001(\005\022\024\n\014expend_money\030\002 " +
+      "\001(\005\022\025\n\rincome_number\030\003 \001(\005\022\025\n\rexpend_num" +
+      "ber\030\004 \001(\005\022$\n\010billInfo\030\005 \003(\0132\022.bbproto.PB" +
+      "illInfo\"x\n\tPBillInfo\022\n\n\002id\030\001 \001(\005\022\016\n\006ord_" +
+      "no\030\002 \001(\t\022\r\n\005money\030\003 \001(\005\022\014\n\004time\030\004 \001(\003\022\014\n" +
+      "\004type\030\005 \001(\005\022$\n\010userBase\030\006 \001(\0132\022.bbproto.",
+      "PUserBase\"B\n\014PRedEnveList\0222\n\017redEnveBase" +
+      "Info\030\001 \003(\0132\031.bbproto.PRedEnveBaseInfo\"\224\001" +
+      "\n\020PRedEnveBaseInfo\022\n\n\002id\030\001 \001(\005\022\016\n\006ord_no" +
+      "\030\002 \001(\t\022\014\n\004type\030\003 \001(\005\022\017\n\007content\030\004 \001(\t\022\017\n" +
+      "\007send_tm\030\005 \001(\003\022\016\n\006number\030\006 \001(\005\022$\n\010userBa" +
+      "se\030\007 \003(\0132\022.bbproto.PUserBase\"7\n\013PRewardL" +
+      "ist\022(\n\nrewardInfo\030\001 \003(\0132\024.bbproto.PRewar" +
+      "dInfo\"}\n\013PRewardInfo\022\n\n\002id\030\001 \001(\005\022\016\n\006ord_" +
+      "no\030\002 \001(\t\022\r\n\005money\030\003 \001(\005\022\017\n\007content\030\004 \001(\t" +
+      "\022\014\n\004time\030\005 \001(\003\022$\n\010userBase\030\006 \001(\0132\022.bbpro",
+      "to.PUserBase\"t\n\017PRewardInfoList\022(\n\nrewar" +
+      "dInfo\030\001 \001(\0132\024.bbproto.PRewardInfo\022\r\n\005mon" +
+      "ey\030\002 \001(\005\022(\n\nrewardList\030\003 \003(\0132\024.bbproto.P" +
+      "RewardInfo\"k\n\013PSreachList\0222\n\017redEnveBase" +
+      "Info\030\001 \003(\0132\031.bbproto.PRedEnveBaseInfo\022(\n" +
+      "\nrewardInfo\030\002 \003(\0132\024.bbproto.PRewardInfo\"" +
+      "B\n\016PCelebrityList\0220\n\016celebrityGroup\030\001 \003(" +
+      "\0132\030.bbproto.PCelebrityGroup\"P\n\017PCelebrit" +
+      "yGroup\022\r\n\005group\030\001 \001(\t\022.\n\rcelebrityInfo\030\002" +
+      " \003(\0132\027.bbproto.PCelebrityInfo\"^\n\016PCelebr",
+      "ityInfo\022&\n\nuserBaseVO\030\001 \001(\0132\022.bbproto.PU" +
+      "serBase\022$\n\010userBase\030\002 \001(\0132\022.bbproto.PUse" +
+      "rBase\"y\n\010PShuffle\022\r\n\005title\030\001 \001(\t\022\017\n\007winn" +
+      "ers\030\002 \001(\005\022\016\n\006region\030\003 \003(\t\022\016\n\006remark\030\004 \001(" +
+      "\t\022\016\n\006gender\030\005 \001(\005\022\r\n\005bonus\030\006 \001(\005\022\016\n\006totA" +
+      "mt\030\007 \001(\005\"\250\001\n\017PLotteryConfirm\022\r\n\005title\030\001 " +
+      "\001(\t\022\016\n\006gender\030\002 \001(\005\022\016\n\006region\030\003 \003(\t\022\016\n\006t" +
+      "otAmt\030\004 \001(\005\022\017\n\007winners\030\005 \001(\005\022\r\n\005bonus\030\006 " +
+      "\001(\005\022\016\n\006remark\030\007 \001(\t\022&\n\010userList\030\010 \003(\0132\024." +
+      "bbproto.PUserBaseEx\":\n\014PLotteryList\022*\n\tl",
+      "otteries\030\001 \003(\0132\027.bbproto.PLotterySingle\"" +
+      "!\n\014PAcceptPrize\022\021\n\tlotteryId\030\001 \001(\t\"\270\001\n\016P" +
+      "LotteryDetail\022\021\n\tlotteryId\030\001 \001(\t\022\r\n\005titl" +
+      "e\030\002 \001(\t\022\016\n\006totAmt\030\003 \001(\005\022\r\n\005crtTm\030\004 \001(\t\022\014" +
+      "\n\004type\030\005 \001(\005\022\017\n\007winners\030\006 \001(\005\022\016\n\006region\030" +
+      "\007 \003(\t\022&\n\010userList\030\010 \003(\0132\024.bbproto.PUserB" +
+      "aseEx\022\016\n\006remark\030\t \001(\t\"x\n\016PLotterySingle\022" +
+      "\021\n\tlotteryId\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022\017\n\007win" +
+      "ners\030\003 \001(\005\022\r\n\005crtTm\030\004 \001(\t\022$\n\010userList\030\005 " +
+      "\003(\0132\022.bbproto.PUserBase\"L\n\013PUserBaseEx\022 ",
+      "\n\004info\030\001 \001(\0132\022.bbproto.PUserBase\022\016\n\006gend" +
+      "er\030\002 \001(\005\022\013\n\003amt\030\003 \001(\005\" \n\013PLotteryDel\022\021\n\t" +
+      "lotteryId\030\001 \003(\tB\'\n\026com.blemobi.sep.probu" +
+      "fB\rPaymentProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -25026,7 +27686,7 @@ public final class PaymentProtos {
     internal_static_bbproto_PRedEnveStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PRedEnveStatus_descriptor,
-        new java.lang.String[] { "Status", "ReceMoney", });
+        new java.lang.String[] { "Status", "ReceMoney", "Content", });
     internal_static_bbproto_PRedEnveReceList_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_bbproto_PRedEnveReceList_fieldAccessorTable = new
@@ -25081,50 +27741,68 @@ public final class PaymentProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PSreachList_descriptor,
         new java.lang.String[] { "RedEnveBaseInfo", "RewardInfo", });
-    internal_static_bbproto_PShuffle_descriptor =
+    internal_static_bbproto_PCelebrityList_descriptor =
       getDescriptor().getMessageTypes().get(15);
+    internal_static_bbproto_PCelebrityList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PCelebrityList_descriptor,
+        new java.lang.String[] { "CelebrityGroup", });
+    internal_static_bbproto_PCelebrityGroup_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_bbproto_PCelebrityGroup_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PCelebrityGroup_descriptor,
+        new java.lang.String[] { "Group", "CelebrityInfo", });
+    internal_static_bbproto_PCelebrityInfo_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_bbproto_PCelebrityInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PCelebrityInfo_descriptor,
+        new java.lang.String[] { "UserBaseVO", "UserBase", });
+    internal_static_bbproto_PShuffle_descriptor =
+      getDescriptor().getMessageTypes().get(18);
     internal_static_bbproto_PShuffle_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PShuffle_descriptor,
         new java.lang.String[] { "Title", "Winners", "Region", "Remark", "Gender", "Bonus", "TotAmt", });
     internal_static_bbproto_PLotteryConfirm_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_bbproto_PLotteryConfirm_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PLotteryConfirm_descriptor,
         new java.lang.String[] { "Title", "Gender", "Region", "TotAmt", "Winners", "Bonus", "Remark", "UserList", });
     internal_static_bbproto_PLotteryList_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_bbproto_PLotteryList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PLotteryList_descriptor,
         new java.lang.String[] { "Lotteries", });
     internal_static_bbproto_PAcceptPrize_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_bbproto_PAcceptPrize_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PAcceptPrize_descriptor,
         new java.lang.String[] { "LotteryId", });
     internal_static_bbproto_PLotteryDetail_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_bbproto_PLotteryDetail_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PLotteryDetail_descriptor,
         new java.lang.String[] { "LotteryId", "Title", "TotAmt", "CrtTm", "Type", "Winners", "Region", "UserList", "Remark", });
     internal_static_bbproto_PLotterySingle_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_bbproto_PLotterySingle_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PLotterySingle_descriptor,
         new java.lang.String[] { "LotteryId", "Title", "Winners", "CrtTm", "UserList", });
     internal_static_bbproto_PUserBaseEx_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_bbproto_PUserBaseEx_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PUserBaseEx_descriptor,
         new java.lang.String[] { "Info", "Gender", "Amt", });
     internal_static_bbproto_PLotteryDel_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_bbproto_PLotteryDel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PLotteryDel_descriptor,

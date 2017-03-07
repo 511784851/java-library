@@ -62,4 +62,20 @@ public class AccountHttpClient extends BaseHttpClient {
 		super.basePath.append(JettyServer.getServerName()).append("&uuids=").append(uuids.toString());
 		return super.getMethod();
 	}
+
+	/**
+	 * 获取成员的VO信息
+	 * 
+	 * @param body
+	 *            uuid内容
+	 * @return
+	 * @throws IOException
+	 */
+	public PMessage getUserVOInfo(byte[] body) throws IOException {
+		super.basePath = new StringBuffer("/v1/account/inside/users/vo?from=");
+		super.basePath.append(JettyServer.getServerName());
+		super.body = body;
+		super.contentType = "form-data";
+		return super.postBodyMethod();
+	}
 }

@@ -28,6 +28,7 @@ import java.util.Map;
 import com.blemobi.library.consul.BaseService;
 import com.blemobi.library.consul.SocketInfo;
 import com.blemobi.library.grpc.interceptor.HeaderClientInterceptor;
+import com.blemobi.library.jetty.JettyServer;
 import com.google.protobuf.GeneratedMessage;
 
 import io.grpc.Channel;
@@ -55,11 +56,11 @@ public abstract class BaseGRPCClient {
     protected BaseGRPCClient(){
         
     }
-    protected BaseGRPCClient(String remoteServerName, String selfNm) {
+    protected BaseGRPCClient(String remoteServerName) {
         this.remoteServerName = remoteServerName;
         List<String> hostInfo = new ArrayList<String>();
-        SocketInfo info = this.getSocketInfo(selfNm);
-        hostInfo.add(selfNm);
+        SocketInfo info = this.getSocketInfo(JettyServer.getServerName());
+        hostInfo.add(JettyServer.getServerName());
         hostInfo.add(info.getIpAddr());
         headerMap.put(AUTH_KEY, hostInfo);
     }
