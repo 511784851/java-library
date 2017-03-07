@@ -73,7 +73,7 @@ public class AccountHttpClient extends BaseHttpClient {
 	 */
 	public PMessage getUserVOInfo(byte[] body) throws IOException {
 		super.basePath = new StringBuffer("/v1/account/inside/users/vo?from=");
-		super.basePath.append(JettyServer.getServerName());
+		super.basePath.append(JettyServer.getServerName()).append("&project=sep");
 		super.body = body;
 		super.contentType = "form-data";
 		return super.postBodyMethod();
