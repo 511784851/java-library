@@ -1,6 +1,7 @@
 package com.blemobi.library.grpc;
 
 import com.blemobi.sep.grpc.IGrpcRobotGrpc;
+import com.blemobi.sep.grpc.grpcDataPublishingGrpc;
 import com.blemobi.sep.grpc.IGrpcRobotGrpc.IGrpcRobotBlockingStub;
 import com.blemobi.sep.probuf.CommonApiProtos.PEmpty;
 import com.blemobi.sep.probuf.ResultProtos.PStringSingle;
@@ -19,7 +20,6 @@ public class RobotGrpcClient extends BaseGRPCClient {
 
 	public RobotGrpcClient() {
 		super("robot");
-		stub = IGrpcRobotGrpc.newBlockingStub(channel);
 	}
 
 	/**
@@ -33,6 +33,7 @@ public class RobotGrpcClient extends BaseGRPCClient {
 		PStringSingle stringSingle = this.execute(request, new GrpcCallback<PStringSingle>() {
 			@Override
 			public PStringSingle doGrpcRequest() {
+				stub = IGrpcRobotGrpc.newBlockingStub(channel);
 				return stub.grpcGenerateOrder(request);
 			}
 		});
@@ -50,6 +51,7 @@ public class RobotGrpcClient extends BaseGRPCClient {
 		PEmpty empty = this.execute(request, new GrpcCallback<PEmpty>() {
 			@Override
 			public PEmpty doGrpcRequest() {
+				stub = IGrpcRobotGrpc.newBlockingStub(channel);
 				return stub.grpcPush(request);
 			}
 		});

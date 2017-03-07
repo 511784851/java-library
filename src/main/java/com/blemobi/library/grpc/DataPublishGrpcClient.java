@@ -44,7 +44,6 @@ public class DataPublishGrpcClient extends BaseGRPCClient {
 
 	public DataPublishGrpcClient() {
 		super("datapublishing");
-		stub = grpcDataPublishingGrpc.newBlockingStub(channel);
 	}
 
 	/**
@@ -73,6 +72,7 @@ public class DataPublishGrpcClient extends BaseGRPCClient {
 		this.execute(request, new GrpcCallback<Boolean>() {
 			@Override
 			public Boolean doGrpcRequest() {
+				stub = grpcDataPublishingGrpc.newBlockingStub(channel);
 				stub.saveFans(request);
 				return true;
 			}
@@ -103,6 +103,7 @@ public class DataPublishGrpcClient extends BaseGRPCClient {
 
 			@Override
 			public List<String> doGrpcRequest() {
+				stub = grpcDataPublishingGrpc.newBlockingStub(channel);
 				List<String> innerList = new ArrayList<String>();
 				DataPublishingApiProtos.PScrollResult result = stub.selectFans(request);
 				while (true) {
@@ -132,6 +133,7 @@ public class DataPublishGrpcClient extends BaseGRPCClient {
 		PGroupStringList groupStringList = this.execute(request, new GrpcCallback<PGroupStringList>() {
 			@Override
 			public PGroupStringList doGrpcRequest() {
+				stub = grpcDataPublishingGrpc.newBlockingStub(channel);
 				PGroupStringList groupStringList = stub.selectVUser(request);
 				return groupStringList;
 			}
