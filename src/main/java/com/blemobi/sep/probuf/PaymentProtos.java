@@ -18640,7 +18640,7 @@ public final class PaymentProtos {
      * <code>optional int32 gender = 5;</code>
      *
      * <pre>
-     *性别 0:不限，1:男，2:女
+     *性别 -1:不限，0:女，1:男
      * </pre>
      */
     int getGender();
@@ -18929,7 +18929,7 @@ public final class PaymentProtos {
      * <code>optional int32 gender = 5;</code>
      *
      * <pre>
-     *性别 0:不限，1:男，2:女
+     *性别 -1:不限，0:女，1:男
      * </pre>
      */
     public int getGender() {
@@ -19620,7 +19620,7 @@ public final class PaymentProtos {
        * <code>optional int32 gender = 5;</code>
        *
        * <pre>
-       *性别 0:不限，1:男，2:女
+       *性别 -1:不限，0:女，1:男
        * </pre>
        */
       public int getGender() {
@@ -19630,7 +19630,7 @@ public final class PaymentProtos {
        * <code>optional int32 gender = 5;</code>
        *
        * <pre>
-       *性别 0:不限，1:男，2:女
+       *性别 -1:不限，0:女，1:男
        * </pre>
        */
       public Builder setGender(int value) {
@@ -19643,7 +19643,7 @@ public final class PaymentProtos {
        * <code>optional int32 gender = 5;</code>
        *
        * <pre>
-       *性别 0:不限，1:男，2:女
+       *性别 -1:不限，0:女，1:男
        * </pre>
        */
       public Builder clearGender() {
@@ -19812,7 +19812,7 @@ public final class PaymentProtos {
      * <code>optional int32 gender = 2;</code>
      *
      * <pre>
-     * 接受人类型（0:全部，1:男，2:女）
+     * 接受人类型（-1:不限，0:女，1:男）
      * </pre>
      */
     int getGender();
@@ -20119,7 +20119,7 @@ public final class PaymentProtos {
      * <code>optional int32 gender = 2;</code>
      *
      * <pre>
-     * 接受人类型（0:全部，1:男，2:女）
+     * 接受人类型（-1:不限，0:女，1:男）
      * </pre>
      */
     public int getGender() {
@@ -20757,7 +20757,7 @@ public final class PaymentProtos {
        * <code>optional int32 gender = 2;</code>
        *
        * <pre>
-       * 接受人类型（0:全部，1:男，2:女）
+       * 接受人类型（-1:不限，0:女，1:男）
        * </pre>
        */
       public int getGender() {
@@ -20767,7 +20767,7 @@ public final class PaymentProtos {
        * <code>optional int32 gender = 2;</code>
        *
        * <pre>
-       * 接受人类型（0:全部，1:男，2:女）
+       * 接受人类型（-1:不限，0:女，1:男）
        * </pre>
        */
       public Builder setGender(int value) {
@@ -20780,7 +20780,7 @@ public final class PaymentProtos {
        * <code>optional int32 gender = 2;</code>
        *
        * <pre>
-       * 接受人类型（0:全部，1:男，2:女）
+       * 接受人类型（-1:不限，0:女，1:男）
        * </pre>
        */
       public Builder clearGender() {
@@ -26173,6 +26173,24 @@ public final class PaymentProtos {
      * </pre>
      */
     int getAmt();
+
+    /**
+     * <code>optional string region = 4;</code>
+     *
+     * <pre>
+     *用户位置
+     * </pre>
+     */
+    java.lang.String getRegion();
+    /**
+     * <code>optional string region = 4;</code>
+     *
+     * <pre>
+     *用户位置
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getRegionBytes();
   }
   /**
    * Protobuf type {@code bbproto.PUserBaseEx}
@@ -26188,6 +26206,7 @@ public final class PaymentProtos {
     private PUserBaseEx() {
       gender_ = 0;
       amt_ = 0;
+      region_ = "";
     }
 
     @java.lang.Override
@@ -26235,6 +26254,12 @@ public final class PaymentProtos {
             case 24: {
 
               amt_ = input.readInt32();
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              region_ = s;
               break;
             }
           }
@@ -26320,6 +26345,48 @@ public final class PaymentProtos {
       return amt_;
     }
 
+    public static final int REGION_FIELD_NUMBER = 4;
+    private volatile java.lang.Object region_;
+    /**
+     * <code>optional string region = 4;</code>
+     *
+     * <pre>
+     *用户位置
+     * </pre>
+     */
+    public java.lang.String getRegion() {
+      java.lang.Object ref = region_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        region_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string region = 4;</code>
+     *
+     * <pre>
+     *用户位置
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getRegionBytes() {
+      java.lang.Object ref = region_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        region_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -26341,6 +26408,9 @@ public final class PaymentProtos {
       if (amt_ != 0) {
         output.writeInt32(3, amt_);
       }
+      if (!getRegionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, region_);
+      }
     }
 
     public int getSerializedSize() {
@@ -26359,6 +26429,9 @@ public final class PaymentProtos {
       if (amt_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, amt_);
+      }
+      if (!getRegionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, region_);
       }
       memoizedSize = size;
       return size;
@@ -26481,6 +26554,8 @@ public final class PaymentProtos {
 
         amt_ = 0;
 
+        region_ = "";
+
         return this;
       }
 
@@ -26510,6 +26585,7 @@ public final class PaymentProtos {
         }
         result.gender_ = gender_;
         result.amt_ = amt_;
+        result.region_ = region_;
         onBuilt();
         return result;
       }
@@ -26533,6 +26609,10 @@ public final class PaymentProtos {
         }
         if (other.getAmt() != 0) {
           setAmt(other.getAmt());
+        }
+        if (!other.getRegion().isEmpty()) {
+          region_ = other.region_;
+          onChanged();
         }
         onChanged();
         return this;
@@ -26785,6 +26865,95 @@ public final class PaymentProtos {
       public Builder clearAmt() {
         
         amt_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object region_ = "";
+      /**
+       * <code>optional string region = 4;</code>
+       *
+       * <pre>
+       *用户位置
+       * </pre>
+       */
+      public java.lang.String getRegion() {
+        java.lang.Object ref = region_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          region_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string region = 4;</code>
+       *
+       * <pre>
+       *用户位置
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getRegionBytes() {
+        java.lang.Object ref = region_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          region_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string region = 4;</code>
+       *
+       * <pre>
+       *用户位置
+       * </pre>
+       */
+      public Builder setRegion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        region_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string region = 4;</code>
+       *
+       * <pre>
+       *用户位置
+       * </pre>
+       */
+      public Builder clearRegion() {
+        
+        region_ = getDefaultInstance().getRegion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string region = 4;</code>
+       *
+       * <pre>
+       *用户位置
+       * </pre>
+       */
+      public Builder setRegionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        region_ = value;
         onChanged();
         return this;
       }
@@ -27631,11 +27800,11 @@ public final class PaymentProtos {
       "aseEx\022\016\n\006remark\030\t \001(\t\"x\n\016PLotterySingle\022" +
       "\021\n\tlotteryId\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022\017\n\007win" +
       "ners\030\003 \001(\005\022\r\n\005crtTm\030\004 \001(\t\022$\n\010userList\030\005 " +
-      "\003(\0132\022.bbproto.PUserBase\"L\n\013PUserBaseEx\022 ",
+      "\003(\0132\022.bbproto.PUserBase\"\\\n\013PUserBaseEx\022 ",
       "\n\004info\030\001 \001(\0132\022.bbproto.PUserBase\022\016\n\006gend" +
-      "er\030\002 \001(\005\022\013\n\003amt\030\003 \001(\005\" \n\013PLotteryDel\022\021\n\t" +
-      "lotteryId\030\001 \003(\tB\'\n\026com.blemobi.sep.probu" +
-      "fB\rPaymentProtosb\006proto3"
+      "er\030\002 \001(\005\022\013\n\003amt\030\003 \001(\005\022\016\n\006region\030\004 \001(\t\" \n" +
+      "\013PLotteryDel\022\021\n\tlotteryId\030\001 \003(\tB\'\n\026com.b" +
+      "lemobi.sep.probufB\rPaymentProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -27800,7 +27969,7 @@ public final class PaymentProtos {
     internal_static_bbproto_PUserBaseEx_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PUserBaseEx_descriptor,
-        new java.lang.String[] { "Info", "Gender", "Amt", });
+        new java.lang.String[] { "Info", "Gender", "Amt", "Region", });
     internal_static_bbproto_PLotteryDel_descriptor =
       getDescriptor().getMessageTypes().get(25);
     internal_static_bbproto_PLotteryDel_fieldAccessorTable = new
