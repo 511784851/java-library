@@ -8,7 +8,6 @@ import javax.servlet.ServletResponse;
 import com.blemobi.sep.probuf.ResultProtos.PMessage;
 import com.blemobi.sep.probuf.ResultProtos.PResult;
 import com.google.protobuf.GeneratedMessage;
-import com.pakulov.jersey.protobuf.internal.MediaTypeExt;
 
 import lombok.extern.log4j.Log4j;
 
@@ -114,7 +113,7 @@ public class ReslutUtil {
 		PMessage message = createErrorMessage(errorCode, errorMsg);
 		byte[] data = message.toByteArray();
 
-		response.setContentType(MediaTypeExt.APPLICATION_PROTOBUF);
+		response.setContentType("application/x-protobuf");
 		response.setContentLength(data.length);
 		ServletOutputStream out = response.getOutputStream();
 		out.write(data);

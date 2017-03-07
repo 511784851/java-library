@@ -37,33 +37,23 @@
 			<artifactId>lombok</artifactId>
 			<version>1.16.6</version>
 		</dependency>
-
 		<!-- commons -->
 		<dependency>
 			<groupId>commons-lang</groupId>
 			<artifactId>commons-lang</artifactId>
 			<version>${commons_lang_version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>
 			<version>1.6</version>
 		</dependency>
-
-		<dependency>
-			<groupId>com.google.guava</groupId>
-			<artifactId>guava</artifactId>
-			<version>16.0.1</version>
-		</dependency>
-
 		<!-- spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring_version}</version>
 		</dependency>
-
 		<!-- javassist -->
 		<dependency>
 			<groupId>javassist</groupId>
@@ -78,11 +68,7 @@
 			<version>1.9.10</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-compiler-plugin</artifactId>
-			<version>3.3</version>
-		</dependency>
+
 
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
@@ -96,28 +82,21 @@
 			<version>9.3.7.v20160115</version>
 		</dependency>
 
+
 		<dependency>
 			<groupId>org.glassfish.jersey.core</groupId>
 			<artifactId>jersey-server</artifactId>
 			<version>2.22.1</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.glassfish.jersey.containers</groupId>
 			<artifactId>jersey-container-servlet-core</artifactId>
 			<version>2.22.1</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.glassfish.jersey.media</groupId>
 			<artifactId>jersey-media-moxy</artifactId>
 			<version>2.22.1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.pakulov.jersey.media</groupId>
-			<artifactId>jersey-media-protobuf</artifactId>
-			<version>0.1.0</version>
 		</dependency>
 
 		<dependency>
@@ -131,13 +110,11 @@
 			<artifactId>json-simple</artifactId>
 			<version>1.1.1</version>
 		</dependency>
-
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
 			<version>1.2.7</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
@@ -192,15 +169,6 @@
 			<artifactId>jedis</artifactId>
 			<version>2.8.1</version>
 		</dependency>
-
-		<!-- 单元测试 -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/com.googlecode.protobuf-java-format/protobuf-java-format -->
 		<dependency>
 			<groupId>com.googlecode.protobuf-java-format</groupId>
 			<artifactId>protobuf-java-format</artifactId>
@@ -208,9 +176,9 @@
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/io.grpc/grpc-all -->
 		<dependency>
-		    <groupId>io.grpc</groupId>
-		    <artifactId>grpc-all</artifactId>
-		    <version>1.1.2</version>
+			<groupId>io.grpc</groupId>
+			<artifactId>grpc-all</artifactId>
+			<version>1.1.2</version>
 		</dependency>
 	</dependencies>
 	<build>
@@ -223,10 +191,18 @@
 		</extensions>
 		<plugins>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<!-- 生成proto文件-->
+			<!-- 生成proto文件 -->
 			<plugin>
 				<groupId>org.xolstice.maven.plugins</groupId>
 				<artifactId>protobuf-maven-plugin</artifactId>
@@ -243,42 +219,9 @@
 				<configuration>
 					<protocArtifact>com.google.protobuf:protoc:3.0.0-beta-2:exe:${os.detected.classifier}</protocArtifact>
 					<pluginId>grpc-java</pluginId>
-                    <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.0.0:exe:${os.detected.classifier}</pluginArtifact>
+					<pluginArtifact>io.grpc:protoc-gen-grpc-java:1.0.0:exe:${os.detected.classifier}</pluginArtifact>
 				</configuration>
 			</plugin>
-			 
-			<!--生成源目录 
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>build-helper-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>add-protobuf-generate-sources</id>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>add-source</goal>
-						</goals>
-						<configuration>
-							<sources>
-								<source>target/generated-sources/protobuf/java</source>
-							</sources>
-						</configuration>
-					</execution>
-
-					<execution>
-						<id>add-protobuf-generate-test-sources</id>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>add-test-source</goal>
-						</goals>
-						<configuration>
-							<sources>
-								<source>target/generated-test-sources/protobuf/java</source>
-							</sources>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin> -->
 		</plugins>
 	</build>
 </project>
