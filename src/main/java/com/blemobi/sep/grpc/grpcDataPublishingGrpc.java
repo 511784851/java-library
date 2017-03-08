@@ -16,10 +16,15 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 import com.blemobi.sep.probuf.AccountProtos;
 import com.blemobi.sep.probuf.CommonApiProtos;
+import com.blemobi.sep.probuf.DataPublishingApiProtos;
 import com.blemobi.sep.probuf.DataPublishingProtos;
 import com.blemobi.sep.probuf.ResultProtos;
 import com.blemobi.sep.probuf.AccountProtos.PUserList;
 import com.blemobi.sep.probuf.CommonApiProtos.PEmpty;
+import com.blemobi.sep.probuf.DataPublishingApiProtos.PFansSaveParam;
+import com.blemobi.sep.probuf.DataPublishingApiProtos.PGroupStringList;
+import com.blemobi.sep.probuf.DataPublishingApiProtos.PQueryUserParam;
+import com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult;
 import com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam;
 import com.blemobi.sep.probuf.ResultProtos.PStringList;
 import com.blemobi.sep.probuf.ResultProtos.PStringSingle;
@@ -46,6 +51,24 @@ public class grpcDataPublishingGrpc {
           generateFullMethodName(
               "bbproto.grpcDataPublishing", "SelectFans"),
           io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult.getDefaultInstance()));
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam,
+      com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult> METHOD_SELECT_FANS_WITH_SOURCE =
+      io.grpc.MethodDescriptor.create(
+          io.grpc.MethodDescriptor.MethodType.UNARY,
+          generateFullMethodName(
+              "bbproto.grpcDataPublishing", "SelectFansWithSource"),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult.getDefaultInstance()));
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringSingle,
+      com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult> METHOD_MORE_FANS_WITH_SOURCE =
+      io.grpc.MethodDescriptor.create(
+          io.grpc.MethodDescriptor.MethodType.UNARY,
+          generateFullMethodName(
+              "bbproto.grpcDataPublishing", "MoreFansWithSource"),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringSingle.getDefaultInstance()),
           io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.DataPublishingApiProtos.PFansSaveParam,
@@ -140,6 +163,23 @@ public class grpcDataPublishingGrpc {
     }
 
     /**
+     * <pre>
+     * 查询粉丝，uuid中用下划线拼接了地区信息，如：uuid_CN;4403
+     * </pre>
+     */
+    public void selectFansWithSource(com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_SELECT_FANS_WITH_SOURCE, responseObserver);
+    }
+
+    /**
+     */
+    public void moreFansWithSource(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_MORE_FANS_WITH_SOURCE, responseObserver);
+    }
+
+    /**
      */
     public void saveFans(com.blemobi.sep.probuf.DataPublishingApiProtos.PFansSaveParam request,
         io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
@@ -196,7 +236,7 @@ public class grpcDataPublishingGrpc {
       asyncUnimplementedUnaryCall(METHOD_SELECT_VUSER_HAVE_TODAY_BIRTHDAY_FANS, responseObserver);
     }
 
-    public io.grpc.ServerServiceDefinition bindService() {
+    @java.lang.Override public io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             METHOD_SELECT_FANS,
@@ -205,6 +245,20 @@ public class grpcDataPublishingGrpc {
                 com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam,
                 com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult>(
                   this, METHODID_SELECT_FANS)))
+          .addMethod(
+            METHOD_SELECT_FANS_WITH_SOURCE,
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam,
+                com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult>(
+                  this, METHODID_SELECT_FANS_WITH_SOURCE)))
+          .addMethod(
+            METHOD_MORE_FANS_WITH_SOURCE,
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.blemobi.sep.probuf.ResultProtos.PStringSingle,
+                com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult>(
+                  this, METHODID_MORE_FANS_WITH_SOURCE)))
           .addMethod(
             METHOD_SAVE_FANS,
             asyncUnaryCall(
@@ -278,6 +332,25 @@ public class grpcDataPublishingGrpc {
         io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_SELECT_FANS, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * 查询粉丝，uuid中用下划线拼接了地区信息，如：uuid_CN;4403
+     * </pre>
+     */
+    public void selectFansWithSource(com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_SELECT_FANS_WITH_SOURCE, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void moreFansWithSource(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_MORE_FANS_WITH_SOURCE, getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -373,6 +446,23 @@ public class grpcDataPublishingGrpc {
     }
 
     /**
+     * <pre>
+     * 查询粉丝，uuid中用下划线拼接了地区信息，如：uuid_CN;4403
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult selectFansWithSource(com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_SELECT_FANS_WITH_SOURCE, getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult moreFansWithSource(com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_MORE_FANS_WITH_SOURCE, getCallOptions(), request);
+    }
+
+    /**
      */
     public com.blemobi.sep.probuf.CommonApiProtos.PEmpty saveFans(com.blemobi.sep.probuf.DataPublishingApiProtos.PFansSaveParam request) {
       return blockingUnaryCall(
@@ -460,6 +550,25 @@ public class grpcDataPublishingGrpc {
     }
 
     /**
+     * <pre>
+     * 查询粉丝，uuid中用下划线拼接了地区信息，如：uuid_CN;4403
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult> selectFansWithSource(
+        com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_SELECT_FANS_WITH_SOURCE, getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult> moreFansWithSource(
+        com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_MORE_FANS_WITH_SOURCE, getCallOptions()), request);
+    }
+
+    /**
      */
     public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> saveFans(
         com.blemobi.sep.probuf.DataPublishingApiProtos.PFansSaveParam request) {
@@ -524,12 +633,14 @@ public class grpcDataPublishingGrpc {
   }
 
   private static final int METHODID_SELECT_FANS = 0;
-  private static final int METHODID_SAVE_FANS = 1;
-  private static final int METHODID_SCROLL_MORE = 2;
-  private static final int METHODID_SELECT_VUSER = 3;
-  private static final int METHODID_SELECT_TODAY_BIRTHDAY_FANS = 4;
-  private static final int METHODID_SELECT7DAY_BIRTHDAY_FANS = 5;
-  private static final int METHODID_SELECT_VUSER_HAVE_TODAY_BIRTHDAY_FANS = 6;
+  private static final int METHODID_SELECT_FANS_WITH_SOURCE = 1;
+  private static final int METHODID_MORE_FANS_WITH_SOURCE = 2;
+  private static final int METHODID_SAVE_FANS = 3;
+  private static final int METHODID_SCROLL_MORE = 4;
+  private static final int METHODID_SELECT_VUSER = 5;
+  private static final int METHODID_SELECT_TODAY_BIRTHDAY_FANS = 6;
+  private static final int METHODID_SELECT7DAY_BIRTHDAY_FANS = 7;
+  private static final int METHODID_SELECT_VUSER_HAVE_TODAY_BIRTHDAY_FANS = 8;
 
   private static class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -544,11 +655,20 @@ public class grpcDataPublishingGrpc {
       this.methodId = methodId;
     }
 
+    @java.lang.Override
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_SELECT_FANS:
           serviceImpl.selectFans((com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult>) responseObserver);
+          break;
+        case METHODID_SELECT_FANS_WITH_SOURCE:
+          serviceImpl.selectFansWithSource((com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult>) responseObserver);
+          break;
+        case METHODID_MORE_FANS_WITH_SOURCE:
+          serviceImpl.moreFansWithSource((com.blemobi.sep.probuf.ResultProtos.PStringSingle) request,
               (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.DataPublishingApiProtos.PScrollResult>) responseObserver);
           break;
         case METHODID_SAVE_FANS:
@@ -580,6 +700,7 @@ public class grpcDataPublishingGrpc {
       }
     }
 
+    @java.lang.Override
     @java.lang.SuppressWarnings("unchecked")
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
@@ -593,6 +714,8 @@ public class grpcDataPublishingGrpc {
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     return new io.grpc.ServiceDescriptor(SERVICE_NAME,
         METHOD_SELECT_FANS,
+        METHOD_SELECT_FANS_WITH_SOURCE,
+        METHOD_MORE_FANS_WITH_SOURCE,
         METHOD_SAVE_FANS,
         METHOD_SCROLL_MORE,
         METHOD_SELECT_VUSER,

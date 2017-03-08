@@ -105,7 +105,7 @@ public class DataPublishGrpcClient extends BaseGRPCClient {
 			public List<String> doGrpcRequest() {
 				stub = grpcDataPublishingGrpc.newBlockingStub(channel);
 				List<String> innerList = new ArrayList<String>();
-				DataPublishingApiProtos.PScrollResult result = stub.selectFans(request);
+				DataPublishingApiProtos.PScrollResult result = stub.selectFansWithSource(request);
 				while (true) {
 					String cursor = result.getCursor();
 					List<String> idList = result.getIdList();
@@ -113,7 +113,7 @@ public class DataPublishGrpcClient extends BaseGRPCClient {
 						break;
 					}
 					ResultProtos.PStringSingle single = ResultProtos.PStringSingle.newBuilder().setVal(cursor).build();
-					result = stub.scrollMore(single);
+					result = stub.moreFansWithSource(single);
 					innerList.addAll(idList);
 				}
 				return innerList;
