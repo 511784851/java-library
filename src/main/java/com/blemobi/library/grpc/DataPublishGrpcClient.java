@@ -59,7 +59,7 @@ public class DataPublishGrpcClient extends BaseGRPCClient {
 	 *            哪个的粉丝
 	 * @return
 	 */
-	public Boolean saveFans(String pKey, Integer gender, List<String> region, String uuid) {
+	public Boolean saveFans(String pKey, Integer gender, List<String> region, String uuid, String tableNm) {
 		DataPublishingProtos.PFansFilterParam.Builder filterBuilder = DataPublishingProtos.PFansFilterParam
 				.newBuilder();
 		filterBuilder.setGender(gender);
@@ -68,6 +68,7 @@ public class DataPublishGrpcClient extends BaseGRPCClient {
 		DataPublishingApiProtos.PFansSaveParam.Builder saveParam = DataPublishingApiProtos.PFansSaveParam.newBuilder();
 		saveParam.setFilter(filterBuilder.build());
 		saveParam.setKey(pKey);
+		saveParam.setTable(tableNm);
 		DataPublishingApiProtos.PFansSaveParam request = saveParam.build();
 		this.execute(request, new GrpcCallback<Boolean>() {
 			@Override
