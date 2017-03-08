@@ -2244,31 +2244,22 @@ public final class RobotApiProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string targetKey = 1;</code>
+     * <code>optional string ordNo = 1;</code>
      *
      * <pre>
-     *红包参与者的存储位置
+     *订单号,也是参与者的ots存储key
      * </pre>
      */
-    java.lang.String getTargetKey();
+    java.lang.String getOrdNo();
     /**
-     * <code>optional string targetKey = 1;</code>
+     * <code>optional string ordNo = 1;</code>
      *
      * <pre>
-     *红包参与者的存储位置
+     *订单号,也是参与者的ots存储key
      * </pre>
      */
     com.google.protobuf.ByteString
-        getTargetKeyBytes();
-
-    /**
-     * <code>optional int64 redpacketId = 2;</code>
-     *
-     * <pre>
-     *红包ID
-     * </pre>
-     */
-    long getRedpacketId();
+        getOrdNoBytes();
   }
   /**
    * Protobuf type {@code bbproto.PBRedPacketNotifyMsg}
@@ -2286,8 +2277,7 @@ public final class RobotApiProtos {
       super(builder);
     }
     private PBRedPacketNotifyMsg() {
-      targetKey_ = "";
-      redpacketId_ = 0L;
+      ordNo_ = "";
     }
 
     @java.lang.Override
@@ -2317,12 +2307,7 @@ public final class RobotApiProtos {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              targetKey_ = s;
-              break;
-            }
-            case 16: {
-
-              redpacketId_ = input.readInt64();
+              ordNo_ = s;
               break;
             }
           }
@@ -2349,59 +2334,46 @@ public final class RobotApiProtos {
               com.blemobi.sep.probuf.RobotApiProtos.PBRedPacketNotifyMsg.class, com.blemobi.sep.probuf.RobotApiProtos.PBRedPacketNotifyMsg.Builder.class);
     }
 
-    public static final int TARGETKEY_FIELD_NUMBER = 1;
-    private volatile java.lang.Object targetKey_;
+    public static final int ORDNO_FIELD_NUMBER = 1;
+    private volatile java.lang.Object ordNo_;
     /**
-     * <code>optional string targetKey = 1;</code>
+     * <code>optional string ordNo = 1;</code>
      *
      * <pre>
-     *红包参与者的存储位置
+     *订单号,也是参与者的ots存储key
      * </pre>
      */
-    public java.lang.String getTargetKey() {
-      java.lang.Object ref = targetKey_;
+    public java.lang.String getOrdNo() {
+      java.lang.Object ref = ordNo_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        targetKey_ = s;
+        ordNo_ = s;
         return s;
       }
     }
     /**
-     * <code>optional string targetKey = 1;</code>
+     * <code>optional string ordNo = 1;</code>
      *
      * <pre>
-     *红包参与者的存储位置
+     *订单号,也是参与者的ots存储key
      * </pre>
      */
     public com.google.protobuf.ByteString
-        getTargetKeyBytes() {
-      java.lang.Object ref = targetKey_;
+        getOrdNoBytes() {
+      java.lang.Object ref = ordNo_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        targetKey_ = b;
+        ordNo_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
-    }
-
-    public static final int REDPACKETID_FIELD_NUMBER = 2;
-    private long redpacketId_;
-    /**
-     * <code>optional int64 redpacketId = 2;</code>
-     *
-     * <pre>
-     *红包ID
-     * </pre>
-     */
-    public long getRedpacketId() {
-      return redpacketId_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2416,11 +2388,8 @@ public final class RobotApiProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTargetKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, targetKey_);
-      }
-      if (redpacketId_ != 0L) {
-        output.writeInt64(2, redpacketId_);
+      if (!getOrdNoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, ordNo_);
       }
     }
 
@@ -2429,12 +2398,8 @@ public final class RobotApiProtos {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTargetKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, targetKey_);
-      }
-      if (redpacketId_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, redpacketId_);
+      if (!getOrdNoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, ordNo_);
       }
       memoizedSize = size;
       return size;
@@ -2551,9 +2516,7 @@ public final class RobotApiProtos {
       }
       public Builder clear() {
         super.clear();
-        targetKey_ = "";
-
-        redpacketId_ = 0L;
+        ordNo_ = "";
 
         return this;
       }
@@ -2577,8 +2540,7 @@ public final class RobotApiProtos {
 
       public com.blemobi.sep.probuf.RobotApiProtos.PBRedPacketNotifyMsg buildPartial() {
         com.blemobi.sep.probuf.RobotApiProtos.PBRedPacketNotifyMsg result = new com.blemobi.sep.probuf.RobotApiProtos.PBRedPacketNotifyMsg(this);
-        result.targetKey_ = targetKey_;
-        result.redpacketId_ = redpacketId_;
+        result.ordNo_ = ordNo_;
         onBuilt();
         return result;
       }
@@ -2594,12 +2556,9 @@ public final class RobotApiProtos {
 
       public Builder mergeFrom(com.blemobi.sep.probuf.RobotApiProtos.PBRedPacketNotifyMsg other) {
         if (other == com.blemobi.sep.probuf.RobotApiProtos.PBRedPacketNotifyMsg.getDefaultInstance()) return this;
-        if (!other.getTargetKey().isEmpty()) {
-          targetKey_ = other.targetKey_;
+        if (!other.getOrdNo().isEmpty()) {
+          ordNo_ = other.ordNo_;
           onChanged();
-        }
-        if (other.getRedpacketId() != 0L) {
-          setRedpacketId(other.getRedpacketId());
         }
         onChanged();
         return this;
@@ -2627,129 +2586,91 @@ public final class RobotApiProtos {
         return this;
       }
 
-      private java.lang.Object targetKey_ = "";
+      private java.lang.Object ordNo_ = "";
       /**
-       * <code>optional string targetKey = 1;</code>
+       * <code>optional string ordNo = 1;</code>
        *
        * <pre>
-       *红包参与者的存储位置
+       *订单号,也是参与者的ots存储key
        * </pre>
        */
-      public java.lang.String getTargetKey() {
-        java.lang.Object ref = targetKey_;
+      public java.lang.String getOrdNo() {
+        java.lang.Object ref = ordNo_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          targetKey_ = s;
+          ordNo_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>optional string targetKey = 1;</code>
+       * <code>optional string ordNo = 1;</code>
        *
        * <pre>
-       *红包参与者的存储位置
+       *订单号,也是参与者的ots存储key
        * </pre>
        */
       public com.google.protobuf.ByteString
-          getTargetKeyBytes() {
-        java.lang.Object ref = targetKey_;
+          getOrdNoBytes() {
+        java.lang.Object ref = ordNo_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          targetKey_ = b;
+          ordNo_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>optional string targetKey = 1;</code>
+       * <code>optional string ordNo = 1;</code>
        *
        * <pre>
-       *红包参与者的存储位置
+       *订单号,也是参与者的ots存储key
        * </pre>
        */
-      public Builder setTargetKey(
+      public Builder setOrdNo(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        targetKey_ = value;
+        ordNo_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string targetKey = 1;</code>
+       * <code>optional string ordNo = 1;</code>
        *
        * <pre>
-       *红包参与者的存储位置
+       *订单号,也是参与者的ots存储key
        * </pre>
        */
-      public Builder clearTargetKey() {
+      public Builder clearOrdNo() {
         
-        targetKey_ = getDefaultInstance().getTargetKey();
+        ordNo_ = getDefaultInstance().getOrdNo();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string targetKey = 1;</code>
+       * <code>optional string ordNo = 1;</code>
        *
        * <pre>
-       *红包参与者的存储位置
+       *订单号,也是参与者的ots存储key
        * </pre>
        */
-      public Builder setTargetKeyBytes(
+      public Builder setOrdNoBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        targetKey_ = value;
-        onChanged();
-        return this;
-      }
-
-      private long redpacketId_ ;
-      /**
-       * <code>optional int64 redpacketId = 2;</code>
-       *
-       * <pre>
-       *红包ID
-       * </pre>
-       */
-      public long getRedpacketId() {
-        return redpacketId_;
-      }
-      /**
-       * <code>optional int64 redpacketId = 2;</code>
-       *
-       * <pre>
-       *红包ID
-       * </pre>
-       */
-      public Builder setRedpacketId(long value) {
-        
-        redpacketId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int64 redpacketId = 2;</code>
-       *
-       * <pre>
-       *红包ID
-       * </pre>
-       */
-      public Builder clearRedpacketId() {
-        
-        redpacketId_ = 0L;
+        ordNo_ = value;
         onChanged();
         return this;
       }
@@ -2816,31 +2737,22 @@ public final class RobotApiProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string targetKey = 1;</code>
+     * <code>optional string ordNo = 1;</code>
      *
      * <pre>
-     *抽奖参与者的存储位置
+     *订单号,也是参与者的ots存储key
      * </pre>
      */
-    java.lang.String getTargetKey();
+    java.lang.String getOrdNo();
     /**
-     * <code>optional string targetKey = 1;</code>
+     * <code>optional string ordNo = 1;</code>
      *
      * <pre>
-     *抽奖参与者的存储位置
+     *订单号,也是参与者的ots存储key
      * </pre>
      */
     com.google.protobuf.ByteString
-        getTargetKeyBytes();
-
-    /**
-     * <code>optional int64 lotteryId = 2;</code>
-     *
-     * <pre>
-     *抽奖ID
-     * </pre>
-     */
-    long getLotteryId();
+        getOrdNoBytes();
   }
   /**
    * Protobuf type {@code bbproto.PBLotteryNotifyMsg}
@@ -2858,8 +2770,7 @@ public final class RobotApiProtos {
       super(builder);
     }
     private PBLotteryNotifyMsg() {
-      targetKey_ = "";
-      lotteryId_ = 0L;
+      ordNo_ = "";
     }
 
     @java.lang.Override
@@ -2889,12 +2800,7 @@ public final class RobotApiProtos {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              targetKey_ = s;
-              break;
-            }
-            case 16: {
-
-              lotteryId_ = input.readInt64();
+              ordNo_ = s;
               break;
             }
           }
@@ -2921,59 +2827,46 @@ public final class RobotApiProtos {
               com.blemobi.sep.probuf.RobotApiProtos.PBLotteryNotifyMsg.class, com.blemobi.sep.probuf.RobotApiProtos.PBLotteryNotifyMsg.Builder.class);
     }
 
-    public static final int TARGETKEY_FIELD_NUMBER = 1;
-    private volatile java.lang.Object targetKey_;
+    public static final int ORDNO_FIELD_NUMBER = 1;
+    private volatile java.lang.Object ordNo_;
     /**
-     * <code>optional string targetKey = 1;</code>
+     * <code>optional string ordNo = 1;</code>
      *
      * <pre>
-     *抽奖参与者的存储位置
+     *订单号,也是参与者的ots存储key
      * </pre>
      */
-    public java.lang.String getTargetKey() {
-      java.lang.Object ref = targetKey_;
+    public java.lang.String getOrdNo() {
+      java.lang.Object ref = ordNo_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        targetKey_ = s;
+        ordNo_ = s;
         return s;
       }
     }
     /**
-     * <code>optional string targetKey = 1;</code>
+     * <code>optional string ordNo = 1;</code>
      *
      * <pre>
-     *抽奖参与者的存储位置
+     *订单号,也是参与者的ots存储key
      * </pre>
      */
     public com.google.protobuf.ByteString
-        getTargetKeyBytes() {
-      java.lang.Object ref = targetKey_;
+        getOrdNoBytes() {
+      java.lang.Object ref = ordNo_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        targetKey_ = b;
+        ordNo_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
-    }
-
-    public static final int LOTTERYID_FIELD_NUMBER = 2;
-    private long lotteryId_;
-    /**
-     * <code>optional int64 lotteryId = 2;</code>
-     *
-     * <pre>
-     *抽奖ID
-     * </pre>
-     */
-    public long getLotteryId() {
-      return lotteryId_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2988,11 +2881,8 @@ public final class RobotApiProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTargetKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, targetKey_);
-      }
-      if (lotteryId_ != 0L) {
-        output.writeInt64(2, lotteryId_);
+      if (!getOrdNoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, ordNo_);
       }
     }
 
@@ -3001,12 +2891,8 @@ public final class RobotApiProtos {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTargetKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, targetKey_);
-      }
-      if (lotteryId_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, lotteryId_);
+      if (!getOrdNoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, ordNo_);
       }
       memoizedSize = size;
       return size;
@@ -3123,9 +3009,7 @@ public final class RobotApiProtos {
       }
       public Builder clear() {
         super.clear();
-        targetKey_ = "";
-
-        lotteryId_ = 0L;
+        ordNo_ = "";
 
         return this;
       }
@@ -3149,8 +3033,7 @@ public final class RobotApiProtos {
 
       public com.blemobi.sep.probuf.RobotApiProtos.PBLotteryNotifyMsg buildPartial() {
         com.blemobi.sep.probuf.RobotApiProtos.PBLotteryNotifyMsg result = new com.blemobi.sep.probuf.RobotApiProtos.PBLotteryNotifyMsg(this);
-        result.targetKey_ = targetKey_;
-        result.lotteryId_ = lotteryId_;
+        result.ordNo_ = ordNo_;
         onBuilt();
         return result;
       }
@@ -3166,12 +3049,9 @@ public final class RobotApiProtos {
 
       public Builder mergeFrom(com.blemobi.sep.probuf.RobotApiProtos.PBLotteryNotifyMsg other) {
         if (other == com.blemobi.sep.probuf.RobotApiProtos.PBLotteryNotifyMsg.getDefaultInstance()) return this;
-        if (!other.getTargetKey().isEmpty()) {
-          targetKey_ = other.targetKey_;
+        if (!other.getOrdNo().isEmpty()) {
+          ordNo_ = other.ordNo_;
           onChanged();
-        }
-        if (other.getLotteryId() != 0L) {
-          setLotteryId(other.getLotteryId());
         }
         onChanged();
         return this;
@@ -3199,129 +3079,91 @@ public final class RobotApiProtos {
         return this;
       }
 
-      private java.lang.Object targetKey_ = "";
+      private java.lang.Object ordNo_ = "";
       /**
-       * <code>optional string targetKey = 1;</code>
+       * <code>optional string ordNo = 1;</code>
        *
        * <pre>
-       *抽奖参与者的存储位置
+       *订单号,也是参与者的ots存储key
        * </pre>
        */
-      public java.lang.String getTargetKey() {
-        java.lang.Object ref = targetKey_;
+      public java.lang.String getOrdNo() {
+        java.lang.Object ref = ordNo_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          targetKey_ = s;
+          ordNo_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>optional string targetKey = 1;</code>
+       * <code>optional string ordNo = 1;</code>
        *
        * <pre>
-       *抽奖参与者的存储位置
+       *订单号,也是参与者的ots存储key
        * </pre>
        */
       public com.google.protobuf.ByteString
-          getTargetKeyBytes() {
-        java.lang.Object ref = targetKey_;
+          getOrdNoBytes() {
+        java.lang.Object ref = ordNo_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          targetKey_ = b;
+          ordNo_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>optional string targetKey = 1;</code>
+       * <code>optional string ordNo = 1;</code>
        *
        * <pre>
-       *抽奖参与者的存储位置
+       *订单号,也是参与者的ots存储key
        * </pre>
        */
-      public Builder setTargetKey(
+      public Builder setOrdNo(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        targetKey_ = value;
+        ordNo_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string targetKey = 1;</code>
+       * <code>optional string ordNo = 1;</code>
        *
        * <pre>
-       *抽奖参与者的存储位置
+       *订单号,也是参与者的ots存储key
        * </pre>
        */
-      public Builder clearTargetKey() {
+      public Builder clearOrdNo() {
         
-        targetKey_ = getDefaultInstance().getTargetKey();
+        ordNo_ = getDefaultInstance().getOrdNo();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string targetKey = 1;</code>
+       * <code>optional string ordNo = 1;</code>
        *
        * <pre>
-       *抽奖参与者的存储位置
+       *订单号,也是参与者的ots存储key
        * </pre>
        */
-      public Builder setTargetKeyBytes(
+      public Builder setOrdNoBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        targetKey_ = value;
-        onChanged();
-        return this;
-      }
-
-      private long lotteryId_ ;
-      /**
-       * <code>optional int64 lotteryId = 2;</code>
-       *
-       * <pre>
-       *抽奖ID
-       * </pre>
-       */
-      public long getLotteryId() {
-        return lotteryId_;
-      }
-      /**
-       * <code>optional int64 lotteryId = 2;</code>
-       *
-       * <pre>
-       *抽奖ID
-       * </pre>
-       */
-      public Builder setLotteryId(long value) {
-        
-        lotteryId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int64 lotteryId = 2;</code>
-       *
-       * <pre>
-       *抽奖ID
-       * </pre>
-       */
-      public Builder clearLotteryId() {
-        
-        lotteryId_ = 0L;
+        ordNo_ = value;
         onChanged();
         return this;
       }
@@ -6268,15 +6110,6 @@ public final class RobotApiProtos {
      * </pre>
      */
     int getAmount();
-
-    /**
-     * <code>optional int32 machineNo = 3;</code>
-     *
-     * <pre>
-     *机器码[0,31]
-     * </pre>
-     */
-    int getMachineNo();
   }
   /**
    * Protobuf type {@code bbproto.PPayOrderParma}
@@ -6296,7 +6129,6 @@ public final class RobotApiProtos {
     private PPayOrderParma() {
       serviceNo_ = 0;
       amount_ = 0;
-      machineNo_ = 0;
     }
 
     @java.lang.Override
@@ -6331,11 +6163,6 @@ public final class RobotApiProtos {
             case 16: {
 
               amount_ = input.readInt32();
-              break;
-            }
-            case 24: {
-
-              machineNo_ = input.readInt32();
               break;
             }
           }
@@ -6388,19 +6215,6 @@ public final class RobotApiProtos {
       return amount_;
     }
 
-    public static final int MACHINENO_FIELD_NUMBER = 3;
-    private int machineNo_;
-    /**
-     * <code>optional int32 machineNo = 3;</code>
-     *
-     * <pre>
-     *机器码[0,31]
-     * </pre>
-     */
-    public int getMachineNo() {
-      return machineNo_;
-    }
-
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -6419,9 +6233,6 @@ public final class RobotApiProtos {
       if (amount_ != 0) {
         output.writeInt32(2, amount_);
       }
-      if (machineNo_ != 0) {
-        output.writeInt32(3, machineNo_);
-      }
     }
 
     public int getSerializedSize() {
@@ -6436,10 +6247,6 @@ public final class RobotApiProtos {
       if (amount_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, amount_);
-      }
-      if (machineNo_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, machineNo_);
       }
       memoizedSize = size;
       return size;
@@ -6560,8 +6367,6 @@ public final class RobotApiProtos {
 
         amount_ = 0;
 
-        machineNo_ = 0;
-
         return this;
       }
 
@@ -6586,7 +6391,6 @@ public final class RobotApiProtos {
         com.blemobi.sep.probuf.RobotApiProtos.PPayOrderParma result = new com.blemobi.sep.probuf.RobotApiProtos.PPayOrderParma(this);
         result.serviceNo_ = serviceNo_;
         result.amount_ = amount_;
-        result.machineNo_ = machineNo_;
         onBuilt();
         return result;
       }
@@ -6607,9 +6411,6 @@ public final class RobotApiProtos {
         }
         if (other.getAmount() != 0) {
           setAmount(other.getAmount());
-        }
-        if (other.getMachineNo() != 0) {
-          setMachineNo(other.getMachineNo());
         }
         onChanged();
         return this;
@@ -6709,44 +6510,6 @@ public final class RobotApiProtos {
       public Builder clearAmount() {
         
         amount_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int machineNo_ ;
-      /**
-       * <code>optional int32 machineNo = 3;</code>
-       *
-       * <pre>
-       *机器码[0,31]
-       * </pre>
-       */
-      public int getMachineNo() {
-        return machineNo_;
-      }
-      /**
-       * <code>optional int32 machineNo = 3;</code>
-       *
-       * <pre>
-       *机器码[0,31]
-       * </pre>
-       */
-      public Builder setMachineNo(int value) {
-        
-        machineNo_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 machineNo = 3;</code>
-       *
-       * <pre>
-       *机器码[0,31]
-       * </pre>
-       */
-      public Builder clearMachineNo() {
-        
-        machineNo_ = 0;
         onChanged();
         return this;
       }
@@ -7445,35 +7208,34 @@ public final class RobotApiProtos {
       " \001(\t\022\014\n\004type\030\002 \001(\t\022\016\n\006offset\030\003 \001(\003\022\r\n\005co" +
       "unt\030\004 \001(\003\"1\n\022PRemindDeleteParam\022\014\n\004uuid\030" +
       "\001 \001(\t\022\r\n\005msgId\030\002 \001(\t\"2\n\016PMsgStateQuery\022\014" +
-      "\n\004uuid\030\001 \001(\t\022\022\n\ncelebritys\030\002 \003(\t\">\n\024PBRe" +
-      "dPacketNotifyMsg\022\021\n\ttargetKey\030\001 \001(\t\022\023\n\013r" +
-      "edpacketId\030\002 \001(\003\":\n\022PBLotteryNotifyMsg\022\021" +
-      "\n\ttargetKey\030\001 \001(\t\022\021\n\tlotteryId\030\002 \001(\003\"\240\001\n",
-      "\022PRobotRawNotifyMsg\022*\n\tstreaming\030\001 \001(\0132\027" +
-      ".bbproto.PStreamingLive\022,\n\007lottery\030\002 \001(\013" +
-      "2\033.bbproto.PBLotteryNotifyMsg\0220\n\tredpack" +
-      "et\030\003 \001(\0132\035.bbproto.PBRedPacketNotifyMsg\"" +
-      "\203\001\n\017PRobotNotifyMsg\022\n\n\002to\030\001 \003(\t\022\014\n\004from\030" +
-      "\002 \001(\t\022(\n\007msgType\030\003 \001(\0162\027.bbproto.ERobotP" +
-      "ushType\022,\n\007content\030\004 \001(\0132\033.bbproto.PRobo" +
-      "tRawNotifyMsg\"=\n\023PRobotNotifyMsgList\022&\n\004" +
-      "list\030\001 \003(\0132\030.bbproto.PRobotNotifyMsg\"F\n\016" +
-      "PPayOrderParma\022\021\n\tserviceNo\030\001 \001(\005\022\016\n\006amo",
-      "unt\030\002 \001(\005\022\021\n\tmachineNo\030\003 \001(\005\"3\n\021PMsgNumL" +
-      "imitParma\022\013\n\003num\030\001 \001(\005\022\021\n\tcelebrity\030\002 \001(" +
-      "\t2\320\003\n\nIGrpcRobot\022B\n\023GrpcSetMsgNumPerDay\022" +
-      "\032.bbproto.PMsgNumLimitParma\032\017.bbproto.PE" +
-      "mpty\022D\n\023GrpcGetMsgNumPerDay\022\026.bbproto.PS" +
-      "tringSingle\032\025.bbproto.PInt32Single\0226\n\020Gr" +
-      "pcCreateRemind\022\021.bbproto.PBRemind\032\017.bbpr" +
-      "oto.PEmpty\022=\n\rGrpcGetRemind\022\025.bbproto.PR" +
-      "emindQuery\032\025.bbproto.PBRemindList\022@\n\020Grp" +
-      "cDeleteRemind\022\033.bbproto.PRemindDeletePar",
-      "am\032\017.bbproto.PEmpty\0229\n\010GrpcPush\022\034.bbprot" +
-      "o.PRobotNotifyMsgList\032\017.bbproto.PEmpty\022D" +
-      "\n\021GrpcGenerateOrder\022\027.bbproto.PPayOrderP" +
-      "arma\032\026.bbproto.PStringSingleB(\n\026com.blem" +
-      "obi.sep.probufB\016RobotApiProtosb\006proto3"
+      "\n\004uuid\030\001 \001(\t\022\022\n\ncelebritys\030\002 \003(\t\"%\n\024PBRe" +
+      "dPacketNotifyMsg\022\r\n\005ordNo\030\001 \001(\t\"#\n\022PBLot" +
+      "teryNotifyMsg\022\r\n\005ordNo\030\001 \001(\t\"\240\001\n\022PRobotR" +
+      "awNotifyMsg\022*\n\tstreaming\030\001 \001(\0132\027.bbproto",
+      ".PStreamingLive\022,\n\007lottery\030\002 \001(\0132\033.bbpro" +
+      "to.PBLotteryNotifyMsg\0220\n\tredpacket\030\003 \001(\013" +
+      "2\035.bbproto.PBRedPacketNotifyMsg\"\203\001\n\017PRob" +
+      "otNotifyMsg\022\n\n\002to\030\001 \003(\t\022\014\n\004from\030\002 \001(\t\022(\n" +
+      "\007msgType\030\003 \001(\0162\027.bbproto.ERobotPushType\022" +
+      ",\n\007content\030\004 \001(\0132\033.bbproto.PRobotRawNoti" +
+      "fyMsg\"=\n\023PRobotNotifyMsgList\022&\n\004list\030\001 \003" +
+      "(\0132\030.bbproto.PRobotNotifyMsg\"3\n\016PPayOrde" +
+      "rParma\022\021\n\tserviceNo\030\001 \001(\005\022\016\n\006amount\030\002 \001(" +
+      "\005\"3\n\021PMsgNumLimitParma\022\013\n\003num\030\001 \001(\005\022\021\n\tc",
+      "elebrity\030\002 \001(\t2\320\003\n\nIGrpcRobot\022B\n\023GrpcSet" +
+      "MsgNumPerDay\022\032.bbproto.PMsgNumLimitParma" +
+      "\032\017.bbproto.PEmpty\022D\n\023GrpcGetMsgNumPerDay" +
+      "\022\026.bbproto.PStringSingle\032\025.bbproto.PInt3" +
+      "2Single\0226\n\020GrpcCreateRemind\022\021.bbproto.PB" +
+      "Remind\032\017.bbproto.PEmpty\022=\n\rGrpcGetRemind" +
+      "\022\025.bbproto.PRemindQuery\032\025.bbproto.PBRemi" +
+      "ndList\022@\n\020GrpcDeleteRemind\022\033.bbproto.PRe" +
+      "mindDeleteParam\032\017.bbproto.PEmpty\0229\n\010Grpc" +
+      "Push\022\034.bbproto.PRobotNotifyMsgList\032\017.bbp",
+      "roto.PEmpty\022D\n\021GrpcGenerateOrder\022\027.bbpro" +
+      "to.PPayOrderParma\032\026.bbproto.PStringSingl" +
+      "eB(\n\026com.blemobi.sep.probufB\016RobotApiPro" +
+      "tosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7514,13 +7276,13 @@ public final class RobotApiProtos {
     internal_static_bbproto_PBRedPacketNotifyMsg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PBRedPacketNotifyMsg_descriptor,
-        new java.lang.String[] { "TargetKey", "RedpacketId", });
+        new java.lang.String[] { "OrdNo", });
     internal_static_bbproto_PBLotteryNotifyMsg_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_bbproto_PBLotteryNotifyMsg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PBLotteryNotifyMsg_descriptor,
-        new java.lang.String[] { "TargetKey", "LotteryId", });
+        new java.lang.String[] { "OrdNo", });
     internal_static_bbproto_PRobotRawNotifyMsg_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_bbproto_PRobotRawNotifyMsg_fieldAccessorTable = new
@@ -7544,7 +7306,7 @@ public final class RobotApiProtos {
     internal_static_bbproto_PPayOrderParma_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PPayOrderParma_descriptor,
-        new java.lang.String[] { "ServiceNo", "Amount", "MachineNo", });
+        new java.lang.String[] { "ServiceNo", "Amount", });
     internal_static_bbproto_PMsgNumLimitParma_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_bbproto_PMsgNumLimitParma_fieldAccessorTable = new
