@@ -20861,22 +20861,13 @@ public final class PaymentProtos {
     int getTotAmt();
 
     /**
-     * <code>optional string crtTm = 4;</code>
+     * <code>optional int64 crtTm = 4;</code>
      *
      * <pre>
      *抽奖创建时间
      * </pre>
      */
-    java.lang.String getCrtTm();
-    /**
-     * <code>optional string crtTm = 4;</code>
-     *
-     * <pre>
-     *抽奖创建时间
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getCrtTmBytes();
+    long getCrtTm();
 
     /**
      * <code>optional int32 type = 5;</code>
@@ -21012,7 +21003,7 @@ public final class PaymentProtos {
       lotteryId_ = "";
       title_ = "";
       totAmt_ = 0;
-      crtTm_ = "";
+      crtTm_ = 0L;
       type_ = 0;
       winners_ = 0;
       region_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -21061,10 +21052,9 @@ public final class PaymentProtos {
               totAmt_ = input.readInt32();
               break;
             }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 32: {
 
-              crtTm_ = s;
+              crtTm_ = input.readInt64();
               break;
             }
             case 40: {
@@ -21229,45 +21219,16 @@ public final class PaymentProtos {
     }
 
     public static final int CRTTM_FIELD_NUMBER = 4;
-    private volatile java.lang.Object crtTm_;
+    private long crtTm_;
     /**
-     * <code>optional string crtTm = 4;</code>
+     * <code>optional int64 crtTm = 4;</code>
      *
      * <pre>
      *抽奖创建时间
      * </pre>
      */
-    public java.lang.String getCrtTm() {
-      java.lang.Object ref = crtTm_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        crtTm_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>optional string crtTm = 4;</code>
-     *
-     * <pre>
-     *抽奖创建时间
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getCrtTmBytes() {
-      java.lang.Object ref = crtTm_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        crtTm_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public long getCrtTm() {
+      return crtTm_;
     }
 
     public static final int TYPE_FIELD_NUMBER = 5;
@@ -21459,8 +21420,8 @@ public final class PaymentProtos {
       if (totAmt_ != 0) {
         output.writeInt32(3, totAmt_);
       }
-      if (!getCrtTmBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 4, crtTm_);
+      if (crtTm_ != 0L) {
+        output.writeInt64(4, crtTm_);
       }
       if (type_ != 0) {
         output.writeInt32(5, type_);
@@ -21494,8 +21455,9 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, totAmt_);
       }
-      if (!getCrtTmBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, crtTm_);
+      if (crtTm_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, crtTm_);
       }
       if (type_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -21642,7 +21604,7 @@ public final class PaymentProtos {
 
         totAmt_ = 0;
 
-        crtTm_ = "";
+        crtTm_ = 0L;
 
         type_ = 0;
 
@@ -21730,9 +21692,8 @@ public final class PaymentProtos {
         if (other.getTotAmt() != 0) {
           setTotAmt(other.getTotAmt());
         }
-        if (!other.getCrtTm().isEmpty()) {
-          crtTm_ = other.crtTm_;
-          onChanged();
+        if (other.getCrtTm() != 0L) {
+          setCrtTm(other.getCrtTm());
         }
         if (other.getType() != 0) {
           setType(other.getType());
@@ -22023,65 +21984,32 @@ public final class PaymentProtos {
         return this;
       }
 
-      private java.lang.Object crtTm_ = "";
+      private long crtTm_ ;
       /**
-       * <code>optional string crtTm = 4;</code>
+       * <code>optional int64 crtTm = 4;</code>
        *
        * <pre>
        *抽奖创建时间
        * </pre>
        */
-      public java.lang.String getCrtTm() {
-        java.lang.Object ref = crtTm_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          crtTm_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      public long getCrtTm() {
+        return crtTm_;
       }
       /**
-       * <code>optional string crtTm = 4;</code>
+       * <code>optional int64 crtTm = 4;</code>
        *
        * <pre>
        *抽奖创建时间
        * </pre>
        */
-      public com.google.protobuf.ByteString
-          getCrtTmBytes() {
-        java.lang.Object ref = crtTm_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          crtTm_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string crtTm = 4;</code>
-       *
-       * <pre>
-       *抽奖创建时间
-       * </pre>
-       */
-      public Builder setCrtTm(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      public Builder setCrtTm(long value) {
+        
         crtTm_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string crtTm = 4;</code>
+       * <code>optional int64 crtTm = 4;</code>
        *
        * <pre>
        *抽奖创建时间
@@ -22089,25 +22017,7 @@ public final class PaymentProtos {
        */
       public Builder clearCrtTm() {
         
-        crtTm_ = getDefaultInstance().getCrtTm();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string crtTm = 4;</code>
-       *
-       * <pre>
-       *抽奖创建时间
-       * </pre>
-       */
-      public Builder setCrtTmBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        crtTm_ = value;
+        crtTm_ = 0L;
         onChanged();
         return this;
       }
@@ -22826,22 +22736,13 @@ public final class PaymentProtos {
     int getWinners();
 
     /**
-     * <code>optional string crtTm = 4;</code>
+     * <code>optional int64 crtTm = 4;</code>
      *
      * <pre>
      *发起抽奖时间
      * </pre>
      */
-    java.lang.String getCrtTm();
-    /**
-     * <code>optional string crtTm = 4;</code>
-     *
-     * <pre>
-     *发起抽奖时间
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getCrtTmBytes();
+    long getCrtTm();
 
     /**
      * <code>repeated .bbproto.PUserBase userList = 5;</code>
@@ -22902,7 +22803,7 @@ public final class PaymentProtos {
       lotteryId_ = "";
       title_ = "";
       winners_ = 0;
-      crtTm_ = "";
+      crtTm_ = 0L;
       userList_ = java.util.Collections.emptyList();
     }
 
@@ -22947,10 +22848,9 @@ public final class PaymentProtos {
               winners_ = input.readInt32();
               break;
             }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 32: {
 
-              crtTm_ = s;
+              crtTm_ = input.readInt64();
               break;
             }
             case 42: {
@@ -23087,45 +22987,16 @@ public final class PaymentProtos {
     }
 
     public static final int CRTTM_FIELD_NUMBER = 4;
-    private volatile java.lang.Object crtTm_;
+    private long crtTm_;
     /**
-     * <code>optional string crtTm = 4;</code>
+     * <code>optional int64 crtTm = 4;</code>
      *
      * <pre>
      *发起抽奖时间
      * </pre>
      */
-    public java.lang.String getCrtTm() {
-      java.lang.Object ref = crtTm_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        crtTm_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>optional string crtTm = 4;</code>
-     *
-     * <pre>
-     *发起抽奖时间
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getCrtTmBytes() {
-      java.lang.Object ref = crtTm_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        crtTm_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public long getCrtTm() {
+      return crtTm_;
     }
 
     public static final int USERLIST_FIELD_NUMBER = 5;
@@ -23204,8 +23075,8 @@ public final class PaymentProtos {
       if (winners_ != 0) {
         output.writeInt32(3, winners_);
       }
-      if (!getCrtTmBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 4, crtTm_);
+      if (crtTm_ != 0L) {
+        output.writeInt64(4, crtTm_);
       }
       for (int i = 0; i < userList_.size(); i++) {
         output.writeMessage(5, userList_.get(i));
@@ -23227,8 +23098,9 @@ public final class PaymentProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, winners_);
       }
-      if (!getCrtTmBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, crtTm_);
+      if (crtTm_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, crtTm_);
       }
       for (int i = 0; i < userList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -23352,7 +23224,7 @@ public final class PaymentProtos {
 
         winners_ = 0;
 
-        crtTm_ = "";
+        crtTm_ = 0L;
 
         if (userListBuilder_ == null) {
           userList_ = java.util.Collections.emptyList();
@@ -23424,9 +23296,8 @@ public final class PaymentProtos {
         if (other.getWinners() != 0) {
           setWinners(other.getWinners());
         }
-        if (!other.getCrtTm().isEmpty()) {
-          crtTm_ = other.crtTm_;
-          onChanged();
+        if (other.getCrtTm() != 0L) {
+          setCrtTm(other.getCrtTm());
         }
         if (userListBuilder_ == null) {
           if (!other.userList_.isEmpty()) {
@@ -23697,65 +23568,32 @@ public final class PaymentProtos {
         return this;
       }
 
-      private java.lang.Object crtTm_ = "";
+      private long crtTm_ ;
       /**
-       * <code>optional string crtTm = 4;</code>
+       * <code>optional int64 crtTm = 4;</code>
        *
        * <pre>
        *发起抽奖时间
        * </pre>
        */
-      public java.lang.String getCrtTm() {
-        java.lang.Object ref = crtTm_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          crtTm_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      public long getCrtTm() {
+        return crtTm_;
       }
       /**
-       * <code>optional string crtTm = 4;</code>
+       * <code>optional int64 crtTm = 4;</code>
        *
        * <pre>
        *发起抽奖时间
        * </pre>
        */
-      public com.google.protobuf.ByteString
-          getCrtTmBytes() {
-        java.lang.Object ref = crtTm_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          crtTm_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string crtTm = 4;</code>
-       *
-       * <pre>
-       *发起抽奖时间
-       * </pre>
-       */
-      public Builder setCrtTm(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      public Builder setCrtTm(long value) {
+        
         crtTm_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string crtTm = 4;</code>
+       * <code>optional int64 crtTm = 4;</code>
        *
        * <pre>
        *发起抽奖时间
@@ -23763,25 +23601,7 @@ public final class PaymentProtos {
        */
       public Builder clearCrtTm() {
         
-        crtTm_ = getDefaultInstance().getCrtTm();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string crtTm = 4;</code>
-       *
-       * <pre>
-       *发起抽奖时间
-       * </pre>
-       */
-      public Builder setCrtTmBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        crtTm_ = value;
+        crtTm_ = 0L;
         onChanged();
         return this;
       }
@@ -25807,11 +25627,11 @@ public final class PaymentProtos {
       "rySingle\"!\n\014PAcceptPrize\022\021\n\tlotteryId\030\001 " +
       "\001(\t\"\270\001\n\016PLotteryDetail\022\021\n\tlotteryId\030\001 \001(" +
       "\t\022\r\n\005title\030\002 \001(\t\022\016\n\006totAmt\030\003 \001(\005\022\r\n\005crtT" +
-      "m\030\004 \001(\t\022\014\n\004type\030\005 \001(\005\022\017\n\007winners\030\006 \001(\005\022\016" +
+      "m\030\004 \001(\003\022\014\n\004type\030\005 \001(\005\022\017\n\007winners\030\006 \001(\005\022\016" +
       "\n\006region\030\007 \003(\t\022&\n\010userList\030\010 \003(\0132\024.bbpro",
       "to.PUserBaseEx\022\016\n\006remark\030\t \001(\t\"x\n\016PLotte" +
       "rySingle\022\021\n\tlotteryId\030\001 \001(\t\022\r\n\005title\030\002 \001" +
-      "(\t\022\017\n\007winners\030\003 \001(\005\022\r\n\005crtTm\030\004 \001(\t\022$\n\010us" +
+      "(\t\022\017\n\007winners\030\003 \001(\005\022\r\n\005crtTm\030\004 \001(\003\022$\n\010us" +
       "erList\030\005 \003(\0132\022.bbproto.PUserBase\"\\\n\013PUse" +
       "rBaseEx\022 \n\004info\030\001 \001(\0132\022.bbproto.PUserBas" +
       "e\022\016\n\006gender\030\002 \001(\005\022\013\n\003amt\030\003 \001(\005\022\016\n\006region" +
