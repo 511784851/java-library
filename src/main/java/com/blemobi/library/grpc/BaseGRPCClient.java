@@ -70,9 +70,14 @@ public abstract class BaseGRPCClient {
     }
     
     public <T> T execute(final GeneratedMessage o, GrpcCallback<T> callback) {
+        log.info("start initial channel");
         initial();
+        log.info("initial finished");
+        log.info("start do grpc request");
         T t = callback.doGrpcRequest();
+        log.info("finish grpc request:[" + t + "]");
         destroy();
+        log.info("destroy channel.");
         return t;
     }
     
@@ -83,6 +88,7 @@ public abstract class BaseGRPCClient {
         ClientInterceptor interceptor = new HeaderClientInterceptor(headerMap);
         managedChannel = NettyChannelBuilder.forAddress(info.getIpAddr(), port).negotiationType(NegotiationType.PLAINTEXT).build();
         channel = ClientInterceptors.intercept(managedChannel, interceptor);
+        log.info("CHANNEL:[" + channel + "]");
     }
     
     
