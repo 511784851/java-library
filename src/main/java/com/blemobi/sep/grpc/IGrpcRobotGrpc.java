@@ -218,7 +218,7 @@ public class IGrpcRobotGrpc {
       asyncUnimplementedUnaryCall(METHOD_GRPC_GENERATE_ORDER, responseObserver);
     }
 
-    public io.grpc.ServerServiceDefinition bindService() {
+    @java.lang.Override public io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             METHOD_GRPC_SET_MSG_NUM_PER_DAY,
@@ -617,6 +617,7 @@ public class IGrpcRobotGrpc {
       this.methodId = methodId;
     }
 
+    @java.lang.Override
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
@@ -653,6 +654,7 @@ public class IGrpcRobotGrpc {
       }
     }
 
+    @java.lang.Override
     @java.lang.SuppressWarnings("unchecked")
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {

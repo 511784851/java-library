@@ -2260,6 +2260,24 @@ public final class RobotApiProtos {
      */
     com.google.protobuf.ByteString
         getOrdNoBytes();
+
+    /**
+     * <code>optional string text = 2;</code>
+     *
+     * <pre>
+     *红包留言
+     * </pre>
+     */
+    java.lang.String getText();
+    /**
+     * <code>optional string text = 2;</code>
+     *
+     * <pre>
+     *红包留言
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getTextBytes();
   }
   /**
    * Protobuf type {@code bbproto.PBRedPacketNotifyMsg}
@@ -2278,6 +2296,7 @@ public final class RobotApiProtos {
     }
     private PBRedPacketNotifyMsg() {
       ordNo_ = "";
+      text_ = "";
     }
 
     @java.lang.Override
@@ -2308,6 +2327,12 @@ public final class RobotApiProtos {
               java.lang.String s = input.readStringRequireUtf8();
 
               ordNo_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              text_ = s;
               break;
             }
           }
@@ -2376,6 +2401,48 @@ public final class RobotApiProtos {
       }
     }
 
+    public static final int TEXT_FIELD_NUMBER = 2;
+    private volatile java.lang.Object text_;
+    /**
+     * <code>optional string text = 2;</code>
+     *
+     * <pre>
+     *红包留言
+     * </pre>
+     */
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        text_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string text = 2;</code>
+     *
+     * <pre>
+     *红包留言
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getTextBytes() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        text_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -2391,6 +2458,9 @@ public final class RobotApiProtos {
       if (!getOrdNoBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessage.writeString(output, 1, ordNo_);
       }
+      if (!getTextBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, text_);
+      }
     }
 
     public int getSerializedSize() {
@@ -2400,6 +2470,9 @@ public final class RobotApiProtos {
       size = 0;
       if (!getOrdNoBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(1, ordNo_);
+      }
+      if (!getTextBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, text_);
       }
       memoizedSize = size;
       return size;
@@ -2518,6 +2591,8 @@ public final class RobotApiProtos {
         super.clear();
         ordNo_ = "";
 
+        text_ = "";
+
         return this;
       }
 
@@ -2541,6 +2616,7 @@ public final class RobotApiProtos {
       public com.blemobi.sep.probuf.RobotApiProtos.PBRedPacketNotifyMsg buildPartial() {
         com.blemobi.sep.probuf.RobotApiProtos.PBRedPacketNotifyMsg result = new com.blemobi.sep.probuf.RobotApiProtos.PBRedPacketNotifyMsg(this);
         result.ordNo_ = ordNo_;
+        result.text_ = text_;
         onBuilt();
         return result;
       }
@@ -2558,6 +2634,10 @@ public final class RobotApiProtos {
         if (other == com.blemobi.sep.probuf.RobotApiProtos.PBRedPacketNotifyMsg.getDefaultInstance()) return this;
         if (!other.getOrdNo().isEmpty()) {
           ordNo_ = other.ordNo_;
+          onChanged();
+        }
+        if (!other.getText().isEmpty()) {
+          text_ = other.text_;
           onChanged();
         }
         onChanged();
@@ -2674,6 +2754,95 @@ public final class RobotApiProtos {
         onChanged();
         return this;
       }
+
+      private java.lang.Object text_ = "";
+      /**
+       * <code>optional string text = 2;</code>
+       *
+       * <pre>
+       *红包留言
+       * </pre>
+       */
+      public java.lang.String getText() {
+        java.lang.Object ref = text_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          text_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string text = 2;</code>
+       *
+       * <pre>
+       *红包留言
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getTextBytes() {
+        java.lang.Object ref = text_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          text_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string text = 2;</code>
+       *
+       * <pre>
+       *红包留言
+       * </pre>
+       */
+      public Builder setText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        text_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string text = 2;</code>
+       *
+       * <pre>
+       *红包留言
+       * </pre>
+       */
+      public Builder clearText() {
+        
+        text_ = getDefaultInstance().getText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string text = 2;</code>
+       *
+       * <pre>
+       *红包留言
+       * </pre>
+       */
+      public Builder setTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        text_ = value;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return this;
@@ -2753,6 +2922,24 @@ public final class RobotApiProtos {
      */
     com.google.protobuf.ByteString
         getOrdNoBytes();
+
+    /**
+     * <code>optional string text = 2;</code>
+     *
+     * <pre>
+     *抽奖活动标题
+     * </pre>
+     */
+    java.lang.String getText();
+    /**
+     * <code>optional string text = 2;</code>
+     *
+     * <pre>
+     *抽奖活动标题
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getTextBytes();
   }
   /**
    * Protobuf type {@code bbproto.PBLotteryNotifyMsg}
@@ -2771,6 +2958,7 @@ public final class RobotApiProtos {
     }
     private PBLotteryNotifyMsg() {
       ordNo_ = "";
+      text_ = "";
     }
 
     @java.lang.Override
@@ -2801,6 +2989,12 @@ public final class RobotApiProtos {
               java.lang.String s = input.readStringRequireUtf8();
 
               ordNo_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              text_ = s;
               break;
             }
           }
@@ -2869,6 +3063,48 @@ public final class RobotApiProtos {
       }
     }
 
+    public static final int TEXT_FIELD_NUMBER = 2;
+    private volatile java.lang.Object text_;
+    /**
+     * <code>optional string text = 2;</code>
+     *
+     * <pre>
+     *抽奖活动标题
+     * </pre>
+     */
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        text_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string text = 2;</code>
+     *
+     * <pre>
+     *抽奖活动标题
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getTextBytes() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        text_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -2884,6 +3120,9 @@ public final class RobotApiProtos {
       if (!getOrdNoBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessage.writeString(output, 1, ordNo_);
       }
+      if (!getTextBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, text_);
+      }
     }
 
     public int getSerializedSize() {
@@ -2893,6 +3132,9 @@ public final class RobotApiProtos {
       size = 0;
       if (!getOrdNoBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(1, ordNo_);
+      }
+      if (!getTextBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, text_);
       }
       memoizedSize = size;
       return size;
@@ -3011,6 +3253,8 @@ public final class RobotApiProtos {
         super.clear();
         ordNo_ = "";
 
+        text_ = "";
+
         return this;
       }
 
@@ -3034,6 +3278,7 @@ public final class RobotApiProtos {
       public com.blemobi.sep.probuf.RobotApiProtos.PBLotteryNotifyMsg buildPartial() {
         com.blemobi.sep.probuf.RobotApiProtos.PBLotteryNotifyMsg result = new com.blemobi.sep.probuf.RobotApiProtos.PBLotteryNotifyMsg(this);
         result.ordNo_ = ordNo_;
+        result.text_ = text_;
         onBuilt();
         return result;
       }
@@ -3051,6 +3296,10 @@ public final class RobotApiProtos {
         if (other == com.blemobi.sep.probuf.RobotApiProtos.PBLotteryNotifyMsg.getDefaultInstance()) return this;
         if (!other.getOrdNo().isEmpty()) {
           ordNo_ = other.ordNo_;
+          onChanged();
+        }
+        if (!other.getText().isEmpty()) {
+          text_ = other.text_;
           onChanged();
         }
         onChanged();
@@ -3164,6 +3413,95 @@ public final class RobotApiProtos {
   checkByteStringIsUtf8(value);
         
         ordNo_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object text_ = "";
+      /**
+       * <code>optional string text = 2;</code>
+       *
+       * <pre>
+       *抽奖活动标题
+       * </pre>
+       */
+      public java.lang.String getText() {
+        java.lang.Object ref = text_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          text_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string text = 2;</code>
+       *
+       * <pre>
+       *抽奖活动标题
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getTextBytes() {
+        java.lang.Object ref = text_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          text_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string text = 2;</code>
+       *
+       * <pre>
+       *抽奖活动标题
+       * </pre>
+       */
+      public Builder setText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        text_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string text = 2;</code>
+       *
+       * <pre>
+       *抽奖活动标题
+       * </pre>
+       */
+      public Builder clearText() {
+        
+        text_ = getDefaultInstance().getText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string text = 2;</code>
+       *
+       * <pre>
+       *抽奖活动标题
+       * </pre>
+       */
+      public Builder setTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        text_ = value;
         onChanged();
         return this;
       }
@@ -7208,34 +7546,34 @@ public final class RobotApiProtos {
       " \001(\t\022\014\n\004type\030\002 \001(\t\022\016\n\006offset\030\003 \001(\003\022\r\n\005co" +
       "unt\030\004 \001(\003\"1\n\022PRemindDeleteParam\022\014\n\004uuid\030" +
       "\001 \001(\t\022\r\n\005msgId\030\002 \001(\t\"2\n\016PMsgStateQuery\022\014" +
-      "\n\004uuid\030\001 \001(\t\022\022\n\ncelebritys\030\002 \003(\t\"%\n\024PBRe" +
-      "dPacketNotifyMsg\022\r\n\005ordNo\030\001 \001(\t\"#\n\022PBLot" +
-      "teryNotifyMsg\022\r\n\005ordNo\030\001 \001(\t\"\240\001\n\022PRobotR" +
-      "awNotifyMsg\022*\n\tstreaming\030\001 \001(\0132\027.bbproto",
-      ".PStreamingLive\022,\n\007lottery\030\002 \001(\0132\033.bbpro" +
-      "to.PBLotteryNotifyMsg\0220\n\tredpacket\030\003 \001(\013" +
-      "2\035.bbproto.PBRedPacketNotifyMsg\"\203\001\n\017PRob" +
-      "otNotifyMsg\022\n\n\002to\030\001 \003(\t\022\014\n\004from\030\002 \001(\t\022(\n" +
-      "\007msgType\030\003 \001(\0162\027.bbproto.ERobotPushType\022" +
-      ",\n\007content\030\004 \001(\0132\033.bbproto.PRobotRawNoti" +
-      "fyMsg\"=\n\023PRobotNotifyMsgList\022&\n\004list\030\001 \003" +
-      "(\0132\030.bbproto.PRobotNotifyMsg\"3\n\016PPayOrde" +
-      "rParma\022\021\n\tserviceNo\030\001 \001(\005\022\016\n\006amount\030\002 \001(" +
-      "\005\"3\n\021PMsgNumLimitParma\022\013\n\003num\030\001 \001(\005\022\021\n\tc",
-      "elebrity\030\002 \001(\t2\320\003\n\nIGrpcRobot\022B\n\023GrpcSet" +
-      "MsgNumPerDay\022\032.bbproto.PMsgNumLimitParma" +
-      "\032\017.bbproto.PEmpty\022D\n\023GrpcGetMsgNumPerDay" +
-      "\022\026.bbproto.PStringSingle\032\025.bbproto.PInt3" +
-      "2Single\0226\n\020GrpcCreateRemind\022\021.bbproto.PB" +
-      "Remind\032\017.bbproto.PEmpty\022=\n\rGrpcGetRemind" +
-      "\022\025.bbproto.PRemindQuery\032\025.bbproto.PBRemi" +
-      "ndList\022@\n\020GrpcDeleteRemind\022\033.bbproto.PRe" +
-      "mindDeleteParam\032\017.bbproto.PEmpty\0229\n\010Grpc" +
-      "Push\022\034.bbproto.PRobotNotifyMsgList\032\017.bbp",
-      "roto.PEmpty\022D\n\021GrpcGenerateOrder\022\027.bbpro" +
-      "to.PPayOrderParma\032\026.bbproto.PStringSingl" +
-      "eB(\n\026com.blemobi.sep.probufB\016RobotApiPro" +
-      "tosb\006proto3"
+      "\n\004uuid\030\001 \001(\t\022\022\n\ncelebritys\030\002 \003(\t\"3\n\024PBRe" +
+      "dPacketNotifyMsg\022\r\n\005ordNo\030\001 \001(\t\022\014\n\004text\030" +
+      "\002 \001(\t\"1\n\022PBLotteryNotifyMsg\022\r\n\005ordNo\030\001 \001" +
+      "(\t\022\014\n\004text\030\002 \001(\t\"\240\001\n\022PRobotRawNotifyMsg\022",
+      "*\n\tstreaming\030\001 \001(\0132\027.bbproto.PStreamingL" +
+      "ive\022,\n\007lottery\030\002 \001(\0132\033.bbproto.PBLottery" +
+      "NotifyMsg\0220\n\tredpacket\030\003 \001(\0132\035.bbproto.P" +
+      "BRedPacketNotifyMsg\"\203\001\n\017PRobotNotifyMsg\022" +
+      "\n\n\002to\030\001 \003(\t\022\014\n\004from\030\002 \001(\t\022(\n\007msgType\030\003 \001" +
+      "(\0162\027.bbproto.ERobotPushType\022,\n\007content\030\004" +
+      " \001(\0132\033.bbproto.PRobotRawNotifyMsg\"=\n\023PRo" +
+      "botNotifyMsgList\022&\n\004list\030\001 \003(\0132\030.bbproto" +
+      ".PRobotNotifyMsg\"3\n\016PPayOrderParma\022\021\n\tse" +
+      "rviceNo\030\001 \001(\005\022\016\n\006amount\030\002 \001(\005\"3\n\021PMsgNum",
+      "LimitParma\022\013\n\003num\030\001 \001(\005\022\021\n\tcelebrity\030\002 \001" +
+      "(\t2\320\003\n\nIGrpcRobot\022B\n\023GrpcSetMsgNumPerDay" +
+      "\022\032.bbproto.PMsgNumLimitParma\032\017.bbproto.P" +
+      "Empty\022D\n\023GrpcGetMsgNumPerDay\022\026.bbproto.P" +
+      "StringSingle\032\025.bbproto.PInt32Single\0226\n\020G" +
+      "rpcCreateRemind\022\021.bbproto.PBRemind\032\017.bbp" +
+      "roto.PEmpty\022=\n\rGrpcGetRemind\022\025.bbproto.P" +
+      "RemindQuery\032\025.bbproto.PBRemindList\022@\n\020Gr" +
+      "pcDeleteRemind\022\033.bbproto.PRemindDeletePa" +
+      "ram\032\017.bbproto.PEmpty\0229\n\010GrpcPush\022\034.bbpro",
+      "to.PRobotNotifyMsgList\032\017.bbproto.PEmpty\022" +
+      "D\n\021GrpcGenerateOrder\022\027.bbproto.PPayOrder" +
+      "Parma\032\026.bbproto.PStringSingleB(\n\026com.ble" +
+      "mobi.sep.probufB\016RobotApiProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7276,13 +7614,13 @@ public final class RobotApiProtos {
     internal_static_bbproto_PBRedPacketNotifyMsg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PBRedPacketNotifyMsg_descriptor,
-        new java.lang.String[] { "OrdNo", });
+        new java.lang.String[] { "OrdNo", "Text", });
     internal_static_bbproto_PBLotteryNotifyMsg_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_bbproto_PBLotteryNotifyMsg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PBLotteryNotifyMsg_descriptor,
-        new java.lang.String[] { "OrdNo", });
+        new java.lang.String[] { "OrdNo", "Text", });
     internal_static_bbproto_PRobotRawNotifyMsg_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_bbproto_PRobotRawNotifyMsg_fieldAccessorTable = new
