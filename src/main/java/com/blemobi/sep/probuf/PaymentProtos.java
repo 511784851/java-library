@@ -25440,6 +25440,1483 @@ public final class PaymentProtos {
 
   }
 
+  public interface PWinLotteryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PWinLottery)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string lotteryId = 1;</code>
+     *
+     * <pre>
+     *抽奖包ID
+     * </pre>
+     */
+    java.lang.String getLotteryId();
+    /**
+     * <code>optional string lotteryId = 1;</code>
+     *
+     * <pre>
+     *抽奖包ID
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getLotteryIdBytes();
+
+    /**
+     * <code>optional string sendUuid = 2;</code>
+     *
+     * <pre>
+     *发送放uuid
+     * </pre>
+     */
+    java.lang.String getSendUuid();
+    /**
+     * <code>optional string sendUuid = 2;</code>
+     *
+     * <pre>
+     *发送放uuid
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getSendUuidBytes();
+
+    /**
+     * <code>optional string sendNickNm = 3;</code>
+     *
+     * <pre>
+     *发送者昵称
+     * </pre>
+     */
+    java.lang.String getSendNickNm();
+    /**
+     * <code>optional string sendNickNm = 3;</code>
+     *
+     * <pre>
+     *发送者昵称
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getSendNickNmBytes();
+
+    /**
+     * <code>optional string title = 4;</code>
+     *
+     * <pre>
+     *标题
+     * </pre>
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>optional string title = 4;</code>
+     *
+     * <pre>
+     *标题
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>optional int64 crtTm = 5;</code>
+     *
+     * <pre>
+     *抽奖创建时间
+     * </pre>
+     */
+    long getCrtTm();
+
+    /**
+     * <code>optional int64 accTm = 6;</code>
+     *
+     * <pre>
+     *领奖时间
+     * </pre>
+     */
+    long getAccTm();
+
+    /**
+     * <code>optional string remark = 7;</code>
+     *
+     * <pre>
+     *描述
+     * </pre>
+     */
+    java.lang.String getRemark();
+    /**
+     * <code>optional string remark = 7;</code>
+     *
+     * <pre>
+     *描述
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getRemarkBytes();
+
+    /**
+     * <code>optional int32 bonus = 8;</code>
+     *
+     * <pre>
+     *的奖金（分）
+     * </pre>
+     */
+    int getBonus();
+
+    /**
+     * <code>optional int32 status = 9;</code>
+     *
+     * <pre>
+     *状态 （0:还未领奖 1:已领奖 2:已过期）
+     * </pre>
+     */
+    int getStatus();
+  }
+  /**
+   * Protobuf type {@code bbproto.PWinLottery}
+   */
+  public  static final class PWinLottery extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PWinLottery)
+      PWinLotteryOrBuilder {
+    // Use PWinLottery.newBuilder() to construct.
+    private PWinLottery(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PWinLottery() {
+      lotteryId_ = "";
+      sendUuid_ = "";
+      sendNickNm_ = "";
+      title_ = "";
+      crtTm_ = 0L;
+      accTm_ = 0L;
+      remark_ = "";
+      bonus_ = 0;
+      status_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PWinLottery(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              lotteryId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              sendUuid_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              sendNickNm_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              title_ = s;
+              break;
+            }
+            case 40: {
+
+              crtTm_ = input.readInt64();
+              break;
+            }
+            case 48: {
+
+              accTm_ = input.readInt64();
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              remark_ = s;
+              break;
+            }
+            case 64: {
+
+              bonus_ = input.readInt32();
+              break;
+            }
+            case 72: {
+
+              status_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PWinLottery_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PWinLottery_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.PaymentProtos.PWinLottery.class, com.blemobi.sep.probuf.PaymentProtos.PWinLottery.Builder.class);
+    }
+
+    public static final int LOTTERYID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object lotteryId_;
+    /**
+     * <code>optional string lotteryId = 1;</code>
+     *
+     * <pre>
+     *抽奖包ID
+     * </pre>
+     */
+    public java.lang.String getLotteryId() {
+      java.lang.Object ref = lotteryId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        lotteryId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string lotteryId = 1;</code>
+     *
+     * <pre>
+     *抽奖包ID
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getLotteryIdBytes() {
+      java.lang.Object ref = lotteryId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        lotteryId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SENDUUID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object sendUuid_;
+    /**
+     * <code>optional string sendUuid = 2;</code>
+     *
+     * <pre>
+     *发送放uuid
+     * </pre>
+     */
+    public java.lang.String getSendUuid() {
+      java.lang.Object ref = sendUuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sendUuid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string sendUuid = 2;</code>
+     *
+     * <pre>
+     *发送放uuid
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getSendUuidBytes() {
+      java.lang.Object ref = sendUuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sendUuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SENDNICKNM_FIELD_NUMBER = 3;
+    private volatile java.lang.Object sendNickNm_;
+    /**
+     * <code>optional string sendNickNm = 3;</code>
+     *
+     * <pre>
+     *发送者昵称
+     * </pre>
+     */
+    public java.lang.String getSendNickNm() {
+      java.lang.Object ref = sendNickNm_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sendNickNm_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string sendNickNm = 3;</code>
+     *
+     * <pre>
+     *发送者昵称
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getSendNickNmBytes() {
+      java.lang.Object ref = sendNickNm_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sendNickNm_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object title_;
+    /**
+     * <code>optional string title = 4;</code>
+     *
+     * <pre>
+     *标题
+     * </pre>
+     */
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string title = 4;</code>
+     *
+     * <pre>
+     *标题
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CRTTM_FIELD_NUMBER = 5;
+    private long crtTm_;
+    /**
+     * <code>optional int64 crtTm = 5;</code>
+     *
+     * <pre>
+     *抽奖创建时间
+     * </pre>
+     */
+    public long getCrtTm() {
+      return crtTm_;
+    }
+
+    public static final int ACCTM_FIELD_NUMBER = 6;
+    private long accTm_;
+    /**
+     * <code>optional int64 accTm = 6;</code>
+     *
+     * <pre>
+     *领奖时间
+     * </pre>
+     */
+    public long getAccTm() {
+      return accTm_;
+    }
+
+    public static final int REMARK_FIELD_NUMBER = 7;
+    private volatile java.lang.Object remark_;
+    /**
+     * <code>optional string remark = 7;</code>
+     *
+     * <pre>
+     *描述
+     * </pre>
+     */
+    public java.lang.String getRemark() {
+      java.lang.Object ref = remark_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        remark_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string remark = 7;</code>
+     *
+     * <pre>
+     *描述
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getRemarkBytes() {
+      java.lang.Object ref = remark_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        remark_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BONUS_FIELD_NUMBER = 8;
+    private int bonus_;
+    /**
+     * <code>optional int32 bonus = 8;</code>
+     *
+     * <pre>
+     *的奖金（分）
+     * </pre>
+     */
+    public int getBonus() {
+      return bonus_;
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 9;
+    private int status_;
+    /**
+     * <code>optional int32 status = 9;</code>
+     *
+     * <pre>
+     *状态 （0:还未领奖 1:已领奖 2:已过期）
+     * </pre>
+     */
+    public int getStatus() {
+      return status_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getLotteryIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, lotteryId_);
+      }
+      if (!getSendUuidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, sendUuid_);
+      }
+      if (!getSendNickNmBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, sendNickNm_);
+      }
+      if (!getTitleBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, title_);
+      }
+      if (crtTm_ != 0L) {
+        output.writeInt64(5, crtTm_);
+      }
+      if (accTm_ != 0L) {
+        output.writeInt64(6, accTm_);
+      }
+      if (!getRemarkBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 7, remark_);
+      }
+      if (bonus_ != 0) {
+        output.writeInt32(8, bonus_);
+      }
+      if (status_ != 0) {
+        output.writeInt32(9, status_);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getLotteryIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, lotteryId_);
+      }
+      if (!getSendUuidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, sendUuid_);
+      }
+      if (!getSendNickNmBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, sendNickNm_);
+      }
+      if (!getTitleBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, title_);
+      }
+      if (crtTm_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, crtTm_);
+      }
+      if (accTm_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, accTm_);
+      }
+      if (!getRemarkBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, remark_);
+      }
+      if (bonus_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(8, bonus_);
+      }
+      if (status_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(9, status_);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.PaymentProtos.PWinLottery parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PWinLottery parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PWinLottery parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PWinLottery parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PWinLottery parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PWinLottery parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PWinLottery parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PWinLottery parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PWinLottery parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.PaymentProtos.PWinLottery parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.PaymentProtos.PWinLottery prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PWinLottery}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PWinLottery)
+        com.blemobi.sep.probuf.PaymentProtos.PWinLotteryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PWinLottery_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PWinLottery_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.PaymentProtos.PWinLottery.class, com.blemobi.sep.probuf.PaymentProtos.PWinLottery.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.PaymentProtos.PWinLottery.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        lotteryId_ = "";
+
+        sendUuid_ = "";
+
+        sendNickNm_ = "";
+
+        title_ = "";
+
+        crtTm_ = 0L;
+
+        accTm_ = 0L;
+
+        remark_ = "";
+
+        bonus_ = 0;
+
+        status_ = 0;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.internal_static_bbproto_PWinLottery_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PWinLottery getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.PaymentProtos.PWinLottery.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PWinLottery build() {
+        com.blemobi.sep.probuf.PaymentProtos.PWinLottery result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.PaymentProtos.PWinLottery buildPartial() {
+        com.blemobi.sep.probuf.PaymentProtos.PWinLottery result = new com.blemobi.sep.probuf.PaymentProtos.PWinLottery(this);
+        result.lotteryId_ = lotteryId_;
+        result.sendUuid_ = sendUuid_;
+        result.sendNickNm_ = sendNickNm_;
+        result.title_ = title_;
+        result.crtTm_ = crtTm_;
+        result.accTm_ = accTm_;
+        result.remark_ = remark_;
+        result.bonus_ = bonus_;
+        result.status_ = status_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.PaymentProtos.PWinLottery) {
+          return mergeFrom((com.blemobi.sep.probuf.PaymentProtos.PWinLottery)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.PaymentProtos.PWinLottery other) {
+        if (other == com.blemobi.sep.probuf.PaymentProtos.PWinLottery.getDefaultInstance()) return this;
+        if (!other.getLotteryId().isEmpty()) {
+          lotteryId_ = other.lotteryId_;
+          onChanged();
+        }
+        if (!other.getSendUuid().isEmpty()) {
+          sendUuid_ = other.sendUuid_;
+          onChanged();
+        }
+        if (!other.getSendNickNm().isEmpty()) {
+          sendNickNm_ = other.sendNickNm_;
+          onChanged();
+        }
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          onChanged();
+        }
+        if (other.getCrtTm() != 0L) {
+          setCrtTm(other.getCrtTm());
+        }
+        if (other.getAccTm() != 0L) {
+          setAccTm(other.getAccTm());
+        }
+        if (!other.getRemark().isEmpty()) {
+          remark_ = other.remark_;
+          onChanged();
+        }
+        if (other.getBonus() != 0) {
+          setBonus(other.getBonus());
+        }
+        if (other.getStatus() != 0) {
+          setStatus(other.getStatus());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.PaymentProtos.PWinLottery parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.PaymentProtos.PWinLottery) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object lotteryId_ = "";
+      /**
+       * <code>optional string lotteryId = 1;</code>
+       *
+       * <pre>
+       *抽奖包ID
+       * </pre>
+       */
+      public java.lang.String getLotteryId() {
+        java.lang.Object ref = lotteryId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          lotteryId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string lotteryId = 1;</code>
+       *
+       * <pre>
+       *抽奖包ID
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getLotteryIdBytes() {
+        java.lang.Object ref = lotteryId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          lotteryId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string lotteryId = 1;</code>
+       *
+       * <pre>
+       *抽奖包ID
+       * </pre>
+       */
+      public Builder setLotteryId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        lotteryId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string lotteryId = 1;</code>
+       *
+       * <pre>
+       *抽奖包ID
+       * </pre>
+       */
+      public Builder clearLotteryId() {
+        
+        lotteryId_ = getDefaultInstance().getLotteryId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string lotteryId = 1;</code>
+       *
+       * <pre>
+       *抽奖包ID
+       * </pre>
+       */
+      public Builder setLotteryIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        lotteryId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sendUuid_ = "";
+      /**
+       * <code>optional string sendUuid = 2;</code>
+       *
+       * <pre>
+       *发送放uuid
+       * </pre>
+       */
+      public java.lang.String getSendUuid() {
+        java.lang.Object ref = sendUuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sendUuid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string sendUuid = 2;</code>
+       *
+       * <pre>
+       *发送放uuid
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getSendUuidBytes() {
+        java.lang.Object ref = sendUuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sendUuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string sendUuid = 2;</code>
+       *
+       * <pre>
+       *发送放uuid
+       * </pre>
+       */
+      public Builder setSendUuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        sendUuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string sendUuid = 2;</code>
+       *
+       * <pre>
+       *发送放uuid
+       * </pre>
+       */
+      public Builder clearSendUuid() {
+        
+        sendUuid_ = getDefaultInstance().getSendUuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string sendUuid = 2;</code>
+       *
+       * <pre>
+       *发送放uuid
+       * </pre>
+       */
+      public Builder setSendUuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        sendUuid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sendNickNm_ = "";
+      /**
+       * <code>optional string sendNickNm = 3;</code>
+       *
+       * <pre>
+       *发送者昵称
+       * </pre>
+       */
+      public java.lang.String getSendNickNm() {
+        java.lang.Object ref = sendNickNm_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sendNickNm_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string sendNickNm = 3;</code>
+       *
+       * <pre>
+       *发送者昵称
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getSendNickNmBytes() {
+        java.lang.Object ref = sendNickNm_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sendNickNm_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string sendNickNm = 3;</code>
+       *
+       * <pre>
+       *发送者昵称
+       * </pre>
+       */
+      public Builder setSendNickNm(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        sendNickNm_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string sendNickNm = 3;</code>
+       *
+       * <pre>
+       *发送者昵称
+       * </pre>
+       */
+      public Builder clearSendNickNm() {
+        
+        sendNickNm_ = getDefaultInstance().getSendNickNm();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string sendNickNm = 3;</code>
+       *
+       * <pre>
+       *发送者昵称
+       * </pre>
+       */
+      public Builder setSendNickNmBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        sendNickNm_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>optional string title = 4;</code>
+       *
+       * <pre>
+       *标题
+       * </pre>
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string title = 4;</code>
+       *
+       * <pre>
+       *标题
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string title = 4;</code>
+       *
+       * <pre>
+       *标题
+       * </pre>
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        title_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string title = 4;</code>
+       *
+       * <pre>
+       *标题
+       * </pre>
+       */
+      public Builder clearTitle() {
+        
+        title_ = getDefaultInstance().getTitle();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string title = 4;</code>
+       *
+       * <pre>
+       *标题
+       * </pre>
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        title_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long crtTm_ ;
+      /**
+       * <code>optional int64 crtTm = 5;</code>
+       *
+       * <pre>
+       *抽奖创建时间
+       * </pre>
+       */
+      public long getCrtTm() {
+        return crtTm_;
+      }
+      /**
+       * <code>optional int64 crtTm = 5;</code>
+       *
+       * <pre>
+       *抽奖创建时间
+       * </pre>
+       */
+      public Builder setCrtTm(long value) {
+        
+        crtTm_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 crtTm = 5;</code>
+       *
+       * <pre>
+       *抽奖创建时间
+       * </pre>
+       */
+      public Builder clearCrtTm() {
+        
+        crtTm_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long accTm_ ;
+      /**
+       * <code>optional int64 accTm = 6;</code>
+       *
+       * <pre>
+       *领奖时间
+       * </pre>
+       */
+      public long getAccTm() {
+        return accTm_;
+      }
+      /**
+       * <code>optional int64 accTm = 6;</code>
+       *
+       * <pre>
+       *领奖时间
+       * </pre>
+       */
+      public Builder setAccTm(long value) {
+        
+        accTm_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 accTm = 6;</code>
+       *
+       * <pre>
+       *领奖时间
+       * </pre>
+       */
+      public Builder clearAccTm() {
+        
+        accTm_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object remark_ = "";
+      /**
+       * <code>optional string remark = 7;</code>
+       *
+       * <pre>
+       *描述
+       * </pre>
+       */
+      public java.lang.String getRemark() {
+        java.lang.Object ref = remark_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          remark_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string remark = 7;</code>
+       *
+       * <pre>
+       *描述
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getRemarkBytes() {
+        java.lang.Object ref = remark_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          remark_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string remark = 7;</code>
+       *
+       * <pre>
+       *描述
+       * </pre>
+       */
+      public Builder setRemark(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        remark_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string remark = 7;</code>
+       *
+       * <pre>
+       *描述
+       * </pre>
+       */
+      public Builder clearRemark() {
+        
+        remark_ = getDefaultInstance().getRemark();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string remark = 7;</code>
+       *
+       * <pre>
+       *描述
+       * </pre>
+       */
+      public Builder setRemarkBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        remark_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int bonus_ ;
+      /**
+       * <code>optional int32 bonus = 8;</code>
+       *
+       * <pre>
+       *的奖金（分）
+       * </pre>
+       */
+      public int getBonus() {
+        return bonus_;
+      }
+      /**
+       * <code>optional int32 bonus = 8;</code>
+       *
+       * <pre>
+       *的奖金（分）
+       * </pre>
+       */
+      public Builder setBonus(int value) {
+        
+        bonus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 bonus = 8;</code>
+       *
+       * <pre>
+       *的奖金（分）
+       * </pre>
+       */
+      public Builder clearBonus() {
+        
+        bonus_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int status_ ;
+      /**
+       * <code>optional int32 status = 9;</code>
+       *
+       * <pre>
+       *状态 （0:还未领奖 1:已领奖 2:已过期）
+       * </pre>
+       */
+      public int getStatus() {
+        return status_;
+      }
+      /**
+       * <code>optional int32 status = 9;</code>
+       *
+       * <pre>
+       *状态 （0:还未领奖 1:已领奖 2:已过期）
+       * </pre>
+       */
+      public Builder setStatus(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 status = 9;</code>
+       *
+       * <pre>
+       *状态 （0:还未领奖 1:已领奖 2:已过期）
+       * </pre>
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PWinLottery)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PWinLottery)
+    private static final com.blemobi.sep.probuf.PaymentProtos.PWinLottery DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.PaymentProtos.PWinLottery();
+    }
+
+    public static com.blemobi.sep.probuf.PaymentProtos.PWinLottery getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PWinLottery>
+        PARSER = new com.google.protobuf.AbstractParser<PWinLottery>() {
+      public PWinLottery parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PWinLottery(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<PWinLottery> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PWinLottery> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.PaymentProtos.PWinLottery getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_bbproto_POrderPay_descriptor;
   private static
@@ -25560,6 +27037,11 @@ public final class PaymentProtos {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_bbproto_PLotteryDel_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PWinLottery_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PWinLottery_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -25636,8 +27118,12 @@ public final class PaymentProtos {
       "rBaseEx\022 \n\004info\030\001 \001(\0132\022.bbproto.PUserBas" +
       "e\022\016\n\006gender\030\002 \001(\005\022\013\n\003amt\030\003 \001(\005\022\016\n\006region" +
       "\030\004 \001(\t\" \n\013PLotteryDel\022\021\n\tlotteryId\030\001 \003(\t" +
-      "B\'\n\026com.blemobi.sep.probufB\rPaymentProto" +
-      "sb\006proto3"
+      "\"\242\001\n\013PWinLottery\022\021\n\tlotteryId\030\001 \001(\t\022\020\n\010s" +
+      "endUuid\030\002 \001(\t\022\022\n\nsendNickNm\030\003 \001(\t\022\r\n\005tit" +
+      "le\030\004 \001(\t\022\r\n\005crtTm\030\005 \001(\003\022\r\n\005accTm\030\006 \001(\003\022\016",
+      "\n\006remark\030\007 \001(\t\022\r\n\005bonus\030\010 \001(\005\022\016\n\006status\030" +
+      "\t \001(\005B\'\n\026com.blemobi.sep.probufB\rPayment" +
+      "Protosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -25796,6 +27282,12 @@ public final class PaymentProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PLotteryDel_descriptor,
         new java.lang.String[] { "LotteryId", });
+    internal_static_bbproto_PWinLottery_descriptor =
+      getDescriptor().getMessageTypes().get(24);
+    internal_static_bbproto_PWinLottery_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PWinLottery_descriptor,
+        new java.lang.String[] { "LotteryId", "SendUuid", "SendNickNm", "Title", "CrtTm", "AccTm", "Remark", "Bonus", "Status", });
     com.blemobi.sep.probuf.AccountProtos.getDescriptor();
   }
 

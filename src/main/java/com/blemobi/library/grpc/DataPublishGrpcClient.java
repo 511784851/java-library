@@ -26,10 +26,11 @@ import java.util.List;
 import com.blemobi.sep.grpc.grpcDataPublishingGrpc;
 import com.blemobi.sep.grpc.grpcDataPublishingGrpc.grpcDataPublishingBlockingStub;
 import com.blemobi.sep.probuf.DataPublishingApiProtos;
-import com.blemobi.sep.probuf.DataPublishingProtos;
-import com.blemobi.sep.probuf.ResultProtos;
+import com.blemobi.sep.probuf.DataPublishingApiProtos.PFansSaveParam;
 import com.blemobi.sep.probuf.DataPublishingApiProtos.PGroupStringList;
 import com.blemobi.sep.probuf.DataPublishingApiProtos.PQueryUserParam;
+import com.blemobi.sep.probuf.DataPublishingProtos;
+import com.blemobi.sep.probuf.ResultProtos;
 
 /**
  * @ClassName DataPublishGrpcClient
@@ -70,6 +71,24 @@ public class DataPublishGrpcClient extends BaseGRPCClient {
 		saveParam.setKey(pKey);
 		saveParam.setTable(tableNm);
 		DataPublishingApiProtos.PFansSaveParam request = saveParam.build();
+		this.execute(request, new GrpcCallback<Boolean>() {
+			@Override
+			public Boolean doGrpcRequest() {
+				stub = grpcDataPublishingGrpc.newBlockingStub(channel);
+				stub.saveFans(request);
+				return true;
+			}
+		});
+		return true;
+	}
+
+	/**
+	 * 保存群红包接收用户
+	 * 
+	 * @param request
+	 * @return
+	 */
+	public Boolean saveFans(PFansSaveParam request) {
 		this.execute(request, new GrpcCallback<Boolean>() {
 			@Override
 			public Boolean doGrpcRequest() {
