@@ -35,6 +35,7 @@ import io.grpc.ForwardingClientCall.SimpleForwardingClientCall;
 import io.grpc.ForwardingClientCallListener.SimpleForwardingClientCallListener;
 import io.grpc.Metadata;
 import io.grpc.MethodDescriptor;
+import lombok.extern.log4j.Log4j;
 
 /**
  * @ClassName HeaderClientInterceptor
@@ -43,6 +44,7 @@ import io.grpc.MethodDescriptor;
  * @Date 2017年3月7日 上午9:57:57
  * @version 1.0.0
  */
+@Log4j
 public class HeaderClientInterceptor implements ClientInterceptor {
     private Map<String, List<String>> mHeaderMap;
     private static final String RET_HEADER_KEY = "x-request-error";
@@ -62,6 +64,7 @@ public class HeaderClientInterceptor implements ClientInterceptor {
                     for (String key : mHeaderMap.keySet()) {
                         Metadata.Key<String> customHeadKey = Metadata.Key.of(key, Metadata.ASCII_STRING_MARSHALLER);
                         List<String> valList = mHeaderMap.get(key);
+                        log.info("REQ:header:[" + key + "],VALUE:[" + StringUtils.join(valList, ",") + "]");
                         for(String val : valList){
                             headers.put(customHeadKey, val);
                         }
@@ -78,7 +81,9 @@ public class HeaderClientInterceptor implements ClientInterceptor {
                          */
                         Metadata.Key<String> customHeadKey = Metadata.Key.of(RET_HEADER_KEY, Metadata.ASCII_STRING_MARSHALLER);
                         String val = headers.get(customHeadKey);
+                        log.info("RESP:header:[" + customHeadKey.name() + "],VALUE:[" + val + "]");
                         if (!StringUtils.isEmpty(val) && !"0".equals(val)) {
+                            log.error("RESP-CD:[" + val + "]");
                             throw new GrpcException(Integer.parseInt(val), "request grpc api failed");
                         }
                     }
