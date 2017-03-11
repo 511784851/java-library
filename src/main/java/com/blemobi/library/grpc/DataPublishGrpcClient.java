@@ -25,12 +25,14 @@ import java.util.List;
 
 import com.blemobi.sep.grpc.grpcDataPublishingGrpc;
 import com.blemobi.sep.grpc.grpcDataPublishingGrpc.grpcDataPublishingBlockingStub;
-import com.blemobi.sep.probuf.DataPublishingApiProtos;
-import com.blemobi.sep.probuf.DataPublishingApiProtos.PFansSaveParam;
-import com.blemobi.sep.probuf.DataPublishingApiProtos.PGroupStringList;
-import com.blemobi.sep.probuf.DataPublishingApiProtos.PQueryUserParam;
 import com.blemobi.sep.probuf.DataPublishingProtos;
+import com.blemobi.sep.probuf.DatapublishingApiProtos.PFansSaveParam;
+import com.blemobi.sep.probuf.DatapublishingApiProtos.PGroupStringList;
+import com.blemobi.sep.probuf.DatapublishingApiProtos.PQueryUserParam;
+import com.blemobi.sep.probuf.DatapublishingApiProtos.PScrollResult;
 import com.blemobi.sep.probuf.ResultProtos;
+import com.blemobi.sep.probuf.ResultProtos.PStringList;
+import com.blemobi.sep.probuf.ResultProtos.PStringSingle;
 
 /**
  * @ClassName DataPublishGrpcClient
@@ -66,11 +68,11 @@ public class DataPublishGrpcClient extends BaseGRPCClient {
 		filterBuilder.setGender(gender);
 		filterBuilder.addAllRegion(region);
 		filterBuilder.setUuid(uuid);
-		DataPublishingApiProtos.PFansSaveParam.Builder saveParam = DataPublishingApiProtos.PFansSaveParam.newBuilder();
+		PFansSaveParam.Builder saveParam = PFansSaveParam.newBuilder();
 		saveParam.setFilter(filterBuilder.build());
 		saveParam.setKey(pKey);
 		saveParam.setTable(tableNm);
-		DataPublishingApiProtos.PFansSaveParam request = saveParam.build();
+		PFansSaveParam request = saveParam.build();
 		this.execute(request, new GrpcCallback<Boolean>() {
 			@Override
 			public Boolean doGrpcRequest() {
@@ -125,7 +127,7 @@ public class DataPublishGrpcClient extends BaseGRPCClient {
 			public List<String> doGrpcRequest() {
 				stub = grpcDataPublishingGrpc.newBlockingStub(channel);
 				List<String> innerList = new ArrayList<String>();
-				DataPublishingApiProtos.PScrollResult result = stub.selectFansWithSource(request);
+				PScrollResult result = stub.selectFansWithSource(request);
 				while (true) {
 					String cursor = result.getCursor();
 					List<String> idList = result.getIdList();
@@ -159,5 +161,17 @@ public class DataPublishGrpcClient extends BaseGRPCClient {
 			}
 		});
 		return groupStringList;
+	}
+
+	public PStringList SearchUser(PStringSingle request) {
+		PStringList stringList = this.execute(request, new GrpcCallback<PStringList>() {
+			@Override
+			public PStringList doGrpcRequest() {
+				stub = grpcDataPublishingGrpc.newBlockingStub(channel);
+				PStringList stringList = stub.searchUser(request);
+				return stringList;
+			}
+		});
+		return stringList;
 	}
 }
