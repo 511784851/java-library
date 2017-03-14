@@ -68,6 +68,7 @@ public class DataPublishGrpcClient extends BaseGRPCClient {
 		filterBuilder.setGender(gender);
 		filterBuilder.addAllRegion(region);
 		filterBuilder.setUuid(uuid);
+		filterBuilder.setSkipVO(true);
 		PFansSaveParam.Builder saveParam = PFansSaveParam.newBuilder();
 		saveParam.setFilter(filterBuilder.build());
 		saveParam.setKey(pKey);
@@ -119,6 +120,7 @@ public class DataPublishGrpcClient extends BaseGRPCClient {
 		builder.setGender(gender);
 		builder.addAllRegion(region);
 		builder.setUuid(uuid);
+		builder.setSkipVO(true);
 		DataPublishingProtos.PFansFilterParam request = builder.build();
 
 		list = this.execute(request, new GrpcCallback<List<String>>() {

@@ -14833,6 +14833,15 @@ public final class DataPublishingProtos {
      */
     com.google.protobuf.ByteString
         getSkipUuidBytes(int index);
+
+    /**
+     * <code>optional bool skipVO = 6;</code>
+     *
+     * <pre>
+     * 是否过滤掉VO
+     * </pre>
+     */
+    boolean getSkipVO();
   }
   /**
    * Protobuf type {@code bbproto.PFansFilterParam}
@@ -14851,6 +14860,7 @@ public final class DataPublishingProtos {
       region_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       negate_ = false;
       skipUuid_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      skipVO_ = false;
     }
 
     @java.lang.Override
@@ -14909,6 +14919,11 @@ public final class DataPublishingProtos {
                 mutable_bitField0_ |= 0x00000010;
               }
               skipUuid_.add(s);
+              break;
+            }
+            case 48: {
+
+              skipVO_ = input.readBool();
               break;
             }
           }
@@ -15100,6 +15115,19 @@ public final class DataPublishingProtos {
       return skipUuid_.getByteString(index);
     }
 
+    public static final int SKIPVO_FIELD_NUMBER = 6;
+    private boolean skipVO_;
+    /**
+     * <code>optional bool skipVO = 6;</code>
+     *
+     * <pre>
+     * 是否过滤掉VO
+     * </pre>
+     */
+    public boolean getSkipVO() {
+      return skipVO_;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -15126,6 +15154,9 @@ public final class DataPublishingProtos {
       }
       for (int i = 0; i < skipUuid_.size(); i++) {
         com.google.protobuf.GeneratedMessage.writeString(output, 5, skipUuid_.getRaw(i));
+      }
+      if (skipVO_ != false) {
+        output.writeBool(6, skipVO_);
       }
     }
 
@@ -15160,6 +15191,10 @@ public final class DataPublishingProtos {
         }
         size += dataSize;
         size += 1 * getSkipUuidList().size();
+      }
+      if (skipVO_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, skipVO_);
       }
       memoizedSize = size;
       return size;
@@ -15282,6 +15317,8 @@ public final class DataPublishingProtos {
 
         skipUuid_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000010);
+        skipVO_ = false;
+
         return this;
       }
 
@@ -15319,6 +15356,7 @@ public final class DataPublishingProtos {
           bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.skipUuid_ = skipUuid_;
+        result.skipVO_ = skipVO_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -15364,6 +15402,9 @@ public final class DataPublishingProtos {
             skipUuid_.addAll(other.skipUuid_);
           }
           onChanged();
+        }
+        if (other.getSkipVO() != false) {
+          setSkipVO(other.getSkipVO());
         }
         onChanged();
         return this;
@@ -15816,6 +15857,44 @@ public final class DataPublishingProtos {
         onChanged();
         return this;
       }
+
+      private boolean skipVO_ ;
+      /**
+       * <code>optional bool skipVO = 6;</code>
+       *
+       * <pre>
+       * 是否过滤掉VO
+       * </pre>
+       */
+      public boolean getSkipVO() {
+        return skipVO_;
+      }
+      /**
+       * <code>optional bool skipVO = 6;</code>
+       *
+       * <pre>
+       * 是否过滤掉VO
+       * </pre>
+       */
+      public Builder setSkipVO(boolean value) {
+        
+        skipVO_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool skipVO = 6;</code>
+       *
+       * <pre>
+       * 是否过滤掉VO
+       * </pre>
+       */
+      public Builder clearSkipVO() {
+        
+        skipVO_ = false;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return this;
@@ -15998,11 +16077,11 @@ public final class DataPublishingProtos {
       "\"|\n\tPDiscover\022\037\n\004user\030\001 \001(\0132\021.bbproto.PG" +
       "uyList\022.\n\tcommunity\030\002 \001(\0132\033.bbproto.PCom" +
       "munityBaseList\022\036\n\005topic\030\003 \001(\0132\017.bbproto." +
-      "PWords\"b\n\020PFansFilterParam\022\014\n\004uuid\030\001 \001(\t" +
+      "PWords\"r\n\020PFansFilterParam\022\014\n\004uuid\030\001 \001(\t" +
       "\022\016\n\006gender\030\002 \001(\005\022\016\n\006region\030\003 \003(\t\022\016\n\006nega" +
-      "te\030\004 \001(\010\022\020\n\010skipUuid\030\005 \003(\tB.\n\026com.blemob" +
-      "i.sep.probufB\024DataPublishingProtosb\006prot" +
-      "o3"
+      "te\030\004 \001(\010\022\020\n\010skipUuid\030\005 \003(\t\022\016\n\006skipVO\030\006 \001" +
+      "(\010B.\n\026com.blemobi.sep.probufB\024DataPublis" +
+      "hingProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -16113,7 +16192,7 @@ public final class DataPublishingProtos {
     internal_static_bbproto_PFansFilterParam_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PFansFilterParam_descriptor,
-        new java.lang.String[] { "Uuid", "Gender", "Region", "Negate", "SkipUuid", });
+        new java.lang.String[] { "Uuid", "Gender", "Region", "Negate", "SkipUuid", "SkipVO", });
     com.blemobi.sep.probuf.CommunityProtos.getDescriptor();
     com.blemobi.sep.probuf.NewsProtos.getDescriptor();
   }
