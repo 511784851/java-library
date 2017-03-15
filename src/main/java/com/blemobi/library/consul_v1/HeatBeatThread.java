@@ -57,7 +57,6 @@ public class HeatBeatThread implements Runnable {
                     String val = ConsulKVMgr.getValue(Constants.CONFIG_KV_KEY.getConfigKvKey(dync.val()));
                     if (values.containsKey(dync.val())) {
                         if (!values.get(dync.val()).equals(val)) {
-                            notify(dync, val);
                             log.debug("KEY:[" + dync.val() + "] orgVal:[" + values.get(dync.val()) + "] newVal:[" + val
                                     + "]");
                         } else {
@@ -65,6 +64,7 @@ public class HeatBeatThread implements Runnable {
                         }
 
                     }
+                    notify(dync, val);
                     values.put(dync.val(), val);
                 }
             }
