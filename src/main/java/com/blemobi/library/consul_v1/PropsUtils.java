@@ -1,0 +1,78 @@
+/******************************************************************
+ *
+ *    
+ *    Package:     com.blemobi.library.consul_v1
+ *
+ *    Filename:    PropsUtils.java
+ *
+ *    Description: TODO
+ *
+ *    @author:     HUNTER.POON
+ *
+ *    @version:    1.0.0
+ *
+ *    Create at:   2017年3月14日 下午12:09:37
+ *
+ *    Revision:
+ *
+ *    2017年3月14日 下午12:09:37
+ *
+ *****************************************************************/
+package com.blemobi.library.consul_v1;
+
+import org.apache.commons.lang3.StringUtils;
+
+/**
+ * @ClassName PropsUtils
+ * @Description TODO
+ * @author HUNTER.POON
+ * @Date 2017年3月14日 下午12:09:37
+ * @version 1.0.0
+ */
+public final class PropsUtils {
+
+    public static String getString(String key) {
+        if (ConsulClientMgr.ENV_TYPE.equalsIgnoreCase("local"))
+            return LocalProperties.getString(key);
+        key = Constants.CONFIG_KV_KEY.getConfigKvKey(key);
+        return ConsulKVMgr.getValue(key);
+    }
+    
+    public static Integer getInteger(String key) {
+        String strVal = getString(key);
+        if(StringUtils.isEmpty(strVal)){
+            return null;
+        }
+        return Integer.parseInt(strVal);
+    }
+    
+    public static Double getDouble(String key) {
+        String strVal = getString(key);
+        if(StringUtils.isEmpty(strVal)){
+            return null;
+        }
+        return Double.parseDouble(strVal);
+    }
+    
+    public static Float getFloat(String key) {
+        String strVal = getString(key);
+        if(StringUtils.isEmpty(strVal)){
+            return null;
+        }
+        return Float.parseFloat(strVal);
+    }
+    public static Boolean getBoolean(String key) {
+        String strVal = getString(key);
+        if(StringUtils.isEmpty(strVal)){
+            return null;
+        }
+        return Boolean.parseBoolean(strVal);
+    }
+    public static Long getLong(String key) {
+        String strVal = getString(key);
+        if(StringUtils.isEmpty(strVal)){
+            return null;
+        }
+        return Long.parseLong(strVal);
+    }
+}

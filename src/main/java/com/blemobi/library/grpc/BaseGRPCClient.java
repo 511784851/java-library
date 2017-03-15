@@ -25,8 +25,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.blemobi.library.consul.BaseService;
-import com.blemobi.library.consul.SocketInfo;
+import com.blemobi.library.consul_v1.ConsulServiceMgr;
+import com.blemobi.library.consul_v1.ServiceInfo;
 import com.blemobi.library.grpc.interceptor.HeaderClientInterceptor;
 import com.blemobi.library.jetty.JettyServer;
 import com.google.protobuf.GeneratedMessage;
@@ -59,9 +59,9 @@ public abstract class BaseGRPCClient {
     protected BaseGRPCClient(String remoteServerName) {
         this.remoteServerName = remoteServerName;
         List<String> hostInfo = new ArrayList<String>();
-        SocketInfo info = this.getSocketInfo(JettyServer.getServerName());
+        ServiceInfo info = this.getSocketInfo(JettyServer.getServerName());
         hostInfo.add(JettyServer.getServerName());
-        hostInfo.add(info.getIpAddr());
+        hostInfo.add(info.getAddr());
         headerMap.put(AUTH_KEY, hostInfo);
     }
     protected BaseGRPCClient(String remoteServerName, Map<String, List<String>> headMap) {
@@ -75,18 +75,17 @@ public abstract class BaseGRPCClient {
         log.info("initial finished");
         log.info("start do grpc request");
         T t = callback.doGrpcRequest();
-        log.info("finish grpc request:[" + t + "]");
+        //log.info("finish grpc request:[" + t + "]");
         destroy();
         log.info("destroy channel.");
         return t;
     }
     
     private void initial(){
-        SocketInfo info = getSocketInfo(remoteServerName);
-        int port = info.getPort() + 1000; 
-        log.info("HOST:[" + info.getIpAddr() + "] PORT:[" + port + "]");
+        ServiceInfo info = getGrpcSocketInfo(remoteServerName);
+        log.info("HOST:[" + info.getAddr() + "] PORT:[" + info.getPort() + "]");
         ClientInterceptor interceptor = new HeaderClientInterceptor(headerMap);
-        managedChannel = NettyChannelBuilder.forAddress(info.getIpAddr(), port).negotiationType(NegotiationType.PLAINTEXT).build();
+        managedChannel = NettyChannelBuilder.forAddress(info.getAddr(), info.getPort()).negotiationType(NegotiationType.PLAINTEXT).build();
         channel = ClientInterceptors.intercept(managedChannel, interceptor);
         log.info("CHANNEL:[" + channel + "]");
     }
@@ -99,8 +98,12 @@ public abstract class BaseGRPCClient {
     }
 
     
-    protected SocketInfo getSocketInfo(String nm){
-        return BaseService.getActiveServer(nm);
+    protected ServiceInfo getGrpcSocketInfo(String nm){
+        return ConsulServiceMgr.getHealthlyGRPCServiceByNm(nm);
+    }
+    
+    protected ServiceInfo getSocketInfo(String nm){
+        return ConsulServiceMgr.getHealthlyServiceByNm(nm);
     }
     
 }
