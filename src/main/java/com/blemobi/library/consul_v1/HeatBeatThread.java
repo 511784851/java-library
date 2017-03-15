@@ -52,7 +52,6 @@ public class HeatBeatThread implements Runnable {
     public void run() {
         try {
             while (true) {
-                Thread.sleep(millis);
                 for (Constants.CONSUL_KV_DYNC dync : Constants.CONSUL_KV_DYNC.values()) {
                     String val = ConsulKVMgr.getValue(Constants.CONFIG_KV_KEY.getConfigKvKey(dync.val()));
                     if (values.containsKey(dync.val())) {
@@ -66,7 +65,9 @@ public class HeatBeatThread implements Runnable {
                     }
                     notify(dync, val);
                     values.put(dync.val(), val);
+                    
                 }
+                Thread.sleep(millis);
             }
         } catch (InterruptedException e) {
             log.error("thread sleep failed", e);
