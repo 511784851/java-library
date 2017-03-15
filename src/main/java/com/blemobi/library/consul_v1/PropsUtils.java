@@ -22,6 +22,8 @@ package com.blemobi.library.consul_v1;
 
 import org.apache.commons.lang3.StringUtils;
 
+import lombok.extern.log4j.Log4j;
+
 /**
  * @ClassName PropsUtils
  * @Description TODO
@@ -29,13 +31,18 @@ import org.apache.commons.lang3.StringUtils;
  * @Date 2017年3月14日 下午12:09:37
  * @version 1.0.0
  */
+@Log4j
 public final class PropsUtils {
 
     public static String getString(String key) {
-        if (ConsulClientMgr.ENV_TYPE.equalsIgnoreCase("local"))
-            return LocalProperties.getString(key);
+        String val = null;
+        if (ConsulClientMgr.ENV_TYPE.equalsIgnoreCase("local")){
+            val = LocalProperties.getString(key);
+        }
         key = Constants.CONFIG_KV_KEY.getConfigKvKey(key);
-        return ConsulKVMgr.getValue(key);
+        val = ConsulKVMgr.getValue(key);
+        log.debug("key:" + key + ", value:" + val);
+        return val;
     }
     
     public static Integer getInteger(String key) {

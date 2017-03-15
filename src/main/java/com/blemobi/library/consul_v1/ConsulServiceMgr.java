@@ -29,6 +29,7 @@ import com.ecwid.consul.v1.ConsulClient;
 import com.ecwid.consul.v1.QueryParams;
 import com.ecwid.consul.v1.Response;
 import com.ecwid.consul.v1.agent.model.NewService;
+import com.ecwid.consul.v1.agent.model.Self.Config;
 import com.ecwid.consul.v1.health.model.HealthService;
 import com.ecwid.consul.v1.health.model.HealthService.Service;
 
@@ -46,6 +47,7 @@ public final class ConsulServiceMgr {
 
     private static NewService createService(final Integer port, final String serviceId, final String serviceNm,
             final List<String> tags) {
+        log.debug("create service begin");
         String host = getNodeAddr();
         log.info("host:[" + host + "]port:[" + port + "],serviceId[" + serviceId + "],serviceNm:[" + serviceNm + "],tags:["
                 + StringUtils.join(tags, ",") + "]");
@@ -60,8 +62,12 @@ public final class ConsulServiceMgr {
         return newService;
     }
     private static String getNodeAddr(){
+        log.debug("get node address");
         ConsulClient client = ConsulClientMgr.getConsulClient();
-        String addr = client.getAgentSelf().getValue().getConfig().getBindAddress();
+        log.debug("client:" + client);
+        Config config = client.getAgentSelf().getValue().getConfig();
+        log.debug("config:" + config);
+        String addr = config.getBindAddress();
         return addr;
     }
     
