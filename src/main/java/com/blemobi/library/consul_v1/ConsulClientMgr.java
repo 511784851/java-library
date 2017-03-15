@@ -92,11 +92,11 @@ public final class ConsulClientMgr {
         new Thread(new HeatBeatThread()).start();
     }
 
-    public static void initial(String[] args, String serviceNm) {
-        check(args, serviceNm);
+    public static void initial(String[] args, String serviceNm, String host) {
+        check(args, serviceNm, host);
     }
 
-    private static void check(String[] args, String serviceNm) {
+    private static void check(String[] args, String serviceNm, String host) {
         String env = checkStartMode(args);
         ENV_TYPE = env;
         if (env != null) {
@@ -118,7 +118,7 @@ public final class ConsulClientMgr {
                 printHelp();
                 System.exit(0);
             } else {
-                initial();
+                initial(host);
                 log.info("System starting with \"" + env + "\" mode.");
             }
         } else {
