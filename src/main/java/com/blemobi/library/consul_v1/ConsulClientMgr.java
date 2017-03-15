@@ -38,14 +38,16 @@ import lombok.extern.log4j.Log4j;
  */
 @Log4j
 public final class ConsulClientMgr {
-    public static String ENV_TYPE = "test";
+    private static String ENV_TYPE = "test";
     private static String HOST = "";
     private static Boolean IS_INITIAL = false;
     private static ConsulClient CLIENT = null;
     public static String getHost() {
         return HOST;
     }
-
+    public static String getENV_TYPE() {
+        return ENV_TYPE;
+    }
     /**
      * 定义系统启动的模式，分别有local，test，prod模式。 data[i][0]为模式名称，data[i][1]为描述. 系统启动时，分别从对应的Consul中获取对应的配置信息启动。
      */

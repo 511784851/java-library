@@ -62,7 +62,7 @@ public final class Constants {
     public static final class GRPC_KV_KEY {
 
         public static String getGRPCPortKey(String... param) {
-            String key = "blemobi/sep/global/" + ConsulClientMgr.ENV_TYPE + "/{0}_grpc_port";
+            String key = "blemobi/sep/global/" + ConsulClientMgr.getENV_TYPE() + "/{0}_grpc_port";
             int idx = 0;
             for (String s : param) {
                 key = key.replace("{" + idx + "}", s);
@@ -87,7 +87,7 @@ public final class Constants {
         public static final String REDIS_AUTH = "redis_user_auth";
         public static final String REDIS_CONNECT_NUM = "redis_max_connect_num";
         public static String getConfigKvKey(String... param) {
-            String key = "blemobi/sep/payment/" + ConsulClientMgr.ENV_TYPE + "/{0}";
+            String key = "blemobi/sep/payment/" + ConsulClientMgr.getENV_TYPE() + "/{0}";
             int idx = 0;
             for (String s : param) {
                 key = key.replace("{" + idx + "}", s);

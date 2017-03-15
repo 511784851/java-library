@@ -36,7 +36,7 @@ public final class PropsUtils {
 
     public static String getString(String key) {
         String val = null;
-        if (ConsulClientMgr.ENV_TYPE.equalsIgnoreCase("local")){
+        if (ConsulClientMgr.getENV_TYPE().equalsIgnoreCase("local")){
             val = LocalProperties.getString(key);
         }
         key = Constants.CONFIG_KV_KEY.getConfigKvKey(key);
