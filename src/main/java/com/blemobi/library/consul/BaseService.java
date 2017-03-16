@@ -184,7 +184,7 @@ public class BaseService {
 		}
 	}
 	static{
-		//ConsulManager.addConsulChangeListener(adapter);
+		ConsulManager.addConsulChangeListener(adapter);
 	}
 	
 }
