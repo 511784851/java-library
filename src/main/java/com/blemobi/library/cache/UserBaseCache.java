@@ -102,6 +102,6 @@ public class UserBaseCache {
 	private static PUserBase userToUserBase(PUser user) {
 		return PUserBase.newBuilder().setUUID(user.getUuid()).setNickname(user.getNickname())
 				.setHeadImgURL(user.getHeadImgURL()).setLevel(user.getLevelInfo().getLevelType())
-				.setLanguage(user.getLocale()).build();
+				.setLanguage(user.getLocale()).setGender(user.getGender()).build();
 	}
 }
