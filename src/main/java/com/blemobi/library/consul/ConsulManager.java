@@ -77,15 +77,7 @@ public class ConsulManager {
 //					int port = 8500;
 					log.info("Consul Server Addr=["+addr+"] Port=["+port+"]");
 					ConsulClient consulClient  = createConsul(addr, port);
-					
-					boolean check = checkConsulStat(consulClient,null);
-					if(!check){
-						log.info("Connect consul server throw an exception, System init fail!");
-			        	log.info("System exit!");
-			        	log.info("Good bye!");
-						System.exit(0);
-					}
-					
+
 		        	monitor = new ConsulMonitorThread(selfName,consulClient,consulLoopTime,listener,null);
 					monitor.start();
 					
@@ -95,22 +87,6 @@ public class ConsulManager {
 				System.exit(0);
 			}
 		}
-	}
-
-	/**
-	 * 系统启动时监测Consul服务器状态，做一次连接检查。
-	 * @param client 就是ConsulClient对象。
-	 * @param token 连接consul服务器的认证信息。
-	 */
-	private static boolean checkConsulStat(ConsulClient client,String token) {
-		try{
-			String KEY_PRE_FIX_CHAT = "blemobi/sep/chat/"+System.getProperty("EnvMode", "")+"/"; 
-			List<String> keys = (token==null)?client.getKVKeysOnly(KEY_PRE_FIX_CHAT).getValue():client.getKVKeysOnly(KEY_PRE_FIX_CHAT,null,token).getValue();
-			return keys.size()>0;
-		}catch(Exception e){
-			return false;
-		}
-		
 	}
 
 	/**
