@@ -103,6 +103,47 @@ public class DataPublishGrpcClient extends BaseGRPCClient {
 		return true;
 	}
 
+	public List<String> getFansByFilters(Integer gender, List<String> region, String uuid, final Integer length){
+	    List<String> list = new ArrayList<String>();
+        DataPublishingProtos.PFansFilterParam.Builder builder = DataPublishingProtos.PFansFilterParam.newBuilder();
+        builder.setGender(gender);
+        builder.addAllRegion(region);
+        builder.setUuid(uuid);
+        builder.setSkipVO(true);
+        DataPublishingProtos.PFansFilterParam request = builder.build();
+        list = this.execute(request, new GrpcCallback<List<String>>() {
+            @Override
+            public List<String> doGrpcRequest() {
+                stub = grpcDataPublishingGrpc.newBlockingStub(channel);
+                List<String> innerList = new ArrayList<String>();
+                PScrollResult result = stub.selectFansWithSource(request);
+                while (true) {
+                    String cursor = result.getCursor();
+                    List<String> idList = result.getIdList();
+                    if (idList == null || idList.isEmpty()) {
+                        break;
+                    }
+                    /*if(expList != null && !expList.isEmpty()){
+                        for(String s : idList){
+                            String uid = s.split(",")[0];
+                            if(expList.contains(uid)){
+                                idList.remove(s);
+                            }
+                        }
+                    }*/
+                    ResultProtos.PStringSingle single = ResultProtos.PStringSingle.newBuilder().setVal(cursor).build();
+                    result = stub.moreFansWithSource(single);
+                    innerList.addAll(idList);
+                    if(length <= innerList.size()){
+                        return innerList;
+                    }
+                }
+                return innerList;
+            }
+
+        });
+        return list;
+	}
 	/**
 	 * @Description 获取粉丝
 	 * @author HUNTER.POON
