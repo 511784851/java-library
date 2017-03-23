@@ -57,6 +57,30 @@ public final class RobotProtos {
      * </pre>
      */
     Stream(4, 4),
+    /**
+     * <code>LotteryRemind = 5;</code>
+     *
+     * <pre>
+     * 领奖提醒
+     * </pre>
+     */
+    LotteryRemind(5, 5),
+    /**
+     * <code>LotteryExpire = 6;</code>
+     *
+     * <pre>
+     * 抽奖过期提醒
+     * </pre>
+     */
+    LotteryExpire(6, 6),
+    /**
+     * <code>LotteryCourier = 7;</code>
+     *
+     * <pre>
+     * 领奖收货信息更新提醒
+     * </pre>
+     */
+    LotteryCourier(7, 7),
     UNRECOGNIZED(-1, -1),
     ;
 
@@ -100,6 +124,30 @@ public final class RobotProtos {
      * </pre>
      */
     public static final int Stream_VALUE = 4;
+    /**
+     * <code>LotteryRemind = 5;</code>
+     *
+     * <pre>
+     * 领奖提醒
+     * </pre>
+     */
+    public static final int LotteryRemind_VALUE = 5;
+    /**
+     * <code>LotteryExpire = 6;</code>
+     *
+     * <pre>
+     * 抽奖过期提醒
+     * </pre>
+     */
+    public static final int LotteryExpire_VALUE = 6;
+    /**
+     * <code>LotteryCourier = 7;</code>
+     *
+     * <pre>
+     * 领奖收货信息更新提醒
+     * </pre>
+     */
+    public static final int LotteryCourier_VALUE = 7;
 
 
     public final int getNumber() {
@@ -117,6 +165,9 @@ public final class RobotProtos {
         case 2: return Lottery;
         case 3: return RedPacket;
         case 4: return Stream;
+        case 5: return LotteryRemind;
+        case 6: return LotteryExpire;
+        case 7: return LotteryCourier;
         default: return null;
       }
     }
@@ -6472,22 +6523,22 @@ public final class RobotProtos {
         getOrdNoBytes();
 
     /**
-     * <code>optional string targetKey = 4;</code>
+     * <code>optional string text = 4;</code>
      *
      * <pre>
-     *红包参与者存储位置
+     *红包留言
      * </pre>
      */
-    java.lang.String getTargetKey();
+    java.lang.String getText();
     /**
-     * <code>optional string targetKey = 4;</code>
+     * <code>optional string text = 4;</code>
      *
      * <pre>
-     *红包参与者存储位置
+     *红包留言
      * </pre>
      */
     com.google.protobuf.ByteString
-        getTargetKeyBytes();
+        getTextBytes();
 
     /**
      * <code>optional int64 time = 5;</code>
@@ -6517,7 +6568,7 @@ public final class RobotProtos {
       id_ = 0L;
       from_ = "";
       ordNo_ = "";
-      targetKey_ = "";
+      text_ = "";
       time_ = 0L;
     }
 
@@ -6565,7 +6616,7 @@ public final class RobotProtos {
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              targetKey_ = s;
+              text_ = s;
               break;
             }
             case 40: {
@@ -6694,42 +6745,42 @@ public final class RobotProtos {
       }
     }
 
-    public static final int TARGETKEY_FIELD_NUMBER = 4;
-    private volatile java.lang.Object targetKey_;
+    public static final int TEXT_FIELD_NUMBER = 4;
+    private volatile java.lang.Object text_;
     /**
-     * <code>optional string targetKey = 4;</code>
+     * <code>optional string text = 4;</code>
      *
      * <pre>
-     *红包参与者存储位置
+     *红包留言
      * </pre>
      */
-    public java.lang.String getTargetKey() {
-      java.lang.Object ref = targetKey_;
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        targetKey_ = s;
+        text_ = s;
         return s;
       }
     }
     /**
-     * <code>optional string targetKey = 4;</code>
+     * <code>optional string text = 4;</code>
      *
      * <pre>
-     *红包参与者存储位置
+     *红包留言
      * </pre>
      */
     public com.google.protobuf.ByteString
-        getTargetKeyBytes() {
-      java.lang.Object ref = targetKey_;
+        getTextBytes() {
+      java.lang.Object ref = text_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        targetKey_ = b;
+        text_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -6770,8 +6821,8 @@ public final class RobotProtos {
       if (!getOrdNoBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessage.writeString(output, 3, ordNo_);
       }
-      if (!getTargetKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 4, targetKey_);
+      if (!getTextBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, text_);
       }
       if (time_ != 0L) {
         output.writeInt64(5, time_);
@@ -6793,8 +6844,8 @@ public final class RobotProtos {
       if (!getOrdNoBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(3, ordNo_);
       }
-      if (!getTargetKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, targetKey_);
+      if (!getTextBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, text_);
       }
       if (time_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -6921,7 +6972,7 @@ public final class RobotProtos {
 
         ordNo_ = "";
 
-        targetKey_ = "";
+        text_ = "";
 
         time_ = 0L;
 
@@ -6950,7 +7001,7 @@ public final class RobotProtos {
         result.id_ = id_;
         result.from_ = from_;
         result.ordNo_ = ordNo_;
-        result.targetKey_ = targetKey_;
+        result.text_ = text_;
         result.time_ = time_;
         onBuilt();
         return result;
@@ -6978,8 +7029,8 @@ public final class RobotProtos {
           ordNo_ = other.ordNo_;
           onChanged();
         }
-        if (!other.getTargetKey().isEmpty()) {
-          targetKey_ = other.targetKey_;
+        if (!other.getText().isEmpty()) {
+          text_ = other.text_;
           onChanged();
         }
         if (other.getTime() != 0L) {
@@ -7227,91 +7278,91 @@ public final class RobotProtos {
         return this;
       }
 
-      private java.lang.Object targetKey_ = "";
+      private java.lang.Object text_ = "";
       /**
-       * <code>optional string targetKey = 4;</code>
+       * <code>optional string text = 4;</code>
        *
        * <pre>
-       *红包参与者存储位置
+       *红包留言
        * </pre>
        */
-      public java.lang.String getTargetKey() {
-        java.lang.Object ref = targetKey_;
+      public java.lang.String getText() {
+        java.lang.Object ref = text_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          targetKey_ = s;
+          text_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>optional string targetKey = 4;</code>
+       * <code>optional string text = 4;</code>
        *
        * <pre>
-       *红包参与者存储位置
+       *红包留言
        * </pre>
        */
       public com.google.protobuf.ByteString
-          getTargetKeyBytes() {
-        java.lang.Object ref = targetKey_;
+          getTextBytes() {
+        java.lang.Object ref = text_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          targetKey_ = b;
+          text_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>optional string targetKey = 4;</code>
+       * <code>optional string text = 4;</code>
        *
        * <pre>
-       *红包参与者存储位置
+       *红包留言
        * </pre>
        */
-      public Builder setTargetKey(
+      public Builder setText(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        targetKey_ = value;
+        text_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string targetKey = 4;</code>
+       * <code>optional string text = 4;</code>
        *
        * <pre>
-       *红包参与者存储位置
+       *红包留言
        * </pre>
        */
-      public Builder clearTargetKey() {
+      public Builder clearText() {
         
-        targetKey_ = getDefaultInstance().getTargetKey();
+        text_ = getDefaultInstance().getText();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string targetKey = 4;</code>
+       * <code>optional string text = 4;</code>
        *
        * <pre>
-       *红包参与者存储位置
+       *红包留言
        * </pre>
        */
-      public Builder setTargetKeyBytes(
+      public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        targetKey_ = value;
+        text_ = value;
         onChanged();
         return this;
       }
@@ -7461,22 +7512,22 @@ public final class RobotProtos {
         getOrdNoBytes();
 
     /**
-     * <code>optional string targetKey = 4;</code>
+     * <code>optional string text = 4;</code>
      *
      * <pre>
-     *参与者存储位置
+     *抽奖标题
      * </pre>
      */
-    java.lang.String getTargetKey();
+    java.lang.String getText();
     /**
-     * <code>optional string targetKey = 4;</code>
+     * <code>optional string text = 4;</code>
      *
      * <pre>
-     *参与者存储位置
+     *抽奖标题
      * </pre>
      */
     com.google.protobuf.ByteString
-        getTargetKeyBytes();
+        getTextBytes();
 
     /**
      * <code>optional int64 time = 5;</code>
@@ -7506,7 +7557,7 @@ public final class RobotProtos {
       id_ = 0L;
       from_ = "";
       ordNo_ = "";
-      targetKey_ = "";
+      text_ = "";
       time_ = 0L;
     }
 
@@ -7554,7 +7605,7 @@ public final class RobotProtos {
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              targetKey_ = s;
+              text_ = s;
               break;
             }
             case 40: {
@@ -7683,42 +7734,42 @@ public final class RobotProtos {
       }
     }
 
-    public static final int TARGETKEY_FIELD_NUMBER = 4;
-    private volatile java.lang.Object targetKey_;
+    public static final int TEXT_FIELD_NUMBER = 4;
+    private volatile java.lang.Object text_;
     /**
-     * <code>optional string targetKey = 4;</code>
+     * <code>optional string text = 4;</code>
      *
      * <pre>
-     *参与者存储位置
+     *抽奖标题
      * </pre>
      */
-    public java.lang.String getTargetKey() {
-      java.lang.Object ref = targetKey_;
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        targetKey_ = s;
+        text_ = s;
         return s;
       }
     }
     /**
-     * <code>optional string targetKey = 4;</code>
+     * <code>optional string text = 4;</code>
      *
      * <pre>
-     *参与者存储位置
+     *抽奖标题
      * </pre>
      */
     public com.google.protobuf.ByteString
-        getTargetKeyBytes() {
-      java.lang.Object ref = targetKey_;
+        getTextBytes() {
+      java.lang.Object ref = text_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        targetKey_ = b;
+        text_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -7759,8 +7810,8 @@ public final class RobotProtos {
       if (!getOrdNoBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessage.writeString(output, 3, ordNo_);
       }
-      if (!getTargetKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 4, targetKey_);
+      if (!getTextBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, text_);
       }
       if (time_ != 0L) {
         output.writeInt64(5, time_);
@@ -7782,8 +7833,8 @@ public final class RobotProtos {
       if (!getOrdNoBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(3, ordNo_);
       }
-      if (!getTargetKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, targetKey_);
+      if (!getTextBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, text_);
       }
       if (time_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -7910,7 +7961,7 @@ public final class RobotProtos {
 
         ordNo_ = "";
 
-        targetKey_ = "";
+        text_ = "";
 
         time_ = 0L;
 
@@ -7939,7 +7990,7 @@ public final class RobotProtos {
         result.id_ = id_;
         result.from_ = from_;
         result.ordNo_ = ordNo_;
-        result.targetKey_ = targetKey_;
+        result.text_ = text_;
         result.time_ = time_;
         onBuilt();
         return result;
@@ -7967,8 +8018,8 @@ public final class RobotProtos {
           ordNo_ = other.ordNo_;
           onChanged();
         }
-        if (!other.getTargetKey().isEmpty()) {
-          targetKey_ = other.targetKey_;
+        if (!other.getText().isEmpty()) {
+          text_ = other.text_;
           onChanged();
         }
         if (other.getTime() != 0L) {
@@ -8216,91 +8267,91 @@ public final class RobotProtos {
         return this;
       }
 
-      private java.lang.Object targetKey_ = "";
+      private java.lang.Object text_ = "";
       /**
-       * <code>optional string targetKey = 4;</code>
+       * <code>optional string text = 4;</code>
        *
        * <pre>
-       *参与者存储位置
+       *抽奖标题
        * </pre>
        */
-      public java.lang.String getTargetKey() {
-        java.lang.Object ref = targetKey_;
+      public java.lang.String getText() {
+        java.lang.Object ref = text_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          targetKey_ = s;
+          text_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>optional string targetKey = 4;</code>
+       * <code>optional string text = 4;</code>
        *
        * <pre>
-       *参与者存储位置
+       *抽奖标题
        * </pre>
        */
       public com.google.protobuf.ByteString
-          getTargetKeyBytes() {
-        java.lang.Object ref = targetKey_;
+          getTextBytes() {
+        java.lang.Object ref = text_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          targetKey_ = b;
+          text_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>optional string targetKey = 4;</code>
+       * <code>optional string text = 4;</code>
        *
        * <pre>
-       *参与者存储位置
+       *抽奖标题
        * </pre>
        */
-      public Builder setTargetKey(
+      public Builder setText(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        targetKey_ = value;
+        text_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string targetKey = 4;</code>
+       * <code>optional string text = 4;</code>
        *
        * <pre>
-       *参与者存储位置
+       *抽奖标题
        * </pre>
        */
-      public Builder clearTargetKey() {
+      public Builder clearText() {
         
-        targetKey_ = getDefaultInstance().getTargetKey();
+        text_ = getDefaultInstance().getText();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string targetKey = 4;</code>
+       * <code>optional string text = 4;</code>
        *
        * <pre>
-       *参与者存储位置
+       *抽奖标题
        * </pre>
        */
-      public Builder setTargetKeyBytes(
+      public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        targetKey_ = value;
+        text_ = value;
         onChanged();
         return this;
       }
@@ -13251,6 +13302,24 @@ public final class RobotProtos {
      */
     com.google.protobuf.ByteString
         getOrdNoBytes();
+
+    /**
+     * <code>optional string text = 2;</code>
+     *
+     * <pre>
+     *抽奖标题
+     * </pre>
+     */
+    java.lang.String getText();
+    /**
+     * <code>optional string text = 2;</code>
+     *
+     * <pre>
+     *抽奖标题
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getTextBytes();
   }
   /**
    * Protobuf type {@code bbproto.PCPushLottery}
@@ -13269,6 +13338,7 @@ public final class RobotProtos {
     }
     private PCPushLottery() {
       ordNo_ = "";
+      text_ = "";
     }
 
     @java.lang.Override
@@ -13299,6 +13369,12 @@ public final class RobotProtos {
               java.lang.String s = input.readStringRequireUtf8();
 
               ordNo_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              text_ = s;
               break;
             }
           }
@@ -13367,6 +13443,48 @@ public final class RobotProtos {
       }
     }
 
+    public static final int TEXT_FIELD_NUMBER = 2;
+    private volatile java.lang.Object text_;
+    /**
+     * <code>optional string text = 2;</code>
+     *
+     * <pre>
+     *抽奖标题
+     * </pre>
+     */
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        text_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string text = 2;</code>
+     *
+     * <pre>
+     *抽奖标题
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getTextBytes() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        text_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -13382,6 +13500,9 @@ public final class RobotProtos {
       if (!getOrdNoBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessage.writeString(output, 1, ordNo_);
       }
+      if (!getTextBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, text_);
+      }
     }
 
     public int getSerializedSize() {
@@ -13391,6 +13512,9 @@ public final class RobotProtos {
       size = 0;
       if (!getOrdNoBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(1, ordNo_);
+      }
+      if (!getTextBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, text_);
       }
       memoizedSize = size;
       return size;
@@ -13509,6 +13633,8 @@ public final class RobotProtos {
         super.clear();
         ordNo_ = "";
 
+        text_ = "";
+
         return this;
       }
 
@@ -13532,6 +13658,7 @@ public final class RobotProtos {
       public com.blemobi.sep.probuf.RobotProtos.PCPushLottery buildPartial() {
         com.blemobi.sep.probuf.RobotProtos.PCPushLottery result = new com.blemobi.sep.probuf.RobotProtos.PCPushLottery(this);
         result.ordNo_ = ordNo_;
+        result.text_ = text_;
         onBuilt();
         return result;
       }
@@ -13549,6 +13676,10 @@ public final class RobotProtos {
         if (other == com.blemobi.sep.probuf.RobotProtos.PCPushLottery.getDefaultInstance()) return this;
         if (!other.getOrdNo().isEmpty()) {
           ordNo_ = other.ordNo_;
+          onChanged();
+        }
+        if (!other.getText().isEmpty()) {
+          text_ = other.text_;
           onChanged();
         }
         onChanged();
@@ -13665,6 +13796,95 @@ public final class RobotProtos {
         onChanged();
         return this;
       }
+
+      private java.lang.Object text_ = "";
+      /**
+       * <code>optional string text = 2;</code>
+       *
+       * <pre>
+       *抽奖标题
+       * </pre>
+       */
+      public java.lang.String getText() {
+        java.lang.Object ref = text_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          text_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string text = 2;</code>
+       *
+       * <pre>
+       *抽奖标题
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getTextBytes() {
+        java.lang.Object ref = text_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          text_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string text = 2;</code>
+       *
+       * <pre>
+       *抽奖标题
+       * </pre>
+       */
+      public Builder setText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        text_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string text = 2;</code>
+       *
+       * <pre>
+       *抽奖标题
+       * </pre>
+       */
+      public Builder clearText() {
+        
+        text_ = getDefaultInstance().getText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string text = 2;</code>
+       *
+       * <pre>
+       *抽奖标题
+       * </pre>
+       */
+      public Builder setTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        text_ = value;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return this;
@@ -13744,6 +13964,24 @@ public final class RobotProtos {
      */
     com.google.protobuf.ByteString
         getOrdNoBytes();
+
+    /**
+     * <code>optional string text = 2;</code>
+     *
+     * <pre>
+     *红包留言
+     * </pre>
+     */
+    java.lang.String getText();
+    /**
+     * <code>optional string text = 2;</code>
+     *
+     * <pre>
+     *红包留言
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getTextBytes();
   }
   /**
    * Protobuf type {@code bbproto.PCPushRedPacket}
@@ -13762,6 +14000,7 @@ public final class RobotProtos {
     }
     private PCPushRedPacket() {
       ordNo_ = "";
+      text_ = "";
     }
 
     @java.lang.Override
@@ -13792,6 +14031,12 @@ public final class RobotProtos {
               java.lang.String s = input.readStringRequireUtf8();
 
               ordNo_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              text_ = s;
               break;
             }
           }
@@ -13860,6 +14105,48 @@ public final class RobotProtos {
       }
     }
 
+    public static final int TEXT_FIELD_NUMBER = 2;
+    private volatile java.lang.Object text_;
+    /**
+     * <code>optional string text = 2;</code>
+     *
+     * <pre>
+     *红包留言
+     * </pre>
+     */
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        text_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string text = 2;</code>
+     *
+     * <pre>
+     *红包留言
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getTextBytes() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        text_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -13875,6 +14162,9 @@ public final class RobotProtos {
       if (!getOrdNoBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessage.writeString(output, 1, ordNo_);
       }
+      if (!getTextBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, text_);
+      }
     }
 
     public int getSerializedSize() {
@@ -13884,6 +14174,9 @@ public final class RobotProtos {
       size = 0;
       if (!getOrdNoBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(1, ordNo_);
+      }
+      if (!getTextBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, text_);
       }
       memoizedSize = size;
       return size;
@@ -14002,6 +14295,8 @@ public final class RobotProtos {
         super.clear();
         ordNo_ = "";
 
+        text_ = "";
+
         return this;
       }
 
@@ -14025,6 +14320,7 @@ public final class RobotProtos {
       public com.blemobi.sep.probuf.RobotProtos.PCPushRedPacket buildPartial() {
         com.blemobi.sep.probuf.RobotProtos.PCPushRedPacket result = new com.blemobi.sep.probuf.RobotProtos.PCPushRedPacket(this);
         result.ordNo_ = ordNo_;
+        result.text_ = text_;
         onBuilt();
         return result;
       }
@@ -14042,6 +14338,10 @@ public final class RobotProtos {
         if (other == com.blemobi.sep.probuf.RobotProtos.PCPushRedPacket.getDefaultInstance()) return this;
         if (!other.getOrdNo().isEmpty()) {
           ordNo_ = other.ordNo_;
+          onChanged();
+        }
+        if (!other.getText().isEmpty()) {
+          text_ = other.text_;
           onChanged();
         }
         onChanged();
@@ -14155,6 +14455,95 @@ public final class RobotProtos {
   checkByteStringIsUtf8(value);
         
         ordNo_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object text_ = "";
+      /**
+       * <code>optional string text = 2;</code>
+       *
+       * <pre>
+       *红包留言
+       * </pre>
+       */
+      public java.lang.String getText() {
+        java.lang.Object ref = text_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          text_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string text = 2;</code>
+       *
+       * <pre>
+       *红包留言
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getTextBytes() {
+        java.lang.Object ref = text_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          text_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string text = 2;</code>
+       *
+       * <pre>
+       *红包留言
+       * </pre>
+       */
+      public Builder setText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        text_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string text = 2;</code>
+       *
+       * <pre>
+       *红包留言
+       * </pre>
+       */
+      public Builder clearText() {
+        
+        text_ = getDefaultInstance().getText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string text = 2;</code>
+       *
+       * <pre>
+       *红包留言
+       * </pre>
+       */
+      public Builder setTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        text_ = value;
         onChanged();
         return this;
       }
@@ -15496,7 +15885,7 @@ public final class RobotProtos {
      * <code>optional .bbproto.PCPushLottery lottery = 3;</code>
      *
      * <pre>
-     *抽奖消息
+     *抽奖消息,对应消息类型:Lottery、LotteryRemind、LotteryExpire、LotteryCourier
      * </pre>
      */
     boolean hasLottery();
@@ -15504,7 +15893,7 @@ public final class RobotProtos {
      * <code>optional .bbproto.PCPushLottery lottery = 3;</code>
      *
      * <pre>
-     *抽奖消息
+     *抽奖消息,对应消息类型:Lottery、LotteryRemind、LotteryExpire、LotteryCourier
      * </pre>
      */
     com.blemobi.sep.probuf.RobotProtos.PCPushLottery getLottery();
@@ -15512,7 +15901,7 @@ public final class RobotProtos {
      * <code>optional .bbproto.PCPushLottery lottery = 3;</code>
      *
      * <pre>
-     *抽奖消息
+     *抽奖消息,对应消息类型:Lottery、LotteryRemind、LotteryExpire、LotteryCourier
      * </pre>
      */
     com.blemobi.sep.probuf.RobotProtos.PCPushLotteryOrBuilder getLotteryOrBuilder();
@@ -15770,7 +16159,7 @@ public final class RobotProtos {
      * <code>optional .bbproto.PCPushLottery lottery = 3;</code>
      *
      * <pre>
-     *抽奖消息
+     *抽奖消息,对应消息类型:Lottery、LotteryRemind、LotteryExpire、LotteryCourier
      * </pre>
      */
     public boolean hasLottery() {
@@ -15780,7 +16169,7 @@ public final class RobotProtos {
      * <code>optional .bbproto.PCPushLottery lottery = 3;</code>
      *
      * <pre>
-     *抽奖消息
+     *抽奖消息,对应消息类型:Lottery、LotteryRemind、LotteryExpire、LotteryCourier
      * </pre>
      */
     public com.blemobi.sep.probuf.RobotProtos.PCPushLottery getLottery() {
@@ -15790,7 +16179,7 @@ public final class RobotProtos {
      * <code>optional .bbproto.PCPushLottery lottery = 3;</code>
      *
      * <pre>
-     *抽奖消息
+     *抽奖消息,对应消息类型:Lottery、LotteryRemind、LotteryExpire、LotteryCourier
      * </pre>
      */
     public com.blemobi.sep.probuf.RobotProtos.PCPushLotteryOrBuilder getLotteryOrBuilder() {
@@ -16478,7 +16867,7 @@ public final class RobotProtos {
        * <code>optional .bbproto.PCPushLottery lottery = 3;</code>
        *
        * <pre>
-       *抽奖消息
+       *抽奖消息,对应消息类型:Lottery、LotteryRemind、LotteryExpire、LotteryCourier
        * </pre>
        */
       public boolean hasLottery() {
@@ -16488,7 +16877,7 @@ public final class RobotProtos {
        * <code>optional .bbproto.PCPushLottery lottery = 3;</code>
        *
        * <pre>
-       *抽奖消息
+       *抽奖消息,对应消息类型:Lottery、LotteryRemind、LotteryExpire、LotteryCourier
        * </pre>
        */
       public com.blemobi.sep.probuf.RobotProtos.PCPushLottery getLottery() {
@@ -16502,7 +16891,7 @@ public final class RobotProtos {
        * <code>optional .bbproto.PCPushLottery lottery = 3;</code>
        *
        * <pre>
-       *抽奖消息
+       *抽奖消息,对应消息类型:Lottery、LotteryRemind、LotteryExpire、LotteryCourier
        * </pre>
        */
       public Builder setLottery(com.blemobi.sep.probuf.RobotProtos.PCPushLottery value) {
@@ -16522,7 +16911,7 @@ public final class RobotProtos {
        * <code>optional .bbproto.PCPushLottery lottery = 3;</code>
        *
        * <pre>
-       *抽奖消息
+       *抽奖消息,对应消息类型:Lottery、LotteryRemind、LotteryExpire、LotteryCourier
        * </pre>
        */
       public Builder setLottery(
@@ -16540,7 +16929,7 @@ public final class RobotProtos {
        * <code>optional .bbproto.PCPushLottery lottery = 3;</code>
        *
        * <pre>
-       *抽奖消息
+       *抽奖消息,对应消息类型:Lottery、LotteryRemind、LotteryExpire、LotteryCourier
        * </pre>
        */
       public Builder mergeLottery(com.blemobi.sep.probuf.RobotProtos.PCPushLottery value) {
@@ -16562,7 +16951,7 @@ public final class RobotProtos {
        * <code>optional .bbproto.PCPushLottery lottery = 3;</code>
        *
        * <pre>
-       *抽奖消息
+       *抽奖消息,对应消息类型:Lottery、LotteryRemind、LotteryExpire、LotteryCourier
        * </pre>
        */
       public Builder clearLottery() {
@@ -16580,7 +16969,7 @@ public final class RobotProtos {
        * <code>optional .bbproto.PCPushLottery lottery = 3;</code>
        *
        * <pre>
-       *抽奖消息
+       *抽奖消息,对应消息类型:Lottery、LotteryRemind、LotteryExpire、LotteryCourier
        * </pre>
        */
       public com.blemobi.sep.probuf.RobotProtos.PCPushLottery.Builder getLotteryBuilder() {
@@ -16592,7 +16981,7 @@ public final class RobotProtos {
        * <code>optional .bbproto.PCPushLottery lottery = 3;</code>
        *
        * <pre>
-       *抽奖消息
+       *抽奖消息,对应消息类型:Lottery、LotteryRemind、LotteryExpire、LotteryCourier
        * </pre>
        */
       public com.blemobi.sep.probuf.RobotProtos.PCPushLotteryOrBuilder getLotteryOrBuilder() {
@@ -16607,7 +16996,7 @@ public final class RobotProtos {
        * <code>optional .bbproto.PCPushLottery lottery = 3;</code>
        *
        * <pre>
-       *抽奖消息
+       *抽奖消息,对应消息类型:Lottery、LotteryRemind、LotteryExpire、LotteryCourier
        * </pre>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -19238,7 +19627,16 @@ public final class RobotProtos {
     int getNextDelay();
 
     /**
-     * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+     * <code>optional bool isReconect = 4;</code>
+     *
+     * <pre>
+     * 是不是重连, 30秒没轮询认为重连
+     * </pre>
+     */
+    boolean getIsReconect();
+
+    /**
+     * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
      *
      * <pre>
      * 气泡消息列表
@@ -19247,7 +19645,7 @@ public final class RobotProtos {
     java.util.List<com.blemobi.sep.probuf.RobotProtos.PCRobotBubble> 
         getBubbleListList();
     /**
-     * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+     * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
      *
      * <pre>
      * 气泡消息列表
@@ -19255,7 +19653,7 @@ public final class RobotProtos {
      */
     com.blemobi.sep.probuf.RobotProtos.PCRobotBubble getBubbleList(int index);
     /**
-     * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+     * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
      *
      * <pre>
      * 气泡消息列表
@@ -19263,7 +19661,7 @@ public final class RobotProtos {
      */
     int getBubbleListCount();
     /**
-     * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+     * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
      *
      * <pre>
      * 气泡消息列表
@@ -19272,7 +19670,7 @@ public final class RobotProtos {
     java.util.List<? extends com.blemobi.sep.probuf.RobotProtos.PCRobotBubbleOrBuilder> 
         getBubbleListOrBuilderList();
     /**
-     * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+     * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
      *
      * <pre>
      * 气泡消息列表
@@ -19300,6 +19698,7 @@ public final class RobotProtos {
       totalNum_ = 0;
       unReadNum_ = 0;
       nextDelay_ = 0;
+      isReconect_ = false;
       bubbleList_ = java.util.Collections.emptyList();
     }
 
@@ -19342,10 +19741,15 @@ public final class RobotProtos {
               nextDelay_ = input.readInt32();
               break;
             }
-            case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+            case 32: {
+
+              isReconect_ = input.readBool();
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
                 bubbleList_ = new java.util.ArrayList<com.blemobi.sep.probuf.RobotProtos.PCRobotBubble>();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000010;
               }
               bubbleList_.add(input.readMessage(com.blemobi.sep.probuf.RobotProtos.PCRobotBubble.parser(), extensionRegistry));
               break;
@@ -19359,7 +19763,7 @@ public final class RobotProtos {
             new com.google.protobuf.InvalidProtocolBufferException(
                 e.getMessage()).setUnfinishedMessage(this));
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
           bubbleList_ = java.util.Collections.unmodifiableList(bubbleList_);
         }
         makeExtensionsImmutable();
@@ -19417,10 +19821,23 @@ public final class RobotProtos {
       return nextDelay_;
     }
 
-    public static final int BUBBLELIST_FIELD_NUMBER = 4;
+    public static final int ISRECONECT_FIELD_NUMBER = 4;
+    private boolean isReconect_;
+    /**
+     * <code>optional bool isReconect = 4;</code>
+     *
+     * <pre>
+     * 是不是重连, 30秒没轮询认为重连
+     * </pre>
+     */
+    public boolean getIsReconect() {
+      return isReconect_;
+    }
+
+    public static final int BUBBLELIST_FIELD_NUMBER = 5;
     private java.util.List<com.blemobi.sep.probuf.RobotProtos.PCRobotBubble> bubbleList_;
     /**
-     * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+     * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
      *
      * <pre>
      * 气泡消息列表
@@ -19430,7 +19847,7 @@ public final class RobotProtos {
       return bubbleList_;
     }
     /**
-     * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+     * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
      *
      * <pre>
      * 气泡消息列表
@@ -19441,7 +19858,7 @@ public final class RobotProtos {
       return bubbleList_;
     }
     /**
-     * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+     * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
      *
      * <pre>
      * 气泡消息列表
@@ -19451,7 +19868,7 @@ public final class RobotProtos {
       return bubbleList_.size();
     }
     /**
-     * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+     * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
      *
      * <pre>
      * 气泡消息列表
@@ -19461,7 +19878,7 @@ public final class RobotProtos {
       return bubbleList_.get(index);
     }
     /**
-     * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+     * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
      *
      * <pre>
      * 气泡消息列表
@@ -19493,8 +19910,11 @@ public final class RobotProtos {
       if (nextDelay_ != 0) {
         output.writeInt32(3, nextDelay_);
       }
+      if (isReconect_ != false) {
+        output.writeBool(4, isReconect_);
+      }
       for (int i = 0; i < bubbleList_.size(); i++) {
-        output.writeMessage(4, bubbleList_.get(i));
+        output.writeMessage(5, bubbleList_.get(i));
       }
     }
 
@@ -19515,9 +19935,13 @@ public final class RobotProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, nextDelay_);
       }
+      if (isReconect_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, isReconect_);
+      }
       for (int i = 0; i < bubbleList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, bubbleList_.get(i));
+          .computeMessageSize(5, bubbleList_.get(i));
       }
       memoizedSize = size;
       return size;
@@ -19641,9 +20065,11 @@ public final class RobotProtos {
 
         nextDelay_ = 0;
 
+        isReconect_ = false;
+
         if (bubbleListBuilder_ == null) {
           bubbleList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
           bubbleListBuilder_.clear();
         }
@@ -19674,10 +20100,11 @@ public final class RobotProtos {
         result.totalNum_ = totalNum_;
         result.unReadNum_ = unReadNum_;
         result.nextDelay_ = nextDelay_;
+        result.isReconect_ = isReconect_;
         if (bubbleListBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000010) == 0x00000010)) {
             bubbleList_ = java.util.Collections.unmodifiableList(bubbleList_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.bubbleList_ = bubbleList_;
         } else {
@@ -19708,11 +20135,14 @@ public final class RobotProtos {
         if (other.getNextDelay() != 0) {
           setNextDelay(other.getNextDelay());
         }
+        if (other.getIsReconect() != false) {
+          setIsReconect(other.getIsReconect());
+        }
         if (bubbleListBuilder_ == null) {
           if (!other.bubbleList_.isEmpty()) {
             if (bubbleList_.isEmpty()) {
               bubbleList_ = other.bubbleList_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureBubbleListIsMutable();
               bubbleList_.addAll(other.bubbleList_);
@@ -19725,7 +20155,7 @@ public final class RobotProtos {
               bubbleListBuilder_.dispose();
               bubbleListBuilder_ = null;
               bubbleList_ = other.bubbleList_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000010);
               bubbleListBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getBubbleListFieldBuilder() : null;
@@ -19875,12 +20305,50 @@ public final class RobotProtos {
         return this;
       }
 
+      private boolean isReconect_ ;
+      /**
+       * <code>optional bool isReconect = 4;</code>
+       *
+       * <pre>
+       * 是不是重连, 30秒没轮询认为重连
+       * </pre>
+       */
+      public boolean getIsReconect() {
+        return isReconect_;
+      }
+      /**
+       * <code>optional bool isReconect = 4;</code>
+       *
+       * <pre>
+       * 是不是重连, 30秒没轮询认为重连
+       * </pre>
+       */
+      public Builder setIsReconect(boolean value) {
+        
+        isReconect_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool isReconect = 4;</code>
+       *
+       * <pre>
+       * 是不是重连, 30秒没轮询认为重连
+       * </pre>
+       */
+      public Builder clearIsReconect() {
+        
+        isReconect_ = false;
+        onChanged();
+        return this;
+      }
+
       private java.util.List<com.blemobi.sep.probuf.RobotProtos.PCRobotBubble> bubbleList_ =
         java.util.Collections.emptyList();
       private void ensureBubbleListIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
           bubbleList_ = new java.util.ArrayList<com.blemobi.sep.probuf.RobotProtos.PCRobotBubble>(bubbleList_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -19888,7 +20356,7 @@ public final class RobotProtos {
           com.blemobi.sep.probuf.RobotProtos.PCRobotBubble, com.blemobi.sep.probuf.RobotProtos.PCRobotBubble.Builder, com.blemobi.sep.probuf.RobotProtos.PCRobotBubbleOrBuilder> bubbleListBuilder_;
 
       /**
-       * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+       * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
        *
        * <pre>
        * 气泡消息列表
@@ -19902,7 +20370,7 @@ public final class RobotProtos {
         }
       }
       /**
-       * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+       * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
        *
        * <pre>
        * 气泡消息列表
@@ -19916,7 +20384,7 @@ public final class RobotProtos {
         }
       }
       /**
-       * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+       * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
        *
        * <pre>
        * 气泡消息列表
@@ -19930,7 +20398,7 @@ public final class RobotProtos {
         }
       }
       /**
-       * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+       * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
        *
        * <pre>
        * 气泡消息列表
@@ -19951,7 +20419,7 @@ public final class RobotProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+       * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
        *
        * <pre>
        * 气泡消息列表
@@ -19969,7 +20437,7 @@ public final class RobotProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+       * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
        *
        * <pre>
        * 气泡消息列表
@@ -19989,7 +20457,7 @@ public final class RobotProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+       * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
        *
        * <pre>
        * 气泡消息列表
@@ -20010,7 +20478,7 @@ public final class RobotProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+       * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
        *
        * <pre>
        * 气泡消息列表
@@ -20028,7 +20496,7 @@ public final class RobotProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+       * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
        *
        * <pre>
        * 气泡消息列表
@@ -20046,7 +20514,7 @@ public final class RobotProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+       * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
        *
        * <pre>
        * 气泡消息列表
@@ -20065,7 +20533,7 @@ public final class RobotProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+       * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
        *
        * <pre>
        * 气泡消息列表
@@ -20074,7 +20542,7 @@ public final class RobotProtos {
       public Builder clearBubbleList() {
         if (bubbleListBuilder_ == null) {
           bubbleList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           bubbleListBuilder_.clear();
@@ -20082,7 +20550,7 @@ public final class RobotProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+       * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
        *
        * <pre>
        * 气泡消息列表
@@ -20099,7 +20567,7 @@ public final class RobotProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+       * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
        *
        * <pre>
        * 气泡消息列表
@@ -20110,7 +20578,7 @@ public final class RobotProtos {
         return getBubbleListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+       * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
        *
        * <pre>
        * 气泡消息列表
@@ -20124,7 +20592,7 @@ public final class RobotProtos {
         }
       }
       /**
-       * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+       * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
        *
        * <pre>
        * 气泡消息列表
@@ -20139,7 +20607,7 @@ public final class RobotProtos {
         }
       }
       /**
-       * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+       * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
        *
        * <pre>
        * 气泡消息列表
@@ -20150,7 +20618,7 @@ public final class RobotProtos {
             com.blemobi.sep.probuf.RobotProtos.PCRobotBubble.getDefaultInstance());
       }
       /**
-       * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+       * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
        *
        * <pre>
        * 气泡消息列表
@@ -20162,7 +20630,7 @@ public final class RobotProtos {
             index, com.blemobi.sep.probuf.RobotProtos.PCRobotBubble.getDefaultInstance());
       }
       /**
-       * <code>repeated .bbproto.PCRobotBubble bubbleList = 4;</code>
+       * <code>repeated .bbproto.PCRobotBubble bubbleList = 5;</code>
        *
        * <pre>
        * 气泡消息列表
@@ -20179,7 +20647,7 @@ public final class RobotProtos {
           bubbleListBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               com.blemobi.sep.probuf.RobotProtos.PCRobotBubble, com.blemobi.sep.probuf.RobotProtos.PCRobotBubble.Builder, com.blemobi.sep.probuf.RobotProtos.PCRobotBubbleOrBuilder>(
                   bubbleList_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000010) == 0x00000010),
                   getParentForChildren(),
                   isClean());
           bubbleList_ = null;
@@ -23546,61 +24014,63 @@ public final class RobotProtos {
       "BRemindTpl\022\017\n\007srcType\030\002 \001(\t\022\014\n\004Text\030\003 \001(" +
       "\t\022\036\n\005audio\030\004 \001(\0132\017.bbproto.PAudio\"/\n\014PBR" +
       "emindList\022\037\n\004list\030\001 \003(\0132\021.bbproto.PBRemi" +
-      "nd\"X\n\013PBRedpacket\022\n\n\002id\030\001 \001(\003\022\014\n\004from\030\002 " +
-      "\001(\t\022\016\n\006ord_no\030\003 \001(\t\022\021\n\ttargetKey\030\004 \001(\t\022\014" +
-      "\n\004time\030\005 \001(\003\"V\n\tPBLottery\022\n\n\002id\030\001 \001(\003\022\014\n",
-      "\004from\030\002 \001(\t\022\016\n\006ord_no\030\003 \001(\t\022\021\n\ttargetKey" +
-      "\030\004 \001(\t\022\014\n\004time\030\005 \001(\003\"N\n\013PBStreaming\022\n\n\002i" +
-      "d\030\001 \001(\003\022\014\n\004time\030\002 \001(\003\022%\n\004live\030\003 \001(\0132\027.bb" +
-      "proto.PStreamingLive\"\360\001\n\010PBRawMsg\022(\n\007msg" +
-      "Type\030\001 \001(\0162\027.bbproto.ERobotPushType\022#\n\007r" +
-      "egards\030\002 \001(\0132\022.bbproto.PBRegards\022!\n\006remi" +
-      "nd\030\003 \001(\0132\021.bbproto.PBRemind\022\'\n\tredpacket" +
-      "\030\004 \001(\0132\024.bbproto.PBRedpacket\022#\n\007lottery\030" +
-      "\005 \001(\0132\022.bbproto.PBLottery\022$\n\006stream\030\006 \001(" +
-      "\0132\024.bbproto.PBStreaming\"}\n\024PCRobotGlobal",
-      "Setting\022\023\n\013robotEnable\030\001 \001(\010\022\025\n\rregardsR" +
-      "emind\030\002 \001(\010\022\025\n\rregardsEnable\030\003 \001(\010\022\024\n\014re" +
-      "mindEnable\030\004 \001(\010\022\014\n\004skin\030\005 \001(\003\"]\n\rPCPush" +
-      "Regards\022\014\n\004Text\030\001 \001(\t\022\036\n\005audio\030\002 \001(\0132\017.b" +
-      "bproto.PAudio\022\036\n\005image\030\003 \001(\0132\017.bbproto.P" +
-      "Image\"M\n\014PCPushRemind\022\017\n\007srcType\030\001 \001(\t\022\014" +
-      "\n\004Text\030\002 \001(\t\022\036\n\005audio\030\003 \001(\0132\017.bbproto.PA" +
-      "udio\"\036\n\rPCPushLottery\022\r\n\005ordNo\030\001 \001(\t\" \n\017" +
-      "PCPushRedPacket\022\r\n\005ordNo\030\001 \001(\t\"\313\001\n\016PCRob" +
-      "otPushMsg\022\n\n\002id\030\001 \001(\003\022\014\n\004time\030\002 \001(\003\022(\n\007m",
-      "sgType\030\003 \001(\0162\027.bbproto.ERobotPushType\022&\n" +
-      "\005state\030\004 \001(\0162\027.bbproto.ERobotMsgState\022 \n" +
-      "\004from\030\005 \001(\0132\022.bbproto.PUserBase\022+\n\007conte" +
-      "nt\030\006 \001(\0132\032.bbproto.PCRobotPushRawMsg\"\345\001\n" +
-      "\021PCRobotPushRawMsg\022\'\n\007regards\030\001 \001(\0132\026.bb" +
-      "proto.PCPushRegards\022%\n\006remind\030\002 \001(\0132\025.bb" +
-      "proto.PCPushRemind\022\'\n\007lottery\030\003 \001(\0132\026.bb" +
-      "proto.PCPushLottery\022+\n\tredPacket\030\004 \001(\0132\030" +
-      ".bbproto.PCPushRedPacket\022*\n\tstreaming\030\005 " +
-      "\001(\0132\027.bbproto.PStreamingLive\";\n\022PCRobotP",
-      "ushMsgList\022%\n\004list\030\001 \003(\0132\027.bbproto.PCRob" +
-      "otPushMsg\"G\n\017PCRobotMsgCount\022%\n\004type\030\001 \001" +
-      "(\0162\027.bbproto.ERobotPushType\022\r\n\005count\030\002 \001" +
-      "(\005\"l\n\rPCRobotBubble\022%\n\004type\030\001 \001(\0162\027.bbpr" +
-      "oto.ERobotPushType\022\r\n\005count\030\002 \001(\005\022%\n\004lis" +
-      "t\030\003 \003(\0132\027.bbproto.PCRobotPushMsg\"t\n\016PCRo" +
-      "botSummary\022\020\n\010totalNum\030\001 \001(\005\022\021\n\tunReadNu" +
-      "m\030\002 \001(\005\022\021\n\tnextDelay\030\003 \001(\005\022*\n\nbubbleList" +
-      "\030\004 \003(\0132\026.bbproto.PCRobotBubble\"\222\001\n\013PCCel" +
-      "ebrity\022 \n\004user\030\001 \001(\0132\022.bbproto.PUserBase",
-      "\022$\n\010belongVo\030\002 \001(\0132\022.bbproto.PUserBase\022)" +
-      "\n\010msgState\030\003 \001(\0162\027.bbproto.ERobotMsgStat" +
-      "e\022\020\n\010isShield\030\004 \001(\010\"E\n\020PCCelebrityGroup\022" +
-      "\r\n\005group\030\001 \001(\t\022\"\n\004list\030\002 \003(\0132\024.bbproto.P" +
-      "CCelebrity\"?\n\024PCCelebrityGroupList\022\'\n\004li" +
-      "st\030\001 \003(\0132\031.bbproto.PCCelebrityGroup\".\n\rP" +
-      "BMsgNumLimit\022\r\n\005total\030\001 \001(\005\022\016\n\006remain\030\002 " +
-      "\001(\005*Q\n\016ERobotPushType\022\013\n\007Regards\020\000\022\n\n\006Re" +
-      "mind\020\001\022\013\n\007Lottery\020\002\022\r\n\tRedPacket\020\003\022\n\n\006St" +
-      "ream\020\004*&\n\016ERobotMsgState\022\n\n\006UnRead\020\000\022\010\n\004",
-      "Read\020\001B%\n\026com.blemobi.sep.probufB\013RobotP" +
-      "rotosb\006proto3"
+      "nd\"S\n\013PBRedpacket\022\n\n\002id\030\001 \001(\003\022\014\n\004from\030\002 " +
+      "\001(\t\022\016\n\006ord_no\030\003 \001(\t\022\014\n\004text\030\004 \001(\t\022\014\n\004tim" +
+      "e\030\005 \001(\003\"Q\n\tPBLottery\022\n\n\002id\030\001 \001(\003\022\014\n\004from",
+      "\030\002 \001(\t\022\016\n\006ord_no\030\003 \001(\t\022\014\n\004text\030\004 \001(\t\022\014\n\004" +
+      "time\030\005 \001(\003\"N\n\013PBStreaming\022\n\n\002id\030\001 \001(\003\022\014\n" +
+      "\004time\030\002 \001(\003\022%\n\004live\030\003 \001(\0132\027.bbproto.PStr" +
+      "eamingLive\"\360\001\n\010PBRawMsg\022(\n\007msgType\030\001 \001(\016" +
+      "2\027.bbproto.ERobotPushType\022#\n\007regards\030\002 \001" +
+      "(\0132\022.bbproto.PBRegards\022!\n\006remind\030\003 \001(\0132\021" +
+      ".bbproto.PBRemind\022\'\n\tredpacket\030\004 \001(\0132\024.b" +
+      "bproto.PBRedpacket\022#\n\007lottery\030\005 \001(\0132\022.bb" +
+      "proto.PBLottery\022$\n\006stream\030\006 \001(\0132\024.bbprot" +
+      "o.PBStreaming\"}\n\024PCRobotGlobalSetting\022\023\n",
+      "\013robotEnable\030\001 \001(\010\022\025\n\rregardsRemind\030\002 \001(" +
+      "\010\022\025\n\rregardsEnable\030\003 \001(\010\022\024\n\014remindEnable" +
+      "\030\004 \001(\010\022\014\n\004skin\030\005 \001(\003\"]\n\rPCPushRegards\022\014\n" +
+      "\004Text\030\001 \001(\t\022\036\n\005audio\030\002 \001(\0132\017.bbproto.PAu" +
+      "dio\022\036\n\005image\030\003 \001(\0132\017.bbproto.PImage\"M\n\014P" +
+      "CPushRemind\022\017\n\007srcType\030\001 \001(\t\022\014\n\004Text\030\002 \001" +
+      "(\t\022\036\n\005audio\030\003 \001(\0132\017.bbproto.PAudio\",\n\rPC" +
+      "PushLottery\022\r\n\005ordNo\030\001 \001(\t\022\014\n\004text\030\002 \001(\t" +
+      "\".\n\017PCPushRedPacket\022\r\n\005ordNo\030\001 \001(\t\022\014\n\004te" +
+      "xt\030\002 \001(\t\"\313\001\n\016PCRobotPushMsg\022\n\n\002id\030\001 \001(\003\022",
+      "\014\n\004time\030\002 \001(\003\022(\n\007msgType\030\003 \001(\0162\027.bbproto" +
+      ".ERobotPushType\022&\n\005state\030\004 \001(\0162\027.bbproto" +
+      ".ERobotMsgState\022 \n\004from\030\005 \001(\0132\022.bbproto." +
+      "PUserBase\022+\n\007content\030\006 \001(\0132\032.bbproto.PCR" +
+      "obotPushRawMsg\"\345\001\n\021PCRobotPushRawMsg\022\'\n\007" +
+      "regards\030\001 \001(\0132\026.bbproto.PCPushRegards\022%\n" +
+      "\006remind\030\002 \001(\0132\025.bbproto.PCPushRemind\022\'\n\007" +
+      "lottery\030\003 \001(\0132\026.bbproto.PCPushLottery\022+\n" +
+      "\tredPacket\030\004 \001(\0132\030.bbproto.PCPushRedPack" +
+      "et\022*\n\tstreaming\030\005 \001(\0132\027.bbproto.PStreami",
+      "ngLive\";\n\022PCRobotPushMsgList\022%\n\004list\030\001 \003" +
+      "(\0132\027.bbproto.PCRobotPushMsg\"G\n\017PCRobotMs" +
+      "gCount\022%\n\004type\030\001 \001(\0162\027.bbproto.ERobotPus" +
+      "hType\022\r\n\005count\030\002 \001(\005\"l\n\rPCRobotBubble\022%\n" +
+      "\004type\030\001 \001(\0162\027.bbproto.ERobotPushType\022\r\n\005" +
+      "count\030\002 \001(\005\022%\n\004list\030\003 \003(\0132\027.bbproto.PCRo" +
+      "botPushMsg\"\210\001\n\016PCRobotSummary\022\020\n\010totalNu" +
+      "m\030\001 \001(\005\022\021\n\tunReadNum\030\002 \001(\005\022\021\n\tnextDelay\030" +
+      "\003 \001(\005\022\022\n\nisReconect\030\004 \001(\010\022*\n\nbubbleList\030" +
+      "\005 \003(\0132\026.bbproto.PCRobotBubble\"\222\001\n\013PCCele",
+      "brity\022 \n\004user\030\001 \001(\0132\022.bbproto.PUserBase\022" +
+      "$\n\010belongVo\030\002 \001(\0132\022.bbproto.PUserBase\022)\n" +
+      "\010msgState\030\003 \001(\0162\027.bbproto.ERobotMsgState" +
+      "\022\020\n\010isShield\030\004 \001(\010\"E\n\020PCCelebrityGroup\022\r" +
+      "\n\005group\030\001 \001(\t\022\"\n\004list\030\002 \003(\0132\024.bbproto.PC" +
+      "Celebrity\"?\n\024PCCelebrityGroupList\022\'\n\004lis" +
+      "t\030\001 \003(\0132\031.bbproto.PCCelebrityGroup\".\n\rPB" +
+      "MsgNumLimit\022\r\n\005total\030\001 \001(\005\022\016\n\006remain\030\002 \001" +
+      "(\005*\213\001\n\016ERobotPushType\022\013\n\007Regards\020\000\022\n\n\006Re" +
+      "mind\020\001\022\013\n\007Lottery\020\002\022\r\n\tRedPacket\020\003\022\n\n\006St",
+      "ream\020\004\022\021\n\rLotteryRemind\020\005\022\021\n\rLotteryExpi" +
+      "re\020\006\022\022\n\016LotteryCourier\020\007*&\n\016ERobotMsgSta" +
+      "te\022\n\n\006UnRead\020\000\022\010\n\004Read\020\001B%\n\026com.blemobi." +
+      "sep.probufB\013RobotProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -23653,13 +24123,13 @@ public final class RobotProtos {
     internal_static_bbproto_PBRedpacket_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PBRedpacket_descriptor,
-        new java.lang.String[] { "Id", "From", "OrdNo", "TargetKey", "Time", });
+        new java.lang.String[] { "Id", "From", "OrdNo", "Text", "Time", });
     internal_static_bbproto_PBLottery_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_bbproto_PBLottery_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PBLottery_descriptor,
-        new java.lang.String[] { "Id", "From", "OrdNo", "TargetKey", "Time", });
+        new java.lang.String[] { "Id", "From", "OrdNo", "Text", "Time", });
     internal_static_bbproto_PBStreaming_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_bbproto_PBStreaming_fieldAccessorTable = new
@@ -23695,13 +24165,13 @@ public final class RobotProtos {
     internal_static_bbproto_PCPushLottery_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PCPushLottery_descriptor,
-        new java.lang.String[] { "OrdNo", });
+        new java.lang.String[] { "OrdNo", "Text", });
     internal_static_bbproto_PCPushRedPacket_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_bbproto_PCPushRedPacket_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PCPushRedPacket_descriptor,
-        new java.lang.String[] { "OrdNo", });
+        new java.lang.String[] { "OrdNo", "Text", });
     internal_static_bbproto_PCRobotPushMsg_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_bbproto_PCRobotPushMsg_fieldAccessorTable = new
@@ -23737,7 +24207,7 @@ public final class RobotProtos {
     internal_static_bbproto_PCRobotSummary_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PCRobotSummary_descriptor,
-        new java.lang.String[] { "TotalNum", "UnReadNum", "NextDelay", "BubbleList", });
+        new java.lang.String[] { "TotalNum", "UnReadNum", "NextDelay", "IsReconect", "BubbleList", });
     internal_static_bbproto_PCCelebrity_descriptor =
       getDescriptor().getMessageTypes().get(20);
     internal_static_bbproto_PCCelebrity_fieldAccessorTable = new

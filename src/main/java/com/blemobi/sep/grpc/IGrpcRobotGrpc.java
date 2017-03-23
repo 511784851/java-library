@@ -14,20 +14,20 @@ import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
+import com.blemobi.sep.probuf.AccountProtos;
 import com.blemobi.sep.probuf.CommonApiProtos;
 import com.blemobi.sep.probuf.ResultProtos;
 import com.blemobi.sep.probuf.RobotApiProtos;
 import com.blemobi.sep.probuf.RobotProtos;
+import com.blemobi.sep.probuf.AccountProtos.PUserBase;
 import com.blemobi.sep.probuf.CommonApiProtos.PEmpty;
+import com.blemobi.sep.probuf.ResultProtos.PBoolSingle;
 import com.blemobi.sep.probuf.ResultProtos.PInt32Single;
 import com.blemobi.sep.probuf.ResultProtos.PStringSingle;
 import com.blemobi.sep.probuf.RobotApiProtos.PMsgNumLimitParma;
 import com.blemobi.sep.probuf.RobotApiProtos.PPayOrderParma;
-import com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam;
-import com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery;
 import com.blemobi.sep.probuf.RobotApiProtos.PRobotNotifyMsgList;
 import com.blemobi.sep.probuf.RobotProtos.PBRemind;
-import com.blemobi.sep.probuf.RobotProtos.PBRemindList;
 
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 
@@ -62,32 +62,59 @@ public class IGrpcRobotGrpc {
           io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringSingle.getDefaultInstance()),
           io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PInt32Single.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.RobotProtos.PBRemind,
-      com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_GRPC_CREATE_REMIND =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringSingle,
+      com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_GRPC_SET_CEO_INFO =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
-              "bbproto.IGrpcRobot", "GrpcCreateRemind"),
+              "bbproto.IGrpcRobot", "GrpcSetCeoInfo"),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringSingle.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.CommonApiProtos.PEmpty,
+      com.blemobi.sep.probuf.AccountProtos.PUserBase> METHOD_GRPC_GET_CEO_INFO =
+      io.grpc.MethodDescriptor.create(
+          io.grpc.MethodDescriptor.MethodType.UNARY,
+          generateFullMethodName(
+              "bbproto.IGrpcRobot", "GrpcGetCeoInfo"),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance()));
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.RobotProtos.PBRemind,
+      com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_GRPC_SET_REMIND_TPL =
+      io.grpc.MethodDescriptor.create(
+          io.grpc.MethodDescriptor.MethodType.UNARY,
+          generateFullMethodName(
+              "bbproto.IGrpcRobot", "GrpcSetRemindTpl"),
           io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.RobotProtos.PBRemind.getDefaultInstance()),
           io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery,
-      com.blemobi.sep.probuf.RobotProtos.PBRemindList> METHOD_GRPC_GET_REMIND =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.CommonApiProtos.PEmpty,
+      com.blemobi.sep.probuf.RobotProtos.PBRemind> METHOD_GRPC_GET_REMIND_TPL =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
-              "bbproto.IGrpcRobot", "GrpcGetRemind"),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.RobotProtos.PBRemindList.getDefaultInstance()));
+              "bbproto.IGrpcRobot", "GrpcGetRemindTpl"),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.RobotProtos.PBRemind.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam,
-      com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_GRPC_DELETE_REMIND =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PBoolSingle,
+      com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_GRPC_SET_REMIND_SWITCH =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
-              "bbproto.IGrpcRobot", "GrpcDeleteRemind"),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam.getDefaultInstance()),
+              "bbproto.IGrpcRobot", "GrpcSetRemindSwitch"),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PBoolSingle.getDefaultInstance()),
           io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.CommonApiProtos.PEmpty,
+      com.blemobi.sep.probuf.ResultProtos.PBoolSingle> METHOD_GRPC_GET_REMIND_SWITCH =
+      io.grpc.MethodDescriptor.create(
+          io.grpc.MethodDescriptor.MethodType.UNARY,
+          generateFullMethodName(
+              "bbproto.IGrpcRobot", "GrpcGetRemindSwitch"),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PBoolSingle.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.RobotApiProtos.PRobotNotifyMsgList,
       com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_GRPC_PUSH =
@@ -160,38 +187,71 @@ public class IGrpcRobotGrpc {
 
     /**
      * <pre>
-     *&#64;note 监管:设置生日提醒(CEO祝福)
+     *&#64;note 监管:设置生日祝福的CEO信息
+     *&#64;param   PStringSingle 头像图片的objectkey
+     *&#64;return PEmpty
+     * </pre>
+     */
+    public void grpcSetCeoInfo(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_GRPC_SET_CEO_INFO, responseObserver);
+    }
+
+    /**
+     * <pre>
+     *&#64;note 监管:查询已设置生日祝福的CEO信息
+     *&#64;return PUserBase
+     * </pre>
+     */
+    public void grpcGetCeoInfo(com.blemobi.sep.probuf.CommonApiProtos.PEmpty request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.AccountProtos.PUserBase> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_GRPC_GET_CEO_INFO, responseObserver);
+    }
+
+    /**
+     * <pre>
+     *&#64;note 监管:设置生日提醒模板(CEO祝福)
      *&#64;param   PBRemind 消息数据
      *&#64;return PEmpty
      * </pre>
      */
-    public void grpcCreateRemind(com.blemobi.sep.probuf.RobotProtos.PBRemind request,
+    public void grpcSetRemindTpl(com.blemobi.sep.probuf.RobotProtos.PBRemind request,
         io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_GRPC_CREATE_REMIND, responseObserver);
+      asyncUnimplementedUnaryCall(METHOD_GRPC_SET_REMIND_TPL, responseObserver);
     }
 
     /**
      * <pre>
-     *&#64;note 监管:查询未来7天(或历史)的CEO提醒列表
-     *&#64;param  PRemindQuery
-     *&#64;return PRemindList
+     *&#64;note 监管:查询已设置的生日提醒模板(CEO)
+     *&#64;return PBRemind
      * </pre>
      */
-    public void grpcGetRemind(com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery request,
-        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.RobotProtos.PBRemindList> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_GRPC_GET_REMIND, responseObserver);
+    public void grpcGetRemindTpl(com.blemobi.sep.probuf.CommonApiProtos.PEmpty request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.RobotProtos.PBRemind> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_GRPC_GET_REMIND_TPL, responseObserver);
     }
 
     /**
      * <pre>
-     *&#64;note 监管:删除提醒消息
-     *&#64;param  PRemindDeleteParam      提醒消息创建者和id
+     *&#64;note 监管:开启、关闭生日提醒(CEO)
+     *&#64;param   PBoolSingle  true:打开, false:关闭  
      *&#64;return PEmpty
      * </pre>
      */
-    public void grpcDeleteRemind(com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam request,
+    public void grpcSetRemindSwitch(com.blemobi.sep.probuf.ResultProtos.PBoolSingle request,
         io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_GRPC_DELETE_REMIND, responseObserver);
+      asyncUnimplementedUnaryCall(METHOD_GRPC_SET_REMIND_SWITCH, responseObserver);
+    }
+
+    /**
+     * <pre>
+     *&#64;note 监管:查询生日提醒(CEO)开关
+     *&#64;return PBoolSingle  true:打开, false:关闭 
+     * </pre>
+     */
+    public void grpcGetRemindSwitch(com.blemobi.sep.probuf.CommonApiProtos.PEmpty request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PBoolSingle> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_GRPC_GET_REMIND_SWITCH, responseObserver);
     }
 
     /**
@@ -235,26 +295,47 @@ public class IGrpcRobotGrpc {
                 com.blemobi.sep.probuf.ResultProtos.PInt32Single>(
                   this, METHODID_GRPC_GET_MSG_NUM_PER_DAY)))
           .addMethod(
-            METHOD_GRPC_CREATE_REMIND,
+            METHOD_GRPC_SET_CEO_INFO,
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.blemobi.sep.probuf.ResultProtos.PStringSingle,
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
+                  this, METHODID_GRPC_SET_CEO_INFO)))
+          .addMethod(
+            METHOD_GRPC_GET_CEO_INFO,
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty,
+                com.blemobi.sep.probuf.AccountProtos.PUserBase>(
+                  this, METHODID_GRPC_GET_CEO_INFO)))
+          .addMethod(
+            METHOD_GRPC_SET_REMIND_TPL,
             asyncUnaryCall(
               new MethodHandlers<
                 com.blemobi.sep.probuf.RobotProtos.PBRemind,
                 com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
-                  this, METHODID_GRPC_CREATE_REMIND)))
+                  this, METHODID_GRPC_SET_REMIND_TPL)))
           .addMethod(
-            METHOD_GRPC_GET_REMIND,
+            METHOD_GRPC_GET_REMIND_TPL,
             asyncUnaryCall(
               new MethodHandlers<
-                com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery,
-                com.blemobi.sep.probuf.RobotProtos.PBRemindList>(
-                  this, METHODID_GRPC_GET_REMIND)))
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty,
+                com.blemobi.sep.probuf.RobotProtos.PBRemind>(
+                  this, METHODID_GRPC_GET_REMIND_TPL)))
           .addMethod(
-            METHOD_GRPC_DELETE_REMIND,
+            METHOD_GRPC_SET_REMIND_SWITCH,
             asyncUnaryCall(
               new MethodHandlers<
-                com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam,
+                com.blemobi.sep.probuf.ResultProtos.PBoolSingle,
                 com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
-                  this, METHODID_GRPC_DELETE_REMIND)))
+                  this, METHODID_GRPC_SET_REMIND_SWITCH)))
+          .addMethod(
+            METHOD_GRPC_GET_REMIND_SWITCH,
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty,
+                com.blemobi.sep.probuf.ResultProtos.PBoolSingle>(
+                  this, METHODID_GRPC_GET_REMIND_SWITCH)))
           .addMethod(
             METHOD_GRPC_PUSH,
             asyncUnaryCall(
@@ -319,41 +400,77 @@ public class IGrpcRobotGrpc {
 
     /**
      * <pre>
-     *&#64;note 监管:设置生日提醒(CEO祝福)
+     *&#64;note 监管:设置生日祝福的CEO信息
+     *&#64;param   PStringSingle 头像图片的objectkey
+     *&#64;return PEmpty
+     * </pre>
+     */
+    public void grpcSetCeoInfo(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_GRPC_SET_CEO_INFO, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     *&#64;note 监管:查询已设置生日祝福的CEO信息
+     *&#64;return PUserBase
+     * </pre>
+     */
+    public void grpcGetCeoInfo(com.blemobi.sep.probuf.CommonApiProtos.PEmpty request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.AccountProtos.PUserBase> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_GRPC_GET_CEO_INFO, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     *&#64;note 监管:设置生日提醒模板(CEO祝福)
      *&#64;param   PBRemind 消息数据
      *&#64;return PEmpty
      * </pre>
      */
-    public void grpcCreateRemind(com.blemobi.sep.probuf.RobotProtos.PBRemind request,
+    public void grpcSetRemindTpl(com.blemobi.sep.probuf.RobotProtos.PBRemind request,
         io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_GRPC_CREATE_REMIND, getCallOptions()), request, responseObserver);
+          getChannel().newCall(METHOD_GRPC_SET_REMIND_TPL, getCallOptions()), request, responseObserver);
     }
 
     /**
      * <pre>
-     *&#64;note 监管:查询未来7天(或历史)的CEO提醒列表
-     *&#64;param  PRemindQuery
-     *&#64;return PRemindList
+     *&#64;note 监管:查询已设置的生日提醒模板(CEO)
+     *&#64;return PBRemind
      * </pre>
      */
-    public void grpcGetRemind(com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery request,
-        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.RobotProtos.PBRemindList> responseObserver) {
+    public void grpcGetRemindTpl(com.blemobi.sep.probuf.CommonApiProtos.PEmpty request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.RobotProtos.PBRemind> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_GRPC_GET_REMIND, getCallOptions()), request, responseObserver);
+          getChannel().newCall(METHOD_GRPC_GET_REMIND_TPL, getCallOptions()), request, responseObserver);
     }
 
     /**
      * <pre>
-     *&#64;note 监管:删除提醒消息
-     *&#64;param  PRemindDeleteParam      提醒消息创建者和id
+     *&#64;note 监管:开启、关闭生日提醒(CEO)
+     *&#64;param   PBoolSingle  true:打开, false:关闭  
      *&#64;return PEmpty
      * </pre>
      */
-    public void grpcDeleteRemind(com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam request,
+    public void grpcSetRemindSwitch(com.blemobi.sep.probuf.ResultProtos.PBoolSingle request,
         io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_GRPC_DELETE_REMIND, getCallOptions()), request, responseObserver);
+          getChannel().newCall(METHOD_GRPC_SET_REMIND_SWITCH, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     *&#64;note 监管:查询生日提醒(CEO)开关
+     *&#64;return PBoolSingle  true:打开, false:关闭 
+     * </pre>
+     */
+    public void grpcGetRemindSwitch(com.blemobi.sep.probuf.CommonApiProtos.PEmpty request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PBoolSingle> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_GRPC_GET_REMIND_SWITCH, getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -427,38 +544,71 @@ public class IGrpcRobotGrpc {
 
     /**
      * <pre>
-     *&#64;note 监管:设置生日提醒(CEO祝福)
+     *&#64;note 监管:设置生日祝福的CEO信息
+     *&#64;param   PStringSingle 头像图片的objectkey
+     *&#64;return PEmpty
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty grpcSetCeoInfo(com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_GRPC_SET_CEO_INFO, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     *&#64;note 监管:查询已设置生日祝福的CEO信息
+     *&#64;return PUserBase
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.AccountProtos.PUserBase grpcGetCeoInfo(com.blemobi.sep.probuf.CommonApiProtos.PEmpty request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_GRPC_GET_CEO_INFO, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     *&#64;note 监管:设置生日提醒模板(CEO祝福)
      *&#64;param   PBRemind 消息数据
      *&#64;return PEmpty
      * </pre>
      */
-    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty grpcCreateRemind(com.blemobi.sep.probuf.RobotProtos.PBRemind request) {
+    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty grpcSetRemindTpl(com.blemobi.sep.probuf.RobotProtos.PBRemind request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_GRPC_CREATE_REMIND, getCallOptions(), request);
+          getChannel(), METHOD_GRPC_SET_REMIND_TPL, getCallOptions(), request);
     }
 
     /**
      * <pre>
-     *&#64;note 监管:查询未来7天(或历史)的CEO提醒列表
-     *&#64;param  PRemindQuery
-     *&#64;return PRemindList
+     *&#64;note 监管:查询已设置的生日提醒模板(CEO)
+     *&#64;return PBRemind
      * </pre>
      */
-    public com.blemobi.sep.probuf.RobotProtos.PBRemindList grpcGetRemind(com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery request) {
+    public com.blemobi.sep.probuf.RobotProtos.PBRemind grpcGetRemindTpl(com.blemobi.sep.probuf.CommonApiProtos.PEmpty request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_GRPC_GET_REMIND, getCallOptions(), request);
+          getChannel(), METHOD_GRPC_GET_REMIND_TPL, getCallOptions(), request);
     }
 
     /**
      * <pre>
-     *&#64;note 监管:删除提醒消息
-     *&#64;param  PRemindDeleteParam      提醒消息创建者和id
+     *&#64;note 监管:开启、关闭生日提醒(CEO)
+     *&#64;param   PBoolSingle  true:打开, false:关闭  
      *&#64;return PEmpty
      * </pre>
      */
-    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty grpcDeleteRemind(com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam request) {
+    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty grpcSetRemindSwitch(com.blemobi.sep.probuf.ResultProtos.PBoolSingle request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_GRPC_DELETE_REMIND, getCallOptions(), request);
+          getChannel(), METHOD_GRPC_SET_REMIND_SWITCH, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     *&#64;note 监管:查询生日提醒(CEO)开关
+     *&#64;return PBoolSingle  true:打开, false:关闭 
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.ResultProtos.PBoolSingle grpcGetRemindSwitch(com.blemobi.sep.probuf.CommonApiProtos.PEmpty request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_GRPC_GET_REMIND_SWITCH, getCallOptions(), request);
     }
 
     /**
@@ -532,41 +682,77 @@ public class IGrpcRobotGrpc {
 
     /**
      * <pre>
-     *&#64;note 监管:设置生日提醒(CEO祝福)
+     *&#64;note 监管:设置生日祝福的CEO信息
+     *&#64;param   PStringSingle 头像图片的objectkey
+     *&#64;return PEmpty
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> grpcSetCeoInfo(
+        com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_GRPC_SET_CEO_INFO, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     *&#64;note 监管:查询已设置生日祝福的CEO信息
+     *&#64;return PUserBase
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.AccountProtos.PUserBase> grpcGetCeoInfo(
+        com.blemobi.sep.probuf.CommonApiProtos.PEmpty request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_GRPC_GET_CEO_INFO, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     *&#64;note 监管:设置生日提醒模板(CEO祝福)
      *&#64;param   PBRemind 消息数据
      *&#64;return PEmpty
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> grpcCreateRemind(
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> grpcSetRemindTpl(
         com.blemobi.sep.probuf.RobotProtos.PBRemind request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_GRPC_CREATE_REMIND, getCallOptions()), request);
+          getChannel().newCall(METHOD_GRPC_SET_REMIND_TPL, getCallOptions()), request);
     }
 
     /**
      * <pre>
-     *&#64;note 监管:查询未来7天(或历史)的CEO提醒列表
-     *&#64;param  PRemindQuery
-     *&#64;return PRemindList
+     *&#64;note 监管:查询已设置的生日提醒模板(CEO)
+     *&#64;return PBRemind
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.RobotProtos.PBRemindList> grpcGetRemind(
-        com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.RobotProtos.PBRemind> grpcGetRemindTpl(
+        com.blemobi.sep.probuf.CommonApiProtos.PEmpty request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_GRPC_GET_REMIND, getCallOptions()), request);
+          getChannel().newCall(METHOD_GRPC_GET_REMIND_TPL, getCallOptions()), request);
     }
 
     /**
      * <pre>
-     *&#64;note 监管:删除提醒消息
-     *&#64;param  PRemindDeleteParam      提醒消息创建者和id
+     *&#64;note 监管:开启、关闭生日提醒(CEO)
+     *&#64;param   PBoolSingle  true:打开, false:关闭  
      *&#64;return PEmpty
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> grpcDeleteRemind(
-        com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> grpcSetRemindSwitch(
+        com.blemobi.sep.probuf.ResultProtos.PBoolSingle request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_GRPC_DELETE_REMIND, getCallOptions()), request);
+          getChannel().newCall(METHOD_GRPC_SET_REMIND_SWITCH, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     *&#64;note 监管:查询生日提醒(CEO)开关
+     *&#64;return PBoolSingle  true:打开, false:关闭 
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.ResultProtos.PBoolSingle> grpcGetRemindSwitch(
+        com.blemobi.sep.probuf.CommonApiProtos.PEmpty request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_GRPC_GET_REMIND_SWITCH, getCallOptions()), request);
     }
 
     /**
@@ -598,11 +784,14 @@ public class IGrpcRobotGrpc {
 
   private static final int METHODID_GRPC_SET_MSG_NUM_PER_DAY = 0;
   private static final int METHODID_GRPC_GET_MSG_NUM_PER_DAY = 1;
-  private static final int METHODID_GRPC_CREATE_REMIND = 2;
-  private static final int METHODID_GRPC_GET_REMIND = 3;
-  private static final int METHODID_GRPC_DELETE_REMIND = 4;
-  private static final int METHODID_GRPC_PUSH = 5;
-  private static final int METHODID_GRPC_GENERATE_ORDER = 6;
+  private static final int METHODID_GRPC_SET_CEO_INFO = 2;
+  private static final int METHODID_GRPC_GET_CEO_INFO = 3;
+  private static final int METHODID_GRPC_SET_REMIND_TPL = 4;
+  private static final int METHODID_GRPC_GET_REMIND_TPL = 5;
+  private static final int METHODID_GRPC_SET_REMIND_SWITCH = 6;
+  private static final int METHODID_GRPC_GET_REMIND_SWITCH = 7;
+  private static final int METHODID_GRPC_PUSH = 8;
+  private static final int METHODID_GRPC_GENERATE_ORDER = 9;
 
   private static class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -629,17 +818,29 @@ public class IGrpcRobotGrpc {
           serviceImpl.grpcGetMsgNumPerDay((com.blemobi.sep.probuf.ResultProtos.PStringSingle) request,
               (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PInt32Single>) responseObserver);
           break;
-        case METHODID_GRPC_CREATE_REMIND:
-          serviceImpl.grpcCreateRemind((com.blemobi.sep.probuf.RobotProtos.PBRemind) request,
+        case METHODID_GRPC_SET_CEO_INFO:
+          serviceImpl.grpcSetCeoInfo((com.blemobi.sep.probuf.ResultProtos.PStringSingle) request,
               (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
           break;
-        case METHODID_GRPC_GET_REMIND:
-          serviceImpl.grpcGetRemind((com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery) request,
-              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.RobotProtos.PBRemindList>) responseObserver);
+        case METHODID_GRPC_GET_CEO_INFO:
+          serviceImpl.grpcGetCeoInfo((com.blemobi.sep.probuf.CommonApiProtos.PEmpty) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.AccountProtos.PUserBase>) responseObserver);
           break;
-        case METHODID_GRPC_DELETE_REMIND:
-          serviceImpl.grpcDeleteRemind((com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam) request,
+        case METHODID_GRPC_SET_REMIND_TPL:
+          serviceImpl.grpcSetRemindTpl((com.blemobi.sep.probuf.RobotProtos.PBRemind) request,
               (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
+          break;
+        case METHODID_GRPC_GET_REMIND_TPL:
+          serviceImpl.grpcGetRemindTpl((com.blemobi.sep.probuf.CommonApiProtos.PEmpty) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.RobotProtos.PBRemind>) responseObserver);
+          break;
+        case METHODID_GRPC_SET_REMIND_SWITCH:
+          serviceImpl.grpcSetRemindSwitch((com.blemobi.sep.probuf.ResultProtos.PBoolSingle) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
+          break;
+        case METHODID_GRPC_GET_REMIND_SWITCH:
+          serviceImpl.grpcGetRemindSwitch((com.blemobi.sep.probuf.CommonApiProtos.PEmpty) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PBoolSingle>) responseObserver);
           break;
         case METHODID_GRPC_PUSH:
           serviceImpl.grpcPush((com.blemobi.sep.probuf.RobotApiProtos.PRobotNotifyMsgList) request,
@@ -669,9 +870,12 @@ public class IGrpcRobotGrpc {
     return new io.grpc.ServiceDescriptor(SERVICE_NAME,
         METHOD_GRPC_SET_MSG_NUM_PER_DAY,
         METHOD_GRPC_GET_MSG_NUM_PER_DAY,
-        METHOD_GRPC_CREATE_REMIND,
-        METHOD_GRPC_GET_REMIND,
-        METHOD_GRPC_DELETE_REMIND,
+        METHOD_GRPC_SET_CEO_INFO,
+        METHOD_GRPC_GET_CEO_INFO,
+        METHOD_GRPC_SET_REMIND_TPL,
+        METHOD_GRPC_GET_REMIND_TPL,
+        METHOD_GRPC_SET_REMIND_SWITCH,
+        METHOD_GRPC_GET_REMIND_SWITCH,
         METHOD_GRPC_PUSH,
         METHOD_GRPC_GENERATE_ORDER);
   }

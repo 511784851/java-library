@@ -8,2237 +8,6 @@ public final class RobotApiProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface PRemindQueryOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bbproto.PRemindQuery)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional string uuid = 1;</code>
-     *
-     * <pre>
-     *提醒消息的创建者
-     * </pre>
-     */
-    java.lang.String getUuid();
-    /**
-     * <code>optional string uuid = 1;</code>
-     *
-     * <pre>
-     *提醒消息的创建者
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getUuidBytes();
-
-    /**
-     * <code>optional string type = 2;</code>
-     *
-     * <pre>
-     * future, history
-     * </pre>
-     */
-    java.lang.String getType();
-    /**
-     * <code>optional string type = 2;</code>
-     *
-     * <pre>
-     * future, history
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getTypeBytes();
-
-    /**
-     * <code>optional int64 offset = 3;</code>
-     *
-     * <pre>
-     *分页查询的偏移,为上一页最后一个提醒消息的ID.默认0.
-     * </pre>
-     */
-    long getOffset();
-
-    /**
-     * <code>optional int64 count = 4;</code>
-     *
-     * <pre>
-     *分页大小.默认20, 最大100
-     * </pre>
-     */
-    long getCount();
-  }
-  /**
-   * Protobuf type {@code bbproto.PRemindQuery}
-   *
-   * <pre>
-   * 提醒消息的查询条件
-   * </pre>
-   */
-  public  static final class PRemindQuery extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:bbproto.PRemindQuery)
-      PRemindQueryOrBuilder {
-    // Use PRemindQuery.newBuilder() to construct.
-    private PRemindQuery(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-    }
-    private PRemindQuery() {
-      uuid_ = "";
-      type_ = "";
-      offset_ = 0L;
-      count_ = 0L;
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-    }
-    private PRemindQuery(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
-      this();
-      int mutable_bitField0_ = 0;
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              uuid_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              type_ = s;
-              break;
-            }
-            case 24: {
-
-              offset_ = input.readInt64();
-              break;
-            }
-            case 32: {
-
-              count_ = input.readInt64();
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
-      } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
-      } finally {
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.blemobi.sep.probuf.RobotApiProtos.internal_static_bbproto_PRemindQuery_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.RobotApiProtos.internal_static_bbproto_PRemindQuery_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery.class, com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery.Builder.class);
-    }
-
-    public static final int UUID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object uuid_;
-    /**
-     * <code>optional string uuid = 1;</code>
-     *
-     * <pre>
-     *提醒消息的创建者
-     * </pre>
-     */
-    public java.lang.String getUuid() {
-      java.lang.Object ref = uuid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        uuid_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>optional string uuid = 1;</code>
-     *
-     * <pre>
-     *提醒消息的创建者
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getUuidBytes() {
-      java.lang.Object ref = uuid_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        uuid_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TYPE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object type_;
-    /**
-     * <code>optional string type = 2;</code>
-     *
-     * <pre>
-     * future, history
-     * </pre>
-     */
-    public java.lang.String getType() {
-      java.lang.Object ref = type_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        type_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>optional string type = 2;</code>
-     *
-     * <pre>
-     * future, history
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getTypeBytes() {
-      java.lang.Object ref = type_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        type_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int OFFSET_FIELD_NUMBER = 3;
-    private long offset_;
-    /**
-     * <code>optional int64 offset = 3;</code>
-     *
-     * <pre>
-     *分页查询的偏移,为上一页最后一个提醒消息的ID.默认0.
-     * </pre>
-     */
-    public long getOffset() {
-      return offset_;
-    }
-
-    public static final int COUNT_FIELD_NUMBER = 4;
-    private long count_;
-    /**
-     * <code>optional int64 count = 4;</code>
-     *
-     * <pre>
-     *分页大小.默认20, 最大100
-     * </pre>
-     */
-    public long getCount() {
-      return count_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getUuidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, uuid_);
-      }
-      if (!getTypeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 2, type_);
-      }
-      if (offset_ != 0L) {
-        output.writeInt64(3, offset_);
-      }
-      if (count_ != 0L) {
-        output.writeInt64(4, count_);
-      }
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getUuidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, uuid_);
-      }
-      if (!getTypeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, type_);
-      }
-      if (offset_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(3, offset_);
-      }
-      if (count_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(4, count_);
-      }
-      memoizedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code bbproto.PRemindQuery}
-     *
-     * <pre>
-     * 提醒消息的查询条件
-     * </pre>
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bbproto.PRemindQuery)
-        com.blemobi.sep.probuf.RobotApiProtos.PRemindQueryOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.blemobi.sep.probuf.RobotApiProtos.internal_static_bbproto_PRemindQuery_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.RobotApiProtos.internal_static_bbproto_PRemindQuery_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery.class, com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery.Builder.class);
-      }
-
-      // Construct using com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        uuid_ = "";
-
-        type_ = "";
-
-        offset_ = 0L;
-
-        count_ = 0L;
-
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.blemobi.sep.probuf.RobotApiProtos.internal_static_bbproto_PRemindQuery_descriptor;
-      }
-
-      public com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery.getDefaultInstance();
-      }
-
-      public com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery build() {
-        com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery buildPartial() {
-        com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery result = new com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery(this);
-        result.uuid_ = uuid_;
-        result.type_ = type_;
-        result.offset_ = offset_;
-        result.count_ = count_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery) {
-          return mergeFrom((com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery other) {
-        if (other == com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery.getDefaultInstance()) return this;
-        if (!other.getUuid().isEmpty()) {
-          uuid_ = other.uuid_;
-          onChanged();
-        }
-        if (!other.getType().isEmpty()) {
-          type_ = other.type_;
-          onChanged();
-        }
-        if (other.getOffset() != 0L) {
-          setOffset(other.getOffset());
-        }
-        if (other.getCount() != 0L) {
-          setCount(other.getCount());
-        }
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object uuid_ = "";
-      /**
-       * <code>optional string uuid = 1;</code>
-       *
-       * <pre>
-       *提醒消息的创建者
-       * </pre>
-       */
-      public java.lang.String getUuid() {
-        java.lang.Object ref = uuid_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          uuid_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string uuid = 1;</code>
-       *
-       * <pre>
-       *提醒消息的创建者
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getUuidBytes() {
-        java.lang.Object ref = uuid_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          uuid_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string uuid = 1;</code>
-       *
-       * <pre>
-       *提醒消息的创建者
-       * </pre>
-       */
-      public Builder setUuid(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        uuid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string uuid = 1;</code>
-       *
-       * <pre>
-       *提醒消息的创建者
-       * </pre>
-       */
-      public Builder clearUuid() {
-        
-        uuid_ = getDefaultInstance().getUuid();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string uuid = 1;</code>
-       *
-       * <pre>
-       *提醒消息的创建者
-       * </pre>
-       */
-      public Builder setUuidBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        uuid_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object type_ = "";
-      /**
-       * <code>optional string type = 2;</code>
-       *
-       * <pre>
-       * future, history
-       * </pre>
-       */
-      public java.lang.String getType() {
-        java.lang.Object ref = type_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          type_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string type = 2;</code>
-       *
-       * <pre>
-       * future, history
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getTypeBytes() {
-        java.lang.Object ref = type_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          type_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string type = 2;</code>
-       *
-       * <pre>
-       * future, history
-       * </pre>
-       */
-      public Builder setType(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        type_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string type = 2;</code>
-       *
-       * <pre>
-       * future, history
-       * </pre>
-       */
-      public Builder clearType() {
-        
-        type_ = getDefaultInstance().getType();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string type = 2;</code>
-       *
-       * <pre>
-       * future, history
-       * </pre>
-       */
-      public Builder setTypeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        type_ = value;
-        onChanged();
-        return this;
-      }
-
-      private long offset_ ;
-      /**
-       * <code>optional int64 offset = 3;</code>
-       *
-       * <pre>
-       *分页查询的偏移,为上一页最后一个提醒消息的ID.默认0.
-       * </pre>
-       */
-      public long getOffset() {
-        return offset_;
-      }
-      /**
-       * <code>optional int64 offset = 3;</code>
-       *
-       * <pre>
-       *分页查询的偏移,为上一页最后一个提醒消息的ID.默认0.
-       * </pre>
-       */
-      public Builder setOffset(long value) {
-        
-        offset_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int64 offset = 3;</code>
-       *
-       * <pre>
-       *分页查询的偏移,为上一页最后一个提醒消息的ID.默认0.
-       * </pre>
-       */
-      public Builder clearOffset() {
-        
-        offset_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long count_ ;
-      /**
-       * <code>optional int64 count = 4;</code>
-       *
-       * <pre>
-       *分页大小.默认20, 最大100
-       * </pre>
-       */
-      public long getCount() {
-        return count_;
-      }
-      /**
-       * <code>optional int64 count = 4;</code>
-       *
-       * <pre>
-       *分页大小.默认20, 最大100
-       * </pre>
-       */
-      public Builder setCount(long value) {
-        
-        count_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int64 count = 4;</code>
-       *
-       * <pre>
-       *分页大小.默认20, 最大100
-       * </pre>
-       */
-      public Builder clearCount() {
-        
-        count_ = 0L;
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:bbproto.PRemindQuery)
-    }
-
-    // @@protoc_insertion_point(class_scope:bbproto.PRemindQuery)
-    private static final com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery();
-    }
-
-    public static com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<PRemindQuery>
-        PARSER = new com.google.protobuf.AbstractParser<PRemindQuery>() {
-      public PRemindQuery parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
-          return new PRemindQuery(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
-      }
-    };
-
-    public static com.google.protobuf.Parser<PRemindQuery> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PRemindQuery> getParserForType() {
-      return PARSER;
-    }
-
-    public com.blemobi.sep.probuf.RobotApiProtos.PRemindQuery getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface PRemindDeleteParamOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bbproto.PRemindDeleteParam)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional string uuid = 1;</code>
-     *
-     * <pre>
-     *提醒消息的创建者
-     * </pre>
-     */
-    java.lang.String getUuid();
-    /**
-     * <code>optional string uuid = 1;</code>
-     *
-     * <pre>
-     *提醒消息的创建者
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getUuidBytes();
-
-    /**
-     * <code>optional string msgId = 2;</code>
-     *
-     * <pre>
-     *消息ID
-     * </pre>
-     */
-    java.lang.String getMsgId();
-    /**
-     * <code>optional string msgId = 2;</code>
-     *
-     * <pre>
-     *消息ID
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getMsgIdBytes();
-  }
-  /**
-   * Protobuf type {@code bbproto.PRemindDeleteParam}
-   *
-   * <pre>
-   * 提醒消息的删除条件
-   * </pre>
-   */
-  public  static final class PRemindDeleteParam extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:bbproto.PRemindDeleteParam)
-      PRemindDeleteParamOrBuilder {
-    // Use PRemindDeleteParam.newBuilder() to construct.
-    private PRemindDeleteParam(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-    }
-    private PRemindDeleteParam() {
-      uuid_ = "";
-      msgId_ = "";
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-    }
-    private PRemindDeleteParam(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
-      this();
-      int mutable_bitField0_ = 0;
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              uuid_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              msgId_ = s;
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
-      } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
-      } finally {
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.blemobi.sep.probuf.RobotApiProtos.internal_static_bbproto_PRemindDeleteParam_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.RobotApiProtos.internal_static_bbproto_PRemindDeleteParam_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam.class, com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam.Builder.class);
-    }
-
-    public static final int UUID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object uuid_;
-    /**
-     * <code>optional string uuid = 1;</code>
-     *
-     * <pre>
-     *提醒消息的创建者
-     * </pre>
-     */
-    public java.lang.String getUuid() {
-      java.lang.Object ref = uuid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        uuid_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>optional string uuid = 1;</code>
-     *
-     * <pre>
-     *提醒消息的创建者
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getUuidBytes() {
-      java.lang.Object ref = uuid_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        uuid_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int MSGID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object msgId_;
-    /**
-     * <code>optional string msgId = 2;</code>
-     *
-     * <pre>
-     *消息ID
-     * </pre>
-     */
-    public java.lang.String getMsgId() {
-      java.lang.Object ref = msgId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        msgId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>optional string msgId = 2;</code>
-     *
-     * <pre>
-     *消息ID
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getMsgIdBytes() {
-      java.lang.Object ref = msgId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        msgId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getUuidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, uuid_);
-      }
-      if (!getMsgIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 2, msgId_);
-      }
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getUuidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, uuid_);
-      }
-      if (!getMsgIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, msgId_);
-      }
-      memoizedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code bbproto.PRemindDeleteParam}
-     *
-     * <pre>
-     * 提醒消息的删除条件
-     * </pre>
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bbproto.PRemindDeleteParam)
-        com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParamOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.blemobi.sep.probuf.RobotApiProtos.internal_static_bbproto_PRemindDeleteParam_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.RobotApiProtos.internal_static_bbproto_PRemindDeleteParam_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam.class, com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam.Builder.class);
-      }
-
-      // Construct using com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        uuid_ = "";
-
-        msgId_ = "";
-
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.blemobi.sep.probuf.RobotApiProtos.internal_static_bbproto_PRemindDeleteParam_descriptor;
-      }
-
-      public com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam.getDefaultInstance();
-      }
-
-      public com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam build() {
-        com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam buildPartial() {
-        com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam result = new com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam(this);
-        result.uuid_ = uuid_;
-        result.msgId_ = msgId_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam) {
-          return mergeFrom((com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam other) {
-        if (other == com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam.getDefaultInstance()) return this;
-        if (!other.getUuid().isEmpty()) {
-          uuid_ = other.uuid_;
-          onChanged();
-        }
-        if (!other.getMsgId().isEmpty()) {
-          msgId_ = other.msgId_;
-          onChanged();
-        }
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object uuid_ = "";
-      /**
-       * <code>optional string uuid = 1;</code>
-       *
-       * <pre>
-       *提醒消息的创建者
-       * </pre>
-       */
-      public java.lang.String getUuid() {
-        java.lang.Object ref = uuid_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          uuid_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string uuid = 1;</code>
-       *
-       * <pre>
-       *提醒消息的创建者
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getUuidBytes() {
-        java.lang.Object ref = uuid_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          uuid_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string uuid = 1;</code>
-       *
-       * <pre>
-       *提醒消息的创建者
-       * </pre>
-       */
-      public Builder setUuid(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        uuid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string uuid = 1;</code>
-       *
-       * <pre>
-       *提醒消息的创建者
-       * </pre>
-       */
-      public Builder clearUuid() {
-        
-        uuid_ = getDefaultInstance().getUuid();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string uuid = 1;</code>
-       *
-       * <pre>
-       *提醒消息的创建者
-       * </pre>
-       */
-      public Builder setUuidBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        uuid_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object msgId_ = "";
-      /**
-       * <code>optional string msgId = 2;</code>
-       *
-       * <pre>
-       *消息ID
-       * </pre>
-       */
-      public java.lang.String getMsgId() {
-        java.lang.Object ref = msgId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          msgId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string msgId = 2;</code>
-       *
-       * <pre>
-       *消息ID
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getMsgIdBytes() {
-        java.lang.Object ref = msgId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          msgId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string msgId = 2;</code>
-       *
-       * <pre>
-       *消息ID
-       * </pre>
-       */
-      public Builder setMsgId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        msgId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string msgId = 2;</code>
-       *
-       * <pre>
-       *消息ID
-       * </pre>
-       */
-      public Builder clearMsgId() {
-        
-        msgId_ = getDefaultInstance().getMsgId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string msgId = 2;</code>
-       *
-       * <pre>
-       *消息ID
-       * </pre>
-       */
-      public Builder setMsgIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        msgId_ = value;
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:bbproto.PRemindDeleteParam)
-    }
-
-    // @@protoc_insertion_point(class_scope:bbproto.PRemindDeleteParam)
-    private static final com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam();
-    }
-
-    public static com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<PRemindDeleteParam>
-        PARSER = new com.google.protobuf.AbstractParser<PRemindDeleteParam>() {
-      public PRemindDeleteParam parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
-          return new PRemindDeleteParam(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
-      }
-    };
-
-    public static com.google.protobuf.Parser<PRemindDeleteParam> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PRemindDeleteParam> getParserForType() {
-      return PARSER;
-    }
-
-    public com.blemobi.sep.probuf.RobotApiProtos.PRemindDeleteParam getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface PMsgStateQueryOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bbproto.PMsgStateQuery)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional string uuid = 1;</code>
-     *
-     * <pre>
-     *用户id
-     * </pre>
-     */
-    java.lang.String getUuid();
-    /**
-     * <code>optional string uuid = 1;</code>
-     *
-     * <pre>
-     *用户id
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getUuidBytes();
-
-    /**
-     * <code>repeated string celebritys = 2;</code>
-     *
-     * <pre>
-     *网红uuid
-     * </pre>
-     */
-    com.google.protobuf.ProtocolStringList
-        getCelebritysList();
-    /**
-     * <code>repeated string celebritys = 2;</code>
-     *
-     * <pre>
-     *网红uuid
-     * </pre>
-     */
-    int getCelebritysCount();
-    /**
-     * <code>repeated string celebritys = 2;</code>
-     *
-     * <pre>
-     *网红uuid
-     * </pre>
-     */
-    java.lang.String getCelebritys(int index);
-    /**
-     * <code>repeated string celebritys = 2;</code>
-     *
-     * <pre>
-     *网红uuid
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getCelebritysBytes(int index);
-  }
-  /**
-   * Protobuf type {@code bbproto.PMsgStateQuery}
-   *
-   * <pre>
-   * 是否有未读消息查询条件
-   * </pre>
-   */
-  public  static final class PMsgStateQuery extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:bbproto.PMsgStateQuery)
-      PMsgStateQueryOrBuilder {
-    // Use PMsgStateQuery.newBuilder() to construct.
-    private PMsgStateQuery(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-    }
-    private PMsgStateQuery() {
-      uuid_ = "";
-      celebritys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-    }
-    private PMsgStateQuery(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
-      this();
-      int mutable_bitField0_ = 0;
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              uuid_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                celebritys_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              celebritys_.add(s);
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
-      } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
-      } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          celebritys_ = celebritys_.getUnmodifiableView();
-        }
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.blemobi.sep.probuf.RobotApiProtos.internal_static_bbproto_PMsgStateQuery_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.RobotApiProtos.internal_static_bbproto_PMsgStateQuery_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery.class, com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int UUID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object uuid_;
-    /**
-     * <code>optional string uuid = 1;</code>
-     *
-     * <pre>
-     *用户id
-     * </pre>
-     */
-    public java.lang.String getUuid() {
-      java.lang.Object ref = uuid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        uuid_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>optional string uuid = 1;</code>
-     *
-     * <pre>
-     *用户id
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getUuidBytes() {
-      java.lang.Object ref = uuid_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        uuid_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CELEBRITYS_FIELD_NUMBER = 2;
-    private com.google.protobuf.LazyStringList celebritys_;
-    /**
-     * <code>repeated string celebritys = 2;</code>
-     *
-     * <pre>
-     *网红uuid
-     * </pre>
-     */
-    public com.google.protobuf.ProtocolStringList
-        getCelebritysList() {
-      return celebritys_;
-    }
-    /**
-     * <code>repeated string celebritys = 2;</code>
-     *
-     * <pre>
-     *网红uuid
-     * </pre>
-     */
-    public int getCelebritysCount() {
-      return celebritys_.size();
-    }
-    /**
-     * <code>repeated string celebritys = 2;</code>
-     *
-     * <pre>
-     *网红uuid
-     * </pre>
-     */
-    public java.lang.String getCelebritys(int index) {
-      return celebritys_.get(index);
-    }
-    /**
-     * <code>repeated string celebritys = 2;</code>
-     *
-     * <pre>
-     *网红uuid
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getCelebritysBytes(int index) {
-      return celebritys_.getByteString(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getUuidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, uuid_);
-      }
-      for (int i = 0; i < celebritys_.size(); i++) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 2, celebritys_.getRaw(i));
-      }
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getUuidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, uuid_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < celebritys_.size(); i++) {
-          dataSize += computeStringSizeNoTag(celebritys_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getCelebritysList().size();
-      }
-      memoizedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code bbproto.PMsgStateQuery}
-     *
-     * <pre>
-     * 是否有未读消息查询条件
-     * </pre>
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bbproto.PMsgStateQuery)
-        com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQueryOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.blemobi.sep.probuf.RobotApiProtos.internal_static_bbproto_PMsgStateQuery_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.RobotApiProtos.internal_static_bbproto_PMsgStateQuery_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery.class, com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery.Builder.class);
-      }
-
-      // Construct using com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        uuid_ = "";
-
-        celebritys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.blemobi.sep.probuf.RobotApiProtos.internal_static_bbproto_PMsgStateQuery_descriptor;
-      }
-
-      public com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery.getDefaultInstance();
-      }
-
-      public com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery build() {
-        com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery buildPartial() {
-        com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery result = new com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        result.uuid_ = uuid_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          celebritys_ = celebritys_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.celebritys_ = celebritys_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery) {
-          return mergeFrom((com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery other) {
-        if (other == com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery.getDefaultInstance()) return this;
-        if (!other.getUuid().isEmpty()) {
-          uuid_ = other.uuid_;
-          onChanged();
-        }
-        if (!other.celebritys_.isEmpty()) {
-          if (celebritys_.isEmpty()) {
-            celebritys_ = other.celebritys_;
-            bitField0_ = (bitField0_ & ~0x00000002);
-          } else {
-            ensureCelebritysIsMutable();
-            celebritys_.addAll(other.celebritys_);
-          }
-          onChanged();
-        }
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object uuid_ = "";
-      /**
-       * <code>optional string uuid = 1;</code>
-       *
-       * <pre>
-       *用户id
-       * </pre>
-       */
-      public java.lang.String getUuid() {
-        java.lang.Object ref = uuid_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          uuid_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string uuid = 1;</code>
-       *
-       * <pre>
-       *用户id
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getUuidBytes() {
-        java.lang.Object ref = uuid_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          uuid_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string uuid = 1;</code>
-       *
-       * <pre>
-       *用户id
-       * </pre>
-       */
-      public Builder setUuid(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        uuid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string uuid = 1;</code>
-       *
-       * <pre>
-       *用户id
-       * </pre>
-       */
-      public Builder clearUuid() {
-        
-        uuid_ = getDefaultInstance().getUuid();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string uuid = 1;</code>
-       *
-       * <pre>
-       *用户id
-       * </pre>
-       */
-      public Builder setUuidBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        uuid_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.LazyStringList celebritys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureCelebritysIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          celebritys_ = new com.google.protobuf.LazyStringArrayList(celebritys_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-      /**
-       * <code>repeated string celebritys = 2;</code>
-       *
-       * <pre>
-       *网红uuid
-       * </pre>
-       */
-      public com.google.protobuf.ProtocolStringList
-          getCelebritysList() {
-        return celebritys_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string celebritys = 2;</code>
-       *
-       * <pre>
-       *网红uuid
-       * </pre>
-       */
-      public int getCelebritysCount() {
-        return celebritys_.size();
-      }
-      /**
-       * <code>repeated string celebritys = 2;</code>
-       *
-       * <pre>
-       *网红uuid
-       * </pre>
-       */
-      public java.lang.String getCelebritys(int index) {
-        return celebritys_.get(index);
-      }
-      /**
-       * <code>repeated string celebritys = 2;</code>
-       *
-       * <pre>
-       *网红uuid
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getCelebritysBytes(int index) {
-        return celebritys_.getByteString(index);
-      }
-      /**
-       * <code>repeated string celebritys = 2;</code>
-       *
-       * <pre>
-       *网红uuid
-       * </pre>
-       */
-      public Builder setCelebritys(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureCelebritysIsMutable();
-        celebritys_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string celebritys = 2;</code>
-       *
-       * <pre>
-       *网红uuid
-       * </pre>
-       */
-      public Builder addCelebritys(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureCelebritysIsMutable();
-        celebritys_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string celebritys = 2;</code>
-       *
-       * <pre>
-       *网红uuid
-       * </pre>
-       */
-      public Builder addAllCelebritys(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureCelebritysIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, celebritys_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string celebritys = 2;</code>
-       *
-       * <pre>
-       *网红uuid
-       * </pre>
-       */
-      public Builder clearCelebritys() {
-        celebritys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string celebritys = 2;</code>
-       *
-       * <pre>
-       *网红uuid
-       * </pre>
-       */
-      public Builder addCelebritysBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureCelebritysIsMutable();
-        celebritys_.add(value);
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:bbproto.PMsgStateQuery)
-    }
-
-    // @@protoc_insertion_point(class_scope:bbproto.PMsgStateQuery)
-    private static final com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery();
-    }
-
-    public static com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<PMsgStateQuery>
-        PARSER = new com.google.protobuf.AbstractParser<PMsgStateQuery>() {
-      public PMsgStateQuery parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
-          return new PMsgStateQuery(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
-      }
-    };
-
-    public static com.google.protobuf.Parser<PMsgStateQuery> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PMsgStateQuery> getParserForType() {
-      return PARSER;
-    }
-
-    public com.blemobi.sep.probuf.RobotApiProtos.PMsgStateQuery getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface PBRedPacketNotifyMsgOrBuilder extends
       // @@protoc_insertion_point(interface_extends:bbproto.PBRedPacketNotifyMsg)
       com.google.protobuf.MessageOrBuilder {
@@ -2940,6 +709,23 @@ public final class RobotApiProtos {
      */
     com.google.protobuf.ByteString
         getTextBytes();
+
+    /**
+     * <code>optional .bbproto.ERobotPushType type = 3;</code>
+     *
+     * <pre>
+     *提醒类型:抽奖活动提醒, 领奖提醒、过期提醒、收货地址更新提醒
+     * </pre>
+     */
+    int getTypeValue();
+    /**
+     * <code>optional .bbproto.ERobotPushType type = 3;</code>
+     *
+     * <pre>
+     *提醒类型:抽奖活动提醒, 领奖提醒、过期提醒、收货地址更新提醒
+     * </pre>
+     */
+    com.blemobi.sep.probuf.RobotProtos.ERobotPushType getType();
   }
   /**
    * Protobuf type {@code bbproto.PBLotteryNotifyMsg}
@@ -2959,6 +745,7 @@ public final class RobotApiProtos {
     private PBLotteryNotifyMsg() {
       ordNo_ = "";
       text_ = "";
+      type_ = 0;
     }
 
     @java.lang.Override
@@ -2995,6 +782,12 @@ public final class RobotApiProtos {
               java.lang.String s = input.readStringRequireUtf8();
 
               text_ = s;
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+
+              type_ = rawValue;
               break;
             }
           }
@@ -3105,6 +898,30 @@ public final class RobotApiProtos {
       }
     }
 
+    public static final int TYPE_FIELD_NUMBER = 3;
+    private int type_;
+    /**
+     * <code>optional .bbproto.ERobotPushType type = 3;</code>
+     *
+     * <pre>
+     *提醒类型:抽奖活动提醒, 领奖提醒、过期提醒、收货地址更新提醒
+     * </pre>
+     */
+    public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <code>optional .bbproto.ERobotPushType type = 3;</code>
+     *
+     * <pre>
+     *提醒类型:抽奖活动提醒, 领奖提醒、过期提醒、收货地址更新提醒
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.RobotProtos.ERobotPushType getType() {
+      com.blemobi.sep.probuf.RobotProtos.ERobotPushType result = com.blemobi.sep.probuf.RobotProtos.ERobotPushType.valueOf(type_);
+      return result == null ? com.blemobi.sep.probuf.RobotProtos.ERobotPushType.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -3123,6 +940,9 @@ public final class RobotApiProtos {
       if (!getTextBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessage.writeString(output, 2, text_);
       }
+      if (type_ != com.blemobi.sep.probuf.RobotProtos.ERobotPushType.Regards.getNumber()) {
+        output.writeEnum(3, type_);
+      }
     }
 
     public int getSerializedSize() {
@@ -3135,6 +955,10 @@ public final class RobotApiProtos {
       }
       if (!getTextBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(2, text_);
+      }
+      if (type_ != com.blemobi.sep.probuf.RobotProtos.ERobotPushType.Regards.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, type_);
       }
       memoizedSize = size;
       return size;
@@ -3255,6 +1079,8 @@ public final class RobotApiProtos {
 
         text_ = "";
 
+        type_ = 0;
+
         return this;
       }
 
@@ -3279,6 +1105,7 @@ public final class RobotApiProtos {
         com.blemobi.sep.probuf.RobotApiProtos.PBLotteryNotifyMsg result = new com.blemobi.sep.probuf.RobotApiProtos.PBLotteryNotifyMsg(this);
         result.ordNo_ = ordNo_;
         result.text_ = text_;
+        result.type_ = type_;
         onBuilt();
         return result;
       }
@@ -3301,6 +1128,9 @@ public final class RobotApiProtos {
         if (!other.getText().isEmpty()) {
           text_ = other.text_;
           onChanged();
+        }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
         }
         onChanged();
         return this;
@@ -3502,6 +1332,70 @@ public final class RobotApiProtos {
   checkByteStringIsUtf8(value);
         
         text_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int type_ = 0;
+      /**
+       * <code>optional .bbproto.ERobotPushType type = 3;</code>
+       *
+       * <pre>
+       *提醒类型:抽奖活动提醒, 领奖提醒、过期提醒、收货地址更新提醒
+       * </pre>
+       */
+      public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <code>optional .bbproto.ERobotPushType type = 3;</code>
+       *
+       * <pre>
+       *提醒类型:抽奖活动提醒, 领奖提醒、过期提醒、收货地址更新提醒
+       * </pre>
+       */
+      public Builder setTypeValue(int value) {
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.ERobotPushType type = 3;</code>
+       *
+       * <pre>
+       *提醒类型:抽奖活动提醒, 领奖提醒、过期提醒、收货地址更新提醒
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.RobotProtos.ERobotPushType getType() {
+        com.blemobi.sep.probuf.RobotProtos.ERobotPushType result = com.blemobi.sep.probuf.RobotProtos.ERobotPushType.valueOf(type_);
+        return result == null ? com.blemobi.sep.probuf.RobotProtos.ERobotPushType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>optional .bbproto.ERobotPushType type = 3;</code>
+       *
+       * <pre>
+       *提醒类型:抽奖活动提醒, 领奖提醒、过期提醒、收货地址更新提醒
+       * </pre>
+       */
+      public Builder setType(com.blemobi.sep.probuf.RobotProtos.ERobotPushType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.ERobotPushType type = 3;</code>
+       *
+       * <pre>
+       *提醒类型:抽奖活动提醒, 领奖提醒、过期提醒、收货地址更新提醒
+       * </pre>
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
         onChanged();
         return this;
       }
@@ -6444,7 +4338,7 @@ public final class RobotApiProtos {
      * <code>optional int32 amount = 2;</code>
      *
      * <pre>
-     *金额[1,524288]
+     *金额[1,52428800], 分
      * </pre>
      */
     int getAmount();
@@ -6546,7 +4440,7 @@ public final class RobotApiProtos {
      * <code>optional int32 amount = 2;</code>
      *
      * <pre>
-     *金额[1,524288]
+     *金额[1,52428800], 分
      * </pre>
      */
     public int getAmount() {
@@ -6819,7 +4713,7 @@ public final class RobotApiProtos {
        * <code>optional int32 amount = 2;</code>
        *
        * <pre>
-       *金额[1,524288]
+       *金额[1,52428800], 分
        * </pre>
        */
       public int getAmount() {
@@ -6829,7 +4723,7 @@ public final class RobotApiProtos {
        * <code>optional int32 amount = 2;</code>
        *
        * <pre>
-       *金额[1,524288]
+       *金额[1,52428800], 分
        * </pre>
        */
       public Builder setAmount(int value) {
@@ -6842,7 +4736,7 @@ public final class RobotApiProtos {
        * <code>optional int32 amount = 2;</code>
        *
        * <pre>
-       *金额[1,524288]
+       *金额[1,52428800], 分
        * </pre>
        */
       public Builder clearAmount() {
@@ -7482,21 +5376,6 @@ public final class RobotApiProtos {
   }
 
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_bbproto_PRemindQuery_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_bbproto_PRemindQuery_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_bbproto_PRemindDeleteParam_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_bbproto_PRemindDeleteParam_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_bbproto_PMsgStateQuery_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_bbproto_PMsgStateQuery_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
     internal_static_bbproto_PBRedPacketNotifyMsg_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -7542,38 +5421,39 @@ public final class RobotApiProtos {
     java.lang.String[] descriptorData = {
       "\n\022robot_inside.proto\022\007bbproto\032\013robot.pro" +
       "to\032\014result.proto\032\023common_inside.proto\032\017s" +
-      "treaming.proto\"I\n\014PRemindQuery\022\014\n\004uuid\030\001" +
-      " \001(\t\022\014\n\004type\030\002 \001(\t\022\016\n\006offset\030\003 \001(\003\022\r\n\005co" +
-      "unt\030\004 \001(\003\"1\n\022PRemindDeleteParam\022\014\n\004uuid\030" +
-      "\001 \001(\t\022\r\n\005msgId\030\002 \001(\t\"2\n\016PMsgStateQuery\022\014" +
-      "\n\004uuid\030\001 \001(\t\022\022\n\ncelebritys\030\002 \003(\t\"3\n\024PBRe" +
-      "dPacketNotifyMsg\022\r\n\005ordNo\030\001 \001(\t\022\014\n\004text\030" +
-      "\002 \001(\t\"1\n\022PBLotteryNotifyMsg\022\r\n\005ordNo\030\001 \001" +
-      "(\t\022\014\n\004text\030\002 \001(\t\"\240\001\n\022PRobotRawNotifyMsg\022",
-      "*\n\tstreaming\030\001 \001(\0132\027.bbproto.PStreamingL" +
-      "ive\022,\n\007lottery\030\002 \001(\0132\033.bbproto.PBLottery" +
-      "NotifyMsg\0220\n\tredpacket\030\003 \001(\0132\035.bbproto.P" +
-      "BRedPacketNotifyMsg\"\203\001\n\017PRobotNotifyMsg\022" +
-      "\n\n\002to\030\001 \003(\t\022\014\n\004from\030\002 \001(\t\022(\n\007msgType\030\003 \001" +
-      "(\0162\027.bbproto.ERobotPushType\022,\n\007content\030\004" +
-      " \001(\0132\033.bbproto.PRobotRawNotifyMsg\"=\n\023PRo" +
-      "botNotifyMsgList\022&\n\004list\030\001 \003(\0132\030.bbproto" +
-      ".PRobotNotifyMsg\"3\n\016PPayOrderParma\022\021\n\tse" +
-      "rviceNo\030\001 \001(\005\022\016\n\006amount\030\002 \001(\005\"3\n\021PMsgNum",
-      "LimitParma\022\013\n\003num\030\001 \001(\005\022\021\n\tcelebrity\030\002 \001" +
-      "(\t2\320\003\n\nIGrpcRobot\022B\n\023GrpcSetMsgNumPerDay" +
-      "\022\032.bbproto.PMsgNumLimitParma\032\017.bbproto.P" +
-      "Empty\022D\n\023GrpcGetMsgNumPerDay\022\026.bbproto.P" +
-      "StringSingle\032\025.bbproto.PInt32Single\0226\n\020G" +
-      "rpcCreateRemind\022\021.bbproto.PBRemind\032\017.bbp" +
-      "roto.PEmpty\022=\n\rGrpcGetRemind\022\025.bbproto.P" +
-      "RemindQuery\032\025.bbproto.PBRemindList\022@\n\020Gr" +
-      "pcDeleteRemind\022\033.bbproto.PRemindDeletePa" +
-      "ram\032\017.bbproto.PEmpty\0229\n\010GrpcPush\022\034.bbpro",
-      "to.PRobotNotifyMsgList\032\017.bbproto.PEmpty\022" +
-      "D\n\021GrpcGenerateOrder\022\027.bbproto.PPayOrder" +
-      "Parma\032\026.bbproto.PStringSingleB(\n\026com.ble" +
-      "mobi.sep.probufB\016RobotApiProtosb\006proto3"
+      "treaming.proto\032\raccount.proto\"3\n\024PBRedPa" +
+      "cketNotifyMsg\022\r\n\005ordNo\030\001 \001(\t\022\014\n\004text\030\002 \001" +
+      "(\t\"X\n\022PBLotteryNotifyMsg\022\r\n\005ordNo\030\001 \001(\t\022" +
+      "\014\n\004text\030\002 \001(\t\022%\n\004type\030\003 \001(\0162\027.bbproto.ER" +
+      "obotPushType\"\240\001\n\022PRobotRawNotifyMsg\022*\n\ts" +
+      "treaming\030\001 \001(\0132\027.bbproto.PStreamingLive\022" +
+      ",\n\007lottery\030\002 \001(\0132\033.bbproto.PBLotteryNoti" +
+      "fyMsg\0220\n\tredpacket\030\003 \001(\0132\035.bbproto.PBRed",
+      "PacketNotifyMsg\"\203\001\n\017PRobotNotifyMsg\022\n\n\002t" +
+      "o\030\001 \003(\t\022\014\n\004from\030\002 \001(\t\022(\n\007msgType\030\003 \001(\0162\027" +
+      ".bbproto.ERobotPushType\022,\n\007content\030\004 \001(\013" +
+      "2\033.bbproto.PRobotRawNotifyMsg\"=\n\023PRobotN" +
+      "otifyMsgList\022&\n\004list\030\001 \003(\0132\030.bbproto.PRo" +
+      "botNotifyMsg\"3\n\016PPayOrderParma\022\021\n\tservic" +
+      "eNo\030\001 \001(\005\022\016\n\006amount\030\002 \001(\005\"3\n\021PMsgNumLimi" +
+      "tParma\022\013\n\003num\030\001 \001(\005\022\021\n\tcelebrity\030\002 \001(\t2\365" +
+      "\004\n\nIGrpcRobot\022B\n\023GrpcSetMsgNumPerDay\022\032.b" +
+      "bproto.PMsgNumLimitParma\032\017.bbproto.PEmpt",
+      "y\022D\n\023GrpcGetMsgNumPerDay\022\026.bbproto.PStri" +
+      "ngSingle\032\025.bbproto.PInt32Single\0229\n\016GrpcS" +
+      "etCeoInfo\022\026.bbproto.PStringSingle\032\017.bbpr" +
+      "oto.PEmpty\0225\n\016GrpcGetCeoInfo\022\017.bbproto.P" +
+      "Empty\032\022.bbproto.PUserBase\0226\n\020GrpcSetRemi" +
+      "ndTpl\022\021.bbproto.PBRemind\032\017.bbproto.PEmpt" +
+      "y\0226\n\020GrpcGetRemindTpl\022\017.bbproto.PEmpty\032\021" +
+      ".bbproto.PBRemind\022<\n\023GrpcSetRemindSwitch" +
+      "\022\024.bbproto.PBoolSingle\032\017.bbproto.PEmpty\022" +
+      "<\n\023GrpcGetRemindSwitch\022\017.bbproto.PEmpty\032",
+      "\024.bbproto.PBoolSingle\0229\n\010GrpcPush\022\034.bbpr" +
+      "oto.PRobotNotifyMsgList\032\017.bbproto.PEmpty" +
+      "\022D\n\021GrpcGenerateOrder\022\027.bbproto.PPayOrde" +
+      "rParma\032\026.bbproto.PStringSingleB(\n\026com.bl" +
+      "emobi.sep.probufB\016RobotApiProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7590,63 +5470,46 @@ public final class RobotApiProtos {
           com.blemobi.sep.probuf.ResultProtos.getDescriptor(),
           com.blemobi.sep.probuf.CommonApiProtos.getDescriptor(),
           com.blemobi.sep.probuf.StreamingProtos.getDescriptor(),
+          com.blemobi.sep.probuf.AccountProtos.getDescriptor(),
         }, assigner);
-    internal_static_bbproto_PRemindQuery_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_bbproto_PRemindQuery_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_bbproto_PRemindQuery_descriptor,
-        new java.lang.String[] { "Uuid", "Type", "Offset", "Count", });
-    internal_static_bbproto_PRemindDeleteParam_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_bbproto_PRemindDeleteParam_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_bbproto_PRemindDeleteParam_descriptor,
-        new java.lang.String[] { "Uuid", "MsgId", });
-    internal_static_bbproto_PMsgStateQuery_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_bbproto_PMsgStateQuery_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_bbproto_PMsgStateQuery_descriptor,
-        new java.lang.String[] { "Uuid", "Celebritys", });
     internal_static_bbproto_PBRedPacketNotifyMsg_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_bbproto_PBRedPacketNotifyMsg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PBRedPacketNotifyMsg_descriptor,
         new java.lang.String[] { "OrdNo", "Text", });
     internal_static_bbproto_PBLotteryNotifyMsg_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_bbproto_PBLotteryNotifyMsg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PBLotteryNotifyMsg_descriptor,
-        new java.lang.String[] { "OrdNo", "Text", });
+        new java.lang.String[] { "OrdNo", "Text", "Type", });
     internal_static_bbproto_PRobotRawNotifyMsg_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_bbproto_PRobotRawNotifyMsg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PRobotRawNotifyMsg_descriptor,
         new java.lang.String[] { "Streaming", "Lottery", "Redpacket", });
     internal_static_bbproto_PRobotNotifyMsg_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_bbproto_PRobotNotifyMsg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PRobotNotifyMsg_descriptor,
         new java.lang.String[] { "To", "From", "MsgType", "Content", });
     internal_static_bbproto_PRobotNotifyMsgList_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_bbproto_PRobotNotifyMsgList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PRobotNotifyMsgList_descriptor,
         new java.lang.String[] { "List", });
     internal_static_bbproto_PPayOrderParma_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_bbproto_PPayOrderParma_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PPayOrderParma_descriptor,
         new java.lang.String[] { "ServiceNo", "Amount", });
     internal_static_bbproto_PMsgNumLimitParma_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_bbproto_PMsgNumLimitParma_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PMsgNumLimitParma_descriptor,
@@ -7655,6 +5518,7 @@ public final class RobotApiProtos {
     com.blemobi.sep.probuf.ResultProtos.getDescriptor();
     com.blemobi.sep.probuf.CommonApiProtos.getDescriptor();
     com.blemobi.sep.probuf.StreamingProtos.getDescriptor();
+    com.blemobi.sep.probuf.AccountProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

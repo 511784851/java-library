@@ -170,13 +170,29 @@ public final class NotificationProtos {
      */
     StreamingSoon(18, 110),
     /**
+     * <code>SystemMessage = 111;</code>
+     *
+     * <pre>
+     * 系统消息(私信等)
+     * </pre>
+     */
+    SystemMessage(19, 111),
+    /**
+     * <code>SimpleMessage = 112;</code>
+     *
+     * <pre>
+     * 简单通知消息（抽奖等通知）
+     * </pre>
+     */
+    SimpleMessage(20, 112),
+    /**
      * <code>SocialApply = 200;</code>
      *
      * <pre>
      * 好友申请
      * </pre>
      */
-    SocialApply(19, 200),
+    SocialApply(21, 200),
     /**
      * <code>CommunityInvite = 201;</code>
      *
@@ -184,7 +200,7 @@ public final class NotificationProtos {
      * 社区邀请
      * </pre>
      */
-    CommunityInvite(20, 201),
+    CommunityInvite(22, 201),
     /**
      * <code>AchievementBroadcast = 300;</code>
      *
@@ -192,7 +208,7 @@ public final class NotificationProtos {
      * 成就通知给其它人（好友或粉丝）
      * </pre>
      */
-    AchievementBroadcast(21, 300),
+    AchievementBroadcast(23, 300),
     /**
      * <code>TaskBroadcast = 301;</code>
      *
@@ -200,7 +216,7 @@ public final class NotificationProtos {
      * 等级提升通知其他人 (好友或粉丝)
      * </pre>
      */
-    TaskBroadcast(22, 301),
+    TaskBroadcast(24, 301),
     UNRECOGNIZED(-1, -1),
     ;
 
@@ -357,6 +373,22 @@ public final class NotificationProtos {
      */
     public static final int StreamingSoon_VALUE = 110;
     /**
+     * <code>SystemMessage = 111;</code>
+     *
+     * <pre>
+     * 系统消息(私信等)
+     * </pre>
+     */
+    public static final int SystemMessage_VALUE = 111;
+    /**
+     * <code>SimpleMessage = 112;</code>
+     *
+     * <pre>
+     * 简单通知消息（抽奖等通知）
+     * </pre>
+     */
+    public static final int SimpleMessage_VALUE = 112;
+    /**
      * <code>SocialApply = 200;</code>
      *
      * <pre>
@@ -419,6 +451,8 @@ public final class NotificationProtos {
         case 108: return CommunityKickedOut;
         case 109: return RealNameAuthFailed;
         case 110: return StreamingSoon;
+        case 111: return SystemMessage;
+        case 112: return SimpleMessage;
         case 200: return SocialApply;
         case 201: return CommunityInvite;
         case 300: return AchievementBroadcast;
@@ -32358,6 +32392,526 @@ public final class NotificationProtos {
 
   }
 
+  public interface PNotifySimpleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PNotifySimple)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string uri = 1;</code>
+     *
+     * <pre>
+     * uri携带跳转对象和对应参数信息
+     * scheme://path?query_string
+     * 抽奖中奖用户提交更新资料: payment://lottery/info?uuid=xxxx&amp;id=xxx
+     * 抽奖发货提醒: payment://lottery/shipping?id=xxx
+     * </pre>
+     */
+    java.lang.String getUri();
+    /**
+     * <code>optional string uri = 1;</code>
+     *
+     * <pre>
+     * uri携带跳转对象和对应参数信息
+     * scheme://path?query_string
+     * 抽奖中奖用户提交更新资料: payment://lottery/info?uuid=xxxx&amp;id=xxx
+     * 抽奖发货提醒: payment://lottery/shipping?id=xxx
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUriBytes();
+  }
+  /**
+   * Protobuf type {@code bbproto.PNotifySimple}
+   *
+   * <pre>
+   * 简单通知
+   * </pre>
+   */
+  public  static final class PNotifySimple extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PNotifySimple)
+      PNotifySimpleOrBuilder {
+    // Use PNotifySimple.newBuilder() to construct.
+    private PNotifySimple(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PNotifySimple() {
+      uri_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PNotifySimple(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              uri_ = s;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.NotificationProtos.internal_static_bbproto_PNotifySimple_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.NotificationProtos.internal_static_bbproto_PNotifySimple_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.NotificationProtos.PNotifySimple.class, com.blemobi.sep.probuf.NotificationProtos.PNotifySimple.Builder.class);
+    }
+
+    public static final int URI_FIELD_NUMBER = 1;
+    private volatile java.lang.Object uri_;
+    /**
+     * <code>optional string uri = 1;</code>
+     *
+     * <pre>
+     * uri携带跳转对象和对应参数信息
+     * scheme://path?query_string
+     * 抽奖中奖用户提交更新资料: payment://lottery/info?uuid=xxxx&amp;id=xxx
+     * 抽奖发货提醒: payment://lottery/shipping?id=xxx
+     * </pre>
+     */
+    public java.lang.String getUri() {
+      java.lang.Object ref = uri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string uri = 1;</code>
+     *
+     * <pre>
+     * uri携带跳转对象和对应参数信息
+     * scheme://path?query_string
+     * 抽奖中奖用户提交更新资料: payment://lottery/info?uuid=xxxx&amp;id=xxx
+     * 抽奖发货提醒: payment://lottery/shipping?id=xxx
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUriBytes() {
+      java.lang.Object ref = uri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getUriBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, uri_);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getUriBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, uri_);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.NotificationProtos.PNotifySimple parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.NotificationProtos.PNotifySimple parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NotificationProtos.PNotifySimple parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.NotificationProtos.PNotifySimple parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NotificationProtos.PNotifySimple parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NotificationProtos.PNotifySimple parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NotificationProtos.PNotifySimple parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NotificationProtos.PNotifySimple parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NotificationProtos.PNotifySimple parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NotificationProtos.PNotifySimple parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.NotificationProtos.PNotifySimple prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PNotifySimple}
+     *
+     * <pre>
+     * 简单通知
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PNotifySimple)
+        com.blemobi.sep.probuf.NotificationProtos.PNotifySimpleOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.NotificationProtos.internal_static_bbproto_PNotifySimple_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.NotificationProtos.internal_static_bbproto_PNotifySimple_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.NotificationProtos.PNotifySimple.class, com.blemobi.sep.probuf.NotificationProtos.PNotifySimple.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.NotificationProtos.PNotifySimple.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        uri_ = "";
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.NotificationProtos.internal_static_bbproto_PNotifySimple_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.NotificationProtos.PNotifySimple getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.NotificationProtos.PNotifySimple.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.NotificationProtos.PNotifySimple build() {
+        com.blemobi.sep.probuf.NotificationProtos.PNotifySimple result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.NotificationProtos.PNotifySimple buildPartial() {
+        com.blemobi.sep.probuf.NotificationProtos.PNotifySimple result = new com.blemobi.sep.probuf.NotificationProtos.PNotifySimple(this);
+        result.uri_ = uri_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.NotificationProtos.PNotifySimple) {
+          return mergeFrom((com.blemobi.sep.probuf.NotificationProtos.PNotifySimple)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.NotificationProtos.PNotifySimple other) {
+        if (other == com.blemobi.sep.probuf.NotificationProtos.PNotifySimple.getDefaultInstance()) return this;
+        if (!other.getUri().isEmpty()) {
+          uri_ = other.uri_;
+          onChanged();
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.NotificationProtos.PNotifySimple parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.NotificationProtos.PNotifySimple) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object uri_ = "";
+      /**
+       * <code>optional string uri = 1;</code>
+       *
+       * <pre>
+       * uri携带跳转对象和对应参数信息
+       * scheme://path?query_string
+       * 抽奖中奖用户提交更新资料: payment://lottery/info?uuid=xxxx&amp;id=xxx
+       * 抽奖发货提醒: payment://lottery/shipping?id=xxx
+       * </pre>
+       */
+      public java.lang.String getUri() {
+        java.lang.Object ref = uri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string uri = 1;</code>
+       *
+       * <pre>
+       * uri携带跳转对象和对应参数信息
+       * scheme://path?query_string
+       * 抽奖中奖用户提交更新资料: payment://lottery/info?uuid=xxxx&amp;id=xxx
+       * 抽奖发货提醒: payment://lottery/shipping?id=xxx
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUriBytes() {
+        java.lang.Object ref = uri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string uri = 1;</code>
+       *
+       * <pre>
+       * uri携带跳转对象和对应参数信息
+       * scheme://path?query_string
+       * 抽奖中奖用户提交更新资料: payment://lottery/info?uuid=xxxx&amp;id=xxx
+       * 抽奖发货提醒: payment://lottery/shipping?id=xxx
+       * </pre>
+       */
+      public Builder setUri(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uri_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uri = 1;</code>
+       *
+       * <pre>
+       * uri携带跳转对象和对应参数信息
+       * scheme://path?query_string
+       * 抽奖中奖用户提交更新资料: payment://lottery/info?uuid=xxxx&amp;id=xxx
+       * 抽奖发货提醒: payment://lottery/shipping?id=xxx
+       * </pre>
+       */
+      public Builder clearUri() {
+        
+        uri_ = getDefaultInstance().getUri();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uri = 1;</code>
+       *
+       * <pre>
+       * uri携带跳转对象和对应参数信息
+       * scheme://path?query_string
+       * 抽奖中奖用户提交更新资料: payment://lottery/info?uuid=xxxx&amp;id=xxx
+       * 抽奖发货提醒: payment://lottery/shipping?id=xxx
+       * </pre>
+       */
+      public Builder setUriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        uri_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PNotifySimple)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PNotifySimple)
+    private static final com.blemobi.sep.probuf.NotificationProtos.PNotifySimple DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.NotificationProtos.PNotifySimple();
+    }
+
+    public static com.blemobi.sep.probuf.NotificationProtos.PNotifySimple getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PNotifySimple>
+        PARSER = new com.google.protobuf.AbstractParser<PNotifySimple>() {
+      public PNotifySimple parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PNotifySimple(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<PNotifySimple> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PNotifySimple> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.NotificationProtos.PNotifySimple getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface PNotifyRawMessageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:bbproto.PNotifyRawMessage)
       com.google.protobuf.MessageOrBuilder {
@@ -32366,7 +32920,7 @@ public final class NotificationProtos {
      * <code>optional string content = 1;</code>
      *
      * <pre>
-     * 服务端国际化(成就名称、等级名称等)
+     * 服务端国际化(成就名称、等级名称、系统消息、简单通知消息等)
      * </pre>
      */
     java.lang.String getContent();
@@ -32374,7 +32928,7 @@ public final class NotificationProtos {
      * <code>optional string content = 1;</code>
      *
      * <pre>
-     * 服务端国际化(成就名称、等级名称等)
+     * 服务端国际化(成就名称、等级名称、系统消息、简单通知消息等)
      * </pre>
      */
     com.google.protobuf.ByteString
@@ -32579,6 +33133,31 @@ public final class NotificationProtos {
      * </pre>
      */
     com.blemobi.sep.probuf.NotificationProtos.PNotifyCommunityOrBuilder getCommunityOrBuilder();
+
+    /**
+     * <code>optional .bbproto.PNotifySimple simple = 13;</code>
+     *
+     * <pre>
+     * 简单通知
+     * </pre>
+     */
+    boolean hasSimple();
+    /**
+     * <code>optional .bbproto.PNotifySimple simple = 13;</code>
+     *
+     * <pre>
+     * 简单通知
+     * </pre>
+     */
+    com.blemobi.sep.probuf.NotificationProtos.PNotifySimple getSimple();
+    /**
+     * <code>optional .bbproto.PNotifySimple simple = 13;</code>
+     *
+     * <pre>
+     * 简单通知
+     * </pre>
+     */
+    com.blemobi.sep.probuf.NotificationProtos.PNotifySimpleOrBuilder getSimpleOrBuilder();
   }
   /**
    * Protobuf type {@code bbproto.PNotifyRawMessage}
@@ -32733,6 +33312,19 @@ public final class NotificationProtos {
 
               break;
             }
+            case 106: {
+              com.blemobi.sep.probuf.NotificationProtos.PNotifySimple.Builder subBuilder = null;
+              if (simple_ != null) {
+                subBuilder = simple_.toBuilder();
+              }
+              simple_ = input.readMessage(com.blemobi.sep.probuf.NotificationProtos.PNotifySimple.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(simple_);
+                simple_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -32763,7 +33355,7 @@ public final class NotificationProtos {
      * <code>optional string content = 1;</code>
      *
      * <pre>
-     * 服务端国际化(成就名称、等级名称等)
+     * 服务端国际化(成就名称、等级名称、系统消息、简单通知消息等)
      * </pre>
      */
     public java.lang.String getContent() {
@@ -32782,7 +33374,7 @@ public final class NotificationProtos {
      * <code>optional string content = 1;</code>
      *
      * <pre>
-     * 服务端国际化(成就名称、等级名称等)
+     * 服务端国际化(成就名称、等级名称、系统消息、简单通知消息等)
      * </pre>
      */
     public com.google.protobuf.ByteString
@@ -33063,6 +33655,39 @@ public final class NotificationProtos {
       return getCommunity();
     }
 
+    public static final int SIMPLE_FIELD_NUMBER = 13;
+    private com.blemobi.sep.probuf.NotificationProtos.PNotifySimple simple_;
+    /**
+     * <code>optional .bbproto.PNotifySimple simple = 13;</code>
+     *
+     * <pre>
+     * 简单通知
+     * </pre>
+     */
+    public boolean hasSimple() {
+      return simple_ != null;
+    }
+    /**
+     * <code>optional .bbproto.PNotifySimple simple = 13;</code>
+     *
+     * <pre>
+     * 简单通知
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.NotificationProtos.PNotifySimple getSimple() {
+      return simple_ == null ? com.blemobi.sep.probuf.NotificationProtos.PNotifySimple.getDefaultInstance() : simple_;
+    }
+    /**
+     * <code>optional .bbproto.PNotifySimple simple = 13;</code>
+     *
+     * <pre>
+     * 简单通知
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.NotificationProtos.PNotifySimpleOrBuilder getSimpleOrBuilder() {
+      return getSimple();
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -33101,6 +33726,9 @@ public final class NotificationProtos {
       }
       if (community_ != null) {
         output.writeMessage(12, getCommunity());
+      }
+      if (simple_ != null) {
+        output.writeMessage(13, getSimple());
       }
     }
 
@@ -33143,6 +33771,10 @@ public final class NotificationProtos {
       if (community_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getCommunity());
+      }
+      if (simple_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getSimple());
       }
       memoizedSize = size;
       return size;
@@ -33309,6 +33941,12 @@ public final class NotificationProtos {
           community_ = null;
           communityBuilder_ = null;
         }
+        if (simpleBuilder_ == null) {
+          simple_ = null;
+        } else {
+          simple_ = null;
+          simpleBuilder_ = null;
+        }
         return this;
       }
 
@@ -33372,6 +34010,11 @@ public final class NotificationProtos {
         } else {
           result.community_ = communityBuilder_.build();
         }
+        if (simpleBuilder_ == null) {
+          result.simple_ = simple_;
+        } else {
+          result.simple_ = simpleBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -33415,6 +34058,9 @@ public final class NotificationProtos {
         if (other.hasCommunity()) {
           mergeCommunity(other.getCommunity());
         }
+        if (other.hasSimple()) {
+          mergeSimple(other.getSimple());
+        }
         onChanged();
         return this;
       }
@@ -33446,7 +34092,7 @@ public final class NotificationProtos {
        * <code>optional string content = 1;</code>
        *
        * <pre>
-       * 服务端国际化(成就名称、等级名称等)
+       * 服务端国际化(成就名称、等级名称、系统消息、简单通知消息等)
        * </pre>
        */
       public java.lang.String getContent() {
@@ -33465,7 +34111,7 @@ public final class NotificationProtos {
        * <code>optional string content = 1;</code>
        *
        * <pre>
-       * 服务端国际化(成就名称、等级名称等)
+       * 服务端国际化(成就名称、等级名称、系统消息、简单通知消息等)
        * </pre>
        */
       public com.google.protobuf.ByteString
@@ -33485,7 +34131,7 @@ public final class NotificationProtos {
        * <code>optional string content = 1;</code>
        *
        * <pre>
-       * 服务端国际化(成就名称、等级名称等)
+       * 服务端国际化(成就名称、等级名称、系统消息、简单通知消息等)
        * </pre>
        */
       public Builder setContent(
@@ -33502,7 +34148,7 @@ public final class NotificationProtos {
        * <code>optional string content = 1;</code>
        *
        * <pre>
-       * 服务端国际化(成就名称、等级名称等)
+       * 服务端国际化(成就名称、等级名称、系统消息、简单通知消息等)
        * </pre>
        */
       public Builder clearContent() {
@@ -33515,7 +34161,7 @@ public final class NotificationProtos {
        * <code>optional string content = 1;</code>
        *
        * <pre>
-       * 服务端国际化(成就名称、等级名称等)
+       * 服务端国际化(成就名称、等级名称、系统消息、简单通知消息等)
        * </pre>
        */
       public Builder setContentBytes(
@@ -34752,6 +35398,159 @@ public final class NotificationProtos {
           community_ = null;
         }
         return communityBuilder_;
+      }
+
+      private com.blemobi.sep.probuf.NotificationProtos.PNotifySimple simple_ = null;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.NotificationProtos.PNotifySimple, com.blemobi.sep.probuf.NotificationProtos.PNotifySimple.Builder, com.blemobi.sep.probuf.NotificationProtos.PNotifySimpleOrBuilder> simpleBuilder_;
+      /**
+       * <code>optional .bbproto.PNotifySimple simple = 13;</code>
+       *
+       * <pre>
+       * 简单通知
+       * </pre>
+       */
+      public boolean hasSimple() {
+        return simpleBuilder_ != null || simple_ != null;
+      }
+      /**
+       * <code>optional .bbproto.PNotifySimple simple = 13;</code>
+       *
+       * <pre>
+       * 简单通知
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.NotificationProtos.PNotifySimple getSimple() {
+        if (simpleBuilder_ == null) {
+          return simple_ == null ? com.blemobi.sep.probuf.NotificationProtos.PNotifySimple.getDefaultInstance() : simple_;
+        } else {
+          return simpleBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .bbproto.PNotifySimple simple = 13;</code>
+       *
+       * <pre>
+       * 简单通知
+       * </pre>
+       */
+      public Builder setSimple(com.blemobi.sep.probuf.NotificationProtos.PNotifySimple value) {
+        if (simpleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          simple_ = value;
+          onChanged();
+        } else {
+          simpleBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PNotifySimple simple = 13;</code>
+       *
+       * <pre>
+       * 简单通知
+       * </pre>
+       */
+      public Builder setSimple(
+          com.blemobi.sep.probuf.NotificationProtos.PNotifySimple.Builder builderForValue) {
+        if (simpleBuilder_ == null) {
+          simple_ = builderForValue.build();
+          onChanged();
+        } else {
+          simpleBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PNotifySimple simple = 13;</code>
+       *
+       * <pre>
+       * 简单通知
+       * </pre>
+       */
+      public Builder mergeSimple(com.blemobi.sep.probuf.NotificationProtos.PNotifySimple value) {
+        if (simpleBuilder_ == null) {
+          if (simple_ != null) {
+            simple_ =
+              com.blemobi.sep.probuf.NotificationProtos.PNotifySimple.newBuilder(simple_).mergeFrom(value).buildPartial();
+          } else {
+            simple_ = value;
+          }
+          onChanged();
+        } else {
+          simpleBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PNotifySimple simple = 13;</code>
+       *
+       * <pre>
+       * 简单通知
+       * </pre>
+       */
+      public Builder clearSimple() {
+        if (simpleBuilder_ == null) {
+          simple_ = null;
+          onChanged();
+        } else {
+          simple_ = null;
+          simpleBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PNotifySimple simple = 13;</code>
+       *
+       * <pre>
+       * 简单通知
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.NotificationProtos.PNotifySimple.Builder getSimpleBuilder() {
+        
+        onChanged();
+        return getSimpleFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .bbproto.PNotifySimple simple = 13;</code>
+       *
+       * <pre>
+       * 简单通知
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.NotificationProtos.PNotifySimpleOrBuilder getSimpleOrBuilder() {
+        if (simpleBuilder_ != null) {
+          return simpleBuilder_.getMessageOrBuilder();
+        } else {
+          return simple_ == null ?
+              com.blemobi.sep.probuf.NotificationProtos.PNotifySimple.getDefaultInstance() : simple_;
+        }
+      }
+      /**
+       * <code>optional .bbproto.PNotifySimple simple = 13;</code>
+       *
+       * <pre>
+       * 简单通知
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.NotificationProtos.PNotifySimple, com.blemobi.sep.probuf.NotificationProtos.PNotifySimple.Builder, com.blemobi.sep.probuf.NotificationProtos.PNotifySimpleOrBuilder> 
+          getSimpleFieldBuilder() {
+        if (simpleBuilder_ == null) {
+          simpleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.blemobi.sep.probuf.NotificationProtos.PNotifySimple, com.blemobi.sep.probuf.NotificationProtos.PNotifySimple.Builder, com.blemobi.sep.probuf.NotificationProtos.PNotifySimpleOrBuilder>(
+                  getSimple(),
+                  getParentForChildren(),
+                  isClean());
+          simple_ = null;
+        }
+        return simpleBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -39079,6 +39878,11 @@ public final class NotificationProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_bbproto_PNotifyCommunity_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PNotifySimple_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PNotifySimple_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
     internal_static_bbproto_PNotifyRawMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -39208,50 +40012,52 @@ public final class NotificationProtos {
       "e\030\001 \001(\0132\022.bbproto.PPostInfo\">\n\020PNotifySt" +
       "reaming\022*\n\005lives\030\001 \001(\0132\033.bbproto.PStream",
       "ingLiveList\",\n\020PNotifyCommunity\022\n\n\002id\030\001 " +
-      "\001(\t\022\014\n\004name\030\002 \001(\t\"\225\003\n\021PNotifyRawMessage\022" +
-      "\017\n\007content\030\001 \001(\t\022,\n\013commentNews\030\005 \001(\0132\027." +
-      "bbproto.PNotifyComment\0222\n\014commentReply\030\006" +
-      " \001(\0132\034.bbproto.PNotifyCommentReply\022+\n\013so" +
-      "cialApply\030\007 \001(\0132\026.bbproto.PNotifySocial\022" +
-      "0\n\013commentVote\030\010 \001(\0132\033.bbproto.PNotifyCo" +
-      "mmentVote\022*\n\010newsVote\030\t \001(\0132\030.bbproto.PN" +
-      "otifyNewsVote\022&\n\006newsAt\030\n \001(\0132\026.bbproto." +
-      "PNotifyNewsAt\022,\n\tstreaming\030\013 \001(\0132\031.bbpro",
-      "to.PNotifyStreaming\022,\n\tcommunity\030\014 \001(\0132\031" +
-      ".bbproto.PNotifyCommunity\"\263\002\n\016PNotifyMes" +
-      "sage\022\"\n\004type\030\001 \001(\0162\024.bbproto.ENotifyType" +
-      "\022$\n\005state\030\002 \001(\0162\025.bbproto.ENotifyState\022\014" +
-      "\n\004time\030\003 \001(\003\022\n\n\002ID\030\004 \001(\t\022 \n\004from\030\005 \001(\0132\022" +
-      ".bbproto.PUserBase\022/\n\004args\030\006 \003(\0132!.bbpro" +
-      "to.PNotifyMessage.ArgsEntry\022\020\n\010isFriend\030" +
-      "\007 \001(\010\022+\n\007content\030\024 \001(\0132\032.bbproto.PNotify" +
-      "RawMessage\032+\n\tArgsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001\";\n\022PNotifyMessageList\022%\n",
-      "\004list\030\001 \003(\0132\027.bbproto.PNotifyMessage\"j\n\016" +
-      "PNotifySummary\022*\n\010category\030\001 \001(\0162\030.bbpro" +
-      "to.ENotifyCategory\022,\n\013messageList\030\002 \003(\0132" +
-      "\027.bbproto.PNotifyMessage\";\n\022PNotifySumma" +
-      "ryList\022%\n\004list\030\001 \003(\0132\027.bbproto.PNotifySu" +
-      "mmary*\341\003\n\013ENotifyType\022\017\n\013CommentNews\020\000\022\022" +
-      "\n\016CommentComment\020\001\022\017\n\013CommentVote\020\002\022\016\n\nN" +
-      "ewsFollow\020\003\022\014\n\010NewsVote\020\004\022\n\n\006NewsAt\020\005\022\020\n" +
-      "\014SocialAccept\020\006\022\023\n\017CommentDownVote\020\007\022\033\n\027" +
-      "CommunityAdminPromotion\020d\022\n\n\006MyTask\020e\022\021\n",
-      "\rMyAchievement\020f\022\027\n\023RealNameAuthSuccess\020" +
-      "g\022\r\n\tStreaming\020h\022\030\n\024CommunityAdminRevoke" +
-      "\020i\022\032\n\026CommunityVippPromotion\020j\022\027\n\023Commun" +
-      "ityVippRevoke\020k\022\026\n\022CommunityKickedOut\020l\022" +
-      "\026\n\022RealNameAuthFailed\020m\022\021\n\rStreamingSoon" +
-      "\020n\022\020\n\013SocialApply\020\310\001\022\024\n\017CommunityInvite\020" +
-      "\311\001\022\031\n\024AchievementBroadcast\020\254\002\022\022\n\rTaskBro" +
-      "adcast\020\255\002*M\n\014ENotifyState\022\n\n\006Unread\020\000\022\n\n" +
-      "\006Readed\020\001\022\013\n\007Deleted\020\002\022\013\n\007Action1\020\003\022\013\n\007A" +
-      "ction2\020\004*\215\001\n\017ENotifyCategory\022\020\n\014Notifica",
-      "tion\020\000\022\022\n\016MyNotification\020\001\022\023\n\017SysNotific" +
-      "ation\020\002\022\021\n\rSocialRequest\020\003\022\024\n\020CommunityR" +
-      "equest\020\004\022\026\n\022TaskAndAchievement\020\005B,\n\026com." +
-      "blemobi.sep.probufB\022NotificationProtosb\006" +
-      "proto3"
+      "\001(\t\022\014\n\004name\030\002 \001(\t\"\034\n\rPNotifySimple\022\013\n\003ur" +
+      "i\030\001 \001(\t\"\275\003\n\021PNotifyRawMessage\022\017\n\007content" +
+      "\030\001 \001(\t\022,\n\013commentNews\030\005 \001(\0132\027.bbproto.PN" +
+      "otifyComment\0222\n\014commentReply\030\006 \001(\0132\034.bbp" +
+      "roto.PNotifyCommentReply\022+\n\013socialApply\030" +
+      "\007 \001(\0132\026.bbproto.PNotifySocial\0220\n\013comment" +
+      "Vote\030\010 \001(\0132\033.bbproto.PNotifyCommentVote\022" +
+      "*\n\010newsVote\030\t \001(\0132\030.bbproto.PNotifyNewsV" +
+      "ote\022&\n\006newsAt\030\n \001(\0132\026.bbproto.PNotifyNew",
+      "sAt\022,\n\tstreaming\030\013 \001(\0132\031.bbproto.PNotify" +
+      "Streaming\022,\n\tcommunity\030\014 \001(\0132\031.bbproto.P" +
+      "NotifyCommunity\022&\n\006simple\030\r \001(\0132\026.bbprot" +
+      "o.PNotifySimple\"\263\002\n\016PNotifyMessage\022\"\n\004ty" +
+      "pe\030\001 \001(\0162\024.bbproto.ENotifyType\022$\n\005state\030" +
+      "\002 \001(\0162\025.bbproto.ENotifyState\022\014\n\004time\030\003 \001" +
+      "(\003\022\n\n\002ID\030\004 \001(\t\022 \n\004from\030\005 \001(\0132\022.bbproto.P" +
+      "UserBase\022/\n\004args\030\006 \003(\0132!.bbproto.PNotify" +
+      "Message.ArgsEntry\022\020\n\010isFriend\030\007 \001(\010\022+\n\007c" +
+      "ontent\030\024 \001(\0132\032.bbproto.PNotifyRawMessage",
+      "\032+\n\tArgsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\t:\0028\001\";\n\022PNotifyMessageList\022%\n\004list\030\001 \003(" +
+      "\0132\027.bbproto.PNotifyMessage\"j\n\016PNotifySum" +
+      "mary\022*\n\010category\030\001 \001(\0162\030.bbproto.ENotify" +
+      "Category\022,\n\013messageList\030\002 \003(\0132\027.bbproto." +
+      "PNotifyMessage\";\n\022PNotifySummaryList\022%\n\004" +
+      "list\030\001 \003(\0132\027.bbproto.PNotifySummary*\207\004\n\013" +
+      "ENotifyType\022\017\n\013CommentNews\020\000\022\022\n\016CommentC" +
+      "omment\020\001\022\017\n\013CommentVote\020\002\022\016\n\nNewsFollow\020" +
+      "\003\022\014\n\010NewsVote\020\004\022\n\n\006NewsAt\020\005\022\020\n\014SocialAcc",
+      "ept\020\006\022\023\n\017CommentDownVote\020\007\022\033\n\027CommunityA" +
+      "dminPromotion\020d\022\n\n\006MyTask\020e\022\021\n\rMyAchieve" +
+      "ment\020f\022\027\n\023RealNameAuthSuccess\020g\022\r\n\tStrea" +
+      "ming\020h\022\030\n\024CommunityAdminRevoke\020i\022\032\n\026Comm" +
+      "unityVippPromotion\020j\022\027\n\023CommunityVippRev" +
+      "oke\020k\022\026\n\022CommunityKickedOut\020l\022\026\n\022RealNam" +
+      "eAuthFailed\020m\022\021\n\rStreamingSoon\020n\022\021\n\rSyst" +
+      "emMessage\020o\022\021\n\rSimpleMessage\020p\022\020\n\013Social" +
+      "Apply\020\310\001\022\024\n\017CommunityInvite\020\311\001\022\031\n\024Achiev" +
+      "ementBroadcast\020\254\002\022\022\n\rTaskBroadcast\020\255\002*M\n",
+      "\014ENotifyState\022\n\n\006Unread\020\000\022\n\n\006Readed\020\001\022\013\n" +
+      "\007Deleted\020\002\022\013\n\007Action1\020\003\022\013\n\007Action2\020\004*\215\001\n" +
+      "\017ENotifyCategory\022\020\n\014Notification\020\000\022\022\n\016My" +
+      "Notification\020\001\022\023\n\017SysNotification\020\002\022\021\n\rS" +
+      "ocialRequest\020\003\022\024\n\020CommunityRequest\020\004\022\026\n\022" +
+      "TaskAndAchievement\020\005B,\n\026com.blemobi.sep." +
+      "probufB\022NotificationProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -39485,14 +40291,20 @@ public final class NotificationProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PNotifyCommunity_descriptor,
         new java.lang.String[] { "Id", "Name", });
-    internal_static_bbproto_PNotifyRawMessage_descriptor =
+    internal_static_bbproto_PNotifySimple_descriptor =
       getDescriptor().getMessageTypes().get(36);
+    internal_static_bbproto_PNotifySimple_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PNotifySimple_descriptor,
+        new java.lang.String[] { "Uri", });
+    internal_static_bbproto_PNotifyRawMessage_descriptor =
+      getDescriptor().getMessageTypes().get(37);
     internal_static_bbproto_PNotifyRawMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PNotifyRawMessage_descriptor,
-        new java.lang.String[] { "Content", "CommentNews", "CommentReply", "SocialApply", "CommentVote", "NewsVote", "NewsAt", "Streaming", "Community", });
+        new java.lang.String[] { "Content", "CommentNews", "CommentReply", "SocialApply", "CommentVote", "NewsVote", "NewsAt", "Streaming", "Community", "Simple", });
     internal_static_bbproto_PNotifyMessage_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_bbproto_PNotifyMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PNotifyMessage_descriptor,
@@ -39504,19 +40316,19 @@ public final class NotificationProtos {
         internal_static_bbproto_PNotifyMessage_ArgsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_bbproto_PNotifyMessageList_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_bbproto_PNotifyMessageList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PNotifyMessageList_descriptor,
         new java.lang.String[] { "List", });
     internal_static_bbproto_PNotifySummary_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_bbproto_PNotifySummary_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PNotifySummary_descriptor,
         new java.lang.String[] { "Category", "MessageList", });
     internal_static_bbproto_PNotifySummaryList_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_bbproto_PNotifySummaryList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PNotifySummaryList_descriptor,
