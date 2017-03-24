@@ -1,6 +1,5 @@
 package com.blemobi.library.cache;
 
-import java.util.Iterator;
 import java.util.Map;
 
 import com.blemobi.sep.probuf.AccountProtos.PUserBase;
@@ -50,16 +49,14 @@ public class LiveThread extends Thread {
 	/**
 	 * 缓存失效管理
 	 */
-	@SuppressWarnings("rawtypes")
 	private void liveStep() {
 		long now = System.currentTimeMillis();
-		Iterator it = chcheUserBaseTime.keySet().iterator();
-		while (it.hasNext()) {
-			String key = (String) it.next();
+		for (Map.Entry<String, Long> entry : chcheUserBaseTime.entrySet()) {
+			String key = entry.getKey();
 			long puttime = chcheUserBaseTime.get(key);
 			if (checkLive(now, puttime)) {
 				// 失效了
-				it.remove();
+				chcheUserBaseTime.remove(entry);
 				chcheUserBase.remove(key);
 				cacheInvalid.callback(key);
 			}
