@@ -22787,6 +22787,15 @@ public final class PaymentProtos {
      */
     com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserListOrBuilder(
         int index);
+
+    /**
+     * <code>optional bool in24Hours = 6;</code>
+     *
+     * <pre>
+     *是否在24小时之内
+     * </pre>
+     */
+    boolean getIn24Hours();
   }
   /**
    * Protobuf type {@code bbproto.PLotterySingle}
@@ -22805,6 +22814,7 @@ public final class PaymentProtos {
       winners_ = 0;
       crtTm_ = 0L;
       userList_ = java.util.Collections.emptyList();
+      in24Hours_ = false;
     }
 
     @java.lang.Override
@@ -22859,6 +22869,11 @@ public final class PaymentProtos {
                 mutable_bitField0_ |= 0x00000010;
               }
               userList_.add(input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.parser(), extensionRegistry));
+              break;
+            }
+            case 48: {
+
+              in24Hours_ = input.readBool();
               break;
             }
           }
@@ -23054,6 +23069,19 @@ public final class PaymentProtos {
       return userList_.get(index);
     }
 
+    public static final int IN24HOURS_FIELD_NUMBER = 6;
+    private boolean in24Hours_;
+    /**
+     * <code>optional bool in24Hours = 6;</code>
+     *
+     * <pre>
+     *是否在24小时之内
+     * </pre>
+     */
+    public boolean getIn24Hours() {
+      return in24Hours_;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -23081,6 +23109,9 @@ public final class PaymentProtos {
       for (int i = 0; i < userList_.size(); i++) {
         output.writeMessage(5, userList_.get(i));
       }
+      if (in24Hours_ != false) {
+        output.writeBool(6, in24Hours_);
+      }
     }
 
     public int getSerializedSize() {
@@ -23105,6 +23136,10 @@ public final class PaymentProtos {
       for (int i = 0; i < userList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, userList_.get(i));
+      }
+      if (in24Hours_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, in24Hours_);
       }
       memoizedSize = size;
       return size;
@@ -23232,6 +23267,8 @@ public final class PaymentProtos {
         } else {
           userListBuilder_.clear();
         }
+        in24Hours_ = false;
+
         return this;
       }
 
@@ -23269,6 +23306,7 @@ public final class PaymentProtos {
         } else {
           result.userList_ = userListBuilder_.build();
         }
+        result.in24Hours_ = in24Hours_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -23324,6 +23362,9 @@ public final class PaymentProtos {
               userListBuilder_.addAllMessages(other.userList_);
             }
           }
+        }
+        if (other.getIn24Hours() != false) {
+          setIn24Hours(other.getIn24Hours());
         }
         onChanged();
         return this;
@@ -23916,6 +23957,44 @@ public final class PaymentProtos {
           userList_ = null;
         }
         return userListBuilder_;
+      }
+
+      private boolean in24Hours_ ;
+      /**
+       * <code>optional bool in24Hours = 6;</code>
+       *
+       * <pre>
+       *是否在24小时之内
+       * </pre>
+       */
+      public boolean getIn24Hours() {
+        return in24Hours_;
+      }
+      /**
+       * <code>optional bool in24Hours = 6;</code>
+       *
+       * <pre>
+       *是否在24小时之内
+       * </pre>
+       */
+      public Builder setIn24Hours(boolean value) {
+        
+        in24Hours_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool in24Hours = 6;</code>
+       *
+       * <pre>
+       *是否在24小时之内
+       * </pre>
+       */
+      public Builder clearIn24Hours() {
+        
+        in24Hours_ = false;
+        onChanged();
+        return this;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -33187,35 +33266,36 @@ public final class PaymentProtos {
       "\t\022\r\n\005title\030\002 \001(\t\022\016\n\006totAmt\030\003 \001(\005\022\r\n\005crtT" +
       "m\030\004 \001(\003\022\014\n\004type\030\005 \001(\005\022\017\n\007winners\030\006 \001(\005\022\016" +
       "\n\006region\030\007 \003(\t\022&\n\010userList\030\010 \003(\0132\024.bbpro",
-      "to.PUserBaseEx\022\016\n\006remark\030\t \001(\t\"x\n\016PLotte" +
-      "rySingle\022\021\n\tlotteryId\030\001 \001(\t\022\r\n\005title\030\002 \001" +
-      "(\t\022\017\n\007winners\030\003 \001(\005\022\r\n\005crtTm\030\004 \001(\003\022$\n\010us" +
-      "erList\030\005 \003(\0132\022.bbproto.PUserBase\"\\\n\013PUse" +
-      "rBaseEx\022 \n\004info\030\001 \001(\0132\022.bbproto.PUserBas" +
-      "e\022\016\n\006gender\030\002 \001(\005\022\013\n\003amt\030\003 \001(\005\022\016\n\006region" +
-      "\030\004 \001(\t\" \n\013PLotteryDel\022\021\n\tlotteryId\030\001 \003(\t" +
-      "\"\242\001\n\013PWinLottery\022\021\n\tlotteryId\030\001 \001(\t\022\020\n\010s" +
-      "endUuid\030\002 \001(\t\022\022\n\nsendNickNm\030\003 \001(\t\022\r\n\005tit" +
-      "le\030\004 \001(\t\022\r\n\005crtTm\030\005 \001(\003\022\r\n\005accTm\030\006 \001(\003\022\016",
-      "\n\006remark\030\007 \001(\t\022\r\n\005bonus\030\010 \001(\005\022\016\n\006status\030" +
-      "\t \001(\005\"\220\002\n\022PGiftLotteryDetail\022\021\n\tlotteryI" +
-      "d\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022\021\n\toverdueTm\030\003 \001(" +
-      "\003\022\017\n\007winners\030\004 \001(\005\022\016\n\006gender\030\005 \001(\005\022\017\n\007re" +
-      "gions\030\006 \003(\t\022*\n\010userList\030\007 \003(\0132\030.bbproto." +
-      "PUserBaseGiftEx\022\016\n\006remark\030\010 \001(\t\022!\n\005gifts" +
-      "\030\t \003(\0132\022.bbproto.PGiftInfo\022\016\n\006status\030\n \001" +
-      "(\005\022\021\n\tremainCnt\030\013 \001(\005\022\021\n\tregionCnt\030\014 \001(\005" +
-      "\"<\n\tPGiftInfo\022\016\n\006giftId\030\001 \001(\t\022\016\n\006giftNm\030" +
-      "\002 \001(\t\022\017\n\007giftCnt\030\003 \001(\005\"\271\002\n\017PUserBaseGift",
-      "Ex\022 \n\004info\030\001 \001(\0132\022.bbproto.PUserBase\022 \n\004" +
-      "gift\030\002 \001(\0132\022.bbproto.PGiftInfo\022\016\n\006region" +
-      "\030\004 \001(\t\022\r\n\005rcvNm\030\005 \001(\t\022\017\n\007rcvAddr\030\006 \001(\t\022\020" +
-      "\n\010rcvPhone\030\007 \001(\t\022\020\n\010rcvEmail\030\010 \001(\t\022\021\n\trc" +
-      "vRemark\030\t \001(\t\022\017\n\007editCnt\030\n \001(\005\022\016\n\006status" +
-      "\030\013 \001(\005\022\016\n\006brcvNm\030\014 \001(\t\022\020\n\010brcvAddr\030\r \001(\t" +
-      "\022\021\n\tbrcvPhone\030\016 \001(\t\022\021\n\tbrcvEmail\030\017 \001(\t\022\022" +
-      "\n\nbrcvRemark\030\020 \001(\tB\'\n\026com.blemobi.sep.pr" +
-      "obufB\rPaymentProtosb\006proto3"
+      "to.PUserBaseEx\022\016\n\006remark\030\t \001(\t\"\213\001\n\016PLott" +
+      "erySingle\022\021\n\tlotteryId\030\001 \001(\t\022\r\n\005title\030\002 " +
+      "\001(\t\022\017\n\007winners\030\003 \001(\005\022\r\n\005crtTm\030\004 \001(\003\022$\n\010u" +
+      "serList\030\005 \003(\0132\022.bbproto.PUserBase\022\021\n\tin2" +
+      "4Hours\030\006 \001(\010\"\\\n\013PUserBaseEx\022 \n\004info\030\001 \001(" +
+      "\0132\022.bbproto.PUserBase\022\016\n\006gender\030\002 \001(\005\022\013\n" +
+      "\003amt\030\003 \001(\005\022\016\n\006region\030\004 \001(\t\" \n\013PLotteryDe" +
+      "l\022\021\n\tlotteryId\030\001 \003(\t\"\242\001\n\013PWinLottery\022\021\n\t" +
+      "lotteryId\030\001 \001(\t\022\020\n\010sendUuid\030\002 \001(\t\022\022\n\nsen" +
+      "dNickNm\030\003 \001(\t\022\r\n\005title\030\004 \001(\t\022\r\n\005crtTm\030\005 ",
+      "\001(\003\022\r\n\005accTm\030\006 \001(\003\022\016\n\006remark\030\007 \001(\t\022\r\n\005bo" +
+      "nus\030\010 \001(\005\022\016\n\006status\030\t \001(\005\"\220\002\n\022PGiftLotte" +
+      "ryDetail\022\021\n\tlotteryId\030\001 \001(\t\022\r\n\005title\030\002 \001" +
+      "(\t\022\021\n\toverdueTm\030\003 \001(\003\022\017\n\007winners\030\004 \001(\005\022\016" +
+      "\n\006gender\030\005 \001(\005\022\017\n\007regions\030\006 \003(\t\022*\n\010userL" +
+      "ist\030\007 \003(\0132\030.bbproto.PUserBaseGiftEx\022\016\n\006r" +
+      "emark\030\010 \001(\t\022!\n\005gifts\030\t \003(\0132\022.bbproto.PGi" +
+      "ftInfo\022\016\n\006status\030\n \001(\005\022\021\n\tremainCnt\030\013 \001(" +
+      "\005\022\021\n\tregionCnt\030\014 \001(\005\"<\n\tPGiftInfo\022\016\n\006gif" +
+      "tId\030\001 \001(\t\022\016\n\006giftNm\030\002 \001(\t\022\017\n\007giftCnt\030\003 \001",
+      "(\005\"\271\002\n\017PUserBaseGiftEx\022 \n\004info\030\001 \001(\0132\022.b" +
+      "bproto.PUserBase\022 \n\004gift\030\002 \001(\0132\022.bbproto" +
+      ".PGiftInfo\022\016\n\006region\030\004 \001(\t\022\r\n\005rcvNm\030\005 \001(" +
+      "\t\022\017\n\007rcvAddr\030\006 \001(\t\022\020\n\010rcvPhone\030\007 \001(\t\022\020\n\010" +
+      "rcvEmail\030\010 \001(\t\022\021\n\trcvRemark\030\t \001(\t\022\017\n\007edi" +
+      "tCnt\030\n \001(\005\022\016\n\006status\030\013 \001(\005\022\016\n\006brcvNm\030\014 \001" +
+      "(\t\022\020\n\010brcvAddr\030\r \001(\t\022\021\n\tbrcvPhone\030\016 \001(\t\022" +
+      "\021\n\tbrcvEmail\030\017 \001(\t\022\022\n\nbrcvRemark\030\020 \001(\tB\'" +
+      "\n\026com.blemobi.sep.probufB\rPaymentProtosb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -33361,7 +33441,7 @@ public final class PaymentProtos {
     internal_static_bbproto_PLotterySingle_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PLotterySingle_descriptor,
-        new java.lang.String[] { "LotteryId", "Title", "Winners", "CrtTm", "UserList", });
+        new java.lang.String[] { "LotteryId", "Title", "Winners", "CrtTm", "UserList", "In24Hours", });
     internal_static_bbproto_PUserBaseEx_descriptor =
       getDescriptor().getMessageTypes().get(22);
     internal_static_bbproto_PUserBaseEx_fieldAccessorTable = new
