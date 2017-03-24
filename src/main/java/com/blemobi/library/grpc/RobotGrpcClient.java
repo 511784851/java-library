@@ -1,7 +1,6 @@
 package com.blemobi.library.grpc;
 
 import com.blemobi.sep.grpc.IGrpcRobotGrpc;
-import com.blemobi.sep.grpc.grpcDataPublishingGrpc;
 import com.blemobi.sep.grpc.IGrpcRobotGrpc.IGrpcRobotBlockingStub;
 import com.blemobi.sep.probuf.CommonApiProtos.PEmpty;
 import com.blemobi.sep.probuf.ResultProtos.PStringSingle;
