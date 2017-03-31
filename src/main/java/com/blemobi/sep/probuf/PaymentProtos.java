@@ -27208,7 +27208,7 @@ public final class PaymentProtos {
      * <code>optional int32 status = 10;</code>
      *
      * <pre>
-     *状态
+     *状态 1:初始状态，2:领奖中，3:领奖完成，4:过期，0:已删除
      * </pre>
      */
     int getStatus();
@@ -27718,7 +27718,7 @@ public final class PaymentProtos {
      * <code>optional int32 status = 10;</code>
      *
      * <pre>
-     *状态
+     *状态 1:初始状态，2:领奖中，3:领奖完成，4:过期，0:已删除
      * </pre>
      */
     public int getStatus() {
@@ -29335,7 +29335,7 @@ public final class PaymentProtos {
        * <code>optional int32 status = 10;</code>
        *
        * <pre>
-       *状态
+       *状态 1:初始状态，2:领奖中，3:领奖完成，4:过期，0:已删除
        * </pre>
        */
       public int getStatus() {
@@ -29345,7 +29345,7 @@ public final class PaymentProtos {
        * <code>optional int32 status = 10;</code>
        *
        * <pre>
-       *状态
+       *状态 1:初始状态，2:领奖中，3:领奖完成，4:过期，0:已删除
        * </pre>
        */
       public Builder setStatus(int value) {
@@ -29358,7 +29358,7 @@ public final class PaymentProtos {
        * <code>optional int32 status = 10;</code>
        *
        * <pre>
-       *状态
+       *状态 1:初始状态，2:领奖中，3:领奖完成，4:过期，0:已删除
        * </pre>
        */
       public Builder clearStatus() {
@@ -30409,7 +30409,7 @@ public final class PaymentProtos {
      * <code>optional int32 status = 11;</code>
      *
      * <pre>
-     *是否填写收货信息 0: 未填写， 1: 已填写，3:头像高亮显示
+     *是否填写收货信息 -1:未领奖, 0: 未填写， 1: 已填写，3:头像高亮显示
      * </pre>
      */
     int getStatus();
@@ -30503,6 +30503,15 @@ public final class PaymentProtos {
      */
     com.google.protobuf.ByteString
         getBrcvRemarkBytes();
+
+    /**
+     * <code>optional int64 acceptTm = 17;</code>
+     *
+     * <pre>
+     *领奖时间
+     * </pre>
+     */
+    long getAcceptTm();
   }
   /**
    * Protobuf type {@code bbproto.PUserBaseGiftEx}
@@ -30529,6 +30538,7 @@ public final class PaymentProtos {
       brcvPhone_ = "";
       brcvEmail_ = "";
       brcvRemark_ = "";
+      acceptTm_ = 0L;
     }
 
     @java.lang.Override
@@ -30655,6 +30665,11 @@ public final class PaymentProtos {
               java.lang.String s = input.readStringRequireUtf8();
 
               brcvRemark_ = s;
+              break;
+            }
+            case 136: {
+
+              acceptTm_ = input.readInt64();
               break;
             }
           }
@@ -31018,7 +31033,7 @@ public final class PaymentProtos {
      * <code>optional int32 status = 11;</code>
      *
      * <pre>
-     *是否填写收货信息 0: 未填写， 1: 已填写，3:头像高亮显示
+     *是否填写收货信息 -1:未领奖, 0: 未填写， 1: 已填写，3:头像高亮显示
      * </pre>
      */
     public int getStatus() {
@@ -31235,6 +31250,19 @@ public final class PaymentProtos {
       }
     }
 
+    public static final int ACCEPTTM_FIELD_NUMBER = 17;
+    private long acceptTm_;
+    /**
+     * <code>optional int64 acceptTm = 17;</code>
+     *
+     * <pre>
+     *领奖时间
+     * </pre>
+     */
+    public long getAcceptTm() {
+      return acceptTm_;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -31292,6 +31320,9 @@ public final class PaymentProtos {
       if (!getBrcvRemarkBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessage.writeString(output, 16, brcvRemark_);
       }
+      if (acceptTm_ != 0L) {
+        output.writeInt64(17, acceptTm_);
+      }
     }
 
     public int getSerializedSize() {
@@ -31347,6 +31378,10 @@ public final class PaymentProtos {
       }
       if (!getBrcvRemarkBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(16, brcvRemark_);
+      }
+      if (acceptTm_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(17, acceptTm_);
       }
       memoizedSize = size;
       return size;
@@ -31497,6 +31532,8 @@ public final class PaymentProtos {
 
         brcvRemark_ = "";
 
+        acceptTm_ = 0L;
+
         return this;
       }
 
@@ -31542,6 +31579,7 @@ public final class PaymentProtos {
         result.brcvPhone_ = brcvPhone_;
         result.brcvEmail_ = brcvEmail_;
         result.brcvRemark_ = brcvRemark_;
+        result.acceptTm_ = acceptTm_;
         onBuilt();
         return result;
       }
@@ -31612,6 +31650,9 @@ public final class PaymentProtos {
         if (!other.getBrcvRemark().isEmpty()) {
           brcvRemark_ = other.brcvRemark_;
           onChanged();
+        }
+        if (other.getAcceptTm() != 0L) {
+          setAcceptTm(other.getAcceptTm());
         }
         onChanged();
         return this;
@@ -32522,7 +32563,7 @@ public final class PaymentProtos {
        * <code>optional int32 status = 11;</code>
        *
        * <pre>
-       *是否填写收货信息 0: 未填写， 1: 已填写，3:头像高亮显示
+       *是否填写收货信息 -1:未领奖, 0: 未填写， 1: 已填写，3:头像高亮显示
        * </pre>
        */
       public int getStatus() {
@@ -32532,7 +32573,7 @@ public final class PaymentProtos {
        * <code>optional int32 status = 11;</code>
        *
        * <pre>
-       *是否填写收货信息 0: 未填写， 1: 已填写，3:头像高亮显示
+       *是否填写收货信息 -1:未领奖, 0: 未填写， 1: 已填写，3:头像高亮显示
        * </pre>
        */
       public Builder setStatus(int value) {
@@ -32545,7 +32586,7 @@ public final class PaymentProtos {
        * <code>optional int32 status = 11;</code>
        *
        * <pre>
-       *是否填写收货信息 0: 未填写， 1: 已填写，3:头像高亮显示
+       *是否填写收货信息 -1:未领奖, 0: 未填写， 1: 已填写，3:头像高亮显示
        * </pre>
        */
       public Builder clearStatus() {
@@ -32999,6 +33040,44 @@ public final class PaymentProtos {
         onChanged();
         return this;
       }
+
+      private long acceptTm_ ;
+      /**
+       * <code>optional int64 acceptTm = 17;</code>
+       *
+       * <pre>
+       *领奖时间
+       * </pre>
+       */
+      public long getAcceptTm() {
+        return acceptTm_;
+      }
+      /**
+       * <code>optional int64 acceptTm = 17;</code>
+       *
+       * <pre>
+       *领奖时间
+       * </pre>
+       */
+      public Builder setAcceptTm(long value) {
+        
+        acceptTm_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 acceptTm = 17;</code>
+       *
+       * <pre>
+       *领奖时间
+       * </pre>
+       */
+      public Builder clearAcceptTm() {
+        
+        acceptTm_ = 0L;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return this;
@@ -33286,16 +33365,16 @@ public final class PaymentProtos {
       "ftInfo\022\016\n\006status\030\n \001(\005\022\021\n\tremainCnt\030\013 \001(" +
       "\005\022\021\n\tregionCnt\030\014 \001(\005\"<\n\tPGiftInfo\022\016\n\006gif" +
       "tId\030\001 \001(\t\022\016\n\006giftNm\030\002 \001(\t\022\017\n\007giftCnt\030\003 \001",
-      "(\005\"\271\002\n\017PUserBaseGiftEx\022 \n\004info\030\001 \001(\0132\022.b" +
+      "(\005\"\313\002\n\017PUserBaseGiftEx\022 \n\004info\030\001 \001(\0132\022.b" +
       "bproto.PUserBase\022 \n\004gift\030\002 \001(\0132\022.bbproto" +
       ".PGiftInfo\022\016\n\006region\030\004 \001(\t\022\r\n\005rcvNm\030\005 \001(" +
       "\t\022\017\n\007rcvAddr\030\006 \001(\t\022\020\n\010rcvPhone\030\007 \001(\t\022\020\n\010" +
       "rcvEmail\030\010 \001(\t\022\021\n\trcvRemark\030\t \001(\t\022\017\n\007edi" +
       "tCnt\030\n \001(\005\022\016\n\006status\030\013 \001(\005\022\016\n\006brcvNm\030\014 \001" +
       "(\t\022\020\n\010brcvAddr\030\r \001(\t\022\021\n\tbrcvPhone\030\016 \001(\t\022" +
-      "\021\n\tbrcvEmail\030\017 \001(\t\022\022\n\nbrcvRemark\030\020 \001(\tB\'" +
-      "\n\026com.blemobi.sep.probufB\rPaymentProtosb" +
-      "\006proto3"
+      "\021\n\tbrcvEmail\030\017 \001(\t\022\022\n\nbrcvRemark\030\020 \001(\t\022\020" +
+      "\n\010acceptTm\030\021 \001(\003B\'\n\026com.blemobi.sep.prob" +
+      "ufB\rPaymentProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -33477,7 +33556,7 @@ public final class PaymentProtos {
     internal_static_bbproto_PUserBaseGiftEx_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PUserBaseGiftEx_descriptor,
-        new java.lang.String[] { "Info", "Gift", "Region", "RcvNm", "RcvAddr", "RcvPhone", "RcvEmail", "RcvRemark", "EditCnt", "Status", "BrcvNm", "BrcvAddr", "BrcvPhone", "BrcvEmail", "BrcvRemark", });
+        new java.lang.String[] { "Info", "Gift", "Region", "RcvNm", "RcvAddr", "RcvPhone", "RcvEmail", "RcvRemark", "EditCnt", "Status", "BrcvNm", "BrcvAddr", "BrcvPhone", "BrcvEmail", "BrcvRemark", "AcceptTm", });
     com.blemobi.sep.probuf.AccountProtos.getDescriptor();
   }
 
