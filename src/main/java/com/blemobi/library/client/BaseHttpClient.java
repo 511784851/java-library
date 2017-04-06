@@ -17,8 +17,8 @@ import org.apache.http.entity.ContentType;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
-import com.blemobi.library.consul.BaseService;
-import com.blemobi.library.consul.SocketInfo;
+import com.blemobi.library.consul_v1.ConsulServiceMgr;
+import com.blemobi.library.consul_v1.ServiceInfo;
 import com.blemobi.sep.probuf.ResultProtos;
 import com.blemobi.sep.probuf.ResultProtos.PMessage;
 
@@ -133,9 +133,9 @@ public class BaseHttpClient {
 	 * 生成服务的URL
 	 */
 	protected void getServerURL() {
-		SocketInfo socketInfo = BaseService.getActiveServer(serverName);// Consul中获取服务信息
+		ServiceInfo serviceInfo = ConsulServiceMgr.getHealthlyServiceByNm(serverName);// Consul中获取服务信息
 		url = new StringBuffer("http://");
-		url.append(socketInfo.getIpAddr()).append(":").append(socketInfo.getPort()).append(basePath.toString());
+		url.append(serviceInfo.getAddr()).append(":").append(serviceInfo.getPort()).append(basePath.toString());
 		log.debug("Http Request url=[" + url + "]");
 	}
 }

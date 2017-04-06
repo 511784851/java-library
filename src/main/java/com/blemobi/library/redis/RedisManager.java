@@ -1,6 +1,6 @@
 package com.blemobi.library.redis;
 
-import com.blemobi.library.consul.BaseService;
+import com.blemobi.library.consul_v1.PropsUtils;
 import com.google.common.base.Strings;
 
 import redis.clients.jedis.Jedis;
@@ -33,7 +33,7 @@ public class RedisManager {
 		JedisPool jedisPool = getJedisPool();
 		Jedis jedis = jedisPool.getResource();
 
-		String auth = BaseService.getProperty("redis_user_auth");
+		String auth = PropsUtils.getString("redis_user_auth");
 		if (!Strings.isNullOrEmpty(auth))
 			jedis.auth(auth);
 

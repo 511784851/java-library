@@ -13,13 +13,11 @@ import org.apache.log4j.ConsoleAppender;
 import org.apache.log4j.Level;
 import org.apache.log4j.LogManager;
 
-import com.blemobi.library.consul.ConsulChangeListener;
-import com.blemobi.library.consul.ConsulManager;
-import com.blemobi.library.consul.SocketInfo;
+
 
 public class LoggerManager {
 	private static String logLevel = null;
-	
+	/*
 	public static void startService(){
 		StdOutErrRedirect.redirectSystemOutAndErrToLog();
 		ConsulManager.addConsulChangeListener(adapter);
@@ -69,4 +67,5 @@ public class LoggerManager {
 			}
 		}
 	}
+	*/
 }

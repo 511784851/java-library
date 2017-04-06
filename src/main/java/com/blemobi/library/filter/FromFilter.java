@@ -1,6 +1,7 @@
 package com.blemobi.library.filter;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -9,8 +10,8 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
-import com.blemobi.library.consul.BaseService;
-import com.blemobi.library.consul.SocketInfo;
+import com.blemobi.library.consul_v1.ConsulServiceMgr;
+import com.blemobi.library.consul_v1.ServiceInfo;
 import com.blemobi.library.util.ReslutUtil;
 import com.google.common.base.Strings;
 
@@ -34,9 +35,9 @@ public class FromFilter implements Filter {
 		if (!Strings.isNullOrEmpty(from)) {
 			String spbill_create_ip = request.getRemoteAddr();
 
-			SocketInfo[] socketInfoArray = BaseService.getRegisterServer(from);
-			for (SocketInfo socketInfo : socketInfoArray) {
-				String ipAddr = socketInfo.getIpAddr();
+			List<ServiceInfo> list = ConsulServiceMgr.getHealthlyServicesByNm(from);
+			for (ServiceInfo serviceInfo : list) {
+				String ipAddr = serviceInfo.getAddr();
 				if (ipAddr.equals(spbill_create_ip)) {
 					bool = true;
 				}

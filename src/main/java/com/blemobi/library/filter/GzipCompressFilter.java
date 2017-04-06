@@ -14,7 +14,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.blemobi.library.consul.BaseService;
+import com.blemobi.library.consul_v1.PropsUtils;
 import com.google.common.base.Strings;
 
 public class GzipCompressFilter implements Filter {
@@ -122,7 +122,7 @@ public class GzipCompressFilter implements Filter {
 	}
 
 	private static int getConfigValue(String key, int defaultValue) {
-		String strValue = BaseService.getProperty(key);
+		String strValue = PropsUtils.getString(key);
 		if (Strings.isNullOrEmpty(strValue)) {
 			return defaultValue;
 		} else {

@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.blemobi.library</groupId>
 	<artifactId>java-public-library</artifactId>
-	<version>1.5.32</version>
+	<version>1.5.35</version>
 	<packaging>jar</packaging>
 	<name>java-payment</name>
 	<url>http://maven.apache.org</url>

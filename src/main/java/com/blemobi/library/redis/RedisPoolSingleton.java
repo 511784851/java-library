@@ -1,6 +1,6 @@
 package com.blemobi.library.redis;
 
-import com.blemobi.library.consul.BaseService;
+import com.blemobi.library.consul_v1.PropsUtils;
 
 import lombok.extern.log4j.Log4j;
 import redis.clients.jedis.JedisPool;
@@ -25,7 +25,7 @@ public class RedisPoolSingleton {
 	private RedisPoolSingleton() {
 		log.debug("初始化Redis连接池...");
 
-		String[] redisInfo = BaseService.getProperty("redis_user_addr").split(":");
+		String[] redisInfo = PropsUtils.getString("redis_user_addr").split(":");
 		String address = redisInfo[0];
 		int port = Integer.parseInt(redisInfo[1]);
 
@@ -40,7 +40,7 @@ public class RedisPoolSingleton {
 	 * @return
 	 */
 	private JedisPoolConfig getConfig() {
-		int maxTotal = Integer.parseInt(BaseService.getProperty("redis_max_connect_num"));
+		int maxTotal = PropsUtils.getInteger("redis_max_connect_num");
 		JedisPoolConfig config = new JedisPoolConfig();
 		config.setMaxTotal(maxTotal);
 		config.setMaxIdle(maxIdle);

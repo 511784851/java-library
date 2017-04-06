@@ -3,7 +3,7 @@ package com.blemobi.library.client;
 import org.apache.http.conn.HttpClientConnectionManager;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 
-import com.blemobi.library.consul.BaseService;
+import com.blemobi.library.consul_v1.PropsUtils;
 import com.google.common.base.Strings;
 
 public class HttpClientPool {
@@ -21,7 +21,7 @@ public class HttpClientPool {
 	}
 	
 	private static int getConfigValue(String key,int defaultValue){
-		String strValue = BaseService.getProperty(key);
+		String strValue = PropsUtils.getString(key);
 		if(Strings.isNullOrEmpty(strValue)){
 			return defaultValue;
 		}else{
