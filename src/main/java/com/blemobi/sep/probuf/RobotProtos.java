@@ -37,7 +37,7 @@ public final class RobotProtos {
      * <code>Lottery = 2;</code>
      *
      * <pre>
-     * 抽奖
+     * 现金抽奖
      * </pre>
      */
     Lottery(2, 2),
@@ -81,6 +81,14 @@ public final class RobotProtos {
      * </pre>
      */
     LotteryCourier(7, 7),
+    /**
+     * <code>GiftLottery = 8;</code>
+     *
+     * <pre>
+     * 礼物抽奖
+     * </pre>
+     */
+    GiftLottery(8, 8),
     UNRECOGNIZED(-1, -1),
     ;
 
@@ -104,7 +112,7 @@ public final class RobotProtos {
      * <code>Lottery = 2;</code>
      *
      * <pre>
-     * 抽奖
+     * 现金抽奖
      * </pre>
      */
     public static final int Lottery_VALUE = 2;
@@ -148,6 +156,14 @@ public final class RobotProtos {
      * </pre>
      */
     public static final int LotteryCourier_VALUE = 7;
+    /**
+     * <code>GiftLottery = 8;</code>
+     *
+     * <pre>
+     * 礼物抽奖
+     * </pre>
+     */
+    public static final int GiftLottery_VALUE = 8;
 
 
     public final int getNumber() {
@@ -168,6 +184,7 @@ public final class RobotProtos {
         case 5: return LotteryRemind;
         case 6: return LotteryExpire;
         case 7: return LotteryCourier;
+        case 8: return GiftLottery;
         default: return null;
       }
     }
@@ -24065,12 +24082,13 @@ public final class RobotProtos {
       "Celebrity\"?\n\024PCCelebrityGroupList\022\'\n\004lis" +
       "t\030\001 \003(\0132\031.bbproto.PCCelebrityGroup\".\n\rPB" +
       "MsgNumLimit\022\r\n\005total\030\001 \001(\005\022\016\n\006remain\030\002 \001" +
-      "(\005*\213\001\n\016ERobotPushType\022\013\n\007Regards\020\000\022\n\n\006Re" +
+      "(\005*\234\001\n\016ERobotPushType\022\013\n\007Regards\020\000\022\n\n\006Re" +
       "mind\020\001\022\013\n\007Lottery\020\002\022\r\n\tRedPacket\020\003\022\n\n\006St",
       "ream\020\004\022\021\n\rLotteryRemind\020\005\022\021\n\rLotteryExpi" +
-      "re\020\006\022\022\n\016LotteryCourier\020\007*&\n\016ERobotMsgSta" +
-      "te\022\n\n\006UnRead\020\000\022\010\n\004Read\020\001B%\n\026com.blemobi." +
-      "sep.probufB\013RobotProtosb\006proto3"
+      "re\020\006\022\022\n\016LotteryCourier\020\007\022\017\n\013GiftLottery\020" +
+      "\010*&\n\016ERobotMsgState\022\n\n\006UnRead\020\000\022\010\n\004Read\020" +
+      "\001B%\n\026com.blemobi.sep.probufB\013RobotProtos" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
