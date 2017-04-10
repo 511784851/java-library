@@ -27230,6 +27230,15 @@ public final class PaymentProtos {
      * </pre>
      */
     int getRegionCnt();
+
+    /**
+     * <code>optional int64 crtTm = 13;</code>
+     *
+     * <pre>
+     *创建时间
+     * </pre>
+     */
+    long getCrtTm();
   }
   /**
    * Protobuf type {@code bbproto.PGiftLotteryDetail}
@@ -27259,6 +27268,7 @@ public final class PaymentProtos {
       status_ = 0;
       remainCnt_ = 0;
       regionCnt_ = 0;
+      crtTm_ = 0L;
     }
 
     @java.lang.Override
@@ -27356,6 +27366,11 @@ public final class PaymentProtos {
             case 96: {
 
               regionCnt_ = input.readInt32();
+              break;
+            }
+            case 104: {
+
+              crtTm_ = input.readInt64();
               break;
             }
           }
@@ -27751,6 +27766,19 @@ public final class PaymentProtos {
       return regionCnt_;
     }
 
+    public static final int CRTTM_FIELD_NUMBER = 13;
+    private long crtTm_;
+    /**
+     * <code>optional int64 crtTm = 13;</code>
+     *
+     * <pre>
+     *创建时间
+     * </pre>
+     */
+    public long getCrtTm() {
+      return crtTm_;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -27798,6 +27826,9 @@ public final class PaymentProtos {
       }
       if (regionCnt_ != 0) {
         output.writeInt32(12, regionCnt_);
+      }
+      if (crtTm_ != 0L) {
+        output.writeInt64(13, crtTm_);
       }
     }
 
@@ -27854,6 +27885,10 @@ public final class PaymentProtos {
       if (regionCnt_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(12, regionCnt_);
+      }
+      if (crtTm_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(13, crtTm_);
       }
       memoizedSize = size;
       return size;
@@ -28004,6 +28039,8 @@ public final class PaymentProtos {
 
         regionCnt_ = 0;
 
+        crtTm_ = 0L;
+
         return this;
       }
 
@@ -28060,6 +28097,7 @@ public final class PaymentProtos {
         result.status_ = status_;
         result.remainCnt_ = remainCnt_;
         result.regionCnt_ = regionCnt_;
+        result.crtTm_ = crtTm_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -28167,6 +28205,9 @@ public final class PaymentProtos {
         }
         if (other.getRegionCnt() != 0) {
           setRegionCnt(other.getRegionCnt());
+        }
+        if (other.getCrtTm() != 0L) {
+          setCrtTm(other.getCrtTm());
         }
         onChanged();
         return this;
@@ -29440,6 +29481,44 @@ public final class PaymentProtos {
       public Builder clearRegionCnt() {
         
         regionCnt_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long crtTm_ ;
+      /**
+       * <code>optional int64 crtTm = 13;</code>
+       *
+       * <pre>
+       *创建时间
+       * </pre>
+       */
+      public long getCrtTm() {
+        return crtTm_;
+      }
+      /**
+       * <code>optional int64 crtTm = 13;</code>
+       *
+       * <pre>
+       *创建时间
+       * </pre>
+       */
+      public Builder setCrtTm(long value) {
+        
+        crtTm_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 crtTm = 13;</code>
+       *
+       * <pre>
+       *创建时间
+       * </pre>
+       */
+      public Builder clearCrtTm() {
+        
+        crtTm_ = 0L;
         onChanged();
         return this;
       }
@@ -33356,25 +33435,25 @@ public final class PaymentProtos {
       "lotteryId\030\001 \001(\t\022\020\n\010sendUuid\030\002 \001(\t\022\022\n\nsen" +
       "dNickNm\030\003 \001(\t\022\r\n\005title\030\004 \001(\t\022\r\n\005crtTm\030\005 ",
       "\001(\003\022\r\n\005accTm\030\006 \001(\003\022\016\n\006remark\030\007 \001(\t\022\r\n\005bo" +
-      "nus\030\010 \001(\005\022\016\n\006status\030\t \001(\005\"\220\002\n\022PGiftLotte" +
+      "nus\030\010 \001(\005\022\016\n\006status\030\t \001(\005\"\237\002\n\022PGiftLotte" +
       "ryDetail\022\021\n\tlotteryId\030\001 \001(\t\022\r\n\005title\030\002 \001" +
       "(\t\022\021\n\toverdueTm\030\003 \001(\003\022\017\n\007winners\030\004 \001(\005\022\016" +
       "\n\006gender\030\005 \001(\005\022\017\n\007regions\030\006 \003(\t\022*\n\010userL" +
       "ist\030\007 \003(\0132\030.bbproto.PUserBaseGiftEx\022\016\n\006r" +
       "emark\030\010 \001(\t\022!\n\005gifts\030\t \003(\0132\022.bbproto.PGi" +
       "ftInfo\022\016\n\006status\030\n \001(\005\022\021\n\tremainCnt\030\013 \001(" +
-      "\005\022\021\n\tregionCnt\030\014 \001(\005\"<\n\tPGiftInfo\022\016\n\006gif" +
-      "tId\030\001 \001(\t\022\016\n\006giftNm\030\002 \001(\t\022\017\n\007giftCnt\030\003 \001",
-      "(\005\"\313\002\n\017PUserBaseGiftEx\022 \n\004info\030\001 \001(\0132\022.b" +
-      "bproto.PUserBase\022 \n\004gift\030\002 \001(\0132\022.bbproto" +
-      ".PGiftInfo\022\016\n\006region\030\004 \001(\t\022\r\n\005rcvNm\030\005 \001(" +
-      "\t\022\017\n\007rcvAddr\030\006 \001(\t\022\020\n\010rcvPhone\030\007 \001(\t\022\020\n\010" +
-      "rcvEmail\030\010 \001(\t\022\021\n\trcvRemark\030\t \001(\t\022\017\n\007edi" +
-      "tCnt\030\n \001(\005\022\016\n\006status\030\013 \001(\005\022\016\n\006brcvNm\030\014 \001" +
-      "(\t\022\020\n\010brcvAddr\030\r \001(\t\022\021\n\tbrcvPhone\030\016 \001(\t\022" +
-      "\021\n\tbrcvEmail\030\017 \001(\t\022\022\n\nbrcvRemark\030\020 \001(\t\022\020" +
-      "\n\010acceptTm\030\021 \001(\003B\'\n\026com.blemobi.sep.prob" +
-      "ufB\rPaymentProtosb\006proto3"
+      "\005\022\021\n\tregionCnt\030\014 \001(\005\022\r\n\005crtTm\030\r \001(\003\"<\n\tP" +
+      "GiftInfo\022\016\n\006giftId\030\001 \001(\t\022\016\n\006giftNm\030\002 \001(\t",
+      "\022\017\n\007giftCnt\030\003 \001(\005\"\313\002\n\017PUserBaseGiftEx\022 \n" +
+      "\004info\030\001 \001(\0132\022.bbproto.PUserBase\022 \n\004gift\030" +
+      "\002 \001(\0132\022.bbproto.PGiftInfo\022\016\n\006region\030\004 \001(" +
+      "\t\022\r\n\005rcvNm\030\005 \001(\t\022\017\n\007rcvAddr\030\006 \001(\t\022\020\n\010rcv" +
+      "Phone\030\007 \001(\t\022\020\n\010rcvEmail\030\010 \001(\t\022\021\n\trcvRema" +
+      "rk\030\t \001(\t\022\017\n\007editCnt\030\n \001(\005\022\016\n\006status\030\013 \001(" +
+      "\005\022\016\n\006brcvNm\030\014 \001(\t\022\020\n\010brcvAddr\030\r \001(\t\022\021\n\tb" +
+      "rcvPhone\030\016 \001(\t\022\021\n\tbrcvEmail\030\017 \001(\t\022\022\n\nbrc" +
+      "vRemark\030\020 \001(\t\022\020\n\010acceptTm\030\021 \001(\003B\'\n\026com.b" +
+      "lemobi.sep.probufB\rPaymentProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -33544,7 +33623,7 @@ public final class PaymentProtos {
     internal_static_bbproto_PGiftLotteryDetail_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PGiftLotteryDetail_descriptor,
-        new java.lang.String[] { "LotteryId", "Title", "OverdueTm", "Winners", "Gender", "Regions", "UserList", "Remark", "Gifts", "Status", "RemainCnt", "RegionCnt", });
+        new java.lang.String[] { "LotteryId", "Title", "OverdueTm", "Winners", "Gender", "Regions", "UserList", "Remark", "Gifts", "Status", "RemainCnt", "RegionCnt", "CrtTm", });
     internal_static_bbproto_PGiftInfo_descriptor =
       getDescriptor().getMessageTypes().get(26);
     internal_static_bbproto_PGiftInfo_fieldAccessorTable = new

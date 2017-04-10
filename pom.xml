@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.blemobi.library</groupId>
 	<artifactId>java-public-library</artifactId>
-	<version>1.5.35</version>
+	<version>1.5.36</version>
 	<packaging>jar</packaging>
 	<name>java-payment</name>
 	<url>http://maven.apache.org</url>
@@ -247,7 +247,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<!-- 生成proto文件 -->
+			<!-- 生成proto文件
 			<plugin>
 				<groupId>org.xolstice.maven.plugins</groupId>
 				<artifactId>protobuf-maven-plugin</artifactId>
@@ -265,8 +265,8 @@
 					<protocArtifact>com.google.protobuf:protoc:3.0.0-beta-2:exe:${os.detected.classifier}</protocArtifact>
 					<pluginId>grpc-java</pluginId>
 					<pluginArtifact>io.grpc:protoc-gen-grpc-java:1.0.0:exe:${os.detected.classifier}</pluginArtifact>
-				</configuration>
-			</plugin>
+				</configuration> 
+			</plugin> -->
 		</plugins>
 	</build>
 </project>
