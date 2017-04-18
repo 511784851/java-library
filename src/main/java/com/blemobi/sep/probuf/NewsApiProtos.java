@@ -8,6 +8,203 @@ public final class NewsApiProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
+  /**
+   * Protobuf enum {@code bbproto.EStateOperType}
+   *
+   * <pre>
+   *帖子状态操作类型
+   * </pre>
+   */
+  public enum EStateOperType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>OpPass = 0;</code>
+     *
+     * <pre>
+     *设为审核通过
+     * </pre>
+     */
+    OpPass(0, 0),
+    /**
+     * <code>OpWaite = 1;</code>
+     *
+     * <pre>
+     *设为待审核
+     * </pre>
+     */
+    OpWaite(1, 1),
+    /**
+     * <code>OpReject = 2;</code>
+     *
+     * <pre>
+     *设为审核不通过
+     * </pre>
+     */
+    OpReject(2, 2),
+    /**
+     * <code>OpLock = 3;</code>
+     *
+     * <pre>
+     *设为锁定
+     * </pre>
+     */
+    OpLock(3, 3),
+    /**
+     * <code>OpUnLock = 4;</code>
+     *
+     * <pre>
+     *设为解锁
+     * </pre>
+     */
+    OpUnLock(4, 4),
+    /**
+     * <code>OpShield = 5;</code>
+     *
+     * <pre>
+     *设为屏蔽
+     * </pre>
+     */
+    OpShield(5, 5),
+    /**
+     * <code>OpUnShield = 6;</code>
+     *
+     * <pre>
+     *设为解除屏蔽
+     * </pre>
+     */
+    OpUnShield(6, 6),
+    UNRECOGNIZED(-1, -1),
+    ;
+
+    /**
+     * <code>OpPass = 0;</code>
+     *
+     * <pre>
+     *设为审核通过
+     * </pre>
+     */
+    public static final int OpPass_VALUE = 0;
+    /**
+     * <code>OpWaite = 1;</code>
+     *
+     * <pre>
+     *设为待审核
+     * </pre>
+     */
+    public static final int OpWaite_VALUE = 1;
+    /**
+     * <code>OpReject = 2;</code>
+     *
+     * <pre>
+     *设为审核不通过
+     * </pre>
+     */
+    public static final int OpReject_VALUE = 2;
+    /**
+     * <code>OpLock = 3;</code>
+     *
+     * <pre>
+     *设为锁定
+     * </pre>
+     */
+    public static final int OpLock_VALUE = 3;
+    /**
+     * <code>OpUnLock = 4;</code>
+     *
+     * <pre>
+     *设为解锁
+     * </pre>
+     */
+    public static final int OpUnLock_VALUE = 4;
+    /**
+     * <code>OpShield = 5;</code>
+     *
+     * <pre>
+     *设为屏蔽
+     * </pre>
+     */
+    public static final int OpShield_VALUE = 5;
+    /**
+     * <code>OpUnShield = 6;</code>
+     *
+     * <pre>
+     *设为解除屏蔽
+     * </pre>
+     */
+    public static final int OpUnShield_VALUE = 6;
+
+
+    public final int getNumber() {
+      if (index == -1) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    public static EStateOperType valueOf(int value) {
+      switch (value) {
+        case 0: return OpPass;
+        case 1: return OpWaite;
+        case 2: return OpReject;
+        case 3: return OpLock;
+        case 4: return OpUnLock;
+        case 5: return OpShield;
+        case 6: return OpUnShield;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EStateOperType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EStateOperType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EStateOperType>() {
+            public EStateOperType findValueByNumber(int number) {
+              return EStateOperType.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.NewsApiProtos.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final EStateOperType[] VALUES = values();
+
+    public static EStateOperType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private EStateOperType(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:bbproto.EStateOperType)
+  }
+
   public interface PNewsUserStatisticOrBuilder extends
       // @@protoc_insertion_point(interface_extends:bbproto.PNewsUserStatistic)
       com.google.protobuf.MessageOrBuilder {
@@ -885,11 +1082,6075 @@ public final class NewsApiProtos {
 
   }
 
+  public interface PPostCountStatisticOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PPostCountStatistic)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 BbNewsCnt = 1;</code>
+     *
+     * <pre>
+     * 动态帖个数
+     * </pre>
+     */
+    int getBbNewsCnt();
+
+    /**
+     * <code>optional int32 NewsFeedCnt = 2;</code>
+     *
+     * <pre>
+     * 资讯帖个数
+     * </pre>
+     */
+    int getNewsFeedCnt();
+
+    /**
+     * <code>optional int32 NoticeCnt = 3;</code>
+     *
+     * <pre>
+     * 公告帖个数
+     * </pre>
+     */
+    int getNoticeCnt();
+  }
+  /**
+   * Protobuf type {@code bbproto.PPostCountStatistic}
+   *
+   * <pre>
+   * 各类帖子数量
+   * </pre>
+   */
+  public  static final class PPostCountStatistic extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PPostCountStatistic)
+      PPostCountStatisticOrBuilder {
+    // Use PPostCountStatistic.newBuilder() to construct.
+    private PPostCountStatistic(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PPostCountStatistic() {
+      bbNewsCnt_ = 0;
+      newsFeedCnt_ = 0;
+      noticeCnt_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PPostCountStatistic(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              bbNewsCnt_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              newsFeedCnt_ = input.readInt32();
+              break;
+            }
+            case 24: {
+
+              noticeCnt_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PPostCountStatistic_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PPostCountStatistic_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic.class, com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic.Builder.class);
+    }
+
+    public static final int BBNEWSCNT_FIELD_NUMBER = 1;
+    private int bbNewsCnt_;
+    /**
+     * <code>optional int32 BbNewsCnt = 1;</code>
+     *
+     * <pre>
+     * 动态帖个数
+     * </pre>
+     */
+    public int getBbNewsCnt() {
+      return bbNewsCnt_;
+    }
+
+    public static final int NEWSFEEDCNT_FIELD_NUMBER = 2;
+    private int newsFeedCnt_;
+    /**
+     * <code>optional int32 NewsFeedCnt = 2;</code>
+     *
+     * <pre>
+     * 资讯帖个数
+     * </pre>
+     */
+    public int getNewsFeedCnt() {
+      return newsFeedCnt_;
+    }
+
+    public static final int NOTICECNT_FIELD_NUMBER = 3;
+    private int noticeCnt_;
+    /**
+     * <code>optional int32 NoticeCnt = 3;</code>
+     *
+     * <pre>
+     * 公告帖个数
+     * </pre>
+     */
+    public int getNoticeCnt() {
+      return noticeCnt_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (bbNewsCnt_ != 0) {
+        output.writeInt32(1, bbNewsCnt_);
+      }
+      if (newsFeedCnt_ != 0) {
+        output.writeInt32(2, newsFeedCnt_);
+      }
+      if (noticeCnt_ != 0) {
+        output.writeInt32(3, noticeCnt_);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (bbNewsCnt_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, bbNewsCnt_);
+      }
+      if (newsFeedCnt_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, newsFeedCnt_);
+      }
+      if (noticeCnt_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, noticeCnt_);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PPostCountStatistic}
+     *
+     * <pre>
+     * 各类帖子数量
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PPostCountStatistic)
+        com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatisticOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PPostCountStatistic_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PPostCountStatistic_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic.class, com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        bbNewsCnt_ = 0;
+
+        newsFeedCnt_ = 0;
+
+        noticeCnt_ = 0;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PPostCountStatistic_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic build() {
+        com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic buildPartial() {
+        com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic result = new com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic(this);
+        result.bbNewsCnt_ = bbNewsCnt_;
+        result.newsFeedCnt_ = newsFeedCnt_;
+        result.noticeCnt_ = noticeCnt_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic) {
+          return mergeFrom((com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic other) {
+        if (other == com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic.getDefaultInstance()) return this;
+        if (other.getBbNewsCnt() != 0) {
+          setBbNewsCnt(other.getBbNewsCnt());
+        }
+        if (other.getNewsFeedCnt() != 0) {
+          setNewsFeedCnt(other.getNewsFeedCnt());
+        }
+        if (other.getNoticeCnt() != 0) {
+          setNoticeCnt(other.getNoticeCnt());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int bbNewsCnt_ ;
+      /**
+       * <code>optional int32 BbNewsCnt = 1;</code>
+       *
+       * <pre>
+       * 动态帖个数
+       * </pre>
+       */
+      public int getBbNewsCnt() {
+        return bbNewsCnt_;
+      }
+      /**
+       * <code>optional int32 BbNewsCnt = 1;</code>
+       *
+       * <pre>
+       * 动态帖个数
+       * </pre>
+       */
+      public Builder setBbNewsCnt(int value) {
+        
+        bbNewsCnt_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 BbNewsCnt = 1;</code>
+       *
+       * <pre>
+       * 动态帖个数
+       * </pre>
+       */
+      public Builder clearBbNewsCnt() {
+        
+        bbNewsCnt_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int newsFeedCnt_ ;
+      /**
+       * <code>optional int32 NewsFeedCnt = 2;</code>
+       *
+       * <pre>
+       * 资讯帖个数
+       * </pre>
+       */
+      public int getNewsFeedCnt() {
+        return newsFeedCnt_;
+      }
+      /**
+       * <code>optional int32 NewsFeedCnt = 2;</code>
+       *
+       * <pre>
+       * 资讯帖个数
+       * </pre>
+       */
+      public Builder setNewsFeedCnt(int value) {
+        
+        newsFeedCnt_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 NewsFeedCnt = 2;</code>
+       *
+       * <pre>
+       * 资讯帖个数
+       * </pre>
+       */
+      public Builder clearNewsFeedCnt() {
+        
+        newsFeedCnt_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int noticeCnt_ ;
+      /**
+       * <code>optional int32 NoticeCnt = 3;</code>
+       *
+       * <pre>
+       * 公告帖个数
+       * </pre>
+       */
+      public int getNoticeCnt() {
+        return noticeCnt_;
+      }
+      /**
+       * <code>optional int32 NoticeCnt = 3;</code>
+       *
+       * <pre>
+       * 公告帖个数
+       * </pre>
+       */
+      public Builder setNoticeCnt(int value) {
+        
+        noticeCnt_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 NoticeCnt = 3;</code>
+       *
+       * <pre>
+       * 公告帖个数
+       * </pre>
+       */
+      public Builder clearNoticeCnt() {
+        
+        noticeCnt_ = 0;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PPostCountStatistic)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PPostCountStatistic)
+    private static final com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic();
+    }
+
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PPostCountStatistic>
+        PARSER = new com.google.protobuf.AbstractParser<PPostCountStatistic>() {
+      public PPostCountStatistic parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PPostCountStatistic(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<PPostCountStatistic> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PPostCountStatistic> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PSetPostStateParamOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PSetPostStateParam)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated int64 postIds = 1;</code>
+     *
+     * <pre>
+     *帖子列表
+     * </pre>
+     */
+    java.util.List<java.lang.Long> getPostIdsList();
+    /**
+     * <code>repeated int64 postIds = 1;</code>
+     *
+     * <pre>
+     *帖子列表
+     * </pre>
+     */
+    int getPostIdsCount();
+    /**
+     * <code>repeated int64 postIds = 1;</code>
+     *
+     * <pre>
+     *帖子列表
+     * </pre>
+     */
+    long getPostIds(int index);
+
+    /**
+     * <code>optional .bbproto.EStateOperType state = 2;</code>
+     *
+     * <pre>
+     *帖子状态, 0:审核通过; 1:待审核; 2:审核不通过; 3:锁定;4:解锁; 5:屏蔽; 6:解除屏蔽;
+     * </pre>
+     */
+    int getStateValue();
+    /**
+     * <code>optional .bbproto.EStateOperType state = 2;</code>
+     *
+     * <pre>
+     *帖子状态, 0:审核通过; 1:待审核; 2:审核不通过; 3:锁定;4:解锁; 5:屏蔽; 6:解除屏蔽;
+     * </pre>
+     */
+    com.blemobi.sep.probuf.NewsApiProtos.EStateOperType getState();
+  }
+  /**
+   * Protobuf type {@code bbproto.PSetPostStateParam}
+   *
+   * <pre>
+   * 设置帖子状态
+   * </pre>
+   */
+  public  static final class PSetPostStateParam extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PSetPostStateParam)
+      PSetPostStateParamOrBuilder {
+    // Use PSetPostStateParam.newBuilder() to construct.
+    private PSetPostStateParam(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PSetPostStateParam() {
+      postIds_ = java.util.Collections.emptyList();
+      state_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PSetPostStateParam(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                postIds_ = new java.util.ArrayList<java.lang.Long>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              postIds_.add(input.readInt64());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001) && input.getBytesUntilLimit() > 0) {
+                postIds_ = new java.util.ArrayList<java.lang.Long>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                postIds_.add(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              state_ = rawValue;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          postIds_ = java.util.Collections.unmodifiableList(postIds_);
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PSetPostStateParam_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PSetPostStateParam_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam.class, com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int POSTIDS_FIELD_NUMBER = 1;
+    private java.util.List<java.lang.Long> postIds_;
+    /**
+     * <code>repeated int64 postIds = 1;</code>
+     *
+     * <pre>
+     *帖子列表
+     * </pre>
+     */
+    public java.util.List<java.lang.Long>
+        getPostIdsList() {
+      return postIds_;
+    }
+    /**
+     * <code>repeated int64 postIds = 1;</code>
+     *
+     * <pre>
+     *帖子列表
+     * </pre>
+     */
+    public int getPostIdsCount() {
+      return postIds_.size();
+    }
+    /**
+     * <code>repeated int64 postIds = 1;</code>
+     *
+     * <pre>
+     *帖子列表
+     * </pre>
+     */
+    public long getPostIds(int index) {
+      return postIds_.get(index);
+    }
+    private int postIdsMemoizedSerializedSize = -1;
+
+    public static final int STATE_FIELD_NUMBER = 2;
+    private int state_;
+    /**
+     * <code>optional .bbproto.EStateOperType state = 2;</code>
+     *
+     * <pre>
+     *帖子状态, 0:审核通过; 1:待审核; 2:审核不通过; 3:锁定;4:解锁; 5:屏蔽; 6:解除屏蔽;
+     * </pre>
+     */
+    public int getStateValue() {
+      return state_;
+    }
+    /**
+     * <code>optional .bbproto.EStateOperType state = 2;</code>
+     *
+     * <pre>
+     *帖子状态, 0:审核通过; 1:待审核; 2:审核不通过; 3:锁定;4:解锁; 5:屏蔽; 6:解除屏蔽;
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.NewsApiProtos.EStateOperType getState() {
+      com.blemobi.sep.probuf.NewsApiProtos.EStateOperType result = com.blemobi.sep.probuf.NewsApiProtos.EStateOperType.valueOf(state_);
+      return result == null ? com.blemobi.sep.probuf.NewsApiProtos.EStateOperType.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (getPostIdsList().size() > 0) {
+        output.writeRawVarint32(10);
+        output.writeRawVarint32(postIdsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < postIds_.size(); i++) {
+        output.writeInt64NoTag(postIds_.get(i));
+      }
+      if (state_ != com.blemobi.sep.probuf.NewsApiProtos.EStateOperType.OpPass.getNumber()) {
+        output.writeEnum(2, state_);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < postIds_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt64SizeNoTag(postIds_.get(i));
+        }
+        size += dataSize;
+        if (!getPostIdsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        postIdsMemoizedSerializedSize = dataSize;
+      }
+      if (state_ != com.blemobi.sep.probuf.NewsApiProtos.EStateOperType.OpPass.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, state_);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PSetPostStateParam}
+     *
+     * <pre>
+     * 设置帖子状态
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PSetPostStateParam)
+        com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParamOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PSetPostStateParam_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PSetPostStateParam_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam.class, com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        postIds_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        state_ = 0;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PSetPostStateParam_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam build() {
+        com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam buildPartial() {
+        com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam result = new com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          postIds_ = java.util.Collections.unmodifiableList(postIds_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.postIds_ = postIds_;
+        result.state_ = state_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam) {
+          return mergeFrom((com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam other) {
+        if (other == com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam.getDefaultInstance()) return this;
+        if (!other.postIds_.isEmpty()) {
+          if (postIds_.isEmpty()) {
+            postIds_ = other.postIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensurePostIdsIsMutable();
+            postIds_.addAll(other.postIds_);
+          }
+          onChanged();
+        }
+        if (other.state_ != 0) {
+          setStateValue(other.getStateValue());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<java.lang.Long> postIds_ = java.util.Collections.emptyList();
+      private void ensurePostIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          postIds_ = new java.util.ArrayList<java.lang.Long>(postIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated int64 postIds = 1;</code>
+       *
+       * <pre>
+       *帖子列表
+       * </pre>
+       */
+      public java.util.List<java.lang.Long>
+          getPostIdsList() {
+        return java.util.Collections.unmodifiableList(postIds_);
+      }
+      /**
+       * <code>repeated int64 postIds = 1;</code>
+       *
+       * <pre>
+       *帖子列表
+       * </pre>
+       */
+      public int getPostIdsCount() {
+        return postIds_.size();
+      }
+      /**
+       * <code>repeated int64 postIds = 1;</code>
+       *
+       * <pre>
+       *帖子列表
+       * </pre>
+       */
+      public long getPostIds(int index) {
+        return postIds_.get(index);
+      }
+      /**
+       * <code>repeated int64 postIds = 1;</code>
+       *
+       * <pre>
+       *帖子列表
+       * </pre>
+       */
+      public Builder setPostIds(
+          int index, long value) {
+        ensurePostIdsIsMutable();
+        postIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 postIds = 1;</code>
+       *
+       * <pre>
+       *帖子列表
+       * </pre>
+       */
+      public Builder addPostIds(long value) {
+        ensurePostIdsIsMutable();
+        postIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 postIds = 1;</code>
+       *
+       * <pre>
+       *帖子列表
+       * </pre>
+       */
+      public Builder addAllPostIds(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensurePostIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, postIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 postIds = 1;</code>
+       *
+       * <pre>
+       *帖子列表
+       * </pre>
+       */
+      public Builder clearPostIds() {
+        postIds_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private int state_ = 0;
+      /**
+       * <code>optional .bbproto.EStateOperType state = 2;</code>
+       *
+       * <pre>
+       *帖子状态, 0:审核通过; 1:待审核; 2:审核不通过; 3:锁定;4:解锁; 5:屏蔽; 6:解除屏蔽;
+       * </pre>
+       */
+      public int getStateValue() {
+        return state_;
+      }
+      /**
+       * <code>optional .bbproto.EStateOperType state = 2;</code>
+       *
+       * <pre>
+       *帖子状态, 0:审核通过; 1:待审核; 2:审核不通过; 3:锁定;4:解锁; 5:屏蔽; 6:解除屏蔽;
+       * </pre>
+       */
+      public Builder setStateValue(int value) {
+        state_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.EStateOperType state = 2;</code>
+       *
+       * <pre>
+       *帖子状态, 0:审核通过; 1:待审核; 2:审核不通过; 3:锁定;4:解锁; 5:屏蔽; 6:解除屏蔽;
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.NewsApiProtos.EStateOperType getState() {
+        com.blemobi.sep.probuf.NewsApiProtos.EStateOperType result = com.blemobi.sep.probuf.NewsApiProtos.EStateOperType.valueOf(state_);
+        return result == null ? com.blemobi.sep.probuf.NewsApiProtos.EStateOperType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>optional .bbproto.EStateOperType state = 2;</code>
+       *
+       * <pre>
+       *帖子状态, 0:审核通过; 1:待审核; 2:审核不通过; 3:锁定;4:解锁; 5:屏蔽; 6:解除屏蔽;
+       * </pre>
+       */
+      public Builder setState(com.blemobi.sep.probuf.NewsApiProtos.EStateOperType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        state_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.EStateOperType state = 2;</code>
+       *
+       * <pre>
+       *帖子状态, 0:审核通过; 1:待审核; 2:审核不通过; 3:锁定;4:解锁; 5:屏蔽; 6:解除屏蔽;
+       * </pre>
+       */
+      public Builder clearState() {
+        
+        state_ = 0;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PSetPostStateParam)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PSetPostStateParam)
+    private static final com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam();
+    }
+
+    public static com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PSetPostStateParam>
+        PARSER = new com.google.protobuf.AbstractParser<PSetPostStateParam>() {
+      public PSetPostStateParam parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PSetPostStateParam(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<PSetPostStateParam> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PSetPostStateParam> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PRefreshTimelineParamOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PRefreshTimelineParam)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string timelineClass = 1;</code>
+     *
+     * <pre>
+     *timeline类型: bbnews:动态, newsfeed:资讯,all:所有
+     * </pre>
+     */
+    java.lang.String getTimelineClass();
+    /**
+     * <code>optional string timelineClass = 1;</code>
+     *
+     * <pre>
+     *timeline类型: bbnews:动态, newsfeed:资讯,all:所有
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getTimelineClassBytes();
+
+    /**
+     * <code>optional int64 offset = 2;</code>
+     *
+     * <pre>
+     *偏移,为上次返回的最后一个帖子ID
+     * </pre>
+     */
+    long getOffset();
+
+    /**
+     * <code>optional int64 count = 3;</code>
+     *
+     * <pre>
+     *查询条数, 默认10
+     * </pre>
+     */
+    long getCount();
+  }
+  /**
+   * Protobuf type {@code bbproto.PRefreshTimelineParam}
+   *
+   * <pre>
+   * 刷timeline参数
+   * </pre>
+   */
+  public  static final class PRefreshTimelineParam extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PRefreshTimelineParam)
+      PRefreshTimelineParamOrBuilder {
+    // Use PRefreshTimelineParam.newBuilder() to construct.
+    private PRefreshTimelineParam(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PRefreshTimelineParam() {
+      timelineClass_ = "";
+      offset_ = 0L;
+      count_ = 0L;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PRefreshTimelineParam(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              timelineClass_ = s;
+              break;
+            }
+            case 16: {
+
+              offset_ = input.readInt64();
+              break;
+            }
+            case 24: {
+
+              count_ = input.readInt64();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PRefreshTimelineParam_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PRefreshTimelineParam_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam.class, com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam.Builder.class);
+    }
+
+    public static final int TIMELINECLASS_FIELD_NUMBER = 1;
+    private volatile java.lang.Object timelineClass_;
+    /**
+     * <code>optional string timelineClass = 1;</code>
+     *
+     * <pre>
+     *timeline类型: bbnews:动态, newsfeed:资讯,all:所有
+     * </pre>
+     */
+    public java.lang.String getTimelineClass() {
+      java.lang.Object ref = timelineClass_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        timelineClass_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string timelineClass = 1;</code>
+     *
+     * <pre>
+     *timeline类型: bbnews:动态, newsfeed:资讯,all:所有
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getTimelineClassBytes() {
+      java.lang.Object ref = timelineClass_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        timelineClass_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OFFSET_FIELD_NUMBER = 2;
+    private long offset_;
+    /**
+     * <code>optional int64 offset = 2;</code>
+     *
+     * <pre>
+     *偏移,为上次返回的最后一个帖子ID
+     * </pre>
+     */
+    public long getOffset() {
+      return offset_;
+    }
+
+    public static final int COUNT_FIELD_NUMBER = 3;
+    private long count_;
+    /**
+     * <code>optional int64 count = 3;</code>
+     *
+     * <pre>
+     *查询条数, 默认10
+     * </pre>
+     */
+    public long getCount() {
+      return count_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getTimelineClassBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, timelineClass_);
+      }
+      if (offset_ != 0L) {
+        output.writeInt64(2, offset_);
+      }
+      if (count_ != 0L) {
+        output.writeInt64(3, count_);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getTimelineClassBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, timelineClass_);
+      }
+      if (offset_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, offset_);
+      }
+      if (count_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, count_);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PRefreshTimelineParam}
+     *
+     * <pre>
+     * 刷timeline参数
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PRefreshTimelineParam)
+        com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParamOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PRefreshTimelineParam_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PRefreshTimelineParam_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam.class, com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        timelineClass_ = "";
+
+        offset_ = 0L;
+
+        count_ = 0L;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PRefreshTimelineParam_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam build() {
+        com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam buildPartial() {
+        com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam result = new com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam(this);
+        result.timelineClass_ = timelineClass_;
+        result.offset_ = offset_;
+        result.count_ = count_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam) {
+          return mergeFrom((com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam other) {
+        if (other == com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam.getDefaultInstance()) return this;
+        if (!other.getTimelineClass().isEmpty()) {
+          timelineClass_ = other.timelineClass_;
+          onChanged();
+        }
+        if (other.getOffset() != 0L) {
+          setOffset(other.getOffset());
+        }
+        if (other.getCount() != 0L) {
+          setCount(other.getCount());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object timelineClass_ = "";
+      /**
+       * <code>optional string timelineClass = 1;</code>
+       *
+       * <pre>
+       *timeline类型: bbnews:动态, newsfeed:资讯,all:所有
+       * </pre>
+       */
+      public java.lang.String getTimelineClass() {
+        java.lang.Object ref = timelineClass_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          timelineClass_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string timelineClass = 1;</code>
+       *
+       * <pre>
+       *timeline类型: bbnews:动态, newsfeed:资讯,all:所有
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getTimelineClassBytes() {
+        java.lang.Object ref = timelineClass_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          timelineClass_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string timelineClass = 1;</code>
+       *
+       * <pre>
+       *timeline类型: bbnews:动态, newsfeed:资讯,all:所有
+       * </pre>
+       */
+      public Builder setTimelineClass(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        timelineClass_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string timelineClass = 1;</code>
+       *
+       * <pre>
+       *timeline类型: bbnews:动态, newsfeed:资讯,all:所有
+       * </pre>
+       */
+      public Builder clearTimelineClass() {
+        
+        timelineClass_ = getDefaultInstance().getTimelineClass();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string timelineClass = 1;</code>
+       *
+       * <pre>
+       *timeline类型: bbnews:动态, newsfeed:资讯,all:所有
+       * </pre>
+       */
+      public Builder setTimelineClassBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        timelineClass_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long offset_ ;
+      /**
+       * <code>optional int64 offset = 2;</code>
+       *
+       * <pre>
+       *偏移,为上次返回的最后一个帖子ID
+       * </pre>
+       */
+      public long getOffset() {
+        return offset_;
+      }
+      /**
+       * <code>optional int64 offset = 2;</code>
+       *
+       * <pre>
+       *偏移,为上次返回的最后一个帖子ID
+       * </pre>
+       */
+      public Builder setOffset(long value) {
+        
+        offset_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 offset = 2;</code>
+       *
+       * <pre>
+       *偏移,为上次返回的最后一个帖子ID
+       * </pre>
+       */
+      public Builder clearOffset() {
+        
+        offset_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long count_ ;
+      /**
+       * <code>optional int64 count = 3;</code>
+       *
+       * <pre>
+       *查询条数, 默认10
+       * </pre>
+       */
+      public long getCount() {
+        return count_;
+      }
+      /**
+       * <code>optional int64 count = 3;</code>
+       *
+       * <pre>
+       *查询条数, 默认10
+       * </pre>
+       */
+      public Builder setCount(long value) {
+        
+        count_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 count = 3;</code>
+       *
+       * <pre>
+       *查询条数, 默认10
+       * </pre>
+       */
+      public Builder clearCount() {
+        
+        count_ = 0L;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PRefreshTimelineParam)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PRefreshTimelineParam)
+    private static final com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam();
+    }
+
+    public static com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PRefreshTimelineParam>
+        PARSER = new com.google.protobuf.AbstractParser<PRefreshTimelineParam>() {
+      public PRefreshTimelineParam parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PRefreshTimelineParam(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<PRefreshTimelineParam> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PRefreshTimelineParam> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PGetPostsParamOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PGetPostsParam)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated int64 postIds = 1;</code>
+     *
+     * <pre>
+     *帖子ID列表
+     * </pre>
+     */
+    java.util.List<java.lang.Long> getPostIdsList();
+    /**
+     * <code>repeated int64 postIds = 1;</code>
+     *
+     * <pre>
+     *帖子ID列表
+     * </pre>
+     */
+    int getPostIdsCount();
+    /**
+     * <code>repeated int64 postIds = 1;</code>
+     *
+     * <pre>
+     *帖子ID列表
+     * </pre>
+     */
+    long getPostIds(int index);
+
+    /**
+     * <code>optional string uuid = 2;</code>
+     *
+     * <pre>
+     *查看的用户,可选参数. 如果非空, 则填充用户关系信息(已收藏、已点赞等)
+     * </pre>
+     */
+    java.lang.String getUuid();
+    /**
+     * <code>optional string uuid = 2;</code>
+     *
+     * <pre>
+     *查看的用户,可选参数. 如果非空, 则填充用户关系信息(已收藏、已点赞等)
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUuidBytes();
+
+    /**
+     * <code>optional int32 viewType = 3;</code>
+     *
+     * <pre>
+     *查看类型,  0:用户查看(非正常帖子不显示正文)  1: 监管查看(显示所有状态的所有帖子)
+     * </pre>
+     */
+    int getViewType();
+  }
+  /**
+   * Protobuf type {@code bbproto.PGetPostsParam}
+   *
+   * <pre>
+   * 获取帖子信息参数
+   * </pre>
+   */
+  public  static final class PGetPostsParam extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PGetPostsParam)
+      PGetPostsParamOrBuilder {
+    // Use PGetPostsParam.newBuilder() to construct.
+    private PGetPostsParam(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PGetPostsParam() {
+      postIds_ = java.util.Collections.emptyList();
+      uuid_ = "";
+      viewType_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PGetPostsParam(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                postIds_ = new java.util.ArrayList<java.lang.Long>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              postIds_.add(input.readInt64());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001) && input.getBytesUntilLimit() > 0) {
+                postIds_ = new java.util.ArrayList<java.lang.Long>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                postIds_.add(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              uuid_ = s;
+              break;
+            }
+            case 24: {
+
+              viewType_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          postIds_ = java.util.Collections.unmodifiableList(postIds_);
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PGetPostsParam_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PGetPostsParam_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam.class, com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int POSTIDS_FIELD_NUMBER = 1;
+    private java.util.List<java.lang.Long> postIds_;
+    /**
+     * <code>repeated int64 postIds = 1;</code>
+     *
+     * <pre>
+     *帖子ID列表
+     * </pre>
+     */
+    public java.util.List<java.lang.Long>
+        getPostIdsList() {
+      return postIds_;
+    }
+    /**
+     * <code>repeated int64 postIds = 1;</code>
+     *
+     * <pre>
+     *帖子ID列表
+     * </pre>
+     */
+    public int getPostIdsCount() {
+      return postIds_.size();
+    }
+    /**
+     * <code>repeated int64 postIds = 1;</code>
+     *
+     * <pre>
+     *帖子ID列表
+     * </pre>
+     */
+    public long getPostIds(int index) {
+      return postIds_.get(index);
+    }
+    private int postIdsMemoizedSerializedSize = -1;
+
+    public static final int UUID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object uuid_;
+    /**
+     * <code>optional string uuid = 2;</code>
+     *
+     * <pre>
+     *查看的用户,可选参数. 如果非空, 则填充用户关系信息(已收藏、已点赞等)
+     * </pre>
+     */
+    public java.lang.String getUuid() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uuid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string uuid = 2;</code>
+     *
+     * <pre>
+     *查看的用户,可选参数. 如果非空, 则填充用户关系信息(已收藏、已点赞等)
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUuidBytes() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VIEWTYPE_FIELD_NUMBER = 3;
+    private int viewType_;
+    /**
+     * <code>optional int32 viewType = 3;</code>
+     *
+     * <pre>
+     *查看类型,  0:用户查看(非正常帖子不显示正文)  1: 监管查看(显示所有状态的所有帖子)
+     * </pre>
+     */
+    public int getViewType() {
+      return viewType_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (getPostIdsList().size() > 0) {
+        output.writeRawVarint32(10);
+        output.writeRawVarint32(postIdsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < postIds_.size(); i++) {
+        output.writeInt64NoTag(postIds_.get(i));
+      }
+      if (!getUuidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, uuid_);
+      }
+      if (viewType_ != 0) {
+        output.writeInt32(3, viewType_);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < postIds_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt64SizeNoTag(postIds_.get(i));
+        }
+        size += dataSize;
+        if (!getPostIdsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        postIdsMemoizedSerializedSize = dataSize;
+      }
+      if (!getUuidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, uuid_);
+      }
+      if (viewType_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, viewType_);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PGetPostsParam}
+     *
+     * <pre>
+     * 获取帖子信息参数
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PGetPostsParam)
+        com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParamOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PGetPostsParam_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PGetPostsParam_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam.class, com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        postIds_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        uuid_ = "";
+
+        viewType_ = 0;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PGetPostsParam_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam build() {
+        com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam buildPartial() {
+        com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam result = new com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          postIds_ = java.util.Collections.unmodifiableList(postIds_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.postIds_ = postIds_;
+        result.uuid_ = uuid_;
+        result.viewType_ = viewType_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam) {
+          return mergeFrom((com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam other) {
+        if (other == com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam.getDefaultInstance()) return this;
+        if (!other.postIds_.isEmpty()) {
+          if (postIds_.isEmpty()) {
+            postIds_ = other.postIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensurePostIdsIsMutable();
+            postIds_.addAll(other.postIds_);
+          }
+          onChanged();
+        }
+        if (!other.getUuid().isEmpty()) {
+          uuid_ = other.uuid_;
+          onChanged();
+        }
+        if (other.getViewType() != 0) {
+          setViewType(other.getViewType());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<java.lang.Long> postIds_ = java.util.Collections.emptyList();
+      private void ensurePostIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          postIds_ = new java.util.ArrayList<java.lang.Long>(postIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated int64 postIds = 1;</code>
+       *
+       * <pre>
+       *帖子ID列表
+       * </pre>
+       */
+      public java.util.List<java.lang.Long>
+          getPostIdsList() {
+        return java.util.Collections.unmodifiableList(postIds_);
+      }
+      /**
+       * <code>repeated int64 postIds = 1;</code>
+       *
+       * <pre>
+       *帖子ID列表
+       * </pre>
+       */
+      public int getPostIdsCount() {
+        return postIds_.size();
+      }
+      /**
+       * <code>repeated int64 postIds = 1;</code>
+       *
+       * <pre>
+       *帖子ID列表
+       * </pre>
+       */
+      public long getPostIds(int index) {
+        return postIds_.get(index);
+      }
+      /**
+       * <code>repeated int64 postIds = 1;</code>
+       *
+       * <pre>
+       *帖子ID列表
+       * </pre>
+       */
+      public Builder setPostIds(
+          int index, long value) {
+        ensurePostIdsIsMutable();
+        postIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 postIds = 1;</code>
+       *
+       * <pre>
+       *帖子ID列表
+       * </pre>
+       */
+      public Builder addPostIds(long value) {
+        ensurePostIdsIsMutable();
+        postIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 postIds = 1;</code>
+       *
+       * <pre>
+       *帖子ID列表
+       * </pre>
+       */
+      public Builder addAllPostIds(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensurePostIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, postIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 postIds = 1;</code>
+       *
+       * <pre>
+       *帖子ID列表
+       * </pre>
+       */
+      public Builder clearPostIds() {
+        postIds_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object uuid_ = "";
+      /**
+       * <code>optional string uuid = 2;</code>
+       *
+       * <pre>
+       *查看的用户,可选参数. 如果非空, 则填充用户关系信息(已收藏、已点赞等)
+       * </pre>
+       */
+      public java.lang.String getUuid() {
+        java.lang.Object ref = uuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uuid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string uuid = 2;</code>
+       *
+       * <pre>
+       *查看的用户,可选参数. 如果非空, 则填充用户关系信息(已收藏、已点赞等)
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUuidBytes() {
+        java.lang.Object ref = uuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string uuid = 2;</code>
+       *
+       * <pre>
+       *查看的用户,可选参数. 如果非空, 则填充用户关系信息(已收藏、已点赞等)
+       * </pre>
+       */
+      public Builder setUuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uuid = 2;</code>
+       *
+       * <pre>
+       *查看的用户,可选参数. 如果非空, 则填充用户关系信息(已收藏、已点赞等)
+       * </pre>
+       */
+      public Builder clearUuid() {
+        
+        uuid_ = getDefaultInstance().getUuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uuid = 2;</code>
+       *
+       * <pre>
+       *查看的用户,可选参数. 如果非空, 则填充用户关系信息(已收藏、已点赞等)
+       * </pre>
+       */
+      public Builder setUuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int viewType_ ;
+      /**
+       * <code>optional int32 viewType = 3;</code>
+       *
+       * <pre>
+       *查看类型,  0:用户查看(非正常帖子不显示正文)  1: 监管查看(显示所有状态的所有帖子)
+       * </pre>
+       */
+      public int getViewType() {
+        return viewType_;
+      }
+      /**
+       * <code>optional int32 viewType = 3;</code>
+       *
+       * <pre>
+       *查看类型,  0:用户查看(非正常帖子不显示正文)  1: 监管查看(显示所有状态的所有帖子)
+       * </pre>
+       */
+      public Builder setViewType(int value) {
+        
+        viewType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 viewType = 3;</code>
+       *
+       * <pre>
+       *查看类型,  0:用户查看(非正常帖子不显示正文)  1: 监管查看(显示所有状态的所有帖子)
+       * </pre>
+       */
+      public Builder clearViewType() {
+        
+        viewType_ = 0;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PGetPostsParam)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PGetPostsParam)
+    private static final com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam();
+    }
+
+    public static com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PGetPostsParam>
+        PARSER = new com.google.protobuf.AbstractParser<PGetPostsParam>() {
+      public PGetPostsParam parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PGetPostsParam(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<PGetPostsParam> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PGetPostsParam> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PInsidePostNewOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PInsidePostNew)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string uuid = 1;</code>
+     *
+     * <pre>
+     *作者
+     * </pre>
+     */
+    java.lang.String getUuid();
+    /**
+     * <code>optional string uuid = 1;</code>
+     *
+     * <pre>
+     *作者
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUuidBytes();
+
+    /**
+     * <code>optional .bbproto.PPostNew post = 2;</code>
+     *
+     * <pre>
+     *帖子内容
+     * </pre>
+     */
+    boolean hasPost();
+    /**
+     * <code>optional .bbproto.PPostNew post = 2;</code>
+     *
+     * <pre>
+     *帖子内容
+     * </pre>
+     */
+    com.blemobi.sep.probuf.NewsProtos.PPostNew getPost();
+    /**
+     * <code>optional .bbproto.PPostNew post = 2;</code>
+     *
+     * <pre>
+     *帖子内容
+     * </pre>
+     */
+    com.blemobi.sep.probuf.NewsProtos.PPostNewOrBuilder getPostOrBuilder();
+
+    /**
+     * <code>optional int32 createType = 3;</code>
+     *
+     * <pre>
+     *可选参数. 0:正常创建(原有服务使用); 1:隐式创建(视频服务使用)
+     * </pre>
+     */
+    int getCreateType();
+  }
+  /**
+   * Protobuf type {@code bbproto.PInsidePostNew}
+   *
+   * <pre>
+   * 内部发帖结构
+   * </pre>
+   */
+  public  static final class PInsidePostNew extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PInsidePostNew)
+      PInsidePostNewOrBuilder {
+    // Use PInsidePostNew.newBuilder() to construct.
+    private PInsidePostNew(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PInsidePostNew() {
+      uuid_ = "";
+      createType_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PInsidePostNew(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              uuid_ = s;
+              break;
+            }
+            case 18: {
+              com.blemobi.sep.probuf.NewsProtos.PPostNew.Builder subBuilder = null;
+              if (post_ != null) {
+                subBuilder = post_.toBuilder();
+              }
+              post_ = input.readMessage(com.blemobi.sep.probuf.NewsProtos.PPostNew.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(post_);
+                post_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 24: {
+
+              createType_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PInsidePostNew_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PInsidePostNew_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew.class, com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew.Builder.class);
+    }
+
+    public static final int UUID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object uuid_;
+    /**
+     * <code>optional string uuid = 1;</code>
+     *
+     * <pre>
+     *作者
+     * </pre>
+     */
+    public java.lang.String getUuid() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uuid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string uuid = 1;</code>
+     *
+     * <pre>
+     *作者
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUuidBytes() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POST_FIELD_NUMBER = 2;
+    private com.blemobi.sep.probuf.NewsProtos.PPostNew post_;
+    /**
+     * <code>optional .bbproto.PPostNew post = 2;</code>
+     *
+     * <pre>
+     *帖子内容
+     * </pre>
+     */
+    public boolean hasPost() {
+      return post_ != null;
+    }
+    /**
+     * <code>optional .bbproto.PPostNew post = 2;</code>
+     *
+     * <pre>
+     *帖子内容
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.NewsProtos.PPostNew getPost() {
+      return post_ == null ? com.blemobi.sep.probuf.NewsProtos.PPostNew.getDefaultInstance() : post_;
+    }
+    /**
+     * <code>optional .bbproto.PPostNew post = 2;</code>
+     *
+     * <pre>
+     *帖子内容
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.NewsProtos.PPostNewOrBuilder getPostOrBuilder() {
+      return getPost();
+    }
+
+    public static final int CREATETYPE_FIELD_NUMBER = 3;
+    private int createType_;
+    /**
+     * <code>optional int32 createType = 3;</code>
+     *
+     * <pre>
+     *可选参数. 0:正常创建(原有服务使用); 1:隐式创建(视频服务使用)
+     * </pre>
+     */
+    public int getCreateType() {
+      return createType_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getUuidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, uuid_);
+      }
+      if (post_ != null) {
+        output.writeMessage(2, getPost());
+      }
+      if (createType_ != 0) {
+        output.writeInt32(3, createType_);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getUuidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, uuid_);
+      }
+      if (post_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPost());
+      }
+      if (createType_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, createType_);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PInsidePostNew}
+     *
+     * <pre>
+     * 内部发帖结构
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PInsidePostNew)
+        com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNewOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PInsidePostNew_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PInsidePostNew_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew.class, com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        uuid_ = "";
+
+        if (postBuilder_ == null) {
+          post_ = null;
+        } else {
+          post_ = null;
+          postBuilder_ = null;
+        }
+        createType_ = 0;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PInsidePostNew_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew build() {
+        com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew buildPartial() {
+        com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew result = new com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew(this);
+        result.uuid_ = uuid_;
+        if (postBuilder_ == null) {
+          result.post_ = post_;
+        } else {
+          result.post_ = postBuilder_.build();
+        }
+        result.createType_ = createType_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew) {
+          return mergeFrom((com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew other) {
+        if (other == com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew.getDefaultInstance()) return this;
+        if (!other.getUuid().isEmpty()) {
+          uuid_ = other.uuid_;
+          onChanged();
+        }
+        if (other.hasPost()) {
+          mergePost(other.getPost());
+        }
+        if (other.getCreateType() != 0) {
+          setCreateType(other.getCreateType());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object uuid_ = "";
+      /**
+       * <code>optional string uuid = 1;</code>
+       *
+       * <pre>
+       *作者
+       * </pre>
+       */
+      public java.lang.String getUuid() {
+        java.lang.Object ref = uuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uuid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string uuid = 1;</code>
+       *
+       * <pre>
+       *作者
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUuidBytes() {
+        java.lang.Object ref = uuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string uuid = 1;</code>
+       *
+       * <pre>
+       *作者
+       * </pre>
+       */
+      public Builder setUuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uuid = 1;</code>
+       *
+       * <pre>
+       *作者
+       * </pre>
+       */
+      public Builder clearUuid() {
+        
+        uuid_ = getDefaultInstance().getUuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uuid = 1;</code>
+       *
+       * <pre>
+       *作者
+       * </pre>
+       */
+      public Builder setUuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.blemobi.sep.probuf.NewsProtos.PPostNew post_ = null;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.NewsProtos.PPostNew, com.blemobi.sep.probuf.NewsProtos.PPostNew.Builder, com.blemobi.sep.probuf.NewsProtos.PPostNewOrBuilder> postBuilder_;
+      /**
+       * <code>optional .bbproto.PPostNew post = 2;</code>
+       *
+       * <pre>
+       *帖子内容
+       * </pre>
+       */
+      public boolean hasPost() {
+        return postBuilder_ != null || post_ != null;
+      }
+      /**
+       * <code>optional .bbproto.PPostNew post = 2;</code>
+       *
+       * <pre>
+       *帖子内容
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.NewsProtos.PPostNew getPost() {
+        if (postBuilder_ == null) {
+          return post_ == null ? com.blemobi.sep.probuf.NewsProtos.PPostNew.getDefaultInstance() : post_;
+        } else {
+          return postBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .bbproto.PPostNew post = 2;</code>
+       *
+       * <pre>
+       *帖子内容
+       * </pre>
+       */
+      public Builder setPost(com.blemobi.sep.probuf.NewsProtos.PPostNew value) {
+        if (postBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          post_ = value;
+          onChanged();
+        } else {
+          postBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PPostNew post = 2;</code>
+       *
+       * <pre>
+       *帖子内容
+       * </pre>
+       */
+      public Builder setPost(
+          com.blemobi.sep.probuf.NewsProtos.PPostNew.Builder builderForValue) {
+        if (postBuilder_ == null) {
+          post_ = builderForValue.build();
+          onChanged();
+        } else {
+          postBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PPostNew post = 2;</code>
+       *
+       * <pre>
+       *帖子内容
+       * </pre>
+       */
+      public Builder mergePost(com.blemobi.sep.probuf.NewsProtos.PPostNew value) {
+        if (postBuilder_ == null) {
+          if (post_ != null) {
+            post_ =
+              com.blemobi.sep.probuf.NewsProtos.PPostNew.newBuilder(post_).mergeFrom(value).buildPartial();
+          } else {
+            post_ = value;
+          }
+          onChanged();
+        } else {
+          postBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PPostNew post = 2;</code>
+       *
+       * <pre>
+       *帖子内容
+       * </pre>
+       */
+      public Builder clearPost() {
+        if (postBuilder_ == null) {
+          post_ = null;
+          onChanged();
+        } else {
+          post_ = null;
+          postBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PPostNew post = 2;</code>
+       *
+       * <pre>
+       *帖子内容
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.NewsProtos.PPostNew.Builder getPostBuilder() {
+        
+        onChanged();
+        return getPostFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .bbproto.PPostNew post = 2;</code>
+       *
+       * <pre>
+       *帖子内容
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.NewsProtos.PPostNewOrBuilder getPostOrBuilder() {
+        if (postBuilder_ != null) {
+          return postBuilder_.getMessageOrBuilder();
+        } else {
+          return post_ == null ?
+              com.blemobi.sep.probuf.NewsProtos.PPostNew.getDefaultInstance() : post_;
+        }
+      }
+      /**
+       * <code>optional .bbproto.PPostNew post = 2;</code>
+       *
+       * <pre>
+       *帖子内容
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.NewsProtos.PPostNew, com.blemobi.sep.probuf.NewsProtos.PPostNew.Builder, com.blemobi.sep.probuf.NewsProtos.PPostNewOrBuilder> 
+          getPostFieldBuilder() {
+        if (postBuilder_ == null) {
+          postBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.blemobi.sep.probuf.NewsProtos.PPostNew, com.blemobi.sep.probuf.NewsProtos.PPostNew.Builder, com.blemobi.sep.probuf.NewsProtos.PPostNewOrBuilder>(
+                  getPost(),
+                  getParentForChildren(),
+                  isClean());
+          post_ = null;
+        }
+        return postBuilder_;
+      }
+
+      private int createType_ ;
+      /**
+       * <code>optional int32 createType = 3;</code>
+       *
+       * <pre>
+       *可选参数. 0:正常创建(原有服务使用); 1:隐式创建(视频服务使用)
+       * </pre>
+       */
+      public int getCreateType() {
+        return createType_;
+      }
+      /**
+       * <code>optional int32 createType = 3;</code>
+       *
+       * <pre>
+       *可选参数. 0:正常创建(原有服务使用); 1:隐式创建(视频服务使用)
+       * </pre>
+       */
+      public Builder setCreateType(int value) {
+        
+        createType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 createType = 3;</code>
+       *
+       * <pre>
+       *可选参数. 0:正常创建(原有服务使用); 1:隐式创建(视频服务使用)
+       * </pre>
+       */
+      public Builder clearCreateType() {
+        
+        createType_ = 0;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PInsidePostNew)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PInsidePostNew)
+    private static final com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew();
+    }
+
+    public static com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PInsidePostNew>
+        PARSER = new com.google.protobuf.AbstractParser<PInsidePostNew>() {
+      public PInsidePostNew parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PInsidePostNew(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<PInsidePostNew> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PInsidePostNew> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PQueryHitoryParamOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PQueryHitoryParam)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string uuid = 1;</code>
+     *
+     * <pre>
+     *要查看的用户
+     * </pre>
+     */
+    java.lang.String getUuid();
+    /**
+     * <code>optional string uuid = 1;</code>
+     *
+     * <pre>
+     *要查看的用户
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUuidBytes();
+
+    /**
+     * <code>optional string communityId = 2;</code>
+     *
+     * <pre>
+     *可选参数. 空: 用户所有历史; 非空: 用户在指定社区的历史
+     * </pre>
+     */
+    java.lang.String getCommunityId();
+    /**
+     * <code>optional string communityId = 2;</code>
+     *
+     * <pre>
+     *可选参数. 空: 用户所有历史; 非空: 用户在指定社区的历史
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getCommunityIdBytes();
+
+    /**
+     * <code>optional string postClass = 3;</code>
+     *
+     * <pre>
+     *可选参数. all: 动态+资讯; bbnews:动态; newsfeed:资讯. 默认: all
+     * </pre>
+     */
+    java.lang.String getPostClass();
+    /**
+     * <code>optional string postClass = 3;</code>
+     *
+     * <pre>
+     *可选参数. all: 动态+资讯; bbnews:动态; newsfeed:资讯. 默认: all
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getPostClassBytes();
+
+    /**
+     * <code>optional int64 offset = 4;</code>
+     *
+     * <pre>
+     *偏移,为上次返回的最后一个帖子ID, 默认:0
+     * </pre>
+     */
+    long getOffset();
+
+    /**
+     * <code>optional int64 count = 5;</code>
+     *
+     * <pre>
+     *查询条数, 默认10
+     * </pre>
+     */
+    long getCount();
+  }
+  /**
+   * Protobuf type {@code bbproto.PQueryHitoryParam}
+   *
+   * <pre>
+   * 查看用户的发帖历史
+   * </pre>
+   */
+  public  static final class PQueryHitoryParam extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PQueryHitoryParam)
+      PQueryHitoryParamOrBuilder {
+    // Use PQueryHitoryParam.newBuilder() to construct.
+    private PQueryHitoryParam(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PQueryHitoryParam() {
+      uuid_ = "";
+      communityId_ = "";
+      postClass_ = "";
+      offset_ = 0L;
+      count_ = 0L;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PQueryHitoryParam(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              uuid_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              communityId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              postClass_ = s;
+              break;
+            }
+            case 32: {
+
+              offset_ = input.readInt64();
+              break;
+            }
+            case 40: {
+
+              count_ = input.readInt64();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PQueryHitoryParam_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PQueryHitoryParam_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam.class, com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam.Builder.class);
+    }
+
+    public static final int UUID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object uuid_;
+    /**
+     * <code>optional string uuid = 1;</code>
+     *
+     * <pre>
+     *要查看的用户
+     * </pre>
+     */
+    public java.lang.String getUuid() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uuid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string uuid = 1;</code>
+     *
+     * <pre>
+     *要查看的用户
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUuidBytes() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COMMUNITYID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object communityId_;
+    /**
+     * <code>optional string communityId = 2;</code>
+     *
+     * <pre>
+     *可选参数. 空: 用户所有历史; 非空: 用户在指定社区的历史
+     * </pre>
+     */
+    public java.lang.String getCommunityId() {
+      java.lang.Object ref = communityId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        communityId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string communityId = 2;</code>
+     *
+     * <pre>
+     *可选参数. 空: 用户所有历史; 非空: 用户在指定社区的历史
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getCommunityIdBytes() {
+      java.lang.Object ref = communityId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        communityId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POSTCLASS_FIELD_NUMBER = 3;
+    private volatile java.lang.Object postClass_;
+    /**
+     * <code>optional string postClass = 3;</code>
+     *
+     * <pre>
+     *可选参数. all: 动态+资讯; bbnews:动态; newsfeed:资讯. 默认: all
+     * </pre>
+     */
+    public java.lang.String getPostClass() {
+      java.lang.Object ref = postClass_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        postClass_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string postClass = 3;</code>
+     *
+     * <pre>
+     *可选参数. all: 动态+资讯; bbnews:动态; newsfeed:资讯. 默认: all
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getPostClassBytes() {
+      java.lang.Object ref = postClass_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        postClass_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OFFSET_FIELD_NUMBER = 4;
+    private long offset_;
+    /**
+     * <code>optional int64 offset = 4;</code>
+     *
+     * <pre>
+     *偏移,为上次返回的最后一个帖子ID, 默认:0
+     * </pre>
+     */
+    public long getOffset() {
+      return offset_;
+    }
+
+    public static final int COUNT_FIELD_NUMBER = 5;
+    private long count_;
+    /**
+     * <code>optional int64 count = 5;</code>
+     *
+     * <pre>
+     *查询条数, 默认10
+     * </pre>
+     */
+    public long getCount() {
+      return count_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getUuidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, uuid_);
+      }
+      if (!getCommunityIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, communityId_);
+      }
+      if (!getPostClassBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, postClass_);
+      }
+      if (offset_ != 0L) {
+        output.writeInt64(4, offset_);
+      }
+      if (count_ != 0L) {
+        output.writeInt64(5, count_);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getUuidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, uuid_);
+      }
+      if (!getCommunityIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, communityId_);
+      }
+      if (!getPostClassBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, postClass_);
+      }
+      if (offset_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, offset_);
+      }
+      if (count_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, count_);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PQueryHitoryParam}
+     *
+     * <pre>
+     * 查看用户的发帖历史
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PQueryHitoryParam)
+        com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParamOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PQueryHitoryParam_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PQueryHitoryParam_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam.class, com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        uuid_ = "";
+
+        communityId_ = "";
+
+        postClass_ = "";
+
+        offset_ = 0L;
+
+        count_ = 0L;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PQueryHitoryParam_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam build() {
+        com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam buildPartial() {
+        com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam result = new com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam(this);
+        result.uuid_ = uuid_;
+        result.communityId_ = communityId_;
+        result.postClass_ = postClass_;
+        result.offset_ = offset_;
+        result.count_ = count_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam) {
+          return mergeFrom((com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam other) {
+        if (other == com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam.getDefaultInstance()) return this;
+        if (!other.getUuid().isEmpty()) {
+          uuid_ = other.uuid_;
+          onChanged();
+        }
+        if (!other.getCommunityId().isEmpty()) {
+          communityId_ = other.communityId_;
+          onChanged();
+        }
+        if (!other.getPostClass().isEmpty()) {
+          postClass_ = other.postClass_;
+          onChanged();
+        }
+        if (other.getOffset() != 0L) {
+          setOffset(other.getOffset());
+        }
+        if (other.getCount() != 0L) {
+          setCount(other.getCount());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object uuid_ = "";
+      /**
+       * <code>optional string uuid = 1;</code>
+       *
+       * <pre>
+       *要查看的用户
+       * </pre>
+       */
+      public java.lang.String getUuid() {
+        java.lang.Object ref = uuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uuid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string uuid = 1;</code>
+       *
+       * <pre>
+       *要查看的用户
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUuidBytes() {
+        java.lang.Object ref = uuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string uuid = 1;</code>
+       *
+       * <pre>
+       *要查看的用户
+       * </pre>
+       */
+      public Builder setUuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uuid = 1;</code>
+       *
+       * <pre>
+       *要查看的用户
+       * </pre>
+       */
+      public Builder clearUuid() {
+        
+        uuid_ = getDefaultInstance().getUuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uuid = 1;</code>
+       *
+       * <pre>
+       *要查看的用户
+       * </pre>
+       */
+      public Builder setUuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object communityId_ = "";
+      /**
+       * <code>optional string communityId = 2;</code>
+       *
+       * <pre>
+       *可选参数. 空: 用户所有历史; 非空: 用户在指定社区的历史
+       * </pre>
+       */
+      public java.lang.String getCommunityId() {
+        java.lang.Object ref = communityId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          communityId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string communityId = 2;</code>
+       *
+       * <pre>
+       *可选参数. 空: 用户所有历史; 非空: 用户在指定社区的历史
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getCommunityIdBytes() {
+        java.lang.Object ref = communityId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          communityId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string communityId = 2;</code>
+       *
+       * <pre>
+       *可选参数. 空: 用户所有历史; 非空: 用户在指定社区的历史
+       * </pre>
+       */
+      public Builder setCommunityId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        communityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string communityId = 2;</code>
+       *
+       * <pre>
+       *可选参数. 空: 用户所有历史; 非空: 用户在指定社区的历史
+       * </pre>
+       */
+      public Builder clearCommunityId() {
+        
+        communityId_ = getDefaultInstance().getCommunityId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string communityId = 2;</code>
+       *
+       * <pre>
+       *可选参数. 空: 用户所有历史; 非空: 用户在指定社区的历史
+       * </pre>
+       */
+      public Builder setCommunityIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        communityId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object postClass_ = "";
+      /**
+       * <code>optional string postClass = 3;</code>
+       *
+       * <pre>
+       *可选参数. all: 动态+资讯; bbnews:动态; newsfeed:资讯. 默认: all
+       * </pre>
+       */
+      public java.lang.String getPostClass() {
+        java.lang.Object ref = postClass_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          postClass_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string postClass = 3;</code>
+       *
+       * <pre>
+       *可选参数. all: 动态+资讯; bbnews:动态; newsfeed:资讯. 默认: all
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getPostClassBytes() {
+        java.lang.Object ref = postClass_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          postClass_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string postClass = 3;</code>
+       *
+       * <pre>
+       *可选参数. all: 动态+资讯; bbnews:动态; newsfeed:资讯. 默认: all
+       * </pre>
+       */
+      public Builder setPostClass(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        postClass_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string postClass = 3;</code>
+       *
+       * <pre>
+       *可选参数. all: 动态+资讯; bbnews:动态; newsfeed:资讯. 默认: all
+       * </pre>
+       */
+      public Builder clearPostClass() {
+        
+        postClass_ = getDefaultInstance().getPostClass();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string postClass = 3;</code>
+       *
+       * <pre>
+       *可选参数. all: 动态+资讯; bbnews:动态; newsfeed:资讯. 默认: all
+       * </pre>
+       */
+      public Builder setPostClassBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        postClass_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long offset_ ;
+      /**
+       * <code>optional int64 offset = 4;</code>
+       *
+       * <pre>
+       *偏移,为上次返回的最后一个帖子ID, 默认:0
+       * </pre>
+       */
+      public long getOffset() {
+        return offset_;
+      }
+      /**
+       * <code>optional int64 offset = 4;</code>
+       *
+       * <pre>
+       *偏移,为上次返回的最后一个帖子ID, 默认:0
+       * </pre>
+       */
+      public Builder setOffset(long value) {
+        
+        offset_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 offset = 4;</code>
+       *
+       * <pre>
+       *偏移,为上次返回的最后一个帖子ID, 默认:0
+       * </pre>
+       */
+      public Builder clearOffset() {
+        
+        offset_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long count_ ;
+      /**
+       * <code>optional int64 count = 5;</code>
+       *
+       * <pre>
+       *查询条数, 默认10
+       * </pre>
+       */
+      public long getCount() {
+        return count_;
+      }
+      /**
+       * <code>optional int64 count = 5;</code>
+       *
+       * <pre>
+       *查询条数, 默认10
+       * </pre>
+       */
+      public Builder setCount(long value) {
+        
+        count_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 count = 5;</code>
+       *
+       * <pre>
+       *查询条数, 默认10
+       * </pre>
+       */
+      public Builder clearCount() {
+        
+        count_ = 0L;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PQueryHitoryParam)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PQueryHitoryParam)
+    private static final com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam();
+    }
+
+    public static com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PQueryHitoryParam>
+        PARSER = new com.google.protobuf.AbstractParser<PQueryHitoryParam>() {
+      public PQueryHitoryParam parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PQueryHitoryParam(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<PQueryHitoryParam> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PQueryHitoryParam> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PPostBriefOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PPostBrief)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int64 id = 1;</code>
+     *
+     * <pre>
+     *帖子ID
+     * </pre>
+     */
+    long getId();
+
+    /**
+     * <code>optional string uuid = 2;</code>
+     *
+     * <pre>
+     *作者
+     * </pre>
+     */
+    java.lang.String getUuid();
+    /**
+     * <code>optional string uuid = 2;</code>
+     *
+     * <pre>
+     *作者
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUuidBytes();
+
+    /**
+     * <code>optional string communityId = 3;</code>
+     *
+     * <pre>
+     *社区ID
+     * </pre>
+     */
+    java.lang.String getCommunityId();
+    /**
+     * <code>optional string communityId = 3;</code>
+     *
+     * <pre>
+     *社区ID
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getCommunityIdBytes();
+  }
+  /**
+   * Protobuf type {@code bbproto.PPostBrief}
+   *
+   * <pre>
+   * 帖子简要信息
+   * </pre>
+   */
+  public  static final class PPostBrief extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PPostBrief)
+      PPostBriefOrBuilder {
+    // Use PPostBrief.newBuilder() to construct.
+    private PPostBrief(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PPostBrief() {
+      id_ = 0L;
+      uuid_ = "";
+      communityId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PPostBrief(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              id_ = input.readInt64();
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              uuid_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              communityId_ = s;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PPostBrief_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PPostBrief_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.NewsApiProtos.PPostBrief.class, com.blemobi.sep.probuf.NewsApiProtos.PPostBrief.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_;
+    /**
+     * <code>optional int64 id = 1;</code>
+     *
+     * <pre>
+     *帖子ID
+     * </pre>
+     */
+    public long getId() {
+      return id_;
+    }
+
+    public static final int UUID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object uuid_;
+    /**
+     * <code>optional string uuid = 2;</code>
+     *
+     * <pre>
+     *作者
+     * </pre>
+     */
+    public java.lang.String getUuid() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uuid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string uuid = 2;</code>
+     *
+     * <pre>
+     *作者
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUuidBytes() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COMMUNITYID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object communityId_;
+    /**
+     * <code>optional string communityId = 3;</code>
+     *
+     * <pre>
+     *社区ID
+     * </pre>
+     */
+    public java.lang.String getCommunityId() {
+      java.lang.Object ref = communityId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        communityId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string communityId = 3;</code>
+     *
+     * <pre>
+     *社区ID
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getCommunityIdBytes() {
+      java.lang.Object ref = communityId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        communityId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeInt64(1, id_);
+      }
+      if (!getUuidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, uuid_);
+      }
+      if (!getCommunityIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, communityId_);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, id_);
+      }
+      if (!getUuidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, uuid_);
+      }
+      if (!getCommunityIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, communityId_);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostBrief parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostBrief parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostBrief parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostBrief parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostBrief parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostBrief parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostBrief parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostBrief parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostBrief parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostBrief parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.NewsApiProtos.PPostBrief prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PPostBrief}
+     *
+     * <pre>
+     * 帖子简要信息
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PPostBrief)
+        com.blemobi.sep.probuf.NewsApiProtos.PPostBriefOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PPostBrief_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PPostBrief_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.NewsApiProtos.PPostBrief.class, com.blemobi.sep.probuf.NewsApiProtos.PPostBrief.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.NewsApiProtos.PPostBrief.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        id_ = 0L;
+
+        uuid_ = "";
+
+        communityId_ = "";
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PPostBrief_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.NewsApiProtos.PPostBrief getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.NewsApiProtos.PPostBrief.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.NewsApiProtos.PPostBrief build() {
+        com.blemobi.sep.probuf.NewsApiProtos.PPostBrief result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.NewsApiProtos.PPostBrief buildPartial() {
+        com.blemobi.sep.probuf.NewsApiProtos.PPostBrief result = new com.blemobi.sep.probuf.NewsApiProtos.PPostBrief(this);
+        result.id_ = id_;
+        result.uuid_ = uuid_;
+        result.communityId_ = communityId_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.NewsApiProtos.PPostBrief) {
+          return mergeFrom((com.blemobi.sep.probuf.NewsApiProtos.PPostBrief)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.NewsApiProtos.PPostBrief other) {
+        if (other == com.blemobi.sep.probuf.NewsApiProtos.PPostBrief.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (!other.getUuid().isEmpty()) {
+          uuid_ = other.uuid_;
+          onChanged();
+        }
+        if (!other.getCommunityId().isEmpty()) {
+          communityId_ = other.communityId_;
+          onChanged();
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.NewsApiProtos.PPostBrief parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.NewsApiProtos.PPostBrief) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long id_ ;
+      /**
+       * <code>optional int64 id = 1;</code>
+       *
+       * <pre>
+       *帖子ID
+       * </pre>
+       */
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>optional int64 id = 1;</code>
+       *
+       * <pre>
+       *帖子ID
+       * </pre>
+       */
+      public Builder setId(long value) {
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 id = 1;</code>
+       *
+       * <pre>
+       *帖子ID
+       * </pre>
+       */
+      public Builder clearId() {
+        
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object uuid_ = "";
+      /**
+       * <code>optional string uuid = 2;</code>
+       *
+       * <pre>
+       *作者
+       * </pre>
+       */
+      public java.lang.String getUuid() {
+        java.lang.Object ref = uuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uuid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string uuid = 2;</code>
+       *
+       * <pre>
+       *作者
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUuidBytes() {
+        java.lang.Object ref = uuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string uuid = 2;</code>
+       *
+       * <pre>
+       *作者
+       * </pre>
+       */
+      public Builder setUuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uuid = 2;</code>
+       *
+       * <pre>
+       *作者
+       * </pre>
+       */
+      public Builder clearUuid() {
+        
+        uuid_ = getDefaultInstance().getUuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uuid = 2;</code>
+       *
+       * <pre>
+       *作者
+       * </pre>
+       */
+      public Builder setUuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object communityId_ = "";
+      /**
+       * <code>optional string communityId = 3;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public java.lang.String getCommunityId() {
+        java.lang.Object ref = communityId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          communityId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string communityId = 3;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getCommunityIdBytes() {
+        java.lang.Object ref = communityId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          communityId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string communityId = 3;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public Builder setCommunityId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        communityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string communityId = 3;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public Builder clearCommunityId() {
+        
+        communityId_ = getDefaultInstance().getCommunityId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string communityId = 3;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public Builder setCommunityIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        communityId_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PPostBrief)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PPostBrief)
+    private static final com.blemobi.sep.probuf.NewsApiProtos.PPostBrief DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.NewsApiProtos.PPostBrief();
+    }
+
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostBrief getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PPostBrief>
+        PARSER = new com.google.protobuf.AbstractParser<PPostBrief>() {
+      public PPostBrief parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PPostBrief(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<PPostBrief> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PPostBrief> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.NewsApiProtos.PPostBrief getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PPostBriefListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PPostBriefList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .bbproto.PPostBrief List = 1;</code>
+     *
+     * <pre>
+     *信息列表
+     * </pre>
+     */
+    java.util.List<com.blemobi.sep.probuf.NewsApiProtos.PPostBrief> 
+        getListList();
+    /**
+     * <code>repeated .bbproto.PPostBrief List = 1;</code>
+     *
+     * <pre>
+     *信息列表
+     * </pre>
+     */
+    com.blemobi.sep.probuf.NewsApiProtos.PPostBrief getList(int index);
+    /**
+     * <code>repeated .bbproto.PPostBrief List = 1;</code>
+     *
+     * <pre>
+     *信息列表
+     * </pre>
+     */
+    int getListCount();
+    /**
+     * <code>repeated .bbproto.PPostBrief List = 1;</code>
+     *
+     * <pre>
+     *信息列表
+     * </pre>
+     */
+    java.util.List<? extends com.blemobi.sep.probuf.NewsApiProtos.PPostBriefOrBuilder> 
+        getListOrBuilderList();
+    /**
+     * <code>repeated .bbproto.PPostBrief List = 1;</code>
+     *
+     * <pre>
+     *信息列表
+     * </pre>
+     */
+    com.blemobi.sep.probuf.NewsApiProtos.PPostBriefOrBuilder getListOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code bbproto.PPostBriefList}
+   *
+   * <pre>
+   * 帖子简要信息
+   * </pre>
+   */
+  public  static final class PPostBriefList extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PPostBriefList)
+      PPostBriefListOrBuilder {
+    // Use PPostBriefList.newBuilder() to construct.
+    private PPostBriefList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PPostBriefList() {
+      list_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PPostBriefList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                list_ = new java.util.ArrayList<com.blemobi.sep.probuf.NewsApiProtos.PPostBrief>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              list_.add(input.readMessage(com.blemobi.sep.probuf.NewsApiProtos.PPostBrief.parser(), extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          list_ = java.util.Collections.unmodifiableList(list_);
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PPostBriefList_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PPostBriefList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList.class, com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList.Builder.class);
+    }
+
+    public static final int LIST_FIELD_NUMBER = 1;
+    private java.util.List<com.blemobi.sep.probuf.NewsApiProtos.PPostBrief> list_;
+    /**
+     * <code>repeated .bbproto.PPostBrief List = 1;</code>
+     *
+     * <pre>
+     *信息列表
+     * </pre>
+     */
+    public java.util.List<com.blemobi.sep.probuf.NewsApiProtos.PPostBrief> getListList() {
+      return list_;
+    }
+    /**
+     * <code>repeated .bbproto.PPostBrief List = 1;</code>
+     *
+     * <pre>
+     *信息列表
+     * </pre>
+     */
+    public java.util.List<? extends com.blemobi.sep.probuf.NewsApiProtos.PPostBriefOrBuilder> 
+        getListOrBuilderList() {
+      return list_;
+    }
+    /**
+     * <code>repeated .bbproto.PPostBrief List = 1;</code>
+     *
+     * <pre>
+     *信息列表
+     * </pre>
+     */
+    public int getListCount() {
+      return list_.size();
+    }
+    /**
+     * <code>repeated .bbproto.PPostBrief List = 1;</code>
+     *
+     * <pre>
+     *信息列表
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.NewsApiProtos.PPostBrief getList(int index) {
+      return list_.get(index);
+    }
+    /**
+     * <code>repeated .bbproto.PPostBrief List = 1;</code>
+     *
+     * <pre>
+     *信息列表
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.NewsApiProtos.PPostBriefOrBuilder getListOrBuilder(
+        int index) {
+      return list_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < list_.size(); i++) {
+        output.writeMessage(1, list_.get(i));
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < list_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, list_.get(i));
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PPostBriefList}
+     *
+     * <pre>
+     * 帖子简要信息
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PPostBriefList)
+        com.blemobi.sep.probuf.NewsApiProtos.PPostBriefListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PPostBriefList_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PPostBriefList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList.class, com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getListFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (listBuilder_ == null) {
+          list_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          listBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.NewsApiProtos.internal_static_bbproto_PPostBriefList_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList build() {
+        com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList buildPartial() {
+        com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList result = new com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList(this);
+        int from_bitField0_ = bitField0_;
+        if (listBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            list_ = java.util.Collections.unmodifiableList(list_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.list_ = list_;
+        } else {
+          result.list_ = listBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList) {
+          return mergeFrom((com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList other) {
+        if (other == com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList.getDefaultInstance()) return this;
+        if (listBuilder_ == null) {
+          if (!other.list_.isEmpty()) {
+            if (list_.isEmpty()) {
+              list_ = other.list_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureListIsMutable();
+              list_.addAll(other.list_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.list_.isEmpty()) {
+            if (listBuilder_.isEmpty()) {
+              listBuilder_.dispose();
+              listBuilder_ = null;
+              list_ = other.list_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              listBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getListFieldBuilder() : null;
+            } else {
+              listBuilder_.addAllMessages(other.list_);
+            }
+          }
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.blemobi.sep.probuf.NewsApiProtos.PPostBrief> list_ =
+        java.util.Collections.emptyList();
+      private void ensureListIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          list_ = new java.util.ArrayList<com.blemobi.sep.probuf.NewsApiProtos.PPostBrief>(list_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.NewsApiProtos.PPostBrief, com.blemobi.sep.probuf.NewsApiProtos.PPostBrief.Builder, com.blemobi.sep.probuf.NewsApiProtos.PPostBriefOrBuilder> listBuilder_;
+
+      /**
+       * <code>repeated .bbproto.PPostBrief List = 1;</code>
+       *
+       * <pre>
+       *信息列表
+       * </pre>
+       */
+      public java.util.List<com.blemobi.sep.probuf.NewsApiProtos.PPostBrief> getListList() {
+        if (listBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(list_);
+        } else {
+          return listBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PPostBrief List = 1;</code>
+       *
+       * <pre>
+       *信息列表
+       * </pre>
+       */
+      public int getListCount() {
+        if (listBuilder_ == null) {
+          return list_.size();
+        } else {
+          return listBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PPostBrief List = 1;</code>
+       *
+       * <pre>
+       *信息列表
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.NewsApiProtos.PPostBrief getList(int index) {
+        if (listBuilder_ == null) {
+          return list_.get(index);
+        } else {
+          return listBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PPostBrief List = 1;</code>
+       *
+       * <pre>
+       *信息列表
+       * </pre>
+       */
+      public Builder setList(
+          int index, com.blemobi.sep.probuf.NewsApiProtos.PPostBrief value) {
+        if (listBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureListIsMutable();
+          list_.set(index, value);
+          onChanged();
+        } else {
+          listBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PPostBrief List = 1;</code>
+       *
+       * <pre>
+       *信息列表
+       * </pre>
+       */
+      public Builder setList(
+          int index, com.blemobi.sep.probuf.NewsApiProtos.PPostBrief.Builder builderForValue) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          list_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          listBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PPostBrief List = 1;</code>
+       *
+       * <pre>
+       *信息列表
+       * </pre>
+       */
+      public Builder addList(com.blemobi.sep.probuf.NewsApiProtos.PPostBrief value) {
+        if (listBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureListIsMutable();
+          list_.add(value);
+          onChanged();
+        } else {
+          listBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PPostBrief List = 1;</code>
+       *
+       * <pre>
+       *信息列表
+       * </pre>
+       */
+      public Builder addList(
+          int index, com.blemobi.sep.probuf.NewsApiProtos.PPostBrief value) {
+        if (listBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureListIsMutable();
+          list_.add(index, value);
+          onChanged();
+        } else {
+          listBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PPostBrief List = 1;</code>
+       *
+       * <pre>
+       *信息列表
+       * </pre>
+       */
+      public Builder addList(
+          com.blemobi.sep.probuf.NewsApiProtos.PPostBrief.Builder builderForValue) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          list_.add(builderForValue.build());
+          onChanged();
+        } else {
+          listBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PPostBrief List = 1;</code>
+       *
+       * <pre>
+       *信息列表
+       * </pre>
+       */
+      public Builder addList(
+          int index, com.blemobi.sep.probuf.NewsApiProtos.PPostBrief.Builder builderForValue) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          list_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          listBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PPostBrief List = 1;</code>
+       *
+       * <pre>
+       *信息列表
+       * </pre>
+       */
+      public Builder addAllList(
+          java.lang.Iterable<? extends com.blemobi.sep.probuf.NewsApiProtos.PPostBrief> values) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, list_);
+          onChanged();
+        } else {
+          listBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PPostBrief List = 1;</code>
+       *
+       * <pre>
+       *信息列表
+       * </pre>
+       */
+      public Builder clearList() {
+        if (listBuilder_ == null) {
+          list_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          listBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PPostBrief List = 1;</code>
+       *
+       * <pre>
+       *信息列表
+       * </pre>
+       */
+      public Builder removeList(int index) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          list_.remove(index);
+          onChanged();
+        } else {
+          listBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PPostBrief List = 1;</code>
+       *
+       * <pre>
+       *信息列表
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.NewsApiProtos.PPostBrief.Builder getListBuilder(
+          int index) {
+        return getListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .bbproto.PPostBrief List = 1;</code>
+       *
+       * <pre>
+       *信息列表
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.NewsApiProtos.PPostBriefOrBuilder getListOrBuilder(
+          int index) {
+        if (listBuilder_ == null) {
+          return list_.get(index);  } else {
+          return listBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PPostBrief List = 1;</code>
+       *
+       * <pre>
+       *信息列表
+       * </pre>
+       */
+      public java.util.List<? extends com.blemobi.sep.probuf.NewsApiProtos.PPostBriefOrBuilder> 
+           getListOrBuilderList() {
+        if (listBuilder_ != null) {
+          return listBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(list_);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PPostBrief List = 1;</code>
+       *
+       * <pre>
+       *信息列表
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.NewsApiProtos.PPostBrief.Builder addListBuilder() {
+        return getListFieldBuilder().addBuilder(
+            com.blemobi.sep.probuf.NewsApiProtos.PPostBrief.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PPostBrief List = 1;</code>
+       *
+       * <pre>
+       *信息列表
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.NewsApiProtos.PPostBrief.Builder addListBuilder(
+          int index) {
+        return getListFieldBuilder().addBuilder(
+            index, com.blemobi.sep.probuf.NewsApiProtos.PPostBrief.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PPostBrief List = 1;</code>
+       *
+       * <pre>
+       *信息列表
+       * </pre>
+       */
+      public java.util.List<com.blemobi.sep.probuf.NewsApiProtos.PPostBrief.Builder> 
+           getListBuilderList() {
+        return getListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.blemobi.sep.probuf.NewsApiProtos.PPostBrief, com.blemobi.sep.probuf.NewsApiProtos.PPostBrief.Builder, com.blemobi.sep.probuf.NewsApiProtos.PPostBriefOrBuilder> 
+          getListFieldBuilder() {
+        if (listBuilder_ == null) {
+          listBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.blemobi.sep.probuf.NewsApiProtos.PPostBrief, com.blemobi.sep.probuf.NewsApiProtos.PPostBrief.Builder, com.blemobi.sep.probuf.NewsApiProtos.PPostBriefOrBuilder>(
+                  list_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          list_ = null;
+        }
+        return listBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PPostBriefList)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PPostBriefList)
+    private static final com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList();
+    }
+
+    public static com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PPostBriefList>
+        PARSER = new com.google.protobuf.AbstractParser<PPostBriefList>() {
+      public PPostBriefList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PPostBriefList(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<PPostBriefList> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PPostBriefList> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_bbproto_PNewsUserStatistic_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_bbproto_PNewsUserStatistic_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PPostCountStatistic_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PPostCountStatistic_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PSetPostStateParam_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PSetPostStateParam_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PRefreshTimelineParam_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PRefreshTimelineParam_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PGetPostsParam_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PGetPostsParam_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PInsidePostNew_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PInsidePostNew_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PQueryHitoryParam_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PQueryHitoryParam_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PPostBrief_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PPostBrief_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PPostBriefList_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PPostBriefList_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -900,21 +7161,60 @@ public final class NewsApiProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\021news_inside.proto\022\007bbproto\032\nnews.proto" +
-      "\032\023common_inside.proto\"\254\001\n\022PNewsUserStati" +
-      "stic\022\023\n\013FollowCount\030\002 \001(\005\022\021\n\tFansCount\030\003" +
-      " \001(\005\022\024\n\014TxtPostCount\030\004 \001(\005\022\024\n\014ImgPostCou" +
-      "nt\030\005 \001(\005\022\026\n\016AudioPostCount\030\006 \001(\005\022\026\n\016Vide" +
-      "oPostCount\030\007 \001(\005\022\022\n\nFollowShip\030\010 \001(\0052\324\002\n" +
-      "\tIGrpcNews\0223\n\014GrpcPostEdit\022\022.bbproto.PPo" +
-      "stInfo\032\017.bbproto.PEmpty\022:\n\014GrpcPostVote\022" +
-      "\031.bbproto.PBetchVoteAction\032\017.bbproto.PEm" +
-      "pty\022G\n\021GrpcPostVoteExist\022\031.bbproto.PBetc",
-      "hVoteAction\032\027.bbproto.PNewsVoteExist\022>\n\016" +
-      "GrpcNewsFollow\022\033.bbproto.PBetchFollowAct" +
-      "ion\032\017.bbproto.PEmpty\022M\n\023GrpcNewsFollowEx" +
-      "ist\022\033.bbproto.PBetchFollowAction\032\031.bbpro" +
-      "to.PNewsFollowExistB\'\n\026com.blemobi.sep.p" +
-      "robufB\rNewsApiProtosb\006proto3"
+      "\032\023common_inside.proto\032\014result.proto\"\254\001\n\022" +
+      "PNewsUserStatistic\022\023\n\013FollowCount\030\002 \001(\005\022" +
+      "\021\n\tFansCount\030\003 \001(\005\022\024\n\014TxtPostCount\030\004 \001(\005" +
+      "\022\024\n\014ImgPostCount\030\005 \001(\005\022\026\n\016AudioPostCount" +
+      "\030\006 \001(\005\022\026\n\016VideoPostCount\030\007 \001(\005\022\022\n\nFollow" +
+      "Ship\030\010 \001(\005\"P\n\023PPostCountStatistic\022\021\n\tBbN" +
+      "ewsCnt\030\001 \001(\005\022\023\n\013NewsFeedCnt\030\002 \001(\005\022\021\n\tNot" +
+      "iceCnt\030\003 \001(\005\"M\n\022PSetPostStateParam\022\017\n\007po" +
+      "stIds\030\001 \003(\003\022&\n\005state\030\002 \001(\0162\027.bbproto.ESt",
+      "ateOperType\"M\n\025PRefreshTimelineParam\022\025\n\r" +
+      "timelineClass\030\001 \001(\t\022\016\n\006offset\030\002 \001(\003\022\r\n\005c" +
+      "ount\030\003 \001(\003\"A\n\016PGetPostsParam\022\017\n\007postIds\030" +
+      "\001 \003(\003\022\014\n\004uuid\030\002 \001(\t\022\020\n\010viewType\030\003 \001(\005\"S\n" +
+      "\016PInsidePostNew\022\014\n\004uuid\030\001 \001(\t\022\037\n\004post\030\002 " +
+      "\001(\0132\021.bbproto.PPostNew\022\022\n\ncreateType\030\003 \001" +
+      "(\005\"h\n\021PQueryHitoryParam\022\014\n\004uuid\030\001 \001(\t\022\023\n" +
+      "\013communityId\030\002 \001(\t\022\021\n\tpostClass\030\003 \001(\t\022\016\n" +
+      "\006offset\030\004 \001(\003\022\r\n\005count\030\005 \001(\003\";\n\nPPostBri" +
+      "ef\022\n\n\002id\030\001 \001(\003\022\014\n\004uuid\030\002 \001(\t\022\023\n\013communit",
+      "yId\030\003 \001(\t\"3\n\016PPostBriefList\022!\n\004List\030\001 \003(" +
+      "\0132\023.bbproto.PPostBrief*o\n\016EStateOperType" +
+      "\022\n\n\006OpPass\020\000\022\013\n\007OpWaite\020\001\022\014\n\010OpReject\020\002\022" +
+      "\n\n\006OpLock\020\003\022\014\n\010OpUnLock\020\004\022\014\n\010OpShield\020\005\022" +
+      "\016\n\nOpUnShield\020\0062\216\t\n\tIGrpcNews\0222\n\014GrpcPos" +
+      "tEdit\022\021.bbproto.PPostNew\032\017.bbproto.PEmpt" +
+      "y\022;\n\017GrpcPostPublish\022\027.bbproto.PInsidePo" +
+      "stNew\032\017.bbproto.PEmpty\022:\n\014GrpcPostVote\022\031" +
+      ".bbproto.PBetchVoteAction\032\017.bbproto.PEmp" +
+      "ty\022G\n\021GrpcPostVoteExist\022\031.bbproto.PBetch",
+      "VoteAction\032\027.bbproto.PNewsVoteExist\022@\n\023G" +
+      "rpcGetPostsVoteCnt\022\024.bbproto.PStringList" +
+      "\032\023.bbproto.PInt32List\022>\n\016GrpcNewsFollow\022" +
+      "\033.bbproto.PBetchFollowAction\032\017.bbproto.P" +
+      "Empty\022M\n\023GrpcNewsFollowExist\022\033.bbproto.P" +
+      "BetchFollowAction\032\031.bbproto.PNewsFollowE" +
+      "xist\022L\n\025GetCommunityPostCount\022\025.bbproto." +
+      "PInt64Single\032\034.bbproto.PPostCountStatist" +
+      "ic\022C\n\022GetGlobalPostCount\022\017.bbproto.PEmpt" +
+      "y\032\034.bbproto.PPostCountStatistic\022C\n\020GetPo",
+      "stInfoByIds\022\027.bbproto.PGetPostsParam\032\026.b" +
+      "bproto.PPostViewList\022<\n\014SetPostState\022\033.b" +
+      "bproto.PSetPostStateParam\032\017.bbproto.PEmp" +
+      "ty\0229\n\014GetPostState\022\024.bbproto.PStringList" +
+      "\032\023.bbproto.PInt32List\022O\n\025RefreshGlobalTi" +
+      "meline\022\036.bbproto.PRefreshTimelineParam\032\026" +
+      ".bbproto.PPostViewList\022>\n\021GetUsersFansCo" +
+      "unt\022\024.bbproto.PStringList\032\023.bbproto.PInt" +
+      "32List\022L\n\026GrpcGetUserPostHistory\022\032.bbpro" +
+      "to.PQueryHitoryParam\032\026.bbproto.PPostView",
+      "List\022A\n\020GrpcGetPostBrief\022\024.bbproto.PStri" +
+      "ngList\032\027.bbproto.PPostBriefList\022G\n\024GrpcG" +
+      "etPostExtraInfo\022\027.bbproto.PGetPostsParam" +
+      "\032\026.bbproto.PPostViewListB\'\n\026com.blemobi." +
+      "sep.probufB\rNewsApiProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -929,6 +7229,7 @@ public final class NewsApiProtos {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.blemobi.sep.probuf.NewsProtos.getDescriptor(),
           com.blemobi.sep.probuf.CommonApiProtos.getDescriptor(),
+          com.blemobi.sep.probuf.ResultProtos.getDescriptor(),
         }, assigner);
     internal_static_bbproto_PNewsUserStatistic_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -936,8 +7237,57 @@ public final class NewsApiProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PNewsUserStatistic_descriptor,
         new java.lang.String[] { "FollowCount", "FansCount", "TxtPostCount", "ImgPostCount", "AudioPostCount", "VideoPostCount", "FollowShip", });
+    internal_static_bbproto_PPostCountStatistic_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_bbproto_PPostCountStatistic_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PPostCountStatistic_descriptor,
+        new java.lang.String[] { "BbNewsCnt", "NewsFeedCnt", "NoticeCnt", });
+    internal_static_bbproto_PSetPostStateParam_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_bbproto_PSetPostStateParam_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PSetPostStateParam_descriptor,
+        new java.lang.String[] { "PostIds", "State", });
+    internal_static_bbproto_PRefreshTimelineParam_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_bbproto_PRefreshTimelineParam_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PRefreshTimelineParam_descriptor,
+        new java.lang.String[] { "TimelineClass", "Offset", "Count", });
+    internal_static_bbproto_PGetPostsParam_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_bbproto_PGetPostsParam_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PGetPostsParam_descriptor,
+        new java.lang.String[] { "PostIds", "Uuid", "ViewType", });
+    internal_static_bbproto_PInsidePostNew_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_bbproto_PInsidePostNew_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PInsidePostNew_descriptor,
+        new java.lang.String[] { "Uuid", "Post", "CreateType", });
+    internal_static_bbproto_PQueryHitoryParam_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_bbproto_PQueryHitoryParam_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PQueryHitoryParam_descriptor,
+        new java.lang.String[] { "Uuid", "CommunityId", "PostClass", "Offset", "Count", });
+    internal_static_bbproto_PPostBrief_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_bbproto_PPostBrief_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PPostBrief_descriptor,
+        new java.lang.String[] { "Id", "Uuid", "CommunityId", });
+    internal_static_bbproto_PPostBriefList_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_bbproto_PPostBriefList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PPostBriefList_descriptor,
+        new java.lang.String[] { "List", });
     com.blemobi.sep.probuf.NewsProtos.getDescriptor();
     com.blemobi.sep.probuf.CommonApiProtos.getDescriptor();
+    com.blemobi.sep.probuf.ResultProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

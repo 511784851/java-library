@@ -4436,6 +4436,139 @@ public final class NetdiskProtos {
      */
     com.google.protobuf.ByteString
         getMiniUrlBytes();
+
+    /**
+     * <code>optional string postId = 18;</code>
+     *
+     * <pre>
+     * 帖子ID
+     * </pre>
+     */
+    java.lang.String getPostId();
+    /**
+     * <code>optional string postId = 18;</code>
+     *
+     * <pre>
+     * 帖子ID
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getPostIdBytes();
+
+    /**
+     * <code>optional int32 commentsCnt = 19;</code>
+     *
+     * <pre>
+     * 评论数
+     * </pre>
+     */
+    int getCommentsCnt();
+
+    /**
+     * <code>optional int32 thumbsupCnt = 20;</code>
+     *
+     * <pre>
+     * 点赞数
+     * </pre>
+     */
+    int getThumbsupCnt();
+
+    /**
+     * <code>optional int32 postTyp = 21;</code>
+     *
+     * <pre>
+     * 帖子类型 3:视频帖,5:新闻帖,6:原创录播
+     * </pre>
+     */
+    int getPostTyp();
+
+    /**
+     * <code>optional int32 tipoffTimes = 22;</code>
+     *
+     * <pre>
+     * 举报次数
+     * </pre>
+     */
+    int getTipoffTimes();
+
+    /**
+     * <code>optional int32 palyTimes = 23;</code>
+     *
+     * <pre>
+     * 播放次数
+     * </pre>
+     */
+    int getPalyTimes();
+
+    /**
+     * <code>optional int32 status = 24;</code>
+     *
+     * <pre>
+     * 0:审核通过，-1：待审核，-2:审核不通过
+     * </pre>
+     */
+    int getStatus();
+
+    /**
+     * <code>optional .bbproto.PUserBase user = 25;</code>
+     *
+     * <pre>
+     * 创建者信息
+     * </pre>
+     */
+    boolean hasUser();
+    /**
+     * <code>optional .bbproto.PUserBase user = 25;</code>
+     *
+     * <pre>
+     * 创建者信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.AccountProtos.PUserBase getUser();
+    /**
+     * <code>optional .bbproto.PUserBase user = 25;</code>
+     *
+     * <pre>
+     * 创建者信息
+     * </pre>
+     */
+    com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserOrBuilder();
+
+    /**
+     * <code>optional bool voted = 26;</code>
+     *
+     * <pre>
+     * 自己是否已点赞,true:是; false:否
+     * </pre>
+     */
+    boolean getVoted();
+
+    /**
+     * <code>optional bool collected = 27;</code>
+     *
+     * <pre>
+     * 自己是否已收藏,true:是; false:否
+     * </pre>
+     */
+    boolean getCollected();
+
+    /**
+     * <code>optional bool canDelete = 28;</code>
+     *
+     * <pre>
+     * 是否有删除权限(作者、社区创建者、管理员)
+     * </pre>
+     */
+    boolean getCanDelete();
+
+    /**
+     * <code>optional int32 communityStatus = 29;</code>
+     *
+     * <pre>
+     * 社区状态；0社区开启状态；1社区关闭状态；
+     * </pre>
+     */
+    int getCommunityStatus();
   }
   /**
    * Protobuf type {@code bbproto.PNetFile}
@@ -4470,6 +4603,17 @@ public final class NetdiskProtos {
       remark_ = "";
       miniObjectKey_ = "";
       miniUrl_ = "";
+      postId_ = "";
+      commentsCnt_ = 0;
+      thumbsupCnt_ = 0;
+      postTyp_ = 0;
+      tipoffTimes_ = 0;
+      palyTimes_ = 0;
+      status_ = 0;
+      voted_ = false;
+      collected_ = false;
+      canDelete_ = false;
+      communityStatus_ = 0;
     }
 
     @java.lang.Override
@@ -4591,6 +4735,75 @@ public final class NetdiskProtos {
               java.lang.String s = input.readStringRequireUtf8();
 
               miniUrl_ = s;
+              break;
+            }
+            case 146: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              postId_ = s;
+              break;
+            }
+            case 152: {
+
+              commentsCnt_ = input.readInt32();
+              break;
+            }
+            case 160: {
+
+              thumbsupCnt_ = input.readInt32();
+              break;
+            }
+            case 168: {
+
+              postTyp_ = input.readInt32();
+              break;
+            }
+            case 176: {
+
+              tipoffTimes_ = input.readInt32();
+              break;
+            }
+            case 184: {
+
+              palyTimes_ = input.readInt32();
+              break;
+            }
+            case 192: {
+
+              status_ = input.readInt32();
+              break;
+            }
+            case 202: {
+              com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder subBuilder = null;
+              if (user_ != null) {
+                subBuilder = user_.toBuilder();
+              }
+              user_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(user_);
+                user_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 208: {
+
+              voted_ = input.readBool();
+              break;
+            }
+            case 216: {
+
+              collected_ = input.readBool();
+              break;
+            }
+            case 224: {
+
+              canDelete_ = input.readBool();
+              break;
+            }
+            case 232: {
+
+              communityStatus_ = input.readInt32();
               break;
             }
           }
@@ -5186,6 +5399,211 @@ public final class NetdiskProtos {
       }
     }
 
+    public static final int POSTID_FIELD_NUMBER = 18;
+    private volatile java.lang.Object postId_;
+    /**
+     * <code>optional string postId = 18;</code>
+     *
+     * <pre>
+     * 帖子ID
+     * </pre>
+     */
+    public java.lang.String getPostId() {
+      java.lang.Object ref = postId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        postId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string postId = 18;</code>
+     *
+     * <pre>
+     * 帖子ID
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getPostIdBytes() {
+      java.lang.Object ref = postId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        postId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COMMENTSCNT_FIELD_NUMBER = 19;
+    private int commentsCnt_;
+    /**
+     * <code>optional int32 commentsCnt = 19;</code>
+     *
+     * <pre>
+     * 评论数
+     * </pre>
+     */
+    public int getCommentsCnt() {
+      return commentsCnt_;
+    }
+
+    public static final int THUMBSUPCNT_FIELD_NUMBER = 20;
+    private int thumbsupCnt_;
+    /**
+     * <code>optional int32 thumbsupCnt = 20;</code>
+     *
+     * <pre>
+     * 点赞数
+     * </pre>
+     */
+    public int getThumbsupCnt() {
+      return thumbsupCnt_;
+    }
+
+    public static final int POSTTYP_FIELD_NUMBER = 21;
+    private int postTyp_;
+    /**
+     * <code>optional int32 postTyp = 21;</code>
+     *
+     * <pre>
+     * 帖子类型 3:视频帖,5:新闻帖,6:原创录播
+     * </pre>
+     */
+    public int getPostTyp() {
+      return postTyp_;
+    }
+
+    public static final int TIPOFFTIMES_FIELD_NUMBER = 22;
+    private int tipoffTimes_;
+    /**
+     * <code>optional int32 tipoffTimes = 22;</code>
+     *
+     * <pre>
+     * 举报次数
+     * </pre>
+     */
+    public int getTipoffTimes() {
+      return tipoffTimes_;
+    }
+
+    public static final int PALYTIMES_FIELD_NUMBER = 23;
+    private int palyTimes_;
+    /**
+     * <code>optional int32 palyTimes = 23;</code>
+     *
+     * <pre>
+     * 播放次数
+     * </pre>
+     */
+    public int getPalyTimes() {
+      return palyTimes_;
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 24;
+    private int status_;
+    /**
+     * <code>optional int32 status = 24;</code>
+     *
+     * <pre>
+     * 0:审核通过，-1：待审核，-2:审核不通过
+     * </pre>
+     */
+    public int getStatus() {
+      return status_;
+    }
+
+    public static final int USER_FIELD_NUMBER = 25;
+    private com.blemobi.sep.probuf.AccountProtos.PUserBase user_;
+    /**
+     * <code>optional .bbproto.PUserBase user = 25;</code>
+     *
+     * <pre>
+     * 创建者信息
+     * </pre>
+     */
+    public boolean hasUser() {
+      return user_ != null;
+    }
+    /**
+     * <code>optional .bbproto.PUserBase user = 25;</code>
+     *
+     * <pre>
+     * 创建者信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.AccountProtos.PUserBase getUser() {
+      return user_ == null ? com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : user_;
+    }
+    /**
+     * <code>optional .bbproto.PUserBase user = 25;</code>
+     *
+     * <pre>
+     * 创建者信息
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserOrBuilder() {
+      return getUser();
+    }
+
+    public static final int VOTED_FIELD_NUMBER = 26;
+    private boolean voted_;
+    /**
+     * <code>optional bool voted = 26;</code>
+     *
+     * <pre>
+     * 自己是否已点赞,true:是; false:否
+     * </pre>
+     */
+    public boolean getVoted() {
+      return voted_;
+    }
+
+    public static final int COLLECTED_FIELD_NUMBER = 27;
+    private boolean collected_;
+    /**
+     * <code>optional bool collected = 27;</code>
+     *
+     * <pre>
+     * 自己是否已收藏,true:是; false:否
+     * </pre>
+     */
+    public boolean getCollected() {
+      return collected_;
+    }
+
+    public static final int CANDELETE_FIELD_NUMBER = 28;
+    private boolean canDelete_;
+    /**
+     * <code>optional bool canDelete = 28;</code>
+     *
+     * <pre>
+     * 是否有删除权限(作者、社区创建者、管理员)
+     * </pre>
+     */
+    public boolean getCanDelete() {
+      return canDelete_;
+    }
+
+    public static final int COMMUNITYSTATUS_FIELD_NUMBER = 29;
+    private int communityStatus_;
+    /**
+     * <code>optional int32 communityStatus = 29;</code>
+     *
+     * <pre>
+     * 社区状态；0社区开启状态；1社区关闭状态；
+     * </pre>
+     */
+    public int getCommunityStatus() {
+      return communityStatus_;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -5249,6 +5667,42 @@ public final class NetdiskProtos {
       if (!getMiniUrlBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessage.writeString(output, 17, miniUrl_);
       }
+      if (!getPostIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 18, postId_);
+      }
+      if (commentsCnt_ != 0) {
+        output.writeInt32(19, commentsCnt_);
+      }
+      if (thumbsupCnt_ != 0) {
+        output.writeInt32(20, thumbsupCnt_);
+      }
+      if (postTyp_ != 0) {
+        output.writeInt32(21, postTyp_);
+      }
+      if (tipoffTimes_ != 0) {
+        output.writeInt32(22, tipoffTimes_);
+      }
+      if (palyTimes_ != 0) {
+        output.writeInt32(23, palyTimes_);
+      }
+      if (status_ != 0) {
+        output.writeInt32(24, status_);
+      }
+      if (user_ != null) {
+        output.writeMessage(25, getUser());
+      }
+      if (voted_ != false) {
+        output.writeBool(26, voted_);
+      }
+      if (collected_ != false) {
+        output.writeBool(27, collected_);
+      }
+      if (canDelete_ != false) {
+        output.writeBool(28, canDelete_);
+      }
+      if (communityStatus_ != 0) {
+        output.writeInt32(29, communityStatus_);
+      }
     }
 
     public int getSerializedSize() {
@@ -5311,6 +5765,53 @@ public final class NetdiskProtos {
       }
       if (!getMiniUrlBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(17, miniUrl_);
+      }
+      if (!getPostIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(18, postId_);
+      }
+      if (commentsCnt_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(19, commentsCnt_);
+      }
+      if (thumbsupCnt_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(20, thumbsupCnt_);
+      }
+      if (postTyp_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(21, postTyp_);
+      }
+      if (tipoffTimes_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(22, tipoffTimes_);
+      }
+      if (palyTimes_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(23, palyTimes_);
+      }
+      if (status_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(24, status_);
+      }
+      if (user_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(25, getUser());
+      }
+      if (voted_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(26, voted_);
+      }
+      if (collected_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(27, collected_);
+      }
+      if (canDelete_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(28, canDelete_);
+      }
+      if (communityStatus_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(29, communityStatus_);
       }
       memoizedSize = size;
       return size;
@@ -5461,6 +5962,34 @@ public final class NetdiskProtos {
 
         miniUrl_ = "";
 
+        postId_ = "";
+
+        commentsCnt_ = 0;
+
+        thumbsupCnt_ = 0;
+
+        postTyp_ = 0;
+
+        tipoffTimes_ = 0;
+
+        palyTimes_ = 0;
+
+        status_ = 0;
+
+        if (userBuilder_ == null) {
+          user_ = null;
+        } else {
+          user_ = null;
+          userBuilder_ = null;
+        }
+        voted_ = false;
+
+        collected_ = false;
+
+        canDelete_ = false;
+
+        communityStatus_ = 0;
+
         return this;
       }
 
@@ -5500,6 +6029,22 @@ public final class NetdiskProtos {
         result.remark_ = remark_;
         result.miniObjectKey_ = miniObjectKey_;
         result.miniUrl_ = miniUrl_;
+        result.postId_ = postId_;
+        result.commentsCnt_ = commentsCnt_;
+        result.thumbsupCnt_ = thumbsupCnt_;
+        result.postTyp_ = postTyp_;
+        result.tipoffTimes_ = tipoffTimes_;
+        result.palyTimes_ = palyTimes_;
+        result.status_ = status_;
+        if (userBuilder_ == null) {
+          result.user_ = user_;
+        } else {
+          result.user_ = userBuilder_.build();
+        }
+        result.voted_ = voted_;
+        result.collected_ = collected_;
+        result.canDelete_ = canDelete_;
+        result.communityStatus_ = communityStatus_;
         onBuilt();
         return result;
       }
@@ -5577,6 +6122,43 @@ public final class NetdiskProtos {
         if (!other.getMiniUrl().isEmpty()) {
           miniUrl_ = other.miniUrl_;
           onChanged();
+        }
+        if (!other.getPostId().isEmpty()) {
+          postId_ = other.postId_;
+          onChanged();
+        }
+        if (other.getCommentsCnt() != 0) {
+          setCommentsCnt(other.getCommentsCnt());
+        }
+        if (other.getThumbsupCnt() != 0) {
+          setThumbsupCnt(other.getThumbsupCnt());
+        }
+        if (other.getPostTyp() != 0) {
+          setPostTyp(other.getPostTyp());
+        }
+        if (other.getTipoffTimes() != 0) {
+          setTipoffTimes(other.getTipoffTimes());
+        }
+        if (other.getPalyTimes() != 0) {
+          setPalyTimes(other.getPalyTimes());
+        }
+        if (other.getStatus() != 0) {
+          setStatus(other.getStatus());
+        }
+        if (other.hasUser()) {
+          mergeUser(other.getUser());
+        }
+        if (other.getVoted() != false) {
+          setVoted(other.getVoted());
+        }
+        if (other.getCollected() != false) {
+          setCollected(other.getCollected());
+        }
+        if (other.getCanDelete() != false) {
+          setCanDelete(other.getCanDelete());
+        }
+        if (other.getCommunityStatus() != 0) {
+          setCommunityStatus(other.getCommunityStatus());
         }
         onChanged();
         return this;
@@ -6861,6 +7443,628 @@ public final class NetdiskProtos {
         onChanged();
         return this;
       }
+
+      private java.lang.Object postId_ = "";
+      /**
+       * <code>optional string postId = 18;</code>
+       *
+       * <pre>
+       * 帖子ID
+       * </pre>
+       */
+      public java.lang.String getPostId() {
+        java.lang.Object ref = postId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          postId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string postId = 18;</code>
+       *
+       * <pre>
+       * 帖子ID
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getPostIdBytes() {
+        java.lang.Object ref = postId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          postId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string postId = 18;</code>
+       *
+       * <pre>
+       * 帖子ID
+       * </pre>
+       */
+      public Builder setPostId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        postId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string postId = 18;</code>
+       *
+       * <pre>
+       * 帖子ID
+       * </pre>
+       */
+      public Builder clearPostId() {
+        
+        postId_ = getDefaultInstance().getPostId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string postId = 18;</code>
+       *
+       * <pre>
+       * 帖子ID
+       * </pre>
+       */
+      public Builder setPostIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        postId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int commentsCnt_ ;
+      /**
+       * <code>optional int32 commentsCnt = 19;</code>
+       *
+       * <pre>
+       * 评论数
+       * </pre>
+       */
+      public int getCommentsCnt() {
+        return commentsCnt_;
+      }
+      /**
+       * <code>optional int32 commentsCnt = 19;</code>
+       *
+       * <pre>
+       * 评论数
+       * </pre>
+       */
+      public Builder setCommentsCnt(int value) {
+        
+        commentsCnt_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 commentsCnt = 19;</code>
+       *
+       * <pre>
+       * 评论数
+       * </pre>
+       */
+      public Builder clearCommentsCnt() {
+        
+        commentsCnt_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int thumbsupCnt_ ;
+      /**
+       * <code>optional int32 thumbsupCnt = 20;</code>
+       *
+       * <pre>
+       * 点赞数
+       * </pre>
+       */
+      public int getThumbsupCnt() {
+        return thumbsupCnt_;
+      }
+      /**
+       * <code>optional int32 thumbsupCnt = 20;</code>
+       *
+       * <pre>
+       * 点赞数
+       * </pre>
+       */
+      public Builder setThumbsupCnt(int value) {
+        
+        thumbsupCnt_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 thumbsupCnt = 20;</code>
+       *
+       * <pre>
+       * 点赞数
+       * </pre>
+       */
+      public Builder clearThumbsupCnt() {
+        
+        thumbsupCnt_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int postTyp_ ;
+      /**
+       * <code>optional int32 postTyp = 21;</code>
+       *
+       * <pre>
+       * 帖子类型 3:视频帖,5:新闻帖,6:原创录播
+       * </pre>
+       */
+      public int getPostTyp() {
+        return postTyp_;
+      }
+      /**
+       * <code>optional int32 postTyp = 21;</code>
+       *
+       * <pre>
+       * 帖子类型 3:视频帖,5:新闻帖,6:原创录播
+       * </pre>
+       */
+      public Builder setPostTyp(int value) {
+        
+        postTyp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 postTyp = 21;</code>
+       *
+       * <pre>
+       * 帖子类型 3:视频帖,5:新闻帖,6:原创录播
+       * </pre>
+       */
+      public Builder clearPostTyp() {
+        
+        postTyp_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int tipoffTimes_ ;
+      /**
+       * <code>optional int32 tipoffTimes = 22;</code>
+       *
+       * <pre>
+       * 举报次数
+       * </pre>
+       */
+      public int getTipoffTimes() {
+        return tipoffTimes_;
+      }
+      /**
+       * <code>optional int32 tipoffTimes = 22;</code>
+       *
+       * <pre>
+       * 举报次数
+       * </pre>
+       */
+      public Builder setTipoffTimes(int value) {
+        
+        tipoffTimes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 tipoffTimes = 22;</code>
+       *
+       * <pre>
+       * 举报次数
+       * </pre>
+       */
+      public Builder clearTipoffTimes() {
+        
+        tipoffTimes_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int palyTimes_ ;
+      /**
+       * <code>optional int32 palyTimes = 23;</code>
+       *
+       * <pre>
+       * 播放次数
+       * </pre>
+       */
+      public int getPalyTimes() {
+        return palyTimes_;
+      }
+      /**
+       * <code>optional int32 palyTimes = 23;</code>
+       *
+       * <pre>
+       * 播放次数
+       * </pre>
+       */
+      public Builder setPalyTimes(int value) {
+        
+        palyTimes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 palyTimes = 23;</code>
+       *
+       * <pre>
+       * 播放次数
+       * </pre>
+       */
+      public Builder clearPalyTimes() {
+        
+        palyTimes_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int status_ ;
+      /**
+       * <code>optional int32 status = 24;</code>
+       *
+       * <pre>
+       * 0:审核通过，-1：待审核，-2:审核不通过
+       * </pre>
+       */
+      public int getStatus() {
+        return status_;
+      }
+      /**
+       * <code>optional int32 status = 24;</code>
+       *
+       * <pre>
+       * 0:审核通过，-1：待审核，-2:审核不通过
+       * </pre>
+       */
+      public Builder setStatus(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 status = 24;</code>
+       *
+       * <pre>
+       * 0:审核通过，-1：待审核，-2:审核不通过
+       * </pre>
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.blemobi.sep.probuf.AccountProtos.PUserBase user_ = null;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> userBuilder_;
+      /**
+       * <code>optional .bbproto.PUserBase user = 25;</code>
+       *
+       * <pre>
+       * 创建者信息
+       * </pre>
+       */
+      public boolean hasUser() {
+        return userBuilder_ != null || user_ != null;
+      }
+      /**
+       * <code>optional .bbproto.PUserBase user = 25;</code>
+       *
+       * <pre>
+       * 创建者信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUserBase getUser() {
+        if (userBuilder_ == null) {
+          return user_ == null ? com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : user_;
+        } else {
+          return userBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .bbproto.PUserBase user = 25;</code>
+       *
+       * <pre>
+       * 创建者信息
+       * </pre>
+       */
+      public Builder setUser(com.blemobi.sep.probuf.AccountProtos.PUserBase value) {
+        if (userBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          user_ = value;
+          onChanged();
+        } else {
+          userBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PUserBase user = 25;</code>
+       *
+       * <pre>
+       * 创建者信息
+       * </pre>
+       */
+      public Builder setUser(
+          com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder builderForValue) {
+        if (userBuilder_ == null) {
+          user_ = builderForValue.build();
+          onChanged();
+        } else {
+          userBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PUserBase user = 25;</code>
+       *
+       * <pre>
+       * 创建者信息
+       * </pre>
+       */
+      public Builder mergeUser(com.blemobi.sep.probuf.AccountProtos.PUserBase value) {
+        if (userBuilder_ == null) {
+          if (user_ != null) {
+            user_ =
+              com.blemobi.sep.probuf.AccountProtos.PUserBase.newBuilder(user_).mergeFrom(value).buildPartial();
+          } else {
+            user_ = value;
+          }
+          onChanged();
+        } else {
+          userBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PUserBase user = 25;</code>
+       *
+       * <pre>
+       * 创建者信息
+       * </pre>
+       */
+      public Builder clearUser() {
+        if (userBuilder_ == null) {
+          user_ = null;
+          onChanged();
+        } else {
+          user_ = null;
+          userBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PUserBase user = 25;</code>
+       *
+       * <pre>
+       * 创建者信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder getUserBuilder() {
+        
+        onChanged();
+        return getUserFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .bbproto.PUserBase user = 25;</code>
+       *
+       * <pre>
+       * 创建者信息
+       * </pre>
+       */
+      public com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserOrBuilder() {
+        if (userBuilder_ != null) {
+          return userBuilder_.getMessageOrBuilder();
+        } else {
+          return user_ == null ?
+              com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : user_;
+        }
+      }
+      /**
+       * <code>optional .bbproto.PUserBase user = 25;</code>
+       *
+       * <pre>
+       * 创建者信息
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> 
+          getUserFieldBuilder() {
+        if (userBuilder_ == null) {
+          userBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder>(
+                  getUser(),
+                  getParentForChildren(),
+                  isClean());
+          user_ = null;
+        }
+        return userBuilder_;
+      }
+
+      private boolean voted_ ;
+      /**
+       * <code>optional bool voted = 26;</code>
+       *
+       * <pre>
+       * 自己是否已点赞,true:是; false:否
+       * </pre>
+       */
+      public boolean getVoted() {
+        return voted_;
+      }
+      /**
+       * <code>optional bool voted = 26;</code>
+       *
+       * <pre>
+       * 自己是否已点赞,true:是; false:否
+       * </pre>
+       */
+      public Builder setVoted(boolean value) {
+        
+        voted_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool voted = 26;</code>
+       *
+       * <pre>
+       * 自己是否已点赞,true:是; false:否
+       * </pre>
+       */
+      public Builder clearVoted() {
+        
+        voted_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean collected_ ;
+      /**
+       * <code>optional bool collected = 27;</code>
+       *
+       * <pre>
+       * 自己是否已收藏,true:是; false:否
+       * </pre>
+       */
+      public boolean getCollected() {
+        return collected_;
+      }
+      /**
+       * <code>optional bool collected = 27;</code>
+       *
+       * <pre>
+       * 自己是否已收藏,true:是; false:否
+       * </pre>
+       */
+      public Builder setCollected(boolean value) {
+        
+        collected_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool collected = 27;</code>
+       *
+       * <pre>
+       * 自己是否已收藏,true:是; false:否
+       * </pre>
+       */
+      public Builder clearCollected() {
+        
+        collected_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean canDelete_ ;
+      /**
+       * <code>optional bool canDelete = 28;</code>
+       *
+       * <pre>
+       * 是否有删除权限(作者、社区创建者、管理员)
+       * </pre>
+       */
+      public boolean getCanDelete() {
+        return canDelete_;
+      }
+      /**
+       * <code>optional bool canDelete = 28;</code>
+       *
+       * <pre>
+       * 是否有删除权限(作者、社区创建者、管理员)
+       * </pre>
+       */
+      public Builder setCanDelete(boolean value) {
+        
+        canDelete_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool canDelete = 28;</code>
+       *
+       * <pre>
+       * 是否有删除权限(作者、社区创建者、管理员)
+       * </pre>
+       */
+      public Builder clearCanDelete() {
+        
+        canDelete_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int communityStatus_ ;
+      /**
+       * <code>optional int32 communityStatus = 29;</code>
+       *
+       * <pre>
+       * 社区状态；0社区开启状态；1社区关闭状态；
+       * </pre>
+       */
+      public int getCommunityStatus() {
+        return communityStatus_;
+      }
+      /**
+       * <code>optional int32 communityStatus = 29;</code>
+       *
+       * <pre>
+       * 社区状态；0社区开启状态；1社区关闭状态；
+       * </pre>
+       */
+      public Builder setCommunityStatus(int value) {
+        
+        communityStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 communityStatus = 29;</code>
+       *
+       * <pre>
+       * 社区状态；0社区开启状态；1社区关闭状态；
+       * </pre>
+       */
+      public Builder clearCommunityStatus() {
+        
+        communityStatus_ = 0;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return this;
@@ -7718,28 +8922,34 @@ public final class NetdiskProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\rnetdisk.proto\022\007bbproto\"\353\001\n\014PNetFileInf" +
-      "o\022\021\n\tobjectKey\030\001 \001(\t\022\021\n\textension\030\002 \001(\t\022" +
-      "\020\n\010fileSize\030\003 \001(\t\022\022\n\nfileDigest\030\004 \001(\t\022\022\n" +
-      "\ncreateTime\030\005 \001(\t\022\024\n\014transferFlag\030\006 \001(\t\022" +
-      "\021\n\tshareFlag\030\007 \001(\t\022\024\n\014conserveFlag\030\010 \001(\t" +
-      "\022\r\n\005title\030\t \001(\t\022\014\n\004desc\030\n \001(\t\022\016\n\006remark\030" +
-      "\013 \001(\t\022\017\n\007miniPic\030\014 \001(\t\"M\n\020PListNetFileIn" +
-      "fo\022\'\n\010netFiles\030\001 \003(\0132\025.bbproto.PNetFileI" +
-      "nfo\022\020\n\010DiskSize\030\002 \001(\t\"\"\n\rPBuildUrlInfo\022\021" +
-      "\n\tpublicURL\030\001 \001(\t\"\"\n\021PCommunityCreator\022\r",
-      "\n\005cUuid\030\001 \001(\t\"\276\002\n\010PNetFile\022\016\n\006fileId\030\001 \001" +
-      "(\t\022\023\n\013communityId\030\002 \001(\t\022\014\n\004uuid\030\003 \001(\t\022\021\n" +
-      "\tobjectKey\030\004 \001(\t\022\013\n\003url\030\005 \001(\t\022\021\n\textensi" +
-      "on\030\006 \001(\t\022\020\n\010fileSize\030\007 \001(\003\022\022\n\nfileDigest" +
-      "\030\010 \001(\t\022\022\n\ncreateTime\030\t \001(\003\022\024\n\014transferFl" +
-      "ag\030\n \001(\010\022\021\n\tshareFlag\030\013 \001(\010\022\024\n\014conserveF" +
-      "lag\030\014 \001(\010\022\r\n\005title\030\r \001(\t\022\014\n\004desc\030\016 \001(\t\022\016" +
-      "\n\006remark\030\017 \001(\t\022\025\n\rminiObjectKey\030\020 \001(\t\022\017\n" +
-      "\007miniUrl\030\021 \001(\t\"D\n\014PNetFilelist\022\"\n\007netFil" +
-      "e\030\001 \003(\0132\021.bbproto.PNetFile\022\020\n\010DiskSize\030\002",
-      " \001(\005B\'\n\026com.blemobi.sep.probufB\rNetdiskP" +
-      "rotosb\006proto3"
+      "\n\rnetdisk.proto\022\007bbproto\032\raccount.proto\"" +
+      "\353\001\n\014PNetFileInfo\022\021\n\tobjectKey\030\001 \001(\t\022\021\n\te" +
+      "xtension\030\002 \001(\t\022\020\n\010fileSize\030\003 \001(\t\022\022\n\nfile" +
+      "Digest\030\004 \001(\t\022\022\n\ncreateTime\030\005 \001(\t\022\024\n\014tran" +
+      "sferFlag\030\006 \001(\t\022\021\n\tshareFlag\030\007 \001(\t\022\024\n\014con" +
+      "serveFlag\030\010 \001(\t\022\r\n\005title\030\t \001(\t\022\014\n\004desc\030\n" +
+      " \001(\t\022\016\n\006remark\030\013 \001(\t\022\017\n\007miniPic\030\014 \001(\t\"M\n" +
+      "\020PListNetFileInfo\022\'\n\010netFiles\030\001 \003(\0132\025.bb" +
+      "proto.PNetFileInfo\022\020\n\010DiskSize\030\002 \001(\t\"\"\n\r" +
+      "PBuildUrlInfo\022\021\n\tpublicURL\030\001 \001(\t\"\"\n\021PCom",
+      "munityCreator\022\r\n\005cUuid\030\001 \001(\t\"\261\004\n\010PNetFil" +
+      "e\022\016\n\006fileId\030\001 \001(\t\022\023\n\013communityId\030\002 \001(\t\022\014" +
+      "\n\004uuid\030\003 \001(\t\022\021\n\tobjectKey\030\004 \001(\t\022\013\n\003url\030\005" +
+      " \001(\t\022\021\n\textension\030\006 \001(\t\022\020\n\010fileSize\030\007 \001(" +
+      "\003\022\022\n\nfileDigest\030\010 \001(\t\022\022\n\ncreateTime\030\t \001(" +
+      "\003\022\024\n\014transferFlag\030\n \001(\010\022\021\n\tshareFlag\030\013 \001" +
+      "(\010\022\024\n\014conserveFlag\030\014 \001(\010\022\r\n\005title\030\r \001(\t\022" +
+      "\014\n\004desc\030\016 \001(\t\022\016\n\006remark\030\017 \001(\t\022\025\n\rminiObj" +
+      "ectKey\030\020 \001(\t\022\017\n\007miniUrl\030\021 \001(\t\022\016\n\006postId\030" +
+      "\022 \001(\t\022\023\n\013commentsCnt\030\023 \001(\005\022\023\n\013thumbsupCn",
+      "t\030\024 \001(\005\022\017\n\007postTyp\030\025 \001(\005\022\023\n\013tipoffTimes\030" +
+      "\026 \001(\005\022\021\n\tpalyTimes\030\027 \001(\005\022\016\n\006status\030\030 \001(\005" +
+      "\022 \n\004user\030\031 \001(\0132\022.bbproto.PUserBase\022\r\n\005vo" +
+      "ted\030\032 \001(\010\022\021\n\tcollected\030\033 \001(\010\022\021\n\tcanDelet" +
+      "e\030\034 \001(\010\022\027\n\017communityStatus\030\035 \001(\005\"D\n\014PNet" +
+      "Filelist\022\"\n\007netFile\030\001 \003(\0132\021.bbproto.PNet" +
+      "File\022\020\n\010DiskSize\030\002 \001(\005B\'\n\026com.blemobi.se" +
+      "p.probufB\rNetdiskProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7752,6 +8962,7 @@ public final class NetdiskProtos {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.blemobi.sep.probuf.AccountProtos.getDescriptor(),
         }, assigner);
     internal_static_bbproto_PNetFileInfo_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -7782,13 +8993,14 @@ public final class NetdiskProtos {
     internal_static_bbproto_PNetFile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PNetFile_descriptor,
-        new java.lang.String[] { "FileId", "CommunityId", "Uuid", "ObjectKey", "Url", "Extension", "FileSize", "FileDigest", "CreateTime", "TransferFlag", "ShareFlag", "ConserveFlag", "Title", "Desc", "Remark", "MiniObjectKey", "MiniUrl", });
+        new java.lang.String[] { "FileId", "CommunityId", "Uuid", "ObjectKey", "Url", "Extension", "FileSize", "FileDigest", "CreateTime", "TransferFlag", "ShareFlag", "ConserveFlag", "Title", "Desc", "Remark", "MiniObjectKey", "MiniUrl", "PostId", "CommentsCnt", "ThumbsupCnt", "PostTyp", "TipoffTimes", "PalyTimes", "Status", "User", "Voted", "Collected", "CanDelete", "CommunityStatus", });
     internal_static_bbproto_PNetFilelist_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_bbproto_PNetFilelist_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PNetFilelist_descriptor,
         new java.lang.String[] { "NetFile", "DiskSize", });
+    com.blemobi.sep.probuf.AccountProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

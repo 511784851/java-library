@@ -709,23 +709,6 @@ public final class RobotApiProtos {
      */
     com.google.protobuf.ByteString
         getTextBytes();
-
-    /**
-     * <code>optional .bbproto.ERobotPushType type = 3;</code>
-     *
-     * <pre>
-     *提醒类型:抽奖活动提醒, 领奖提醒、过期提醒、收货地址更新提醒
-     * </pre>
-     */
-    int getTypeValue();
-    /**
-     * <code>optional .bbproto.ERobotPushType type = 3;</code>
-     *
-     * <pre>
-     *提醒类型:抽奖活动提醒, 领奖提醒、过期提醒、收货地址更新提醒
-     * </pre>
-     */
-    com.blemobi.sep.probuf.RobotProtos.ERobotPushType getType();
   }
   /**
    * Protobuf type {@code bbproto.PBLotteryNotifyMsg}
@@ -745,7 +728,6 @@ public final class RobotApiProtos {
     private PBLotteryNotifyMsg() {
       ordNo_ = "";
       text_ = "";
-      type_ = 0;
     }
 
     @java.lang.Override
@@ -782,12 +764,6 @@ public final class RobotApiProtos {
               java.lang.String s = input.readStringRequireUtf8();
 
               text_ = s;
-              break;
-            }
-            case 24: {
-              int rawValue = input.readEnum();
-
-              type_ = rawValue;
               break;
             }
           }
@@ -898,30 +874,6 @@ public final class RobotApiProtos {
       }
     }
 
-    public static final int TYPE_FIELD_NUMBER = 3;
-    private int type_;
-    /**
-     * <code>optional .bbproto.ERobotPushType type = 3;</code>
-     *
-     * <pre>
-     *提醒类型:抽奖活动提醒, 领奖提醒、过期提醒、收货地址更新提醒
-     * </pre>
-     */
-    public int getTypeValue() {
-      return type_;
-    }
-    /**
-     * <code>optional .bbproto.ERobotPushType type = 3;</code>
-     *
-     * <pre>
-     *提醒类型:抽奖活动提醒, 领奖提醒、过期提醒、收货地址更新提醒
-     * </pre>
-     */
-    public com.blemobi.sep.probuf.RobotProtos.ERobotPushType getType() {
-      com.blemobi.sep.probuf.RobotProtos.ERobotPushType result = com.blemobi.sep.probuf.RobotProtos.ERobotPushType.valueOf(type_);
-      return result == null ? com.blemobi.sep.probuf.RobotProtos.ERobotPushType.UNRECOGNIZED : result;
-    }
-
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -940,9 +892,6 @@ public final class RobotApiProtos {
       if (!getTextBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessage.writeString(output, 2, text_);
       }
-      if (type_ != com.blemobi.sep.probuf.RobotProtos.ERobotPushType.Regards.getNumber()) {
-        output.writeEnum(3, type_);
-      }
     }
 
     public int getSerializedSize() {
@@ -955,10 +904,6 @@ public final class RobotApiProtos {
       }
       if (!getTextBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(2, text_);
-      }
-      if (type_ != com.blemobi.sep.probuf.RobotProtos.ERobotPushType.Regards.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(3, type_);
       }
       memoizedSize = size;
       return size;
@@ -1079,8 +1024,6 @@ public final class RobotApiProtos {
 
         text_ = "";
 
-        type_ = 0;
-
         return this;
       }
 
@@ -1105,7 +1048,6 @@ public final class RobotApiProtos {
         com.blemobi.sep.probuf.RobotApiProtos.PBLotteryNotifyMsg result = new com.blemobi.sep.probuf.RobotApiProtos.PBLotteryNotifyMsg(this);
         result.ordNo_ = ordNo_;
         result.text_ = text_;
-        result.type_ = type_;
         onBuilt();
         return result;
       }
@@ -1128,9 +1070,6 @@ public final class RobotApiProtos {
         if (!other.getText().isEmpty()) {
           text_ = other.text_;
           onChanged();
-        }
-        if (other.type_ != 0) {
-          setTypeValue(other.getTypeValue());
         }
         onChanged();
         return this;
@@ -1332,70 +1271,6 @@ public final class RobotApiProtos {
   checkByteStringIsUtf8(value);
         
         text_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int type_ = 0;
-      /**
-       * <code>optional .bbproto.ERobotPushType type = 3;</code>
-       *
-       * <pre>
-       *提醒类型:抽奖活动提醒, 领奖提醒、过期提醒、收货地址更新提醒
-       * </pre>
-       */
-      public int getTypeValue() {
-        return type_;
-      }
-      /**
-       * <code>optional .bbproto.ERobotPushType type = 3;</code>
-       *
-       * <pre>
-       *提醒类型:抽奖活动提醒, 领奖提醒、过期提醒、收货地址更新提醒
-       * </pre>
-       */
-      public Builder setTypeValue(int value) {
-        type_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional .bbproto.ERobotPushType type = 3;</code>
-       *
-       * <pre>
-       *提醒类型:抽奖活动提醒, 领奖提醒、过期提醒、收货地址更新提醒
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.RobotProtos.ERobotPushType getType() {
-        com.blemobi.sep.probuf.RobotProtos.ERobotPushType result = com.blemobi.sep.probuf.RobotProtos.ERobotPushType.valueOf(type_);
-        return result == null ? com.blemobi.sep.probuf.RobotProtos.ERobotPushType.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>optional .bbproto.ERobotPushType type = 3;</code>
-       *
-       * <pre>
-       *提醒类型:抽奖活动提醒, 领奖提醒、过期提醒、收货地址更新提醒
-       * </pre>
-       */
-      public Builder setType(com.blemobi.sep.probuf.RobotProtos.ERobotPushType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        type_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional .bbproto.ERobotPushType type = 3;</code>
-       *
-       * <pre>
-       *提醒类型:抽奖活动提醒, 领奖提醒、过期提醒、收货地址更新提醒
-       * </pre>
-       */
-      public Builder clearType() {
-        
-        type_ = 0;
         onChanged();
         return this;
       }
@@ -5423,37 +5298,37 @@ public final class RobotApiProtos {
       "to\032\014result.proto\032\023common_inside.proto\032\017s" +
       "treaming.proto\032\raccount.proto\"3\n\024PBRedPa" +
       "cketNotifyMsg\022\r\n\005ordNo\030\001 \001(\t\022\014\n\004text\030\002 \001" +
-      "(\t\"X\n\022PBLotteryNotifyMsg\022\r\n\005ordNo\030\001 \001(\t\022" +
-      "\014\n\004text\030\002 \001(\t\022%\n\004type\030\003 \001(\0162\027.bbproto.ER" +
-      "obotPushType\"\240\001\n\022PRobotRawNotifyMsg\022*\n\ts" +
-      "treaming\030\001 \001(\0132\027.bbproto.PStreamingLive\022" +
-      ",\n\007lottery\030\002 \001(\0132\033.bbproto.PBLotteryNoti" +
-      "fyMsg\0220\n\tredpacket\030\003 \001(\0132\035.bbproto.PBRed",
-      "PacketNotifyMsg\"\203\001\n\017PRobotNotifyMsg\022\n\n\002t" +
-      "o\030\001 \003(\t\022\014\n\004from\030\002 \001(\t\022(\n\007msgType\030\003 \001(\0162\027" +
-      ".bbproto.ERobotPushType\022,\n\007content\030\004 \001(\013" +
-      "2\033.bbproto.PRobotRawNotifyMsg\"=\n\023PRobotN" +
-      "otifyMsgList\022&\n\004list\030\001 \003(\0132\030.bbproto.PRo" +
-      "botNotifyMsg\"3\n\016PPayOrderParma\022\021\n\tservic" +
-      "eNo\030\001 \001(\005\022\016\n\006amount\030\002 \001(\005\"3\n\021PMsgNumLimi" +
-      "tParma\022\013\n\003num\030\001 \001(\005\022\021\n\tcelebrity\030\002 \001(\t2\365" +
-      "\004\n\nIGrpcRobot\022B\n\023GrpcSetMsgNumPerDay\022\032.b" +
-      "bproto.PMsgNumLimitParma\032\017.bbproto.PEmpt",
-      "y\022D\n\023GrpcGetMsgNumPerDay\022\026.bbproto.PStri" +
-      "ngSingle\032\025.bbproto.PInt32Single\0229\n\016GrpcS" +
-      "etCeoInfo\022\026.bbproto.PStringSingle\032\017.bbpr" +
-      "oto.PEmpty\0225\n\016GrpcGetCeoInfo\022\017.bbproto.P" +
-      "Empty\032\022.bbproto.PUserBase\0226\n\020GrpcSetRemi" +
-      "ndTpl\022\021.bbproto.PBRemind\032\017.bbproto.PEmpt" +
-      "y\0226\n\020GrpcGetRemindTpl\022\017.bbproto.PEmpty\032\021" +
-      ".bbproto.PBRemind\022<\n\023GrpcSetRemindSwitch" +
-      "\022\024.bbproto.PBoolSingle\032\017.bbproto.PEmpty\022" +
-      "<\n\023GrpcGetRemindSwitch\022\017.bbproto.PEmpty\032",
-      "\024.bbproto.PBoolSingle\0229\n\010GrpcPush\022\034.bbpr" +
-      "oto.PRobotNotifyMsgList\032\017.bbproto.PEmpty" +
-      "\022D\n\021GrpcGenerateOrder\022\027.bbproto.PPayOrde" +
-      "rParma\032\026.bbproto.PStringSingleB(\n\026com.bl" +
-      "emobi.sep.probufB\016RobotApiProtosb\006proto3"
+      "(\t\"1\n\022PBLotteryNotifyMsg\022\r\n\005ordNo\030\001 \001(\t\022" +
+      "\014\n\004text\030\002 \001(\t\"\240\001\n\022PRobotRawNotifyMsg\022*\n\t" +
+      "streaming\030\001 \001(\0132\027.bbproto.PStreamingLive" +
+      "\022,\n\007lottery\030\002 \001(\0132\033.bbproto.PBLotteryNot" +
+      "ifyMsg\0220\n\tredpacket\030\003 \001(\0132\035.bbproto.PBRe" +
+      "dPacketNotifyMsg\"\203\001\n\017PRobotNotifyMsg\022\n\n\002",
+      "to\030\001 \003(\t\022\014\n\004from\030\002 \001(\t\022(\n\007msgType\030\003 \001(\0162" +
+      "\027.bbproto.ERobotPushType\022,\n\007content\030\004 \001(" +
+      "\0132\033.bbproto.PRobotRawNotifyMsg\"=\n\023PRobot" +
+      "NotifyMsgList\022&\n\004list\030\001 \003(\0132\030.bbproto.PR" +
+      "obotNotifyMsg\"3\n\016PPayOrderParma\022\021\n\tservi" +
+      "ceNo\030\001 \001(\005\022\016\n\006amount\030\002 \001(\005\"3\n\021PMsgNumLim" +
+      "itParma\022\013\n\003num\030\001 \001(\005\022\021\n\tcelebrity\030\002 \001(\t2" +
+      "\365\004\n\nIGrpcRobot\022B\n\023GrpcSetMsgNumPerDay\022\032." +
+      "bbproto.PMsgNumLimitParma\032\017.bbproto.PEmp" +
+      "ty\022D\n\023GrpcGetMsgNumPerDay\022\026.bbproto.PStr",
+      "ingSingle\032\025.bbproto.PInt32Single\0229\n\016Grpc" +
+      "SetCeoInfo\022\026.bbproto.PStringSingle\032\017.bbp" +
+      "roto.PEmpty\0225\n\016GrpcGetCeoInfo\022\017.bbproto." +
+      "PEmpty\032\022.bbproto.PUserBase\0226\n\020GrpcSetRem" +
+      "indTpl\022\021.bbproto.PBRemind\032\017.bbproto.PEmp" +
+      "ty\0226\n\020GrpcGetRemindTpl\022\017.bbproto.PEmpty\032" +
+      "\021.bbproto.PBRemind\022<\n\023GrpcSetRemindSwitc" +
+      "h\022\024.bbproto.PBoolSingle\032\017.bbproto.PEmpty" +
+      "\022<\n\023GrpcGetRemindSwitch\022\017.bbproto.PEmpty" +
+      "\032\024.bbproto.PBoolSingle\0229\n\010GrpcPush\022\034.bbp",
+      "roto.PRobotNotifyMsgList\032\017.bbproto.PEmpt" +
+      "y\022D\n\021GrpcGenerateOrder\022\027.bbproto.PPayOrd" +
+      "erParma\032\026.bbproto.PStringSingleB(\n\026com.b" +
+      "lemobi.sep.probufB\016RobotApiProtosb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5483,7 +5358,7 @@ public final class RobotApiProtos {
     internal_static_bbproto_PBLotteryNotifyMsg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PBLotteryNotifyMsg_descriptor,
-        new java.lang.String[] { "OrdNo", "Text", "Type", });
+        new java.lang.String[] { "OrdNo", "Text", });
     internal_static_bbproto_PRobotRawNotifyMsg_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_bbproto_PRobotRawNotifyMsg_fieldAccessorTable = new

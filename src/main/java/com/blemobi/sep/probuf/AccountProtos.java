@@ -3572,6 +3572,15 @@ public final class AccountProtos {
      * </pre>
      */
     int getAuthStatus();
+
+    /**
+     * <code>optional int64 state = 40;</code>
+     *
+     * <pre>
+     * 账户状态，1：封号，unix时间戳：冻结账户截至时间，0：正常
+     * </pre>
+     */
+    long getState();
   }
   /**
    * Protobuf type {@code bbproto.PUser}
@@ -3620,6 +3629,7 @@ public final class AccountProtos {
       isFollowing_ = false;
       registerTime_ = 0L;
       authStatus_ = 0;
+      state_ = 0L;
     }
 
     @java.lang.Override
@@ -3857,6 +3867,11 @@ public final class AccountProtos {
             case 312: {
 
               authStatus_ = input.readInt32();
+              break;
+            }
+            case 320: {
+
+              state_ = input.readInt64();
               break;
             }
           }
@@ -4907,6 +4922,19 @@ public final class AccountProtos {
       return authStatus_;
     }
 
+    public static final int STATE_FIELD_NUMBER = 40;
+    private long state_;
+    /**
+     * <code>optional int64 state = 40;</code>
+     *
+     * <pre>
+     * 账户状态，1：封号，unix时间戳：冻结账户截至时间，0：正常
+     * </pre>
+     */
+    public long getState() {
+      return state_;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -5020,6 +5048,9 @@ public final class AccountProtos {
       }
       if (authStatus_ != 0) {
         output.writeInt32(39, authStatus_);
+      }
+      if (state_ != 0L) {
+        output.writeInt64(40, state_);
       }
     }
 
@@ -5145,6 +5176,10 @@ public final class AccountProtos {
       if (authStatus_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(39, authStatus_);
+      }
+      if (state_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(40, state_);
       }
       memoizedSize = size;
       return size;
@@ -5341,6 +5376,8 @@ public final class AccountProtos {
         }
         authStatus_ = 0;
 
+        state_ = 0L;
+
         return this;
       }
 
@@ -5409,6 +5446,7 @@ public final class AccountProtos {
           result.linkList_ = linkListBuilder_.build();
         }
         result.authStatus_ = authStatus_;
+        result.state_ = state_;
         onBuilt();
         return result;
       }
@@ -5543,6 +5581,9 @@ public final class AccountProtos {
         }
         if (other.getAuthStatus() != 0) {
           setAuthStatus(other.getAuthStatus());
+        }
+        if (other.getState() != 0L) {
+          setState(other.getState());
         }
         onChanged();
         return this;
@@ -8121,6 +8162,44 @@ public final class AccountProtos {
       public Builder clearAuthStatus() {
         
         authStatus_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long state_ ;
+      /**
+       * <code>optional int64 state = 40;</code>
+       *
+       * <pre>
+       * 账户状态，1：封号，unix时间戳：冻结账户截至时间，0：正常
+       * </pre>
+       */
+      public long getState() {
+        return state_;
+      }
+      /**
+       * <code>optional int64 state = 40;</code>
+       *
+       * <pre>
+       * 账户状态，1：封号，unix时间戳：冻结账户截至时间，0：正常
+       * </pre>
+       */
+      public Builder setState(long value) {
+        
+        state_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 state = 40;</code>
+       *
+       * <pre>
+       * 账户状态，1：封号，unix时间戳：冻结账户截至时间，0：正常
+       * </pre>
+       */
+      public Builder clearState() {
+        
+        state_ = 0L;
         onChanged();
         return this;
       }
@@ -12051,6 +12130,15 @@ public final class AccountProtos {
     int getGender();
 
     /**
+     * <code>optional int64 State = 15;</code>
+     *
+     * <pre>
+     * 账户状态，1：封号，unix时间戳：冻结账户截至时间，0：正常
+     * </pre>
+     */
+    long getState();
+
+    /**
      * <code>optional .bbproto.PUserBaseCommunity Community = 30;</code>
      *
      * <pre>
@@ -12101,6 +12189,7 @@ public final class AccountProtos {
       language_ = "";
       isAI_ = false;
       gender_ = 0;
+      state_ = 0L;
     }
 
     @java.lang.Override
@@ -12182,6 +12271,11 @@ public final class AccountProtos {
             case 112: {
 
               gender_ = input.readInt32();
+              break;
+            }
+            case 120: {
+
+              state_ = input.readInt64();
               break;
             }
             case 242: {
@@ -12554,6 +12648,19 @@ public final class AccountProtos {
       return gender_;
     }
 
+    public static final int STATE_FIELD_NUMBER = 15;
+    private long state_;
+    /**
+     * <code>optional int64 State = 15;</code>
+     *
+     * <pre>
+     * 账户状态，1：封号，unix时间戳：冻结账户截至时间，0：正常
+     * </pre>
+     */
+    public long getState() {
+      return state_;
+    }
+
     public static final int COMMUNITY_FIELD_NUMBER = 30;
     private com.blemobi.sep.probuf.AccountProtos.PUserBaseCommunity community_;
     /**
@@ -12629,6 +12736,9 @@ public final class AccountProtos {
       if (gender_ != 0) {
         output.writeInt32(14, gender_);
       }
+      if (state_ != 0L) {
+        output.writeInt64(15, state_);
+      }
       if (community_ != null) {
         output.writeMessage(30, getCommunity());
       }
@@ -12671,6 +12781,10 @@ public final class AccountProtos {
       if (gender_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(14, gender_);
+      }
+      if (state_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(15, state_);
       }
       if (community_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -12811,6 +12925,8 @@ public final class AccountProtos {
 
         gender_ = 0;
 
+        state_ = 0L;
+
         if (communityBuilder_ == null) {
           community_ = null;
         } else {
@@ -12849,6 +12965,7 @@ public final class AccountProtos {
         result.language_ = language_;
         result.isAI_ = isAI_;
         result.gender_ = gender_;
+        result.state_ = state_;
         if (communityBuilder_ == null) {
           result.community_ = community_;
         } else {
@@ -12905,6 +13022,9 @@ public final class AccountProtos {
         }
         if (other.getGender() != 0) {
           setGender(other.getGender());
+        }
+        if (other.getState() != 0L) {
+          setState(other.getState());
         }
         if (other.hasCommunity()) {
           mergeCommunity(other.getCommunity());
@@ -13668,6 +13788,44 @@ public final class AccountProtos {
       public Builder clearGender() {
         
         gender_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long state_ ;
+      /**
+       * <code>optional int64 State = 15;</code>
+       *
+       * <pre>
+       * 账户状态，1：封号，unix时间戳：冻结账户截至时间，0：正常
+       * </pre>
+       */
+      public long getState() {
+        return state_;
+      }
+      /**
+       * <code>optional int64 State = 15;</code>
+       *
+       * <pre>
+       * 账户状态，1：封号，unix时间戳：冻结账户截至时间，0：正常
+       * </pre>
+       */
+      public Builder setState(long value) {
+        
+        state_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 State = 15;</code>
+       *
+       * <pre>
+       * 账户状态，1：封号，unix时间戳：冻结账户截至时间，0：正常
+       * </pre>
+       */
+      public Builder clearState() {
+        
+        state_ = 0L;
         onChanged();
         return this;
       }
@@ -38632,7 +38790,7 @@ public final class AccountProtos {
       "\004list\030\001 \003(\0132\016.bbproto.PUser\")\n\tPLiveInfo" +
       "\022\017\n\007website\030\001 \001(\t\022\013\n\003url\030\002 \001(\t\"1\n\rPLiveI" +
       "nfoList\022 \n\004list\030\001 \003(\0132\022.bbproto.PLiveInf" +
-      "o\"\310\005\n\005PUser\022\014\n\004uuid\030\006 \001(\t\022\020\n\010password\030\007 " +
+      "o\"\327\005\n\005PUser\022\014\n\004uuid\030\006 \001(\t\022\020\n\010password\030\007 " +
       "\001(\t\022\020\n\010username\030\010 \001(\t\022\020\n\010nickname\030\t \001(\t\022" +
       "\022\n\nheadImgURL\030\n \001(\t\022\020\n\010realname\030\013 \001(\t\022\016\n" +
       "\006gender\030\014 \001(\005\022\r\n\005email\030\r \001(\t\022\020\n\010birthday" +
@@ -38649,119 +38807,120 @@ public final class AccountProtos {
       "oList\022\026\n\016thumbBackImage\030\" \001(\t\022\024\n\014bigBack" +
       "Image\030# \001(\t\022\023\n\013isFollowing\030$ \001(\010\022\024\n\014regi",
       "sterTime\030% \001(\003\022(\n\010linkList\030& \001(\0132\026.bbpro" +
-      "to.PLinkInfoList\022\022\n\nauthStatus\030\' \001(\005\"-\n\013" +
-      "PUserListEx\022\036\n\004list\030\001 \003(\0132\020.bbproto.PUse" +
-      "rEx\"\246\003\n\007PUserEx\022\014\n\004uuid\030\006 \001(\t\022\017\n\007project" +
-      "\030\007 \001(\t\022\020\n\010username\030\010 \001(\t\022\020\n\010password\030\t \001" +
-      "(\t\022\020\n\010nickname\030\n \001(\t\022\020\n\010realname\030\013 \001(\t\022\016" +
-      "\n\006gender\030\014 \001(\005\022\020\n\010birthday\030\r \001(\t\022\r\n\005emai" +
-      "l\030\016 \001(\t\022\021\n\tcellphone\030\017 \001(\t\022\020\n\010timeZone\030\020" +
-      " \001(\005\022\022\n\nheadImgURL\030\021 \001(\t\022\016\n\006locale\030\022 \001(\t" +
-      "\022\022\n\nuserResume\030\023 \001(\t\022\026\n\016lastUpdateTime\030\024",
-      " \001(\003\022\025\n\rlastLoginTime\030\025 \001(\003\0220\n\010userData\030" +
-      "\026 \003(\0132\036.bbproto.PUserEx.UserDataEntry\022\024\n" +
-      "\014registerTime\030\027 \001(\003\032/\n\rUserDataEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\346\001\n\tPUserBa" +
-      "se\022\r\n\005Level\030\002 \001(\005\022\014\n\004UUID\030\006 \001(\t\022\020\n\010UserN" +
-      "ame\030\007 \001(\t\022\020\n\010Nickname\030\010 \001(\t\022\020\n\010RealName\030" +
-      "\t \001(\t\022\022\n\nHeadImgURL\030\n \001(\t\022\022\n\nUserResume\030" +
-      "\013 \001(\t\022\020\n\010Language\030\014 \001(\t\022\014\n\004IsAI\030\r \001(\010\022\016\n" +
-      "\006Gender\030\016 \001(\005\022.\n\tCommunity\030\036 \001(\0132\033.bbpro" +
-      "to.PUserBaseCommunity\"1\n\rPUserBaseList\022 ",
-      "\n\004list\030\001 \003(\0132\022.bbproto.PUserBase\"m\n\022PUse" +
-      "rBaseCommunity\022\022\n\nFollowTime\030\001 \001(\003\022\025\n\rBl" +
-      "acklistTime\030\002 \001(\003\022\025\n\rForbidBegTime\030\003 \001(\003" +
-      "\022\025\n\rForbidEndTime\030\004 \001(\003\"d\n\tPPhoneMap\022*\n\004" +
-      "list\030\001 \003(\0132\034.bbproto.PPhoneMap.ListEntry" +
-      "\032+\n\tListEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\"^\n\010PAccount\022\021\n\tcellphone\030\002 \001(\010\022\016\n\006" +
-      "wechat\030\003 \001(\010\022\r\n\005weibo\030\004 \001(\010\022\020\n\010facebook\030" +
-      "\005 \001(\010\022\016\n\006google\030\006 \001(\010\"\205\001\n\nPLevelInfo\022\021\n\t" +
-      "levelType\030\001 \001(\005\0223\n\010mapRight\030\002 \003(\0132!.bbpr",
-      "oto.PLevelInfo.MapRightEntry\032/\n\rMapRight" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028\001\"D\n" +
-      "\014PLevelInfoEx\022\014\n\004uuid\030\001 \001(\t\022&\n\tlevelInfo" +
-      "\030\002 \001(\0132\023.bbproto.PLevelInfo\"D\n\013PLevelInf" +
-      "os\022#\n\004list\030\001 \003(\0132\025.bbproto.PLevelInfoEx\022" +
-      "\020\n\010failUuid\030\002 \003(\t\"\034\n\013PLiveRemind\022\r\n\005offO" +
-      "n\030\001 \001(\010\"9\n\020PAccountInitInfo\022\022\n\nauthStatu" +
-      "s\030\001 \001(\005\022\021\n\tcellphone\030\002 \001(\t\",\n\nPBackImage" +
-      "\022\021\n\tobjectKey\030\001 \001(\t\022\013\n\003url\030\002 \001(\t\"8\n\023PBac" +
-      "kThumbImageList\022!\n\004list\030\001 \003(\0132\023.bbproto.",
-      "PBackImage\"\220\001\n\021PReadNameAuthInfo\022\014\n\004uuid" +
-      "\030\001 \001(\t\022\022\n\nauthStatus\030\002 \001(\005\022\020\n\010readName\030\003" +
-      " \001(\t\022\020\n\010birthday\030\004 \001(\t\022\020\n\010idCardNo\030\005 \001(\t" +
-      "\022\021\n\tidCardImg\030\006 \001(\t\022\020\n\010authTime\030\007 \001(\005\"A\n" +
-      "\025PReadNameAuthInfoList\022(\n\004list\030\001 \003(\0132\032.b" +
-      "bproto.PReadNameAuthInfo\"\'\n\026PReadNameAut" +
-      "hInfoCount\022\r\n\005count\030\001 \001(\003\"3\n\014PPrivacyInf" +
-      "o\022\016\n\006myFans\030\001 \001(\010\022\023\n\013myAttention\030\002 \001(\010\"!" +
-      "\n\rPLanguageInfo\022\020\n\010language\030\001 \001(\t\"&\n\tPLi" +
-      "nkInfo\022\014\n\004type\030\001 \001(\005\022\013\n\003url\030\002 \001(\t\"1\n\rPLi",
-      "nkInfoList\022 \n\004list\030\001 \003(\0132\022.bbproto.PLink" +
-      "Info\"\300\002\n\026PAccountNewsPersonInfo\022\021\n\tfrien" +
-      "dCnt\030\001 \001(\005\022\021\n\tfollowCnt\030\002 \001(\005\022\017\n\007fansCnt" +
-      "\030\003 \001(\005\022\017\n\007textCnt\030\004 \001(\005\022\020\n\010imageCnt\030\005 \001(" +
-      "\005\022\020\n\010audioCnt\030\006 \001(\005\022\020\n\010videoCnt\030\007 \001(\005\022\023\n" +
-      "\013CommunityID\030\010 \001(\t\022\034\n\004user\030\t \001(\0132\016.bbpro" +
-      "to.PUser\022\022\n\nfollowship\030\n \001(\005\022\016\n\006friend\030\013" +
-      " \001(\010\022)\n\tlinkInfos\030\014 \001(\0132\026.bbproto.PLinkI" +
-      "nfoList\022&\n\nsupervisor\030\r \001(\0132\022.bbproto.PU" +
-      "serBase\"\214\001\n\026PAccountChatPersonInfo\022\023\n\013co",
-      "mmunityId\030\001 \001(\t\022\025\n\rcommunityName\030\002 \001(\t\022\025" +
-      "\n\rcommunityIcon\030\003 \001(\t\022\021\n\tIntroduce\030\004 \001(\t" +
-      "\022\034\n\004user\030\005 \001(\0132\016.bbproto.PUser\"O\n\023PAccou" +
-      "ntVoMemberTag\022\r\n\005tagID\030\001 \001(\005\022\014\n\004name\030\002 \001" +
-      "(\t\022\r\n\005image\030\003 \001(\t\022\014\n\004type\030\004 \001(\t\"E\n\027PAcco" +
-      "untVoMemberTagList\022*\n\004list\030\001 \003(\0132\034.bbpro" +
-      "to.PAccountVoMemberTag\"\344\001\n\020PAccountVoMem" +
-      "ber\022\014\n\004uuid\030\001 \001(\t\022\020\n\010dispname\030\002 \001(\t\022\020\n\010p" +
-      "osition\030\003 \001(\t\022\020\n\010portrait\030\004 \001(\t\022*\n\004tags\030" +
-      "\005 \003(\0132\034.bbproto.PAccountVoMemberTag\022\022\n\nb",
-      "ackground\030\006 \001(\t\022\020\n\010birthday\030\007 \001(\t\022\022\n\nbir" +
-      "thplace\030\010 \001(\t\022\024\n\014introduction\030\t \001(\t\022\020\n\010j" +
-      "oinTime\030\n \001(\003\"\272\001\n\024PAccountVoMemberList\022\'" +
-      "\n\004list\030\001 \003(\0132\031.bbproto.PAccountVoMember\022" +
-      "7\n\005bases\030\002 \003(\0132(.bbproto.PAccountVoMembe" +
-      "rList.BasesEntry\032@\n\nBasesEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022!\n\005value\030\002 \001(\0132\022.bbproto.PUserBase:\002" +
-      "8\001\"\254\001\n\016PAccountVoBase\022\014\n\004fans\030\001 \001(\005\022 \n\004u" +
-      "ser\030\002 \001(\0132\022.bbproto.PUserBase\022\023\n\013communi" +
-      "tyID\030\003 \001(\t\022\024\n\014relationship\030\004 \001(\005\022\024\n\014bigB",
-      "ackImage\030\005 \001(\t\022\026\n\016thumbBackImage\030\006 \001(\t\022\021" +
-      "\n\tfollowers\030\007 \001(\005\"[\n\017PUserSupervisor\022 \n\004" +
-      "user\030\001 \001(\0132\022.bbproto.PUserBase\022&\n\nsuperv" +
-      "isor\030\002 \001(\0132\022.bbproto.PUserBase\"=\n\023PUserS" +
-      "upervisorList\022&\n\004list\030\001 \003(\0132\030.bbproto.PU" +
-      "serSupervisor\"3\n\016PLevelInfoList\022!\n\004list\030" +
-      "\001 \003(\0132\023.bbproto.PLevelInfo\"\212\001\n\024PAccountV" +
-      "oMemberBase\022\'\n\004user\030\001 \001(\0132\031.bbproto.PAcc" +
-      "ountVoMember\022&\n\nsupervisor\030\002 \001(\0132\022.bbpro" +
-      "to.PUserBase\022!\n\005ubase\030\003 \001(\0132\022.bbproto.PU",
-      "serBase*>\n\nELevelType\022\010\n\004User\020\000\022\007\n\003Vip\020\001" +
-      "\022\010\n\004Vipp\020\002\022\006\n\002Vo\020\003\022\013\n\007Tourist\020\004*\266\005\n\010ERig" +
-      "htId\022\033\n\027weibo_show_left_catalog\020\000\022\033\n\027wei" +
-      "bo_show_top_dropdown\020\001\022\023\n\017weibo_show_ico" +
-      "n\020\002\022\026\n\022weibo_show_comment\020\003\022\026\n\022weibo_sho" +
-      "w_collect\020\004\022\023\n\017weibo_show_more\020\005\022\033\n\027weib" +
-      "o_show_view_details\020\006\022\026\n\022weibo_comment_t" +
-      "ext\020\007\022\027\n\023weibo_comment_audio\020\010\022\023\n\017weibo_" +
-      "post_text\020\t\022\024\n\020weibo_post_image\020\n\022\024\n\020wei" +
-      "bo_post_video\020\013\022\024\n\020weibo_post_audio\020\014\022\"\n",
-      "\036personal_record_external_links\020\r\022\030\n\024per" +
-      "sonal_record_icon\020\016\022\035\n\031personal_record_c" +
-      "ommunity\020\017\022\'\n#personal_record_video_clas" +
-      "sify_page\020\020\022\'\n#personal_record_audio_cla" +
-      "ssify_page\020\021\022\033\n\027friend_system_recommend\020" +
-      "\022\022\030\n\024friend_system_search\020\023\022\"\n\036friend_sy" +
-      "stem_friend_apply_for\020\024\022\036\n\032friend_system" +
-      "_address_book\020\025\022\030\n\024friend_system_friend\020" +
-      "\026\022\036\n\032friend_system_my_apply_for\020\027\022\r\n\trea" +
-      "l_name\020\030*\177\n\tELinkType\022\n\n\006taobao\020\000\022\006\n\002jd\020",
-      "\001\022\006\n\002yy\020\002\022\010\n\004huya\020\003\022\t\n\005douyu\020\004\022\t\n\005panda\020" +
-      "\005\022\n\n\006zhanqi\020\006\022\013\n\007quanmin\020\007\022\t\n\005weibo\020\010\022\t\n" +
-      "\005qzone\020\t\022\007\n\003edg\020\nB\'\n\026com.blemobi.sep.pro" +
-      "bufB\rAccountProtosb\006proto3"
+      "to.PLinkInfoList\022\022\n\nauthStatus\030\' \001(\005\022\r\n\005" +
+      "state\030( \001(\003\"-\n\013PUserListEx\022\036\n\004list\030\001 \003(\013" +
+      "2\020.bbproto.PUserEx\"\246\003\n\007PUserEx\022\014\n\004uuid\030\006" +
+      " \001(\t\022\017\n\007project\030\007 \001(\t\022\020\n\010username\030\010 \001(\t\022" +
+      "\020\n\010password\030\t \001(\t\022\020\n\010nickname\030\n \001(\t\022\020\n\010r" +
+      "ealname\030\013 \001(\t\022\016\n\006gender\030\014 \001(\005\022\020\n\010birthda" +
+      "y\030\r \001(\t\022\r\n\005email\030\016 \001(\t\022\021\n\tcellphone\030\017 \001(" +
+      "\t\022\020\n\010timeZone\030\020 \001(\005\022\022\n\nheadImgURL\030\021 \001(\t\022" +
+      "\016\n\006locale\030\022 \001(\t\022\022\n\nuserResume\030\023 \001(\t\022\026\n\016l",
+      "astUpdateTime\030\024 \001(\003\022\025\n\rlastLoginTime\030\025 \001" +
+      "(\003\0220\n\010userData\030\026 \003(\0132\036.bbproto.PUserEx.U" +
+      "serDataEntry\022\024\n\014registerTime\030\027 \001(\003\032/\n\rUs" +
+      "erDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001\"\365\001\n\tPUserBase\022\r\n\005Level\030\002 \001(\005\022\014\n\004UUID" +
+      "\030\006 \001(\t\022\020\n\010UserName\030\007 \001(\t\022\020\n\010Nickname\030\010 \001" +
+      "(\t\022\020\n\010RealName\030\t \001(\t\022\022\n\nHeadImgURL\030\n \001(\t" +
+      "\022\022\n\nUserResume\030\013 \001(\t\022\020\n\010Language\030\014 \001(\t\022\014" +
+      "\n\004IsAI\030\r \001(\010\022\016\n\006Gender\030\016 \001(\005\022\r\n\005State\030\017 " +
+      "\001(\003\022.\n\tCommunity\030\036 \001(\0132\033.bbproto.PUserBa",
+      "seCommunity\"1\n\rPUserBaseList\022 \n\004list\030\001 \003" +
+      "(\0132\022.bbproto.PUserBase\"m\n\022PUserBaseCommu" +
+      "nity\022\022\n\nFollowTime\030\001 \001(\003\022\025\n\rBlacklistTim" +
+      "e\030\002 \001(\003\022\025\n\rForbidBegTime\030\003 \001(\003\022\025\n\rForbid" +
+      "EndTime\030\004 \001(\003\"d\n\tPPhoneMap\022*\n\004list\030\001 \003(\013" +
+      "2\034.bbproto.PPhoneMap.ListEntry\032+\n\tListEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"^\n\010P" +
+      "Account\022\021\n\tcellphone\030\002 \001(\010\022\016\n\006wechat\030\003 \001" +
+      "(\010\022\r\n\005weibo\030\004 \001(\010\022\020\n\010facebook\030\005 \001(\010\022\016\n\006g" +
+      "oogle\030\006 \001(\010\"\205\001\n\nPLevelInfo\022\021\n\tlevelType\030",
+      "\001 \001(\005\0223\n\010mapRight\030\002 \003(\0132!.bbproto.PLevel" +
+      "Info.MapRightEntry\032/\n\rMapRightEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028\001\"D\n\014PLevelInf" +
+      "oEx\022\014\n\004uuid\030\001 \001(\t\022&\n\tlevelInfo\030\002 \001(\0132\023.b" +
+      "bproto.PLevelInfo\"D\n\013PLevelInfos\022#\n\004list" +
+      "\030\001 \003(\0132\025.bbproto.PLevelInfoEx\022\020\n\010failUui" +
+      "d\030\002 \003(\t\"\034\n\013PLiveRemind\022\r\n\005offOn\030\001 \001(\010\"9\n" +
+      "\020PAccountInitInfo\022\022\n\nauthStatus\030\001 \001(\005\022\021\n" +
+      "\tcellphone\030\002 \001(\t\",\n\nPBackImage\022\021\n\tobject" +
+      "Key\030\001 \001(\t\022\013\n\003url\030\002 \001(\t\"8\n\023PBackThumbImag",
+      "eList\022!\n\004list\030\001 \003(\0132\023.bbproto.PBackImage" +
+      "\"\220\001\n\021PReadNameAuthInfo\022\014\n\004uuid\030\001 \001(\t\022\022\n\n" +
+      "authStatus\030\002 \001(\005\022\020\n\010readName\030\003 \001(\t\022\020\n\010bi" +
+      "rthday\030\004 \001(\t\022\020\n\010idCardNo\030\005 \001(\t\022\021\n\tidCard" +
+      "Img\030\006 \001(\t\022\020\n\010authTime\030\007 \001(\005\"A\n\025PReadName" +
+      "AuthInfoList\022(\n\004list\030\001 \003(\0132\032.bbproto.PRe" +
+      "adNameAuthInfo\"\'\n\026PReadNameAuthInfoCount" +
+      "\022\r\n\005count\030\001 \001(\003\"3\n\014PPrivacyInfo\022\016\n\006myFan" +
+      "s\030\001 \001(\010\022\023\n\013myAttention\030\002 \001(\010\"!\n\rPLanguag" +
+      "eInfo\022\020\n\010language\030\001 \001(\t\"&\n\tPLinkInfo\022\014\n\004",
+      "type\030\001 \001(\005\022\013\n\003url\030\002 \001(\t\"1\n\rPLinkInfoList" +
+      "\022 \n\004list\030\001 \003(\0132\022.bbproto.PLinkInfo\"\300\002\n\026P" +
+      "AccountNewsPersonInfo\022\021\n\tfriendCnt\030\001 \001(\005" +
+      "\022\021\n\tfollowCnt\030\002 \001(\005\022\017\n\007fansCnt\030\003 \001(\005\022\017\n\007" +
+      "textCnt\030\004 \001(\005\022\020\n\010imageCnt\030\005 \001(\005\022\020\n\010audio" +
+      "Cnt\030\006 \001(\005\022\020\n\010videoCnt\030\007 \001(\005\022\023\n\013Community" +
+      "ID\030\010 \001(\t\022\034\n\004user\030\t \001(\0132\016.bbproto.PUser\022\022" +
+      "\n\nfollowship\030\n \001(\005\022\016\n\006friend\030\013 \001(\010\022)\n\tli" +
+      "nkInfos\030\014 \001(\0132\026.bbproto.PLinkInfoList\022&\n" +
+      "\nsupervisor\030\r \001(\0132\022.bbproto.PUserBase\"\214\001",
+      "\n\026PAccountChatPersonInfo\022\023\n\013communityId\030" +
+      "\001 \001(\t\022\025\n\rcommunityName\030\002 \001(\t\022\025\n\rcommunit" +
+      "yIcon\030\003 \001(\t\022\021\n\tIntroduce\030\004 \001(\t\022\034\n\004user\030\005" +
+      " \001(\0132\016.bbproto.PUser\"O\n\023PAccountVoMember" +
+      "Tag\022\r\n\005tagID\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\r\n\005imag" +
+      "e\030\003 \001(\t\022\014\n\004type\030\004 \001(\t\"E\n\027PAccountVoMembe" +
+      "rTagList\022*\n\004list\030\001 \003(\0132\034.bbproto.PAccoun" +
+      "tVoMemberTag\"\344\001\n\020PAccountVoMember\022\014\n\004uui" +
+      "d\030\001 \001(\t\022\020\n\010dispname\030\002 \001(\t\022\020\n\010position\030\003 " +
+      "\001(\t\022\020\n\010portrait\030\004 \001(\t\022*\n\004tags\030\005 \003(\0132\034.bb",
+      "proto.PAccountVoMemberTag\022\022\n\nbackground\030" +
+      "\006 \001(\t\022\020\n\010birthday\030\007 \001(\t\022\022\n\nbirthplace\030\010 " +
+      "\001(\t\022\024\n\014introduction\030\t \001(\t\022\020\n\010joinTime\030\n " +
+      "\001(\003\"\272\001\n\024PAccountVoMemberList\022\'\n\004list\030\001 \003" +
+      "(\0132\031.bbproto.PAccountVoMember\0227\n\005bases\030\002" +
+      " \003(\0132(.bbproto.PAccountVoMemberList.Base" +
+      "sEntry\032@\n\nBasesEntry\022\013\n\003key\030\001 \001(\t\022!\n\005val" +
+      "ue\030\002 \001(\0132\022.bbproto.PUserBase:\0028\001\"\254\001\n\016PAc" +
+      "countVoBase\022\014\n\004fans\030\001 \001(\005\022 \n\004user\030\002 \001(\0132" +
+      "\022.bbproto.PUserBase\022\023\n\013communityID\030\003 \001(\t",
+      "\022\024\n\014relationship\030\004 \001(\005\022\024\n\014bigBackImage\030\005" +
+      " \001(\t\022\026\n\016thumbBackImage\030\006 \001(\t\022\021\n\tfollower" +
+      "s\030\007 \001(\005\"[\n\017PUserSupervisor\022 \n\004user\030\001 \001(\013" +
+      "2\022.bbproto.PUserBase\022&\n\nsupervisor\030\002 \001(\013" +
+      "2\022.bbproto.PUserBase\"=\n\023PUserSupervisorL" +
+      "ist\022&\n\004list\030\001 \003(\0132\030.bbproto.PUserSupervi" +
+      "sor\"3\n\016PLevelInfoList\022!\n\004list\030\001 \003(\0132\023.bb" +
+      "proto.PLevelInfo\"\212\001\n\024PAccountVoMemberBas" +
+      "e\022\'\n\004user\030\001 \001(\0132\031.bbproto.PAccountVoMemb" +
+      "er\022&\n\nsupervisor\030\002 \001(\0132\022.bbproto.PUserBa",
+      "se\022!\n\005ubase\030\003 \001(\0132\022.bbproto.PUserBase*>\n" +
+      "\nELevelType\022\010\n\004User\020\000\022\007\n\003Vip\020\001\022\010\n\004Vipp\020\002" +
+      "\022\006\n\002Vo\020\003\022\013\n\007Tourist\020\004*\266\005\n\010ERightId\022\033\n\027we" +
+      "ibo_show_left_catalog\020\000\022\033\n\027weibo_show_to" +
+      "p_dropdown\020\001\022\023\n\017weibo_show_icon\020\002\022\026\n\022wei" +
+      "bo_show_comment\020\003\022\026\n\022weibo_show_collect\020" +
+      "\004\022\023\n\017weibo_show_more\020\005\022\033\n\027weibo_show_vie" +
+      "w_details\020\006\022\026\n\022weibo_comment_text\020\007\022\027\n\023w" +
+      "eibo_comment_audio\020\010\022\023\n\017weibo_post_text\020" +
+      "\t\022\024\n\020weibo_post_image\020\n\022\024\n\020weibo_post_vi",
+      "deo\020\013\022\024\n\020weibo_post_audio\020\014\022\"\n\036personal_" +
+      "record_external_links\020\r\022\030\n\024personal_reco" +
+      "rd_icon\020\016\022\035\n\031personal_record_community\020\017" +
+      "\022\'\n#personal_record_video_classify_page\020" +
+      "\020\022\'\n#personal_record_audio_classify_page" +
+      "\020\021\022\033\n\027friend_system_recommend\020\022\022\030\n\024frien" +
+      "d_system_search\020\023\022\"\n\036friend_system_frien" +
+      "d_apply_for\020\024\022\036\n\032friend_system_address_b" +
+      "ook\020\025\022\030\n\024friend_system_friend\020\026\022\036\n\032frien" +
+      "d_system_my_apply_for\020\027\022\r\n\treal_name\020\030*\177",
+      "\n\tELinkType\022\n\n\006taobao\020\000\022\006\n\002jd\020\001\022\006\n\002yy\020\002\022" +
+      "\010\n\004huya\020\003\022\t\n\005douyu\020\004\022\t\n\005panda\020\005\022\n\n\006zhanq" +
+      "i\020\006\022\013\n\007quanmin\020\007\022\t\n\005weibo\020\010\022\t\n\005qzone\020\t\022\007" +
+      "\n\003edg\020\nB\'\n\026com.blemobi.sep.probufB\rAccou" +
+      "ntProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -38798,7 +38957,7 @@ public final class AccountProtos {
     internal_static_bbproto_PUser_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PUser_descriptor,
-        new java.lang.String[] { "Uuid", "Password", "Username", "Nickname", "HeadImgURL", "Realname", "Gender", "Email", "Birthday", "Cellphone", "TimeZone", "Locale", "MembershipLevel", "LastUpdateTime", "LastLoginTime", "UserResume", "Link1", "Link2", "Link3", "ChatId", "LevelInfo", "Disable", "IsAI", "ForceChangePwd", "AreaCode", "AreaName", "LiveRemind", "LiveInfo", "ThumbBackImage", "BigBackImage", "IsFollowing", "RegisterTime", "LinkList", "AuthStatus", });
+        new java.lang.String[] { "Uuid", "Password", "Username", "Nickname", "HeadImgURL", "Realname", "Gender", "Email", "Birthday", "Cellphone", "TimeZone", "Locale", "MembershipLevel", "LastUpdateTime", "LastLoginTime", "UserResume", "Link1", "Link2", "Link3", "ChatId", "LevelInfo", "Disable", "IsAI", "ForceChangePwd", "AreaCode", "AreaName", "LiveRemind", "LiveInfo", "ThumbBackImage", "BigBackImage", "IsFollowing", "RegisterTime", "LinkList", "AuthStatus", "State", });
     internal_static_bbproto_PUserListEx_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_bbproto_PUserListEx_fieldAccessorTable = new
@@ -38822,7 +38981,7 @@ public final class AccountProtos {
     internal_static_bbproto_PUserBase_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PUserBase_descriptor,
-        new java.lang.String[] { "Level", "UUID", "UserName", "Nickname", "RealName", "HeadImgURL", "UserResume", "Language", "IsAI", "Gender", "Community", });
+        new java.lang.String[] { "Level", "UUID", "UserName", "Nickname", "RealName", "HeadImgURL", "UserResume", "Language", "IsAI", "Gender", "State", "Community", });
     internal_static_bbproto_PUserBaseList_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_bbproto_PUserBaseList_fieldAccessorTable = new

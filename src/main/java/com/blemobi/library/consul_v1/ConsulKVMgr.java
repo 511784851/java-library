@@ -20,6 +20,7 @@
  *****************************************************************/
 package com.blemobi.library.consul_v1;
 
+import java.util.Base64;
 import java.util.List;
 
 import com.ecwid.consul.v1.ConsulClient;
@@ -74,9 +75,10 @@ public class ConsulKVMgr {
         ConsulClient client = ConsulClientMgr.getConsulClient();
         Response<GetValue> response = client.getKVValue(key);
         GetValue gv = response.getValue();
-        if(response == null || gv == null){
+        if(response == null || gv == null || gv.getValue() == null){
             return null;
         }
-        return gv.getDecodedValue();
+        return new String(Base64.getDecoder().decode((gv.getValue())));
+        //return gv.getDecodedValue();
     }
 }

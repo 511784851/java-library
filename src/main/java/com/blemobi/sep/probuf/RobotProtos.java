@@ -19695,6 +19695,15 @@ public final class RobotProtos {
      */
     com.blemobi.sep.probuf.RobotProtos.PCRobotBubbleOrBuilder getBubbleListOrBuilder(
         int index);
+
+    /**
+     * <code>optional int32 SilenceTime = 6;</code>
+     *
+     * <pre>
+     * 最后一次收到消息到当前时间的间隔,单位:秒
+     * </pre>
+     */
+    int getSilenceTime();
   }
   /**
    * Protobuf type {@code bbproto.PCRobotSummary}
@@ -19717,6 +19726,7 @@ public final class RobotProtos {
       nextDelay_ = 0;
       isReconect_ = false;
       bubbleList_ = java.util.Collections.emptyList();
+      silenceTime_ = 0;
     }
 
     @java.lang.Override
@@ -19769,6 +19779,11 @@ public final class RobotProtos {
                 mutable_bitField0_ |= 0x00000010;
               }
               bubbleList_.add(input.readMessage(com.blemobi.sep.probuf.RobotProtos.PCRobotBubble.parser(), extensionRegistry));
+              break;
+            }
+            case 48: {
+
+              silenceTime_ = input.readInt32();
               break;
             }
           }
@@ -19906,6 +19921,19 @@ public final class RobotProtos {
       return bubbleList_.get(index);
     }
 
+    public static final int SILENCETIME_FIELD_NUMBER = 6;
+    private int silenceTime_;
+    /**
+     * <code>optional int32 SilenceTime = 6;</code>
+     *
+     * <pre>
+     * 最后一次收到消息到当前时间的间隔,单位:秒
+     * </pre>
+     */
+    public int getSilenceTime() {
+      return silenceTime_;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -19933,6 +19961,9 @@ public final class RobotProtos {
       for (int i = 0; i < bubbleList_.size(); i++) {
         output.writeMessage(5, bubbleList_.get(i));
       }
+      if (silenceTime_ != 0) {
+        output.writeInt32(6, silenceTime_);
+      }
     }
 
     public int getSerializedSize() {
@@ -19959,6 +19990,10 @@ public final class RobotProtos {
       for (int i = 0; i < bubbleList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, bubbleList_.get(i));
+      }
+      if (silenceTime_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(6, silenceTime_);
       }
       memoizedSize = size;
       return size;
@@ -20090,6 +20125,8 @@ public final class RobotProtos {
         } else {
           bubbleListBuilder_.clear();
         }
+        silenceTime_ = 0;
+
         return this;
       }
 
@@ -20127,6 +20164,7 @@ public final class RobotProtos {
         } else {
           result.bubbleList_ = bubbleListBuilder_.build();
         }
+        result.silenceTime_ = silenceTime_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -20180,6 +20218,9 @@ public final class RobotProtos {
               bubbleListBuilder_.addAllMessages(other.bubbleList_);
             }
           }
+        }
+        if (other.getSilenceTime() != 0) {
+          setSilenceTime(other.getSilenceTime());
         }
         onChanged();
         return this;
@@ -20670,6 +20711,44 @@ public final class RobotProtos {
           bubbleList_ = null;
         }
         return bubbleListBuilder_;
+      }
+
+      private int silenceTime_ ;
+      /**
+       * <code>optional int32 SilenceTime = 6;</code>
+       *
+       * <pre>
+       * 最后一次收到消息到当前时间的间隔,单位:秒
+       * </pre>
+       */
+      public int getSilenceTime() {
+        return silenceTime_;
+      }
+      /**
+       * <code>optional int32 SilenceTime = 6;</code>
+       *
+       * <pre>
+       * 最后一次收到消息到当前时间的间隔,单位:秒
+       * </pre>
+       */
+      public Builder setSilenceTime(int value) {
+        
+        silenceTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 SilenceTime = 6;</code>
+       *
+       * <pre>
+       * 最后一次收到消息到当前时间的间隔,单位:秒
+       * </pre>
+       */
+      public Builder clearSilenceTime() {
+        
+        silenceTime_ = 0;
+        onChanged();
+        return this;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -24070,25 +24149,25 @@ public final class RobotProtos {
       "hType\022\r\n\005count\030\002 \001(\005\"l\n\rPCRobotBubble\022%\n" +
       "\004type\030\001 \001(\0162\027.bbproto.ERobotPushType\022\r\n\005" +
       "count\030\002 \001(\005\022%\n\004list\030\003 \003(\0132\027.bbproto.PCRo" +
-      "botPushMsg\"\210\001\n\016PCRobotSummary\022\020\n\010totalNu" +
+      "botPushMsg\"\235\001\n\016PCRobotSummary\022\020\n\010totalNu" +
       "m\030\001 \001(\005\022\021\n\tunReadNum\030\002 \001(\005\022\021\n\tnextDelay\030" +
       "\003 \001(\005\022\022\n\nisReconect\030\004 \001(\010\022*\n\nbubbleList\030" +
-      "\005 \003(\0132\026.bbproto.PCRobotBubble\"\222\001\n\013PCCele",
-      "brity\022 \n\004user\030\001 \001(\0132\022.bbproto.PUserBase\022" +
-      "$\n\010belongVo\030\002 \001(\0132\022.bbproto.PUserBase\022)\n" +
-      "\010msgState\030\003 \001(\0162\027.bbproto.ERobotMsgState" +
-      "\022\020\n\010isShield\030\004 \001(\010\"E\n\020PCCelebrityGroup\022\r" +
-      "\n\005group\030\001 \001(\t\022\"\n\004list\030\002 \003(\0132\024.bbproto.PC" +
-      "Celebrity\"?\n\024PCCelebrityGroupList\022\'\n\004lis" +
-      "t\030\001 \003(\0132\031.bbproto.PCCelebrityGroup\".\n\rPB" +
-      "MsgNumLimit\022\r\n\005total\030\001 \001(\005\022\016\n\006remain\030\002 \001" +
-      "(\005*\234\001\n\016ERobotPushType\022\013\n\007Regards\020\000\022\n\n\006Re" +
-      "mind\020\001\022\013\n\007Lottery\020\002\022\r\n\tRedPacket\020\003\022\n\n\006St",
-      "ream\020\004\022\021\n\rLotteryRemind\020\005\022\021\n\rLotteryExpi" +
-      "re\020\006\022\022\n\016LotteryCourier\020\007\022\017\n\013GiftLottery\020" +
-      "\010*&\n\016ERobotMsgState\022\n\n\006UnRead\020\000\022\010\n\004Read\020" +
-      "\001B%\n\026com.blemobi.sep.probufB\013RobotProtos" +
-      "b\006proto3"
+      "\005 \003(\0132\026.bbproto.PCRobotBubble\022\023\n\013Silence",
+      "Time\030\006 \001(\005\"\222\001\n\013PCCelebrity\022 \n\004user\030\001 \001(\013" +
+      "2\022.bbproto.PUserBase\022$\n\010belongVo\030\002 \001(\0132\022" +
+      ".bbproto.PUserBase\022)\n\010msgState\030\003 \001(\0162\027.b" +
+      "bproto.ERobotMsgState\022\020\n\010isShield\030\004 \001(\010\"" +
+      "E\n\020PCCelebrityGroup\022\r\n\005group\030\001 \001(\t\022\"\n\004li" +
+      "st\030\002 \003(\0132\024.bbproto.PCCelebrity\"?\n\024PCCele" +
+      "brityGroupList\022\'\n\004list\030\001 \003(\0132\031.bbproto.P" +
+      "CCelebrityGroup\".\n\rPBMsgNumLimit\022\r\n\005tota" +
+      "l\030\001 \001(\005\022\016\n\006remain\030\002 \001(\005*\234\001\n\016ERobotPushTy" +
+      "pe\022\013\n\007Regards\020\000\022\n\n\006Remind\020\001\022\013\n\007Lottery\020\002",
+      "\022\r\n\tRedPacket\020\003\022\n\n\006Stream\020\004\022\021\n\rLotteryRe" +
+      "mind\020\005\022\021\n\rLotteryExpire\020\006\022\022\n\016LotteryCour" +
+      "ier\020\007\022\017\n\013GiftLottery\020\010*&\n\016ERobotMsgState" +
+      "\022\n\n\006UnRead\020\000\022\010\n\004Read\020\001B%\n\026com.blemobi.se" +
+      "p.probufB\013RobotProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -24225,7 +24304,7 @@ public final class RobotProtos {
     internal_static_bbproto_PCRobotSummary_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PCRobotSummary_descriptor,
-        new java.lang.String[] { "TotalNum", "UnReadNum", "NextDelay", "IsReconect", "BubbleList", });
+        new java.lang.String[] { "TotalNum", "UnReadNum", "NextDelay", "IsReconect", "BubbleList", "SilenceTime", });
     internal_static_bbproto_PCCelebrity_descriptor =
       getDescriptor().getMessageTypes().get(20);
     internal_static_bbproto_PCCelebrity_fieldAccessorTable = new

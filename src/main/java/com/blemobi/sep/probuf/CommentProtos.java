@@ -7227,25 +7227,7 @@ public final class CommentProtos {
         getAtUuidBytes();
 
     /**
-     * <code>optional string parentId = 3;</code>
-     *
-     * <pre>
-     *评论的对象,帖子ID或者评论ID
-     * </pre>
-     */
-    java.lang.String getParentId();
-    /**
-     * <code>optional string parentId = 3;</code>
-     *
-     * <pre>
-     *评论的对象,帖子ID或者评论ID
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getParentIdBytes();
-
-    /**
-     * <code>optional string text = 4;</code>
+     * <code>optional string text = 3;</code>
      *
      * <pre>
      *评论文本内容
@@ -7253,7 +7235,7 @@ public final class CommentProtos {
      */
     java.lang.String getText();
     /**
-     * <code>optional string text = 4;</code>
+     * <code>optional string text = 3;</code>
      *
      * <pre>
      *评论文本内容
@@ -7263,7 +7245,7 @@ public final class CommentProtos {
         getTextBytes();
 
     /**
-     * <code>optional .bbproto.PAudio audio = 5;</code>
+     * <code>optional .bbproto.PAudio audio = 4;</code>
      *
      * <pre>
      *语音信息
@@ -7271,7 +7253,7 @@ public final class CommentProtos {
      */
     boolean hasAudio();
     /**
-     * <code>optional .bbproto.PAudio audio = 5;</code>
+     * <code>optional .bbproto.PAudio audio = 4;</code>
      *
      * <pre>
      *语音信息
@@ -7279,7 +7261,7 @@ public final class CommentProtos {
      */
     com.blemobi.sep.probuf.NewsProtos.PAudio getAudio();
     /**
-     * <code>optional .bbproto.PAudio audio = 5;</code>
+     * <code>optional .bbproto.PAudio audio = 4;</code>
      *
      * <pre>
      *语音信息
@@ -7305,7 +7287,6 @@ public final class CommentProtos {
     private PClientComment() {
       uuid_ = "";
       atUuid_ = "";
-      parentId_ = "";
       text_ = "";
     }
 
@@ -7348,16 +7329,10 @@ public final class CommentProtos {
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              parentId_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
               text_ = s;
               break;
             }
-            case 42: {
+            case 34: {
               com.blemobi.sep.probuf.NewsProtos.PAudio.Builder subBuilder = null;
               if (audio_ != null) {
                 subBuilder = audio_.toBuilder();
@@ -7478,52 +7453,10 @@ public final class CommentProtos {
       }
     }
 
-    public static final int PARENTID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object parentId_;
-    /**
-     * <code>optional string parentId = 3;</code>
-     *
-     * <pre>
-     *评论的对象,帖子ID或者评论ID
-     * </pre>
-     */
-    public java.lang.String getParentId() {
-      java.lang.Object ref = parentId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        parentId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>optional string parentId = 3;</code>
-     *
-     * <pre>
-     *评论的对象,帖子ID或者评论ID
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getParentIdBytes() {
-      java.lang.Object ref = parentId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        parentId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TEXT_FIELD_NUMBER = 4;
+    public static final int TEXT_FIELD_NUMBER = 3;
     private volatile java.lang.Object text_;
     /**
-     * <code>optional string text = 4;</code>
+     * <code>optional string text = 3;</code>
      *
      * <pre>
      *评论文本内容
@@ -7542,7 +7475,7 @@ public final class CommentProtos {
       }
     }
     /**
-     * <code>optional string text = 4;</code>
+     * <code>optional string text = 3;</code>
      *
      * <pre>
      *评论文本内容
@@ -7562,10 +7495,10 @@ public final class CommentProtos {
       }
     }
 
-    public static final int AUDIO_FIELD_NUMBER = 5;
+    public static final int AUDIO_FIELD_NUMBER = 4;
     private com.blemobi.sep.probuf.NewsProtos.PAudio audio_;
     /**
-     * <code>optional .bbproto.PAudio audio = 5;</code>
+     * <code>optional .bbproto.PAudio audio = 4;</code>
      *
      * <pre>
      *语音信息
@@ -7575,7 +7508,7 @@ public final class CommentProtos {
       return audio_ != null;
     }
     /**
-     * <code>optional .bbproto.PAudio audio = 5;</code>
+     * <code>optional .bbproto.PAudio audio = 4;</code>
      *
      * <pre>
      *语音信息
@@ -7585,7 +7518,7 @@ public final class CommentProtos {
       return audio_ == null ? com.blemobi.sep.probuf.NewsProtos.PAudio.getDefaultInstance() : audio_;
     }
     /**
-     * <code>optional .bbproto.PAudio audio = 5;</code>
+     * <code>optional .bbproto.PAudio audio = 4;</code>
      *
      * <pre>
      *语音信息
@@ -7613,14 +7546,11 @@ public final class CommentProtos {
       if (!getAtUuidBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessage.writeString(output, 2, atUuid_);
       }
-      if (!getParentIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 3, parentId_);
-      }
       if (!getTextBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 4, text_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, text_);
       }
       if (audio_ != null) {
-        output.writeMessage(5, getAudio());
+        output.writeMessage(4, getAudio());
       }
     }
 
@@ -7635,15 +7565,12 @@ public final class CommentProtos {
       if (!getAtUuidBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(2, atUuid_);
       }
-      if (!getParentIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, parentId_);
-      }
       if (!getTextBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, text_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, text_);
       }
       if (audio_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getAudio());
+          .computeMessageSize(4, getAudio());
       }
       memoizedSize = size;
       return size;
@@ -7764,8 +7691,6 @@ public final class CommentProtos {
 
         atUuid_ = "";
 
-        parentId_ = "";
-
         text_ = "";
 
         if (audioBuilder_ == null) {
@@ -7798,7 +7723,6 @@ public final class CommentProtos {
         com.blemobi.sep.probuf.CommentProtos.PClientComment result = new com.blemobi.sep.probuf.CommentProtos.PClientComment(this);
         result.uuid_ = uuid_;
         result.atUuid_ = atUuid_;
-        result.parentId_ = parentId_;
         result.text_ = text_;
         if (audioBuilder_ == null) {
           result.audio_ = audio_;
@@ -7826,10 +7750,6 @@ public final class CommentProtos {
         }
         if (!other.getAtUuid().isEmpty()) {
           atUuid_ = other.atUuid_;
-          onChanged();
-        }
-        if (!other.getParentId().isEmpty()) {
-          parentId_ = other.parentId_;
           onChanged();
         }
         if (!other.getText().isEmpty()) {
@@ -8043,98 +7963,9 @@ public final class CommentProtos {
         return this;
       }
 
-      private java.lang.Object parentId_ = "";
-      /**
-       * <code>optional string parentId = 3;</code>
-       *
-       * <pre>
-       *评论的对象,帖子ID或者评论ID
-       * </pre>
-       */
-      public java.lang.String getParentId() {
-        java.lang.Object ref = parentId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          parentId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string parentId = 3;</code>
-       *
-       * <pre>
-       *评论的对象,帖子ID或者评论ID
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getParentIdBytes() {
-        java.lang.Object ref = parentId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          parentId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string parentId = 3;</code>
-       *
-       * <pre>
-       *评论的对象,帖子ID或者评论ID
-       * </pre>
-       */
-      public Builder setParentId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        parentId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string parentId = 3;</code>
-       *
-       * <pre>
-       *评论的对象,帖子ID或者评论ID
-       * </pre>
-       */
-      public Builder clearParentId() {
-        
-        parentId_ = getDefaultInstance().getParentId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string parentId = 3;</code>
-       *
-       * <pre>
-       *评论的对象,帖子ID或者评论ID
-       * </pre>
-       */
-      public Builder setParentIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        parentId_ = value;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object text_ = "";
       /**
-       * <code>optional string text = 4;</code>
+       * <code>optional string text = 3;</code>
        *
        * <pre>
        *评论文本内容
@@ -8153,7 +7984,7 @@ public final class CommentProtos {
         }
       }
       /**
-       * <code>optional string text = 4;</code>
+       * <code>optional string text = 3;</code>
        *
        * <pre>
        *评论文本内容
@@ -8173,7 +8004,7 @@ public final class CommentProtos {
         }
       }
       /**
-       * <code>optional string text = 4;</code>
+       * <code>optional string text = 3;</code>
        *
        * <pre>
        *评论文本内容
@@ -8190,7 +8021,7 @@ public final class CommentProtos {
         return this;
       }
       /**
-       * <code>optional string text = 4;</code>
+       * <code>optional string text = 3;</code>
        *
        * <pre>
        *评论文本内容
@@ -8203,7 +8034,7 @@ public final class CommentProtos {
         return this;
       }
       /**
-       * <code>optional string text = 4;</code>
+       * <code>optional string text = 3;</code>
        *
        * <pre>
        *评论文本内容
@@ -8225,7 +8056,7 @@ public final class CommentProtos {
       private com.google.protobuf.SingleFieldBuilder<
           com.blemobi.sep.probuf.NewsProtos.PAudio, com.blemobi.sep.probuf.NewsProtos.PAudio.Builder, com.blemobi.sep.probuf.NewsProtos.PAudioOrBuilder> audioBuilder_;
       /**
-       * <code>optional .bbproto.PAudio audio = 5;</code>
+       * <code>optional .bbproto.PAudio audio = 4;</code>
        *
        * <pre>
        *语音信息
@@ -8235,7 +8066,7 @@ public final class CommentProtos {
         return audioBuilder_ != null || audio_ != null;
       }
       /**
-       * <code>optional .bbproto.PAudio audio = 5;</code>
+       * <code>optional .bbproto.PAudio audio = 4;</code>
        *
        * <pre>
        *语音信息
@@ -8249,7 +8080,7 @@ public final class CommentProtos {
         }
       }
       /**
-       * <code>optional .bbproto.PAudio audio = 5;</code>
+       * <code>optional .bbproto.PAudio audio = 4;</code>
        *
        * <pre>
        *语音信息
@@ -8269,7 +8100,7 @@ public final class CommentProtos {
         return this;
       }
       /**
-       * <code>optional .bbproto.PAudio audio = 5;</code>
+       * <code>optional .bbproto.PAudio audio = 4;</code>
        *
        * <pre>
        *语音信息
@@ -8287,7 +8118,7 @@ public final class CommentProtos {
         return this;
       }
       /**
-       * <code>optional .bbproto.PAudio audio = 5;</code>
+       * <code>optional .bbproto.PAudio audio = 4;</code>
        *
        * <pre>
        *语音信息
@@ -8309,7 +8140,7 @@ public final class CommentProtos {
         return this;
       }
       /**
-       * <code>optional .bbproto.PAudio audio = 5;</code>
+       * <code>optional .bbproto.PAudio audio = 4;</code>
        *
        * <pre>
        *语音信息
@@ -8327,7 +8158,7 @@ public final class CommentProtos {
         return this;
       }
       /**
-       * <code>optional .bbproto.PAudio audio = 5;</code>
+       * <code>optional .bbproto.PAudio audio = 4;</code>
        *
        * <pre>
        *语音信息
@@ -8339,7 +8170,7 @@ public final class CommentProtos {
         return getAudioFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .bbproto.PAudio audio = 5;</code>
+       * <code>optional .bbproto.PAudio audio = 4;</code>
        *
        * <pre>
        *语音信息
@@ -8354,7 +8185,7 @@ public final class CommentProtos {
         }
       }
       /**
-       * <code>optional .bbproto.PAudio audio = 5;</code>
+       * <code>optional .bbproto.PAudio audio = 4;</code>
        *
        * <pre>
        *语音信息
@@ -8436,25 +8267,61 @@ public final class CommentProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .bbproto.PClientComment list = 1;</code>
+     * <code>optional string postId = 1;</code>
+     *
+     * <pre>
+     *评论的帖子ID
+     * </pre>
+     */
+    java.lang.String getPostId();
+    /**
+     * <code>optional string postId = 1;</code>
+     *
+     * <pre>
+     *评论的帖子ID
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getPostIdBytes();
+
+    /**
+     * <code>optional string parentId = 2;</code>
+     *
+     * <pre>
+     *一级评论填帖子ID, 二级评论填目标评论的ID
+     * </pre>
+     */
+    java.lang.String getParentId();
+    /**
+     * <code>optional string parentId = 2;</code>
+     *
+     * <pre>
+     *一级评论填帖子ID, 二级评论填目标评论的ID
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getParentIdBytes();
+
+    /**
+     * <code>repeated .bbproto.PClientComment list = 3;</code>
      */
     java.util.List<com.blemobi.sep.probuf.CommentProtos.PClientComment> 
         getListList();
     /**
-     * <code>repeated .bbproto.PClientComment list = 1;</code>
+     * <code>repeated .bbproto.PClientComment list = 3;</code>
      */
     com.blemobi.sep.probuf.CommentProtos.PClientComment getList(int index);
     /**
-     * <code>repeated .bbproto.PClientComment list = 1;</code>
+     * <code>repeated .bbproto.PClientComment list = 3;</code>
      */
     int getListCount();
     /**
-     * <code>repeated .bbproto.PClientComment list = 1;</code>
+     * <code>repeated .bbproto.PClientComment list = 3;</code>
      */
     java.util.List<? extends com.blemobi.sep.probuf.CommentProtos.PClientCommentOrBuilder> 
         getListOrBuilderList();
     /**
-     * <code>repeated .bbproto.PClientComment list = 1;</code>
+     * <code>repeated .bbproto.PClientComment list = 3;</code>
      */
     com.blemobi.sep.probuf.CommentProtos.PClientCommentOrBuilder getListOrBuilder(
         int index);
@@ -8475,6 +8342,8 @@ public final class CommentProtos {
       super(builder);
     }
     private PClientCommentList() {
+      postId_ = "";
+      parentId_ = "";
       list_ = java.util.Collections.emptyList();
     }
 
@@ -8503,9 +8372,21 @@ public final class CommentProtos {
               break;
             }
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              postId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              parentId_ = s;
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 list_ = new java.util.ArrayList<com.blemobi.sep.probuf.CommentProtos.PClientComment>();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000004;
               }
               list_.add(input.readMessage(com.blemobi.sep.probuf.CommentProtos.PClientComment.parser(), extensionRegistry));
               break;
@@ -8519,7 +8400,7 @@ public final class CommentProtos {
             new com.google.protobuf.InvalidProtocolBufferException(
                 e.getMessage()).setUnfinishedMessage(this));
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           list_ = java.util.Collections.unmodifiableList(list_);
         }
         makeExtensionsImmutable();
@@ -8537,35 +8418,120 @@ public final class CommentProtos {
               com.blemobi.sep.probuf.CommentProtos.PClientCommentList.class, com.blemobi.sep.probuf.CommentProtos.PClientCommentList.Builder.class);
     }
 
-    public static final int LIST_FIELD_NUMBER = 1;
+    private int bitField0_;
+    public static final int POSTID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object postId_;
+    /**
+     * <code>optional string postId = 1;</code>
+     *
+     * <pre>
+     *评论的帖子ID
+     * </pre>
+     */
+    public java.lang.String getPostId() {
+      java.lang.Object ref = postId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        postId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string postId = 1;</code>
+     *
+     * <pre>
+     *评论的帖子ID
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getPostIdBytes() {
+      java.lang.Object ref = postId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        postId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PARENTID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object parentId_;
+    /**
+     * <code>optional string parentId = 2;</code>
+     *
+     * <pre>
+     *一级评论填帖子ID, 二级评论填目标评论的ID
+     * </pre>
+     */
+    public java.lang.String getParentId() {
+      java.lang.Object ref = parentId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        parentId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string parentId = 2;</code>
+     *
+     * <pre>
+     *一级评论填帖子ID, 二级评论填目标评论的ID
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getParentIdBytes() {
+      java.lang.Object ref = parentId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        parentId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LIST_FIELD_NUMBER = 3;
     private java.util.List<com.blemobi.sep.probuf.CommentProtos.PClientComment> list_;
     /**
-     * <code>repeated .bbproto.PClientComment list = 1;</code>
+     * <code>repeated .bbproto.PClientComment list = 3;</code>
      */
     public java.util.List<com.blemobi.sep.probuf.CommentProtos.PClientComment> getListList() {
       return list_;
     }
     /**
-     * <code>repeated .bbproto.PClientComment list = 1;</code>
+     * <code>repeated .bbproto.PClientComment list = 3;</code>
      */
     public java.util.List<? extends com.blemobi.sep.probuf.CommentProtos.PClientCommentOrBuilder> 
         getListOrBuilderList() {
       return list_;
     }
     /**
-     * <code>repeated .bbproto.PClientComment list = 1;</code>
+     * <code>repeated .bbproto.PClientComment list = 3;</code>
      */
     public int getListCount() {
       return list_.size();
     }
     /**
-     * <code>repeated .bbproto.PClientComment list = 1;</code>
+     * <code>repeated .bbproto.PClientComment list = 3;</code>
      */
     public com.blemobi.sep.probuf.CommentProtos.PClientComment getList(int index) {
       return list_.get(index);
     }
     /**
-     * <code>repeated .bbproto.PClientComment list = 1;</code>
+     * <code>repeated .bbproto.PClientComment list = 3;</code>
      */
     public com.blemobi.sep.probuf.CommentProtos.PClientCommentOrBuilder getListOrBuilder(
         int index) {
@@ -8584,8 +8550,14 @@ public final class CommentProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getPostIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, postId_);
+      }
+      if (!getParentIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, parentId_);
+      }
       for (int i = 0; i < list_.size(); i++) {
-        output.writeMessage(1, list_.get(i));
+        output.writeMessage(3, list_.get(i));
       }
     }
 
@@ -8594,9 +8566,15 @@ public final class CommentProtos {
       if (size != -1) return size;
 
       size = 0;
+      if (!getPostIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, postId_);
+      }
+      if (!getParentIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, parentId_);
+      }
       for (int i = 0; i < list_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, list_.get(i));
+          .computeMessageSize(3, list_.get(i));
       }
       memoizedSize = size;
       return size;
@@ -8714,9 +8692,13 @@ public final class CommentProtos {
       }
       public Builder clear() {
         super.clear();
+        postId_ = "";
+
+        parentId_ = "";
+
         if (listBuilder_ == null) {
           list_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           listBuilder_.clear();
         }
@@ -8743,15 +8725,19 @@ public final class CommentProtos {
       public com.blemobi.sep.probuf.CommentProtos.PClientCommentList buildPartial() {
         com.blemobi.sep.probuf.CommentProtos.PClientCommentList result = new com.blemobi.sep.probuf.CommentProtos.PClientCommentList(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.postId_ = postId_;
+        result.parentId_ = parentId_;
         if (listBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
             list_ = java.util.Collections.unmodifiableList(list_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.list_ = list_;
         } else {
           result.list_ = listBuilder_.build();
         }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -8767,11 +8753,19 @@ public final class CommentProtos {
 
       public Builder mergeFrom(com.blemobi.sep.probuf.CommentProtos.PClientCommentList other) {
         if (other == com.blemobi.sep.probuf.CommentProtos.PClientCommentList.getDefaultInstance()) return this;
+        if (!other.getPostId().isEmpty()) {
+          postId_ = other.postId_;
+          onChanged();
+        }
+        if (!other.getParentId().isEmpty()) {
+          parentId_ = other.parentId_;
+          onChanged();
+        }
         if (listBuilder_ == null) {
           if (!other.list_.isEmpty()) {
             if (list_.isEmpty()) {
               list_ = other.list_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureListIsMutable();
               list_.addAll(other.list_);
@@ -8784,7 +8778,7 @@ public final class CommentProtos {
               listBuilder_.dispose();
               listBuilder_ = null;
               list_ = other.list_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
               listBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getListFieldBuilder() : null;
@@ -8820,12 +8814,190 @@ public final class CommentProtos {
       }
       private int bitField0_;
 
+      private java.lang.Object postId_ = "";
+      /**
+       * <code>optional string postId = 1;</code>
+       *
+       * <pre>
+       *评论的帖子ID
+       * </pre>
+       */
+      public java.lang.String getPostId() {
+        java.lang.Object ref = postId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          postId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string postId = 1;</code>
+       *
+       * <pre>
+       *评论的帖子ID
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getPostIdBytes() {
+        java.lang.Object ref = postId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          postId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string postId = 1;</code>
+       *
+       * <pre>
+       *评论的帖子ID
+       * </pre>
+       */
+      public Builder setPostId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        postId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string postId = 1;</code>
+       *
+       * <pre>
+       *评论的帖子ID
+       * </pre>
+       */
+      public Builder clearPostId() {
+        
+        postId_ = getDefaultInstance().getPostId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string postId = 1;</code>
+       *
+       * <pre>
+       *评论的帖子ID
+       * </pre>
+       */
+      public Builder setPostIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        postId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object parentId_ = "";
+      /**
+       * <code>optional string parentId = 2;</code>
+       *
+       * <pre>
+       *一级评论填帖子ID, 二级评论填目标评论的ID
+       * </pre>
+       */
+      public java.lang.String getParentId() {
+        java.lang.Object ref = parentId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          parentId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string parentId = 2;</code>
+       *
+       * <pre>
+       *一级评论填帖子ID, 二级评论填目标评论的ID
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getParentIdBytes() {
+        java.lang.Object ref = parentId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          parentId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string parentId = 2;</code>
+       *
+       * <pre>
+       *一级评论填帖子ID, 二级评论填目标评论的ID
+       * </pre>
+       */
+      public Builder setParentId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        parentId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string parentId = 2;</code>
+       *
+       * <pre>
+       *一级评论填帖子ID, 二级评论填目标评论的ID
+       * </pre>
+       */
+      public Builder clearParentId() {
+        
+        parentId_ = getDefaultInstance().getParentId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string parentId = 2;</code>
+       *
+       * <pre>
+       *一级评论填帖子ID, 二级评论填目标评论的ID
+       * </pre>
+       */
+      public Builder setParentIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        parentId_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.util.List<com.blemobi.sep.probuf.CommentProtos.PClientComment> list_ =
         java.util.Collections.emptyList();
       private void ensureListIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
           list_ = new java.util.ArrayList<com.blemobi.sep.probuf.CommentProtos.PClientComment>(list_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -8833,7 +9005,7 @@ public final class CommentProtos {
           com.blemobi.sep.probuf.CommentProtos.PClientComment, com.blemobi.sep.probuf.CommentProtos.PClientComment.Builder, com.blemobi.sep.probuf.CommentProtos.PClientCommentOrBuilder> listBuilder_;
 
       /**
-       * <code>repeated .bbproto.PClientComment list = 1;</code>
+       * <code>repeated .bbproto.PClientComment list = 3;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.CommentProtos.PClientComment> getListList() {
         if (listBuilder_ == null) {
@@ -8843,7 +9015,7 @@ public final class CommentProtos {
         }
       }
       /**
-       * <code>repeated .bbproto.PClientComment list = 1;</code>
+       * <code>repeated .bbproto.PClientComment list = 3;</code>
        */
       public int getListCount() {
         if (listBuilder_ == null) {
@@ -8853,7 +9025,7 @@ public final class CommentProtos {
         }
       }
       /**
-       * <code>repeated .bbproto.PClientComment list = 1;</code>
+       * <code>repeated .bbproto.PClientComment list = 3;</code>
        */
       public com.blemobi.sep.probuf.CommentProtos.PClientComment getList(int index) {
         if (listBuilder_ == null) {
@@ -8863,7 +9035,7 @@ public final class CommentProtos {
         }
       }
       /**
-       * <code>repeated .bbproto.PClientComment list = 1;</code>
+       * <code>repeated .bbproto.PClientComment list = 3;</code>
        */
       public Builder setList(
           int index, com.blemobi.sep.probuf.CommentProtos.PClientComment value) {
@@ -8880,7 +9052,7 @@ public final class CommentProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PClientComment list = 1;</code>
+       * <code>repeated .bbproto.PClientComment list = 3;</code>
        */
       public Builder setList(
           int index, com.blemobi.sep.probuf.CommentProtos.PClientComment.Builder builderForValue) {
@@ -8894,7 +9066,7 @@ public final class CommentProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PClientComment list = 1;</code>
+       * <code>repeated .bbproto.PClientComment list = 3;</code>
        */
       public Builder addList(com.blemobi.sep.probuf.CommentProtos.PClientComment value) {
         if (listBuilder_ == null) {
@@ -8910,7 +9082,7 @@ public final class CommentProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PClientComment list = 1;</code>
+       * <code>repeated .bbproto.PClientComment list = 3;</code>
        */
       public Builder addList(
           int index, com.blemobi.sep.probuf.CommentProtos.PClientComment value) {
@@ -8927,7 +9099,7 @@ public final class CommentProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PClientComment list = 1;</code>
+       * <code>repeated .bbproto.PClientComment list = 3;</code>
        */
       public Builder addList(
           com.blemobi.sep.probuf.CommentProtos.PClientComment.Builder builderForValue) {
@@ -8941,7 +9113,7 @@ public final class CommentProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PClientComment list = 1;</code>
+       * <code>repeated .bbproto.PClientComment list = 3;</code>
        */
       public Builder addList(
           int index, com.blemobi.sep.probuf.CommentProtos.PClientComment.Builder builderForValue) {
@@ -8955,7 +9127,7 @@ public final class CommentProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PClientComment list = 1;</code>
+       * <code>repeated .bbproto.PClientComment list = 3;</code>
        */
       public Builder addAllList(
           java.lang.Iterable<? extends com.blemobi.sep.probuf.CommentProtos.PClientComment> values) {
@@ -8970,12 +9142,12 @@ public final class CommentProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PClientComment list = 1;</code>
+       * <code>repeated .bbproto.PClientComment list = 3;</code>
        */
       public Builder clearList() {
         if (listBuilder_ == null) {
           list_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           listBuilder_.clear();
@@ -8983,7 +9155,7 @@ public final class CommentProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PClientComment list = 1;</code>
+       * <code>repeated .bbproto.PClientComment list = 3;</code>
        */
       public Builder removeList(int index) {
         if (listBuilder_ == null) {
@@ -8996,14 +9168,14 @@ public final class CommentProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PClientComment list = 1;</code>
+       * <code>repeated .bbproto.PClientComment list = 3;</code>
        */
       public com.blemobi.sep.probuf.CommentProtos.PClientComment.Builder getListBuilder(
           int index) {
         return getListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .bbproto.PClientComment list = 1;</code>
+       * <code>repeated .bbproto.PClientComment list = 3;</code>
        */
       public com.blemobi.sep.probuf.CommentProtos.PClientCommentOrBuilder getListOrBuilder(
           int index) {
@@ -9013,7 +9185,7 @@ public final class CommentProtos {
         }
       }
       /**
-       * <code>repeated .bbproto.PClientComment list = 1;</code>
+       * <code>repeated .bbproto.PClientComment list = 3;</code>
        */
       public java.util.List<? extends com.blemobi.sep.probuf.CommentProtos.PClientCommentOrBuilder> 
            getListOrBuilderList() {
@@ -9024,14 +9196,14 @@ public final class CommentProtos {
         }
       }
       /**
-       * <code>repeated .bbproto.PClientComment list = 1;</code>
+       * <code>repeated .bbproto.PClientComment list = 3;</code>
        */
       public com.blemobi.sep.probuf.CommentProtos.PClientComment.Builder addListBuilder() {
         return getListFieldBuilder().addBuilder(
             com.blemobi.sep.probuf.CommentProtos.PClientComment.getDefaultInstance());
       }
       /**
-       * <code>repeated .bbproto.PClientComment list = 1;</code>
+       * <code>repeated .bbproto.PClientComment list = 3;</code>
        */
       public com.blemobi.sep.probuf.CommentProtos.PClientComment.Builder addListBuilder(
           int index) {
@@ -9039,7 +9211,7 @@ public final class CommentProtos {
             index, com.blemobi.sep.probuf.CommentProtos.PClientComment.getDefaultInstance());
       }
       /**
-       * <code>repeated .bbproto.PClientComment list = 1;</code>
+       * <code>repeated .bbproto.PClientComment list = 3;</code>
        */
       public java.util.List<com.blemobi.sep.probuf.CommentProtos.PClientComment.Builder> 
            getListBuilderList() {
@@ -9052,7 +9224,7 @@ public final class CommentProtos {
           listBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               com.blemobi.sep.probuf.CommentProtos.PClientComment, com.blemobi.sep.probuf.CommentProtos.PClientComment.Builder, com.blemobi.sep.probuf.CommentProtos.PClientCommentOrBuilder>(
                   list_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
                   isClean());
           list_ = null;
@@ -13222,21 +13394,21 @@ public final class CommentProtos {
       ".PComment\"8\n\014PCommentList\022(\n\010comments\030\001 " +
       "\003(\0132\026.bbproto.PCommentLevel\"9\n\017PCommentE",
       "xtList\022&\n\010comments\030\001 \003(\0132\024.bbproto.PComm" +
-      "entExt\"n\n\016PClientComment\022\014\n\004uuid\030\001 \001(\t\022\016" +
-      "\n\006atUuid\030\002 \001(\t\022\020\n\010parentId\030\003 \001(\t\022\014\n\004text" +
-      "\030\004 \001(\t\022\036\n\005audio\030\005 \001(\0132\017.bbproto.PAudio\";" +
-      "\n\022PClientCommentList\022%\n\004list\030\001 \003(\0132\027.bbp" +
-      "roto.PClientComment\"]\n\026PBetchCommentVote" +
-      "Exist\022\n\n\002id\030\001 \001(\t\022\017\n\007hasVote\030\002 \003(\005\022\021\n\tup" +
-      "VoteCnt\030\003 \001(\005\022\023\n\013DownVoteCnt\030\004 \001(\005\"D\n\021PB" +
-      "etchCommentVote\022\020\n\010voteType\030\001 \001(\005\022\013\n\003cid" +
-      "\030\002 \001(\t\022\020\n\010uuidList\030\003 \003(\t\"?\n\tPVoteUser\022\014\n",
-      "\004uuid\030\001 \001(\t\022\020\n\010nickname\030\002 \001(\t\022\022\n\nheadImg" +
-      "Url\030\003 \001(\t\"1\n\rPVoteUserList\022 \n\004user\030\001 \003(\013" +
-      "2\022.bbproto.PVoteUser\"\034\n\013PInt32Array\022\r\n\005a" +
-      "rray\030\001 \003(\005\" \n\014PCommentBool\022\020\n\010isEnable\030\001" +
-      " \001(\010B\'\n\026com.blemobi.sep.probufB\rCommentP" +
-      "rotosb\006proto3"
+      "entExt\"\\\n\016PClientComment\022\014\n\004uuid\030\001 \001(\t\022\016" +
+      "\n\006atUuid\030\002 \001(\t\022\014\n\004text\030\003 \001(\t\022\036\n\005audio\030\004 " +
+      "\001(\0132\017.bbproto.PAudio\"]\n\022PClientCommentLi" +
+      "st\022\016\n\006postId\030\001 \001(\t\022\020\n\010parentId\030\002 \001(\t\022%\n\004" +
+      "list\030\003 \003(\0132\027.bbproto.PClientComment\"]\n\026P" +
+      "BetchCommentVoteExist\022\n\n\002id\030\001 \001(\t\022\017\n\007has" +
+      "Vote\030\002 \003(\005\022\021\n\tupVoteCnt\030\003 \001(\005\022\023\n\013DownVot" +
+      "eCnt\030\004 \001(\005\"D\n\021PBetchCommentVote\022\020\n\010voteT" +
+      "ype\030\001 \001(\005\022\013\n\003cid\030\002 \001(\t\022\020\n\010uuidList\030\003 \003(\t",
+      "\"?\n\tPVoteUser\022\014\n\004uuid\030\001 \001(\t\022\020\n\010nickname\030" +
+      "\002 \001(\t\022\022\n\nheadImgUrl\030\003 \001(\t\"1\n\rPVoteUserLi" +
+      "st\022 \n\004user\030\001 \003(\0132\022.bbproto.PVoteUser\"\034\n\013" +
+      "PInt32Array\022\r\n\005array\030\001 \003(\005\" \n\014PCommentBo" +
+      "ol\022\020\n\010isEnable\030\001 \001(\010B\'\n\026com.blemobi.sep." +
+      "probufB\rCommentProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13286,13 +13458,13 @@ public final class CommentProtos {
     internal_static_bbproto_PClientComment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PClientComment_descriptor,
-        new java.lang.String[] { "Uuid", "AtUuid", "ParentId", "Text", "Audio", });
+        new java.lang.String[] { "Uuid", "AtUuid", "Text", "Audio", });
     internal_static_bbproto_PClientCommentList_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_bbproto_PClientCommentList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PClientCommentList_descriptor,
-        new java.lang.String[] { "List", });
+        new java.lang.String[] { "PostId", "ParentId", "List", });
     internal_static_bbproto_PBetchCommentVoteExist_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_bbproto_PBetchCommentVoteExist_fieldAccessorTable = new

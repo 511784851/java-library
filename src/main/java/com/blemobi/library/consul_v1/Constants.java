@@ -28,6 +28,7 @@ package com.blemobi.library.consul_v1;
  * @version 1.0.0
  */
 public final class Constants {
+	public static String SERVER_NM = "";
     static enum CONSUL_KV_DYNC{
         LOG_LEVEL("log_level");
         private String value;
@@ -87,7 +88,7 @@ public final class Constants {
         public static final String REDIS_AUTH = "redis_user_auth";
         public static final String REDIS_CONNECT_NUM = "redis_max_connect_num";
         public static String getConfigKvKey(String... param) {
-            String key = "blemobi/sep/payment/" + ConsulClientMgr.getENV_TYPE() + "/{0}";
+            String key = "blemobi/sep/" + SERVER_NM + "/" + ConsulClientMgr.getENV_TYPE() + "/{0}";
             int idx = 0;
             for (String s : param) {
                 key = key.replace("{" + idx + "}", s);

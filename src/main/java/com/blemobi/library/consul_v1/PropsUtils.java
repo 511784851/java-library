@@ -34,52 +34,56 @@ import lombok.extern.log4j.Log4j;
 @Log4j
 public final class PropsUtils {
 
-    public static String getString(String key) {
-        String val = null;
-        if (ConsulClientMgr.getENV_TYPE().equalsIgnoreCase("local")){
-            val = LocalProperties.getString(key);
-        }
-        key = Constants.CONFIG_KV_KEY.getConfigKvKey(key);
-        val = ConsulKVMgr.getValue(key);
-        log.debug("key:" + key + ", value:" + val);
-        return val;
-    }
-    
-    public static Integer getInteger(String key) {
-        String strVal = getString(key);
-        if(StringUtils.isEmpty(strVal)){
-            return null;
-        }
-        return Integer.parseInt(strVal);
-    }
-    
-    public static Double getDouble(String key) {
-        String strVal = getString(key);
-        if(StringUtils.isEmpty(strVal)){
-            return null;
-        }
-        return Double.parseDouble(strVal);
-    }
-    
-    public static Float getFloat(String key) {
-        String strVal = getString(key);
-        if(StringUtils.isEmpty(strVal)){
-            return null;
-        }
-        return Float.parseFloat(strVal);
-    }
-    public static Boolean getBoolean(String key) {
-        String strVal = getString(key);
-        if(StringUtils.isEmpty(strVal)){
-            return null;
-        }
-        return Boolean.parseBoolean(strVal);
-    }
-    public static Long getLong(String key) {
-        String strVal = getString(key);
-        if(StringUtils.isEmpty(strVal)){
-            return null;
-        }
-        return Long.parseLong(strVal);
-    }
+	public static String getString(String key) {
+		String val = null;
+		if (ConsulClientMgr.getENV_TYPE().equalsIgnoreCase("local")) {
+			val = LocalProperties.getString(key);
+		} else {
+			key = Constants.CONFIG_KV_KEY.getConfigKvKey(key);
+			log.debug("consul kv key -> " + key);
+			val = ConsulKVMgr.getValue(key);
+		}
+		log.debug("key:" + key + ", value:" + val);
+		return val;
+	}
+
+	public static Integer getInteger(String key) {
+		String strVal = getString(key);
+		if (StringUtils.isEmpty(strVal)) {
+			return null;
+		}
+		return Integer.parseInt(strVal);
+	}
+
+	public static Double getDouble(String key) {
+		String strVal = getString(key);
+		if (StringUtils.isEmpty(strVal)) {
+			return null;
+		}
+		return Double.parseDouble(strVal);
+	}
+
+	public static Float getFloat(String key) {
+		String strVal = getString(key);
+		if (StringUtils.isEmpty(strVal)) {
+			return null;
+		}
+		return Float.parseFloat(strVal);
+	}
+
+	public static Boolean getBoolean(String key) {
+		String strVal = getString(key);
+		if (StringUtils.isEmpty(strVal)) {
+			return null;
+		}
+		return Boolean.parseBoolean(strVal);
+	}
+
+	public static Long getLong(String key) {
+		String strVal = getString(key);
+		if (StringUtils.isEmpty(strVal)) {
+			return null;
+		}
+		return Long.parseLong(strVal);
+	}
 }

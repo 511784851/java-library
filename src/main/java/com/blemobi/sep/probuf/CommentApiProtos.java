@@ -1479,6 +1479,755 @@ public final class CommentApiProtos {
 
   }
 
+  public interface PQueryByIdsParamOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PQueryByIdsParam)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string uuid = 1;</code>
+     *
+     * <pre>
+     *查看评论的用户
+     * </pre>
+     */
+    java.lang.String getUuid();
+    /**
+     * <code>optional string uuid = 1;</code>
+     *
+     * <pre>
+     *查看评论的用户
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUuidBytes();
+
+    /**
+     * <code>repeated string ids = 2;</code>
+     *
+     * <pre>
+     *评论ID列表
+     * </pre>
+     */
+    com.google.protobuf.ProtocolStringList
+        getIdsList();
+    /**
+     * <code>repeated string ids = 2;</code>
+     *
+     * <pre>
+     *评论ID列表
+     * </pre>
+     */
+    int getIdsCount();
+    /**
+     * <code>repeated string ids = 2;</code>
+     *
+     * <pre>
+     *评论ID列表
+     * </pre>
+     */
+    java.lang.String getIds(int index);
+    /**
+     * <code>repeated string ids = 2;</code>
+     *
+     * <pre>
+     *评论ID列表
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code bbproto.PQueryByIdsParam}
+   *
+   * <pre>
+   * 通过ID查评论的参数
+   * </pre>
+   */
+  public  static final class PQueryByIdsParam extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PQueryByIdsParam)
+      PQueryByIdsParamOrBuilder {
+    // Use PQueryByIdsParam.newBuilder() to construct.
+    private PQueryByIdsParam(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PQueryByIdsParam() {
+      uuid_ = "";
+      ids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PQueryByIdsParam(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              uuid_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                ids_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              ids_.add(s);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          ids_ = ids_.getUnmodifiableView();
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.CommentApiProtos.internal_static_bbproto_PQueryByIdsParam_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.CommentApiProtos.internal_static_bbproto_PQueryByIdsParam_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam.class, com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int UUID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object uuid_;
+    /**
+     * <code>optional string uuid = 1;</code>
+     *
+     * <pre>
+     *查看评论的用户
+     * </pre>
+     */
+    public java.lang.String getUuid() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uuid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string uuid = 1;</code>
+     *
+     * <pre>
+     *查看评论的用户
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUuidBytes() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IDS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList ids_;
+    /**
+     * <code>repeated string ids = 2;</code>
+     *
+     * <pre>
+     *评论ID列表
+     * </pre>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getIdsList() {
+      return ids_;
+    }
+    /**
+     * <code>repeated string ids = 2;</code>
+     *
+     * <pre>
+     *评论ID列表
+     * </pre>
+     */
+    public int getIdsCount() {
+      return ids_.size();
+    }
+    /**
+     * <code>repeated string ids = 2;</code>
+     *
+     * <pre>
+     *评论ID列表
+     * </pre>
+     */
+    public java.lang.String getIds(int index) {
+      return ids_.get(index);
+    }
+    /**
+     * <code>repeated string ids = 2;</code>
+     *
+     * <pre>
+     *评论ID列表
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getIdsBytes(int index) {
+      return ids_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getUuidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, uuid_);
+      }
+      for (int i = 0; i < ids_.size(); i++) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, ids_.getRaw(i));
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getUuidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, uuid_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < ids_.size(); i++) {
+          dataSize += computeStringSizeNoTag(ids_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getIdsList().size();
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PQueryByIdsParam}
+     *
+     * <pre>
+     * 通过ID查评论的参数
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PQueryByIdsParam)
+        com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParamOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.CommentApiProtos.internal_static_bbproto_PQueryByIdsParam_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.CommentApiProtos.internal_static_bbproto_PQueryByIdsParam_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam.class, com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        uuid_ = "";
+
+        ids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.CommentApiProtos.internal_static_bbproto_PQueryByIdsParam_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam build() {
+        com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam buildPartial() {
+        com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam result = new com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.uuid_ = uuid_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          ids_ = ids_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.ids_ = ids_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam) {
+          return mergeFrom((com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam other) {
+        if (other == com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam.getDefaultInstance()) return this;
+        if (!other.getUuid().isEmpty()) {
+          uuid_ = other.uuid_;
+          onChanged();
+        }
+        if (!other.ids_.isEmpty()) {
+          if (ids_.isEmpty()) {
+            ids_ = other.ids_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureIdsIsMutable();
+            ids_.addAll(other.ids_);
+          }
+          onChanged();
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object uuid_ = "";
+      /**
+       * <code>optional string uuid = 1;</code>
+       *
+       * <pre>
+       *查看评论的用户
+       * </pre>
+       */
+      public java.lang.String getUuid() {
+        java.lang.Object ref = uuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uuid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string uuid = 1;</code>
+       *
+       * <pre>
+       *查看评论的用户
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUuidBytes() {
+        java.lang.Object ref = uuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string uuid = 1;</code>
+       *
+       * <pre>
+       *查看评论的用户
+       * </pre>
+       */
+      public Builder setUuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uuid = 1;</code>
+       *
+       * <pre>
+       *查看评论的用户
+       * </pre>
+       */
+      public Builder clearUuid() {
+        
+        uuid_ = getDefaultInstance().getUuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uuid = 1;</code>
+       *
+       * <pre>
+       *查看评论的用户
+       * </pre>
+       */
+      public Builder setUuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList ids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureIdsIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          ids_ = new com.google.protobuf.LazyStringArrayList(ids_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated string ids = 2;</code>
+       *
+       * <pre>
+       *评论ID列表
+       * </pre>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getIdsList() {
+        return ids_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string ids = 2;</code>
+       *
+       * <pre>
+       *评论ID列表
+       * </pre>
+       */
+      public int getIdsCount() {
+        return ids_.size();
+      }
+      /**
+       * <code>repeated string ids = 2;</code>
+       *
+       * <pre>
+       *评论ID列表
+       * </pre>
+       */
+      public java.lang.String getIds(int index) {
+        return ids_.get(index);
+      }
+      /**
+       * <code>repeated string ids = 2;</code>
+       *
+       * <pre>
+       *评论ID列表
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getIdsBytes(int index) {
+        return ids_.getByteString(index);
+      }
+      /**
+       * <code>repeated string ids = 2;</code>
+       *
+       * <pre>
+       *评论ID列表
+       * </pre>
+       */
+      public Builder setIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureIdsIsMutable();
+        ids_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string ids = 2;</code>
+       *
+       * <pre>
+       *评论ID列表
+       * </pre>
+       */
+      public Builder addIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureIdsIsMutable();
+        ids_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string ids = 2;</code>
+       *
+       * <pre>
+       *评论ID列表
+       * </pre>
+       */
+      public Builder addAllIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, ids_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string ids = 2;</code>
+       *
+       * <pre>
+       *评论ID列表
+       * </pre>
+       */
+      public Builder clearIds() {
+        ids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string ids = 2;</code>
+       *
+       * <pre>
+       *评论ID列表
+       * </pre>
+       */
+      public Builder addIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureIdsIsMutable();
+        ids_.add(value);
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PQueryByIdsParam)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PQueryByIdsParam)
+    private static final com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam();
+    }
+
+    public static com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PQueryByIdsParam>
+        PARSER = new com.google.protobuf.AbstractParser<PQueryByIdsParam>() {
+      public PQueryByIdsParam parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PQueryByIdsParam(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<PQueryByIdsParam> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PQueryByIdsParam> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_bbproto_PCommentParam_descriptor;
   private static
@@ -1489,6 +2238,11 @@ public final class CommentApiProtos {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_bbproto_PCommentCommentParam_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PQueryByIdsParam_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PQueryByIdsParam_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1503,23 +2257,26 @@ public final class CommentApiProtos {
       "o\"P\n\rPCommentParam\022\016\n\006postId\030\001 \001(\t\022\020\n\010po" +
       "stUuid\030\002 \001(\t\022\016\n\006offset\030\003 \001(\005\022\r\n\005count\030\004 " +
       "\001(\005\"B\n\024PCommentCommentParam\022\013\n\003cid\030\001 \001(\t" +
-      "\022\016\n\006offset\030\002 \001(\005\022\r\n\005count\030\003 \001(\0052\313\004\n\014IGrp" +
-      "cComment\022A\n\013GrpcComment\022\033.bbproto.PClien" +
-      "tCommentList\032\025.bbproto.PInt32Single\022F\n\020G" +
-      "rpcCommentReply\022\033.bbproto.PClientComment" +
-      "List\032\025.bbproto.PInt32Single\022>\n\017GrpcComme",
-      "ntVote\022\032.bbproto.PBetchCommentVote\032\017.bbp" +
-      "roto.PEmpty\022S\n\024GrpcCommentVoteExist\022\032.bb" +
-      "proto.PBetchCommentVote\032\037.bbproto.PBetch" +
-      "CommentVoteExist\022>\n\021GrpcGetCommentCnt\022\024." +
-      "bbproto.PStringList\032\023.bbproto.PInt32List" +
-      "\022C\n\026GrpcGetCommentReplyCnt\022\024.bbproto.PSt" +
-      "ringList\032\023.bbproto.PInt32List\022C\n\017GrpcLoa" +
-      "dComment\022\026.bbproto.PCommentParam\032\030.bbpro" +
-      "to.PCommentExtList\022Q\n\026GrpcLoadCommentCom" +
-      "ment\022\035.bbproto.PCommentCommentParam\032\030.bb",
-      "proto.PCommentExtListB*\n\026com.blemobi.sep" +
-      ".probufB\020CommentApiProtosb\006proto3"
+      "\022\016\n\006offset\030\002 \001(\005\022\r\n\005count\030\003 \001(\005\"-\n\020PQuer" +
+      "yByIdsParam\022\014\n\004uuid\030\001 \001(\t\022\013\n\003ids\030\002 \003(\t2\227" +
+      "\005\n\014IGrpcComment\022A\n\013GrpcComment\022\033.bbproto" +
+      ".PClientCommentList\032\025.bbproto.PInt32Sing" +
+      "le\022F\n\020GrpcCommentReply\022\033.bbproto.PClient",
+      "CommentList\032\025.bbproto.PInt32Single\022>\n\017Gr" +
+      "pcCommentVote\022\032.bbproto.PBetchCommentVot" +
+      "e\032\017.bbproto.PEmpty\022S\n\024GrpcCommentVoteExi" +
+      "st\022\032.bbproto.PBetchCommentVote\032\037.bbproto" +
+      ".PBetchCommentVoteExist\022>\n\021GrpcGetCommen" +
+      "tCnt\022\024.bbproto.PStringList\032\023.bbproto.PIn" +
+      "t32List\022C\n\026GrpcGetCommentReplyCnt\022\024.bbpr" +
+      "oto.PStringList\032\023.bbproto.PInt32List\022C\n\017" +
+      "GrpcLoadComment\022\026.bbproto.PCommentParam\032" +
+      "\030.bbproto.PCommentExtList\022Q\n\026GrpcLoadCom",
+      "mentComment\022\035.bbproto.PCommentCommentPar" +
+      "am\032\030.bbproto.PCommentExtList\022J\n\023GrpcGetC" +
+      "ommentByIds\022\031.bbproto.PQueryByIdsParam\032\030" +
+      ".bbproto.PCommentExtListB*\n\026com.blemobi." +
+      "sep.probufB\020CommentApiProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1548,6 +2305,12 @@ public final class CommentApiProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PCommentCommentParam_descriptor,
         new java.lang.String[] { "Cid", "Offset", "Count", });
+    internal_static_bbproto_PQueryByIdsParam_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_bbproto_PQueryByIdsParam_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PQueryByIdsParam_descriptor,
+        new java.lang.String[] { "Uuid", "Ids", });
     com.blemobi.sep.probuf.CommentProtos.getDescriptor();
     com.blemobi.sep.probuf.ResultProtos.getDescriptor();
     com.blemobi.sep.probuf.CommonApiProtos.getDescriptor();

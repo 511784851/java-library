@@ -89,7 +89,7 @@ public final class ConsulClientMgr {
         }
         log.info("consul client host:" + host + ", port:" + port + " initialed");
         IS_INITIAL = true;
-        new Thread(new HeatBeatThread()).start();
+        new Thread(new HeartBeatThread()).start();
     }
 
     public static void initial(String[] args, String serviceNm, String host) {

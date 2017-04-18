@@ -38,9 +38,9 @@ import lombok.extern.log4j.Log4j;
  * @version 1.0.0
  */
 @Log4j
-public class HeatBeatThread implements Runnable {
+public class HeartBeatThread implements Runnable {
 
-    private static long millis = 1 * 1000;
+    private static long millis = 5 * 1000;
     private static List<ConsulKvChangeListener> listener = new ArrayList<ConsulKvChangeListener>();
     private static Map<String, String> values = new HashMap<String, String>();
 
