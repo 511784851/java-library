@@ -25,7 +25,7 @@ public class OssHttpClient extends BaseHttpClient {
 	 */
 	public PMessage getDownloadurls(String filenames) throws IOException {
 		super.basePath = new StringBuffer("/oss/downloadurls?from=");
-		super.basePath.append(JettyServer.getServerName()).append("&bucket=0").append("&objectkeys=").append(filenames);
+		super.basePath.append(JettyServer.getServerName()).append("&bucket=1").append("&objectkeys=").append(filenames);
 		return super.getMethod();
 	}
 
