@@ -3168,6 +3168,15 @@ public final class NewsProtos {
      * </pre>
      */
     com.blemobi.sep.probuf.NewsProtos.PLabelListOrBuilder getLabelListOrBuilder();
+
+    /**
+     * <code>optional int32 followShip = 10;</code>
+     *
+     * <pre>
+     *关注关系, 0:无关注关系, 1: 访客被作者关注, 2: 访客关注了作者
+     * </pre>
+     */
+    int getFollowShip();
   }
   /**
    * Protobuf type {@code bbproto.PPostState}
@@ -3191,6 +3200,7 @@ public final class NewsProtos {
       isTop_ = false;
       approval_ = 0L;
       canDelete_ = false;
+      followShip_ = 0;
     }
 
     @java.lang.Override
@@ -3258,6 +3268,11 @@ public final class NewsProtos {
                 labelList_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 80: {
+
+              followShip_ = input.readInt32();
               break;
             }
           }
@@ -3395,6 +3410,19 @@ public final class NewsProtos {
       return getLabelList();
     }
 
+    public static final int FOLLOWSHIP_FIELD_NUMBER = 10;
+    private int followShip_;
+    /**
+     * <code>optional int32 followShip = 10;</code>
+     *
+     * <pre>
+     *关注关系, 0:无关注关系, 1: 访客被作者关注, 2: 访客关注了作者
+     * </pre>
+     */
+    public int getFollowShip() {
+      return followShip_;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -3427,6 +3455,9 @@ public final class NewsProtos {
       }
       if (labelList_ != null) {
         output.writeMessage(9, getLabelList());
+      }
+      if (followShip_ != 0) {
+        output.writeInt32(10, followShip_);
       }
     }
 
@@ -3462,6 +3493,10 @@ public final class NewsProtos {
       if (labelList_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getLabelList());
+      }
+      if (followShip_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(10, followShip_);
       }
       memoizedSize = size;
       return size;
@@ -3596,6 +3631,8 @@ public final class NewsProtos {
           labelList_ = null;
           labelListBuilder_ = null;
         }
+        followShip_ = 0;
+
         return this;
       }
 
@@ -3629,6 +3666,7 @@ public final class NewsProtos {
         } else {
           result.labelList_ = labelListBuilder_.build();
         }
+        result.followShip_ = followShip_;
         onBuilt();
         return result;
       }
@@ -3664,6 +3702,9 @@ public final class NewsProtos {
         }
         if (other.hasLabelList()) {
           mergeLabelList(other.getLabelList());
+        }
+        if (other.getFollowShip() != 0) {
+          setFollowShip(other.getFollowShip());
         }
         onChanged();
         return this;
@@ -4070,6 +4111,44 @@ public final class NewsProtos {
           labelList_ = null;
         }
         return labelListBuilder_;
+      }
+
+      private int followShip_ ;
+      /**
+       * <code>optional int32 followShip = 10;</code>
+       *
+       * <pre>
+       *关注关系, 0:无关注关系, 1: 访客被作者关注, 2: 访客关注了作者
+       * </pre>
+       */
+      public int getFollowShip() {
+        return followShip_;
+      }
+      /**
+       * <code>optional int32 followShip = 10;</code>
+       *
+       * <pre>
+       *关注关系, 0:无关注关系, 1: 访客被作者关注, 2: 访客关注了作者
+       * </pre>
+       */
+      public Builder setFollowShip(int value) {
+        
+        followShip_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 followShip = 10;</code>
+       *
+       * <pre>
+       *关注关系, 0:无关注关系, 1: 访客被作者关注, 2: 访客关注了作者
+       * </pre>
+       */
+      public Builder clearFollowShip() {
+        
+        followShip_ = 0;
+        onChanged();
+        return this;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -33324,90 +33403,90 @@ public final class NewsProtos {
       "\003\022\022\n\nmodifyTime\030\004 \001(\003\"k\n\rPPostStatistc\022\022" +
       "\n\ncommentCnt\030\001 \001(\003\022\022\n\ncollectCnt\030\002 \001(\003\022\017",
       "\n\007voteCnt\030\003 \001(\003\022\020\n\010shareCnt\030\004 \001(\003\022\017\n\007vie" +
-      "wCnt\030\005 \001(\003\"\234\001\n\nPPostState\022\020\n\010isDelete\030\001 " +
+      "wCnt\030\005 \001(\003\"\260\001\n\nPPostState\022\020\n\010isDelete\030\001 " +
       "\001(\010\022\r\n\005voted\030\003 \001(\010\022\021\n\tcollected\030\004 \001(\010\022\r\n" +
       "\005isTop\030\005 \001(\010\022\020\n\010approval\030\006 \001(\003\022\021\n\tcanDel" +
       "ete\030\010 \001(\010\022&\n\tlabelList\030\t \001(\0132\023.bbproto.P" +
-      "LabelList\"\032\n\nPLabelList\022\014\n\004List\030\001 \003(\005\"1\n" +
-      "\rPPostViewList\022 \n\004list\030\001 \003(\0132\022.bbproto.P" +
-      "PostView\"\203\003\n\tPPostView\022\n\n\002id\030\001 \001(\003\022 \n\004ty" +
-      "pe\030\002 \001(\0162\022.bbproto.EPostType\022\020\n\010position" +
-      "\030\003 \001(\t\022\014\n\004time\030\004 \001(\003\022\022\n\nmodifyTime\030\005 \001(\003",
-      "\022\022\n\ndeleteTime\030\006 \001(\003\022\"\n\006author\030\007 \001(\0132\022.b" +
-      "bproto.PUserBase\022*\n\tcommunity\030\010 \001(\0132\027.bb" +
-      "proto.PCommunityBase\022(\n\010contents\030\t \001(\0132\026" +
-      ".bbproto.PResourceList\022%\n\007atUsers\030\n \001(\0132" +
-      "\024.bbproto.PAtUserList\022(\n\010statistc\030\013 \001(\0132" +
-      "\026.bbproto.PPostStatistc\022\"\n\005state\030\014 \001(\0132\023" +
-      ".bbproto.PPostState\022\021\n\tIsPreView\030\r \001(\010\"1" +
-      "\n\rPPostInfoList\022 \n\004list\030\001 \003(\0132\022.bbproto." +
-      "PPostInfo\"\237\005\n\tPPostInfo\022\n\n\002id\030\001 \001(\003\022\014\n\004u" +
-      "uid\030\002 \001(\t\022\020\n\010userName\030\003 \001(\t\022\020\n\010userHead\030",
-      "\004 \001(\t\022\017\n\007content\030\005 \001(\t\022\017\n\007srcType\030\006 \001(\t\022" +
-      "\037\n\006images\030\007 \003(\0132\017.bbproto.PImage\022\036\n\005vide" +
-      "o\030\010 \001(\0132\017.bbproto.PVideo\022\036\n\005audio\030\t \001(\0132" +
-      "\017.bbproto.PAudio\022\022\n\npubishTime\030\013 \001(\003\022\020\n\010" +
-      "position\030\014 \001(\t\022\014\n\004self\030\016 \001(\010\022\021\n\tcollecte" +
-      "d\030\017 \001(\010\022\022\n\ncommentCnt\030\020 \001(\003\022\022\n\ncollectCn" +
-      "t\030\021 \001(\003\022\017\n\007voteCnt\030\022 \001(\003\022\014\n\004vote\030\023 \001(\010\022%" +
-      "\n\007atusers\030\024 \001(\0132\024.bbproto.PAtUserList\022\020\n" +
-      "\010IsDelete\030\025 \001(\010\022\016\n\006IsHide\030\026 \001(\010\022\021\n\tlevel" +
-      "type\030\030 \001(\005\022\021\n\tIsPreView\030\031 \001(\010\022#\n\007refPost",
-      "\030\032 \001(\0132\022.bbproto.PPostInfo\022\020\n\010editTime\030\033" +
-      " \001(\003\022\017\n\007delTime\030\034 \001(\003\022\016\n\006RefCnt\030\035 \001(\003\022&\n" +
-      "\thyperLink\030\036 \001(\0132\023.bbproto.PHyperLink\022\r\n" +
-      "\005title\030\037 \001(\t\022\020\n\010videoCnt\030  \001(\005\022\020\n\010imageC" +
-      "nt\030! \001(\005\022\020\n\010audioCnt\030\" \001(\005\022\017\n\007viewCnt\030# " +
-      "\001(\005\"-\n\013PAtUserList\022\036\n\004list\030\001 \003(\0132\020.bbpro" +
-      "to.PAtUser\"8\n\007PAtUser\022\014\n\004uuid\030\001 \001(\t\022\020\n\010n" +
-      "ickName\030\002 \001(\t\022\r\n\005level\030\003 \001(\005\"[\n\006PImage\022\013" +
-      "\n\003url\030\001 \001(\t\022$\n\004Tags\030\002 \001(\0132\026.bbproto.PIma" +
-      "geTagList\022\021\n\tthumbnail\030\003 \001(\t\022\013\n\003des\030\004 \001(",
-      "\t\"c\n\006PVideo\022\013\n\003url\030\001 \001(\t\022\013\n\003img\030\002 \001(\t\022 \n" +
-      "\004tags\030\003 \003(\0132\022.bbproto.PVideoTag\022\017\n\007expir" +
-      "es\030\004 \001(\003\022\014\n\004type\030\005 \001(\005\"6\n\006PAudio\022\013\n\003url\030" +
-      "\001 \001(\t\022\016\n\006length\030\002 \001(\005\022\017\n\007expires\030\003 \001(\003\"9" +
-      "\n\nPHyperLink\022\013\n\003url\030\001 \001(\t\022\020\n\010nickName\030\002 " +
-      "\001(\t\022\014\n\004uuid\030\003 \001(\t\"/\n\tPVideoTag\022\t\n\001x\030\001 \001(" +
-      "\002\022\t\n\001y\030\002 \001(\002\022\014\n\004text\030\003 \001(\t\"\266\001\n\016PRecommen" +
-      "dUser\022\014\n\004uuid\030\006 \001(\t\022\020\n\010username\030\007 \001(\t\022\020\n" +
-      "\010nickname\030\010 \001(\t\022\022\n\nheadImgURL\030\t \001(\t\022\016\n\006g" +
-      "ender\030\n \001(\005\022\027\n\017membershipLevel\030\013 \001(\005\022\022\n\n",
-      "followship\030\014 \001(\005\022\016\n\006friend\030\r \001(\010\022\021\n\tleve" +
-      "ltype\030\016 \001(\005\"I\n\021PFollowOrFansList\022%\n\004list" +
-      "\030\001 \003(\0132\027.bbproto.PRecommendUser\022\r\n\005index" +
-      "\030\002 \001(\005\"\245\001\n\020PPersonStatistic\022\021\n\tfriendCnt" +
-      "\030\001 \001(\005\022\021\n\tfollowCnt\030\002 \001(\005\022\017\n\007fansCnt\030\003 \001" +
-      "(\005\022\017\n\007textCnt\030\004 \001(\005\022\020\n\010imageCnt\030\005 \001(\005\022\020\n" +
-      "\010audioCnt\030\006 \001(\005\022\020\n\010videoCnt\030\007 \001(\005\022\023\n\013Com" +
-      "munityID\030\010 \001(\t\"T\n\020PNewsUserProfile\022\034\n\004us" +
-      "er\030\001 \001(\0132\016.bbproto.PUser\022\022\n\nfollowship\030\002" +
-      " \001(\005\022\016\n\006friend\030\003 \001(\010\"1\n\rPRelationList\022 \n",
-      "\004list\030\001 \003(\0132\022.bbproto.PRelation\"s\n\tPRela" +
-      "tion\022\014\n\004ship\030\001 \001(\005\022\r\n\005uuidA\030\002 \001(\t\022\r\n\005uui" +
-      "dB\030\003 \001(\t\022\r\n\005folsA\030\004 \001(\005\022\r\n\005fansA\030\005 \001(\005\022\r" +
-      "\n\005folsB\030\006 \001(\005\022\r\n\005fansB\030\007 \001(\005\"Y\n\010PSubject" +
-      "\022\n\n\002ID\030\002 \001(\t\022\014\n\004Name\030\003 \001(\t\022\017\n\007HeadImg\030\004 " +
-      "\001(\t\022\022\n\nIsFollowed\030\005 \001(\010\022\016\n\006IsSelf\030\006 \001(\010\"" +
-      "/\n\014PSubjectList\022\037\n\004List\030\002 \003(\0132\021.bbproto." +
-      "PSubject\"c\n\022PSubjectSearchList\022$\n\tMySubj" +
-      "ect\030\002 \003(\0132\021.bbproto.PSubject\022\'\n\014OtherSub" +
-      "ject\030\003 \003(\0132\021.bbproto.PSubject\"*\n\014PStrQue",
-      "ryRet\022\014\n\004Next\030\001 \001(\005\022\014\n\004List\030\002 \003(\t\"d\n\016PCa" +
-      "nAtUserList\022&\n\006VOList\030\001 \001(\0132\026.bbproto.PU" +
-      "serBaseList\022*\n\nFriendList\030\002 \001(\0132\026.bbprot" +
-      "o.PUserBaseList\"!\n\021PTimelineRdsStore\022\014\n\004" +
-      "List\030\001 \003(\t\"4\n\020PBetchVoteAction\022\016\n\006postId" +
-      "\030\001 \001(\t\022\020\n\010uuidList\030\002 \003(\t\">\n\016PNewsVoteExi" +
-      "st\022\n\n\002id\030\001 \001(\003\022\017\n\007hasVote\030\002 \003(\010\022\017\n\007VoteC" +
-      "nt\030\003 \001(\005\"H\n\022PBetchFollowAction\022\022\n\naction" +
-      "Type\030\001 \001(\005\022\014\n\004uuid\030\002 \001(\t\022\020\n\010uuidList\030\003 \003" +
-      "(\t\"D\n\020PNewsFollowExist\022\014\n\004uuid\030\001 \001(\t\022\021\n\t",
-      "hasFollow\030\002 \003(\010\022\017\n\007fansCnt\030\003 \001(\005*_\n\tEPos" +
-      "tType\022\010\n\004Text\020\000\022\t\n\005Image\020\001\022\t\n\005Audio\020\002\022\t\n" +
-      "\005Video\020\003\022\n\n\006Notice\020\004\022\014\n\010NewsFeed\020\005\022\r\n\tAn" +
-      "onymous\020\006B$\n\026com.blemobi.sep.probufB\nNew" +
-      "sProtosb\006proto3"
+      "LabelList\022\022\n\nfollowShip\030\n \001(\005\"\032\n\nPLabelL" +
+      "ist\022\014\n\004List\030\001 \003(\005\"1\n\rPPostViewList\022 \n\004li" +
+      "st\030\001 \003(\0132\022.bbproto.PPostView\"\203\003\n\tPPostVi" +
+      "ew\022\n\n\002id\030\001 \001(\003\022 \n\004type\030\002 \001(\0162\022.bbproto.E" +
+      "PostType\022\020\n\010position\030\003 \001(\t\022\014\n\004time\030\004 \001(\003",
+      "\022\022\n\nmodifyTime\030\005 \001(\003\022\022\n\ndeleteTime\030\006 \001(\003" +
+      "\022\"\n\006author\030\007 \001(\0132\022.bbproto.PUserBase\022*\n\t" +
+      "community\030\010 \001(\0132\027.bbproto.PCommunityBase" +
+      "\022(\n\010contents\030\t \001(\0132\026.bbproto.PResourceLi" +
+      "st\022%\n\007atUsers\030\n \001(\0132\024.bbproto.PAtUserLis" +
+      "t\022(\n\010statistc\030\013 \001(\0132\026.bbproto.PPostStati" +
+      "stc\022\"\n\005state\030\014 \001(\0132\023.bbproto.PPostState\022" +
+      "\021\n\tIsPreView\030\r \001(\010\"1\n\rPPostInfoList\022 \n\004l" +
+      "ist\030\001 \003(\0132\022.bbproto.PPostInfo\"\237\005\n\tPPostI" +
+      "nfo\022\n\n\002id\030\001 \001(\003\022\014\n\004uuid\030\002 \001(\t\022\020\n\010userNam",
+      "e\030\003 \001(\t\022\020\n\010userHead\030\004 \001(\t\022\017\n\007content\030\005 \001" +
+      "(\t\022\017\n\007srcType\030\006 \001(\t\022\037\n\006images\030\007 \003(\0132\017.bb" +
+      "proto.PImage\022\036\n\005video\030\010 \001(\0132\017.bbproto.PV" +
+      "ideo\022\036\n\005audio\030\t \001(\0132\017.bbproto.PAudio\022\022\n\n" +
+      "pubishTime\030\013 \001(\003\022\020\n\010position\030\014 \001(\t\022\014\n\004se" +
+      "lf\030\016 \001(\010\022\021\n\tcollected\030\017 \001(\010\022\022\n\ncommentCn" +
+      "t\030\020 \001(\003\022\022\n\ncollectCnt\030\021 \001(\003\022\017\n\007voteCnt\030\022" +
+      " \001(\003\022\014\n\004vote\030\023 \001(\010\022%\n\007atusers\030\024 \001(\0132\024.bb" +
+      "proto.PAtUserList\022\020\n\010IsDelete\030\025 \001(\010\022\016\n\006I" +
+      "sHide\030\026 \001(\010\022\021\n\tleveltype\030\030 \001(\005\022\021\n\tIsPreV",
+      "iew\030\031 \001(\010\022#\n\007refPost\030\032 \001(\0132\022.bbproto.PPo" +
+      "stInfo\022\020\n\010editTime\030\033 \001(\003\022\017\n\007delTime\030\034 \001(" +
+      "\003\022\016\n\006RefCnt\030\035 \001(\003\022&\n\thyperLink\030\036 \001(\0132\023.b" +
+      "bproto.PHyperLink\022\r\n\005title\030\037 \001(\t\022\020\n\010vide" +
+      "oCnt\030  \001(\005\022\020\n\010imageCnt\030! \001(\005\022\020\n\010audioCnt" +
+      "\030\" \001(\005\022\017\n\007viewCnt\030# \001(\005\"-\n\013PAtUserList\022\036" +
+      "\n\004list\030\001 \003(\0132\020.bbproto.PAtUser\"8\n\007PAtUse" +
+      "r\022\014\n\004uuid\030\001 \001(\t\022\020\n\010nickName\030\002 \001(\t\022\r\n\005lev" +
+      "el\030\003 \001(\005\"[\n\006PImage\022\013\n\003url\030\001 \001(\t\022$\n\004Tags\030" +
+      "\002 \001(\0132\026.bbproto.PImageTagList\022\021\n\tthumbna",
+      "il\030\003 \001(\t\022\013\n\003des\030\004 \001(\t\"c\n\006PVideo\022\013\n\003url\030\001" +
+      " \001(\t\022\013\n\003img\030\002 \001(\t\022 \n\004tags\030\003 \003(\0132\022.bbprot" +
+      "o.PVideoTag\022\017\n\007expires\030\004 \001(\003\022\014\n\004type\030\005 \001" +
+      "(\005\"6\n\006PAudio\022\013\n\003url\030\001 \001(\t\022\016\n\006length\030\002 \001(" +
+      "\005\022\017\n\007expires\030\003 \001(\003\"9\n\nPHyperLink\022\013\n\003url\030" +
+      "\001 \001(\t\022\020\n\010nickName\030\002 \001(\t\022\014\n\004uuid\030\003 \001(\t\"/\n" +
+      "\tPVideoTag\022\t\n\001x\030\001 \001(\002\022\t\n\001y\030\002 \001(\002\022\014\n\004text" +
+      "\030\003 \001(\t\"\266\001\n\016PRecommendUser\022\014\n\004uuid\030\006 \001(\t\022" +
+      "\020\n\010username\030\007 \001(\t\022\020\n\010nickname\030\010 \001(\t\022\022\n\nh" +
+      "eadImgURL\030\t \001(\t\022\016\n\006gender\030\n \001(\005\022\027\n\017membe",
+      "rshipLevel\030\013 \001(\005\022\022\n\nfollowship\030\014 \001(\005\022\016\n\006" +
+      "friend\030\r \001(\010\022\021\n\tleveltype\030\016 \001(\005\"I\n\021PFoll" +
+      "owOrFansList\022%\n\004list\030\001 \003(\0132\027.bbproto.PRe" +
+      "commendUser\022\r\n\005index\030\002 \001(\005\"\245\001\n\020PPersonSt" +
+      "atistic\022\021\n\tfriendCnt\030\001 \001(\005\022\021\n\tfollowCnt\030" +
+      "\002 \001(\005\022\017\n\007fansCnt\030\003 \001(\005\022\017\n\007textCnt\030\004 \001(\005\022" +
+      "\020\n\010imageCnt\030\005 \001(\005\022\020\n\010audioCnt\030\006 \001(\005\022\020\n\010v" +
+      "ideoCnt\030\007 \001(\005\022\023\n\013CommunityID\030\010 \001(\t\"T\n\020PN" +
+      "ewsUserProfile\022\034\n\004user\030\001 \001(\0132\016.bbproto.P" +
+      "User\022\022\n\nfollowship\030\002 \001(\005\022\016\n\006friend\030\003 \001(\010",
+      "\"1\n\rPRelationList\022 \n\004list\030\001 \003(\0132\022.bbprot" +
+      "o.PRelation\"s\n\tPRelation\022\014\n\004ship\030\001 \001(\005\022\r" +
+      "\n\005uuidA\030\002 \001(\t\022\r\n\005uuidB\030\003 \001(\t\022\r\n\005folsA\030\004 " +
+      "\001(\005\022\r\n\005fansA\030\005 \001(\005\022\r\n\005folsB\030\006 \001(\005\022\r\n\005fan" +
+      "sB\030\007 \001(\005\"Y\n\010PSubject\022\n\n\002ID\030\002 \001(\t\022\014\n\004Name" +
+      "\030\003 \001(\t\022\017\n\007HeadImg\030\004 \001(\t\022\022\n\nIsFollowed\030\005 " +
+      "\001(\010\022\016\n\006IsSelf\030\006 \001(\010\"/\n\014PSubjectList\022\037\n\004L" +
+      "ist\030\002 \003(\0132\021.bbproto.PSubject\"c\n\022PSubject" +
+      "SearchList\022$\n\tMySubject\030\002 \003(\0132\021.bbproto." +
+      "PSubject\022\'\n\014OtherSubject\030\003 \003(\0132\021.bbproto",
+      ".PSubject\"*\n\014PStrQueryRet\022\014\n\004Next\030\001 \001(\005\022" +
+      "\014\n\004List\030\002 \003(\t\"d\n\016PCanAtUserList\022&\n\006VOLis" +
+      "t\030\001 \001(\0132\026.bbproto.PUserBaseList\022*\n\nFrien" +
+      "dList\030\002 \001(\0132\026.bbproto.PUserBaseList\"!\n\021P" +
+      "TimelineRdsStore\022\014\n\004List\030\001 \003(\t\"4\n\020PBetch" +
+      "VoteAction\022\016\n\006postId\030\001 \001(\t\022\020\n\010uuidList\030\002" +
+      " \003(\t\">\n\016PNewsVoteExist\022\n\n\002id\030\001 \001(\003\022\017\n\007ha" +
+      "sVote\030\002 \003(\010\022\017\n\007VoteCnt\030\003 \001(\005\"H\n\022PBetchFo" +
+      "llowAction\022\022\n\nactionType\030\001 \001(\005\022\014\n\004uuid\030\002" +
+      " \001(\t\022\020\n\010uuidList\030\003 \003(\t\"D\n\020PNewsFollowExi",
+      "st\022\014\n\004uuid\030\001 \001(\t\022\021\n\thasFollow\030\002 \003(\010\022\017\n\007f" +
+      "ansCnt\030\003 \001(\005*_\n\tEPostType\022\010\n\004Text\020\000\022\t\n\005I" +
+      "mage\020\001\022\t\n\005Audio\020\002\022\t\n\005Video\020\003\022\n\n\006Notice\020\004" +
+      "\022\014\n\010NewsFeed\020\005\022\r\n\tAnonymous\020\006B$\n\026com.ble" +
+      "mobi.sep.probufB\nNewsProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -33447,7 +33526,7 @@ public final class NewsProtos {
     internal_static_bbproto_PPostState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PPostState_descriptor,
-        new java.lang.String[] { "IsDelete", "Voted", "Collected", "IsTop", "Approval", "CanDelete", "LabelList", });
+        new java.lang.String[] { "IsDelete", "Voted", "Collected", "IsTop", "Approval", "CanDelete", "LabelList", "FollowShip", });
     internal_static_bbproto_PLabelList_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_bbproto_PLabelList_fieldAccessorTable = new

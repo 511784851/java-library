@@ -4569,6 +4569,24 @@ public final class NetdiskProtos {
      * </pre>
      */
     int getCommunityStatus();
+
+    /**
+     * <code>optional int32 resourceType = 30;</code>
+     *
+     * <pre>
+     * 资源类型 3; //本地视频,4; //第三方视频,5; //长视频, 6,原创录播
+     * </pre>
+     */
+    int getResourceType();
+
+    /**
+     * <code>optional int32 followShip = 31;</code>
+     *
+     * <pre>
+     *关注关系, 0:无关注关系, 1: 访客被作者关注, 2: 访客关注了作者
+     * </pre>
+     */
+    int getFollowShip();
   }
   /**
    * Protobuf type {@code bbproto.PNetFile}
@@ -4614,6 +4632,8 @@ public final class NetdiskProtos {
       collected_ = false;
       canDelete_ = false;
       communityStatus_ = 0;
+      resourceType_ = 0;
+      followShip_ = 0;
     }
 
     @java.lang.Override
@@ -4804,6 +4824,16 @@ public final class NetdiskProtos {
             case 232: {
 
               communityStatus_ = input.readInt32();
+              break;
+            }
+            case 240: {
+
+              resourceType_ = input.readInt32();
+              break;
+            }
+            case 248: {
+
+              followShip_ = input.readInt32();
               break;
             }
           }
@@ -5604,6 +5634,32 @@ public final class NetdiskProtos {
       return communityStatus_;
     }
 
+    public static final int RESOURCETYPE_FIELD_NUMBER = 30;
+    private int resourceType_;
+    /**
+     * <code>optional int32 resourceType = 30;</code>
+     *
+     * <pre>
+     * 资源类型 3; //本地视频,4; //第三方视频,5; //长视频, 6,原创录播
+     * </pre>
+     */
+    public int getResourceType() {
+      return resourceType_;
+    }
+
+    public static final int FOLLOWSHIP_FIELD_NUMBER = 31;
+    private int followShip_;
+    /**
+     * <code>optional int32 followShip = 31;</code>
+     *
+     * <pre>
+     *关注关系, 0:无关注关系, 1: 访客被作者关注, 2: 访客关注了作者
+     * </pre>
+     */
+    public int getFollowShip() {
+      return followShip_;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -5702,6 +5758,12 @@ public final class NetdiskProtos {
       }
       if (communityStatus_ != 0) {
         output.writeInt32(29, communityStatus_);
+      }
+      if (resourceType_ != 0) {
+        output.writeInt32(30, resourceType_);
+      }
+      if (followShip_ != 0) {
+        output.writeInt32(31, followShip_);
       }
     }
 
@@ -5812,6 +5874,14 @@ public final class NetdiskProtos {
       if (communityStatus_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(29, communityStatus_);
+      }
+      if (resourceType_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(30, resourceType_);
+      }
+      if (followShip_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(31, followShip_);
       }
       memoizedSize = size;
       return size;
@@ -5990,6 +6060,10 @@ public final class NetdiskProtos {
 
         communityStatus_ = 0;
 
+        resourceType_ = 0;
+
+        followShip_ = 0;
+
         return this;
       }
 
@@ -6045,6 +6119,8 @@ public final class NetdiskProtos {
         result.collected_ = collected_;
         result.canDelete_ = canDelete_;
         result.communityStatus_ = communityStatus_;
+        result.resourceType_ = resourceType_;
+        result.followShip_ = followShip_;
         onBuilt();
         return result;
       }
@@ -6159,6 +6235,12 @@ public final class NetdiskProtos {
         }
         if (other.getCommunityStatus() != 0) {
           setCommunityStatus(other.getCommunityStatus());
+        }
+        if (other.getResourceType() != 0) {
+          setResourceType(other.getResourceType());
+        }
+        if (other.getFollowShip() != 0) {
+          setFollowShip(other.getFollowShip());
         }
         onChanged();
         return this;
@@ -8065,6 +8147,82 @@ public final class NetdiskProtos {
         onChanged();
         return this;
       }
+
+      private int resourceType_ ;
+      /**
+       * <code>optional int32 resourceType = 30;</code>
+       *
+       * <pre>
+       * 资源类型 3; //本地视频,4; //第三方视频,5; //长视频, 6,原创录播
+       * </pre>
+       */
+      public int getResourceType() {
+        return resourceType_;
+      }
+      /**
+       * <code>optional int32 resourceType = 30;</code>
+       *
+       * <pre>
+       * 资源类型 3; //本地视频,4; //第三方视频,5; //长视频, 6,原创录播
+       * </pre>
+       */
+      public Builder setResourceType(int value) {
+        
+        resourceType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 resourceType = 30;</code>
+       *
+       * <pre>
+       * 资源类型 3; //本地视频,4; //第三方视频,5; //长视频, 6,原创录播
+       * </pre>
+       */
+      public Builder clearResourceType() {
+        
+        resourceType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int followShip_ ;
+      /**
+       * <code>optional int32 followShip = 31;</code>
+       *
+       * <pre>
+       *关注关系, 0:无关注关系, 1: 访客被作者关注, 2: 访客关注了作者
+       * </pre>
+       */
+      public int getFollowShip() {
+        return followShip_;
+      }
+      /**
+       * <code>optional int32 followShip = 31;</code>
+       *
+       * <pre>
+       *关注关系, 0:无关注关系, 1: 访客被作者关注, 2: 访客关注了作者
+       * </pre>
+       */
+      public Builder setFollowShip(int value) {
+        
+        followShip_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 followShip = 31;</code>
+       *
+       * <pre>
+       *关注关系, 0:无关注关系, 1: 访客被作者关注, 2: 访客关注了作者
+       * </pre>
+       */
+      public Builder clearFollowShip() {
+        
+        followShip_ = 0;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return this;
@@ -8932,7 +9090,7 @@ public final class NetdiskProtos {
       "\020PListNetFileInfo\022\'\n\010netFiles\030\001 \003(\0132\025.bb" +
       "proto.PNetFileInfo\022\020\n\010DiskSize\030\002 \001(\t\"\"\n\r" +
       "PBuildUrlInfo\022\021\n\tpublicURL\030\001 \001(\t\"\"\n\021PCom",
-      "munityCreator\022\r\n\005cUuid\030\001 \001(\t\"\261\004\n\010PNetFil" +
+      "munityCreator\022\r\n\005cUuid\030\001 \001(\t\"\333\004\n\010PNetFil" +
       "e\022\016\n\006fileId\030\001 \001(\t\022\023\n\013communityId\030\002 \001(\t\022\014" +
       "\n\004uuid\030\003 \001(\t\022\021\n\tobjectKey\030\004 \001(\t\022\013\n\003url\030\005" +
       " \001(\t\022\021\n\textension\030\006 \001(\t\022\020\n\010fileSize\030\007 \001(" +
@@ -8946,10 +9104,11 @@ public final class NetdiskProtos {
       "\026 \001(\005\022\021\n\tpalyTimes\030\027 \001(\005\022\016\n\006status\030\030 \001(\005" +
       "\022 \n\004user\030\031 \001(\0132\022.bbproto.PUserBase\022\r\n\005vo" +
       "ted\030\032 \001(\010\022\021\n\tcollected\030\033 \001(\010\022\021\n\tcanDelet" +
-      "e\030\034 \001(\010\022\027\n\017communityStatus\030\035 \001(\005\"D\n\014PNet" +
-      "Filelist\022\"\n\007netFile\030\001 \003(\0132\021.bbproto.PNet" +
-      "File\022\020\n\010DiskSize\030\002 \001(\005B\'\n\026com.blemobi.se" +
-      "p.probufB\rNetdiskProtosb\006proto3"
+      "e\030\034 \001(\010\022\027\n\017communityStatus\030\035 \001(\005\022\024\n\014reso" +
+      "urceType\030\036 \001(\005\022\022\n\nfollowShip\030\037 \001(\005\"D\n\014PN" +
+      "etFilelist\022\"\n\007netFile\030\001 \003(\0132\021.bbproto.PN" +
+      "etFile\022\020\n\010DiskSize\030\002 \001(\005B\'\n\026com.blemobi." +
+      "sep.probufB\rNetdiskProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8993,7 +9152,7 @@ public final class NetdiskProtos {
     internal_static_bbproto_PNetFile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PNetFile_descriptor,
-        new java.lang.String[] { "FileId", "CommunityId", "Uuid", "ObjectKey", "Url", "Extension", "FileSize", "FileDigest", "CreateTime", "TransferFlag", "ShareFlag", "ConserveFlag", "Title", "Desc", "Remark", "MiniObjectKey", "MiniUrl", "PostId", "CommentsCnt", "ThumbsupCnt", "PostTyp", "TipoffTimes", "PalyTimes", "Status", "User", "Voted", "Collected", "CanDelete", "CommunityStatus", });
+        new java.lang.String[] { "FileId", "CommunityId", "Uuid", "ObjectKey", "Url", "Extension", "FileSize", "FileDigest", "CreateTime", "TransferFlag", "ShareFlag", "ConserveFlag", "Title", "Desc", "Remark", "MiniObjectKey", "MiniUrl", "PostId", "CommentsCnt", "ThumbsupCnt", "PostTyp", "TipoffTimes", "PalyTimes", "Status", "User", "Voted", "Collected", "CanDelete", "CommunityStatus", "ResourceType", "FollowShip", });
     internal_static_bbproto_PNetFilelist_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_bbproto_PNetFilelist_fieldAccessorTable = new
