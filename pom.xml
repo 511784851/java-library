@@ -199,6 +199,21 @@
 			<artifactId>grpc-all</artifactId>
 			<version>1.1.2</version>
 		</dependency>
+		<dependency>
+			<groupId>io.grpc</groupId>
+			<artifactId>grpc-netty</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>io.grpc</groupId>
+			<artifactId>grpc-protobuf</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>io.grpc</groupId>
+			<artifactId>grpc-stub</artifactId>
+			<version>1.1.2</version>
+		</dependency>
 		<!-- other -->
 		<dependency>
 			<groupId>com.googlecode.json-simple</groupId>
@@ -247,26 +262,12 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<!-- 生成proto文件
-			<plugin>
-				<groupId>org.xolstice.maven.plugins</groupId>
-				<artifactId>protobuf-maven-plugin</artifactId>
-				<version>0.5.0</version>
-				<extensions>true</extensions>
-				<executions>
-					<execution>
-						<goals>
-							<goal>compile</goal>
-							<goal>compile-custom</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<protocArtifact>com.google.protobuf:protoc:3.0.0-beta-2:exe:${os.detected.classifier}</protocArtifact>
-					<pluginId>grpc-java</pluginId>
-					<pluginArtifact>io.grpc:protoc-gen-grpc-java:1.0.0:exe:${os.detected.classifier}</pluginArtifact>
-				</configuration> 
-			</plugin> -->
+			<!-- 生成proto文件 <plugin> <groupId>org.xolstice.maven.plugins</groupId> 
+				<artifactId>protobuf-maven-plugin</artifactId> <version>0.5.0</version> <extensions>true</extensions> 
+				<executions> <execution> <goals> <goal>compile</goal> <goal>compile-custom</goal> 
+				</goals> </execution> </executions> <configuration> <protocArtifact>com.google.protobuf:protoc:3.0.0-beta-2:exe:${os.detected.classifier}</protocArtifact> 
+				<pluginId>grpc-java</pluginId> <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.0.0:exe:${os.detected.classifier}</pluginArtifact> 
+				</configuration> </plugin> -->
 		</plugins>
 	</build>
 </project>
