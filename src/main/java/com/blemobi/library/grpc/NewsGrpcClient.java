@@ -20,10 +20,14 @@
  *****************************************************************/
 package com.blemobi.library.grpc;
 
+import java.util.List;
+
 import com.blemobi.sep.grpc.IGrpcNewsGrpc;
 import com.blemobi.sep.probuf.CommonApiProtos.PEmpty;
+import com.blemobi.sep.probuf.NewsApiProtos.EStateOperType;
 import com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam;
 import com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew;
+import com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam;
 import com.blemobi.sep.probuf.NewsProtos.PPostView;
 import com.blemobi.sep.probuf.NewsProtos.PPostViewList;
 import com.blemobi.sep.probuf.ResultProtos.PInt32List;
@@ -55,6 +59,22 @@ public class NewsGrpcClient extends BaseGRPCClient {
 				stub = IGrpcNewsGrpc.newBlockingStub(channel);
 				PPostViewList list = stub.grpcGetPostExtraInfo(param);
 				return list.getList(0);
+			}
+		});
+	}
+	
+	public void setPostState(List<Long> value){
+		if(value == null || value.isEmpty()){
+			log.debug("要设置为审核不通过的帖子ID为空");
+			return;
+		}
+		PSetPostStateParam param = PSetPostStateParam.newBuilder().addAllPostIds(value).setState(EStateOperType.OpReject).build();
+		this.execute(param, new GrpcCallback<Boolean>() {
+			@Override
+			public Boolean doGrpcRequest() {
+				stub = IGrpcNewsGrpc.newBlockingStub(channel);
+				stub.setPostState(param);
+				return true;
 			}
 		});
 	}
