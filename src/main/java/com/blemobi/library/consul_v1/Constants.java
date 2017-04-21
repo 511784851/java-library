@@ -63,7 +63,7 @@ public final class Constants {
     public static final class GRPC_KV_KEY {
 
         public static String getGRPCPortKey(String... param) {
-            String key = "blemobi/sep/global/" + ConsulClientMgr.getENV_TYPE() + "/{0}_grpc_port";
+            String key = "blemobi/sep/global/" + ConsulClientMgr.getENV_TYPE() + "/grpc/{0}";
             int idx = 0;
             for (String s : param) {
                 key = key.replace("{" + idx + "}", s);
