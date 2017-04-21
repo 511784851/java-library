@@ -92,10 +92,12 @@ public final class ConsulServiceMgr {
 
 	public static void registerServiceWithHealthChk(Integer port, String serviceId, Integer healthPort,
 			String serviceNm, List<String> tags) {
-		ConsulClient client = ConsulClientMgr.getConsulClient();
 		NewService newService = createService(port, serviceId, serviceNm, tags);
 		newService = serviceChkWithHttp(newService, healthPort, serviceNm);
-		client.agentServiceRegister(newService);
+		if(!"prod".equalsIgnoreCase(ConsulClientMgr.getENV_TYPE())){
+			ConsulClient client = ConsulClientMgr.getConsulClient();
+			client.agentServiceRegister(newService);
+		}
 	}
 
 	public static ServiceInfo getHealthlyServiceByNm(String serviceNm) {
