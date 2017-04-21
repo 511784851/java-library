@@ -206,7 +206,7 @@ public class DataPublishGrpcClient extends BaseGRPCClient {
 		return groupStringList;
 	}
 
-	public PStringList SearchUser(PStringSingle request) {
+	public PStringList SearchUser(PQueryUserParam request) {
 		PStringList stringList = this.execute(request, new GrpcCallback<PStringList>() {
 			@Override
 			public PStringList doGrpcRequest() {
