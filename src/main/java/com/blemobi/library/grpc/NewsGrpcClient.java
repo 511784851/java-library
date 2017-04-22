@@ -22,6 +22,8 @@ package com.blemobi.library.grpc;
 
 import java.util.List;
 
+import org.apache.commons.lang.StringUtils;
+
 import com.blemobi.sep.grpc.IGrpcNewsGrpc;
 import com.blemobi.sep.probuf.CommonApiProtos.PEmpty;
 import com.blemobi.sep.probuf.NewsApiProtos.EStateOperType;
@@ -68,6 +70,7 @@ public class NewsGrpcClient extends BaseGRPCClient {
 			log.debug("要设置为审核不通过的帖子ID为空");
 			return;
 		}
+		log.debug("设置为审核不通过的帖子ID->" + StringUtils.join(value, ","));
 		PSetPostStateParam param = PSetPostStateParam.newBuilder().addAllPostIds(value).setState(EStateOperType.OpReject).build();
 		this.execute(param, new GrpcCallback<Boolean>() {
 			@Override
