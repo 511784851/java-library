@@ -6,8 +6,6 @@
 	<artifactId>java-public-library</artifactId>
 	<version>1.5.43</version>
 	<packaging>jar</packaging>
-	<name>java-payment</name>
-	<url>http://maven.apache.org</url>
 
 	<properties>
 		<spring_version>4.3.6.RELEASE</spring_version>
