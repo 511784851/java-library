@@ -27,6 +27,7 @@ import org.apache.commons.lang.StringUtils;
 import com.blemobi.sep.grpc.IGrpcNewsGrpc;
 import com.blemobi.sep.probuf.CommonApiProtos.PEmpty;
 import com.blemobi.sep.probuf.NewsApiProtos.EStateOperType;
+import com.blemobi.sep.probuf.NewsApiProtos.PDeletePostsParam;
 import com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam;
 import com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew;
 import com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam;
@@ -52,6 +53,18 @@ public class NewsGrpcClient extends BaseGRPCClient {
 		super("news");
 	}
 
+	public void deletePost(String postId, String uuid) {
+		PDeletePostsParam param = PDeletePostsParam.newBuilder().setPostId(postId).setUuid(uuid).build();
+		this.execute(param, new GrpcCallback<Boolean>() {
+			@Override
+			public Boolean doGrpcRequest() {
+				stub = IGrpcNewsGrpc.newBlockingStub(channel);
+				stub.grpcDeletePost(param);
+				return true;
+			}
+		});
+	}
+	
 	public PPostView getPostExtraInfo(String postId, String uuid) {
 		PGetPostsParam param = PGetPostsParam.newBuilder().addPostIds(Long.parseLong(postId)).setUuid(uuid)
 				.setViewType(0).build();
