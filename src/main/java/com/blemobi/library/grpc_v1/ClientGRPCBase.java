@@ -49,9 +49,10 @@ public abstract class ClientGRPCBase {
 	protected Integer port;
 	protected List<ClientInterceptor> interceptors;
 	protected String from;
-
+	public ClientGRPCBase(){}
 	public ClientGRPCBase(String remoteSN, ClientInterceptor... interceptors) {
 		this.remoteSN = remoteSN;
+		this.interceptors = Arrays.asList(interceptors);
 	}
 
 	public ClientGRPCBase(String host, Integer port, String from, ClientInterceptor... interceptors) {

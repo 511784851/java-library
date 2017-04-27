@@ -1,12 +1,14 @@
 package com.blemobi.library.exception;
 
+import lombok.ToString;
+
 /**
  * 
  * @author 李子才<davis.lee@blemobi.com> 这是聊天系统的Exception的基础类，系统中的其他异常都从这类基础上继承下来。
  */
-
+@ToString
 @SuppressWarnings("serial")
-public class BaseException extends Exception {
+public class BaseException extends RuntimeException {
 
 	private int errorCode = 0;
 	private String errorMsg = null;

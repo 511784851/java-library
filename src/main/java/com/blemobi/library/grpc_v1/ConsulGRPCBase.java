@@ -20,6 +20,8 @@
  *****************************************************************/
 package com.blemobi.library.grpc_v1;
 
+import io.grpc.ClientInterceptor;
+
 /**
  * @ClassName ConsulGRPCBase
  * @Description TODO
@@ -29,8 +31,9 @@ package com.blemobi.library.grpc_v1;
  */
 
 public abstract class ConsulGRPCBase extends ClientGRPCBase {
-	public ConsulGRPCBase(String remoteSN) {
-		super(remoteSN);
+	public ConsulGRPCBase(){}
+	public ConsulGRPCBase(String remoteSN, ClientInterceptor... interceptors) {
+		super(remoteSN, interceptors);
 		initialChannelHostAndPort();
 	}
 	

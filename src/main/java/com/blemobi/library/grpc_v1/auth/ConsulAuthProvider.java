@@ -20,6 +20,11 @@
  *****************************************************************/
 package com.blemobi.library.grpc_v1.auth;
 
+import java.util.List;
+
+import com.blemobi.library.consul_v1.ConsulServiceMgr;
+import com.blemobi.library.consul_v1.ServiceInfo;
+
 import lombok.extern.log4j.Log4j;
 
 /**
@@ -30,16 +35,22 @@ import lombok.extern.log4j.Log4j;
  * @version 1.0.0
  */
 @Log4j
-public class DefaultAuthProvider implements AuthProvider {
+public class ConsulAuthProvider implements AuthProvider {
 
-	/* (非 Javadoc)
-	 * Description:
-	 * @see com.microservice.grpc.support.auth.AuthProvider#auth(java.lang.String)
-	 */
 	@Override
 	public Boolean auth(String from) {
-		log.debug("默认鉴权通过");
-		return true;
+		String[] froms = from.split(",");
+		if(froms.length != 2){
+			return false;
+		}
+		List<ServiceInfo> sList = ConsulServiceMgr.getHealthlyServicesByNm(froms[0]);
+		for(ServiceInfo info : sList){
+			if(info.getAddr().equals(froms[1])){
+				return true;
+			}
+		}
+		log.debug("在consul中没有找到FROM->" + from + "的服务");
+		return false;
 	}
 
 }

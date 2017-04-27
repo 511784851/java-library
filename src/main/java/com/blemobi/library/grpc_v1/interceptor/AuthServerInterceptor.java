@@ -65,9 +65,11 @@ public class AuthServerInterceptor implements ServerInterceptor {
 					call.close(Status.UNAUTHENTICATED.withDescription(UNAUTH_DESCRIPTION), headers);
 				}
 			} else {
+				log.warn("请求头没有包含from信息，鉴权没通过");
 				call.close(Status.UNAUTHENTICATED.withDescription(UNAUTH_DESCRIPTION), headers);
 			}
 		} else {
+			log.warn("没有设置请求头，鉴权没通过");
 			call.close(Status.UNAUTHENTICATED.withDescription(UNAUTH_DESCRIPTION), headers);
 		}
 		return next.startCall(new SimpleForwardingServerCall<ReqT, RespT>(call) {
@@ -77,10 +79,12 @@ public class AuthServerInterceptor implements ServerInterceptor {
 					Throwable t = status.getCause();
 					if (t instanceof BaseException) {
 						BaseException biz = (BaseException) t;
+						log.error("GRPC出现异常", biz);
 						super.close(Status.CANCELLED.withDescription(
 								String.format("code:%d,msg:%s", biz.getErrorCode(), biz.getErrorMsg())), metadata);
 						return;
 					} else {
+						log.error("GRPC出现运行时异常", t);
 						super.close(Status.INTERNAL.withDescription(UNKOWN_DESCRIPTION), metadata);
 						return;
 					}

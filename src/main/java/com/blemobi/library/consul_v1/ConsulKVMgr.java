@@ -79,6 +79,5 @@ public class ConsulKVMgr {
             return null;
         }
         return new String(Base64.getDecoder().decode((gv.getValue())));
-        //return gv.getDecodedValue();
     }
 }

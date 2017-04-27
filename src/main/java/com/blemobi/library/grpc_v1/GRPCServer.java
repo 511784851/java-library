@@ -29,6 +29,8 @@ import java.util.Set;
 import org.apache.commons.lang3.StringUtils;
 import org.reflections.Reflections;
 
+import com.blemobi.library.consul_v1.Constants;
+import com.blemobi.library.consul_v1.ConsulKVMgr;
 import com.blemobi.library.consul_v1.PropsUtils;
 import com.blemobi.library.grpc_v1.annotation.GRPCService;
 
@@ -48,7 +50,7 @@ import lombok.extern.log4j.Log4j;
  */
 @Log4j
 public final class GRPCServer {
-	private static final String GRPC_PORT = "grpc.server.port";
+	private static final String GRPC_PORT = "netdisk_grpc_port";
 	private static final String GRPC_BASE_PKG = "grpc.annotation.basepkg";
 	private static final List<BindableService> bsList = new ArrayList<BindableService>();
 	private static Server server;
@@ -65,7 +67,7 @@ public final class GRPCServer {
 		if (!annotated.isEmpty()) {
 			instance();
 		}
-		Integer port = PropsUtils.getInteger(GRPC_PORT);
+		Integer port = Integer.parseInt(ConsulKVMgr.getValue((Constants.GRPC_KV_KEY.getGRPCPortKey(GRPC_PORT))));
 		if (port == null || port < 1) {
 			log.warn("没有配置grpc端口号 grpc.server.port");
 			System.exit(0);
