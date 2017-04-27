@@ -50,13 +50,12 @@ import lombok.extern.log4j.Log4j;
  */
 @Log4j
 public final class GRPCServer {
-	private static final String GRPC_PORT = "netdisk_grpc_port";
 	private static final String GRPC_BASE_PKG = "grpc.annotation.basepkg";
 	private static final List<BindableService> bsList = new ArrayList<BindableService>();
 	private static Server server;
 	private static Set<Class<?>> annotated = new HashSet<Class<?>>();
 
-	public static void start(ServerInterceptor... interceptors) {
+	public static void start(String serverNm, ServerInterceptor... interceptors) {
 		String basePackage = PropsUtils.getString(GRPC_BASE_PKG);
 		if (!StringUtils.isEmpty(basePackage)) {
 			Reflections reflections = new Reflections(basePackage);
@@ -67,7 +66,7 @@ public final class GRPCServer {
 		if (!annotated.isEmpty()) {
 			instance();
 		}
-		Integer port = Integer.parseInt(ConsulKVMgr.getValue((Constants.GRPC_KV_KEY.getGRPCPortKey(GRPC_PORT))));
+		Integer port = Integer.parseInt(ConsulKVMgr.getValue((Constants.GRPC_KV_KEY.getGRPCPortKey(serverNm))));
 		if (port == null || port < 1) {
 			log.warn("没有配置grpc端口号 grpc.server.port");
 			System.exit(0);
