@@ -20,10 +20,16 @@
  *****************************************************************/
 package com.blemobi.library.grpc_v1.interceptor;
 
+import java.net.SocketAddress;
+import java.util.Iterator;
+
+import org.apache.commons.lang.StringUtils;
+
 import com.blemobi.library.exception.BaseException;
 import com.blemobi.library.grpc_v1.GRPCConstants;
 import com.blemobi.library.grpc_v1.auth.AuthProvider;
 
+import io.grpc.Attributes;
 import io.grpc.ForwardingServerCall.SimpleForwardingServerCall;
 import io.grpc.Metadata;
 import io.grpc.ServerCall;
@@ -54,12 +60,16 @@ public class AuthServerInterceptor implements ServerInterceptor {
 	@Override
 	public <ReqT, RespT> Listener<ReqT> interceptCall(ServerCall<ReqT, RespT> call, Metadata headers,
 			ServerCallHandler<ReqT, RespT> next) {
+		String remoteAddr = call.getAttributes().get(call.REMOTE_ADDR_KEY).toString().split(":")[0].substring(1);
+		log.debug("remoteAddr->" + remoteAddr);
 		if (headers != null) {
 			Metadata.Key<String> key = Metadata.Key.of(GRPCConstants.HEAD_REQUEST_KEY,
 					Metadata.ASCII_STRING_MARSHALLER);
 			if (headers.containsKey(key)) {
-				String val = headers.get(key);
+				Iterator<String> it = headers.getAll(key).iterator();
+				String val = StringUtils.join(it, ",");
 				log.info("GRPC REQUEST HEAD:" + GRPCConstants.HEAD_REQUEST_KEY + "->" + val);
+				val = it.next() + "," + remoteAddr;
 				if (!authProvider.auth(val)) {
 					log.warn("鉴权没通过");
 					call.close(Status.UNAUTHENTICATED.withDescription(UNAUTH_DESCRIPTION), headers);

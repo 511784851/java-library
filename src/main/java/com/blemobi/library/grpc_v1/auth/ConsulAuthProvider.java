@@ -39,8 +39,10 @@ public class ConsulAuthProvider implements AuthProvider {
 
 	@Override
 	public Boolean auth(String from) {
+		log.debug("ConsulAuthProvider->auth, from->" + from);
 		String[] froms = from.split(",");
-		if(froms.length != 2){
+		if(froms.length < 2){
+			log.debug("from格式不正确");
 			return false;
 		}
 		List<ServiceInfo> sList = ConsulServiceMgr.getHealthlyServicesByNm(froms[0]);

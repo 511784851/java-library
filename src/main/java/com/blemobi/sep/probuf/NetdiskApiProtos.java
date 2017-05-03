@@ -1033,30 +1033,72 @@ public final class NetdiskApiProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated string postId = 1;</code>
+     * <code>optional string communityId = 1;</code>
+     *
+     * <pre>
+     *社区ID
+     * </pre>
+     */
+    java.lang.String getCommunityId();
+    /**
+     * <code>optional string communityId = 1;</code>
+     *
+     * <pre>
+     *社区ID
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getCommunityIdBytes();
+
+    /**
+     * <code>repeated string postId = 2;</code>
+     *
+     * <pre>
+     *帖子ID
+     * </pre>
      */
     com.google.protobuf.ProtocolStringList
         getPostIdList();
     /**
-     * <code>repeated string postId = 1;</code>
+     * <code>repeated string postId = 2;</code>
+     *
+     * <pre>
+     *帖子ID
+     * </pre>
      */
     int getPostIdCount();
     /**
-     * <code>repeated string postId = 1;</code>
+     * <code>repeated string postId = 2;</code>
+     *
+     * <pre>
+     *帖子ID
+     * </pre>
      */
     java.lang.String getPostId(int index);
     /**
-     * <code>repeated string postId = 1;</code>
+     * <code>repeated string postId = 2;</code>
+     *
+     * <pre>
+     *帖子ID
+     * </pre>
      */
     com.google.protobuf.ByteString
         getPostIdBytes(int index);
 
     /**
-     * <code>optional .bbproto.PStatus status = 2;</code>
+     * <code>optional .bbproto.PStatus status = 3;</code>
+     *
+     * <pre>
+     *状态
+     * </pre>
      */
     int getStatusValue();
     /**
-     * <code>optional .bbproto.PStatus status = 2;</code>
+     * <code>optional .bbproto.PStatus status = 3;</code>
+     *
+     * <pre>
+     *状态
+     * </pre>
      */
     com.blemobi.sep.probuf.NetdiskApiProtos.PStatus getStatus();
   }
@@ -1072,6 +1114,7 @@ public final class NetdiskApiProtos {
       super(builder);
     }
     private PSetFileParam() {
+      communityId_ = "";
       postId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       status_ = 0;
     }
@@ -1102,14 +1145,20 @@ public final class NetdiskApiProtos {
             }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+
+              communityId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
                 postId_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000002;
               }
               postId_.add(s);
               break;
             }
-            case 16: {
+            case 24: {
               int rawValue = input.readEnum();
 
               status_ = rawValue;
@@ -1124,7 +1173,7 @@ public final class NetdiskApiProtos {
             new com.google.protobuf.InvalidProtocolBufferException(
                 e.getMessage()).setUnfinishedMessage(this));
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
           postId_ = postId_.getUnmodifiableView();
         }
         makeExtensionsImmutable();
@@ -1143,45 +1192,111 @@ public final class NetdiskApiProtos {
     }
 
     private int bitField0_;
-    public static final int POSTID_FIELD_NUMBER = 1;
+    public static final int COMMUNITYID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object communityId_;
+    /**
+     * <code>optional string communityId = 1;</code>
+     *
+     * <pre>
+     *社区ID
+     * </pre>
+     */
+    public java.lang.String getCommunityId() {
+      java.lang.Object ref = communityId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        communityId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string communityId = 1;</code>
+     *
+     * <pre>
+     *社区ID
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getCommunityIdBytes() {
+      java.lang.Object ref = communityId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        communityId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POSTID_FIELD_NUMBER = 2;
     private com.google.protobuf.LazyStringList postId_;
     /**
-     * <code>repeated string postId = 1;</code>
+     * <code>repeated string postId = 2;</code>
+     *
+     * <pre>
+     *帖子ID
+     * </pre>
      */
     public com.google.protobuf.ProtocolStringList
         getPostIdList() {
       return postId_;
     }
     /**
-     * <code>repeated string postId = 1;</code>
+     * <code>repeated string postId = 2;</code>
+     *
+     * <pre>
+     *帖子ID
+     * </pre>
      */
     public int getPostIdCount() {
       return postId_.size();
     }
     /**
-     * <code>repeated string postId = 1;</code>
+     * <code>repeated string postId = 2;</code>
+     *
+     * <pre>
+     *帖子ID
+     * </pre>
      */
     public java.lang.String getPostId(int index) {
       return postId_.get(index);
     }
     /**
-     * <code>repeated string postId = 1;</code>
+     * <code>repeated string postId = 2;</code>
+     *
+     * <pre>
+     *帖子ID
+     * </pre>
      */
     public com.google.protobuf.ByteString
         getPostIdBytes(int index) {
       return postId_.getByteString(index);
     }
 
-    public static final int STATUS_FIELD_NUMBER = 2;
+    public static final int STATUS_FIELD_NUMBER = 3;
     private int status_;
     /**
-     * <code>optional .bbproto.PStatus status = 2;</code>
+     * <code>optional .bbproto.PStatus status = 3;</code>
+     *
+     * <pre>
+     *状态
+     * </pre>
      */
     public int getStatusValue() {
       return status_;
     }
     /**
-     * <code>optional .bbproto.PStatus status = 2;</code>
+     * <code>optional .bbproto.PStatus status = 3;</code>
+     *
+     * <pre>
+     *状态
+     * </pre>
      */
     public com.blemobi.sep.probuf.NetdiskApiProtos.PStatus getStatus() {
       com.blemobi.sep.probuf.NetdiskApiProtos.PStatus result = com.blemobi.sep.probuf.NetdiskApiProtos.PStatus.valueOf(status_);
@@ -1200,11 +1315,14 @@ public final class NetdiskApiProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getCommunityIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, communityId_);
+      }
       for (int i = 0; i < postId_.size(); i++) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, postId_.getRaw(i));
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, postId_.getRaw(i));
       }
       if (status_ != com.blemobi.sep.probuf.NetdiskApiProtos.PStatus.NORMAL.getNumber()) {
-        output.writeEnum(2, status_);
+        output.writeEnum(3, status_);
       }
     }
 
@@ -1213,6 +1331,9 @@ public final class NetdiskApiProtos {
       if (size != -1) return size;
 
       size = 0;
+      if (!getCommunityIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, communityId_);
+      }
       {
         int dataSize = 0;
         for (int i = 0; i < postId_.size(); i++) {
@@ -1223,7 +1344,7 @@ public final class NetdiskApiProtos {
       }
       if (status_ != com.blemobi.sep.probuf.NetdiskApiProtos.PStatus.NORMAL.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, status_);
+          .computeEnumSize(3, status_);
       }
       memoizedSize = size;
       return size;
@@ -1336,8 +1457,10 @@ public final class NetdiskApiProtos {
       }
       public Builder clear() {
         super.clear();
+        communityId_ = "";
+
         postId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         status_ = 0;
 
         return this;
@@ -1364,9 +1487,10 @@ public final class NetdiskApiProtos {
         com.blemobi.sep.probuf.NetdiskApiProtos.PSetFileParam result = new com.blemobi.sep.probuf.NetdiskApiProtos.PSetFileParam(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        result.communityId_ = communityId_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
           postId_ = postId_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.postId_ = postId_;
         result.status_ = status_;
@@ -1386,10 +1510,14 @@ public final class NetdiskApiProtos {
 
       public Builder mergeFrom(com.blemobi.sep.probuf.NetdiskApiProtos.PSetFileParam other) {
         if (other == com.blemobi.sep.probuf.NetdiskApiProtos.PSetFileParam.getDefaultInstance()) return this;
+        if (!other.getCommunityId().isEmpty()) {
+          communityId_ = other.communityId_;
+          onChanged();
+        }
         if (!other.postId_.isEmpty()) {
           if (postId_.isEmpty()) {
             postId_ = other.postId_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensurePostIdIsMutable();
             postId_.addAll(other.postId_);
@@ -1426,41 +1554,150 @@ public final class NetdiskApiProtos {
       }
       private int bitField0_;
 
+      private java.lang.Object communityId_ = "";
+      /**
+       * <code>optional string communityId = 1;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public java.lang.String getCommunityId() {
+        java.lang.Object ref = communityId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          communityId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string communityId = 1;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getCommunityIdBytes() {
+        java.lang.Object ref = communityId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          communityId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string communityId = 1;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public Builder setCommunityId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        communityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string communityId = 1;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public Builder clearCommunityId() {
+        
+        communityId_ = getDefaultInstance().getCommunityId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string communityId = 1;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public Builder setCommunityIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        communityId_ = value;
+        onChanged();
+        return this;
+      }
+
       private com.google.protobuf.LazyStringList postId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensurePostIdIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
           postId_ = new com.google.protobuf.LazyStringArrayList(postId_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
-       * <code>repeated string postId = 1;</code>
+       * <code>repeated string postId = 2;</code>
+       *
+       * <pre>
+       *帖子ID
+       * </pre>
        */
       public com.google.protobuf.ProtocolStringList
           getPostIdList() {
         return postId_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string postId = 1;</code>
+       * <code>repeated string postId = 2;</code>
+       *
+       * <pre>
+       *帖子ID
+       * </pre>
        */
       public int getPostIdCount() {
         return postId_.size();
       }
       /**
-       * <code>repeated string postId = 1;</code>
+       * <code>repeated string postId = 2;</code>
+       *
+       * <pre>
+       *帖子ID
+       * </pre>
        */
       public java.lang.String getPostId(int index) {
         return postId_.get(index);
       }
       /**
-       * <code>repeated string postId = 1;</code>
+       * <code>repeated string postId = 2;</code>
+       *
+       * <pre>
+       *帖子ID
+       * </pre>
        */
       public com.google.protobuf.ByteString
           getPostIdBytes(int index) {
         return postId_.getByteString(index);
       }
       /**
-       * <code>repeated string postId = 1;</code>
+       * <code>repeated string postId = 2;</code>
+       *
+       * <pre>
+       *帖子ID
+       * </pre>
        */
       public Builder setPostId(
           int index, java.lang.String value) {
@@ -1473,7 +1710,11 @@ public final class NetdiskApiProtos {
         return this;
       }
       /**
-       * <code>repeated string postId = 1;</code>
+       * <code>repeated string postId = 2;</code>
+       *
+       * <pre>
+       *帖子ID
+       * </pre>
        */
       public Builder addPostId(
           java.lang.String value) {
@@ -1486,7 +1727,11 @@ public final class NetdiskApiProtos {
         return this;
       }
       /**
-       * <code>repeated string postId = 1;</code>
+       * <code>repeated string postId = 2;</code>
+       *
+       * <pre>
+       *帖子ID
+       * </pre>
        */
       public Builder addAllPostId(
           java.lang.Iterable<java.lang.String> values) {
@@ -1497,16 +1742,24 @@ public final class NetdiskApiProtos {
         return this;
       }
       /**
-       * <code>repeated string postId = 1;</code>
+       * <code>repeated string postId = 2;</code>
+       *
+       * <pre>
+       *帖子ID
+       * </pre>
        */
       public Builder clearPostId() {
         postId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string postId = 1;</code>
+       * <code>repeated string postId = 2;</code>
+       *
+       * <pre>
+       *帖子ID
+       * </pre>
        */
       public Builder addPostIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1522,13 +1775,21 @@ public final class NetdiskApiProtos {
 
       private int status_ = 0;
       /**
-       * <code>optional .bbproto.PStatus status = 2;</code>
+       * <code>optional .bbproto.PStatus status = 3;</code>
+       *
+       * <pre>
+       *状态
+       * </pre>
        */
       public int getStatusValue() {
         return status_;
       }
       /**
-       * <code>optional .bbproto.PStatus status = 2;</code>
+       * <code>optional .bbproto.PStatus status = 3;</code>
+       *
+       * <pre>
+       *状态
+       * </pre>
        */
       public Builder setStatusValue(int value) {
         status_ = value;
@@ -1536,14 +1797,22 @@ public final class NetdiskApiProtos {
         return this;
       }
       /**
-       * <code>optional .bbproto.PStatus status = 2;</code>
+       * <code>optional .bbproto.PStatus status = 3;</code>
+       *
+       * <pre>
+       *状态
+       * </pre>
        */
       public com.blemobi.sep.probuf.NetdiskApiProtos.PStatus getStatus() {
         com.blemobi.sep.probuf.NetdiskApiProtos.PStatus result = com.blemobi.sep.probuf.NetdiskApiProtos.PStatus.valueOf(status_);
         return result == null ? com.blemobi.sep.probuf.NetdiskApiProtos.PStatus.UNRECOGNIZED : result;
       }
       /**
-       * <code>optional .bbproto.PStatus status = 2;</code>
+       * <code>optional .bbproto.PStatus status = 3;</code>
+       *
+       * <pre>
+       *状态
+       * </pre>
        */
       public Builder setStatus(com.blemobi.sep.probuf.NetdiskApiProtos.PStatus value) {
         if (value == null) {
@@ -1555,7 +1824,11 @@ public final class NetdiskApiProtos {
         return this;
       }
       /**
-       * <code>optional .bbproto.PStatus status = 2;</code>
+       * <code>optional .bbproto.PStatus status = 3;</code>
+       *
+       * <pre>
+       *状态
+       * </pre>
        */
       public Builder clearStatus() {
         
@@ -1641,16 +1914,20 @@ public final class NetdiskApiProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\024netdisk_inside.proto\022\007bbproto\032\rnetdisk" +
-      ".proto\032\023common_inside.proto\"I\n\014POPFilePa" +
-      "ram\022\037\n\004list\030\001 \003(\0132\021.bbproto.PNetFile\022\030\n\002" +
-      "op\030\002 \001(\0162\014.bbproto.POP\"A\n\rPSetFileParam\022" +
-      "\016\n\006postId\030\001 \003(\t\022 \n\006status\030\002 \001(\0162\020.bbprot" +
-      "o.PStatus*?\n\007PStatus\022\n\n\006NORMAL\020\000\022\016\n\nWAIT" +
-      "_AUDIT\020\001\022\013\n\007DECLINE\020\002\022\013\n\007DELETED\020\003*\035\n\003PO" +
-      "P\022\n\n\006CREATE\020\000\022\n\n\006DELETE\020\0012\206\001\n\016NetDiskSer" +
-      "vice\022A\n\026setVideoStatusByPostId\022\026.bbproto" +
-      ".PSetFileParam\032\017.bbproto.PEmpty\0221\n\007opVid",
-      "eo\022\025.bbproto.POPFileParam\032\017.bbproto.PEmp" +
+      ".proto\032\014result.proto\032\023common_inside.prot" +
+      "o\"I\n\014POPFileParam\022\037\n\004list\030\001 \003(\0132\021.bbprot" +
+      "o.PNetFile\022\030\n\002op\030\002 \001(\0162\014.bbproto.POP\"V\n\r" +
+      "PSetFileParam\022\023\n\013communityId\030\001 \001(\t\022\016\n\006po" +
+      "stId\030\002 \003(\t\022 \n\006status\030\003 \001(\0162\020.bbproto.PSt" +
+      "atus*?\n\007PStatus\022\n\n\006NORMAL\020\000\022\016\n\nWAIT_AUDI" +
+      "T\020\001\022\013\n\007DECLINE\020\002\022\013\n\007DELETED\020\003*\035\n\003POP\022\n\n\006" +
+      "CREATE\020\000\022\n\n\006DELETE\020\0012\203\002\n\016NetDiskService\022" +
+      "A\n\026setVideoStatusByPostId\022\026.bbproto.PSet",
+      "FileParam\032\017.bbproto.PEmpty\0221\n\007opVideo\022\025." +
+      "bbproto.POPFileParam\032\017.bbproto.PEmpty\022=\n" +
+      "\risExistsVideo\022\026.bbproto.PStringSingle\032\024" +
+      ".bbproto.PBoolSingle\022<\n\021tipoffVideoByPos" +
+      "t\022\026.bbproto.PStringSingle\032\017.bbproto.PEmp" +
       "tyB*\n\026com.blemobi.sep.probufB\020NetdiskApi" +
       "Protosb\006proto3"
     };
@@ -1666,6 +1943,7 @@ public final class NetdiskApiProtos {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.blemobi.sep.probuf.NetdiskProtos.getDescriptor(),
+          com.blemobi.sep.probuf.ResultProtos.getDescriptor(),
           com.blemobi.sep.probuf.CommonApiProtos.getDescriptor(),
         }, assigner);
     internal_static_bbproto_POPFileParam_descriptor =
@@ -1679,8 +1957,9 @@ public final class NetdiskApiProtos {
     internal_static_bbproto_PSetFileParam_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PSetFileParam_descriptor,
-        new java.lang.String[] { "PostId", "Status", });
+        new java.lang.String[] { "CommunityId", "PostId", "Status", });
     com.blemobi.sep.probuf.NetdiskProtos.getDescriptor();
+    com.blemobi.sep.probuf.ResultProtos.getDescriptor();
     com.blemobi.sep.probuf.CommonApiProtos.getDescriptor();
   }
 

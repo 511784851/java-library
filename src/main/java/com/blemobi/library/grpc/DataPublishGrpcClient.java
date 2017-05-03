@@ -217,4 +217,25 @@ public class DataPublishGrpcClient extends BaseGRPCClient {
 		});
 		return stringList;
 	}
+	
+	public List<String> getTopic4Post(String postId){
+		PStringSingle request = PStringSingle.newBuilder().setVal(postId).build();
+		PStringList stringList = this.execute(request, new GrpcCallback<PStringList>() {
+			@Override
+			public PStringList doGrpcRequest() {
+				stub = grpcDataPublishingGrpc.newBlockingStub(channel);
+				PStringList stringList = stub.getTopicOfPost(request);
+				return stringList;
+			}
+		});
+		List<String> topicList = stringList.getListList();
+		if(topicList == null || topicList.isEmpty()){
+			return new ArrayList<String>();
+		}
+		List<String> topicListRet = new ArrayList<String>();
+		for(String topic : topicList){
+			topicListRet.add(String.format("#%s#", topic));
+		}
+		return topicListRet;
+	}
 }

@@ -1,4 +1,5 @@
 package com.blemobi.sep.grpc;
+
 import static io.grpc.stub.ClientCalls.asyncUnaryCall;
 import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
@@ -12,6 +13,40 @@ import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+
+import com.blemobi.sep.probuf.AccountProtos;
+import com.blemobi.sep.probuf.CommonApiProtos;
+import com.blemobi.sep.probuf.DataPublishingProtos;
+import com.blemobi.sep.probuf.DatapublishingApiProtos;
+import com.blemobi.sep.probuf.NewsProtos;
+import com.blemobi.sep.probuf.ResultProtos;
+import com.blemobi.sep.probuf.AccountProtos.PUser;
+import com.blemobi.sep.probuf.AccountProtos.PUserList;
+import com.blemobi.sep.probuf.CommonApiProtos.PEmpty;
+import com.blemobi.sep.probuf.DataPublishingProtos.PFansFilterParam;
+import com.blemobi.sep.probuf.DatapublishingApiProtos.PCommentMsg;
+import com.blemobi.sep.probuf.DatapublishingApiProtos.PConfirmMsg;
+import com.blemobi.sep.probuf.DatapublishingApiProtos.PCustomPageParam;
+import com.blemobi.sep.probuf.DatapublishingApiProtos.PDiscoverParams;
+import com.blemobi.sep.probuf.DatapublishingApiProtos.PEsActionMsg;
+import com.blemobi.sep.probuf.DatapublishingApiProtos.PFansSaveParam;
+import com.blemobi.sep.probuf.DatapublishingApiProtos.PGroupStringList;
+import com.blemobi.sep.probuf.DatapublishingApiProtos.PHotRemove;
+import com.blemobi.sep.probuf.DatapublishingApiProtos.PJsonParam;
+import com.blemobi.sep.probuf.DatapublishingApiProtos.PLoginRecord;
+import com.blemobi.sep.probuf.DatapublishingApiProtos.PManualRecommend;
+import com.blemobi.sep.probuf.DatapublishingApiProtos.PPersonas;
+import com.blemobi.sep.probuf.DatapublishingApiProtos.PQueryUserParam;
+import com.blemobi.sep.probuf.DatapublishingApiProtos.PScrollResult;
+import com.blemobi.sep.probuf.DatapublishingApiProtos.PSearchPostParam;
+import com.blemobi.sep.probuf.DatapublishingApiProtos.PTopicDetailList;
+import com.blemobi.sep.probuf.DatapublishingApiProtos.PVisitCommunity;
+import com.blemobi.sep.probuf.NewsProtos.PPostStore;
+import com.blemobi.sep.probuf.ResultProtos.PBoolList;
+import com.blemobi.sep.probuf.ResultProtos.PInt32List;
+import com.blemobi.sep.probuf.ResultProtos.PStringList;
+import com.blemobi.sep.probuf.ResultProtos.PStringSingle;
+
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 
 /**
@@ -431,6 +466,51 @@ public class grpcDataPublishingGrpc {
               "bbproto.grpcDataPublishing", "VisitHomePage"),
           io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringList.getDefaultInstance()),
           io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.DatapublishingApiProtos.PDiscoverParams,
+      com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_SET_DISCOVER_PARAMS =
+      io.grpc.MethodDescriptor.create(
+          io.grpc.MethodDescriptor.MethodType.UNARY,
+          generateFullMethodName(
+              "bbproto.grpcDataPublishing", "SetDiscoverParams"),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.DatapublishingApiProtos.PDiscoverParams.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.CommonApiProtos.PEmpty,
+      com.blemobi.sep.probuf.DatapublishingApiProtos.PDiscoverParams> METHOD_GET_DISCOVER_PARAMS =
+      io.grpc.MethodDescriptor.create(
+          io.grpc.MethodDescriptor.MethodType.UNARY,
+          generateFullMethodName(
+              "bbproto.grpcDataPublishing", "GetDiscoverParams"),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.DatapublishingApiProtos.PDiscoverParams.getDefaultInstance()));
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringSingle,
+      com.blemobi.sep.probuf.DatapublishingApiProtos.PPersonas> METHOD_GET_PERSONAS =
+      io.grpc.MethodDescriptor.create(
+          io.grpc.MethodDescriptor.MethodType.UNARY,
+          generateFullMethodName(
+              "bbproto.grpcDataPublishing", "GetPersonas"),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringSingle.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.DatapublishingApiProtos.PPersonas.getDefaultInstance()));
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringList,
+      com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_HEARTBEAT =
+      io.grpc.MethodDescriptor.create(
+          io.grpc.MethodDescriptor.MethodType.UNARY,
+          generateFullMethodName(
+              "bbproto.grpcDataPublishing", "Heartbeat"),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringList.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringSingle,
+      com.blemobi.sep.probuf.ResultProtos.PStringList> METHOD_GET_TOPIC_OF_POST =
+      io.grpc.MethodDescriptor.create(
+          io.grpc.MethodDescriptor.MethodType.UNARY,
+          generateFullMethodName(
+              "bbproto.grpcDataPublishing", "GetTopicOfPost"),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringSingle.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringList.getDefaultInstance()));
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -664,6 +744,7 @@ public class grpcDataPublishingGrpc {
      * 用户超级查找，参数为json字符串，字段包括：
      * keyword 搜索关键词
      * source 来源 0手机号码 1微信 2微博 3脸书 4谷歌 5用户名
+     * coid 社区ID,string类型,如"550"
      * level 用户等级
      * state 用户状态 0正常 1被封 2冻结
      * no_water true过滤水军
@@ -686,10 +767,10 @@ public class grpcDataPublishingGrpc {
      * keyword_title 关键词为帖子标题，分词搜索
      * keyword_community 关键词为社区名称，全词匹配
      * coid 指定社区ID搜索
-     * type 1社区动态 2资讯 3公告
-     * state 审核状态 0待审 1通过审核 2未通过审核
-     * cotag 所属的社区的分类ID
-     * tag 帖子标签，如"精选"、"女神"等
+     * type EPostType的int值，另外增加1个定义：-1动态帖
+     * state 审核状态 0待审 1通过审核 2未通过审核 4已删除的帖子
+     * cotag 所属的社区的分类，string
+     * tag 帖子标签，string
      * begin, end 发布时间起止范围,unix时间戳,秒
      * sort_time 以帖子发布时间排序 asc升序 desc降序（默认）
      * sort_hot 以帖子热门度排序，仅支持desc降序
@@ -932,6 +1013,60 @@ public class grpcDataPublishingGrpc {
     public void visitHomePage(com.blemobi.sep.probuf.ResultProtos.PStringList request,
         io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_VISIT_HOME_PAGE, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * 设置发现页面的参数
+     * </pre>
+     */
+    public void setDiscoverParams(com.blemobi.sep.probuf.DatapublishingApiProtos.PDiscoverParams request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_SET_DISCOVER_PARAMS, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * 获取发现页面的参数
+     * </pre>
+     */
+    public void getDiscoverParams(com.blemobi.sep.probuf.CommonApiProtos.PEmpty request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.DatapublishingApiProtos.PDiscoverParams> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_GET_DISCOVER_PARAMS, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * 获取用户画像
+     * 参数为json字符串
+     * 字段包括：
+     * begin, end 时间起止范围，unix时间戳，秒
+     * tp 1活跃 2注册
+     * </pre>
+     */
+    public void getPersonas(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.DatapublishingApiProtos.PPersonas> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_GET_PERSONAS, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * 心跳
+     * </pre>
+     */
+    public void heartbeat(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_HEARTBEAT, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * 获取帖子参与的话题（供java调用,注：返回的话题是不带#号的）
+     * </pre>
+     */
+    public void getTopicOfPost(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PStringList> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_GET_TOPIC_OF_POST, responseObserver);
     }
 
     @java.lang.Override public io.grpc.ServerServiceDefinition bindService() {
@@ -1251,6 +1386,41 @@ public class grpcDataPublishingGrpc {
                 com.blemobi.sep.probuf.ResultProtos.PStringList,
                 com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
                   this, METHODID_VISIT_HOME_PAGE)))
+          .addMethod(
+            METHOD_SET_DISCOVER_PARAMS,
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.blemobi.sep.probuf.DatapublishingApiProtos.PDiscoverParams,
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
+                  this, METHODID_SET_DISCOVER_PARAMS)))
+          .addMethod(
+            METHOD_GET_DISCOVER_PARAMS,
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty,
+                com.blemobi.sep.probuf.DatapublishingApiProtos.PDiscoverParams>(
+                  this, METHODID_GET_DISCOVER_PARAMS)))
+          .addMethod(
+            METHOD_GET_PERSONAS,
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.blemobi.sep.probuf.ResultProtos.PStringSingle,
+                com.blemobi.sep.probuf.DatapublishingApiProtos.PPersonas>(
+                  this, METHODID_GET_PERSONAS)))
+          .addMethod(
+            METHOD_HEARTBEAT,
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.blemobi.sep.probuf.ResultProtos.PStringList,
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
+                  this, METHODID_HEARTBEAT)))
+          .addMethod(
+            METHOD_GET_TOPIC_OF_POST,
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.blemobi.sep.probuf.ResultProtos.PStringSingle,
+                com.blemobi.sep.probuf.ResultProtos.PStringList>(
+                  this, METHODID_GET_TOPIC_OF_POST)))
           .build();
     }
   }
@@ -1498,6 +1668,7 @@ public class grpcDataPublishingGrpc {
      * 用户超级查找，参数为json字符串，字段包括：
      * keyword 搜索关键词
      * source 来源 0手机号码 1微信 2微博 3脸书 4谷歌 5用户名
+     * coid 社区ID,string类型,如"550"
      * level 用户等级
      * state 用户状态 0正常 1被封 2冻结
      * no_water true过滤水军
@@ -1521,10 +1692,10 @@ public class grpcDataPublishingGrpc {
      * keyword_title 关键词为帖子标题，分词搜索
      * keyword_community 关键词为社区名称，全词匹配
      * coid 指定社区ID搜索
-     * type 1社区动态 2资讯 3公告
-     * state 审核状态 0待审 1通过审核 2未通过审核
-     * cotag 所属的社区的分类ID
-     * tag 帖子标签，如"精选"、"女神"等
+     * type EPostType的int值，另外增加1个定义：-1动态帖
+     * state 审核状态 0待审 1通过审核 2未通过审核 4已删除的帖子
+     * cotag 所属的社区的分类，string
+     * tag 帖子标签，string
      * begin, end 发布时间起止范围,unix时间戳,秒
      * sort_time 以帖子发布时间排序 asc升序 desc降序（默认）
      * sort_hot 以帖子热门度排序，仅支持desc降序
@@ -1792,6 +1963,65 @@ public class grpcDataPublishingGrpc {
       asyncUnaryCall(
           getChannel().newCall(METHOD_VISIT_HOME_PAGE, getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * 设置发现页面的参数
+     * </pre>
+     */
+    public void setDiscoverParams(com.blemobi.sep.probuf.DatapublishingApiProtos.PDiscoverParams request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_SET_DISCOVER_PARAMS, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * 获取发现页面的参数
+     * </pre>
+     */
+    public void getDiscoverParams(com.blemobi.sep.probuf.CommonApiProtos.PEmpty request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.DatapublishingApiProtos.PDiscoverParams> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_GET_DISCOVER_PARAMS, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * 获取用户画像
+     * 参数为json字符串
+     * 字段包括：
+     * begin, end 时间起止范围，unix时间戳，秒
+     * tp 1活跃 2注册
+     * </pre>
+     */
+    public void getPersonas(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.DatapublishingApiProtos.PPersonas> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_GET_PERSONAS, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * 心跳
+     * </pre>
+     */
+    public void heartbeat(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_HEARTBEAT, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * 获取帖子参与的话题（供java调用,注：返回的话题是不带#号的）
+     * </pre>
+     */
+    public void getTopicOfPost(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PStringList> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_GET_TOPIC_OF_POST, getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -2017,6 +2247,7 @@ public class grpcDataPublishingGrpc {
      * 用户超级查找，参数为json字符串，字段包括：
      * keyword 搜索关键词
      * source 来源 0手机号码 1微信 2微博 3脸书 4谷歌 5用户名
+     * coid 社区ID,string类型,如"550"
      * level 用户等级
      * state 用户状态 0正常 1被封 2冻结
      * no_water true过滤水军
@@ -2039,10 +2270,10 @@ public class grpcDataPublishingGrpc {
      * keyword_title 关键词为帖子标题，分词搜索
      * keyword_community 关键词为社区名称，全词匹配
      * coid 指定社区ID搜索
-     * type 1社区动态 2资讯 3公告
-     * state 审核状态 0待审 1通过审核 2未通过审核
-     * cotag 所属的社区的分类ID
-     * tag 帖子标签，如"精选"、"女神"等
+     * type EPostType的int值，另外增加1个定义：-1动态帖
+     * state 审核状态 0待审 1通过审核 2未通过审核 4已删除的帖子
+     * cotag 所属的社区的分类，string
+     * tag 帖子标签，string
      * begin, end 发布时间起止范围,unix时间戳,秒
      * sort_time 以帖子发布时间排序 asc升序 desc降序（默认）
      * sort_hot 以帖子热门度排序，仅支持desc降序
@@ -2285,6 +2516,60 @@ public class grpcDataPublishingGrpc {
     public com.blemobi.sep.probuf.CommonApiProtos.PEmpty visitHomePage(com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return blockingUnaryCall(
           getChannel(), METHOD_VISIT_HOME_PAGE, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * 设置发现页面的参数
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty setDiscoverParams(com.blemobi.sep.probuf.DatapublishingApiProtos.PDiscoverParams request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_SET_DISCOVER_PARAMS, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * 获取发现页面的参数
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.DatapublishingApiProtos.PDiscoverParams getDiscoverParams(com.blemobi.sep.probuf.CommonApiProtos.PEmpty request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_GET_DISCOVER_PARAMS, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * 获取用户画像
+     * 参数为json字符串
+     * 字段包括：
+     * begin, end 时间起止范围，unix时间戳，秒
+     * tp 1活跃 2注册
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.DatapublishingApiProtos.PPersonas getPersonas(com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_GET_PERSONAS, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * 心跳
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty heartbeat(com.blemobi.sep.probuf.ResultProtos.PStringList request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_HEARTBEAT, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * 获取帖子参与的话题（供java调用,注：返回的话题是不带#号的）
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.ResultProtos.PStringList getTopicOfPost(com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_GET_TOPIC_OF_POST, getCallOptions(), request);
     }
   }
 
@@ -2531,6 +2816,7 @@ public class grpcDataPublishingGrpc {
      * 用户超级查找，参数为json字符串，字段包括：
      * keyword 搜索关键词
      * source 来源 0手机号码 1微信 2微博 3脸书 4谷歌 5用户名
+     * coid 社区ID,string类型,如"550"
      * level 用户等级
      * state 用户状态 0正常 1被封 2冻结
      * no_water true过滤水军
@@ -2554,10 +2840,10 @@ public class grpcDataPublishingGrpc {
      * keyword_title 关键词为帖子标题，分词搜索
      * keyword_community 关键词为社区名称，全词匹配
      * coid 指定社区ID搜索
-     * type 1社区动态 2资讯 3公告
-     * state 审核状态 0待审 1通过审核 2未通过审核
-     * cotag 所属的社区的分类ID
-     * tag 帖子标签，如"精选"、"女神"等
+     * type EPostType的int值，另外增加1个定义：-1动态帖
+     * state 审核状态 0待审 1通过审核 2未通过审核 4已删除的帖子
+     * cotag 所属的社区的分类，string
+     * tag 帖子标签，string
      * begin, end 发布时间起止范围,unix时间戳,秒
      * sort_time 以帖子发布时间排序 asc升序 desc降序（默认）
      * sort_hot 以帖子热门度排序，仅支持desc降序
@@ -2825,6 +3111,65 @@ public class grpcDataPublishingGrpc {
       return futureUnaryCall(
           getChannel().newCall(METHOD_VISIT_HOME_PAGE, getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * 设置发现页面的参数
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> setDiscoverParams(
+        com.blemobi.sep.probuf.DatapublishingApiProtos.PDiscoverParams request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_SET_DISCOVER_PARAMS, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * 获取发现页面的参数
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.DatapublishingApiProtos.PDiscoverParams> getDiscoverParams(
+        com.blemobi.sep.probuf.CommonApiProtos.PEmpty request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_GET_DISCOVER_PARAMS, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * 获取用户画像
+     * 参数为json字符串
+     * 字段包括：
+     * begin, end 时间起止范围，unix时间戳，秒
+     * tp 1活跃 2注册
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.DatapublishingApiProtos.PPersonas> getPersonas(
+        com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_GET_PERSONAS, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * 心跳
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> heartbeat(
+        com.blemobi.sep.probuf.ResultProtos.PStringList request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_HEARTBEAT, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * 获取帖子参与的话题（供java调用,注：返回的话题是不带#号的）
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.ResultProtos.PStringList> getTopicOfPost(
+        com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_GET_TOPIC_OF_POST, getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_EXPIRE_CACHE = 0;
@@ -2872,6 +3217,11 @@ public class grpcDataPublishingGrpc {
   private static final int METHODID_GET_RECOMMEND_COMMUNITY = 42;
   private static final int METHODID_VISIT_COMMUNITY = 43;
   private static final int METHODID_VISIT_HOME_PAGE = 44;
+  private static final int METHODID_SET_DISCOVER_PARAMS = 45;
+  private static final int METHODID_GET_DISCOVER_PARAMS = 46;
+  private static final int METHODID_GET_PERSONAS = 47;
+  private static final int METHODID_HEARTBEAT = 48;
+  private static final int METHODID_GET_TOPIC_OF_POST = 49;
 
   private static class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -3070,6 +3420,26 @@ public class grpcDataPublishingGrpc {
           serviceImpl.visitHomePage((com.blemobi.sep.probuf.ResultProtos.PStringList) request,
               (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
           break;
+        case METHODID_SET_DISCOVER_PARAMS:
+          serviceImpl.setDiscoverParams((com.blemobi.sep.probuf.DatapublishingApiProtos.PDiscoverParams) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
+          break;
+        case METHODID_GET_DISCOVER_PARAMS:
+          serviceImpl.getDiscoverParams((com.blemobi.sep.probuf.CommonApiProtos.PEmpty) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.DatapublishingApiProtos.PDiscoverParams>) responseObserver);
+          break;
+        case METHODID_GET_PERSONAS:
+          serviceImpl.getPersonas((com.blemobi.sep.probuf.ResultProtos.PStringSingle) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.DatapublishingApiProtos.PPersonas>) responseObserver);
+          break;
+        case METHODID_HEARTBEAT:
+          serviceImpl.heartbeat((com.blemobi.sep.probuf.ResultProtos.PStringList) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
+          break;
+        case METHODID_GET_TOPIC_OF_POST:
+          serviceImpl.getTopicOfPost((com.blemobi.sep.probuf.ResultProtos.PStringSingle) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PStringList>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -3132,7 +3502,12 @@ public class grpcDataPublishingGrpc {
         METHOD_GET_USER_SOURCE,
         METHOD_GET_RECOMMEND_COMMUNITY,
         METHOD_VISIT_COMMUNITY,
-        METHOD_VISIT_HOME_PAGE);
+        METHOD_VISIT_HOME_PAGE,
+        METHOD_SET_DISCOVER_PARAMS,
+        METHOD_GET_DISCOVER_PARAMS,
+        METHOD_GET_PERSONAS,
+        METHOD_HEARTBEAT,
+        METHOD_GET_TOPIC_OF_POST);
   }
 
 }
