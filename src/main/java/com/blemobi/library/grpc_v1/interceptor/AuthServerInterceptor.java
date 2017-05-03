@@ -20,7 +20,6 @@
  *****************************************************************/
 package com.blemobi.library.grpc_v1.interceptor;
 
-import java.net.SocketAddress;
 import java.util.Iterator;
 
 import org.apache.commons.lang.StringUtils;
@@ -29,7 +28,6 @@ import com.blemobi.library.exception.BaseException;
 import com.blemobi.library.grpc_v1.GRPCConstants;
 import com.blemobi.library.grpc_v1.auth.AuthProvider;
 
-import io.grpc.Attributes;
 import io.grpc.ForwardingServerCall.SimpleForwardingServerCall;
 import io.grpc.Metadata;
 import io.grpc.ServerCall;
@@ -69,7 +67,7 @@ public class AuthServerInterceptor implements ServerInterceptor {
 				Iterator<String> it = headers.getAll(key).iterator();
 				String val = StringUtils.join(it, ",");
 				log.info("GRPC REQUEST HEAD:" + GRPCConstants.HEAD_REQUEST_KEY + "->" + val);
-				val = it.next() + "," + remoteAddr;
+				val = val.split(",")[0] + "," + remoteAddr;
 				if (!authProvider.auth(val)) {
 					log.warn("鉴权没通过");
 					call.close(Status.UNAUTHENTICATED.withDescription(UNAUTH_DESCRIPTION), headers);
