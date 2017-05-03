@@ -1894,6 +1894,1821 @@ public final class NetdiskApiProtos {
 
   }
 
+  public interface PTipOffPostParamOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PTipOffPostParam)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string communityId = 1;</code>
+     *
+     * <pre>
+     *社区ID
+     * </pre>
+     */
+    java.lang.String getCommunityId();
+    /**
+     * <code>optional string communityId = 1;</code>
+     *
+     * <pre>
+     *社区ID
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getCommunityIdBytes();
+
+    /**
+     * <code>optional string postId = 2;</code>
+     *
+     * <pre>
+     *帖子ID
+     * </pre>
+     */
+    java.lang.String getPostId();
+    /**
+     * <code>optional string postId = 2;</code>
+     *
+     * <pre>
+     *帖子ID
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getPostIdBytes();
+
+    /**
+     * <code>optional string uuid = 3;</code>
+     *
+     * <pre>
+     *举报人
+     * </pre>
+     */
+    java.lang.String getUuid();
+    /**
+     * <code>optional string uuid = 3;</code>
+     *
+     * <pre>
+     *举报人
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUuidBytes();
+  }
+  /**
+   * Protobuf type {@code bbproto.PTipOffPostParam}
+   */
+  public  static final class PTipOffPostParam extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PTipOffPostParam)
+      PTipOffPostParamOrBuilder {
+    // Use PTipOffPostParam.newBuilder() to construct.
+    private PTipOffPostParam(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PTipOffPostParam() {
+      communityId_ = "";
+      postId_ = "";
+      uuid_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PTipOffPostParam(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              communityId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              postId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              uuid_ = s;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.NetdiskApiProtos.internal_static_bbproto_PTipOffPostParam_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.NetdiskApiProtos.internal_static_bbproto_PTipOffPostParam_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam.class, com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam.Builder.class);
+    }
+
+    public static final int COMMUNITYID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object communityId_;
+    /**
+     * <code>optional string communityId = 1;</code>
+     *
+     * <pre>
+     *社区ID
+     * </pre>
+     */
+    public java.lang.String getCommunityId() {
+      java.lang.Object ref = communityId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        communityId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string communityId = 1;</code>
+     *
+     * <pre>
+     *社区ID
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getCommunityIdBytes() {
+      java.lang.Object ref = communityId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        communityId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POSTID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object postId_;
+    /**
+     * <code>optional string postId = 2;</code>
+     *
+     * <pre>
+     *帖子ID
+     * </pre>
+     */
+    public java.lang.String getPostId() {
+      java.lang.Object ref = postId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        postId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string postId = 2;</code>
+     *
+     * <pre>
+     *帖子ID
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getPostIdBytes() {
+      java.lang.Object ref = postId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        postId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UUID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object uuid_;
+    /**
+     * <code>optional string uuid = 3;</code>
+     *
+     * <pre>
+     *举报人
+     * </pre>
+     */
+    public java.lang.String getUuid() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uuid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string uuid = 3;</code>
+     *
+     * <pre>
+     *举报人
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUuidBytes() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getCommunityIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, communityId_);
+      }
+      if (!getPostIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, postId_);
+      }
+      if (!getUuidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, uuid_);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getCommunityIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, communityId_);
+      }
+      if (!getPostIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, postId_);
+      }
+      if (!getUuidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, uuid_);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PTipOffPostParam}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PTipOffPostParam)
+        com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParamOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.NetdiskApiProtos.internal_static_bbproto_PTipOffPostParam_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.NetdiskApiProtos.internal_static_bbproto_PTipOffPostParam_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam.class, com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        communityId_ = "";
+
+        postId_ = "";
+
+        uuid_ = "";
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.NetdiskApiProtos.internal_static_bbproto_PTipOffPostParam_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam build() {
+        com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam buildPartial() {
+        com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam result = new com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam(this);
+        result.communityId_ = communityId_;
+        result.postId_ = postId_;
+        result.uuid_ = uuid_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam) {
+          return mergeFrom((com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam other) {
+        if (other == com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam.getDefaultInstance()) return this;
+        if (!other.getCommunityId().isEmpty()) {
+          communityId_ = other.communityId_;
+          onChanged();
+        }
+        if (!other.getPostId().isEmpty()) {
+          postId_ = other.postId_;
+          onChanged();
+        }
+        if (!other.getUuid().isEmpty()) {
+          uuid_ = other.uuid_;
+          onChanged();
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object communityId_ = "";
+      /**
+       * <code>optional string communityId = 1;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public java.lang.String getCommunityId() {
+        java.lang.Object ref = communityId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          communityId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string communityId = 1;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getCommunityIdBytes() {
+        java.lang.Object ref = communityId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          communityId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string communityId = 1;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public Builder setCommunityId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        communityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string communityId = 1;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public Builder clearCommunityId() {
+        
+        communityId_ = getDefaultInstance().getCommunityId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string communityId = 1;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public Builder setCommunityIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        communityId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object postId_ = "";
+      /**
+       * <code>optional string postId = 2;</code>
+       *
+       * <pre>
+       *帖子ID
+       * </pre>
+       */
+      public java.lang.String getPostId() {
+        java.lang.Object ref = postId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          postId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string postId = 2;</code>
+       *
+       * <pre>
+       *帖子ID
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getPostIdBytes() {
+        java.lang.Object ref = postId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          postId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string postId = 2;</code>
+       *
+       * <pre>
+       *帖子ID
+       * </pre>
+       */
+      public Builder setPostId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        postId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string postId = 2;</code>
+       *
+       * <pre>
+       *帖子ID
+       * </pre>
+       */
+      public Builder clearPostId() {
+        
+        postId_ = getDefaultInstance().getPostId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string postId = 2;</code>
+       *
+       * <pre>
+       *帖子ID
+       * </pre>
+       */
+      public Builder setPostIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        postId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object uuid_ = "";
+      /**
+       * <code>optional string uuid = 3;</code>
+       *
+       * <pre>
+       *举报人
+       * </pre>
+       */
+      public java.lang.String getUuid() {
+        java.lang.Object ref = uuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uuid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string uuid = 3;</code>
+       *
+       * <pre>
+       *举报人
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUuidBytes() {
+        java.lang.Object ref = uuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string uuid = 3;</code>
+       *
+       * <pre>
+       *举报人
+       * </pre>
+       */
+      public Builder setUuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uuid = 3;</code>
+       *
+       * <pre>
+       *举报人
+       * </pre>
+       */
+      public Builder clearUuid() {
+        
+        uuid_ = getDefaultInstance().getUuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uuid = 3;</code>
+       *
+       * <pre>
+       *举报人
+       * </pre>
+       */
+      public Builder setUuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PTipOffPostParam)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PTipOffPostParam)
+    private static final com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam();
+    }
+
+    public static com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PTipOffPostParam>
+        PARSER = new com.google.protobuf.AbstractParser<PTipOffPostParam>() {
+      public PTipOffPostParam parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PTipOffPostParam(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<PTipOffPostParam> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PTipOffPostParam> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PTipOffObjkeyParamOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PTipOffObjkeyParam)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string communityId = 1;</code>
+     *
+     * <pre>
+     *社区ID
+     * </pre>
+     */
+    java.lang.String getCommunityId();
+    /**
+     * <code>optional string communityId = 1;</code>
+     *
+     * <pre>
+     *社区ID
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getCommunityIdBytes();
+
+    /**
+     * <code>optional string postId = 2;</code>
+     *
+     * <pre>
+     *帖子ID
+     * </pre>
+     */
+    java.lang.String getPostId();
+    /**
+     * <code>optional string postId = 2;</code>
+     *
+     * <pre>
+     *帖子ID
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getPostIdBytes();
+
+    /**
+     * <code>optional string objectKey = 3;</code>
+     *
+     * <pre>
+     *文件objectkey
+     * </pre>
+     */
+    java.lang.String getObjectKey();
+    /**
+     * <code>optional string objectKey = 3;</code>
+     *
+     * <pre>
+     *文件objectkey
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getObjectKeyBytes();
+
+    /**
+     * <code>optional string uuid = 4;</code>
+     *
+     * <pre>
+     *举报人
+     * </pre>
+     */
+    java.lang.String getUuid();
+    /**
+     * <code>optional string uuid = 4;</code>
+     *
+     * <pre>
+     *举报人
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUuidBytes();
+  }
+  /**
+   * Protobuf type {@code bbproto.PTipOffObjkeyParam}
+   */
+  public  static final class PTipOffObjkeyParam extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PTipOffObjkeyParam)
+      PTipOffObjkeyParamOrBuilder {
+    // Use PTipOffObjkeyParam.newBuilder() to construct.
+    private PTipOffObjkeyParam(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PTipOffObjkeyParam() {
+      communityId_ = "";
+      postId_ = "";
+      objectKey_ = "";
+      uuid_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PTipOffObjkeyParam(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              communityId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              postId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              objectKey_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              uuid_ = s;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.NetdiskApiProtos.internal_static_bbproto_PTipOffObjkeyParam_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.NetdiskApiProtos.internal_static_bbproto_PTipOffObjkeyParam_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam.class, com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam.Builder.class);
+    }
+
+    public static final int COMMUNITYID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object communityId_;
+    /**
+     * <code>optional string communityId = 1;</code>
+     *
+     * <pre>
+     *社区ID
+     * </pre>
+     */
+    public java.lang.String getCommunityId() {
+      java.lang.Object ref = communityId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        communityId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string communityId = 1;</code>
+     *
+     * <pre>
+     *社区ID
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getCommunityIdBytes() {
+      java.lang.Object ref = communityId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        communityId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POSTID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object postId_;
+    /**
+     * <code>optional string postId = 2;</code>
+     *
+     * <pre>
+     *帖子ID
+     * </pre>
+     */
+    public java.lang.String getPostId() {
+      java.lang.Object ref = postId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        postId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string postId = 2;</code>
+     *
+     * <pre>
+     *帖子ID
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getPostIdBytes() {
+      java.lang.Object ref = postId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        postId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OBJECTKEY_FIELD_NUMBER = 3;
+    private volatile java.lang.Object objectKey_;
+    /**
+     * <code>optional string objectKey = 3;</code>
+     *
+     * <pre>
+     *文件objectkey
+     * </pre>
+     */
+    public java.lang.String getObjectKey() {
+      java.lang.Object ref = objectKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        objectKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string objectKey = 3;</code>
+     *
+     * <pre>
+     *文件objectkey
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getObjectKeyBytes() {
+      java.lang.Object ref = objectKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        objectKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UUID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object uuid_;
+    /**
+     * <code>optional string uuid = 4;</code>
+     *
+     * <pre>
+     *举报人
+     * </pre>
+     */
+    public java.lang.String getUuid() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uuid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string uuid = 4;</code>
+     *
+     * <pre>
+     *举报人
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUuidBytes() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getCommunityIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, communityId_);
+      }
+      if (!getPostIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, postId_);
+      }
+      if (!getObjectKeyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, objectKey_);
+      }
+      if (!getUuidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, uuid_);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getCommunityIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, communityId_);
+      }
+      if (!getPostIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, postId_);
+      }
+      if (!getObjectKeyBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, objectKey_);
+      }
+      if (!getUuidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, uuid_);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PTipOffObjkeyParam}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PTipOffObjkeyParam)
+        com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParamOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.NetdiskApiProtos.internal_static_bbproto_PTipOffObjkeyParam_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.NetdiskApiProtos.internal_static_bbproto_PTipOffObjkeyParam_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam.class, com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        communityId_ = "";
+
+        postId_ = "";
+
+        objectKey_ = "";
+
+        uuid_ = "";
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.NetdiskApiProtos.internal_static_bbproto_PTipOffObjkeyParam_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam build() {
+        com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam buildPartial() {
+        com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam result = new com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam(this);
+        result.communityId_ = communityId_;
+        result.postId_ = postId_;
+        result.objectKey_ = objectKey_;
+        result.uuid_ = uuid_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam) {
+          return mergeFrom((com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam other) {
+        if (other == com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam.getDefaultInstance()) return this;
+        if (!other.getCommunityId().isEmpty()) {
+          communityId_ = other.communityId_;
+          onChanged();
+        }
+        if (!other.getPostId().isEmpty()) {
+          postId_ = other.postId_;
+          onChanged();
+        }
+        if (!other.getObjectKey().isEmpty()) {
+          objectKey_ = other.objectKey_;
+          onChanged();
+        }
+        if (!other.getUuid().isEmpty()) {
+          uuid_ = other.uuid_;
+          onChanged();
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object communityId_ = "";
+      /**
+       * <code>optional string communityId = 1;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public java.lang.String getCommunityId() {
+        java.lang.Object ref = communityId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          communityId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string communityId = 1;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getCommunityIdBytes() {
+        java.lang.Object ref = communityId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          communityId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string communityId = 1;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public Builder setCommunityId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        communityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string communityId = 1;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public Builder clearCommunityId() {
+        
+        communityId_ = getDefaultInstance().getCommunityId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string communityId = 1;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public Builder setCommunityIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        communityId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object postId_ = "";
+      /**
+       * <code>optional string postId = 2;</code>
+       *
+       * <pre>
+       *帖子ID
+       * </pre>
+       */
+      public java.lang.String getPostId() {
+        java.lang.Object ref = postId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          postId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string postId = 2;</code>
+       *
+       * <pre>
+       *帖子ID
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getPostIdBytes() {
+        java.lang.Object ref = postId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          postId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string postId = 2;</code>
+       *
+       * <pre>
+       *帖子ID
+       * </pre>
+       */
+      public Builder setPostId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        postId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string postId = 2;</code>
+       *
+       * <pre>
+       *帖子ID
+       * </pre>
+       */
+      public Builder clearPostId() {
+        
+        postId_ = getDefaultInstance().getPostId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string postId = 2;</code>
+       *
+       * <pre>
+       *帖子ID
+       * </pre>
+       */
+      public Builder setPostIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        postId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object objectKey_ = "";
+      /**
+       * <code>optional string objectKey = 3;</code>
+       *
+       * <pre>
+       *文件objectkey
+       * </pre>
+       */
+      public java.lang.String getObjectKey() {
+        java.lang.Object ref = objectKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          objectKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string objectKey = 3;</code>
+       *
+       * <pre>
+       *文件objectkey
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getObjectKeyBytes() {
+        java.lang.Object ref = objectKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          objectKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string objectKey = 3;</code>
+       *
+       * <pre>
+       *文件objectkey
+       * </pre>
+       */
+      public Builder setObjectKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        objectKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string objectKey = 3;</code>
+       *
+       * <pre>
+       *文件objectkey
+       * </pre>
+       */
+      public Builder clearObjectKey() {
+        
+        objectKey_ = getDefaultInstance().getObjectKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string objectKey = 3;</code>
+       *
+       * <pre>
+       *文件objectkey
+       * </pre>
+       */
+      public Builder setObjectKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        objectKey_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object uuid_ = "";
+      /**
+       * <code>optional string uuid = 4;</code>
+       *
+       * <pre>
+       *举报人
+       * </pre>
+       */
+      public java.lang.String getUuid() {
+        java.lang.Object ref = uuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uuid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string uuid = 4;</code>
+       *
+       * <pre>
+       *举报人
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUuidBytes() {
+        java.lang.Object ref = uuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string uuid = 4;</code>
+       *
+       * <pre>
+       *举报人
+       * </pre>
+       */
+      public Builder setUuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uuid = 4;</code>
+       *
+       * <pre>
+       *举报人
+       * </pre>
+       */
+      public Builder clearUuid() {
+        
+        uuid_ = getDefaultInstance().getUuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uuid = 4;</code>
+       *
+       * <pre>
+       *举报人
+       * </pre>
+       */
+      public Builder setUuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PTipOffObjkeyParam)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PTipOffObjkeyParam)
+    private static final com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam();
+    }
+
+    public static com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PTipOffObjkeyParam>
+        PARSER = new com.google.protobuf.AbstractParser<PTipOffObjkeyParam>() {
+      public PTipOffObjkeyParam parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PTipOffObjkeyParam(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<PTipOffObjkeyParam> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PTipOffObjkeyParam> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_bbproto_POPFileParam_descriptor;
   private static
@@ -1904,6 +3719,16 @@ public final class NetdiskApiProtos {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_bbproto_PSetFileParam_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PTipOffPostParam_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PTipOffPostParam_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PTipOffObjkeyParam_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PTipOffObjkeyParam_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1919,17 +3744,23 @@ public final class NetdiskApiProtos {
       "o.PNetFile\022\030\n\002op\030\002 \001(\0162\014.bbproto.POP\"V\n\r" +
       "PSetFileParam\022\023\n\013communityId\030\001 \001(\t\022\016\n\006po" +
       "stId\030\002 \003(\t\022 \n\006status\030\003 \001(\0162\020.bbproto.PSt" +
-      "atus*?\n\007PStatus\022\n\n\006NORMAL\020\000\022\016\n\nWAIT_AUDI" +
-      "T\020\001\022\013\n\007DECLINE\020\002\022\013\n\007DELETED\020\003*\035\n\003POP\022\n\n\006" +
-      "CREATE\020\000\022\n\n\006DELETE\020\0012\203\002\n\016NetDiskService\022" +
-      "A\n\026setVideoStatusByPostId\022\026.bbproto.PSet",
-      "FileParam\032\017.bbproto.PEmpty\0221\n\007opVideo\022\025." +
-      "bbproto.POPFileParam\032\017.bbproto.PEmpty\022=\n" +
-      "\risExistsVideo\022\026.bbproto.PStringSingle\032\024" +
-      ".bbproto.PBoolSingle\022<\n\021tipoffVideoByPos" +
-      "t\022\026.bbproto.PStringSingle\032\017.bbproto.PEmp" +
-      "tyB*\n\026com.blemobi.sep.probufB\020NetdiskApi" +
-      "Protosb\006proto3"
+      "atus\"E\n\020PTipOffPostParam\022\023\n\013communityId\030" +
+      "\001 \001(\t\022\016\n\006postId\030\002 \001(\t\022\014\n\004uuid\030\003 \001(\t\"Z\n\022P" +
+      "TipOffObjkeyParam\022\023\n\013communityId\030\001 \001(\t\022\016" +
+      "\n\006postId\030\002 \001(\t\022\021\n\tobjectKey\030\003 \001(\t\022\014\n\004uui",
+      "d\030\004 \001(\t*?\n\007PStatus\022\n\n\006NORMAL\020\000\022\016\n\nWAIT_A" +
+      "UDIT\020\001\022\013\n\007DECLINE\020\002\022\013\n\007DELETED\020\003*\035\n\003POP\022" +
+      "\n\n\006CREATE\020\000\022\n\n\006DELETE\020\0012\330\002\n\016NetDiskServi" +
+      "ce\022A\n\026setVideoStatusByPostId\022\026.bbproto.P" +
+      "SetFileParam\032\017.bbproto.PEmpty\0221\n\007opVideo" +
+      "\022\025.bbproto.POPFileParam\032\017.bbproto.PEmpty" +
+      "\022=\n\risExistsVideo\022\026.bbproto.PStringSingl" +
+      "e\032\024.bbproto.PBoolSingle\022D\n\021tipoffVideoBy" +
+      "Post\022\031.bbproto.PTipOffPostParam\032\024.bbprot" +
+      "o.PBoolSingle\022K\n\026tipoofVideoByObjectkey\022",
+      "\033.bbproto.PTipOffObjkeyParam\032\024.bbproto.P" +
+      "BoolSingleB*\n\026com.blemobi.sep.probufB\020Ne" +
+      "tdiskApiProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1958,6 +3789,18 @@ public final class NetdiskApiProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PSetFileParam_descriptor,
         new java.lang.String[] { "CommunityId", "PostId", "Status", });
+    internal_static_bbproto_PTipOffPostParam_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_bbproto_PTipOffPostParam_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PTipOffPostParam_descriptor,
+        new java.lang.String[] { "CommunityId", "PostId", "Uuid", });
+    internal_static_bbproto_PTipOffObjkeyParam_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_bbproto_PTipOffObjkeyParam_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PTipOffObjkeyParam_descriptor,
+        new java.lang.String[] { "CommunityId", "PostId", "ObjectKey", "Uuid", });
     com.blemobi.sep.probuf.NetdiskProtos.getDescriptor();
     com.blemobi.sep.probuf.ResultProtos.getDescriptor();
     com.blemobi.sep.probuf.CommonApiProtos.getDescriptor();

@@ -20,6 +20,8 @@ import com.blemobi.sep.probuf.ResultProtos;
 import com.blemobi.sep.probuf.CommonApiProtos.PEmpty;
 import com.blemobi.sep.probuf.NetdiskApiProtos.POPFileParam;
 import com.blemobi.sep.probuf.NetdiskApiProtos.PSetFileParam;
+import com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam;
+import com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam;
 import com.blemobi.sep.probuf.ResultProtos.PBoolSingle;
 import com.blemobi.sep.probuf.ResultProtos.PStringSingle;
 
@@ -65,14 +67,23 @@ public class NetDiskServiceGrpc {
           io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringSingle.getDefaultInstance()),
           io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PBoolSingle.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringSingle,
-      com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_TIPOFF_VIDEO_BY_POST =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam,
+      com.blemobi.sep.probuf.ResultProtos.PBoolSingle> METHOD_TIPOFF_VIDEO_BY_POST =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.NetDiskService", "tipoffVideoByPost"),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringSingle.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PBoolSingle.getDefaultInstance()));
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam,
+      com.blemobi.sep.probuf.ResultProtos.PBoolSingle> METHOD_TIPOFF_VIDEO_BY_OBJECTKEY =
+      io.grpc.MethodDescriptor.create(
+          io.grpc.MethodDescriptor.MethodType.UNARY,
+          generateFullMethodName(
+              "bbproto.NetDiskService", "tipoffVideoByObjectkey"),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PBoolSingle.getDefaultInstance()));
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -137,14 +148,24 @@ public class NetDiskServiceGrpc {
 
     /**
      * <pre>
-     *&#64;note 根据帖子ID举报视频
-     *&#64;param PStringSingle postId
+     *&#64;note 举报帖子
      *&#64;return 成功返回 PBoolSingle，失败返回 PResult
      * </pre>
      */
-    public void tipoffVideoByPost(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
-        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
+    public void tipoffVideoByPost(com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PBoolSingle> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_TIPOFF_VIDEO_BY_POST, responseObserver);
+    }
+
+    /**
+     * <pre>
+     *&#64;note 举报单个视频
+     *&#64;return 成功返回 PEmpty，失败返回 PResult
+     * </pre>
+     */
+    public void tipoffVideoByObjectkey(com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PBoolSingle> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_TIPOFF_VIDEO_BY_OBJECTKEY, responseObserver);
     }
 
     @java.lang.Override public io.grpc.ServerServiceDefinition bindService() {
@@ -174,9 +195,16 @@ public class NetDiskServiceGrpc {
             METHOD_TIPOFF_VIDEO_BY_POST,
             asyncUnaryCall(
               new MethodHandlers<
-                com.blemobi.sep.probuf.ResultProtos.PStringSingle,
-                com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
+                com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam,
+                com.blemobi.sep.probuf.ResultProtos.PBoolSingle>(
                   this, METHODID_TIPOFF_VIDEO_BY_POST)))
+          .addMethod(
+            METHOD_TIPOFF_VIDEO_BY_OBJECTKEY,
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam,
+                com.blemobi.sep.probuf.ResultProtos.PBoolSingle>(
+                  this, METHODID_TIPOFF_VIDEO_BY_OBJECTKEY)))
           .build();
     }
   }
@@ -238,15 +266,26 @@ public class NetDiskServiceGrpc {
 
     /**
      * <pre>
-     *&#64;note 根据帖子ID举报视频
-     *&#64;param PStringSingle postId
+     *&#64;note 举报帖子
      *&#64;return 成功返回 PBoolSingle，失败返回 PResult
      * </pre>
      */
-    public void tipoffVideoByPost(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
-        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
+    public void tipoffVideoByPost(com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PBoolSingle> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_TIPOFF_VIDEO_BY_POST, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     *&#64;note 举报单个视频
+     *&#64;return 成功返回 PEmpty，失败返回 PResult
+     * </pre>
+     */
+    public void tipoffVideoByObjectkey(com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PBoolSingle> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_TIPOFF_VIDEO_BY_OBJECTKEY, getCallOptions()), request, responseObserver);
     }
   }
 
@@ -304,14 +343,24 @@ public class NetDiskServiceGrpc {
 
     /**
      * <pre>
-     *&#64;note 根据帖子ID举报视频
-     *&#64;param PStringSingle postId
+     *&#64;note 举报帖子
      *&#64;return 成功返回 PBoolSingle，失败返回 PResult
      * </pre>
      */
-    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty tipoffVideoByPost(com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
+    public com.blemobi.sep.probuf.ResultProtos.PBoolSingle tipoffVideoByPost(com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam request) {
       return blockingUnaryCall(
           getChannel(), METHOD_TIPOFF_VIDEO_BY_POST, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     *&#64;note 举报单个视频
+     *&#64;return 成功返回 PEmpty，失败返回 PResult
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.ResultProtos.PBoolSingle tipoffVideoByObjectkey(com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_TIPOFF_VIDEO_BY_OBJECTKEY, getCallOptions(), request);
     }
   }
 
@@ -372,15 +421,26 @@ public class NetDiskServiceGrpc {
 
     /**
      * <pre>
-     *&#64;note 根据帖子ID举报视频
-     *&#64;param PStringSingle postId
+     *&#64;note 举报帖子
      *&#64;return 成功返回 PBoolSingle，失败返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> tipoffVideoByPost(
-        com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.ResultProtos.PBoolSingle> tipoffVideoByPost(
+        com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_TIPOFF_VIDEO_BY_POST, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     *&#64;note 举报单个视频
+     *&#64;return 成功返回 PEmpty，失败返回 PResult
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.ResultProtos.PBoolSingle> tipoffVideoByObjectkey(
+        com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_TIPOFF_VIDEO_BY_OBJECTKEY, getCallOptions()), request);
     }
   }
 
@@ -388,6 +448,7 @@ public class NetDiskServiceGrpc {
   private static final int METHODID_OP_VIDEO = 1;
   private static final int METHODID_IS_EXISTS_VIDEO = 2;
   private static final int METHODID_TIPOFF_VIDEO_BY_POST = 3;
+  private static final int METHODID_TIPOFF_VIDEO_BY_OBJECTKEY = 4;
 
   private static class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -419,8 +480,12 @@ public class NetDiskServiceGrpc {
               (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PBoolSingle>) responseObserver);
           break;
         case METHODID_TIPOFF_VIDEO_BY_POST:
-          serviceImpl.tipoffVideoByPost((com.blemobi.sep.probuf.ResultProtos.PStringSingle) request,
-              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
+          serviceImpl.tipoffVideoByPost((com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffPostParam) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PBoolSingle>) responseObserver);
+          break;
+        case METHODID_TIPOFF_VIDEO_BY_OBJECTKEY:
+          serviceImpl.tipoffVideoByObjectkey((com.blemobi.sep.probuf.NetdiskApiProtos.PTipOffObjkeyParam) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PBoolSingle>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -443,7 +508,8 @@ public class NetDiskServiceGrpc {
         METHOD_SET_VIDEO_STATUS_BY_POST_ID,
         METHOD_OP_VIDEO,
         METHOD_IS_EXISTS_VIDEO,
-        METHOD_TIPOFF_VIDEO_BY_POST);
+        METHOD_TIPOFF_VIDEO_BY_POST,
+        METHOD_TIPOFF_VIDEO_BY_OBJECTKEY);
   }
 
 }
