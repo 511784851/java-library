@@ -232,10 +232,6 @@ public class DataPublishGrpcClient extends BaseGRPCClient {
 		if(topicList == null || topicList.isEmpty()){
 			return new ArrayList<String>();
 		}
-		List<String> topicListRet = new ArrayList<String>();
-		for(String topic : topicList){
-			topicListRet.add(String.format("#%s#", topic));
-		}
-		return topicListRet;
+		return topicList;
 	}
 }
