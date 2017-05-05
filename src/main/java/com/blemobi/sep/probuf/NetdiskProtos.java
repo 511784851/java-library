@@ -340,7 +340,7 @@ public final class NetdiskProtos {
      * <code>optional int32 status = 24;</code>
      *
      * <pre>
-     * 0:审核通过，-1：待审核，-2:审核不通过, -3: 视频已删除
+     * 0:审核通过，-1：待审核，-2:审核不通过, -3: 视频已删除, -4:被举报下线
      * </pre>
      */
     int getStatus();
@@ -419,7 +419,7 @@ public final class NetdiskProtos {
      * <code>optional int32 followShip = 31;</code>
      *
      * <pre>
-     *关注关系, 0:无关注关系, 1: 访客被作者关注, 2: 访客关注了作者, 3:已相互关注
+     * 关注关系, 0:无关注关系, 1: 访客被作者关注, 2: 访客关注了作者, 3:已相互关注
      * </pre>
      */
     int getFollowShip();
@@ -428,7 +428,7 @@ public final class NetdiskProtos {
      * <code>repeated string topic = 32;</code>
      *
      * <pre>
-     *参与的话题
+     * 参与的话题
      * </pre>
      */
     com.google.protobuf.ProtocolStringList
@@ -437,7 +437,7 @@ public final class NetdiskProtos {
      * <code>repeated string topic = 32;</code>
      *
      * <pre>
-     *参与的话题
+     * 参与的话题
      * </pre>
      */
     int getTopicCount();
@@ -445,7 +445,7 @@ public final class NetdiskProtos {
      * <code>repeated string topic = 32;</code>
      *
      * <pre>
-     *参与的话题
+     * 参与的话题
      * </pre>
      */
     java.lang.String getTopic(int index);
@@ -453,7 +453,7 @@ public final class NetdiskProtos {
      * <code>repeated string topic = 32;</code>
      *
      * <pre>
-     *参与的话题
+     * 参与的话题
      * </pre>
      */
     com.google.protobuf.ByteString
@@ -463,10 +463,19 @@ public final class NetdiskProtos {
      * <code>optional int32 category = 33;</code>
      *
      * <pre>
-     *分类 0:全部，1:精华
+     * 分类 0:全部，1:精华
      * </pre>
      */
     int getCategory();
+
+    /**
+     * <code>optional int32 membership = 34;</code>
+     *
+     * <pre>
+     * 用户与社区的关系，-1无关系，0为拥有者，1为管理者，2为已关注
+     * </pre>
+     */
+    int getMembership();
   }
   /**
    * Protobuf type {@code bbproto.PNetFile}
@@ -512,6 +521,7 @@ public final class NetdiskProtos {
       followShip_ = 0;
       topic_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       category_ = 0;
+      membership_ = 0;
     }
 
     @java.lang.Override
@@ -729,6 +739,11 @@ public final class NetdiskProtos {
               category_ = input.readInt32();
               break;
             }
+            case 272: {
+
+              membership_ = input.readInt32();
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -757,6 +772,7 @@ public final class NetdiskProtos {
     }
 
     private int bitField0_;
+    private int bitField1_;
     public static final int FILEID_FIELD_NUMBER = 1;
     private volatile java.lang.Object fileId_;
     /**
@@ -1439,7 +1455,7 @@ public final class NetdiskProtos {
      * <code>optional int32 status = 24;</code>
      *
      * <pre>
-     * 0:审核通过，-1：待审核，-2:审核不通过, -3: 视频已删除
+     * 0:审核通过，-1：待审核，-2:审核不通过, -3: 视频已删除, -4:被举报下线
      * </pre>
      */
     public int getStatus() {
@@ -1550,7 +1566,7 @@ public final class NetdiskProtos {
      * <code>optional int32 followShip = 31;</code>
      *
      * <pre>
-     *关注关系, 0:无关注关系, 1: 访客被作者关注, 2: 访客关注了作者, 3:已相互关注
+     * 关注关系, 0:无关注关系, 1: 访客被作者关注, 2: 访客关注了作者, 3:已相互关注
      * </pre>
      */
     public int getFollowShip() {
@@ -1563,7 +1579,7 @@ public final class NetdiskProtos {
      * <code>repeated string topic = 32;</code>
      *
      * <pre>
-     *参与的话题
+     * 参与的话题
      * </pre>
      */
     public com.google.protobuf.ProtocolStringList
@@ -1574,7 +1590,7 @@ public final class NetdiskProtos {
      * <code>repeated string topic = 32;</code>
      *
      * <pre>
-     *参与的话题
+     * 参与的话题
      * </pre>
      */
     public int getTopicCount() {
@@ -1584,7 +1600,7 @@ public final class NetdiskProtos {
      * <code>repeated string topic = 32;</code>
      *
      * <pre>
-     *参与的话题
+     * 参与的话题
      * </pre>
      */
     public java.lang.String getTopic(int index) {
@@ -1594,7 +1610,7 @@ public final class NetdiskProtos {
      * <code>repeated string topic = 32;</code>
      *
      * <pre>
-     *参与的话题
+     * 参与的话题
      * </pre>
      */
     public com.google.protobuf.ByteString
@@ -1608,11 +1624,24 @@ public final class NetdiskProtos {
      * <code>optional int32 category = 33;</code>
      *
      * <pre>
-     *分类 0:全部，1:精华
+     * 分类 0:全部，1:精华
      * </pre>
      */
     public int getCategory() {
       return category_;
+    }
+
+    public static final int MEMBERSHIP_FIELD_NUMBER = 34;
+    private int membership_;
+    /**
+     * <code>optional int32 membership = 34;</code>
+     *
+     * <pre>
+     * 用户与社区的关系，-1无关系，0为拥有者，1为管理者，2为已关注
+     * </pre>
+     */
+    public int getMembership() {
+      return membership_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1725,6 +1754,9 @@ public final class NetdiskProtos {
       }
       if (category_ != 0) {
         output.writeInt32(33, category_);
+      }
+      if (membership_ != 0) {
+        output.writeInt32(34, membership_);
       }
     }
 
@@ -1855,6 +1887,10 @@ public final class NetdiskProtos {
       if (category_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(33, category_);
+      }
+      if (membership_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(34, membership_);
       }
       memoizedSize = size;
       return size;
@@ -2037,6 +2073,8 @@ public final class NetdiskProtos {
         bitField0_ = (bitField0_ & ~0x80000000);
         category_ = 0;
 
+        membership_ = 0;
+
         return this;
       }
 
@@ -2062,6 +2100,7 @@ public final class NetdiskProtos {
         int from_bitField0_ = bitField0_;
         int from_bitField1_ = bitField1_;
         int to_bitField0_ = 0;
+        int to_bitField1_ = 0;
         result.fileId_ = fileId_;
         result.communityId_ = communityId_;
         result.uuid_ = uuid_;
@@ -2103,7 +2142,9 @@ public final class NetdiskProtos {
         }
         result.topic_ = topic_;
         result.category_ = category_;
+        result.membership_ = membership_;
         result.bitField0_ = to_bitField0_;
+        result.bitField1_ = to_bitField1_;
         onBuilt();
         return result;
       }
@@ -2237,6 +2278,9 @@ public final class NetdiskProtos {
         }
         if (other.getCategory() != 0) {
           setCategory(other.getCategory());
+        }
+        if (other.getMembership() != 0) {
+          setMembership(other.getMembership());
         }
         onChanged();
         return this;
@@ -3808,7 +3852,7 @@ public final class NetdiskProtos {
        * <code>optional int32 status = 24;</code>
        *
        * <pre>
-       * 0:审核通过，-1：待审核，-2:审核不通过, -3: 视频已删除
+       * 0:审核通过，-1：待审核，-2:审核不通过, -3: 视频已删除, -4:被举报下线
        * </pre>
        */
       public int getStatus() {
@@ -3818,7 +3862,7 @@ public final class NetdiskProtos {
        * <code>optional int32 status = 24;</code>
        *
        * <pre>
-       * 0:审核通过，-1：待审核，-2:审核不通过, -3: 视频已删除
+       * 0:审核通过，-1：待审核，-2:审核不通过, -3: 视频已删除, -4:被举报下线
        * </pre>
        */
       public Builder setStatus(int value) {
@@ -3831,7 +3875,7 @@ public final class NetdiskProtos {
        * <code>optional int32 status = 24;</code>
        *
        * <pre>
-       * 0:审核通过，-1：待审核，-2:审核不通过, -3: 视频已删除
+       * 0:审核通过，-1：待审核，-2:审核不通过, -3: 视频已删除, -4:被举报下线
        * </pre>
        */
       public Builder clearStatus() {
@@ -4189,7 +4233,7 @@ public final class NetdiskProtos {
        * <code>optional int32 followShip = 31;</code>
        *
        * <pre>
-       *关注关系, 0:无关注关系, 1: 访客被作者关注, 2: 访客关注了作者, 3:已相互关注
+       * 关注关系, 0:无关注关系, 1: 访客被作者关注, 2: 访客关注了作者, 3:已相互关注
        * </pre>
        */
       public int getFollowShip() {
@@ -4199,7 +4243,7 @@ public final class NetdiskProtos {
        * <code>optional int32 followShip = 31;</code>
        *
        * <pre>
-       *关注关系, 0:无关注关系, 1: 访客被作者关注, 2: 访客关注了作者, 3:已相互关注
+       * 关注关系, 0:无关注关系, 1: 访客被作者关注, 2: 访客关注了作者, 3:已相互关注
        * </pre>
        */
       public Builder setFollowShip(int value) {
@@ -4212,7 +4256,7 @@ public final class NetdiskProtos {
        * <code>optional int32 followShip = 31;</code>
        *
        * <pre>
-       *关注关系, 0:无关注关系, 1: 访客被作者关注, 2: 访客关注了作者, 3:已相互关注
+       * 关注关系, 0:无关注关系, 1: 访客被作者关注, 2: 访客关注了作者, 3:已相互关注
        * </pre>
        */
       public Builder clearFollowShip() {
@@ -4233,7 +4277,7 @@ public final class NetdiskProtos {
        * <code>repeated string topic = 32;</code>
        *
        * <pre>
-       *参与的话题
+       * 参与的话题
        * </pre>
        */
       public com.google.protobuf.ProtocolStringList
@@ -4244,7 +4288,7 @@ public final class NetdiskProtos {
        * <code>repeated string topic = 32;</code>
        *
        * <pre>
-       *参与的话题
+       * 参与的话题
        * </pre>
        */
       public int getTopicCount() {
@@ -4254,7 +4298,7 @@ public final class NetdiskProtos {
        * <code>repeated string topic = 32;</code>
        *
        * <pre>
-       *参与的话题
+       * 参与的话题
        * </pre>
        */
       public java.lang.String getTopic(int index) {
@@ -4264,7 +4308,7 @@ public final class NetdiskProtos {
        * <code>repeated string topic = 32;</code>
        *
        * <pre>
-       *参与的话题
+       * 参与的话题
        * </pre>
        */
       public com.google.protobuf.ByteString
@@ -4275,7 +4319,7 @@ public final class NetdiskProtos {
        * <code>repeated string topic = 32;</code>
        *
        * <pre>
-       *参与的话题
+       * 参与的话题
        * </pre>
        */
       public Builder setTopic(
@@ -4292,7 +4336,7 @@ public final class NetdiskProtos {
        * <code>repeated string topic = 32;</code>
        *
        * <pre>
-       *参与的话题
+       * 参与的话题
        * </pre>
        */
       public Builder addTopic(
@@ -4309,7 +4353,7 @@ public final class NetdiskProtos {
        * <code>repeated string topic = 32;</code>
        *
        * <pre>
-       *参与的话题
+       * 参与的话题
        * </pre>
        */
       public Builder addAllTopic(
@@ -4324,7 +4368,7 @@ public final class NetdiskProtos {
        * <code>repeated string topic = 32;</code>
        *
        * <pre>
-       *参与的话题
+       * 参与的话题
        * </pre>
        */
       public Builder clearTopic() {
@@ -4337,7 +4381,7 @@ public final class NetdiskProtos {
        * <code>repeated string topic = 32;</code>
        *
        * <pre>
-       *参与的话题
+       * 参与的话题
        * </pre>
        */
       public Builder addTopicBytes(
@@ -4357,7 +4401,7 @@ public final class NetdiskProtos {
        * <code>optional int32 category = 33;</code>
        *
        * <pre>
-       *分类 0:全部，1:精华
+       * 分类 0:全部，1:精华
        * </pre>
        */
       public int getCategory() {
@@ -4367,7 +4411,7 @@ public final class NetdiskProtos {
        * <code>optional int32 category = 33;</code>
        *
        * <pre>
-       *分类 0:全部，1:精华
+       * 分类 0:全部，1:精华
        * </pre>
        */
       public Builder setCategory(int value) {
@@ -4380,12 +4424,50 @@ public final class NetdiskProtos {
        * <code>optional int32 category = 33;</code>
        *
        * <pre>
-       *分类 0:全部，1:精华
+       * 分类 0:全部，1:精华
        * </pre>
        */
       public Builder clearCategory() {
         
         category_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int membership_ ;
+      /**
+       * <code>optional int32 membership = 34;</code>
+       *
+       * <pre>
+       * 用户与社区的关系，-1无关系，0为拥有者，1为管理者，2为已关注
+       * </pre>
+       */
+      public int getMembership() {
+        return membership_;
+      }
+      /**
+       * <code>optional int32 membership = 34;</code>
+       *
+       * <pre>
+       * 用户与社区的关系，-1无关系，0为拥有者，1为管理者，2为已关注
+       * </pre>
+       */
+      public Builder setMembership(int value) {
+        
+        membership_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 membership = 34;</code>
+       *
+       * <pre>
+       * 用户与社区的关系，-1无关系，0为拥有者，1为管理者，2为已关注
+       * </pre>
+       */
+      public Builder clearMembership() {
+        
+        membership_ = 0;
         onChanged();
         return this;
       }
@@ -5227,7 +5309,7 @@ public final class NetdiskProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\rnetdisk.proto\022\007bbproto\032\raccount.proto\"" +
-      "\374\004\n\010PNetFile\022\016\n\006fileId\030\001 \001(\t\022\023\n\013communit" +
+      "\220\005\n\010PNetFile\022\016\n\006fileId\030\001 \001(\t\022\023\n\013communit" +
       "yId\030\002 \001(\t\022\014\n\004uuid\030\003 \001(\t\022\021\n\tobjectKey\030\004 \001" +
       "(\t\022\013\n\003url\030\005 \001(\t\022\021\n\textension\030\006 \001(\t\022\020\n\010fi" +
       "leSize\030\007 \001(\003\022\022\n\nfileDigest\030\010 \001(\t\022\022\n\ncrea" +
@@ -5242,10 +5324,11 @@ public final class NetdiskProtos {
       "rBase\022\r\n\005voted\030\032 \001(\010\022\021\n\tcollected\030\033 \001(\010\022" +
       "\021\n\tcanDelete\030\034 \001(\010\022\027\n\017communityStatus\030\035 " +
       "\001(\005\022\024\n\014resourceType\030\036 \001(\005\022\022\n\nfollowShip\030" +
-      "\037 \001(\005\022\r\n\005topic\030  \003(\t\022\020\n\010category\030! \001(\005\"D" +
-      "\n\014PNetFilelist\022\"\n\007netFile\030\001 \003(\0132\021.bbprot" +
-      "o.PNetFile\022\020\n\010DiskSize\030\002 \001(\005B\'\n\026com.blem" +
-      "obi.sep.probufB\rNetdiskProtosb\006proto3"
+      "\037 \001(\005\022\r\n\005topic\030  \003(\t\022\020\n\010category\030! \001(\005\022\022" +
+      "\n\nmembership\030\" \001(\005\"D\n\014PNetFilelist\022\"\n\007ne" +
+      "tFile\030\001 \003(\0132\021.bbproto.PNetFile\022\020\n\010DiskSi" +
+      "ze\030\002 \001(\005B\'\n\026com.blemobi.sep.probufB\rNetd",
+      "iskProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5265,7 +5348,7 @@ public final class NetdiskProtos {
     internal_static_bbproto_PNetFile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PNetFile_descriptor,
-        new java.lang.String[] { "FileId", "CommunityId", "Uuid", "ObjectKey", "Url", "Extension", "FileSize", "FileDigest", "CreateTime", "TransferFlag", "ShareFlag", "ConserveFlag", "Title", "Desc", "Remark", "MiniObjectKey", "MiniUrl", "PostId", "CommentsCnt", "ThumbsupCnt", "PostTyp", "TipoffTimes", "PlayTimes", "Status", "User", "Voted", "Collected", "CanDelete", "CommunityStatus", "ResourceType", "FollowShip", "Topic", "Category", });
+        new java.lang.String[] { "FileId", "CommunityId", "Uuid", "ObjectKey", "Url", "Extension", "FileSize", "FileDigest", "CreateTime", "TransferFlag", "ShareFlag", "ConserveFlag", "Title", "Desc", "Remark", "MiniObjectKey", "MiniUrl", "PostId", "CommentsCnt", "ThumbsupCnt", "PostTyp", "TipoffTimes", "PlayTimes", "Status", "User", "Voted", "Collected", "CanDelete", "CommunityStatus", "ResourceType", "FollowShip", "Topic", "Category", "Membership", });
     internal_static_bbproto_PNetFilelist_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_bbproto_PNetFilelist_fieldAccessorTable = new
