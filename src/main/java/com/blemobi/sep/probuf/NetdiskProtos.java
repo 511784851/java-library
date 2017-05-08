@@ -5308,27 +5308,27 @@ public final class NetdiskProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\rnetdisk.proto\022\007bbproto\032\raccount.proto\"" +
-      "\220\005\n\010PNetFile\022\016\n\006fileId\030\001 \001(\t\022\023\n\013communit" +
-      "yId\030\002 \001(\t\022\014\n\004uuid\030\003 \001(\t\022\021\n\tobjectKey\030\004 \001" +
-      "(\t\022\013\n\003url\030\005 \001(\t\022\021\n\textension\030\006 \001(\t\022\020\n\010fi" +
-      "leSize\030\007 \001(\003\022\022\n\nfileDigest\030\010 \001(\t\022\022\n\ncrea" +
-      "teTime\030\t \001(\003\022\024\n\014transferFlag\030\n \001(\010\022\021\n\tsh" +
-      "areFlag\030\013 \001(\010\022\024\n\014conserveFlag\030\014 \001(\010\022\r\n\005t" +
-      "itle\030\r \001(\t\022\014\n\004desc\030\016 \001(\t\022\016\n\006remark\030\017 \001(\t" +
-      "\022\025\n\rminiObjectKey\030\020 \001(\t\022\017\n\007miniUrl\030\021 \001(\t" +
-      "\022\016\n\006postId\030\022 \001(\t\022\023\n\013commentsCnt\030\023 \001(\005\022\023\n",
-      "\013thumbsupCnt\030\024 \001(\005\022\017\n\007postTyp\030\025 \001(\005\022\023\n\013t" +
-      "ipoffTimes\030\026 \001(\005\022\021\n\tplayTimes\030\027 \001(\005\022\016\n\006s" +
-      "tatus\030\030 \001(\005\022 \n\004user\030\031 \001(\0132\022.bbproto.PUse" +
-      "rBase\022\r\n\005voted\030\032 \001(\010\022\021\n\tcollected\030\033 \001(\010\022" +
-      "\021\n\tcanDelete\030\034 \001(\010\022\027\n\017communityStatus\030\035 " +
-      "\001(\005\022\024\n\014resourceType\030\036 \001(\005\022\022\n\nfollowShip\030" +
-      "\037 \001(\005\022\r\n\005topic\030  \003(\t\022\020\n\010category\030! \001(\005\022\022" +
-      "\n\nmembership\030\" \001(\005\"D\n\014PNetFilelist\022\"\n\007ne" +
-      "tFile\030\001 \003(\0132\021.bbproto.PNetFile\022\020\n\010DiskSi" +
-      "ze\030\002 \001(\005B\'\n\026com.blemobi.sep.probufB\rNetd",
-      "iskProtosb\006proto3"
+      "\n\rnetdisk.proto\022\007bbproto\032\raccount.proto\032" +
+      "\nnews.proto\"\220\005\n\010PNetFile\022\016\n\006fileId\030\001 \001(\t" +
+      "\022\023\n\013communityId\030\002 \001(\t\022\014\n\004uuid\030\003 \001(\t\022\021\n\to" +
+      "bjectKey\030\004 \001(\t\022\013\n\003url\030\005 \001(\t\022\021\n\textension" +
+      "\030\006 \001(\t\022\020\n\010fileSize\030\007 \001(\003\022\022\n\nfileDigest\030\010" +
+      " \001(\t\022\022\n\ncreateTime\030\t \001(\003\022\024\n\014transferFlag" +
+      "\030\n \001(\010\022\021\n\tshareFlag\030\013 \001(\010\022\024\n\014conserveFla" +
+      "g\030\014 \001(\010\022\r\n\005title\030\r \001(\t\022\014\n\004desc\030\016 \001(\t\022\016\n\006" +
+      "remark\030\017 \001(\t\022\025\n\rminiObjectKey\030\020 \001(\t\022\017\n\007m" +
+      "iniUrl\030\021 \001(\t\022\016\n\006postId\030\022 \001(\t\022\023\n\013comments",
+      "Cnt\030\023 \001(\005\022\023\n\013thumbsupCnt\030\024 \001(\005\022\017\n\007postTy" +
+      "p\030\025 \001(\005\022\023\n\013tipoffTimes\030\026 \001(\005\022\021\n\tplayTime" +
+      "s\030\027 \001(\005\022\016\n\006status\030\030 \001(\005\022 \n\004user\030\031 \001(\0132\022." +
+      "bbproto.PUserBase\022\r\n\005voted\030\032 \001(\010\022\021\n\tcoll" +
+      "ected\030\033 \001(\010\022\021\n\tcanDelete\030\034 \001(\010\022\027\n\017commun" +
+      "ityStatus\030\035 \001(\005\022\024\n\014resourceType\030\036 \001(\005\022\022\n" +
+      "\nfollowShip\030\037 \001(\005\022\r\n\005topic\030  \003(\t\022\020\n\010cate" +
+      "gory\030! \001(\005\022\022\n\nmembership\030\" \001(\005\"D\n\014PNetFi" +
+      "lelist\022\"\n\007netFile\030\001 \003(\0132\021.bbproto.PNetFi" +
+      "le\022\020\n\010DiskSize\030\002 \001(\005B\'\n\026com.blemobi.sep.",
+      "probufB\rNetdiskProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5342,6 +5342,7 @@ public final class NetdiskProtos {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.blemobi.sep.probuf.AccountProtos.getDescriptor(),
+          com.blemobi.sep.probuf.NewsProtos.getDescriptor(),
         }, assigner);
     internal_static_bbproto_PNetFile_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -5356,6 +5357,7 @@ public final class NetdiskProtos {
         internal_static_bbproto_PNetFilelist_descriptor,
         new java.lang.String[] { "NetFile", "DiskSize", });
     com.blemobi.sep.probuf.AccountProtos.getDescriptor();
+    com.blemobi.sep.probuf.NewsProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

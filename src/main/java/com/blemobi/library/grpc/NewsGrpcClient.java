@@ -106,7 +106,20 @@ public class NewsGrpcClient extends BaseGRPCClient {
 			}
 		});
 	}
-
+	
+	
+	public PPostView getPostInfoById(String postId) {
+		PGetPostsParam param = PGetPostsParam.newBuilder().addPostIds(Long.parseLong(postId)).build();
+		return this.execute(param, new GrpcCallback<PPostView>() {
+			@Override
+			public PPostView doGrpcRequest() {
+				stub = IGrpcNewsGrpc.newBlockingStub(channel);
+				PPostViewList list = stub.getPostInfoByIds(param);
+				return list.getList(0);
+			}
+		});
+	}
+	
 	public void createPost(PInsidePostNew post) {
 		this.execute(post, new GrpcCallback<PEmpty>() {
 			@Override
