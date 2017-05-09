@@ -476,6 +476,15 @@ public final class NetdiskProtos {
      * </pre>
      */
     int getMembership();
+
+    /**
+     * <code>optional bool isSync = 35;</code>
+     *
+     * <pre>
+     * 是否同步
+     * </pre>
+     */
+    boolean getIsSync();
   }
   /**
    * Protobuf type {@code bbproto.PNetFile}
@@ -522,6 +531,7 @@ public final class NetdiskProtos {
       topic_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       category_ = 0;
       membership_ = 0;
+      isSync_ = false;
     }
 
     @java.lang.Override
@@ -742,6 +752,11 @@ public final class NetdiskProtos {
             case 272: {
 
               membership_ = input.readInt32();
+              break;
+            }
+            case 280: {
+
+              isSync_ = input.readBool();
               break;
             }
           }
@@ -1644,6 +1659,19 @@ public final class NetdiskProtos {
       return membership_;
     }
 
+    public static final int ISSYNC_FIELD_NUMBER = 35;
+    private boolean isSync_;
+    /**
+     * <code>optional bool isSync = 35;</code>
+     *
+     * <pre>
+     * 是否同步
+     * </pre>
+     */
+    public boolean getIsSync() {
+      return isSync_;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -1757,6 +1785,9 @@ public final class NetdiskProtos {
       }
       if (membership_ != 0) {
         output.writeInt32(34, membership_);
+      }
+      if (isSync_ != false) {
+        output.writeBool(35, isSync_);
       }
     }
 
@@ -1891,6 +1922,10 @@ public final class NetdiskProtos {
       if (membership_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(34, membership_);
+      }
+      if (isSync_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(35, isSync_);
       }
       memoizedSize = size;
       return size;
@@ -2075,6 +2110,8 @@ public final class NetdiskProtos {
 
         membership_ = 0;
 
+        isSync_ = false;
+
         return this;
       }
 
@@ -2143,6 +2180,7 @@ public final class NetdiskProtos {
         result.topic_ = topic_;
         result.category_ = category_;
         result.membership_ = membership_;
+        result.isSync_ = isSync_;
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         onBuilt();
@@ -2281,6 +2319,9 @@ public final class NetdiskProtos {
         }
         if (other.getMembership() != 0) {
           setMembership(other.getMembership());
+        }
+        if (other.getIsSync() != false) {
+          setIsSync(other.getIsSync());
         }
         onChanged();
         return this;
@@ -4471,6 +4512,44 @@ public final class NetdiskProtos {
         onChanged();
         return this;
       }
+
+      private boolean isSync_ ;
+      /**
+       * <code>optional bool isSync = 35;</code>
+       *
+       * <pre>
+       * 是否同步
+       * </pre>
+       */
+      public boolean getIsSync() {
+        return isSync_;
+      }
+      /**
+       * <code>optional bool isSync = 35;</code>
+       *
+       * <pre>
+       * 是否同步
+       * </pre>
+       */
+      public Builder setIsSync(boolean value) {
+        
+        isSync_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool isSync = 35;</code>
+       *
+       * <pre>
+       * 是否同步
+       * </pre>
+       */
+      public Builder clearIsSync() {
+        
+        isSync_ = false;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return this;
@@ -5308,27 +5387,27 @@ public final class NetdiskProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\rnetdisk.proto\022\007bbproto\032\raccount.proto\032" +
-      "\nnews.proto\"\220\005\n\010PNetFile\022\016\n\006fileId\030\001 \001(\t" +
-      "\022\023\n\013communityId\030\002 \001(\t\022\014\n\004uuid\030\003 \001(\t\022\021\n\to" +
-      "bjectKey\030\004 \001(\t\022\013\n\003url\030\005 \001(\t\022\021\n\textension" +
-      "\030\006 \001(\t\022\020\n\010fileSize\030\007 \001(\003\022\022\n\nfileDigest\030\010" +
-      " \001(\t\022\022\n\ncreateTime\030\t \001(\003\022\024\n\014transferFlag" +
-      "\030\n \001(\010\022\021\n\tshareFlag\030\013 \001(\010\022\024\n\014conserveFla" +
-      "g\030\014 \001(\010\022\r\n\005title\030\r \001(\t\022\014\n\004desc\030\016 \001(\t\022\016\n\006" +
-      "remark\030\017 \001(\t\022\025\n\rminiObjectKey\030\020 \001(\t\022\017\n\007m" +
-      "iniUrl\030\021 \001(\t\022\016\n\006postId\030\022 \001(\t\022\023\n\013comments",
-      "Cnt\030\023 \001(\005\022\023\n\013thumbsupCnt\030\024 \001(\005\022\017\n\007postTy" +
-      "p\030\025 \001(\005\022\023\n\013tipoffTimes\030\026 \001(\005\022\021\n\tplayTime" +
-      "s\030\027 \001(\005\022\016\n\006status\030\030 \001(\005\022 \n\004user\030\031 \001(\0132\022." +
-      "bbproto.PUserBase\022\r\n\005voted\030\032 \001(\010\022\021\n\tcoll" +
-      "ected\030\033 \001(\010\022\021\n\tcanDelete\030\034 \001(\010\022\027\n\017commun" +
-      "ityStatus\030\035 \001(\005\022\024\n\014resourceType\030\036 \001(\005\022\022\n" +
-      "\nfollowShip\030\037 \001(\005\022\r\n\005topic\030  \003(\t\022\020\n\010cate" +
-      "gory\030! \001(\005\022\022\n\nmembership\030\" \001(\005\"D\n\014PNetFi" +
-      "lelist\022\"\n\007netFile\030\001 \003(\0132\021.bbproto.PNetFi" +
-      "le\022\020\n\010DiskSize\030\002 \001(\005B\'\n\026com.blemobi.sep.",
-      "probufB\rNetdiskProtosb\006proto3"
+      "\n\rnetdisk.proto\022\007bbproto\032\raccount.proto\"" +
+      "\240\005\n\010PNetFile\022\016\n\006fileId\030\001 \001(\t\022\023\n\013communit" +
+      "yId\030\002 \001(\t\022\014\n\004uuid\030\003 \001(\t\022\021\n\tobjectKey\030\004 \001" +
+      "(\t\022\013\n\003url\030\005 \001(\t\022\021\n\textension\030\006 \001(\t\022\020\n\010fi" +
+      "leSize\030\007 \001(\003\022\022\n\nfileDigest\030\010 \001(\t\022\022\n\ncrea" +
+      "teTime\030\t \001(\003\022\024\n\014transferFlag\030\n \001(\010\022\021\n\tsh" +
+      "areFlag\030\013 \001(\010\022\024\n\014conserveFlag\030\014 \001(\010\022\r\n\005t" +
+      "itle\030\r \001(\t\022\014\n\004desc\030\016 \001(\t\022\016\n\006remark\030\017 \001(\t" +
+      "\022\025\n\rminiObjectKey\030\020 \001(\t\022\017\n\007miniUrl\030\021 \001(\t" +
+      "\022\016\n\006postId\030\022 \001(\t\022\023\n\013commentsCnt\030\023 \001(\005\022\023\n",
+      "\013thumbsupCnt\030\024 \001(\005\022\017\n\007postTyp\030\025 \001(\005\022\023\n\013t" +
+      "ipoffTimes\030\026 \001(\005\022\021\n\tplayTimes\030\027 \001(\005\022\016\n\006s" +
+      "tatus\030\030 \001(\005\022 \n\004user\030\031 \001(\0132\022.bbproto.PUse" +
+      "rBase\022\r\n\005voted\030\032 \001(\010\022\021\n\tcollected\030\033 \001(\010\022" +
+      "\021\n\tcanDelete\030\034 \001(\010\022\027\n\017communityStatus\030\035 " +
+      "\001(\005\022\024\n\014resourceType\030\036 \001(\005\022\022\n\nfollowShip\030" +
+      "\037 \001(\005\022\r\n\005topic\030  \003(\t\022\020\n\010category\030! \001(\005\022\022" +
+      "\n\nmembership\030\" \001(\005\022\016\n\006isSync\030# \001(\010\"D\n\014PN" +
+      "etFilelist\022\"\n\007netFile\030\001 \003(\0132\021.bbproto.PN" +
+      "etFile\022\020\n\010DiskSize\030\002 \001(\005B\'\n\026com.blemobi.",
+      "sep.probufB\rNetdiskProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5342,14 +5421,13 @@ public final class NetdiskProtos {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.blemobi.sep.probuf.AccountProtos.getDescriptor(),
-          com.blemobi.sep.probuf.NewsProtos.getDescriptor(),
         }, assigner);
     internal_static_bbproto_PNetFile_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_bbproto_PNetFile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PNetFile_descriptor,
-        new java.lang.String[] { "FileId", "CommunityId", "Uuid", "ObjectKey", "Url", "Extension", "FileSize", "FileDigest", "CreateTime", "TransferFlag", "ShareFlag", "ConserveFlag", "Title", "Desc", "Remark", "MiniObjectKey", "MiniUrl", "PostId", "CommentsCnt", "ThumbsupCnt", "PostTyp", "TipoffTimes", "PlayTimes", "Status", "User", "Voted", "Collected", "CanDelete", "CommunityStatus", "ResourceType", "FollowShip", "Topic", "Category", "Membership", });
+        new java.lang.String[] { "FileId", "CommunityId", "Uuid", "ObjectKey", "Url", "Extension", "FileSize", "FileDigest", "CreateTime", "TransferFlag", "ShareFlag", "ConserveFlag", "Title", "Desc", "Remark", "MiniObjectKey", "MiniUrl", "PostId", "CommentsCnt", "ThumbsupCnt", "PostTyp", "TipoffTimes", "PlayTimes", "Status", "User", "Voted", "Collected", "CanDelete", "CommunityStatus", "ResourceType", "FollowShip", "Topic", "Category", "Membership", "IsSync", });
     internal_static_bbproto_PNetFilelist_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_bbproto_PNetFilelist_fieldAccessorTable = new
@@ -5357,7 +5435,6 @@ public final class NetdiskProtos {
         internal_static_bbproto_PNetFilelist_descriptor,
         new java.lang.String[] { "NetFile", "DiskSize", });
     com.blemobi.sep.probuf.AccountProtos.getDescriptor();
-    com.blemobi.sep.probuf.NewsProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
