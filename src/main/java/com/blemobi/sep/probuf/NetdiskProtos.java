@@ -8,6 +8,114 @@ public final class NetdiskProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
+  /**
+   * Protobuf enum {@code bbproto.PCategory}
+   */
+  public enum PCategory
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>ALL = 0;</code>
+     *
+     * <pre>
+     *全部
+     * </pre>
+     */
+    ALL(0, 0),
+    /**
+     * <code>ESSENCE = 1;</code>
+     *
+     * <pre>
+     *精华
+     * </pre>
+     */
+    ESSENCE(1, 1),
+    UNRECOGNIZED(-1, -1),
+    ;
+
+    /**
+     * <code>ALL = 0;</code>
+     *
+     * <pre>
+     *全部
+     * </pre>
+     */
+    public static final int ALL_VALUE = 0;
+    /**
+     * <code>ESSENCE = 1;</code>
+     *
+     * <pre>
+     *精华
+     * </pre>
+     */
+    public static final int ESSENCE_VALUE = 1;
+
+
+    public final int getNumber() {
+      if (index == -1) {
+        throw new IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    public static PCategory valueOf(int value) {
+      switch (value) {
+        case 0: return ALL;
+        case 1: return ESSENCE;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PCategory>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        PCategory> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PCategory>() {
+            public PCategory findValueByNumber(int number) {
+              return PCategory.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return NetdiskProtos.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final PCategory[] VALUES = values();
+
+    public static PCategory valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private PCategory(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:bbproto.PCategory)
+  }
+
   public interface PNetFileOrBuilder extends
       // @@protoc_insertion_point(interface_extends:bbproto.PNetFile)
       com.google.protobuf.MessageOrBuilder {
@@ -19,7 +127,7 @@ public final class NetdiskProtos {
      * 唯一标识
      * </pre>
      */
-    java.lang.String getFileId();
+    String getFileId();
     /**
      * <code>optional string fileId = 1;</code>
      *
@@ -37,7 +145,7 @@ public final class NetdiskProtos {
      * 社区Id
      * </pre>
      */
-    java.lang.String getCommunityId();
+    String getCommunityId();
     /**
      * <code>optional string communityId = 2;</code>
      *
@@ -55,7 +163,7 @@ public final class NetdiskProtos {
      * 作者uuid
      * </pre>
      */
-    java.lang.String getUuid();
+    String getUuid();
     /**
      * <code>optional string uuid = 3;</code>
      *
@@ -73,7 +181,7 @@ public final class NetdiskProtos {
      * 文件objectKey
      * </pre>
      */
-    java.lang.String getObjectKey();
+    String getObjectKey();
     /**
      * <code>optional string objectKey = 4;</code>
      *
@@ -91,7 +199,7 @@ public final class NetdiskProtos {
      * 文件url
      * </pre>
      */
-    java.lang.String getUrl();
+    String getUrl();
     /**
      * <code>optional string url = 5;</code>
      *
@@ -109,7 +217,7 @@ public final class NetdiskProtos {
      * 文件的扩展名。示范：mp3
      * </pre>
      */
-    java.lang.String getExtension();
+    String getExtension();
     /**
      * <code>optional string extension = 6;</code>
      *
@@ -136,7 +244,7 @@ public final class NetdiskProtos {
      * 文件的md5 hexstring
      * </pre>
      */
-    java.lang.String getFileDigest();
+    String getFileDigest();
     /**
      * <code>optional string fileDigest = 8;</code>
      *
@@ -190,7 +298,7 @@ public final class NetdiskProtos {
      * 文件的标题
      * </pre>
      */
-    java.lang.String getTitle();
+    String getTitle();
     /**
      * <code>optional string title = 13;</code>
      *
@@ -208,7 +316,7 @@ public final class NetdiskProtos {
      * 文件的描述
      * </pre>
      */
-    java.lang.String getDesc();
+    String getDesc();
     /**
      * <code>optional string desc = 14;</code>
      *
@@ -226,7 +334,7 @@ public final class NetdiskProtos {
      * 文件的备注信息
      * </pre>
      */
-    java.lang.String getRemark();
+    String getRemark();
     /**
      * <code>optional string remark = 15;</code>
      *
@@ -244,7 +352,7 @@ public final class NetdiskProtos {
      * 文件缩略图objectKey
      * </pre>
      */
-    java.lang.String getMiniObjectKey();
+    String getMiniObjectKey();
     /**
      * <code>optional string miniObjectKey = 16;</code>
      *
@@ -262,7 +370,7 @@ public final class NetdiskProtos {
      * 文件缩略图url
      * </pre>
      */
-    java.lang.String getMiniUrl();
+    String getMiniUrl();
     /**
      * <code>optional string miniUrl = 17;</code>
      *
@@ -280,7 +388,7 @@ public final class NetdiskProtos {
      * 帖子ID
      * </pre>
      */
-    java.lang.String getPostId();
+    String getPostId();
     /**
      * <code>optional string postId = 18;</code>
      *
@@ -360,7 +468,7 @@ public final class NetdiskProtos {
      * 创建者信息
      * </pre>
      */
-    com.blemobi.sep.probuf.AccountProtos.PUserBase getUser();
+    AccountProtos.PUserBase getUser();
     /**
      * <code>optional .bbproto.PUserBase user = 25;</code>
      *
@@ -368,7 +476,7 @@ public final class NetdiskProtos {
      * 创建者信息
      * </pre>
      */
-    com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserOrBuilder();
+    AccountProtos.PUserBaseOrBuilder getUserOrBuilder();
 
     /**
      * <code>optional bool voted = 26;</code>
@@ -448,7 +556,7 @@ public final class NetdiskProtos {
      * 参与的话题
      * </pre>
      */
-    java.lang.String getTopic(int index);
+    String getTopic(int index);
     /**
      * <code>repeated string topic = 32;</code>
      *
@@ -463,7 +571,7 @@ public final class NetdiskProtos {
      * <code>optional int32 category = 33;</code>
      *
      * <pre>
-     * 分类 0:全部，1:精华
+     * 分类 0:全部，1:精华(与PCategory对应)
      * </pre>
      */
     int getCategory();
@@ -534,7 +642,7 @@ public final class NetdiskProtos {
       isSync_ = false;
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -560,37 +668,37 @@ public final class NetdiskProtos {
               break;
             }
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               fileId_ = s;
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               communityId_ = s;
               break;
             }
             case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               uuid_ = s;
               break;
             }
             case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               objectKey_ = s;
               break;
             }
             case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               url_ = s;
               break;
             }
             case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               extension_ = s;
               break;
@@ -601,7 +709,7 @@ public final class NetdiskProtos {
               break;
             }
             case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               fileDigest_ = s;
               break;
@@ -627,37 +735,37 @@ public final class NetdiskProtos {
               break;
             }
             case 106: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               title_ = s;
               break;
             }
             case 114: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               desc_ = s;
               break;
             }
             case 122: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               remark_ = s;
               break;
             }
             case 130: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               miniObjectKey_ = s;
               break;
             }
             case 138: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               miniUrl_ = s;
               break;
             }
             case 146: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               postId_ = s;
               break;
@@ -693,11 +801,11 @@ public final class NetdiskProtos {
               break;
             }
             case 202: {
-              com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder subBuilder = null;
+              AccountProtos.PUserBase.Builder subBuilder = null;
               if (user_ != null) {
                 subBuilder = user_.toBuilder();
               }
-              user_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.parser(), extensionRegistry);
+              user_ = input.readMessage(AccountProtos.PUserBase.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(user_);
                 user_ = subBuilder.buildPartial();
@@ -736,7 +844,7 @@ public final class NetdiskProtos {
               break;
             }
             case 258: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x80000000) == 0x80000000)) {
                 topic_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x80000000;
@@ -776,20 +884,20 @@ public final class NetdiskProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.NetdiskProtos.internal_static_bbproto_PNetFile_descriptor;
+      return NetdiskProtos.internal_static_bbproto_PNetFile_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.NetdiskProtos.internal_static_bbproto_PNetFile_fieldAccessorTable
+      return NetdiskProtos.internal_static_bbproto_PNetFile_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.NetdiskProtos.PNetFile.class, com.blemobi.sep.probuf.NetdiskProtos.PNetFile.Builder.class);
+              PNetFile.class, Builder.class);
     }
 
     private int bitField0_;
     private int bitField1_;
     public static final int FILEID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object fileId_;
+    private volatile Object fileId_;
     /**
      * <code>optional string fileId = 1;</code>
      *
@@ -797,14 +905,14 @@ public final class NetdiskProtos {
      * 唯一标识
      * </pre>
      */
-    public java.lang.String getFileId() {
-      java.lang.Object ref = fileId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getFileId() {
+      Object ref = fileId_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         fileId_ = s;
         return s;
       }
@@ -818,11 +926,11 @@ public final class NetdiskProtos {
      */
     public com.google.protobuf.ByteString
         getFileIdBytes() {
-      java.lang.Object ref = fileId_;
-      if (ref instanceof java.lang.String) {
+      Object ref = fileId_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         fileId_ = b;
         return b;
       } else {
@@ -831,7 +939,7 @@ public final class NetdiskProtos {
     }
 
     public static final int COMMUNITYID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object communityId_;
+    private volatile Object communityId_;
     /**
      * <code>optional string communityId = 2;</code>
      *
@@ -839,14 +947,14 @@ public final class NetdiskProtos {
      * 社区Id
      * </pre>
      */
-    public java.lang.String getCommunityId() {
-      java.lang.Object ref = communityId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getCommunityId() {
+      Object ref = communityId_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         communityId_ = s;
         return s;
       }
@@ -860,11 +968,11 @@ public final class NetdiskProtos {
      */
     public com.google.protobuf.ByteString
         getCommunityIdBytes() {
-      java.lang.Object ref = communityId_;
-      if (ref instanceof java.lang.String) {
+      Object ref = communityId_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         communityId_ = b;
         return b;
       } else {
@@ -873,7 +981,7 @@ public final class NetdiskProtos {
     }
 
     public static final int UUID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object uuid_;
+    private volatile Object uuid_;
     /**
      * <code>optional string uuid = 3;</code>
      *
@@ -881,14 +989,14 @@ public final class NetdiskProtos {
      * 作者uuid
      * </pre>
      */
-    public java.lang.String getUuid() {
-      java.lang.Object ref = uuid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getUuid() {
+      Object ref = uuid_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         uuid_ = s;
         return s;
       }
@@ -902,11 +1010,11 @@ public final class NetdiskProtos {
      */
     public com.google.protobuf.ByteString
         getUuidBytes() {
-      java.lang.Object ref = uuid_;
-      if (ref instanceof java.lang.String) {
+      Object ref = uuid_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         uuid_ = b;
         return b;
       } else {
@@ -915,7 +1023,7 @@ public final class NetdiskProtos {
     }
 
     public static final int OBJECTKEY_FIELD_NUMBER = 4;
-    private volatile java.lang.Object objectKey_;
+    private volatile Object objectKey_;
     /**
      * <code>optional string objectKey = 4;</code>
      *
@@ -923,14 +1031,14 @@ public final class NetdiskProtos {
      * 文件objectKey
      * </pre>
      */
-    public java.lang.String getObjectKey() {
-      java.lang.Object ref = objectKey_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getObjectKey() {
+      Object ref = objectKey_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         objectKey_ = s;
         return s;
       }
@@ -944,11 +1052,11 @@ public final class NetdiskProtos {
      */
     public com.google.protobuf.ByteString
         getObjectKeyBytes() {
-      java.lang.Object ref = objectKey_;
-      if (ref instanceof java.lang.String) {
+      Object ref = objectKey_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         objectKey_ = b;
         return b;
       } else {
@@ -957,7 +1065,7 @@ public final class NetdiskProtos {
     }
 
     public static final int URL_FIELD_NUMBER = 5;
-    private volatile java.lang.Object url_;
+    private volatile Object url_;
     /**
      * <code>optional string url = 5;</code>
      *
@@ -965,14 +1073,14 @@ public final class NetdiskProtos {
      * 文件url
      * </pre>
      */
-    public java.lang.String getUrl() {
-      java.lang.Object ref = url_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getUrl() {
+      Object ref = url_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         url_ = s;
         return s;
       }
@@ -986,11 +1094,11 @@ public final class NetdiskProtos {
      */
     public com.google.protobuf.ByteString
         getUrlBytes() {
-      java.lang.Object ref = url_;
-      if (ref instanceof java.lang.String) {
+      Object ref = url_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         url_ = b;
         return b;
       } else {
@@ -999,7 +1107,7 @@ public final class NetdiskProtos {
     }
 
     public static final int EXTENSION_FIELD_NUMBER = 6;
-    private volatile java.lang.Object extension_;
+    private volatile Object extension_;
     /**
      * <code>optional string extension = 6;</code>
      *
@@ -1007,14 +1115,14 @@ public final class NetdiskProtos {
      * 文件的扩展名。示范：mp3
      * </pre>
      */
-    public java.lang.String getExtension() {
-      java.lang.Object ref = extension_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getExtension() {
+      Object ref = extension_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         extension_ = s;
         return s;
       }
@@ -1028,11 +1136,11 @@ public final class NetdiskProtos {
      */
     public com.google.protobuf.ByteString
         getExtensionBytes() {
-      java.lang.Object ref = extension_;
-      if (ref instanceof java.lang.String) {
+      Object ref = extension_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         extension_ = b;
         return b;
       } else {
@@ -1054,7 +1162,7 @@ public final class NetdiskProtos {
     }
 
     public static final int FILEDIGEST_FIELD_NUMBER = 8;
-    private volatile java.lang.Object fileDigest_;
+    private volatile Object fileDigest_;
     /**
      * <code>optional string fileDigest = 8;</code>
      *
@@ -1062,14 +1170,14 @@ public final class NetdiskProtos {
      * 文件的md5 hexstring
      * </pre>
      */
-    public java.lang.String getFileDigest() {
-      java.lang.Object ref = fileDigest_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getFileDigest() {
+      Object ref = fileDigest_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         fileDigest_ = s;
         return s;
       }
@@ -1083,11 +1191,11 @@ public final class NetdiskProtos {
      */
     public com.google.protobuf.ByteString
         getFileDigestBytes() {
-      java.lang.Object ref = fileDigest_;
-      if (ref instanceof java.lang.String) {
+      Object ref = fileDigest_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         fileDigest_ = b;
         return b;
       } else {
@@ -1148,7 +1256,7 @@ public final class NetdiskProtos {
     }
 
     public static final int TITLE_FIELD_NUMBER = 13;
-    private volatile java.lang.Object title_;
+    private volatile Object title_;
     /**
      * <code>optional string title = 13;</code>
      *
@@ -1156,14 +1264,14 @@ public final class NetdiskProtos {
      * 文件的标题
      * </pre>
      */
-    public java.lang.String getTitle() {
-      java.lang.Object ref = title_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getTitle() {
+      Object ref = title_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         title_ = s;
         return s;
       }
@@ -1177,11 +1285,11 @@ public final class NetdiskProtos {
      */
     public com.google.protobuf.ByteString
         getTitleBytes() {
-      java.lang.Object ref = title_;
-      if (ref instanceof java.lang.String) {
+      Object ref = title_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         title_ = b;
         return b;
       } else {
@@ -1190,7 +1298,7 @@ public final class NetdiskProtos {
     }
 
     public static final int DESC_FIELD_NUMBER = 14;
-    private volatile java.lang.Object desc_;
+    private volatile Object desc_;
     /**
      * <code>optional string desc = 14;</code>
      *
@@ -1198,14 +1306,14 @@ public final class NetdiskProtos {
      * 文件的描述
      * </pre>
      */
-    public java.lang.String getDesc() {
-      java.lang.Object ref = desc_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getDesc() {
+      Object ref = desc_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         desc_ = s;
         return s;
       }
@@ -1219,11 +1327,11 @@ public final class NetdiskProtos {
      */
     public com.google.protobuf.ByteString
         getDescBytes() {
-      java.lang.Object ref = desc_;
-      if (ref instanceof java.lang.String) {
+      Object ref = desc_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         desc_ = b;
         return b;
       } else {
@@ -1232,7 +1340,7 @@ public final class NetdiskProtos {
     }
 
     public static final int REMARK_FIELD_NUMBER = 15;
-    private volatile java.lang.Object remark_;
+    private volatile Object remark_;
     /**
      * <code>optional string remark = 15;</code>
      *
@@ -1240,14 +1348,14 @@ public final class NetdiskProtos {
      * 文件的备注信息
      * </pre>
      */
-    public java.lang.String getRemark() {
-      java.lang.Object ref = remark_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getRemark() {
+      Object ref = remark_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         remark_ = s;
         return s;
       }
@@ -1261,11 +1369,11 @@ public final class NetdiskProtos {
      */
     public com.google.protobuf.ByteString
         getRemarkBytes() {
-      java.lang.Object ref = remark_;
-      if (ref instanceof java.lang.String) {
+      Object ref = remark_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         remark_ = b;
         return b;
       } else {
@@ -1274,7 +1382,7 @@ public final class NetdiskProtos {
     }
 
     public static final int MINIOBJECTKEY_FIELD_NUMBER = 16;
-    private volatile java.lang.Object miniObjectKey_;
+    private volatile Object miniObjectKey_;
     /**
      * <code>optional string miniObjectKey = 16;</code>
      *
@@ -1282,14 +1390,14 @@ public final class NetdiskProtos {
      * 文件缩略图objectKey
      * </pre>
      */
-    public java.lang.String getMiniObjectKey() {
-      java.lang.Object ref = miniObjectKey_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getMiniObjectKey() {
+      Object ref = miniObjectKey_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         miniObjectKey_ = s;
         return s;
       }
@@ -1303,11 +1411,11 @@ public final class NetdiskProtos {
      */
     public com.google.protobuf.ByteString
         getMiniObjectKeyBytes() {
-      java.lang.Object ref = miniObjectKey_;
-      if (ref instanceof java.lang.String) {
+      Object ref = miniObjectKey_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         miniObjectKey_ = b;
         return b;
       } else {
@@ -1316,7 +1424,7 @@ public final class NetdiskProtos {
     }
 
     public static final int MINIURL_FIELD_NUMBER = 17;
-    private volatile java.lang.Object miniUrl_;
+    private volatile Object miniUrl_;
     /**
      * <code>optional string miniUrl = 17;</code>
      *
@@ -1324,14 +1432,14 @@ public final class NetdiskProtos {
      * 文件缩略图url
      * </pre>
      */
-    public java.lang.String getMiniUrl() {
-      java.lang.Object ref = miniUrl_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getMiniUrl() {
+      Object ref = miniUrl_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         miniUrl_ = s;
         return s;
       }
@@ -1345,11 +1453,11 @@ public final class NetdiskProtos {
      */
     public com.google.protobuf.ByteString
         getMiniUrlBytes() {
-      java.lang.Object ref = miniUrl_;
-      if (ref instanceof java.lang.String) {
+      Object ref = miniUrl_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         miniUrl_ = b;
         return b;
       } else {
@@ -1358,7 +1466,7 @@ public final class NetdiskProtos {
     }
 
     public static final int POSTID_FIELD_NUMBER = 18;
-    private volatile java.lang.Object postId_;
+    private volatile Object postId_;
     /**
      * <code>optional string postId = 18;</code>
      *
@@ -1366,14 +1474,14 @@ public final class NetdiskProtos {
      * 帖子ID
      * </pre>
      */
-    public java.lang.String getPostId() {
-      java.lang.Object ref = postId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getPostId() {
+      Object ref = postId_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         postId_ = s;
         return s;
       }
@@ -1387,11 +1495,11 @@ public final class NetdiskProtos {
      */
     public com.google.protobuf.ByteString
         getPostIdBytes() {
-      java.lang.Object ref = postId_;
-      if (ref instanceof java.lang.String) {
+      Object ref = postId_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         postId_ = b;
         return b;
       } else {
@@ -1478,7 +1586,7 @@ public final class NetdiskProtos {
     }
 
     public static final int USER_FIELD_NUMBER = 25;
-    private com.blemobi.sep.probuf.AccountProtos.PUserBase user_;
+    private AccountProtos.PUserBase user_;
     /**
      * <code>optional .bbproto.PUserBase user = 25;</code>
      *
@@ -1496,8 +1604,8 @@ public final class NetdiskProtos {
      * 创建者信息
      * </pre>
      */
-    public com.blemobi.sep.probuf.AccountProtos.PUserBase getUser() {
-      return user_ == null ? com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : user_;
+    public AccountProtos.PUserBase getUser() {
+      return user_ == null ? AccountProtos.PUserBase.getDefaultInstance() : user_;
     }
     /**
      * <code>optional .bbproto.PUserBase user = 25;</code>
@@ -1506,7 +1614,7 @@ public final class NetdiskProtos {
      * 创建者信息
      * </pre>
      */
-    public com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserOrBuilder() {
+    public AccountProtos.PUserBaseOrBuilder getUserOrBuilder() {
       return getUser();
     }
 
@@ -1618,7 +1726,7 @@ public final class NetdiskProtos {
      * 参与的话题
      * </pre>
      */
-    public java.lang.String getTopic(int index) {
+    public String getTopic(int index) {
       return topic_.get(index);
     }
     /**
@@ -1639,7 +1747,7 @@ public final class NetdiskProtos {
      * <code>optional int32 category = 33;</code>
      *
      * <pre>
-     * 分类 0:全部，1:精华
+     * 分类 0:全部，1:精华(与PCategory对应)
      * </pre>
      */
     public int getCategory() {
@@ -1932,53 +2040,53 @@ public final class NetdiskProtos {
     }
 
     private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.NetdiskProtos.PNetFile parseFrom(
+    public static PNetFile parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.blemobi.sep.probuf.NetdiskProtos.PNetFile parseFrom(
+    public static PNetFile parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.NetdiskProtos.PNetFile parseFrom(byte[] data)
+    public static PNetFile parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.blemobi.sep.probuf.NetdiskProtos.PNetFile parseFrom(
+    public static PNetFile parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.NetdiskProtos.PNetFile parseFrom(java.io.InputStream input)
+    public static PNetFile parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.blemobi.sep.probuf.NetdiskProtos.PNetFile parseFrom(
+    public static PNetFile parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.NetdiskProtos.PNetFile parseDelimitedFrom(java.io.InputStream input)
+    public static PNetFile parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.blemobi.sep.probuf.NetdiskProtos.PNetFile parseDelimitedFrom(
+    public static PNetFile parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.NetdiskProtos.PNetFile parseFrom(
+    public static PNetFile parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.blemobi.sep.probuf.NetdiskProtos.PNetFile parseFrom(
+    public static PNetFile parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1989,7 +2097,7 @@ public final class NetdiskProtos {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.blemobi.sep.probuf.NetdiskProtos.PNetFile prototype) {
+    public static Builder newBuilder(PNetFile prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -1997,9 +2105,9 @@ public final class NetdiskProtos {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -2009,17 +2117,17 @@ public final class NetdiskProtos {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:bbproto.PNetFile)
-        com.blemobi.sep.probuf.NetdiskProtos.PNetFileOrBuilder {
+        PNetFileOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.NetdiskProtos.internal_static_bbproto_PNetFile_descriptor;
+        return NetdiskProtos.internal_static_bbproto_PNetFile_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.NetdiskProtos.internal_static_bbproto_PNetFile_fieldAccessorTable
+        return NetdiskProtos.internal_static_bbproto_PNetFile_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.NetdiskProtos.PNetFile.class, com.blemobi.sep.probuf.NetdiskProtos.PNetFile.Builder.class);
+                PNetFile.class, Builder.class);
       }
 
       // Construct using com.blemobi.sep.probuf.NetdiskProtos.PNetFile.newBuilder()
@@ -2028,7 +2136,7 @@ public final class NetdiskProtos {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -2117,23 +2225,23 @@ public final class NetdiskProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.NetdiskProtos.internal_static_bbproto_PNetFile_descriptor;
+        return NetdiskProtos.internal_static_bbproto_PNetFile_descriptor;
       }
 
-      public com.blemobi.sep.probuf.NetdiskProtos.PNetFile getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.NetdiskProtos.PNetFile.getDefaultInstance();
+      public PNetFile getDefaultInstanceForType() {
+        return PNetFile.getDefaultInstance();
       }
 
-      public com.blemobi.sep.probuf.NetdiskProtos.PNetFile build() {
-        com.blemobi.sep.probuf.NetdiskProtos.PNetFile result = buildPartial();
+      public PNetFile build() {
+        PNetFile result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.blemobi.sep.probuf.NetdiskProtos.PNetFile buildPartial() {
-        com.blemobi.sep.probuf.NetdiskProtos.PNetFile result = new com.blemobi.sep.probuf.NetdiskProtos.PNetFile(this);
+      public PNetFile buildPartial() {
+        PNetFile result = new PNetFile(this);
         int from_bitField0_ = bitField0_;
         int from_bitField1_ = bitField1_;
         int to_bitField0_ = 0;
@@ -2188,16 +2296,16 @@ public final class NetdiskProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.NetdiskProtos.PNetFile) {
-          return mergeFrom((com.blemobi.sep.probuf.NetdiskProtos.PNetFile)other);
+        if (other instanceof PNetFile) {
+          return mergeFrom((PNetFile)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.blemobi.sep.probuf.NetdiskProtos.PNetFile other) {
-        if (other == com.blemobi.sep.probuf.NetdiskProtos.PNetFile.getDefaultInstance()) return this;
+      public Builder mergeFrom(PNetFile other) {
+        if (other == PNetFile.getDefaultInstance()) return this;
         if (!other.getFileId().isEmpty()) {
           fileId_ = other.fileId_;
           onChanged();
@@ -2335,11 +2443,11 @@ public final class NetdiskProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.blemobi.sep.probuf.NetdiskProtos.PNetFile parsedMessage = null;
+        PNetFile parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.NetdiskProtos.PNetFile) e.getUnfinishedMessage();
+          parsedMessage = (PNetFile) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -2351,7 +2459,7 @@ public final class NetdiskProtos {
       private int bitField0_;
       private int bitField1_;
 
-      private java.lang.Object fileId_ = "";
+      private Object fileId_ = "";
       /**
        * <code>optional string fileId = 1;</code>
        *
@@ -2359,16 +2467,16 @@ public final class NetdiskProtos {
        * 唯一标识
        * </pre>
        */
-      public java.lang.String getFileId() {
-        java.lang.Object ref = fileId_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getFileId() {
+        Object ref = fileId_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           fileId_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -2380,11 +2488,11 @@ public final class NetdiskProtos {
        */
       public com.google.protobuf.ByteString
           getFileIdBytes() {
-        java.lang.Object ref = fileId_;
+        Object ref = fileId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           fileId_ = b;
           return b;
         } else {
@@ -2399,7 +2507,7 @@ public final class NetdiskProtos {
        * </pre>
        */
       public Builder setFileId(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2440,7 +2548,7 @@ public final class NetdiskProtos {
         return this;
       }
 
-      private java.lang.Object communityId_ = "";
+      private Object communityId_ = "";
       /**
        * <code>optional string communityId = 2;</code>
        *
@@ -2448,16 +2556,16 @@ public final class NetdiskProtos {
        * 社区Id
        * </pre>
        */
-      public java.lang.String getCommunityId() {
-        java.lang.Object ref = communityId_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getCommunityId() {
+        Object ref = communityId_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           communityId_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -2469,11 +2577,11 @@ public final class NetdiskProtos {
        */
       public com.google.protobuf.ByteString
           getCommunityIdBytes() {
-        java.lang.Object ref = communityId_;
+        Object ref = communityId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           communityId_ = b;
           return b;
         } else {
@@ -2488,7 +2596,7 @@ public final class NetdiskProtos {
        * </pre>
        */
       public Builder setCommunityId(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2529,7 +2637,7 @@ public final class NetdiskProtos {
         return this;
       }
 
-      private java.lang.Object uuid_ = "";
+      private Object uuid_ = "";
       /**
        * <code>optional string uuid = 3;</code>
        *
@@ -2537,16 +2645,16 @@ public final class NetdiskProtos {
        * 作者uuid
        * </pre>
        */
-      public java.lang.String getUuid() {
-        java.lang.Object ref = uuid_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getUuid() {
+        Object ref = uuid_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           uuid_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -2558,11 +2666,11 @@ public final class NetdiskProtos {
        */
       public com.google.protobuf.ByteString
           getUuidBytes() {
-        java.lang.Object ref = uuid_;
+        Object ref = uuid_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           uuid_ = b;
           return b;
         } else {
@@ -2577,7 +2685,7 @@ public final class NetdiskProtos {
        * </pre>
        */
       public Builder setUuid(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2618,7 +2726,7 @@ public final class NetdiskProtos {
         return this;
       }
 
-      private java.lang.Object objectKey_ = "";
+      private Object objectKey_ = "";
       /**
        * <code>optional string objectKey = 4;</code>
        *
@@ -2626,16 +2734,16 @@ public final class NetdiskProtos {
        * 文件objectKey
        * </pre>
        */
-      public java.lang.String getObjectKey() {
-        java.lang.Object ref = objectKey_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getObjectKey() {
+        Object ref = objectKey_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           objectKey_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -2647,11 +2755,11 @@ public final class NetdiskProtos {
        */
       public com.google.protobuf.ByteString
           getObjectKeyBytes() {
-        java.lang.Object ref = objectKey_;
+        Object ref = objectKey_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           objectKey_ = b;
           return b;
         } else {
@@ -2666,7 +2774,7 @@ public final class NetdiskProtos {
        * </pre>
        */
       public Builder setObjectKey(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2707,7 +2815,7 @@ public final class NetdiskProtos {
         return this;
       }
 
-      private java.lang.Object url_ = "";
+      private Object url_ = "";
       /**
        * <code>optional string url = 5;</code>
        *
@@ -2715,16 +2823,16 @@ public final class NetdiskProtos {
        * 文件url
        * </pre>
        */
-      public java.lang.String getUrl() {
-        java.lang.Object ref = url_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getUrl() {
+        Object ref = url_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           url_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -2736,11 +2844,11 @@ public final class NetdiskProtos {
        */
       public com.google.protobuf.ByteString
           getUrlBytes() {
-        java.lang.Object ref = url_;
+        Object ref = url_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           url_ = b;
           return b;
         } else {
@@ -2755,7 +2863,7 @@ public final class NetdiskProtos {
        * </pre>
        */
       public Builder setUrl(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2796,7 +2904,7 @@ public final class NetdiskProtos {
         return this;
       }
 
-      private java.lang.Object extension_ = "";
+      private Object extension_ = "";
       /**
        * <code>optional string extension = 6;</code>
        *
@@ -2804,16 +2912,16 @@ public final class NetdiskProtos {
        * 文件的扩展名。示范：mp3
        * </pre>
        */
-      public java.lang.String getExtension() {
-        java.lang.Object ref = extension_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getExtension() {
+        Object ref = extension_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           extension_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -2825,11 +2933,11 @@ public final class NetdiskProtos {
        */
       public com.google.protobuf.ByteString
           getExtensionBytes() {
-        java.lang.Object ref = extension_;
+        Object ref = extension_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           extension_ = b;
           return b;
         } else {
@@ -2844,7 +2952,7 @@ public final class NetdiskProtos {
        * </pre>
        */
       public Builder setExtension(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2923,7 +3031,7 @@ public final class NetdiskProtos {
         return this;
       }
 
-      private java.lang.Object fileDigest_ = "";
+      private Object fileDigest_ = "";
       /**
        * <code>optional string fileDigest = 8;</code>
        *
@@ -2931,16 +3039,16 @@ public final class NetdiskProtos {
        * 文件的md5 hexstring
        * </pre>
        */
-      public java.lang.String getFileDigest() {
-        java.lang.Object ref = fileDigest_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getFileDigest() {
+        Object ref = fileDigest_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           fileDigest_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -2952,11 +3060,11 @@ public final class NetdiskProtos {
        */
       public com.google.protobuf.ByteString
           getFileDigestBytes() {
-        java.lang.Object ref = fileDigest_;
+        Object ref = fileDigest_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           fileDigest_ = b;
           return b;
         } else {
@@ -2971,7 +3079,7 @@ public final class NetdiskProtos {
        * </pre>
        */
       public Builder setFileDigest(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3164,7 +3272,7 @@ public final class NetdiskProtos {
         return this;
       }
 
-      private java.lang.Object title_ = "";
+      private Object title_ = "";
       /**
        * <code>optional string title = 13;</code>
        *
@@ -3172,16 +3280,16 @@ public final class NetdiskProtos {
        * 文件的标题
        * </pre>
        */
-      public java.lang.String getTitle() {
-        java.lang.Object ref = title_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getTitle() {
+        Object ref = title_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           title_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -3193,11 +3301,11 @@ public final class NetdiskProtos {
        */
       public com.google.protobuf.ByteString
           getTitleBytes() {
-        java.lang.Object ref = title_;
+        Object ref = title_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           title_ = b;
           return b;
         } else {
@@ -3212,7 +3320,7 @@ public final class NetdiskProtos {
        * </pre>
        */
       public Builder setTitle(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3253,7 +3361,7 @@ public final class NetdiskProtos {
         return this;
       }
 
-      private java.lang.Object desc_ = "";
+      private Object desc_ = "";
       /**
        * <code>optional string desc = 14;</code>
        *
@@ -3261,16 +3369,16 @@ public final class NetdiskProtos {
        * 文件的描述
        * </pre>
        */
-      public java.lang.String getDesc() {
-        java.lang.Object ref = desc_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getDesc() {
+        Object ref = desc_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           desc_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -3282,11 +3390,11 @@ public final class NetdiskProtos {
        */
       public com.google.protobuf.ByteString
           getDescBytes() {
-        java.lang.Object ref = desc_;
+        Object ref = desc_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           desc_ = b;
           return b;
         } else {
@@ -3301,7 +3409,7 @@ public final class NetdiskProtos {
        * </pre>
        */
       public Builder setDesc(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3342,7 +3450,7 @@ public final class NetdiskProtos {
         return this;
       }
 
-      private java.lang.Object remark_ = "";
+      private Object remark_ = "";
       /**
        * <code>optional string remark = 15;</code>
        *
@@ -3350,16 +3458,16 @@ public final class NetdiskProtos {
        * 文件的备注信息
        * </pre>
        */
-      public java.lang.String getRemark() {
-        java.lang.Object ref = remark_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getRemark() {
+        Object ref = remark_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           remark_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -3371,11 +3479,11 @@ public final class NetdiskProtos {
        */
       public com.google.protobuf.ByteString
           getRemarkBytes() {
-        java.lang.Object ref = remark_;
+        Object ref = remark_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           remark_ = b;
           return b;
         } else {
@@ -3390,7 +3498,7 @@ public final class NetdiskProtos {
        * </pre>
        */
       public Builder setRemark(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3431,7 +3539,7 @@ public final class NetdiskProtos {
         return this;
       }
 
-      private java.lang.Object miniObjectKey_ = "";
+      private Object miniObjectKey_ = "";
       /**
        * <code>optional string miniObjectKey = 16;</code>
        *
@@ -3439,16 +3547,16 @@ public final class NetdiskProtos {
        * 文件缩略图objectKey
        * </pre>
        */
-      public java.lang.String getMiniObjectKey() {
-        java.lang.Object ref = miniObjectKey_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getMiniObjectKey() {
+        Object ref = miniObjectKey_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           miniObjectKey_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -3460,11 +3568,11 @@ public final class NetdiskProtos {
        */
       public com.google.protobuf.ByteString
           getMiniObjectKeyBytes() {
-        java.lang.Object ref = miniObjectKey_;
+        Object ref = miniObjectKey_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           miniObjectKey_ = b;
           return b;
         } else {
@@ -3479,7 +3587,7 @@ public final class NetdiskProtos {
        * </pre>
        */
       public Builder setMiniObjectKey(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3520,7 +3628,7 @@ public final class NetdiskProtos {
         return this;
       }
 
-      private java.lang.Object miniUrl_ = "";
+      private Object miniUrl_ = "";
       /**
        * <code>optional string miniUrl = 17;</code>
        *
@@ -3528,16 +3636,16 @@ public final class NetdiskProtos {
        * 文件缩略图url
        * </pre>
        */
-      public java.lang.String getMiniUrl() {
-        java.lang.Object ref = miniUrl_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getMiniUrl() {
+        Object ref = miniUrl_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           miniUrl_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -3549,11 +3657,11 @@ public final class NetdiskProtos {
        */
       public com.google.protobuf.ByteString
           getMiniUrlBytes() {
-        java.lang.Object ref = miniUrl_;
+        Object ref = miniUrl_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           miniUrl_ = b;
           return b;
         } else {
@@ -3568,7 +3676,7 @@ public final class NetdiskProtos {
        * </pre>
        */
       public Builder setMiniUrl(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3609,7 +3717,7 @@ public final class NetdiskProtos {
         return this;
       }
 
-      private java.lang.Object postId_ = "";
+      private Object postId_ = "";
       /**
        * <code>optional string postId = 18;</code>
        *
@@ -3617,16 +3725,16 @@ public final class NetdiskProtos {
        * 帖子ID
        * </pre>
        */
-      public java.lang.String getPostId() {
-        java.lang.Object ref = postId_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getPostId() {
+        Object ref = postId_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           postId_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -3638,11 +3746,11 @@ public final class NetdiskProtos {
        */
       public com.google.protobuf.ByteString
           getPostIdBytes() {
-        java.lang.Object ref = postId_;
+        Object ref = postId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           postId_ = b;
           return b;
         } else {
@@ -3657,7 +3765,7 @@ public final class NetdiskProtos {
        * </pre>
        */
       public Builder setPostId(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3926,9 +4034,9 @@ public final class NetdiskProtos {
         return this;
       }
 
-      private com.blemobi.sep.probuf.AccountProtos.PUserBase user_ = null;
+      private AccountProtos.PUserBase user_ = null;
       private com.google.protobuf.SingleFieldBuilder<
-          com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> userBuilder_;
+          AccountProtos.PUserBase, AccountProtos.PUserBase.Builder, AccountProtos.PUserBaseOrBuilder> userBuilder_;
       /**
        * <code>optional .bbproto.PUserBase user = 25;</code>
        *
@@ -3946,9 +4054,9 @@ public final class NetdiskProtos {
        * 创建者信息
        * </pre>
        */
-      public com.blemobi.sep.probuf.AccountProtos.PUserBase getUser() {
+      public AccountProtos.PUserBase getUser() {
         if (userBuilder_ == null) {
-          return user_ == null ? com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : user_;
+          return user_ == null ? AccountProtos.PUserBase.getDefaultInstance() : user_;
         } else {
           return userBuilder_.getMessage();
         }
@@ -3960,7 +4068,7 @@ public final class NetdiskProtos {
        * 创建者信息
        * </pre>
        */
-      public Builder setUser(com.blemobi.sep.probuf.AccountProtos.PUserBase value) {
+      public Builder setUser(AccountProtos.PUserBase value) {
         if (userBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3981,7 +4089,7 @@ public final class NetdiskProtos {
        * </pre>
        */
       public Builder setUser(
-          com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder builderForValue) {
+          AccountProtos.PUserBase.Builder builderForValue) {
         if (userBuilder_ == null) {
           user_ = builderForValue.build();
           onChanged();
@@ -3998,11 +4106,11 @@ public final class NetdiskProtos {
        * 创建者信息
        * </pre>
        */
-      public Builder mergeUser(com.blemobi.sep.probuf.AccountProtos.PUserBase value) {
+      public Builder mergeUser(AccountProtos.PUserBase value) {
         if (userBuilder_ == null) {
           if (user_ != null) {
             user_ =
-              com.blemobi.sep.probuf.AccountProtos.PUserBase.newBuilder(user_).mergeFrom(value).buildPartial();
+              AccountProtos.PUserBase.newBuilder(user_).mergeFrom(value).buildPartial();
           } else {
             user_ = value;
           }
@@ -4038,7 +4146,7 @@ public final class NetdiskProtos {
        * 创建者信息
        * </pre>
        */
-      public com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder getUserBuilder() {
+      public AccountProtos.PUserBase.Builder getUserBuilder() {
         
         onChanged();
         return getUserFieldBuilder().getBuilder();
@@ -4050,12 +4158,12 @@ public final class NetdiskProtos {
        * 创建者信息
        * </pre>
        */
-      public com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserOrBuilder() {
+      public AccountProtos.PUserBaseOrBuilder getUserOrBuilder() {
         if (userBuilder_ != null) {
           return userBuilder_.getMessageOrBuilder();
         } else {
           return user_ == null ?
-              com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : user_;
+              AccountProtos.PUserBase.getDefaultInstance() : user_;
         }
       }
       /**
@@ -4066,11 +4174,11 @@ public final class NetdiskProtos {
        * </pre>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> 
+          AccountProtos.PUserBase, AccountProtos.PUserBase.Builder, AccountProtos.PUserBaseOrBuilder>
           getUserFieldBuilder() {
         if (userBuilder_ == null) {
           userBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder>(
+              AccountProtos.PUserBase, AccountProtos.PUserBase.Builder, AccountProtos.PUserBaseOrBuilder>(
                   getUser(),
                   getParentForChildren(),
                   isClean());
@@ -4342,7 +4450,7 @@ public final class NetdiskProtos {
        * 参与的话题
        * </pre>
        */
-      public java.lang.String getTopic(int index) {
+      public String getTopic(int index) {
         return topic_.get(index);
       }
       /**
@@ -4364,7 +4472,7 @@ public final class NetdiskProtos {
        * </pre>
        */
       public Builder setTopic(
-          int index, java.lang.String value) {
+          int index, String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4381,7 +4489,7 @@ public final class NetdiskProtos {
        * </pre>
        */
       public Builder addTopic(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4398,7 +4506,7 @@ public final class NetdiskProtos {
        * </pre>
        */
       public Builder addAllTopic(
-          java.lang.Iterable<java.lang.String> values) {
+          Iterable<String> values) {
         ensureTopicIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, topic_);
@@ -4442,7 +4550,7 @@ public final class NetdiskProtos {
        * <code>optional int32 category = 33;</code>
        *
        * <pre>
-       * 分类 0:全部，1:精华
+       * 分类 0:全部，1:精华(与PCategory对应)
        * </pre>
        */
       public int getCategory() {
@@ -4452,7 +4560,7 @@ public final class NetdiskProtos {
        * <code>optional int32 category = 33;</code>
        *
        * <pre>
-       * 分类 0:全部，1:精华
+       * 分类 0:全部，1:精华(与PCategory对应)
        * </pre>
        */
       public Builder setCategory(int value) {
@@ -4465,7 +4573,7 @@ public final class NetdiskProtos {
        * <code>optional int32 category = 33;</code>
        *
        * <pre>
-       * 分类 0:全部，1:精华
+       * 分类 0:全部，1:精华(与PCategory对应)
        * </pre>
        */
       public Builder clearCategory() {
@@ -4565,12 +4673,12 @@ public final class NetdiskProtos {
     }
 
     // @@protoc_insertion_point(class_scope:bbproto.PNetFile)
-    private static final com.blemobi.sep.probuf.NetdiskProtos.PNetFile DEFAULT_INSTANCE;
+    private static final PNetFile DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.NetdiskProtos.PNetFile();
+      DEFAULT_INSTANCE = new PNetFile();
     }
 
-    public static com.blemobi.sep.probuf.NetdiskProtos.PNetFile getDefaultInstance() {
+    public static PNetFile getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4597,12 +4705,12 @@ public final class NetdiskProtos {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<PNetFile> getParserForType() {
       return PARSER;
     }
 
-    public com.blemobi.sep.probuf.NetdiskProtos.PNetFile getDefaultInstanceForType() {
+    public PNetFile getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4615,12 +4723,12 @@ public final class NetdiskProtos {
     /**
      * <code>repeated .bbproto.PNetFile netFile = 1;</code>
      */
-    java.util.List<com.blemobi.sep.probuf.NetdiskProtos.PNetFile> 
+    java.util.List<PNetFile>
         getNetFileList();
     /**
      * <code>repeated .bbproto.PNetFile netFile = 1;</code>
      */
-    com.blemobi.sep.probuf.NetdiskProtos.PNetFile getNetFile(int index);
+    PNetFile getNetFile(int index);
     /**
      * <code>repeated .bbproto.PNetFile netFile = 1;</code>
      */
@@ -4628,13 +4736,13 @@ public final class NetdiskProtos {
     /**
      * <code>repeated .bbproto.PNetFile netFile = 1;</code>
      */
-    java.util.List<? extends com.blemobi.sep.probuf.NetdiskProtos.PNetFileOrBuilder> 
+    java.util.List<? extends PNetFileOrBuilder>
         getNetFileOrBuilderList();
     /**
      * <code>repeated .bbproto.PNetFile netFile = 1;</code>
      */
-    com.blemobi.sep.probuf.NetdiskProtos.PNetFileOrBuilder getNetFileOrBuilder(
-        int index);
+    PNetFileOrBuilder getNetFileOrBuilder(
+            int index);
 
     /**
      * <code>optional int32 DiskSize = 2;</code>
@@ -4661,7 +4769,7 @@ public final class NetdiskProtos {
       diskSize_ = 0;
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -4687,10 +4795,10 @@ public final class NetdiskProtos {
             }
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                netFile_ = new java.util.ArrayList<com.blemobi.sep.probuf.NetdiskProtos.PNetFile>();
+                netFile_ = new java.util.ArrayList<PNetFile>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              netFile_.add(input.readMessage(com.blemobi.sep.probuf.NetdiskProtos.PNetFile.parser(), extensionRegistry));
+              netFile_.add(input.readMessage(PNetFile.parser(), extensionRegistry));
               break;
             }
             case 16: {
@@ -4715,29 +4823,29 @@ public final class NetdiskProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.NetdiskProtos.internal_static_bbproto_PNetFilelist_descriptor;
+      return NetdiskProtos.internal_static_bbproto_PNetFilelist_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.NetdiskProtos.internal_static_bbproto_PNetFilelist_fieldAccessorTable
+      return NetdiskProtos.internal_static_bbproto_PNetFilelist_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist.class, com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist.Builder.class);
+              PNetFilelist.class, Builder.class);
     }
 
     private int bitField0_;
     public static final int NETFILE_FIELD_NUMBER = 1;
-    private java.util.List<com.blemobi.sep.probuf.NetdiskProtos.PNetFile> netFile_;
+    private java.util.List<PNetFile> netFile_;
     /**
      * <code>repeated .bbproto.PNetFile netFile = 1;</code>
      */
-    public java.util.List<com.blemobi.sep.probuf.NetdiskProtos.PNetFile> getNetFileList() {
+    public java.util.List<PNetFile> getNetFileList() {
       return netFile_;
     }
     /**
      * <code>repeated .bbproto.PNetFile netFile = 1;</code>
      */
-    public java.util.List<? extends com.blemobi.sep.probuf.NetdiskProtos.PNetFileOrBuilder> 
+    public java.util.List<? extends PNetFileOrBuilder>
         getNetFileOrBuilderList() {
       return netFile_;
     }
@@ -4750,13 +4858,13 @@ public final class NetdiskProtos {
     /**
      * <code>repeated .bbproto.PNetFile netFile = 1;</code>
      */
-    public com.blemobi.sep.probuf.NetdiskProtos.PNetFile getNetFile(int index) {
+    public PNetFile getNetFile(int index) {
       return netFile_.get(index);
     }
     /**
      * <code>repeated .bbproto.PNetFile netFile = 1;</code>
      */
-    public com.blemobi.sep.probuf.NetdiskProtos.PNetFileOrBuilder getNetFileOrBuilder(
+    public PNetFileOrBuilder getNetFileOrBuilder(
         int index) {
       return netFile_.get(index);
     }
@@ -4812,53 +4920,53 @@ public final class NetdiskProtos {
     }
 
     private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist parseFrom(
+    public static PNetFilelist parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist parseFrom(
+    public static PNetFilelist parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist parseFrom(byte[] data)
+    public static PNetFilelist parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist parseFrom(
+    public static PNetFilelist parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist parseFrom(java.io.InputStream input)
+    public static PNetFilelist parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist parseFrom(
+    public static PNetFilelist parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist parseDelimitedFrom(java.io.InputStream input)
+    public static PNetFilelist parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist parseDelimitedFrom(
+    public static PNetFilelist parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist parseFrom(
+    public static PNetFilelist parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist parseFrom(
+    public static PNetFilelist parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4869,7 +4977,7 @@ public final class NetdiskProtos {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist prototype) {
+    public static Builder newBuilder(PNetFilelist prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -4877,9 +4985,9 @@ public final class NetdiskProtos {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -4889,17 +4997,17 @@ public final class NetdiskProtos {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:bbproto.PNetFilelist)
-        com.blemobi.sep.probuf.NetdiskProtos.PNetFilelistOrBuilder {
+        PNetFilelistOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.NetdiskProtos.internal_static_bbproto_PNetFilelist_descriptor;
+        return NetdiskProtos.internal_static_bbproto_PNetFilelist_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.NetdiskProtos.internal_static_bbproto_PNetFilelist_fieldAccessorTable
+        return NetdiskProtos.internal_static_bbproto_PNetFilelist_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist.class, com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist.Builder.class);
+                PNetFilelist.class, Builder.class);
       }
 
       // Construct using com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist.newBuilder()
@@ -4908,7 +5016,7 @@ public final class NetdiskProtos {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -4932,23 +5040,23 @@ public final class NetdiskProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.NetdiskProtos.internal_static_bbproto_PNetFilelist_descriptor;
+        return NetdiskProtos.internal_static_bbproto_PNetFilelist_descriptor;
       }
 
-      public com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist.getDefaultInstance();
+      public PNetFilelist getDefaultInstanceForType() {
+        return PNetFilelist.getDefaultInstance();
       }
 
-      public com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist build() {
-        com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist result = buildPartial();
+      public PNetFilelist build() {
+        PNetFilelist result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist buildPartial() {
-        com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist result = new com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist(this);
+      public PNetFilelist buildPartial() {
+        PNetFilelist result = new PNetFilelist(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (netFileBuilder_ == null) {
@@ -4967,16 +5075,16 @@ public final class NetdiskProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist) {
-          return mergeFrom((com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist)other);
+        if (other instanceof PNetFilelist) {
+          return mergeFrom((PNetFilelist)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist other) {
-        if (other == com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist.getDefaultInstance()) return this;
+      public Builder mergeFrom(PNetFilelist other) {
+        if (other == PNetFilelist.getDefaultInstance()) return this;
         if (netFileBuilder_ == null) {
           if (!other.netFile_.isEmpty()) {
             if (netFile_.isEmpty()) {
@@ -5018,11 +5126,11 @@ public final class NetdiskProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist parsedMessage = null;
+        PNetFilelist parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist) e.getUnfinishedMessage();
+          parsedMessage = (PNetFilelist) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -5033,22 +5141,22 @@ public final class NetdiskProtos {
       }
       private int bitField0_;
 
-      private java.util.List<com.blemobi.sep.probuf.NetdiskProtos.PNetFile> netFile_ =
+      private java.util.List<PNetFile> netFile_ =
         java.util.Collections.emptyList();
       private void ensureNetFileIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          netFile_ = new java.util.ArrayList<com.blemobi.sep.probuf.NetdiskProtos.PNetFile>(netFile_);
+          netFile_ = new java.util.ArrayList<PNetFile>(netFile_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.NetdiskProtos.PNetFile, com.blemobi.sep.probuf.NetdiskProtos.PNetFile.Builder, com.blemobi.sep.probuf.NetdiskProtos.PNetFileOrBuilder> netFileBuilder_;
+          PNetFile, PNetFile.Builder, PNetFileOrBuilder> netFileBuilder_;
 
       /**
        * <code>repeated .bbproto.PNetFile netFile = 1;</code>
        */
-      public java.util.List<com.blemobi.sep.probuf.NetdiskProtos.PNetFile> getNetFileList() {
+      public java.util.List<PNetFile> getNetFileList() {
         if (netFileBuilder_ == null) {
           return java.util.Collections.unmodifiableList(netFile_);
         } else {
@@ -5068,7 +5176,7 @@ public final class NetdiskProtos {
       /**
        * <code>repeated .bbproto.PNetFile netFile = 1;</code>
        */
-      public com.blemobi.sep.probuf.NetdiskProtos.PNetFile getNetFile(int index) {
+      public PNetFile getNetFile(int index) {
         if (netFileBuilder_ == null) {
           return netFile_.get(index);
         } else {
@@ -5079,7 +5187,7 @@ public final class NetdiskProtos {
        * <code>repeated .bbproto.PNetFile netFile = 1;</code>
        */
       public Builder setNetFile(
-          int index, com.blemobi.sep.probuf.NetdiskProtos.PNetFile value) {
+          int index, PNetFile value) {
         if (netFileBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5096,7 +5204,7 @@ public final class NetdiskProtos {
        * <code>repeated .bbproto.PNetFile netFile = 1;</code>
        */
       public Builder setNetFile(
-          int index, com.blemobi.sep.probuf.NetdiskProtos.PNetFile.Builder builderForValue) {
+          int index, PNetFile.Builder builderForValue) {
         if (netFileBuilder_ == null) {
           ensureNetFileIsMutable();
           netFile_.set(index, builderForValue.build());
@@ -5109,7 +5217,7 @@ public final class NetdiskProtos {
       /**
        * <code>repeated .bbproto.PNetFile netFile = 1;</code>
        */
-      public Builder addNetFile(com.blemobi.sep.probuf.NetdiskProtos.PNetFile value) {
+      public Builder addNetFile(PNetFile value) {
         if (netFileBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5126,7 +5234,7 @@ public final class NetdiskProtos {
        * <code>repeated .bbproto.PNetFile netFile = 1;</code>
        */
       public Builder addNetFile(
-          int index, com.blemobi.sep.probuf.NetdiskProtos.PNetFile value) {
+          int index, PNetFile value) {
         if (netFileBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5143,7 +5251,7 @@ public final class NetdiskProtos {
        * <code>repeated .bbproto.PNetFile netFile = 1;</code>
        */
       public Builder addNetFile(
-          com.blemobi.sep.probuf.NetdiskProtos.PNetFile.Builder builderForValue) {
+          PNetFile.Builder builderForValue) {
         if (netFileBuilder_ == null) {
           ensureNetFileIsMutable();
           netFile_.add(builderForValue.build());
@@ -5157,7 +5265,7 @@ public final class NetdiskProtos {
        * <code>repeated .bbproto.PNetFile netFile = 1;</code>
        */
       public Builder addNetFile(
-          int index, com.blemobi.sep.probuf.NetdiskProtos.PNetFile.Builder builderForValue) {
+          int index, PNetFile.Builder builderForValue) {
         if (netFileBuilder_ == null) {
           ensureNetFileIsMutable();
           netFile_.add(index, builderForValue.build());
@@ -5171,7 +5279,7 @@ public final class NetdiskProtos {
        * <code>repeated .bbproto.PNetFile netFile = 1;</code>
        */
       public Builder addAllNetFile(
-          java.lang.Iterable<? extends com.blemobi.sep.probuf.NetdiskProtos.PNetFile> values) {
+          Iterable<? extends PNetFile> values) {
         if (netFileBuilder_ == null) {
           ensureNetFileIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -5211,14 +5319,14 @@ public final class NetdiskProtos {
       /**
        * <code>repeated .bbproto.PNetFile netFile = 1;</code>
        */
-      public com.blemobi.sep.probuf.NetdiskProtos.PNetFile.Builder getNetFileBuilder(
+      public PNetFile.Builder getNetFileBuilder(
           int index) {
         return getNetFileFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .bbproto.PNetFile netFile = 1;</code>
        */
-      public com.blemobi.sep.probuf.NetdiskProtos.PNetFileOrBuilder getNetFileOrBuilder(
+      public PNetFileOrBuilder getNetFileOrBuilder(
           int index) {
         if (netFileBuilder_ == null) {
           return netFile_.get(index);  } else {
@@ -5228,7 +5336,7 @@ public final class NetdiskProtos {
       /**
        * <code>repeated .bbproto.PNetFile netFile = 1;</code>
        */
-      public java.util.List<? extends com.blemobi.sep.probuf.NetdiskProtos.PNetFileOrBuilder> 
+      public java.util.List<? extends PNetFileOrBuilder>
            getNetFileOrBuilderList() {
         if (netFileBuilder_ != null) {
           return netFileBuilder_.getMessageOrBuilderList();
@@ -5239,31 +5347,31 @@ public final class NetdiskProtos {
       /**
        * <code>repeated .bbproto.PNetFile netFile = 1;</code>
        */
-      public com.blemobi.sep.probuf.NetdiskProtos.PNetFile.Builder addNetFileBuilder() {
+      public PNetFile.Builder addNetFileBuilder() {
         return getNetFileFieldBuilder().addBuilder(
-            com.blemobi.sep.probuf.NetdiskProtos.PNetFile.getDefaultInstance());
+            PNetFile.getDefaultInstance());
       }
       /**
        * <code>repeated .bbproto.PNetFile netFile = 1;</code>
        */
-      public com.blemobi.sep.probuf.NetdiskProtos.PNetFile.Builder addNetFileBuilder(
+      public PNetFile.Builder addNetFileBuilder(
           int index) {
         return getNetFileFieldBuilder().addBuilder(
-            index, com.blemobi.sep.probuf.NetdiskProtos.PNetFile.getDefaultInstance());
+            index, PNetFile.getDefaultInstance());
       }
       /**
        * <code>repeated .bbproto.PNetFile netFile = 1;</code>
        */
-      public java.util.List<com.blemobi.sep.probuf.NetdiskProtos.PNetFile.Builder> 
+      public java.util.List<PNetFile.Builder>
            getNetFileBuilderList() {
         return getNetFileFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.NetdiskProtos.PNetFile, com.blemobi.sep.probuf.NetdiskProtos.PNetFile.Builder, com.blemobi.sep.probuf.NetdiskProtos.PNetFileOrBuilder> 
+          PNetFile, PNetFile.Builder, PNetFileOrBuilder>
           getNetFileFieldBuilder() {
         if (netFileBuilder_ == null) {
           netFileBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              com.blemobi.sep.probuf.NetdiskProtos.PNetFile, com.blemobi.sep.probuf.NetdiskProtos.PNetFile.Builder, com.blemobi.sep.probuf.NetdiskProtos.PNetFileOrBuilder>(
+              PNetFile, PNetFile.Builder, PNetFileOrBuilder>(
                   netFile_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
@@ -5325,12 +5433,12 @@ public final class NetdiskProtos {
     }
 
     // @@protoc_insertion_point(class_scope:bbproto.PNetFilelist)
-    private static final com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist DEFAULT_INSTANCE;
+    private static final PNetFilelist DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist();
+      DEFAULT_INSTANCE = new PNetFilelist();
     }
 
-    public static com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist getDefaultInstance() {
+    public static PNetFilelist getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5357,12 +5465,1322 @@ public final class NetdiskProtos {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<PNetFilelist> getParserForType() {
       return PARSER;
     }
 
-    public com.blemobi.sep.probuf.NetdiskProtos.PNetFilelist getDefaultInstanceForType() {
+    public PNetFilelist getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PLabelStatusListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PLabelStatusList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+     *
+     * <pre>
+     *视频标签状态列表
+     * </pre>
+     */
+    java.util.List<PLabelStatus>
+        getListList();
+    /**
+     * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+     *
+     * <pre>
+     *视频标签状态列表
+     * </pre>
+     */
+    PLabelStatus getList(int index);
+    /**
+     * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+     *
+     * <pre>
+     *视频标签状态列表
+     * </pre>
+     */
+    int getListCount();
+    /**
+     * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+     *
+     * <pre>
+     *视频标签状态列表
+     * </pre>
+     */
+    java.util.List<? extends PLabelStatusOrBuilder>
+        getListOrBuilderList();
+    /**
+     * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+     *
+     * <pre>
+     *视频标签状态列表
+     * </pre>
+     */
+    PLabelStatusOrBuilder getListOrBuilder(
+            int index);
+  }
+  /**
+   * Protobuf type {@code bbproto.PLabelStatusList}
+   */
+  public  static final class PLabelStatusList extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PLabelStatusList)
+      PLabelStatusListOrBuilder {
+    // Use PLabelStatusList.newBuilder() to construct.
+    private PLabelStatusList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PLabelStatusList() {
+      list_ = java.util.Collections.emptyList();
+    }
+
+    @Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PLabelStatusList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                list_ = new java.util.ArrayList<PLabelStatus>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              list_.add(input.readMessage(PLabelStatus.parser(), extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          list_ = java.util.Collections.unmodifiableList(list_);
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return NetdiskProtos.internal_static_bbproto_PLabelStatusList_descriptor;
+    }
+
+    protected FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return NetdiskProtos.internal_static_bbproto_PLabelStatusList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              PLabelStatusList.class, Builder.class);
+    }
+
+    public static final int LIST_FIELD_NUMBER = 1;
+    private java.util.List<PLabelStatus> list_;
+    /**
+     * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+     *
+     * <pre>
+     *视频标签状态列表
+     * </pre>
+     */
+    public java.util.List<PLabelStatus> getListList() {
+      return list_;
+    }
+    /**
+     * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+     *
+     * <pre>
+     *视频标签状态列表
+     * </pre>
+     */
+    public java.util.List<? extends PLabelStatusOrBuilder>
+        getListOrBuilderList() {
+      return list_;
+    }
+    /**
+     * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+     *
+     * <pre>
+     *视频标签状态列表
+     * </pre>
+     */
+    public int getListCount() {
+      return list_.size();
+    }
+    /**
+     * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+     *
+     * <pre>
+     *视频标签状态列表
+     * </pre>
+     */
+    public PLabelStatus getList(int index) {
+      return list_.get(index);
+    }
+    /**
+     * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+     *
+     * <pre>
+     *视频标签状态列表
+     * </pre>
+     */
+    public PLabelStatusOrBuilder getListOrBuilder(
+        int index) {
+      return list_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < list_.size(); i++) {
+        output.writeMessage(1, list_.get(i));
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < list_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, list_.get(i));
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static PLabelStatusList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static PLabelStatusList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static PLabelStatusList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static PLabelStatusList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static PLabelStatusList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static PLabelStatusList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static PLabelStatusList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static PLabelStatusList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static PLabelStatusList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static PLabelStatusList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(PLabelStatusList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @Override
+    protected Builder newBuilderForType(
+        BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PLabelStatusList}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PLabelStatusList)
+        PLabelStatusListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return NetdiskProtos.internal_static_bbproto_PLabelStatusList_descriptor;
+      }
+
+      protected FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return NetdiskProtos.internal_static_bbproto_PLabelStatusList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                PLabelStatusList.class, Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.NetdiskProtos.PLabelStatusList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getListFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (listBuilder_ == null) {
+          list_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          listBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return NetdiskProtos.internal_static_bbproto_PLabelStatusList_descriptor;
+      }
+
+      public PLabelStatusList getDefaultInstanceForType() {
+        return PLabelStatusList.getDefaultInstance();
+      }
+
+      public PLabelStatusList build() {
+        PLabelStatusList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public PLabelStatusList buildPartial() {
+        PLabelStatusList result = new PLabelStatusList(this);
+        int from_bitField0_ = bitField0_;
+        if (listBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            list_ = java.util.Collections.unmodifiableList(list_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.list_ = list_;
+        } else {
+          result.list_ = listBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof PLabelStatusList) {
+          return mergeFrom((PLabelStatusList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(PLabelStatusList other) {
+        if (other == PLabelStatusList.getDefaultInstance()) return this;
+        if (listBuilder_ == null) {
+          if (!other.list_.isEmpty()) {
+            if (list_.isEmpty()) {
+              list_ = other.list_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureListIsMutable();
+              list_.addAll(other.list_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.list_.isEmpty()) {
+            if (listBuilder_.isEmpty()) {
+              listBuilder_.dispose();
+              listBuilder_ = null;
+              list_ = other.list_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              listBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getListFieldBuilder() : null;
+            } else {
+              listBuilder_.addAllMessages(other.list_);
+            }
+          }
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        PLabelStatusList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (PLabelStatusList) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<PLabelStatus> list_ =
+        java.util.Collections.emptyList();
+      private void ensureListIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          list_ = new java.util.ArrayList<PLabelStatus>(list_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          PLabelStatus, PLabelStatus.Builder, PLabelStatusOrBuilder> listBuilder_;
+
+      /**
+       * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+       *
+       * <pre>
+       *视频标签状态列表
+       * </pre>
+       */
+      public java.util.List<PLabelStatus> getListList() {
+        if (listBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(list_);
+        } else {
+          return listBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+       *
+       * <pre>
+       *视频标签状态列表
+       * </pre>
+       */
+      public int getListCount() {
+        if (listBuilder_ == null) {
+          return list_.size();
+        } else {
+          return listBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+       *
+       * <pre>
+       *视频标签状态列表
+       * </pre>
+       */
+      public PLabelStatus getList(int index) {
+        if (listBuilder_ == null) {
+          return list_.get(index);
+        } else {
+          return listBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+       *
+       * <pre>
+       *视频标签状态列表
+       * </pre>
+       */
+      public Builder setList(
+          int index, PLabelStatus value) {
+        if (listBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureListIsMutable();
+          list_.set(index, value);
+          onChanged();
+        } else {
+          listBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+       *
+       * <pre>
+       *视频标签状态列表
+       * </pre>
+       */
+      public Builder setList(
+          int index, PLabelStatus.Builder builderForValue) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          list_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          listBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+       *
+       * <pre>
+       *视频标签状态列表
+       * </pre>
+       */
+      public Builder addList(PLabelStatus value) {
+        if (listBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureListIsMutable();
+          list_.add(value);
+          onChanged();
+        } else {
+          listBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+       *
+       * <pre>
+       *视频标签状态列表
+       * </pre>
+       */
+      public Builder addList(
+          int index, PLabelStatus value) {
+        if (listBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureListIsMutable();
+          list_.add(index, value);
+          onChanged();
+        } else {
+          listBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+       *
+       * <pre>
+       *视频标签状态列表
+       * </pre>
+       */
+      public Builder addList(
+          PLabelStatus.Builder builderForValue) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          list_.add(builderForValue.build());
+          onChanged();
+        } else {
+          listBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+       *
+       * <pre>
+       *视频标签状态列表
+       * </pre>
+       */
+      public Builder addList(
+          int index, PLabelStatus.Builder builderForValue) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          list_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          listBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+       *
+       * <pre>
+       *视频标签状态列表
+       * </pre>
+       */
+      public Builder addAllList(
+          Iterable<? extends PLabelStatus> values) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, list_);
+          onChanged();
+        } else {
+          listBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+       *
+       * <pre>
+       *视频标签状态列表
+       * </pre>
+       */
+      public Builder clearList() {
+        if (listBuilder_ == null) {
+          list_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          listBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+       *
+       * <pre>
+       *视频标签状态列表
+       * </pre>
+       */
+      public Builder removeList(int index) {
+        if (listBuilder_ == null) {
+          ensureListIsMutable();
+          list_.remove(index);
+          onChanged();
+        } else {
+          listBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+       *
+       * <pre>
+       *视频标签状态列表
+       * </pre>
+       */
+      public PLabelStatus.Builder getListBuilder(
+          int index) {
+        return getListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+       *
+       * <pre>
+       *视频标签状态列表
+       * </pre>
+       */
+      public PLabelStatusOrBuilder getListOrBuilder(
+          int index) {
+        if (listBuilder_ == null) {
+          return list_.get(index);  } else {
+          return listBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+       *
+       * <pre>
+       *视频标签状态列表
+       * </pre>
+       */
+      public java.util.List<? extends PLabelStatusOrBuilder>
+           getListOrBuilderList() {
+        if (listBuilder_ != null) {
+          return listBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(list_);
+        }
+      }
+      /**
+       * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+       *
+       * <pre>
+       *视频标签状态列表
+       * </pre>
+       */
+      public PLabelStatus.Builder addListBuilder() {
+        return getListFieldBuilder().addBuilder(
+            PLabelStatus.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+       *
+       * <pre>
+       *视频标签状态列表
+       * </pre>
+       */
+      public PLabelStatus.Builder addListBuilder(
+          int index) {
+        return getListFieldBuilder().addBuilder(
+            index, PLabelStatus.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bbproto.PLabelStatus list = 1;</code>
+       *
+       * <pre>
+       *视频标签状态列表
+       * </pre>
+       */
+      public java.util.List<PLabelStatus.Builder>
+           getListBuilderList() {
+        return getListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          PLabelStatus, PLabelStatus.Builder, PLabelStatusOrBuilder>
+          getListFieldBuilder() {
+        if (listBuilder_ == null) {
+          listBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              PLabelStatus, PLabelStatus.Builder, PLabelStatusOrBuilder>(
+                  list_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          list_ = null;
+        }
+        return listBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PLabelStatusList)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PLabelStatusList)
+    private static final PLabelStatusList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new PLabelStatusList();
+    }
+
+    public static PLabelStatusList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PLabelStatusList>
+        PARSER = new com.google.protobuf.AbstractParser<PLabelStatusList>() {
+      public PLabelStatusList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PLabelStatusList(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<PLabelStatusList> parser() {
+      return PARSER;
+    }
+
+    @Override
+    public com.google.protobuf.Parser<PLabelStatusList> getParserForType() {
+      return PARSER;
+    }
+
+    public PLabelStatusList getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PLabelStatusOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PLabelStatus)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .bbproto.PCategory category = 1;</code>
+     *
+     * <pre>
+     *分类
+     * </pre>
+     */
+    int getCategoryValue();
+    /**
+     * <code>optional .bbproto.PCategory category = 1;</code>
+     *
+     * <pre>
+     *分类
+     * </pre>
+     */
+    PCategory getCategory();
+
+    /**
+     * <code>optional bool hasVideo = 2;</code>
+     *
+     * <pre>
+     *是否有视频
+     * </pre>
+     */
+    boolean getHasVideo();
+  }
+  /**
+   * Protobuf type {@code bbproto.PLabelStatus}
+   */
+  public  static final class PLabelStatus extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PLabelStatus)
+      PLabelStatusOrBuilder {
+    // Use PLabelStatus.newBuilder() to construct.
+    private PLabelStatus(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PLabelStatus() {
+      category_ = 0;
+      hasVideo_ = false;
+    }
+
+    @Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PLabelStatus(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+
+              category_ = rawValue;
+              break;
+            }
+            case 16: {
+
+              hasVideo_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return NetdiskProtos.internal_static_bbproto_PLabelStatus_descriptor;
+    }
+
+    protected FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return NetdiskProtos.internal_static_bbproto_PLabelStatus_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              PLabelStatus.class, Builder.class);
+    }
+
+    public static final int CATEGORY_FIELD_NUMBER = 1;
+    private int category_;
+    /**
+     * <code>optional .bbproto.PCategory category = 1;</code>
+     *
+     * <pre>
+     *分类
+     * </pre>
+     */
+    public int getCategoryValue() {
+      return category_;
+    }
+    /**
+     * <code>optional .bbproto.PCategory category = 1;</code>
+     *
+     * <pre>
+     *分类
+     * </pre>
+     */
+    public PCategory getCategory() {
+      PCategory result = PCategory.valueOf(category_);
+      return result == null ? PCategory.UNRECOGNIZED : result;
+    }
+
+    public static final int HASVIDEO_FIELD_NUMBER = 2;
+    private boolean hasVideo_;
+    /**
+     * <code>optional bool hasVideo = 2;</code>
+     *
+     * <pre>
+     *是否有视频
+     * </pre>
+     */
+    public boolean getHasVideo() {
+      return hasVideo_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (category_ != PCategory.ALL.getNumber()) {
+        output.writeEnum(1, category_);
+      }
+      if (hasVideo_ != false) {
+        output.writeBool(2, hasVideo_);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (category_ != PCategory.ALL.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, category_);
+      }
+      if (hasVideo_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, hasVideo_);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static PLabelStatus parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static PLabelStatus parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static PLabelStatus parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static PLabelStatus parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static PLabelStatus parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static PLabelStatus parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static PLabelStatus parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static PLabelStatus parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static PLabelStatus parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static PLabelStatus parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(PLabelStatus prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @Override
+    protected Builder newBuilderForType(
+        BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PLabelStatus}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PLabelStatus)
+        PLabelStatusOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return NetdiskProtos.internal_static_bbproto_PLabelStatus_descriptor;
+      }
+
+      protected FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return NetdiskProtos.internal_static_bbproto_PLabelStatus_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                PLabelStatus.class, Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.NetdiskProtos.PLabelStatus.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        category_ = 0;
+
+        hasVideo_ = false;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return NetdiskProtos.internal_static_bbproto_PLabelStatus_descriptor;
+      }
+
+      public PLabelStatus getDefaultInstanceForType() {
+        return PLabelStatus.getDefaultInstance();
+      }
+
+      public PLabelStatus build() {
+        PLabelStatus result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public PLabelStatus buildPartial() {
+        PLabelStatus result = new PLabelStatus(this);
+        result.category_ = category_;
+        result.hasVideo_ = hasVideo_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof PLabelStatus) {
+          return mergeFrom((PLabelStatus)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(PLabelStatus other) {
+        if (other == PLabelStatus.getDefaultInstance()) return this;
+        if (other.category_ != 0) {
+          setCategoryValue(other.getCategoryValue());
+        }
+        if (other.getHasVideo() != false) {
+          setHasVideo(other.getHasVideo());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        PLabelStatus parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (PLabelStatus) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int category_ = 0;
+      /**
+       * <code>optional .bbproto.PCategory category = 1;</code>
+       *
+       * <pre>
+       *分类
+       * </pre>
+       */
+      public int getCategoryValue() {
+        return category_;
+      }
+      /**
+       * <code>optional .bbproto.PCategory category = 1;</code>
+       *
+       * <pre>
+       *分类
+       * </pre>
+       */
+      public Builder setCategoryValue(int value) {
+        category_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PCategory category = 1;</code>
+       *
+       * <pre>
+       *分类
+       * </pre>
+       */
+      public PCategory getCategory() {
+        PCategory result = PCategory.valueOf(category_);
+        return result == null ? PCategory.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>optional .bbproto.PCategory category = 1;</code>
+       *
+       * <pre>
+       *分类
+       * </pre>
+       */
+      public Builder setCategory(PCategory value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        category_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PCategory category = 1;</code>
+       *
+       * <pre>
+       *分类
+       * </pre>
+       */
+      public Builder clearCategory() {
+        
+        category_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean hasVideo_ ;
+      /**
+       * <code>optional bool hasVideo = 2;</code>
+       *
+       * <pre>
+       *是否有视频
+       * </pre>
+       */
+      public boolean getHasVideo() {
+        return hasVideo_;
+      }
+      /**
+       * <code>optional bool hasVideo = 2;</code>
+       *
+       * <pre>
+       *是否有视频
+       * </pre>
+       */
+      public Builder setHasVideo(boolean value) {
+        
+        hasVideo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool hasVideo = 2;</code>
+       *
+       * <pre>
+       *是否有视频
+       * </pre>
+       */
+      public Builder clearHasVideo() {
+        
+        hasVideo_ = false;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PLabelStatus)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PLabelStatus)
+    private static final PLabelStatus DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new PLabelStatus();
+    }
+
+    public static PLabelStatus getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PLabelStatus>
+        PARSER = new com.google.protobuf.AbstractParser<PLabelStatus>() {
+      public PLabelStatus parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PLabelStatus(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<PLabelStatus> parser() {
+      return PARSER;
+    }
+
+    @Override
+    public com.google.protobuf.Parser<PLabelStatus> getParserForType() {
+      return PARSER;
+    }
+
+    public PLabelStatus getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5378,6 +6796,16 @@ public final class NetdiskProtos {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_bbproto_PNetFilelist_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PLabelStatusList_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PLabelStatusList_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PLabelStatus_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PLabelStatus_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5386,7 +6814,7 @@ public final class NetdiskProtos {
   private static com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    java.lang.String[] descriptorData = {
+    String[] descriptorData = {
       "\n\rnetdisk.proto\022\007bbproto\032\raccount.proto\"" +
       "\240\005\n\010PNetFile\022\016\n\006fileId\030\001 \001(\t\022\023\n\013communit" +
       "yId\030\002 \001(\t\022\014\n\004uuid\030\003 \001(\t\022\021\n\tobjectKey\030\004 \001" +
@@ -5406,8 +6834,12 @@ public final class NetdiskProtos {
       "\037 \001(\005\022\r\n\005topic\030  \003(\t\022\020\n\010category\030! \001(\005\022\022" +
       "\n\nmembership\030\" \001(\005\022\016\n\006isSync\030# \001(\010\"D\n\014PN" +
       "etFilelist\022\"\n\007netFile\030\001 \003(\0132\021.bbproto.PN" +
-      "etFile\022\020\n\010DiskSize\030\002 \001(\005B\'\n\026com.blemobi.",
-      "sep.probufB\rNetdiskProtosb\006proto3"
+      "etFile\022\020\n\010DiskSize\030\002 \001(\005\"7\n\020PLabelStatus",
+      "List\022#\n\004list\030\001 \003(\0132\025.bbproto.PLabelStatu" +
+      "s\"F\n\014PLabelStatus\022$\n\010category\030\001 \001(\0162\022.bb" +
+      "proto.PCategory\022\020\n\010hasVideo\030\002 \001(\010*!\n\tPCa" +
+      "tegory\022\007\n\003ALL\020\000\022\013\n\007ESSENCE\020\001B\'\n\026com.blem" +
+      "obi.sep.probufB\rNetdiskProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5420,21 +6852,33 @@ public final class NetdiskProtos {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.blemobi.sep.probuf.AccountProtos.getDescriptor(),
+          AccountProtos.getDescriptor(),
         }, assigner);
     internal_static_bbproto_PNetFile_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_bbproto_PNetFile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PNetFile_descriptor,
-        new java.lang.String[] { "FileId", "CommunityId", "Uuid", "ObjectKey", "Url", "Extension", "FileSize", "FileDigest", "CreateTime", "TransferFlag", "ShareFlag", "ConserveFlag", "Title", "Desc", "Remark", "MiniObjectKey", "MiniUrl", "PostId", "CommentsCnt", "ThumbsupCnt", "PostTyp", "TipoffTimes", "PlayTimes", "Status", "User", "Voted", "Collected", "CanDelete", "CommunityStatus", "ResourceType", "FollowShip", "Topic", "Category", "Membership", "IsSync", });
+        new String[] { "FileId", "CommunityId", "Uuid", "ObjectKey", "Url", "Extension", "FileSize", "FileDigest", "CreateTime", "TransferFlag", "ShareFlag", "ConserveFlag", "Title", "Desc", "Remark", "MiniObjectKey", "MiniUrl", "PostId", "CommentsCnt", "ThumbsupCnt", "PostTyp", "TipoffTimes", "PlayTimes", "Status", "User", "Voted", "Collected", "CanDelete", "CommunityStatus", "ResourceType", "FollowShip", "Topic", "Category", "Membership", "IsSync", });
     internal_static_bbproto_PNetFilelist_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_bbproto_PNetFilelist_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PNetFilelist_descriptor,
-        new java.lang.String[] { "NetFile", "DiskSize", });
-    com.blemobi.sep.probuf.AccountProtos.getDescriptor();
+        new String[] { "NetFile", "DiskSize", });
+    internal_static_bbproto_PLabelStatusList_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_bbproto_PLabelStatusList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PLabelStatusList_descriptor,
+        new String[] { "List", });
+    internal_static_bbproto_PLabelStatus_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_bbproto_PLabelStatus_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PLabelStatus_descriptor,
+        new String[] { "Category", "HasVideo", });
+    AccountProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
