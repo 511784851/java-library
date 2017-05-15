@@ -20,23 +20,17 @@
  *****************************************************************/
 package com.blemobi.library.grpc;
 
-import java.util.List;
-
-import org.apache.commons.lang.StringUtils;
-
 import com.blemobi.sep.grpc.IGrpcNewsGrpc;
 import com.blemobi.sep.probuf.CommonApiProtos.PEmpty;
-import com.blemobi.sep.probuf.NewsApiProtos.EStateOperType;
-import com.blemobi.sep.probuf.NewsApiProtos.PDeletePostsParam;
-import com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam;
-import com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew;
-import com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam;
+import com.blemobi.sep.probuf.NewsApiProtos.*;
 import com.blemobi.sep.probuf.NewsProtos.PPostView;
 import com.blemobi.sep.probuf.NewsProtos.PPostViewList;
 import com.blemobi.sep.probuf.ResultProtos.PInt32List;
 import com.blemobi.sep.probuf.ResultProtos.PStringList;
-
 import lombok.extern.log4j.Log4j;
+import org.apache.commons.lang.StringUtils;
+
+import java.util.List;
 
 /**
  * @ClassName NewsGrpcClient
@@ -78,13 +72,13 @@ public class NewsGrpcClient extends BaseGRPCClient {
 		});
 	}
 	
-	public void setPostState(List<Long> value){
+	public void setPostState(List<Long> value, EStateOperType type){
 		if(value == null || value.isEmpty()){
 			log.debug("要设置为审核不通过的帖子ID为空");
 			return;
 		}
 		log.debug("设置为审核不通过的帖子ID->" + StringUtils.join(value, ","));
-		PSetPostStateParam param = PSetPostStateParam.newBuilder().addAllPostIds(value).setState(EStateOperType.OpReject).build();
+		PSetPostStateParam param = PSetPostStateParam.newBuilder().addAllPostIds(value).setState(type).build();
 		this.execute(param, new GrpcCallback<Boolean>() {
 			@Override
 			public Boolean doGrpcRequest() {
