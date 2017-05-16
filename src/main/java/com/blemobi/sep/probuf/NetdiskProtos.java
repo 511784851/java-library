@@ -8,114 +8,6 @@ public final class NetdiskProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  /**
-   * Protobuf enum {@code bbproto.PCategory}
-   */
-  public enum PCategory
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>ALL = 0;</code>
-     *
-     * <pre>
-     *全部
-     * </pre>
-     */
-    ALL(0, 0),
-    /**
-     * <code>ESSENCE = 1;</code>
-     *
-     * <pre>
-     *精华
-     * </pre>
-     */
-    ESSENCE(1, 1),
-    UNRECOGNIZED(-1, -1),
-    ;
-
-    /**
-     * <code>ALL = 0;</code>
-     *
-     * <pre>
-     *全部
-     * </pre>
-     */
-    public static final int ALL_VALUE = 0;
-    /**
-     * <code>ESSENCE = 1;</code>
-     *
-     * <pre>
-     *精华
-     * </pre>
-     */
-    public static final int ESSENCE_VALUE = 1;
-
-
-    public final int getNumber() {
-      if (index == -1) {
-        throw new IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
-    }
-
-    public static PCategory valueOf(int value) {
-      switch (value) {
-        case 0: return ALL;
-        case 1: return ESSENCE;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<PCategory>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        PCategory> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<PCategory>() {
-            public PCategory findValueByNumber(int number) {
-              return PCategory.valueOf(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      return getDescriptor().getValues().get(index);
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return NetdiskProtos.getDescriptor().getEnumTypes().get(0);
-    }
-
-    private static final PCategory[] VALUES = values();
-
-    public static PCategory valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int index;
-    private final int value;
-
-    private PCategory(int index, int value) {
-      this.index = index;
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:bbproto.PCategory)
-  }
-
   public interface PNetFileOrBuilder extends
       // @@protoc_insertion_point(interface_extends:bbproto.PNetFile)
       com.google.protobuf.MessageOrBuilder {
@@ -5476,6 +5368,570 @@ public final class NetdiskProtos {
 
   }
 
+  public interface PCategoryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PCategory)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 category = 1;</code>
+     *
+     * <pre>
+     *分类ID
+     * </pre>
+     */
+    int getCategory();
+
+    /**
+     * <code>optional string categoryNm = 2;</code>
+     *
+     * <pre>
+     * 分类名称
+     * </pre>
+     */
+    String getCategoryNm();
+    /**
+     * <code>optional string categoryNm = 2;</code>
+     *
+     * <pre>
+     * 分类名称
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getCategoryNmBytes();
+  }
+  /**
+   * Protobuf type {@code bbproto.PCategory}
+   */
+  public  static final class PCategory extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PCategory)
+      PCategoryOrBuilder {
+    // Use PCategory.newBuilder() to construct.
+    private PCategory(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PCategory() {
+      category_ = 0;
+      categoryNm_ = "";
+    }
+
+    @Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PCategory(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              category_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              String s = input.readStringRequireUtf8();
+
+              categoryNm_ = s;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return NetdiskProtos.internal_static_bbproto_PCategory_descriptor;
+    }
+
+    protected FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return NetdiskProtos.internal_static_bbproto_PCategory_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              PCategory.class, Builder.class);
+    }
+
+    public static final int CATEGORY_FIELD_NUMBER = 1;
+    private int category_;
+    /**
+     * <code>optional int32 category = 1;</code>
+     *
+     * <pre>
+     *分类ID
+     * </pre>
+     */
+    public int getCategory() {
+      return category_;
+    }
+
+    public static final int CATEGORYNM_FIELD_NUMBER = 2;
+    private volatile Object categoryNm_;
+    /**
+     * <code>optional string categoryNm = 2;</code>
+     *
+     * <pre>
+     * 分类名称
+     * </pre>
+     */
+    public String getCategoryNm() {
+      Object ref = categoryNm_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        categoryNm_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string categoryNm = 2;</code>
+     *
+     * <pre>
+     * 分类名称
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getCategoryNmBytes() {
+      Object ref = categoryNm_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (String) ref);
+        categoryNm_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (category_ != 0) {
+        output.writeInt32(1, category_);
+      }
+      if (!getCategoryNmBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, categoryNm_);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (category_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, category_);
+      }
+      if (!getCategoryNmBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, categoryNm_);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static PCategory parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static PCategory parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static PCategory parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static PCategory parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static PCategory parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static PCategory parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static PCategory parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static PCategory parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static PCategory parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static PCategory parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(PCategory prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @Override
+    protected Builder newBuilderForType(
+        BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PCategory}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PCategory)
+        PCategoryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return NetdiskProtos.internal_static_bbproto_PCategory_descriptor;
+      }
+
+      protected FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return NetdiskProtos.internal_static_bbproto_PCategory_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                PCategory.class, Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.NetdiskProtos.PCategory.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        category_ = 0;
+
+        categoryNm_ = "";
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return NetdiskProtos.internal_static_bbproto_PCategory_descriptor;
+      }
+
+      public PCategory getDefaultInstanceForType() {
+        return PCategory.getDefaultInstance();
+      }
+
+      public PCategory build() {
+        PCategory result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public PCategory buildPartial() {
+        PCategory result = new PCategory(this);
+        result.category_ = category_;
+        result.categoryNm_ = categoryNm_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof PCategory) {
+          return mergeFrom((PCategory)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(PCategory other) {
+        if (other == PCategory.getDefaultInstance()) return this;
+        if (other.getCategory() != 0) {
+          setCategory(other.getCategory());
+        }
+        if (!other.getCategoryNm().isEmpty()) {
+          categoryNm_ = other.categoryNm_;
+          onChanged();
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        PCategory parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (PCategory) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int category_ ;
+      /**
+       * <code>optional int32 category = 1;</code>
+       *
+       * <pre>
+       *分类ID
+       * </pre>
+       */
+      public int getCategory() {
+        return category_;
+      }
+      /**
+       * <code>optional int32 category = 1;</code>
+       *
+       * <pre>
+       *分类ID
+       * </pre>
+       */
+      public Builder setCategory(int value) {
+        
+        category_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 category = 1;</code>
+       *
+       * <pre>
+       *分类ID
+       * </pre>
+       */
+      public Builder clearCategory() {
+        
+        category_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private Object categoryNm_ = "";
+      /**
+       * <code>optional string categoryNm = 2;</code>
+       *
+       * <pre>
+       * 分类名称
+       * </pre>
+       */
+      public String getCategoryNm() {
+        Object ref = categoryNm_;
+        if (!(ref instanceof String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
+          categoryNm_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      /**
+       * <code>optional string categoryNm = 2;</code>
+       *
+       * <pre>
+       * 分类名称
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getCategoryNmBytes() {
+        Object ref = categoryNm_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
+          categoryNm_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string categoryNm = 2;</code>
+       *
+       * <pre>
+       * 分类名称
+       * </pre>
+       */
+      public Builder setCategoryNm(
+          String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        categoryNm_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string categoryNm = 2;</code>
+       *
+       * <pre>
+       * 分类名称
+       * </pre>
+       */
+      public Builder clearCategoryNm() {
+        
+        categoryNm_ = getDefaultInstance().getCategoryNm();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string categoryNm = 2;</code>
+       *
+       * <pre>
+       * 分类名称
+       * </pre>
+       */
+      public Builder setCategoryNmBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        categoryNm_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PCategory)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PCategory)
+    private static final PCategory DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new PCategory();
+    }
+
+    public static PCategory getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PCategory>
+        PARSER = new com.google.protobuf.AbstractParser<PCategory>() {
+      public PCategory parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PCategory(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<PCategory> parser() {
+      return PARSER;
+    }
+
+    @Override
+    public com.google.protobuf.Parser<PCategory> getParserForType() {
+      return PARSER;
+    }
+
+    public PCategory getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface PLabelStatusListOrBuilder extends
       // @@protoc_insertion_point(interface_extends:bbproto.PLabelStatusList)
       com.google.protobuf.MessageOrBuilder {
@@ -6277,7 +6733,7 @@ public final class NetdiskProtos {
      *分类
      * </pre>
      */
-    int getCategoryValue();
+    boolean hasCategory();
     /**
      * <code>optional .bbproto.PCategory category = 1;</code>
      *
@@ -6286,6 +6742,14 @@ public final class NetdiskProtos {
      * </pre>
      */
     PCategory getCategory();
+    /**
+     * <code>optional .bbproto.PCategory category = 1;</code>
+     *
+     * <pre>
+     *分类
+     * </pre>
+     */
+    PCategoryOrBuilder getCategoryOrBuilder();
 
     /**
      * <code>optional bool hasVideo = 2;</code>
@@ -6308,7 +6772,6 @@ public final class NetdiskProtos {
       super(builder);
     }
     private PLabelStatus() {
-      category_ = 0;
       hasVideo_ = false;
     }
 
@@ -6336,10 +6799,17 @@ public final class NetdiskProtos {
               }
               break;
             }
-            case 8: {
-              int rawValue = input.readEnum();
+            case 10: {
+              PCategory.Builder subBuilder = null;
+              if (category_ != null) {
+                subBuilder = category_.toBuilder();
+              }
+              category_ = input.readMessage(PCategory.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(category_);
+                category_ = subBuilder.buildPartial();
+              }
 
-              category_ = rawValue;
               break;
             }
             case 16: {
@@ -6372,7 +6842,7 @@ public final class NetdiskProtos {
     }
 
     public static final int CATEGORY_FIELD_NUMBER = 1;
-    private int category_;
+    private PCategory category_;
     /**
      * <code>optional .bbproto.PCategory category = 1;</code>
      *
@@ -6380,8 +6850,8 @@ public final class NetdiskProtos {
      *分类
      * </pre>
      */
-    public int getCategoryValue() {
-      return category_;
+    public boolean hasCategory() {
+      return category_ != null;
     }
     /**
      * <code>optional .bbproto.PCategory category = 1;</code>
@@ -6391,8 +6861,17 @@ public final class NetdiskProtos {
      * </pre>
      */
     public PCategory getCategory() {
-      PCategory result = PCategory.valueOf(category_);
-      return result == null ? PCategory.UNRECOGNIZED : result;
+      return category_ == null ? PCategory.getDefaultInstance() : category_;
+    }
+    /**
+     * <code>optional .bbproto.PCategory category = 1;</code>
+     *
+     * <pre>
+     *分类
+     * </pre>
+     */
+    public PCategoryOrBuilder getCategoryOrBuilder() {
+      return getCategory();
     }
 
     public static final int HASVIDEO_FIELD_NUMBER = 2;
@@ -6420,8 +6899,8 @@ public final class NetdiskProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (category_ != PCategory.ALL.getNumber()) {
-        output.writeEnum(1, category_);
+      if (category_ != null) {
+        output.writeMessage(1, getCategory());
       }
       if (hasVideo_ != false) {
         output.writeBool(2, hasVideo_);
@@ -6433,9 +6912,9 @@ public final class NetdiskProtos {
       if (size != -1) return size;
 
       size = 0;
-      if (category_ != PCategory.ALL.getNumber()) {
+      if (category_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, category_);
+          .computeMessageSize(1, getCategory());
       }
       if (hasVideo_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -6552,8 +7031,12 @@ public final class NetdiskProtos {
       }
       public Builder clear() {
         super.clear();
-        category_ = 0;
-
+        if (categoryBuilder_ == null) {
+          category_ = null;
+        } else {
+          category_ = null;
+          categoryBuilder_ = null;
+        }
         hasVideo_ = false;
 
         return this;
@@ -6578,7 +7061,11 @@ public final class NetdiskProtos {
 
       public PLabelStatus buildPartial() {
         PLabelStatus result = new PLabelStatus(this);
-        result.category_ = category_;
+        if (categoryBuilder_ == null) {
+          result.category_ = category_;
+        } else {
+          result.category_ = categoryBuilder_.build();
+        }
         result.hasVideo_ = hasVideo_;
         onBuilt();
         return result;
@@ -6595,8 +7082,8 @@ public final class NetdiskProtos {
 
       public Builder mergeFrom(PLabelStatus other) {
         if (other == PLabelStatus.getDefaultInstance()) return this;
-        if (other.category_ != 0) {
-          setCategoryValue(other.getCategoryValue());
+        if (other.hasCategory()) {
+          mergeCategory(other.getCategory());
         }
         if (other.getHasVideo() != false) {
           setHasVideo(other.getHasVideo());
@@ -6627,7 +7114,9 @@ public final class NetdiskProtos {
         return this;
       }
 
-      private int category_ = 0;
+      private PCategory category_ = null;
+      private com.google.protobuf.SingleFieldBuilder<
+          PCategory, PCategory.Builder, PCategoryOrBuilder> categoryBuilder_;
       /**
        * <code>optional .bbproto.PCategory category = 1;</code>
        *
@@ -6635,20 +7124,8 @@ public final class NetdiskProtos {
        *分类
        * </pre>
        */
-      public int getCategoryValue() {
-        return category_;
-      }
-      /**
-       * <code>optional .bbproto.PCategory category = 1;</code>
-       *
-       * <pre>
-       *分类
-       * </pre>
-       */
-      public Builder setCategoryValue(int value) {
-        category_ = value;
-        onChanged();
-        return this;
+      public boolean hasCategory() {
+        return categoryBuilder_ != null || category_ != null;
       }
       /**
        * <code>optional .bbproto.PCategory category = 1;</code>
@@ -6658,8 +7135,11 @@ public final class NetdiskProtos {
        * </pre>
        */
       public PCategory getCategory() {
-        PCategory result = PCategory.valueOf(category_);
-        return result == null ? PCategory.UNRECOGNIZED : result;
+        if (categoryBuilder_ == null) {
+          return category_ == null ? PCategory.getDefaultInstance() : category_;
+        } else {
+          return categoryBuilder_.getMessage();
+        }
       }
       /**
        * <code>optional .bbproto.PCategory category = 1;</code>
@@ -6669,12 +7149,56 @@ public final class NetdiskProtos {
        * </pre>
        */
       public Builder setCategory(PCategory value) {
-        if (value == null) {
-          throw new NullPointerException();
+        if (categoryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          category_ = value;
+          onChanged();
+        } else {
+          categoryBuilder_.setMessage(value);
         }
-        
-        category_ = value.getNumber();
-        onChanged();
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PCategory category = 1;</code>
+       *
+       * <pre>
+       *分类
+       * </pre>
+       */
+      public Builder setCategory(
+          PCategory.Builder builderForValue) {
+        if (categoryBuilder_ == null) {
+          category_ = builderForValue.build();
+          onChanged();
+        } else {
+          categoryBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .bbproto.PCategory category = 1;</code>
+       *
+       * <pre>
+       *分类
+       * </pre>
+       */
+      public Builder mergeCategory(PCategory value) {
+        if (categoryBuilder_ == null) {
+          if (category_ != null) {
+            category_ =
+              PCategory.newBuilder(category_).mergeFrom(value).buildPartial();
+          } else {
+            category_ = value;
+          }
+          onChanged();
+        } else {
+          categoryBuilder_.mergeFrom(value);
+        }
+
         return this;
       }
       /**
@@ -6685,10 +7209,62 @@ public final class NetdiskProtos {
        * </pre>
        */
       public Builder clearCategory() {
-        
-        category_ = 0;
-        onChanged();
+        if (categoryBuilder_ == null) {
+          category_ = null;
+          onChanged();
+        } else {
+          category_ = null;
+          categoryBuilder_ = null;
+        }
+
         return this;
+      }
+      /**
+       * <code>optional .bbproto.PCategory category = 1;</code>
+       *
+       * <pre>
+       *分类
+       * </pre>
+       */
+      public PCategory.Builder getCategoryBuilder() {
+        
+        onChanged();
+        return getCategoryFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .bbproto.PCategory category = 1;</code>
+       *
+       * <pre>
+       *分类
+       * </pre>
+       */
+      public PCategoryOrBuilder getCategoryOrBuilder() {
+        if (categoryBuilder_ != null) {
+          return categoryBuilder_.getMessageOrBuilder();
+        } else {
+          return category_ == null ?
+              PCategory.getDefaultInstance() : category_;
+        }
+      }
+      /**
+       * <code>optional .bbproto.PCategory category = 1;</code>
+       *
+       * <pre>
+       *分类
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          PCategory, PCategory.Builder, PCategoryOrBuilder>
+          getCategoryFieldBuilder() {
+        if (categoryBuilder_ == null) {
+          categoryBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              PCategory, PCategory.Builder, PCategoryOrBuilder>(
+                  getCategory(),
+                  getParentForChildren(),
+                  isClean());
+          category_ = null;
+        }
+        return categoryBuilder_;
       }
 
       private boolean hasVideo_ ;
@@ -6797,6 +7373,11 @@ public final class NetdiskProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_bbproto_PNetFilelist_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PCategory_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PCategory_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
     internal_static_bbproto_PLabelStatusList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -6834,12 +7415,13 @@ public final class NetdiskProtos {
       "\037 \001(\005\022\r\n\005topic\030  \003(\t\022\020\n\010category\030! \001(\005\022\022" +
       "\n\nmembership\030\" \001(\005\022\016\n\006isSync\030# \001(\010\"D\n\014PN" +
       "etFilelist\022\"\n\007netFile\030\001 \003(\0132\021.bbproto.PN" +
-      "etFile\022\020\n\010DiskSize\030\002 \001(\005\"7\n\020PLabelStatus",
-      "List\022#\n\004list\030\001 \003(\0132\025.bbproto.PLabelStatu" +
-      "s\"F\n\014PLabelStatus\022$\n\010category\030\001 \001(\0162\022.bb" +
-      "proto.PCategory\022\020\n\010hasVideo\030\002 \001(\010*!\n\tPCa" +
-      "tegory\022\007\n\003ALL\020\000\022\013\n\007ESSENCE\020\001B\'\n\026com.blem" +
-      "obi.sep.probufB\rNetdiskProtosb\006proto3"
+      "etFile\022\020\n\010DiskSize\030\002 \001(\005\"1\n\tPCategory\022\020\n",
+      "\010category\030\001 \001(\005\022\022\n\ncategoryNm\030\002 \001(\t\"7\n\020P" +
+      "LabelStatusList\022#\n\004list\030\001 \003(\0132\025.bbproto." +
+      "PLabelStatus\"F\n\014PLabelStatus\022$\n\010category" +
+      "\030\001 \001(\0132\022.bbproto.PCategory\022\020\n\010hasVideo\030\002" +
+      " \001(\010B\'\n\026com.blemobi.sep.probufB\rNetdiskP" +
+      "rotosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6866,14 +7448,20 @@ public final class NetdiskProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PNetFilelist_descriptor,
         new String[] { "NetFile", "DiskSize", });
-    internal_static_bbproto_PLabelStatusList_descriptor =
+    internal_static_bbproto_PCategory_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_bbproto_PCategory_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PCategory_descriptor,
+        new String[] { "Category", "CategoryNm", });
+    internal_static_bbproto_PLabelStatusList_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_bbproto_PLabelStatusList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PLabelStatusList_descriptor,
         new String[] { "List", });
     internal_static_bbproto_PLabelStatus_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_bbproto_PLabelStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PLabelStatus_descriptor,
