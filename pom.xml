@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.blemobi.library</groupId>
 	<artifactId>java-public-library</artifactId>
-	<version>1.5.50</version>
+	<version>1.5.51</version>
 	<packaging>jar</packaging>
 
 	<properties>

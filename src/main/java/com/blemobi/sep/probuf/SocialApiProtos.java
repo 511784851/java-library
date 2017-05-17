@@ -8,6 +8,1229 @@ public final class SocialApiProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
+  public interface PSocialFriendCountsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PSocialFriendCounts)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>map&lt;string, int32&gt; counts = 1;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.Integer>
+    getCounts();
+  }
+  /**
+   * Protobuf type {@code bbproto.PSocialFriendCounts}
+   */
+  public  static final class PSocialFriendCounts extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PSocialFriendCounts)
+      PSocialFriendCountsOrBuilder {
+    // Use PSocialFriendCounts.newBuilder() to construct.
+    private PSocialFriendCounts(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PSocialFriendCounts() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PSocialFriendCounts(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                counts_ = com.google.protobuf.MapField.newMapField(
+                    CountsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.Integer>
+              counts = input.readMessage(
+                  CountsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              counts_.getMutableMap().put(counts.getKey(), counts.getValue());
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.SocialApiProtos.internal_static_bbproto_PSocialFriendCounts_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 1:
+          return internalGetCounts();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.SocialApiProtos.internal_static_bbproto_PSocialFriendCounts_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts.class, com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts.Builder.class);
+    }
+
+    public static final int COUNTS_FIELD_NUMBER = 1;
+    private static final class CountsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.Integer> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.Integer>newDefaultInstance(
+                  com.blemobi.sep.probuf.SocialApiProtos.internal_static_bbproto_PSocialFriendCounts_CountsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.INT32,
+                  0);
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.Integer> counts_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
+    internalGetCounts() {
+      if (counts_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            CountsDefaultEntryHolder.defaultEntry);
+     }
+      return counts_;
+    }
+    /**
+     * <code>map&lt;string, int32&gt; counts = 1;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.Integer> getCounts() {
+      return internalGetCounts().getMap();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (java.util.Map.Entry<java.lang.String, java.lang.Integer> entry
+           : internalGetCounts().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.Integer>
+        counts = CountsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        output.writeMessage(1, counts);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (java.util.Map.Entry<java.lang.String, java.lang.Integer> entry
+           : internalGetCounts().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.Integer>
+        counts = CountsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, counts);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PSocialFriendCounts}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PSocialFriendCounts)
+        com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCountsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.SocialApiProtos.internal_static_bbproto_PSocialFriendCounts_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetCounts();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetMutableCounts();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.SocialApiProtos.internal_static_bbproto_PSocialFriendCounts_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts.class, com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        internalGetMutableCounts().clear();
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.SocialApiProtos.internal_static_bbproto_PSocialFriendCounts_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts build() {
+        com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts buildPartial() {
+        com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts result = new com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts(this);
+        int from_bitField0_ = bitField0_;
+        result.counts_ = internalGetCounts();
+        result.counts_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts) {
+          return mergeFrom((com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts other) {
+        if (other == com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts.getDefaultInstance()) return this;
+        internalGetMutableCounts().mergeFrom(
+            other.internalGetCounts());
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.Integer> counts_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
+      internalGetCounts() {
+        if (counts_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              CountsDefaultEntryHolder.defaultEntry);
+       }
+        return counts_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
+      internalGetMutableCounts() {
+        onChanged();;
+        if (counts_ == null) {
+          counts_ = com.google.protobuf.MapField.newMapField(
+              CountsDefaultEntryHolder.defaultEntry);
+        }
+        if (!counts_.isMutable()) {
+          counts_ = counts_.copy();
+        }
+        return counts_;
+      }
+      /**
+       * <code>map&lt;string, int32&gt; counts = 1;</code>
+       */
+      public java.util.Map<java.lang.String, java.lang.Integer> getCounts() {
+        return internalGetCounts().getMap();
+      }
+      /**
+       * <code>map&lt;string, int32&gt; counts = 1;</code>
+       */
+      public java.util.Map<java.lang.String, java.lang.Integer>
+      getMutableCounts() {
+        return internalGetMutableCounts().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, int32&gt; counts = 1;</code>
+       */
+      public Builder putAllCounts(
+          java.util.Map<java.lang.String, java.lang.Integer> values) {
+        getMutableCounts().putAll(values);
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PSocialFriendCounts)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PSocialFriendCounts)
+    private static final com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts();
+    }
+
+    public static com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PSocialFriendCounts>
+        PARSER = new com.google.protobuf.AbstractParser<PSocialFriendCounts>() {
+      public PSocialFriendCounts parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PSocialFriendCounts(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<PSocialFriendCounts> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PSocialFriendCounts> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.SocialApiProtos.PSocialFriendCounts getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PRelationReqOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PRelationReq)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string uuid = 1;</code>
+     *
+     * <pre>
+     * 查询的用户UUID
+     * </pre>
+     */
+    java.lang.String getUuid();
+    /**
+     * <code>optional string uuid = 1;</code>
+     *
+     * <pre>
+     * 查询的用户UUID
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUuidBytes();
+
+    /**
+     * <code>repeated string uuids = 2;</code>
+     *
+     * <pre>
+     * 需要确定社交关系的用户UUID列表
+     * </pre>
+     */
+    com.google.protobuf.ProtocolStringList
+        getUuidsList();
+    /**
+     * <code>repeated string uuids = 2;</code>
+     *
+     * <pre>
+     * 需要确定社交关系的用户UUID列表
+     * </pre>
+     */
+    int getUuidsCount();
+    /**
+     * <code>repeated string uuids = 2;</code>
+     *
+     * <pre>
+     * 需要确定社交关系的用户UUID列表
+     * </pre>
+     */
+    java.lang.String getUuids(int index);
+    /**
+     * <code>repeated string uuids = 2;</code>
+     *
+     * <pre>
+     * 需要确定社交关系的用户UUID列表
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUuidsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code bbproto.PRelationReq}
+   */
+  public  static final class PRelationReq extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PRelationReq)
+      PRelationReqOrBuilder {
+    // Use PRelationReq.newBuilder() to construct.
+    private PRelationReq(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PRelationReq() {
+      uuid_ = "";
+      uuids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PRelationReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              uuid_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                uuids_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              uuids_.add(s);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          uuids_ = uuids_.getUnmodifiableView();
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.blemobi.sep.probuf.SocialApiProtos.internal_static_bbproto_PRelationReq_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.blemobi.sep.probuf.SocialApiProtos.internal_static_bbproto_PRelationReq_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.blemobi.sep.probuf.SocialApiProtos.PRelationReq.class, com.blemobi.sep.probuf.SocialApiProtos.PRelationReq.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int UUID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object uuid_;
+    /**
+     * <code>optional string uuid = 1;</code>
+     *
+     * <pre>
+     * 查询的用户UUID
+     * </pre>
+     */
+    public java.lang.String getUuid() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uuid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string uuid = 1;</code>
+     *
+     * <pre>
+     * 查询的用户UUID
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUuidBytes() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UUIDS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList uuids_;
+    /**
+     * <code>repeated string uuids = 2;</code>
+     *
+     * <pre>
+     * 需要确定社交关系的用户UUID列表
+     * </pre>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getUuidsList() {
+      return uuids_;
+    }
+    /**
+     * <code>repeated string uuids = 2;</code>
+     *
+     * <pre>
+     * 需要确定社交关系的用户UUID列表
+     * </pre>
+     */
+    public int getUuidsCount() {
+      return uuids_.size();
+    }
+    /**
+     * <code>repeated string uuids = 2;</code>
+     *
+     * <pre>
+     * 需要确定社交关系的用户UUID列表
+     * </pre>
+     */
+    public java.lang.String getUuids(int index) {
+      return uuids_.get(index);
+    }
+    /**
+     * <code>repeated string uuids = 2;</code>
+     *
+     * <pre>
+     * 需要确定社交关系的用户UUID列表
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUuidsBytes(int index) {
+      return uuids_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getUuidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, uuid_);
+      }
+      for (int i = 0; i < uuids_.size(); i++) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, uuids_.getRaw(i));
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getUuidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, uuid_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < uuids_.size(); i++) {
+          dataSize += computeStringSizeNoTag(uuids_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getUuidsList().size();
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.blemobi.sep.probuf.SocialApiProtos.PRelationReq parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.SocialApiProtos.PRelationReq parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.SocialApiProtos.PRelationReq parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.blemobi.sep.probuf.SocialApiProtos.PRelationReq parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.SocialApiProtos.PRelationReq parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.SocialApiProtos.PRelationReq parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.SocialApiProtos.PRelationReq parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.blemobi.sep.probuf.SocialApiProtos.PRelationReq parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.blemobi.sep.probuf.SocialApiProtos.PRelationReq parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.blemobi.sep.probuf.SocialApiProtos.PRelationReq parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.blemobi.sep.probuf.SocialApiProtos.PRelationReq prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PRelationReq}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PRelationReq)
+        com.blemobi.sep.probuf.SocialApiProtos.PRelationReqOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.blemobi.sep.probuf.SocialApiProtos.internal_static_bbproto_PRelationReq_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.blemobi.sep.probuf.SocialApiProtos.internal_static_bbproto_PRelationReq_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.blemobi.sep.probuf.SocialApiProtos.PRelationReq.class, com.blemobi.sep.probuf.SocialApiProtos.PRelationReq.Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.SocialApiProtos.PRelationReq.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        uuid_ = "";
+
+        uuids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.blemobi.sep.probuf.SocialApiProtos.internal_static_bbproto_PRelationReq_descriptor;
+      }
+
+      public com.blemobi.sep.probuf.SocialApiProtos.PRelationReq getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.SocialApiProtos.PRelationReq.getDefaultInstance();
+      }
+
+      public com.blemobi.sep.probuf.SocialApiProtos.PRelationReq build() {
+        com.blemobi.sep.probuf.SocialApiProtos.PRelationReq result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.blemobi.sep.probuf.SocialApiProtos.PRelationReq buildPartial() {
+        com.blemobi.sep.probuf.SocialApiProtos.PRelationReq result = new com.blemobi.sep.probuf.SocialApiProtos.PRelationReq(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.uuid_ = uuid_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          uuids_ = uuids_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.uuids_ = uuids_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.blemobi.sep.probuf.SocialApiProtos.PRelationReq) {
+          return mergeFrom((com.blemobi.sep.probuf.SocialApiProtos.PRelationReq)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.blemobi.sep.probuf.SocialApiProtos.PRelationReq other) {
+        if (other == com.blemobi.sep.probuf.SocialApiProtos.PRelationReq.getDefaultInstance()) return this;
+        if (!other.getUuid().isEmpty()) {
+          uuid_ = other.uuid_;
+          onChanged();
+        }
+        if (!other.uuids_.isEmpty()) {
+          if (uuids_.isEmpty()) {
+            uuids_ = other.uuids_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureUuidsIsMutable();
+            uuids_.addAll(other.uuids_);
+          }
+          onChanged();
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.blemobi.sep.probuf.SocialApiProtos.PRelationReq parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.blemobi.sep.probuf.SocialApiProtos.PRelationReq) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object uuid_ = "";
+      /**
+       * <code>optional string uuid = 1;</code>
+       *
+       * <pre>
+       * 查询的用户UUID
+       * </pre>
+       */
+      public java.lang.String getUuid() {
+        java.lang.Object ref = uuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uuid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string uuid = 1;</code>
+       *
+       * <pre>
+       * 查询的用户UUID
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUuidBytes() {
+        java.lang.Object ref = uuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string uuid = 1;</code>
+       *
+       * <pre>
+       * 查询的用户UUID
+       * </pre>
+       */
+      public Builder setUuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uuid = 1;</code>
+       *
+       * <pre>
+       * 查询的用户UUID
+       * </pre>
+       */
+      public Builder clearUuid() {
+        
+        uuid_ = getDefaultInstance().getUuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uuid = 1;</code>
+       *
+       * <pre>
+       * 查询的用户UUID
+       * </pre>
+       */
+      public Builder setUuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList uuids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureUuidsIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          uuids_ = new com.google.protobuf.LazyStringArrayList(uuids_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated string uuids = 2;</code>
+       *
+       * <pre>
+       * 需要确定社交关系的用户UUID列表
+       * </pre>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getUuidsList() {
+        return uuids_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string uuids = 2;</code>
+       *
+       * <pre>
+       * 需要确定社交关系的用户UUID列表
+       * </pre>
+       */
+      public int getUuidsCount() {
+        return uuids_.size();
+      }
+      /**
+       * <code>repeated string uuids = 2;</code>
+       *
+       * <pre>
+       * 需要确定社交关系的用户UUID列表
+       * </pre>
+       */
+      public java.lang.String getUuids(int index) {
+        return uuids_.get(index);
+      }
+      /**
+       * <code>repeated string uuids = 2;</code>
+       *
+       * <pre>
+       * 需要确定社交关系的用户UUID列表
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUuidsBytes(int index) {
+        return uuids_.getByteString(index);
+      }
+      /**
+       * <code>repeated string uuids = 2;</code>
+       *
+       * <pre>
+       * 需要确定社交关系的用户UUID列表
+       * </pre>
+       */
+      public Builder setUuids(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureUuidsIsMutable();
+        uuids_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string uuids = 2;</code>
+       *
+       * <pre>
+       * 需要确定社交关系的用户UUID列表
+       * </pre>
+       */
+      public Builder addUuids(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureUuidsIsMutable();
+        uuids_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string uuids = 2;</code>
+       *
+       * <pre>
+       * 需要确定社交关系的用户UUID列表
+       * </pre>
+       */
+      public Builder addAllUuids(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureUuidsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, uuids_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string uuids = 2;</code>
+       *
+       * <pre>
+       * 需要确定社交关系的用户UUID列表
+       * </pre>
+       */
+      public Builder clearUuids() {
+        uuids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string uuids = 2;</code>
+       *
+       * <pre>
+       * 需要确定社交关系的用户UUID列表
+       * </pre>
+       */
+      public Builder addUuidsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureUuidsIsMutable();
+        uuids_.add(value);
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PRelationReq)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PRelationReq)
+    private static final com.blemobi.sep.probuf.SocialApiProtos.PRelationReq DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.SocialApiProtos.PRelationReq();
+    }
+
+    public static com.blemobi.sep.probuf.SocialApiProtos.PRelationReq getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PRelationReq>
+        PARSER = new com.google.protobuf.AbstractParser<PRelationReq>() {
+      public PRelationReq parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PRelationReq(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<PRelationReq> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PRelationReq> getParserForType() {
+      return PARSER;
+    }
+
+    public com.blemobi.sep.probuf.SocialApiProtos.PRelationReq getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PSocialFriendCounts_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PSocialFriendCounts_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PSocialFriendCounts_CountsEntry_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PSocialFriendCounts_CountsEntry_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PRelationReq_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PRelationReq_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -17,9 +1240,17 @@ public final class SocialApiProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\023social_inside.proto\022\007bbprotoB)\n\026com.bl" +
-      "emobi.sep.probufB\017SocialApiProtosb\006proto" +
-      "3"
+      "\n\023social_inside.proto\022\007bbproto\032\014result.p" +
+      "roto\"~\n\023PSocialFriendCounts\0228\n\006counts\030\001 " +
+      "\003(\0132(.bbproto.PSocialFriendCounts.Counts" +
+      "Entry\032-\n\013CountsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\005:\0028\001\"+\n\014PRelationReq\022\014\n\004uuid\030\001 \001" +
+      "(\t\022\r\n\005uuids\030\002 \003(\t2\206\001\n\006Social\022B\n\014FriendCo" +
+      "unts\022\024.bbproto.PStringList\032\034.bbproto.PSo" +
+      "cialFriendCounts\0228\n\tRelations\022\025.bbproto." +
+      "PRelationReq\032\024.bbproto.PStringListB)\n\026co" +
+      "m.blemobi.sep.probufB\017SocialApiProtosb\006p",
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -32,7 +1263,27 @@ public final class SocialApiProtos {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.blemobi.sep.probuf.ResultProtos.getDescriptor(),
         }, assigner);
+    internal_static_bbproto_PSocialFriendCounts_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_bbproto_PSocialFriendCounts_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PSocialFriendCounts_descriptor,
+        new java.lang.String[] { "Counts", });
+    internal_static_bbproto_PSocialFriendCounts_CountsEntry_descriptor =
+      internal_static_bbproto_PSocialFriendCounts_descriptor.getNestedTypes().get(0);
+    internal_static_bbproto_PSocialFriendCounts_CountsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PSocialFriendCounts_CountsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_bbproto_PRelationReq_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_bbproto_PRelationReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PRelationReq_descriptor,
+        new java.lang.String[] { "Uuid", "Uuids", });
+    com.blemobi.sep.probuf.ResultProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
