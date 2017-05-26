@@ -4777,6 +4777,829 @@ public final class NetdiskProtos {
 
   }
 
+  public interface PBlacklistOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PBlacklist)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string communityId = 1;</code>
+     *
+     * <pre>
+     *社区ID
+     * </pre>
+     */
+    String getCommunityId();
+    /**
+     * <code>optional string communityId = 1;</code>
+     *
+     * <pre>
+     *社区ID
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getCommunityIdBytes();
+
+    /**
+     * <code>optional string uuid = 2;</code>
+     *
+     * <pre>
+     *当前用户UUID
+     * </pre>
+     */
+    String getUuid();
+    /**
+     * <code>optional string uuid = 2;</code>
+     *
+     * <pre>
+     *当前用户UUID
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUuidBytes();
+
+    /**
+     * <code>optional string blackUuidList = 3;</code>
+     *
+     * <pre>
+     *被屏蔽的uuid列表
+     * </pre>
+     */
+    String getBlackUuidList();
+    /**
+     * <code>optional string blackUuidList = 3;</code>
+     *
+     * <pre>
+     *被屏蔽的uuid列表
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getBlackUuidListBytes();
+  }
+  /**
+   * Protobuf type {@code bbproto.PBlacklist}
+   */
+  public  static final class PBlacklist extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:bbproto.PBlacklist)
+      PBlacklistOrBuilder {
+    // Use PBlacklist.newBuilder() to construct.
+    private PBlacklist(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PBlacklist() {
+      communityId_ = "";
+      uuid_ = "";
+      blackUuidList_ = "";
+    }
+
+    @Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private PBlacklist(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              String s = input.readStringRequireUtf8();
+
+              communityId_ = s;
+              break;
+            }
+            case 18: {
+              String s = input.readStringRequireUtf8();
+
+              uuid_ = s;
+              break;
+            }
+            case 26: {
+              String s = input.readStringRequireUtf8();
+
+              blackUuidList_ = s;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return NetdiskProtos.internal_static_bbproto_PBlacklist_descriptor;
+    }
+
+    protected FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return NetdiskProtos.internal_static_bbproto_PBlacklist_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              PBlacklist.class, Builder.class);
+    }
+
+    public static final int COMMUNITYID_FIELD_NUMBER = 1;
+    private volatile Object communityId_;
+    /**
+     * <code>optional string communityId = 1;</code>
+     *
+     * <pre>
+     *社区ID
+     * </pre>
+     */
+    public String getCommunityId() {
+      Object ref = communityId_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        communityId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string communityId = 1;</code>
+     *
+     * <pre>
+     *社区ID
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getCommunityIdBytes() {
+      Object ref = communityId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (String) ref);
+        communityId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UUID_FIELD_NUMBER = 2;
+    private volatile Object uuid_;
+    /**
+     * <code>optional string uuid = 2;</code>
+     *
+     * <pre>
+     *当前用户UUID
+     * </pre>
+     */
+    public String getUuid() {
+      Object ref = uuid_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        uuid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string uuid = 2;</code>
+     *
+     * <pre>
+     *当前用户UUID
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUuidBytes() {
+      Object ref = uuid_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (String) ref);
+        uuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BLACKUUIDLIST_FIELD_NUMBER = 3;
+    private volatile Object blackUuidList_;
+    /**
+     * <code>optional string blackUuidList = 3;</code>
+     *
+     * <pre>
+     *被屏蔽的uuid列表
+     * </pre>
+     */
+    public String getBlackUuidList() {
+      Object ref = blackUuidList_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        blackUuidList_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string blackUuidList = 3;</code>
+     *
+     * <pre>
+     *被屏蔽的uuid列表
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getBlackUuidListBytes() {
+      Object ref = blackUuidList_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (String) ref);
+        blackUuidList_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getCommunityIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, communityId_);
+      }
+      if (!getUuidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, uuid_);
+      }
+      if (!getBlackUuidListBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, blackUuidList_);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getCommunityIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, communityId_);
+      }
+      if (!getUuidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, uuid_);
+      }
+      if (!getBlackUuidListBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, blackUuidList_);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static PBlacklist parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static PBlacklist parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static PBlacklist parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static PBlacklist parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static PBlacklist parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static PBlacklist parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static PBlacklist parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static PBlacklist parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static PBlacklist parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static PBlacklist parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(PBlacklist prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @Override
+    protected Builder newBuilderForType(
+        BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bbproto.PBlacklist}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bbproto.PBlacklist)
+        PBlacklistOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return NetdiskProtos.internal_static_bbproto_PBlacklist_descriptor;
+      }
+
+      protected FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return NetdiskProtos.internal_static_bbproto_PBlacklist_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                PBlacklist.class, Builder.class);
+      }
+
+      // Construct using com.blemobi.sep.probuf.NetdiskProtos.PBlacklist.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        communityId_ = "";
+
+        uuid_ = "";
+
+        blackUuidList_ = "";
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return NetdiskProtos.internal_static_bbproto_PBlacklist_descriptor;
+      }
+
+      public PBlacklist getDefaultInstanceForType() {
+        return PBlacklist.getDefaultInstance();
+      }
+
+      public PBlacklist build() {
+        PBlacklist result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public PBlacklist buildPartial() {
+        PBlacklist result = new PBlacklist(this);
+        result.communityId_ = communityId_;
+        result.uuid_ = uuid_;
+        result.blackUuidList_ = blackUuidList_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof PBlacklist) {
+          return mergeFrom((PBlacklist)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(PBlacklist other) {
+        if (other == PBlacklist.getDefaultInstance()) return this;
+        if (!other.getCommunityId().isEmpty()) {
+          communityId_ = other.communityId_;
+          onChanged();
+        }
+        if (!other.getUuid().isEmpty()) {
+          uuid_ = other.uuid_;
+          onChanged();
+        }
+        if (!other.getBlackUuidList().isEmpty()) {
+          blackUuidList_ = other.blackUuidList_;
+          onChanged();
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        PBlacklist parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (PBlacklist) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private Object communityId_ = "";
+      /**
+       * <code>optional string communityId = 1;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public String getCommunityId() {
+        Object ref = communityId_;
+        if (!(ref instanceof String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
+          communityId_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      /**
+       * <code>optional string communityId = 1;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getCommunityIdBytes() {
+        Object ref = communityId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
+          communityId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string communityId = 1;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public Builder setCommunityId(
+          String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        communityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string communityId = 1;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public Builder clearCommunityId() {
+        
+        communityId_ = getDefaultInstance().getCommunityId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string communityId = 1;</code>
+       *
+       * <pre>
+       *社区ID
+       * </pre>
+       */
+      public Builder setCommunityIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        communityId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private Object uuid_ = "";
+      /**
+       * <code>optional string uuid = 2;</code>
+       *
+       * <pre>
+       *当前用户UUID
+       * </pre>
+       */
+      public String getUuid() {
+        Object ref = uuid_;
+        if (!(ref instanceof String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
+          uuid_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      /**
+       * <code>optional string uuid = 2;</code>
+       *
+       * <pre>
+       *当前用户UUID
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUuidBytes() {
+        Object ref = uuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
+          uuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string uuid = 2;</code>
+       *
+       * <pre>
+       *当前用户UUID
+       * </pre>
+       */
+      public Builder setUuid(
+          String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uuid = 2;</code>
+       *
+       * <pre>
+       *当前用户UUID
+       * </pre>
+       */
+      public Builder clearUuid() {
+        
+        uuid_ = getDefaultInstance().getUuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string uuid = 2;</code>
+       *
+       * <pre>
+       *当前用户UUID
+       * </pre>
+       */
+      public Builder setUuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private Object blackUuidList_ = "";
+      /**
+       * <code>optional string blackUuidList = 3;</code>
+       *
+       * <pre>
+       *被屏蔽的uuid列表
+       * </pre>
+       */
+      public String getBlackUuidList() {
+        Object ref = blackUuidList_;
+        if (!(ref instanceof String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
+          blackUuidList_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      /**
+       * <code>optional string blackUuidList = 3;</code>
+       *
+       * <pre>
+       *被屏蔽的uuid列表
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getBlackUuidListBytes() {
+        Object ref = blackUuidList_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
+          blackUuidList_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string blackUuidList = 3;</code>
+       *
+       * <pre>
+       *被屏蔽的uuid列表
+       * </pre>
+       */
+      public Builder setBlackUuidList(
+          String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        blackUuidList_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string blackUuidList = 3;</code>
+       *
+       * <pre>
+       *被屏蔽的uuid列表
+       * </pre>
+       */
+      public Builder clearBlackUuidList() {
+        
+        blackUuidList_ = getDefaultInstance().getBlackUuidList();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string blackUuidList = 3;</code>
+       *
+       * <pre>
+       *被屏蔽的uuid列表
+       * </pre>
+       */
+      public Builder setBlackUuidListBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        blackUuidList_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bbproto.PBlacklist)
+    }
+
+    // @@protoc_insertion_point(class_scope:bbproto.PBlacklist)
+    private static final PBlacklist DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new PBlacklist();
+    }
+
+    public static PBlacklist getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PBlacklist>
+        PARSER = new com.google.protobuf.AbstractParser<PBlacklist>() {
+      public PBlacklist parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new PBlacklist(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<PBlacklist> parser() {
+      return PARSER;
+    }
+
+    @Override
+    public com.google.protobuf.Parser<PBlacklist> getParserForType() {
+      return PARSER;
+    }
+
+    public PBlacklist getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface PNetFilelistOrBuilder extends
       // @@protoc_insertion_point(interface_extends:bbproto.PNetFilelist)
       com.google.protobuf.MessageOrBuilder {
@@ -7537,6 +8360,11 @@ public final class NetdiskProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_bbproto_PNetFile_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_bbproto_PBlacklist_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_bbproto_PBlacklist_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
     internal_static_bbproto_PNetFilelist_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -7583,14 +8411,16 @@ public final class NetdiskProtos {
       "\001(\005\022\024\n\014resourceType\030\036 \001(\005\022\022\n\nfollowShip\030" +
       "\037 \001(\005\022\r\n\005topic\030  \003(\t\022\020\n\010category\030! \001(\005\022\022" +
       "\n\nmembership\030\" \001(\005\022\016\n\006isSync\030# \001(\010\022\022\n\nhi" +
-      "ddenList\030$ \001(\t\"D\n\014PNetFilelist\022\"\n\007netFil" +
-      "e\030\001 \003(\0132\021.bbproto.PNetFile\022\020\n\010DiskSize\030\002",
-      " \001(\005\"1\n\tPCategory\022\020\n\010category\030\001 \001(\005\022\022\n\nc" +
-      "ategoryNm\030\002 \001(\t\"7\n\020PLabelStatusList\022#\n\004l" +
-      "ist\030\001 \003(\0132\025.bbproto.PLabelStatus\"F\n\014PLab" +
-      "elStatus\022$\n\010category\030\001 \001(\0132\022.bbproto.PCa" +
-      "tegory\022\020\n\010hasVideo\030\002 \001(\010B\'\n\026com.blemobi." +
-      "sep.probufB\rNetdiskProtosb\006proto3"
+      "ddenList\030$ \001(\t\"F\n\nPBlacklist\022\023\n\013communit" +
+      "yId\030\001 \001(\t\022\014\n\004uuid\030\002 \001(\t\022\025\n\rblackUuidList",
+      "\030\003 \001(\t\"D\n\014PNetFilelist\022\"\n\007netFile\030\001 \003(\0132" +
+      "\021.bbproto.PNetFile\022\020\n\010DiskSize\030\002 \001(\005\"1\n\t" +
+      "PCategory\022\020\n\010category\030\001 \001(\005\022\022\n\ncategoryN" +
+      "m\030\002 \001(\t\"7\n\020PLabelStatusList\022#\n\004list\030\001 \003(" +
+      "\0132\025.bbproto.PLabelStatus\"F\n\014PLabelStatus" +
+      "\022$\n\010category\030\001 \001(\0132\022.bbproto.PCategory\022\020" +
+      "\n\010hasVideo\030\002 \001(\010B\'\n\026com.blemobi.sep.prob" +
+      "ufB\rNetdiskProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7611,26 +8441,32 @@ public final class NetdiskProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PNetFile_descriptor,
         new String[] { "FileId", "CommunityId", "Uuid", "ObjectKey", "Url", "Extension", "FileSize", "FileDigest", "CreateTime", "TransferFlag", "ShareFlag", "ConserveFlag", "Title", "Desc", "Remark", "MiniObjectKey", "MiniUrl", "PostId", "CommentsCnt", "ThumbsupCnt", "PostTyp", "TipoffTimes", "PlayTimes", "Status", "User", "Voted", "Collected", "CanDelete", "CommunityStatus", "ResourceType", "FollowShip", "Topic", "Category", "Membership", "IsSync", "HiddenList", });
-    internal_static_bbproto_PNetFilelist_descriptor =
+    internal_static_bbproto_PBlacklist_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_bbproto_PBlacklist_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PBlacklist_descriptor,
+        new String[] { "CommunityId", "Uuid", "BlackUuidList", });
+    internal_static_bbproto_PNetFilelist_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_bbproto_PNetFilelist_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PNetFilelist_descriptor,
         new String[] { "NetFile", "DiskSize", });
     internal_static_bbproto_PCategory_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_bbproto_PCategory_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PCategory_descriptor,
         new String[] { "Category", "CategoryNm", });
     internal_static_bbproto_PLabelStatusList_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_bbproto_PLabelStatusList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PLabelStatusList_descriptor,
         new String[] { "List", });
     internal_static_bbproto_PLabelStatus_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_bbproto_PLabelStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PLabelStatus_descriptor,
