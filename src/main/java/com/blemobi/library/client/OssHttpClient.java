@@ -24,7 +24,7 @@ public class OssHttpClient extends BaseHttpClient {
 	 * @throws IOException
 	 */
 	public PMessage getDownloadurls(String filenames) throws IOException {
-		super.basePath = new StringBuffer("/oss/downloadurls?from=");
+		super.basePath = new StringBuilder("/oss/downloadurls?from=");
 		super.basePath.append(JettyServer.getServerName()).append("&bucket=1").append("&objectkeys=").append(filenames);
 		return super.getMethod();
 	}
@@ -37,7 +37,7 @@ public class OssHttpClient extends BaseHttpClient {
 	 * @throws IOException
 	 */
 	public PMessage uploadurls(byte[] body) throws IOException {
-		super.basePath = new StringBuffer("/oss/uploadurls?from=");
+		super.basePath = new StringBuilder("/oss/uploadurls?from=");
 		super.basePath.append(JettyServer.getServerName()).append("&bucket=0");
 		super.body = body;
 		super.contentType = "form-data";
@@ -52,7 +52,7 @@ public class OssHttpClient extends BaseHttpClient {
 	 * @throws IOException
 	 */
 	public PMessage getDownloadurl(String objectkey) throws IOException {
-		super.basePath = new StringBuffer("/oss/downloadurl?from=");
+		super.basePath = new StringBuilder("/oss/downloadurl?from=");
 		super.basePath.append(JettyServer.getServerName()).append("&bucket=1").append("&objectkey=").append(objectkey);
 		return super.getMethod();
 	}

@@ -29,7 +29,7 @@ public class CommonHttpClient extends BaseHttpClient {
 	 */
 	public PMessage subscribe(String basePath, List<PSubscribe> list) throws IOException {
 		PSubscribeArray subscribeArray = PSubscribeArray.newBuilder().addAllSubscribe(list).build();
-		super.basePath = new StringBuffer(basePath);
+		super.basePath = new StringBuilder(basePath);
 		super.basePath.append(JettyServer.getServerName());
 		super.body = subscribeArray.toByteArray();
 		super.contentType = "application/x-protobuf";

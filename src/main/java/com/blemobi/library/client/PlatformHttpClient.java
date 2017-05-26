@@ -43,7 +43,7 @@ public class PlatformHttpClient extends BaseHttpClient {
 	}
 	
 	public Boolean tipoffPost(String uuid, String token, String postId, String content) throws IOException{
-		basePath = new StringBuffer("/platform-manager/report/news");
+		basePath = new StringBuilder("/platform-manager/report/news");
 		this.getServerURL();
 		List<Cookie> list = new ArrayList<Cookie>();
 		Cookie c1 = new Cookie("uuid", uuid);

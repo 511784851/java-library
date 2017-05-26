@@ -25,7 +25,7 @@ public class TaskHttpClient extends BaseHttpClient {
 	 * @throws IOException
 	 */
 	public PMessage callback(PCallbackArray callbackArray) throws IOException {
-		super.basePath = new StringBuffer("/task/callback/msgid?from=");
+		super.basePath = new StringBuilder("/task/callback/msgid?from=");
 		super.basePath.append(JettyServer.getServerName());
 		super.body = PMessage.newBuilder().setType("PCallbackArray").setData(callbackArray.toByteString()).build()
 				.toByteArray();

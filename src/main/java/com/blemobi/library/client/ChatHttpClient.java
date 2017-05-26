@@ -27,7 +27,7 @@ public class ChatHttpClient extends BaseHttpClient {
 	 * @throws IOException
 	 */
 	public PMessage multi(List<NameValuePair> params) throws IOException {
-		super.basePath = new StringBuffer("/chat/push/msg/multi?from=");
+		super.basePath = new StringBuilder("/chat/push/msg/multi?from=");
 		super.basePath.append(JettyServer.getServerName());
 		super.params = params;
 		return super.postMethod();

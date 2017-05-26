@@ -21,6 +21,7 @@ import com.blemobi.library.consul_v1.ConsulServiceMgr;
 import com.blemobi.library.consul_v1.ServiceInfo;
 import com.blemobi.sep.probuf.ResultProtos;
 import com.blemobi.sep.probuf.ResultProtos.PMessage;
+import com.google.common.base.Strings;
 
 import lombok.extern.log4j.Log4j;
 
@@ -39,11 +40,11 @@ public class BaseHttpClient {
 	/**
 	 * 最终请求的url
 	 */
-	protected StringBuffer url;
+	protected StringBuilder url = new StringBuilder("http://");
 	/**
 	 * 接口地址
 	 */
-	protected StringBuffer basePath;
+	protected StringBuilder basePath;
 	/**
 	 * POST方式参数
 	 */
@@ -56,6 +57,10 @@ public class BaseHttpClient {
 	 * body数据发送格式
 	 */
 	protected String contentType;
+	/**
+	 * cookie信息
+	 */
+	protected String cookie;
 
 	/**
 	 * 构造方法
@@ -121,7 +126,9 @@ public class BaseHttpClient {
 	 * @throws ClientProtocolException
 	 * @throws IOException
 	 */
-	private PMessage execute(HttpRequestBase httpRequestBase) throws ClientProtocolException, IOException {
+	protected PMessage execute(HttpRequestBase httpRequestBase) throws ClientProtocolException, IOException {
+		if (!Strings.isNullOrEmpty(cookie))
+			httpRequestBase.setHeader("Cookie", cookie);// 设置cookie参数
 		HttpClient client = HttpClients.custom().setConnectionManager(HttpClientPool.getManager()).build();
 		HttpResponse response = client.execute(httpRequestBase);
 		HttpEntity entity = response.getEntity();
@@ -134,7 +141,6 @@ public class BaseHttpClient {
 	 */
 	protected void getServerURL() {
 		ServiceInfo serviceInfo = ConsulServiceMgr.getHealthlyServiceByNm(serverName);// Consul中获取服务信息
-		url = new StringBuffer("http://");
 		url.append(serviceInfo.getAddr()).append(":").append(serviceInfo.getPort()).append(basePath.toString());
 		log.debug("Http Request url=[" + url + "]");
 	}

@@ -13,27 +13,27 @@ import redis.clients.jedis.JedisPool;
  *
  */
 public class RedisManager {
+
+	private static String auth = PropsUtils.getString("redis_user_auth");
+
 	/**
-	 * 获得Redis连接（超时自动释放连接）
+	 * 获得Redis连接
 	 * 
 	 * @return
 	 */
 	public static Jedis getRedis() {
-		Jedis jedis = getLongRedis();
-		AutoReturnRedis.putJedis(jedis);
-		return jedis;
+		return getLongRedis();
 	}
 
 	/**
-	 * 获得Redis连接（不会自动释放连接）
+	 * 获得Redis连接
 	 * 
 	 * @return
 	 */
 	public static Jedis getLongRedis() {
-		JedisPool jedisPool = getJedisPool();
-		Jedis jedis = jedisPool.getResource();
+		JedisPool pool = getJedisPool();
+		Jedis jedis = pool.getResource();
 
-		String auth = PropsUtils.getString("redis_user_auth");
 		if (!Strings.isNullOrEmpty(auth))
 			jedis.auth(auth);
 
@@ -59,7 +59,6 @@ public class RedisManager {
 	public static void returnResource(Jedis jedis) {
 		JedisPool jedisPool = getJedisPool();
 		jedisPool.returnResource(jedis);
-		AutoReturnRedis.remJedis(jedis);
 	}
 
 	/**
@@ -68,8 +67,7 @@ public class RedisManager {
 	 * @return
 	 */
 	private static JedisPool getJedisPool() {
-		RedisPoolSingleton redisPool = RedisPoolSingleton.getInstance();
-		JedisPool jedisPool = redisPool.getJedisPool();
-		return jedisPool;
+		RedisPoolSingleton instance = RedisPoolSingleton.getInstance();
+		return instance.getJedisPool();
 	}
 }

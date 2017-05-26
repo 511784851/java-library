@@ -32,7 +32,7 @@ public class NotificationHttpClient extends BaseHttpClient {
 	 * @throws IOException
 	 */
 	public PMessage msg(PStringList stringList, String uuid, String type, String task) throws IOException {
-		super.basePath = new StringBuffer("/v2/notification/inside/system?from=");
+		super.basePath = new StringBuilder("/v2/notification/inside/system?from=");
 		super.basePath.append(JettyServer.getServerName()).append("&uuid=").append(uuid).append("&type=").append(type)
 				.append("&task=").append(task);
 		super.body = stringList.toByteArray();

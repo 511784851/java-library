@@ -29,17 +29,17 @@ public class RedisPoolSingleton {
 		String address = redisInfo[0];
 		int port = Integer.parseInt(redisInfo[1]);
 
-		JedisPoolConfig config = getConfig();
+		JedisPoolConfig config = createConfig();
 		jedisPool = new JedisPool(config, address, port);
-		log.debug("Redis连接池的初始化成功.");
+		log.debug("Redis连接池的初始化成功!");
 	}
 
 	/**
-	 * 获得Redis连接配置信息
+	 * 配置信息
 	 * 
 	 * @return
 	 */
-	private JedisPoolConfig getConfig() {
+	private JedisPoolConfig createConfig() {
 		int maxTotal = PropsUtils.getInteger("redis_max_connect_num");
 		JedisPoolConfig config = new JedisPoolConfig();
 		config.setMaxTotal(maxTotal);
@@ -59,7 +59,7 @@ public class RedisPoolSingleton {
 	}
 
 	/**
-	 * 获得当前对象
+	 * 获得单例对象
 	 * 
 	 * @return
 	 */
@@ -75,5 +75,4 @@ public class RedisPoolSingleton {
 	public JedisPool getJedisPool() {
 		return jedisPool;
 	}
-
 }

@@ -30,7 +30,7 @@ public class SocialHttpClient extends BaseHttpClient {
 	 * @throws IOException
 	 */
 	public PMessage getFriendList(String uuid, int start, int count) throws IOException {
-		super.basePath = new StringBuffer("/social/listfriendsex?from=");
+		super.basePath = new StringBuilder("/social/listfriendsex?from=");
 		super.basePath.append(JettyServer.getServerName()).append("&uuid=").append(uuid).append("&start=").append(start)
 				.append("&count=").append(count);
 		return super.getMethod();
@@ -70,7 +70,7 @@ public class SocialHttpClient extends BaseHttpClient {
 	 * @throws IOException
 	 */
 	public PMessage getFriendStatu(String uuid, String uuids) throws IOException {
-		super.basePath = new StringBuffer("/social/isfriends?from=");
+		super.basePath = new StringBuilder("/social/isfriends?from=");
 		super.basePath.append(JettyServer.getServerName()).append("&uuid=").append(uuid).append("&uuids=")
 				.append(uuids);
 		return super.getMethod();

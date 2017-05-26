@@ -35,7 +35,7 @@ public class NewsHttpClient extends BaseHttpClient {
 	 * @throws IOException
 	 */
 	public PMessage getFansList(String uuid, int offset, int count) throws ClientProtocolException, IOException {
-		super.basePath = new StringBuffer("/v1/news/inside/fans?from=");
+		super.basePath = new StringBuilder("/v1/news/inside/fans?from=");
 		super.basePath.append(JettyServer.getServerName()).append("&uuid=").append(uuid).append("&offset=")
 				.append(offset).append("&count=").append(count);
 		return super.getMethod();
@@ -77,7 +77,7 @@ public class NewsHttpClient extends BaseHttpClient {
 	 * @throws IOException
 	 */
 	public PMessage getFollowList(String uuid, int offset, int count) throws ClientProtocolException, IOException {
-		super.basePath = new StringBuffer("/v1/news/inside/follow?from=");
+		super.basePath = new StringBuilder("/v1/news/inside/follow?from=");
 		super.basePath.append(JettyServer.getServerName()).append("&uuidb=").append(uuid).append("&offset=")
 				.append(offset).append("&count=").append(count);
 		return super.getMethod();
@@ -117,7 +117,7 @@ public class NewsHttpClient extends BaseHttpClient {
 	 * @throws IOException
 	 */
 	public PMessage getFollowStatu(String uuid, String uuids) throws IOException {
-		super.basePath = new StringBuffer("/v1/news/inside/multi/follow/status?from=");
+		super.basePath = new StringBuilder("/v1/news/inside/multi/follow/status?from=");
 		super.basePath.append(JettyServer.getServerName()).append("&uuid=").append(uuid).append("&targetuuids=")
 				.append(uuids);
 		return super.getMethod();

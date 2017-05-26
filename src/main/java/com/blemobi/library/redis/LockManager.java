@@ -1,7 +1,6 @@
 package com.blemobi.library.redis;
 
-import lombok.extern.log4j.Log4j;
-import redis.clients.jedis.Jedis;
+import com.blemobi.library.redis.dao.RedisDao;
 
 /**
  * Redis锁的实现，解决分布式多环境对Redis共享数据的处理
@@ -9,17 +8,12 @@ import redis.clients.jedis.Jedis;
  * @author zhaoyong
  *
  */
-@Log4j
 public class LockManager {
 
 	/**
-	 * 间隔时间
+	 * 间隔时间（单位：毫秒）
 	 */
-	private static final long sleepTime = 200;
-	/**
-	 * 延迟时间
-	 */
-	private static final long delayTime = 1000;
+	private static final int SLEEP_TIME = 10;
 
 	/**
 	 * 获得锁
@@ -27,27 +21,21 @@ public class LockManager {
 	 * @param lock
 	 *            锁的key
 	 * @param expire
-	 *            获得锁失效时间（单位：秒）
+	 *            失效时间（单位：秒）,同一个业务锁，清保证失效时间一致
 	 * @return
 	 */
 	public static boolean getLock(String lock, int expire) {
-		long end = System.currentTimeMillis() + (expire * 1000) + delayTime;// 结束时间
-		Jedis jedis = RedisManager.getRedis();
-		long nx = 0;
+		int count = (expire * 1000) / SLEEP_TIME;// 可重复的次数
 		do {
-			try {
-				nx = getRedisLock(lock, expire, end, jedis);
-				if (end > System.currentTimeMillis())
-					break;
-			} catch (InterruptedException e) {
-				log.error("获取Redis锁异常：" + e.getMessage());
-				e.printStackTrace();
-			}
-		} while (nx != 1);
-		RedisManager.returnResource(jedis);
-		if (nx != 1)
-			log.warn("获取Redis锁失败");
-		return nx == 1;
+			if (setnxLock(lock, expire))
+				return true;
+			else
+				try {
+					Thread.sleep(SLEEP_TIME);
+				} catch (InterruptedException e) {
+				}
+		} while (count-- > 0);
+		return false;
 	}
 
 	/**
@@ -55,18 +43,15 @@ public class LockManager {
 	 * 
 	 * @param lock
 	 * @param expire
-	 * @param end
-	 * @param jedis
 	 * @return
-	 * @throws InterruptedException
 	 */
-	private static long getRedisLock(String lock, int expire, long end, Jedis jedis) throws InterruptedException {
-		long nx = jedis.setnx(lock, expire + "");
-		if (nx == 1) // 获得锁成功
-			jedis.expire(lock, expire);// 设置锁的自动失效时间
-		else // 获得锁失败
-			Thread.sleep(sleepTime);// 睡眠一会儿
-		return nx;
+	private static boolean setnxLock(String lock, int expire) {
+		return new RedisDao<Boolean>().exec(redis -> {
+			long r = redis.setnx(lock, "");
+			if (r == 1) // 获得锁成功
+				redis.expire(lock, expire);// 设置锁的自动失效时间
+			return r == 1;
+		});
 	}
 
 	/**
@@ -76,9 +61,8 @@ public class LockManager {
 	 * @return
 	 */
 	public static boolean releaseLock(String lock) {
-		Jedis jedis = RedisManager.getRedis();
-		jedis.del(lock);
-		RedisManager.returnResource(jedis);
-		return true;
+		return new RedisDao<Long>().exec(redis -> {
+			return redis.del(lock);
+		}) > 0;
 	}
 }

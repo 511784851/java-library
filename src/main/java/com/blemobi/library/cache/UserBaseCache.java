@@ -19,8 +19,8 @@ import lombok.extern.log4j.Log4j;
  */
 @Log4j
 public class UserBaseCache {
-	public static Map<String, PUserBase> chcheUserBase = new Hashtable<String, PUserBase>();
-	public static Map<String, Long> chcheUserBaseTime = new Hashtable<String, Long>();
+	static Map<String, PUserBase> chcheUserBase = new Hashtable<String, PUserBase>();
+	static Map<String, Long> chcheUserBaseTime = new Hashtable<String, Long>();
 
 	private UserBaseCache() {
 
@@ -47,7 +47,7 @@ public class UserBaseCache {
 	 * @return
 	 * @throws IOException
 	 */
-	public static boolean exist(String uuid) throws IOException {
+	public static boolean exist(String uuid) {
 		return chcheUserBase.containsKey(uuid);
 	}
 
