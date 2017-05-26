@@ -17,12 +17,12 @@ public class LocalHttpClient extends BaseHttpClient {
 	private String address;
 	private int port;
 
-	public LocalHttpClient(String address, int port, StringBuilder basePath, List<NameValuePair> params, byte[] body,
+	public LocalHttpClient(String address, int port, StringBuffer basePath, List<NameValuePair> params, byte[] body,
 			String contentType) {
 		super("");
 		this.address = address;
 		this.port = port;
-		super.basePath = basePath;
+		super.basePath = new StringBuilder();
 		super.params = params;
 		super.body = body;
 		super.contentType = contentType;
