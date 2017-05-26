@@ -485,6 +485,24 @@ public final class NetdiskProtos {
      * </pre>
      */
     boolean getIsSync();
+
+    /**
+     * <code>optional string hiddenList = 36;</code>
+     *
+     * <pre>
+     *被隐藏的用户列表","分割
+     * </pre>
+     */
+    String getHiddenList();
+    /**
+     * <code>optional string hiddenList = 36;</code>
+     *
+     * <pre>
+     *被隐藏的用户列表","分割
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getHiddenListBytes();
   }
   /**
    * Protobuf type {@code bbproto.PNetFile}
@@ -532,6 +550,7 @@ public final class NetdiskProtos {
       category_ = 0;
       membership_ = 0;
       isSync_ = false;
+      hiddenList_ = "";
     }
 
     @Override
@@ -757,6 +776,12 @@ public final class NetdiskProtos {
             case 280: {
 
               isSync_ = input.readBool();
+              break;
+            }
+            case 290: {
+              String s = input.readStringRequireUtf8();
+
+              hiddenList_ = s;
               break;
             }
           }
@@ -1672,6 +1697,48 @@ public final class NetdiskProtos {
       return isSync_;
     }
 
+    public static final int HIDDENLIST_FIELD_NUMBER = 36;
+    private volatile Object hiddenList_;
+    /**
+     * <code>optional string hiddenList = 36;</code>
+     *
+     * <pre>
+     *被隐藏的用户列表","分割
+     * </pre>
+     */
+    public String getHiddenList() {
+      Object ref = hiddenList_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        hiddenList_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string hiddenList = 36;</code>
+     *
+     * <pre>
+     *被隐藏的用户列表","分割
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getHiddenListBytes() {
+      Object ref = hiddenList_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (String) ref);
+        hiddenList_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -1788,6 +1855,9 @@ public final class NetdiskProtos {
       }
       if (isSync_ != false) {
         output.writeBool(35, isSync_);
+      }
+      if (!getHiddenListBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 36, hiddenList_);
       }
     }
 
@@ -1926,6 +1996,9 @@ public final class NetdiskProtos {
       if (isSync_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(35, isSync_);
+      }
+      if (!getHiddenListBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(36, hiddenList_);
       }
       memoizedSize = size;
       return size;
@@ -2112,6 +2185,8 @@ public final class NetdiskProtos {
 
         isSync_ = false;
 
+        hiddenList_ = "";
+
         return this;
       }
 
@@ -2181,6 +2256,7 @@ public final class NetdiskProtos {
         result.category_ = category_;
         result.membership_ = membership_;
         result.isSync_ = isSync_;
+        result.hiddenList_ = hiddenList_;
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         onBuilt();
@@ -2322,6 +2398,10 @@ public final class NetdiskProtos {
         }
         if (other.getIsSync() != false) {
           setIsSync(other.getIsSync());
+        }
+        if (!other.getHiddenList().isEmpty()) {
+          hiddenList_ = other.hiddenList_;
+          onChanged();
         }
         onChanged();
         return this;
@@ -4547,6 +4627,95 @@ public final class NetdiskProtos {
       public Builder clearIsSync() {
         
         isSync_ = false;
+        onChanged();
+        return this;
+      }
+
+      private Object hiddenList_ = "";
+      /**
+       * <code>optional string hiddenList = 36;</code>
+       *
+       * <pre>
+       *被隐藏的用户列表","分割
+       * </pre>
+       */
+      public String getHiddenList() {
+        Object ref = hiddenList_;
+        if (!(ref instanceof String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
+          hiddenList_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      /**
+       * <code>optional string hiddenList = 36;</code>
+       *
+       * <pre>
+       *被隐藏的用户列表","分割
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getHiddenListBytes() {
+        Object ref = hiddenList_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
+          hiddenList_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string hiddenList = 36;</code>
+       *
+       * <pre>
+       *被隐藏的用户列表","分割
+       * </pre>
+       */
+      public Builder setHiddenList(
+          String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        hiddenList_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string hiddenList = 36;</code>
+       *
+       * <pre>
+       *被隐藏的用户列表","分割
+       * </pre>
+       */
+      public Builder clearHiddenList() {
+        
+        hiddenList_ = getDefaultInstance().getHiddenList();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string hiddenList = 36;</code>
+       *
+       * <pre>
+       *被隐藏的用户列表","分割
+       * </pre>
+       */
+      public Builder setHiddenListBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        hiddenList_ = value;
         onChanged();
         return this;
       }
@@ -7397,7 +7566,7 @@ public final class NetdiskProtos {
   static {
     String[] descriptorData = {
       "\n\rnetdisk.proto\022\007bbproto\032\raccount.proto\"" +
-      "\240\005\n\010PNetFile\022\016\n\006fileId\030\001 \001(\t\022\023\n\013communit" +
+      "\264\005\n\010PNetFile\022\016\n\006fileId\030\001 \001(\t\022\023\n\013communit" +
       "yId\030\002 \001(\t\022\014\n\004uuid\030\003 \001(\t\022\021\n\tobjectKey\030\004 \001" +
       "(\t\022\013\n\003url\030\005 \001(\t\022\021\n\textension\030\006 \001(\t\022\020\n\010fi" +
       "leSize\030\007 \001(\003\022\022\n\nfileDigest\030\010 \001(\t\022\022\n\ncrea" +
@@ -7413,15 +7582,15 @@ public final class NetdiskProtos {
       "\021\n\tcanDelete\030\034 \001(\010\022\027\n\017communityStatus\030\035 " +
       "\001(\005\022\024\n\014resourceType\030\036 \001(\005\022\022\n\nfollowShip\030" +
       "\037 \001(\005\022\r\n\005topic\030  \003(\t\022\020\n\010category\030! \001(\005\022\022" +
-      "\n\nmembership\030\" \001(\005\022\016\n\006isSync\030# \001(\010\"D\n\014PN" +
-      "etFilelist\022\"\n\007netFile\030\001 \003(\0132\021.bbproto.PN" +
-      "etFile\022\020\n\010DiskSize\030\002 \001(\005\"1\n\tPCategory\022\020\n",
-      "\010category\030\001 \001(\005\022\022\n\ncategoryNm\030\002 \001(\t\"7\n\020P" +
-      "LabelStatusList\022#\n\004list\030\001 \003(\0132\025.bbproto." +
-      "PLabelStatus\"F\n\014PLabelStatus\022$\n\010category" +
-      "\030\001 \001(\0132\022.bbproto.PCategory\022\020\n\010hasVideo\030\002" +
-      " \001(\010B\'\n\026com.blemobi.sep.probufB\rNetdiskP" +
-      "rotosb\006proto3"
+      "\n\nmembership\030\" \001(\005\022\016\n\006isSync\030# \001(\010\022\022\n\nhi" +
+      "ddenList\030$ \001(\t\"D\n\014PNetFilelist\022\"\n\007netFil" +
+      "e\030\001 \003(\0132\021.bbproto.PNetFile\022\020\n\010DiskSize\030\002",
+      " \001(\005\"1\n\tPCategory\022\020\n\010category\030\001 \001(\005\022\022\n\nc" +
+      "ategoryNm\030\002 \001(\t\"7\n\020PLabelStatusList\022#\n\004l" +
+      "ist\030\001 \003(\0132\025.bbproto.PLabelStatus\"F\n\014PLab" +
+      "elStatus\022$\n\010category\030\001 \001(\0132\022.bbproto.PCa" +
+      "tegory\022\020\n\010hasVideo\030\002 \001(\010B\'\n\026com.blemobi." +
+      "sep.probufB\rNetdiskProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7441,7 +7610,7 @@ public final class NetdiskProtos {
     internal_static_bbproto_PNetFile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PNetFile_descriptor,
-        new String[] { "FileId", "CommunityId", "Uuid", "ObjectKey", "Url", "Extension", "FileSize", "FileDigest", "CreateTime", "TransferFlag", "ShareFlag", "ConserveFlag", "Title", "Desc", "Remark", "MiniObjectKey", "MiniUrl", "PostId", "CommentsCnt", "ThumbsupCnt", "PostTyp", "TipoffTimes", "PlayTimes", "Status", "User", "Voted", "Collected", "CanDelete", "CommunityStatus", "ResourceType", "FollowShip", "Topic", "Category", "Membership", "IsSync", });
+        new String[] { "FileId", "CommunityId", "Uuid", "ObjectKey", "Url", "Extension", "FileSize", "FileDigest", "CreateTime", "TransferFlag", "ShareFlag", "ConserveFlag", "Title", "Desc", "Remark", "MiniObjectKey", "MiniUrl", "PostId", "CommentsCnt", "ThumbsupCnt", "PostTyp", "TipoffTimes", "PlayTimes", "Status", "User", "Voted", "Collected", "CanDelete", "CommunityStatus", "ResourceType", "FollowShip", "Topic", "Category", "Membership", "IsSync", "HiddenList", });
     internal_static_bbproto_PNetFilelist_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_bbproto_PNetFilelist_fieldAccessorTable = new

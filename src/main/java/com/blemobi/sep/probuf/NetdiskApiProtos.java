@@ -45,14 +45,6 @@ public final class NetdiskApiProtos {
      * </pre>
      */
     DELETED(3, 3),
-    /**
-     * <code>HIDDEN = 4;</code>
-     *
-     * <pre>
-     *隐藏
-     * </pre>
-     */
-    HIDDEN(4, 4),
     UNRECOGNIZED(-1, -1),
     ;
 
@@ -88,14 +80,6 @@ public final class NetdiskApiProtos {
      * </pre>
      */
     public static final int DELETED_VALUE = 3;
-    /**
-     * <code>HIDDEN = 4;</code>
-     *
-     * <pre>
-     *隐藏
-     * </pre>
-     */
-    public static final int HIDDEN_VALUE = 4;
 
 
     public final int getNumber() {
@@ -112,7 +96,6 @@ public final class NetdiskApiProtos {
         case 1: return WAIT_AUDIT;
         case 2: return DECLINE;
         case 3: return DELETED;
-        case 4: return HIDDEN;
         default: return null;
       }
     }
@@ -1086,18 +1069,36 @@ public final class NetdiskApiProtos {
         getPostIdBytes();
 
     /**
-     * <code>optional string uuid = 3;</code>
+     * <code>optional string hiddenUuid = 3;</code>
      *
      * <pre>
-     *UUID
+     *UUID 帖子创建者UUID、被屏蔽用户的UUID
+     * </pre>
+     */
+    String getHiddenUuid();
+    /**
+     * <code>optional string hiddenUuid = 3;</code>
+     *
+     * <pre>
+     *UUID 帖子创建者UUID、被屏蔽用户的UUID
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getHiddenUuidBytes();
+
+    /**
+     * <code>optional string uuid = 4;</code>
+     *
+     * <pre>
+     *发起者的UUID
      * </pre>
      */
     String getUuid();
     /**
-     * <code>optional string uuid = 3;</code>
+     * <code>optional string uuid = 4;</code>
      *
      * <pre>
-     *UUID
+     *发起者的UUID
      * </pre>
      */
     com.google.protobuf.ByteString
@@ -1117,6 +1118,7 @@ public final class NetdiskApiProtos {
     private PHiddenParam() {
       communityId_ = "";
       postId_ = "";
+      hiddenUuid_ = "";
       uuid_ = "";
     }
 
@@ -1157,6 +1159,12 @@ public final class NetdiskApiProtos {
               break;
             }
             case 26: {
+              String s = input.readStringRequireUtf8();
+
+              hiddenUuid_ = s;
+              break;
+            }
+            case 34: {
               String s = input.readStringRequireUtf8();
 
               uuid_ = s;
@@ -1270,13 +1278,55 @@ public final class NetdiskApiProtos {
       }
     }
 
-    public static final int UUID_FIELD_NUMBER = 3;
-    private volatile Object uuid_;
+    public static final int HIDDENUUID_FIELD_NUMBER = 3;
+    private volatile Object hiddenUuid_;
     /**
-     * <code>optional string uuid = 3;</code>
+     * <code>optional string hiddenUuid = 3;</code>
      *
      * <pre>
-     *UUID
+     *UUID 帖子创建者UUID、被屏蔽用户的UUID
+     * </pre>
+     */
+    public String getHiddenUuid() {
+      Object ref = hiddenUuid_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        hiddenUuid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string hiddenUuid = 3;</code>
+     *
+     * <pre>
+     *UUID 帖子创建者UUID、被屏蔽用户的UUID
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getHiddenUuidBytes() {
+      Object ref = hiddenUuid_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (String) ref);
+        hiddenUuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UUID_FIELD_NUMBER = 4;
+    private volatile Object uuid_;
+    /**
+     * <code>optional string uuid = 4;</code>
+     *
+     * <pre>
+     *发起者的UUID
      * </pre>
      */
     public String getUuid() {
@@ -1292,10 +1342,10 @@ public final class NetdiskApiProtos {
       }
     }
     /**
-     * <code>optional string uuid = 3;</code>
+     * <code>optional string uuid = 4;</code>
      *
      * <pre>
-     *UUID
+     *发起者的UUID
      * </pre>
      */
     public com.google.protobuf.ByteString
@@ -1330,8 +1380,11 @@ public final class NetdiskApiProtos {
       if (!getPostIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessage.writeString(output, 2, postId_);
       }
+      if (!getHiddenUuidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, hiddenUuid_);
+      }
       if (!getUuidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 3, uuid_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, uuid_);
       }
     }
 
@@ -1346,8 +1399,11 @@ public final class NetdiskApiProtos {
       if (!getPostIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(2, postId_);
       }
+      if (!getHiddenUuidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, hiddenUuid_);
+      }
       if (!getUuidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, uuid_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, uuid_);
       }
       memoizedSize = size;
       return size;
@@ -1464,6 +1520,8 @@ public final class NetdiskApiProtos {
 
         postId_ = "";
 
+        hiddenUuid_ = "";
+
         uuid_ = "";
 
         return this;
@@ -1490,6 +1548,7 @@ public final class NetdiskApiProtos {
         PHiddenParam result = new PHiddenParam(this);
         result.communityId_ = communityId_;
         result.postId_ = postId_;
+        result.hiddenUuid_ = hiddenUuid_;
         result.uuid_ = uuid_;
         onBuilt();
         return result;
@@ -1512,6 +1571,10 @@ public final class NetdiskApiProtos {
         }
         if (!other.getPostId().isEmpty()) {
           postId_ = other.postId_;
+          onChanged();
+        }
+        if (!other.getHiddenUuid().isEmpty()) {
+          hiddenUuid_ = other.hiddenUuid_;
           onChanged();
         }
         if (!other.getUuid().isEmpty()) {
@@ -1722,12 +1785,101 @@ public final class NetdiskApiProtos {
         return this;
       }
 
-      private Object uuid_ = "";
+      private Object hiddenUuid_ = "";
       /**
-       * <code>optional string uuid = 3;</code>
+       * <code>optional string hiddenUuid = 3;</code>
        *
        * <pre>
-       *UUID
+       *UUID 帖子创建者UUID、被屏蔽用户的UUID
+       * </pre>
+       */
+      public String getHiddenUuid() {
+        Object ref = hiddenUuid_;
+        if (!(ref instanceof String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
+          hiddenUuid_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      /**
+       * <code>optional string hiddenUuid = 3;</code>
+       *
+       * <pre>
+       *UUID 帖子创建者UUID、被屏蔽用户的UUID
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getHiddenUuidBytes() {
+        Object ref = hiddenUuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
+          hiddenUuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string hiddenUuid = 3;</code>
+       *
+       * <pre>
+       *UUID 帖子创建者UUID、被屏蔽用户的UUID
+       * </pre>
+       */
+      public Builder setHiddenUuid(
+          String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        hiddenUuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string hiddenUuid = 3;</code>
+       *
+       * <pre>
+       *UUID 帖子创建者UUID、被屏蔽用户的UUID
+       * </pre>
+       */
+      public Builder clearHiddenUuid() {
+        
+        hiddenUuid_ = getDefaultInstance().getHiddenUuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string hiddenUuid = 3;</code>
+       *
+       * <pre>
+       *UUID 帖子创建者UUID、被屏蔽用户的UUID
+       * </pre>
+       */
+      public Builder setHiddenUuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        hiddenUuid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private Object uuid_ = "";
+      /**
+       * <code>optional string uuid = 4;</code>
+       *
+       * <pre>
+       *发起者的UUID
        * </pre>
        */
       public String getUuid() {
@@ -1743,10 +1895,10 @@ public final class NetdiskApiProtos {
         }
       }
       /**
-       * <code>optional string uuid = 3;</code>
+       * <code>optional string uuid = 4;</code>
        *
        * <pre>
-       *UUID
+       *发起者的UUID
        * </pre>
        */
       public com.google.protobuf.ByteString
@@ -1763,10 +1915,10 @@ public final class NetdiskApiProtos {
         }
       }
       /**
-       * <code>optional string uuid = 3;</code>
+       * <code>optional string uuid = 4;</code>
        *
        * <pre>
-       *UUID
+       *发起者的UUID
        * </pre>
        */
       public Builder setUuid(
@@ -1780,10 +1932,10 @@ public final class NetdiskApiProtos {
         return this;
       }
       /**
-       * <code>optional string uuid = 3;</code>
+       * <code>optional string uuid = 4;</code>
        *
        * <pre>
-       *UUID
+       *发起者的UUID
        * </pre>
        */
       public Builder clearUuid() {
@@ -1793,10 +1945,10 @@ public final class NetdiskApiProtos {
         return this;
       }
       /**
-       * <code>optional string uuid = 3;</code>
+       * <code>optional string uuid = 4;</code>
        *
        * <pre>
-       *UUID
+       *发起者的UUID
        * </pre>
        */
       public Builder setUuidBytes(
@@ -4586,30 +4738,30 @@ public final class NetdiskApiProtos {
       "\n\024netdisk_inside.proto\022\007bbproto\032\rnetdisk" +
       ".proto\032\014result.proto\032\023common_inside.prot" +
       "o\"I\n\014POPFileParam\022\037\n\004list\030\001 \003(\0132\021.bbprot" +
-      "o.PNetFile\022\030\n\002op\030\002 \001(\0162\014.bbproto.POP\"A\n\014" +
+      "o.PNetFile\022\030\n\002op\030\002 \001(\0162\014.bbproto.POP\"U\n\014" +
       "PHiddenParam\022\023\n\013communityId\030\001 \001(\t\022\016\n\006pos" +
-      "tId\030\002 \001(\t\022\014\n\004uuid\030\003 \001(\t\"V\n\rPSetFileParam" +
-      "\022\023\n\013communityId\030\001 \001(\t\022\016\n\006postId\030\002 \003(\t\022 \n" +
-      "\006status\030\003 \001(\0162\020.bbproto.PStatus\"E\n\020PTipO" +
-      "ffPostParam\022\023\n\013communityId\030\001 \001(\t\022\016\n\006post" +
-      "Id\030\002 \001(\t\022\014\n\004uuid\030\003 \001(\t\"Z\n\022PTipOffObjkeyP",
-      "aram\022\023\n\013communityId\030\001 \001(\t\022\016\n\006postId\030\002 \001(" +
-      "\t\022\021\n\tobjectKey\030\003 \001(\t\022\014\n\004uuid\030\004 \001(\t*K\n\007PS" +
-      "tatus\022\n\n\006NORMAL\020\000\022\016\n\nWAIT_AUDIT\020\001\022\013\n\007DEC" +
-      "LINE\020\002\022\013\n\007DELETED\020\003\022\n\n\006HIDDEN\020\004*\035\n\003POP\022\n" +
-      "\n\006CREATE\020\000\022\n\n\006DELETE\020\0012\224\003\n\016NetDiskServic" +
-      "e\022A\n\026setVideoStatusByPostId\022\026.bbproto.PS" +
-      "etFileParam\032\017.bbproto.PEmpty\0221\n\007opVideo\022" +
-      "\025.bbproto.POPFileParam\032\017.bbproto.PEmpty\022" +
-      "=\n\risExistsVideo\022\026.bbproto.PStringSingle" +
-      "\032\024.bbproto.PBoolSingle\022D\n\021tipoffVideoByP",
-      "ost\022\031.bbproto.PTipOffPostParam\032\024.bbproto" +
-      ".PBoolSingle\022K\n\026tipoffVideoByObjectkey\022\033" +
-      ".bbproto.PTipOffObjkeyParam\032\024.bbproto.PB" +
-      "oolSingle\022:\n\013hiddenVideo\022\025.bbproto.PHidd" +
-      "enParam\032\024.bbproto.PBoolSingleB*\n\026com.ble" +
-      "mobi.sep.probufB\020NetdiskApiProtosb\006proto" +
-      "3"
+      "tId\030\002 \001(\t\022\022\n\nhiddenUuid\030\003 \001(\t\022\014\n\004uuid\030\004 " +
+      "\001(\t\"V\n\rPSetFileParam\022\023\n\013communityId\030\001 \001(" +
+      "\t\022\016\n\006postId\030\002 \003(\t\022 \n\006status\030\003 \001(\0162\020.bbpr" +
+      "oto.PStatus\"E\n\020PTipOffPostParam\022\023\n\013commu" +
+      "nityId\030\001 \001(\t\022\016\n\006postId\030\002 \001(\t\022\014\n\004uuid\030\003 \001",
+      "(\t\"Z\n\022PTipOffObjkeyParam\022\023\n\013communityId\030" +
+      "\001 \001(\t\022\016\n\006postId\030\002 \001(\t\022\021\n\tobjectKey\030\003 \001(\t" +
+      "\022\014\n\004uuid\030\004 \001(\t*?\n\007PStatus\022\n\n\006NORMAL\020\000\022\016\n" +
+      "\nWAIT_AUDIT\020\001\022\013\n\007DECLINE\020\002\022\013\n\007DELETED\020\003*" +
+      "\035\n\003POP\022\n\n\006CREATE\020\000\022\n\n\006DELETE\020\0012\224\003\n\016NetDi" +
+      "skService\022A\n\026setVideoStatusByPostId\022\026.bb" +
+      "proto.PSetFileParam\032\017.bbproto.PEmpty\0221\n\007" +
+      "opVideo\022\025.bbproto.POPFileParam\032\017.bbproto" +
+      ".PEmpty\022=\n\risExistsVideo\022\026.bbproto.PStri" +
+      "ngSingle\032\024.bbproto.PBoolSingle\022D\n\021tipoff",
+      "VideoByPost\022\031.bbproto.PTipOffPostParam\032\024" +
+      ".bbproto.PBoolSingle\022K\n\026tipoffVideoByObj" +
+      "ectkey\022\033.bbproto.PTipOffObjkeyParam\032\024.bb" +
+      "proto.PBoolSingle\022:\n\013hiddenVideo\022\025.bbpro" +
+      "to.PHiddenParam\032\024.bbproto.PBoolSingleB*\n" +
+      "\026com.blemobi.sep.probufB\020NetdiskApiProto" +
+      "sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4637,7 +4789,7 @@ public final class NetdiskApiProtos {
     internal_static_bbproto_PHiddenParam_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PHiddenParam_descriptor,
-        new String[] { "CommunityId", "PostId", "Uuid", });
+        new String[] { "CommunityId", "PostId", "HiddenUuid", "Uuid", });
     internal_static_bbproto_PSetFileParam_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_bbproto_PSetFileParam_fieldAccessorTable = new
