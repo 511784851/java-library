@@ -4782,24 +4782,6 @@ public final class NetdiskProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string communityId = 1;</code>
-     *
-     * <pre>
-     *社区ID
-     * </pre>
-     */
-    String getCommunityId();
-    /**
-     * <code>optional string communityId = 1;</code>
-     *
-     * <pre>
-     *社区ID
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getCommunityIdBytes();
-
-    /**
      * <code>optional string uuid = 2;</code>
      *
      * <pre>
@@ -4847,7 +4829,6 @@ public final class NetdiskProtos {
       super(builder);
     }
     private PBlacklist() {
-      communityId_ = "";
       uuid_ = "";
       blackUuidList_ = "";
     }
@@ -4874,12 +4855,6 @@ public final class NetdiskProtos {
               if (!input.skipField(tag)) {
                 done = true;
               }
-              break;
-            }
-            case 10: {
-              String s = input.readStringRequireUtf8();
-
-              communityId_ = s;
               break;
             }
             case 18: {
@@ -4916,48 +4891,6 @@ public final class NetdiskProtos {
       return NetdiskProtos.internal_static_bbproto_PBlacklist_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               PBlacklist.class, Builder.class);
-    }
-
-    public static final int COMMUNITYID_FIELD_NUMBER = 1;
-    private volatile Object communityId_;
-    /**
-     * <code>optional string communityId = 1;</code>
-     *
-     * <pre>
-     *社区ID
-     * </pre>
-     */
-    public String getCommunityId() {
-      Object ref = communityId_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        communityId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>optional string communityId = 1;</code>
-     *
-     * <pre>
-     *社区ID
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getCommunityIdBytes() {
-      Object ref = communityId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
-        communityId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
     }
 
     public static final int UUID_FIELD_NUMBER = 2;
@@ -5056,9 +4989,6 @@ public final class NetdiskProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCommunityIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, communityId_);
-      }
       if (!getUuidBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessage.writeString(output, 2, uuid_);
       }
@@ -5072,9 +5002,6 @@ public final class NetdiskProtos {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCommunityIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, communityId_);
-      }
       if (!getUuidBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(2, uuid_);
       }
@@ -5192,8 +5119,6 @@ public final class NetdiskProtos {
       }
       public Builder clear() {
         super.clear();
-        communityId_ = "";
-
         uuid_ = "";
 
         blackUuidList_ = "";
@@ -5220,7 +5145,6 @@ public final class NetdiskProtos {
 
       public PBlacklist buildPartial() {
         PBlacklist result = new PBlacklist(this);
-        result.communityId_ = communityId_;
         result.uuid_ = uuid_;
         result.blackUuidList_ = blackUuidList_;
         onBuilt();
@@ -5238,10 +5162,6 @@ public final class NetdiskProtos {
 
       public Builder mergeFrom(PBlacklist other) {
         if (other == PBlacklist.getDefaultInstance()) return this;
-        if (!other.getCommunityId().isEmpty()) {
-          communityId_ = other.communityId_;
-          onChanged();
-        }
         if (!other.getUuid().isEmpty()) {
           uuid_ = other.uuid_;
           onChanged();
@@ -5273,95 +5193,6 @@ public final class NetdiskProtos {
             mergeFrom(parsedMessage);
           }
         }
-        return this;
-      }
-
-      private Object communityId_ = "";
-      /**
-       * <code>optional string communityId = 1;</code>
-       *
-       * <pre>
-       *社区ID
-       * </pre>
-       */
-      public String getCommunityId() {
-        Object ref = communityId_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          communityId_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <code>optional string communityId = 1;</code>
-       *
-       * <pre>
-       *社区ID
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getCommunityIdBytes() {
-        Object ref = communityId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          communityId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string communityId = 1;</code>
-       *
-       * <pre>
-       *社区ID
-       * </pre>
-       */
-      public Builder setCommunityId(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        communityId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string communityId = 1;</code>
-       *
-       * <pre>
-       *社区ID
-       * </pre>
-       */
-      public Builder clearCommunityId() {
-        
-        communityId_ = getDefaultInstance().getCommunityId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string communityId = 1;</code>
-       *
-       * <pre>
-       *社区ID
-       * </pre>
-       */
-      public Builder setCommunityIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        communityId_ = value;
-        onChanged();
         return this;
       }
 
@@ -8411,16 +8242,16 @@ public final class NetdiskProtos {
       "\001(\005\022\024\n\014resourceType\030\036 \001(\005\022\022\n\nfollowShip\030" +
       "\037 \001(\005\022\r\n\005topic\030  \003(\t\022\020\n\010category\030! \001(\005\022\022" +
       "\n\nmembership\030\" \001(\005\022\016\n\006isSync\030# \001(\010\022\022\n\nhi" +
-      "ddenList\030$ \001(\t\"F\n\nPBlacklist\022\023\n\013communit" +
-      "yId\030\001 \001(\t\022\014\n\004uuid\030\002 \001(\t\022\025\n\rblackUuidList",
-      "\030\003 \001(\t\"D\n\014PNetFilelist\022\"\n\007netFile\030\001 \003(\0132" +
-      "\021.bbproto.PNetFile\022\020\n\010DiskSize\030\002 \001(\005\"1\n\t" +
-      "PCategory\022\020\n\010category\030\001 \001(\005\022\022\n\ncategoryN" +
-      "m\030\002 \001(\t\"7\n\020PLabelStatusList\022#\n\004list\030\001 \003(" +
-      "\0132\025.bbproto.PLabelStatus\"F\n\014PLabelStatus" +
-      "\022$\n\010category\030\001 \001(\0132\022.bbproto.PCategory\022\020" +
-      "\n\010hasVideo\030\002 \001(\010B\'\n\026com.blemobi.sep.prob" +
-      "ufB\rNetdiskProtosb\006proto3"
+      "ddenList\030$ \001(\t\"1\n\nPBlacklist\022\014\n\004uuid\030\002 \001" +
+      "(\t\022\025\n\rblackUuidList\030\003 \001(\t\"D\n\014PNetFilelis",
+      "t\022\"\n\007netFile\030\001 \003(\0132\021.bbproto.PNetFile\022\020\n" +
+      "\010DiskSize\030\002 \001(\005\"1\n\tPCategory\022\020\n\010category" +
+      "\030\001 \001(\005\022\022\n\ncategoryNm\030\002 \001(\t\"7\n\020PLabelStat" +
+      "usList\022#\n\004list\030\001 \003(\0132\025.bbproto.PLabelSta" +
+      "tus\"F\n\014PLabelStatus\022$\n\010category\030\001 \001(\0132\022." +
+      "bbproto.PCategory\022\020\n\010hasVideo\030\002 \001(\010B\'\n\026c" +
+      "om.blemobi.sep.probufB\rNetdiskProtosb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8446,7 +8277,7 @@ public final class NetdiskProtos {
     internal_static_bbproto_PBlacklist_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PBlacklist_descriptor,
-        new String[] { "CommunityId", "Uuid", "BlackUuidList", });
+        new String[] { "Uuid", "BlackUuidList", });
     internal_static_bbproto_PNetFilelist_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_bbproto_PNetFilelist_fieldAccessorTable = new
