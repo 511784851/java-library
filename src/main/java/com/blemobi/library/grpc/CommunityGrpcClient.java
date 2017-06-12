@@ -2,6 +2,7 @@ package com.blemobi.library.grpc;
 
 import com.blemobi.sep.grpc.IGrpcCommunityGrpc;
 import com.blemobi.sep.grpc.IGrpcCommunityGrpc.IGrpcCommunityBlockingStub;
+import com.blemobi.sep.probuf.CommunityProtos;
 import com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList;
 import com.blemobi.sep.probuf.ResultProtos.PStringList;
 import com.blemobi.sep.probuf.ResultProtos.PStringSingle;
@@ -52,5 +53,17 @@ public class CommunityGrpcClient extends BaseGRPCClient {
 			}
 		});
 		return list;
+	}
+
+	public int getUsrAndCommunityMembership(String uuid, Integer communityId){
+		PStringList req = PStringList.newBuilder().addList(communityId + "").addList(uuid).build();
+		CommunityProtos.PCommunityManagerRightList list = this.execute(req, new GrpcCallback<CommunityProtos.PCommunityManagerRightList>() {
+			@Override
+			public CommunityProtos.PCommunityManagerRightList doGrpcRequest() {
+				IGrpcCommunityBlockingStub stub = IGrpcCommunityGrpc.newBlockingStub(channel);
+				return stub.getCommunityRightWithCommunityID(req);
+			}
+		});
+		return list.getList(0).getMembership();
 	}
 }
