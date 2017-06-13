@@ -31,6 +31,14 @@ public final class DateUtils {
         SimpleDateFormat sdf = new SimpleDateFormat("YYYYMMdd");
         return sdf.format(new Date());
     }
+    public static String getDate19(){
+        return getDate19(new Date());
+    }
+
+    public static String getDate19(Date date){
+        SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
+        return sdf.format(date);
+    }
 
     public static Long getTime(String date){
         SimpleDateFormat sdf = new SimpleDateFormat("YYYYMMdd HH:mm:ss");
