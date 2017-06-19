@@ -5597,7 +5597,7 @@ public final class MallProtos {
      * <code>optional int32 exchangeCommunityId = 14;</code>
      *
      * <pre>
-     *兑换条件社区ID限制、没有社区限制时填写0
+     *兑换条件社区ID限制、没有社区限制时填写0、无限制-1
      * </pre>
      */
     int getExchangeCommunityId();
@@ -5731,6 +5731,24 @@ public final class MallProtos {
      */
     com.google.protobuf.ByteString
         getGoodsNOBytes();
+
+    /**
+     * <code>optional string exchangeCommunityNm = 25;</code>
+     *
+     * <pre>
+     *限制兑换的社区名称（无限制、任何社区都为空）
+     * </pre>
+     */
+    String getExchangeCommunityNm();
+    /**
+     * <code>optional string exchangeCommunityNm = 25;</code>
+     *
+     * <pre>
+     *限制兑换的社区名称（无限制、任何社区都为空）
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getExchangeCommunityNmBytes();
   }
   /**
    * Protobuf type {@code bbproto.PGoodsInf}
@@ -5764,6 +5782,7 @@ public final class MallProtos {
       crtTm_ = 0L;
       serialNO_ = 0;
       goodsNO_ = "";
+      exchangeCommunityNm_ = "";
     }
 
     @Override
@@ -5934,6 +5953,12 @@ public final class MallProtos {
               String s = input.readStringRequireUtf8();
 
               goodsNO_ = s;
+              break;
+            }
+            case 202: {
+              String s = input.readStringRequireUtf8();
+
+              exchangeCommunityNm_ = s;
               break;
             }
           }
@@ -6253,7 +6278,7 @@ public final class MallProtos {
      * <code>optional int32 exchangeCommunityId = 14;</code>
      *
      * <pre>
-     *兑换条件社区ID限制、没有社区限制时填写0
+     *兑换条件社区ID限制、没有社区限制时填写0、无限制-1
      * </pre>
      */
     public int getExchangeCommunityId() {
@@ -6460,6 +6485,48 @@ public final class MallProtos {
       }
     }
 
+    public static final int EXCHANGECOMMUNITYNM_FIELD_NUMBER = 25;
+    private volatile Object exchangeCommunityNm_;
+    /**
+     * <code>optional string exchangeCommunityNm = 25;</code>
+     *
+     * <pre>
+     *限制兑换的社区名称（无限制、任何社区都为空）
+     * </pre>
+     */
+    public String getExchangeCommunityNm() {
+      Object ref = exchangeCommunityNm_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        exchangeCommunityNm_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string exchangeCommunityNm = 25;</code>
+     *
+     * <pre>
+     *限制兑换的社区名称（无限制、任何社区都为空）
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getExchangeCommunityNmBytes() {
+      Object ref = exchangeCommunityNm_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (String) ref);
+        exchangeCommunityNm_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -6540,6 +6607,9 @@ public final class MallProtos {
       }
       if (!getGoodsNOBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessage.writeString(output, 23, goodsNO_);
+      }
+      if (!getExchangeCommunityNmBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 25, exchangeCommunityNm_);
       }
     }
 
@@ -6635,6 +6705,9 @@ public final class MallProtos {
       }
       if (!getGoodsNOBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(23, goodsNO_);
+      }
+      if (!getExchangeCommunityNmBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(25, exchangeCommunityNm_);
       }
       memoizedSize = size;
       return size;
@@ -6805,6 +6878,8 @@ public final class MallProtos {
 
         goodsNO_ = "";
 
+        exchangeCommunityNm_ = "";
+
         return this;
       }
 
@@ -6862,6 +6937,7 @@ public final class MallProtos {
         result.crtTm_ = crtTm_;
         result.serialNO_ = serialNO_;
         result.goodsNO_ = goodsNO_;
+        result.exchangeCommunityNm_ = exchangeCommunityNm_;
         onBuilt();
         return result;
       }
@@ -6948,6 +7024,10 @@ public final class MallProtos {
         }
         if (!other.getGoodsNO().isEmpty()) {
           goodsNO_ = other.goodsNO_;
+          onChanged();
+        }
+        if (!other.getExchangeCommunityNm().isEmpty()) {
+          exchangeCommunityNm_ = other.exchangeCommunityNm_;
           onChanged();
         }
         onChanged();
@@ -7769,7 +7849,7 @@ public final class MallProtos {
        * <code>optional int32 exchangeCommunityId = 14;</code>
        *
        * <pre>
-       *兑换条件社区ID限制、没有社区限制时填写0
+       *兑换条件社区ID限制、没有社区限制时填写0、无限制-1
        * </pre>
        */
       public int getExchangeCommunityId() {
@@ -7779,7 +7859,7 @@ public final class MallProtos {
        * <code>optional int32 exchangeCommunityId = 14;</code>
        *
        * <pre>
-       *兑换条件社区ID限制、没有社区限制时填写0
+       *兑换条件社区ID限制、没有社区限制时填写0、无限制-1
        * </pre>
        */
       public Builder setExchangeCommunityId(int value) {
@@ -7792,7 +7872,7 @@ public final class MallProtos {
        * <code>optional int32 exchangeCommunityId = 14;</code>
        *
        * <pre>
-       *兑换条件社区ID限制、没有社区限制时填写0
+       *兑换条件社区ID限制、没有社区限制时填写0、无限制-1
        * </pre>
        */
       public Builder clearExchangeCommunityId() {
@@ -8453,6 +8533,95 @@ public final class MallProtos {
   checkByteStringIsUtf8(value);
         
         goodsNO_ = value;
+        onChanged();
+        return this;
+      }
+
+      private Object exchangeCommunityNm_ = "";
+      /**
+       * <code>optional string exchangeCommunityNm = 25;</code>
+       *
+       * <pre>
+       *限制兑换的社区名称（无限制、任何社区都为空）
+       * </pre>
+       */
+      public String getExchangeCommunityNm() {
+        Object ref = exchangeCommunityNm_;
+        if (!(ref instanceof String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
+          exchangeCommunityNm_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      /**
+       * <code>optional string exchangeCommunityNm = 25;</code>
+       *
+       * <pre>
+       *限制兑换的社区名称（无限制、任何社区都为空）
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getExchangeCommunityNmBytes() {
+        Object ref = exchangeCommunityNm_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
+          exchangeCommunityNm_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string exchangeCommunityNm = 25;</code>
+       *
+       * <pre>
+       *限制兑换的社区名称（无限制、任何社区都为空）
+       * </pre>
+       */
+      public Builder setExchangeCommunityNm(
+          String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        exchangeCommunityNm_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string exchangeCommunityNm = 25;</code>
+       *
+       * <pre>
+       *限制兑换的社区名称（无限制、任何社区都为空）
+       * </pre>
+       */
+      public Builder clearExchangeCommunityNm() {
+        
+        exchangeCommunityNm_ = getDefaultInstance().getExchangeCommunityNm();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string exchangeCommunityNm = 25;</code>
+       *
+       * <pre>
+       *限制兑换的社区名称（无限制、任何社区都为空）
+       * </pre>
+       */
+      public Builder setExchangeCommunityNmBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        exchangeCommunityNm_ = value;
         onChanged();
         return this;
       }
@@ -12032,7 +12201,7 @@ public final class MallProtos {
       " \001(\003\"&\n\tPContacts\022\n\n\002qq\030\001 \001(\t\022\r\n\005email\030\002",
       " \001(\t\".\n\nPGoodsList\022 \n\004list\030\001 \003(\0132\022.bbpro" +
       "to.PGoodsInf\".\n\nPOrderList\022 \n\004list\030\001 \003(\013" +
-      "2\022.bbproto.POrderInf\"\222\004\n\tPGoodsInf\022\n\n\002id" +
+      "2\022.bbproto.POrderInf\"\257\004\n\tPGoodsInf\022\n\n\002id" +
       "\030\001 \001(\005\022)\n\010category\030\002 \001(\0162\027.bbproto.PGood" +
       "sCategory\022\n\n\002nm\030\003 \001(\t\022\r\n\005price\030\004 \001(\005\022\032\n\003" +
       "pic\030\005 \001(\0132\r.bbproto.POss\022\020\n\010describe\030\006 \001" +
@@ -12045,24 +12214,24 @@ public final class MallProtos {
       ".bbproto.PTag\022(\n\nsaleStatus\030\022 \001(\0162\024.bbpr" +
       "oto.PSaleStatus\022\036\n\005onoff\030\023 \001(\0132\017.bbproto" +
       ".POnOff\022\016\n\006status\030\024 \001(\005\022\r\n\005crtTm\030\025 \001(\003\022\020" +
-      "\n\010serialNO\030\026 \001(\005\022\017\n\007goodsNO\030\027 \001(\t\"S\n\010PAd" +
-      "drInf\022\017\n\007contact\030\001 \001(\t\022\014\n\004addr\030\002 \001(\t\022\r\n\005" +
-      "email\030\003 \001(\t\022\n\n\002qq\030\004 \001(\t\022\r\n\005phone\030\005 \001(\t\"\243" +
-      "\002\n\tPOrderInf\022\n\n\002id\030\001 \001(\t\022$\n\010goodsInf\030\002 \001" +
-      "(\0132\022.bbproto.PGoodsInf\022\r\n\005count\030\004 \001(\005\022\"\n",
-      "\007addrInf\030\005 \001(\0132\021.bbproto.PAddrInf\022\016\n\006rem" +
-      "ark\030\006 \001(\t\022\016\n\006status\030\007 \001(\005\022\017\n\007express\030\010 \001" +
-      "(\t\022!\n\005buyer\030\t \001(\0132\022.bbproto.PUserBase\022\014\n" +
-      "\004bbNO\030\n \001(\t\022\020\n\010opRemark\030\013 \001(\t\022\014\n\004opTm\030\014 " +
-      "\001(\003\022 \n\004opor\030\r \001(\0132\022.bbproto.PUserBase\022\r\n" +
-      "\005crtTm\030\016 \001(\003*3\n\004PTag\022\013\n\007ROUTINE\020\000\022\013\n\007LIM" +
-      "ITED\020\001\022\021\n\rSPECIAL_OFFER\020\002*\'\n\016PGoodsCateg" +
-      "ory\022\010\n\004REAL\020\000\022\013\n\007VIRTUAL\020\001*)\n\nPLimitType" +
-      "\022\010\n\004NONE\020\000\022\007\n\003DAY\020\001\022\010\n\004WEEK\020\002*.\n\013PSaleSt" +
-      "atus\022\010\n\004INIT\020\000\022\010\n\004SALE\020\001\022\013\n\007OFFSALE\020\002*&\n",
-      "\nPOnOffType\022\010\n\004AUTO\020\000\022\016\n\nTIME_RANGE\020\001B$\n" +
-      "\026com.blemobi.sep.probufB\nMallProtosb\006pro" +
-      "to3"
+      "\n\010serialNO\030\026 \001(\005\022\017\n\007goodsNO\030\027 \001(\t\022\033\n\023exc" +
+      "hangeCommunityNm\030\031 \001(\t\"S\n\010PAddrInf\022\017\n\007co" +
+      "ntact\030\001 \001(\t\022\014\n\004addr\030\002 \001(\t\022\r\n\005email\030\003 \001(\t" +
+      "\022\n\n\002qq\030\004 \001(\t\022\r\n\005phone\030\005 \001(\t\"\243\002\n\tPOrderIn" +
+      "f\022\n\n\002id\030\001 \001(\t\022$\n\010goodsInf\030\002 \001(\0132\022.bbprot",
+      "o.PGoodsInf\022\r\n\005count\030\004 \001(\005\022\"\n\007addrInf\030\005 " +
+      "\001(\0132\021.bbproto.PAddrInf\022\016\n\006remark\030\006 \001(\t\022\016" +
+      "\n\006status\030\007 \001(\005\022\017\n\007express\030\010 \001(\t\022!\n\005buyer" +
+      "\030\t \001(\0132\022.bbproto.PUserBase\022\014\n\004bbNO\030\n \001(\t" +
+      "\022\020\n\010opRemark\030\013 \001(\t\022\014\n\004opTm\030\014 \001(\003\022 \n\004opor" +
+      "\030\r \001(\0132\022.bbproto.PUserBase\022\r\n\005crtTm\030\016 \001(" +
+      "\003*3\n\004PTag\022\013\n\007ROUTINE\020\000\022\013\n\007LIMITED\020\001\022\021\n\rS" +
+      "PECIAL_OFFER\020\002*\'\n\016PGoodsCategory\022\010\n\004REAL" +
+      "\020\000\022\013\n\007VIRTUAL\020\001*)\n\nPLimitType\022\010\n\004NONE\020\000\022" +
+      "\007\n\003DAY\020\001\022\010\n\004WEEK\020\002*.\n\013PSaleStatus\022\010\n\004INI",
+      "T\020\000\022\010\n\004SALE\020\001\022\013\n\007OFFSALE\020\002*&\n\nPOnOffType" +
+      "\022\010\n\004AUTO\020\000\022\016\n\nTIME_RANGE\020\001B$\n\026com.blemob" +
+      "i.sep.probufB\nMallProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12130,7 +12299,7 @@ public final class MallProtos {
     internal_static_bbproto_PGoodsInf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PGoodsInf_descriptor,
-        new String[] { "Id", "Category", "Nm", "Price", "Pic", "Describe", "OtherDescribe", "TotStock", "TotSaled", "TotRemain", "TodayStock", "TodaySaled", "TodayRemain", "ExchangeCommunityId", "Limit", "ExchangeLevel", "Tag", "SaleStatus", "Onoff", "Status", "CrtTm", "SerialNO", "GoodsNO", });
+        new String[] { "Id", "Category", "Nm", "Price", "Pic", "Describe", "OtherDescribe", "TotStock", "TotSaled", "TotRemain", "TodayStock", "TodaySaled", "TodayRemain", "ExchangeCommunityId", "Limit", "ExchangeLevel", "Tag", "SaleStatus", "Onoff", "Status", "CrtTm", "SerialNO", "GoodsNO", "ExchangeCommunityNm", });
     internal_static_bbproto_PAddrInf_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_bbproto_PAddrInf_fieldAccessorTable = new
