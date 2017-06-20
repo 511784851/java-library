@@ -16,7 +16,6 @@ public class TaskGrpcClient extends BaseGRPCClient {
     }
 
     public void exchangeGoods(int gold, String ordId, String uuid){
-
         TaskApiProtos.PGoldExchg param = TaskApiProtos.PGoldExchg.newBuilder().setGold(gold).setOrderNo(ordId).setUuid(uuid)
                 .build();
         this.execute(param, new GrpcCallback<ResultProtos.PResult>() {
@@ -26,6 +25,21 @@ public class TaskGrpcClient extends BaseGRPCClient {
                 return stub.exchg(param);
             }
         });
+    }
+
+    public Integer getGold(String uuid){
+        ResultProtos.PStringList param = ResultProtos.PStringList.newBuilder().addList(uuid).build();
+        ResultProtos.PInt32List list = this.execute(param, new GrpcCallback<ResultProtos.PInt32List>() {
+            @Override
+            public ResultProtos.PInt32List doGrpcRequest() {
+                stub = TaskServiceGrpc.newBlockingStub(channel);
+                return stub.getUserGold(param);
+            }
+        });
+        if(list != null && list.getListList() != null && !list.getListList().isEmpty()){
+            return list.getList(0);
+        }
+        return 0;
     }
 }
 
