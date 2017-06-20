@@ -5749,6 +5749,24 @@ public final class MallProtos {
      */
     com.google.protobuf.ByteString
         getExchangeCommunityNmBytes();
+
+    /**
+     * <code>optional string shareLink = 26;</code>
+     *
+     * <pre>
+     *分享链接
+     * </pre>
+     */
+    String getShareLink();
+    /**
+     * <code>optional string shareLink = 26;</code>
+     *
+     * <pre>
+     *分享链接
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getShareLinkBytes();
   }
   /**
    * Protobuf type {@code bbproto.PGoodsInf}
@@ -5783,6 +5801,7 @@ public final class MallProtos {
       serialNO_ = 0;
       goodsNO_ = "";
       exchangeCommunityNm_ = "";
+      shareLink_ = "";
     }
 
     @Override
@@ -5959,6 +5978,12 @@ public final class MallProtos {
               String s = input.readStringRequireUtf8();
 
               exchangeCommunityNm_ = s;
+              break;
+            }
+            case 210: {
+              String s = input.readStringRequireUtf8();
+
+              shareLink_ = s;
               break;
             }
           }
@@ -6527,6 +6552,48 @@ public final class MallProtos {
       }
     }
 
+    public static final int SHARELINK_FIELD_NUMBER = 26;
+    private volatile Object shareLink_;
+    /**
+     * <code>optional string shareLink = 26;</code>
+     *
+     * <pre>
+     *分享链接
+     * </pre>
+     */
+    public String getShareLink() {
+      Object ref = shareLink_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        shareLink_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string shareLink = 26;</code>
+     *
+     * <pre>
+     *分享链接
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getShareLinkBytes() {
+      Object ref = shareLink_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (String) ref);
+        shareLink_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -6610,6 +6677,9 @@ public final class MallProtos {
       }
       if (!getExchangeCommunityNmBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessage.writeString(output, 25, exchangeCommunityNm_);
+      }
+      if (!getShareLinkBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 26, shareLink_);
       }
     }
 
@@ -6708,6 +6778,9 @@ public final class MallProtos {
       }
       if (!getExchangeCommunityNmBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(25, exchangeCommunityNm_);
+      }
+      if (!getShareLinkBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(26, shareLink_);
       }
       memoizedSize = size;
       return size;
@@ -6880,6 +6953,8 @@ public final class MallProtos {
 
         exchangeCommunityNm_ = "";
 
+        shareLink_ = "";
+
         return this;
       }
 
@@ -6938,6 +7013,7 @@ public final class MallProtos {
         result.serialNO_ = serialNO_;
         result.goodsNO_ = goodsNO_;
         result.exchangeCommunityNm_ = exchangeCommunityNm_;
+        result.shareLink_ = shareLink_;
         onBuilt();
         return result;
       }
@@ -7028,6 +7104,10 @@ public final class MallProtos {
         }
         if (!other.getExchangeCommunityNm().isEmpty()) {
           exchangeCommunityNm_ = other.exchangeCommunityNm_;
+          onChanged();
+        }
+        if (!other.getShareLink().isEmpty()) {
+          shareLink_ = other.shareLink_;
           onChanged();
         }
         onChanged();
@@ -8622,6 +8702,95 @@ public final class MallProtos {
   checkByteStringIsUtf8(value);
         
         exchangeCommunityNm_ = value;
+        onChanged();
+        return this;
+      }
+
+      private Object shareLink_ = "";
+      /**
+       * <code>optional string shareLink = 26;</code>
+       *
+       * <pre>
+       *分享链接
+       * </pre>
+       */
+      public String getShareLink() {
+        Object ref = shareLink_;
+        if (!(ref instanceof String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
+          shareLink_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      /**
+       * <code>optional string shareLink = 26;</code>
+       *
+       * <pre>
+       *分享链接
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getShareLinkBytes() {
+        Object ref = shareLink_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
+          shareLink_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string shareLink = 26;</code>
+       *
+       * <pre>
+       *分享链接
+       * </pre>
+       */
+      public Builder setShareLink(
+          String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        shareLink_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string shareLink = 26;</code>
+       *
+       * <pre>
+       *分享链接
+       * </pre>
+       */
+      public Builder clearShareLink() {
+        
+        shareLink_ = getDefaultInstance().getShareLink();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string shareLink = 26;</code>
+       *
+       * <pre>
+       *分享链接
+       * </pre>
+       */
+      public Builder setShareLinkBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        shareLink_ = value;
         onChanged();
         return this;
       }
@@ -12201,7 +12370,7 @@ public final class MallProtos {
       " \001(\003\"&\n\tPContacts\022\n\n\002qq\030\001 \001(\t\022\r\n\005email\030\002",
       " \001(\t\".\n\nPGoodsList\022 \n\004list\030\001 \003(\0132\022.bbpro" +
       "to.PGoodsInf\".\n\nPOrderList\022 \n\004list\030\001 \003(\013" +
-      "2\022.bbproto.POrderInf\"\257\004\n\tPGoodsInf\022\n\n\002id" +
+      "2\022.bbproto.POrderInf\"\302\004\n\tPGoodsInf\022\n\n\002id" +
       "\030\001 \001(\005\022)\n\010category\030\002 \001(\0162\027.bbproto.PGood" +
       "sCategory\022\n\n\002nm\030\003 \001(\t\022\r\n\005price\030\004 \001(\005\022\032\n\003" +
       "pic\030\005 \001(\0132\r.bbproto.POss\022\020\n\010describe\030\006 \001" +
@@ -12215,23 +12384,24 @@ public final class MallProtos {
       "oto.PSaleStatus\022\036\n\005onoff\030\023 \001(\0132\017.bbproto" +
       ".POnOff\022\016\n\006status\030\024 \001(\005\022\r\n\005crtTm\030\025 \001(\003\022\020" +
       "\n\010serialNO\030\026 \001(\005\022\017\n\007goodsNO\030\027 \001(\t\022\033\n\023exc" +
-      "hangeCommunityNm\030\031 \001(\t\"S\n\010PAddrInf\022\017\n\007co" +
-      "ntact\030\001 \001(\t\022\014\n\004addr\030\002 \001(\t\022\r\n\005email\030\003 \001(\t" +
-      "\022\n\n\002qq\030\004 \001(\t\022\r\n\005phone\030\005 \001(\t\"\243\002\n\tPOrderIn" +
-      "f\022\n\n\002id\030\001 \001(\t\022$\n\010goodsInf\030\002 \001(\0132\022.bbprot",
-      "o.PGoodsInf\022\r\n\005count\030\004 \001(\005\022\"\n\007addrInf\030\005 " +
-      "\001(\0132\021.bbproto.PAddrInf\022\016\n\006remark\030\006 \001(\t\022\016" +
-      "\n\006status\030\007 \001(\005\022\017\n\007express\030\010 \001(\t\022!\n\005buyer" +
-      "\030\t \001(\0132\022.bbproto.PUserBase\022\014\n\004bbNO\030\n \001(\t" +
-      "\022\020\n\010opRemark\030\013 \001(\t\022\014\n\004opTm\030\014 \001(\003\022 \n\004opor" +
-      "\030\r \001(\0132\022.bbproto.PUserBase\022\r\n\005crtTm\030\016 \001(" +
-      "\003*3\n\004PTag\022\013\n\007ROUTINE\020\000\022\013\n\007LIMITED\020\001\022\021\n\rS" +
-      "PECIAL_OFFER\020\002*\'\n\016PGoodsCategory\022\010\n\004REAL" +
-      "\020\000\022\013\n\007VIRTUAL\020\001*)\n\nPLimitType\022\010\n\004NONE\020\000\022" +
-      "\007\n\003DAY\020\001\022\010\n\004WEEK\020\002*.\n\013PSaleStatus\022\010\n\004INI",
-      "T\020\000\022\010\n\004SALE\020\001\022\013\n\007OFFSALE\020\002*&\n\nPOnOffType" +
-      "\022\010\n\004AUTO\020\000\022\016\n\nTIME_RANGE\020\001B$\n\026com.blemob" +
-      "i.sep.probufB\nMallProtosb\006proto3"
+      "hangeCommunityNm\030\031 \001(\t\022\021\n\tshareLink\030\032 \001(" +
+      "\t\"S\n\010PAddrInf\022\017\n\007contact\030\001 \001(\t\022\014\n\004addr\030\002" +
+      " \001(\t\022\r\n\005email\030\003 \001(\t\022\n\n\002qq\030\004 \001(\t\022\r\n\005phone" +
+      "\030\005 \001(\t\"\243\002\n\tPOrderInf\022\n\n\002id\030\001 \001(\t\022$\n\010good",
+      "sInf\030\002 \001(\0132\022.bbproto.PGoodsInf\022\r\n\005count\030" +
+      "\004 \001(\005\022\"\n\007addrInf\030\005 \001(\0132\021.bbproto.PAddrIn" +
+      "f\022\016\n\006remark\030\006 \001(\t\022\016\n\006status\030\007 \001(\005\022\017\n\007exp" +
+      "ress\030\010 \001(\t\022!\n\005buyer\030\t \001(\0132\022.bbproto.PUse" +
+      "rBase\022\014\n\004bbNO\030\n \001(\t\022\020\n\010opRemark\030\013 \001(\t\022\014\n" +
+      "\004opTm\030\014 \001(\003\022 \n\004opor\030\r \001(\0132\022.bbproto.PUse" +
+      "rBase\022\r\n\005crtTm\030\016 \001(\003*3\n\004PTag\022\013\n\007ROUTINE\020" +
+      "\000\022\013\n\007LIMITED\020\001\022\021\n\rSPECIAL_OFFER\020\002*\'\n\016PGo" +
+      "odsCategory\022\010\n\004REAL\020\000\022\013\n\007VIRTUAL\020\001*)\n\nPL" +
+      "imitType\022\010\n\004NONE\020\000\022\007\n\003DAY\020\001\022\010\n\004WEEK\020\002*.\n",
+      "\013PSaleStatus\022\010\n\004INIT\020\000\022\010\n\004SALE\020\001\022\013\n\007OFFS" +
+      "ALE\020\002*&\n\nPOnOffType\022\010\n\004AUTO\020\000\022\016\n\nTIME_RA" +
+      "NGE\020\001B$\n\026com.blemobi.sep.probufB\nMallPro" +
+      "tosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12299,7 +12469,7 @@ public final class MallProtos {
     internal_static_bbproto_PGoodsInf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PGoodsInf_descriptor,
-        new String[] { "Id", "Category", "Nm", "Price", "Pic", "Describe", "OtherDescribe", "TotStock", "TotSaled", "TotRemain", "TodayStock", "TodaySaled", "TodayRemain", "ExchangeCommunityId", "Limit", "ExchangeLevel", "Tag", "SaleStatus", "Onoff", "Status", "CrtTm", "SerialNO", "GoodsNO", "ExchangeCommunityNm", });
+        new String[] { "Id", "Category", "Nm", "Price", "Pic", "Describe", "OtherDescribe", "TotStock", "TotSaled", "TotRemain", "TodayStock", "TodaySaled", "TodayRemain", "ExchangeCommunityId", "Limit", "ExchangeLevel", "Tag", "SaleStatus", "Onoff", "Status", "CrtTm", "SerialNO", "GoodsNO", "ExchangeCommunityNm", "ShareLink", });
     internal_static_bbproto_PAddrInf_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_bbproto_PAddrInf_fieldAccessorTable = new
