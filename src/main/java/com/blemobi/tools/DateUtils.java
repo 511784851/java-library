@@ -47,6 +47,11 @@ public final class DateUtils {
         return sdf.format(date);
     }
 
+    public static String getDate17(Date date){
+        SimpleDateFormat sdf = new SimpleDateFormat("YYYY/MM/dd HH:mm");
+        return sdf.format(date);
+    }
+
     public static Long getTime(String date){
         SimpleDateFormat sdf = new SimpleDateFormat("YYYYMMdd HH:mm:ss");
         try {
