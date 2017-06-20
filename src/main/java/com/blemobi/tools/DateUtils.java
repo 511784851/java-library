@@ -12,6 +12,13 @@ import java.util.GregorianCalendar;
  * Date: 2017/6/9 11:25
  */
 public final class DateUtils {
+    private static final long _MIN = 1000 * 60;
+    public static long getNowMins(){
+        return getMins(System.currentTimeMillis());
+    }
+    public static long getMins(long time){
+        return time / _MIN * _MIN;
+    }
     public static String getYYMM(){
         SimpleDateFormat sdf = new SimpleDateFormat("YYMM");
         return sdf.format(new Date());

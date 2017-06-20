@@ -3,6 +3,7 @@ package com.blemobi.sep.grpc;
 import com.blemobi.sep.probuf.CommonApiProtos;
 import com.blemobi.sep.probuf.NetdiskApiProtos;
 import com.blemobi.sep.probuf.ResultProtos;
+import com.blemobi.sep.probuf.TaskApiProtos;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 import static io.grpc.stub.ClientCalls.asyncUnaryCall;
@@ -41,6 +42,15 @@ public class NetDiskServiceGrpc {
               "bbproto.NetDiskService", "opVideo"),
           io.grpc.protobuf.ProtoUtils.marshaller(NetdiskApiProtos.POPFileParam.getDefaultInstance()),
           io.grpc.protobuf.ProtoUtils.marshaller(CommonApiProtos.PEmpty.getDefaultInstance()));
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<TaskApiProtos.PTaskMsgs,
+      ResultProtos.PInt32List> METHOD_CHECK_MSG_IDS =
+      io.grpc.MethodDescriptor.create(
+          io.grpc.MethodDescriptor.MethodType.UNARY,
+          generateFullMethodName(
+              "bbproto.NetDiskService", "checkMsgIds"),
+          io.grpc.protobuf.ProtoUtils.marshaller(TaskApiProtos.PTaskMsgs.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(ResultProtos.PInt32List.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static final io.grpc.MethodDescriptor<ResultProtos.PStringSingle,
       ResultProtos.PBoolSingle> METHOD_IS_EXISTS_VIDEO =
@@ -128,6 +138,13 @@ public class NetDiskServiceGrpc {
     }
 
     /**
+     */
+    public void checkMsgIds(TaskApiProtos.PTaskMsgs request,
+        io.grpc.stub.StreamObserver<ResultProtos.PInt32List> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_CHECK_MSG_IDS, responseObserver);
+    }
+
+    /**
      * <pre>
      *&#64;note 查询社区中是否存在视频
      *&#64;param PStringSingle communityId
@@ -188,6 +205,13 @@ public class NetDiskServiceGrpc {
                 NetdiskApiProtos.POPFileParam,
                 CommonApiProtos.PEmpty>(
                   this, METHODID_OP_VIDEO)))
+          .addMethod(
+            METHOD_CHECK_MSG_IDS,
+            asyncUnaryCall(
+              new MethodHandlers<
+                TaskApiProtos.PTaskMsgs,
+                ResultProtos.PInt32List>(
+                  this, METHODID_CHECK_MSG_IDS)))
           .addMethod(
             METHOD_IS_EXISTS_VIDEO,
             asyncUnaryCall(
@@ -260,6 +284,14 @@ public class NetDiskServiceGrpc {
         io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_OP_VIDEO, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void checkMsgIds(TaskApiProtos.PTaskMsgs request,
+        io.grpc.stub.StreamObserver<ResultProtos.PInt32List> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_CHECK_MSG_IDS, getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -353,6 +385,13 @@ public class NetDiskServiceGrpc {
     }
 
     /**
+     */
+    public ResultProtos.PInt32List checkMsgIds(TaskApiProtos.PTaskMsgs request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_CHECK_MSG_IDS, getCallOptions(), request);
+    }
+
+    /**
      * <pre>
      *&#64;note 查询社区中是否存在视频
      *&#64;param PStringSingle communityId
@@ -441,6 +480,14 @@ public class NetDiskServiceGrpc {
     }
 
     /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ResultProtos.PInt32List> checkMsgIds(
+        TaskApiProtos.PTaskMsgs request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_CHECK_MSG_IDS, getCallOptions()), request);
+    }
+
+    /**
      * <pre>
      *&#64;note 查询社区中是否存在视频
      *&#64;param PStringSingle communityId
@@ -492,10 +539,11 @@ public class NetDiskServiceGrpc {
 
   private static final int METHODID_SET_VIDEO_STATUS_BY_POST_ID = 0;
   private static final int METHODID_OP_VIDEO = 1;
-  private static final int METHODID_IS_EXISTS_VIDEO = 2;
-  private static final int METHODID_TIPOFF_VIDEO_BY_POST = 3;
-  private static final int METHODID_TIPOFF_VIDEO_BY_OBJECTKEY = 4;
-  private static final int METHODID_HIDDEN_VIDEO = 5;
+  private static final int METHODID_CHECK_MSG_IDS = 2;
+  private static final int METHODID_IS_EXISTS_VIDEO = 3;
+  private static final int METHODID_TIPOFF_VIDEO_BY_POST = 4;
+  private static final int METHODID_TIPOFF_VIDEO_BY_OBJECTKEY = 5;
+  private static final int METHODID_HIDDEN_VIDEO = 6;
 
   private static class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -521,6 +569,10 @@ public class NetDiskServiceGrpc {
         case METHODID_OP_VIDEO:
           serviceImpl.opVideo((NetdiskApiProtos.POPFileParam) request,
               (io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty>) responseObserver);
+          break;
+        case METHODID_CHECK_MSG_IDS:
+          serviceImpl.checkMsgIds((TaskApiProtos.PTaskMsgs) request,
+              (io.grpc.stub.StreamObserver<ResultProtos.PInt32List>) responseObserver);
           break;
         case METHODID_IS_EXISTS_VIDEO:
           serviceImpl.isExistsVideo((ResultProtos.PStringSingle) request,
@@ -558,6 +610,7 @@ public class NetDiskServiceGrpc {
     return new io.grpc.ServiceDescriptor(SERVICE_NAME,
         METHOD_SET_VIDEO_STATUS_BY_POST_ID,
         METHOD_OP_VIDEO,
+        METHOD_CHECK_MSG_IDS,
         METHOD_IS_EXISTS_VIDEO,
         METHOD_TIPOFF_VIDEO_BY_POST,
         METHOD_TIPOFF_VIDEO_BY_OBJECTKEY,
