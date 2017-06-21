@@ -48,18 +48,20 @@ public final class GRPCServer {
     private static final List<BindableService> bsList = new ArrayList<BindableService>();
     private static Server server;
     private static Set<Class<?>> annotated = new HashSet<Class<?>>();
-
-    public static void start(String serverNm, ServerInterceptor... interceptors) {
-        String basePackage = PropsUtils.getString(GRPC_BASE_PKG);
+    
+    public static void start(String serverNm, Set<Class<?>> anno, ServerInterceptor... interceptors) {
+    	annotated = anno;
+        /*String basePackage = PropsUtils.getString(GRPC_BASE_PKG);
         if (!StringUtils.isEmpty(basePackage)) {
             Reflections reflections = new Reflections(basePackage);
             annotated = reflections.getTypesAnnotatedWith(GRPCService.class);
         } else {
             log.error("没有配置grpc服务基包 grpc.base.pkg");
             System.exit(0);
-        }
+        }*/
+    	
         if (annotated.isEmpty()) {
-            log.warn("在目录->" + basePackage + "没有找到GRPC服务");
+            log.warn("没有找到GRPC服务");
             return;
         }
         Integer port = Integer.parseInt(ConsulKVMgr.getValue((Constants.GRPC_KV_KEY.getGRPCPortKey(serverNm))));

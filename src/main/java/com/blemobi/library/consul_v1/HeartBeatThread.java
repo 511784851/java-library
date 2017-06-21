@@ -55,17 +55,16 @@ public class HeartBeatThread implements Runnable {
                 for (Constants.CONSUL_KV_DYNC dync : Constants.CONSUL_KV_DYNC.values()) {
                     String val = ConsulKVMgr.getValue(Constants.CONFIG_KV_KEY.getConfigKvKey(dync.val()));
                     if (values.containsKey(dync.val())) {
-                        if (!values.get(dync.val()).equals(val)) {
+                        if (!val.equals(values.get(dync.val()))) {
                             log.debug("KEY:[" + dync.val() + "] orgVal:[" + values.get(dync.val()) + "] newVal:[" + val
                                     + "]");
+                            notify(dync, val);
+                            values.put(dync.val(), val);
                         } else {
                             continue;
                         }
 
                     }
-                    notify(dync, val);
-                    values.put(dync.val(), val);
-                    
                 }
                 Thread.sleep(millis);
             }
