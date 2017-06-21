@@ -4,8 +4,10 @@ import com.blemobi.sep.grpc.IGrpcCommunityGrpc;
 import com.blemobi.sep.grpc.IGrpcCommunityGrpc.IGrpcCommunityBlockingStub;
 import com.blemobi.sep.probuf.CommunityProtos;
 import com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList;
+import com.blemobi.sep.probuf.ResultProtos.PInt32List;
 import com.blemobi.sep.probuf.ResultProtos.PStringList;
 import com.blemobi.sep.probuf.ResultProtos.PStringSingle;
+import com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs;
 
 /**
  * 只能机器人gRPC clint
@@ -65,5 +67,16 @@ public class CommunityGrpcClient extends BaseGRPCClient {
 			}
 		});
 		return list.getList(0).getMembership();
+	}
+	
+	public PInt32List checkMsgIds(PTaskMsgs request) {
+		PInt32List list = this.execute(request, new GrpcCallback<PInt32List>() {
+			@Override
+			public PInt32List doGrpcRequest() {
+				IGrpcCommunityBlockingStub stub = IGrpcCommunityGrpc.newBlockingStub(channel);
+				return stub.checkMsgIds(request);
+			}
+		});
+		return list;
 	}
 }

@@ -1,13 +1,19 @@
 package com.blemobi.sep.grpc;
 
-import com.blemobi.sep.probuf.*;
-
-import static io.grpc.MethodDescriptor.generateFullMethodName;
 import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
 import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
 import static io.grpc.stub.ClientCalls.futureUnaryCall;
+import static io.grpc.MethodDescriptor.generateFullMethodName;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 
 /**
  */
@@ -22,266 +28,275 @@ public class IGrpcCommunityGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<ResultProtos.PStringList,
-      ResultProtos.PBoolSingle> METHOD_GET_FORBID_FLAG =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringList,
+      com.blemobi.sep.probuf.ResultProtos.PBoolSingle> METHOD_GET_FORBID_FLAG =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "GetForbidFlag"),
-          io.grpc.protobuf.ProtoUtils.marshaller(ResultProtos.PStringList.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(ResultProtos.PBoolSingle.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringList.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PBoolSingle.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<ResultProtos.PStringList,
-      AccountProtos.PUserBaseCommunityList> METHOD_GET_FORBID_TIME_LIST =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringList,
+      com.blemobi.sep.probuf.AccountProtos.PUserBaseCommunityList> METHOD_GET_FORBID_TIME_LIST =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "GetForbidTimeList"),
-          io.grpc.protobuf.ProtoUtils.marshaller(ResultProtos.PStringList.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(AccountProtos.PUserBaseCommunityList.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringList.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.AccountProtos.PUserBaseCommunityList.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<ResultProtos.PStringSingle,
-      ResultProtos.PStringList> METHOD_GET_COMMUNITY_MEMBER_LIST =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringSingle,
+      com.blemobi.sep.probuf.ResultProtos.PStringList> METHOD_GET_COMMUNITY_MEMBER_LIST =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "GetCommunityMemberList"),
-          io.grpc.protobuf.ProtoUtils.marshaller(ResultProtos.PStringSingle.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(ResultProtos.PStringList.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringSingle.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringList.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<ResultProtos.PStringList,
-      CommunityProtos.PCommunityBaseList> METHOD_GET_COMMUNITY_BASE_LIST =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringList,
+      com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList> METHOD_GET_COMMUNITY_BASE_LIST =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "GetCommunityBaseList"),
-          io.grpc.protobuf.ProtoUtils.marshaller(ResultProtos.PStringList.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommunityProtos.PCommunityBaseList.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringList.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<ResultProtos.PStringList,
-      CommunityProtos.PCommunityBaseList> METHOD_GET_COMMUNITY_BASE_LIST_WITH_UUID =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringList,
+      com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList> METHOD_GET_COMMUNITY_BASE_LIST_WITH_UUID =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "GetCommunityBaseListWithUuid"),
-          io.grpc.protobuf.ProtoUtils.marshaller(ResultProtos.PStringList.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommunityProtos.PCommunityBaseList.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringList.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<ResultProtos.PStringSingle,
-      CommunityProtos.PCommunityBase> METHOD_GET_USER_COMMUNITY_BASE =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringSingle,
+      com.blemobi.sep.probuf.CommunityProtos.PCommunityBase> METHOD_GET_USER_COMMUNITY_BASE =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "GetUserCommunityBase"),
-          io.grpc.protobuf.ProtoUtils.marshaller(ResultProtos.PStringSingle.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommunityProtos.PCommunityBase.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringSingle.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommunityProtos.PCommunityBase.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<ResultProtos.PStringSingle,
-      ResultProtos.PStringList> METHOD_GET_FOLLOW_COMMUNITY_ID =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringSingle,
+      com.blemobi.sep.probuf.ResultProtos.PStringList> METHOD_GET_FOLLOW_COMMUNITY_ID =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "GetFollowCommunityID"),
-          io.grpc.protobuf.ProtoUtils.marshaller(ResultProtos.PStringSingle.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(ResultProtos.PStringList.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringSingle.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringList.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<ResultProtos.PStringSingle,
-      CommunityProtos.PCommunityBaseList> METHOD_GET_FOLLOW_COMMUNITY_BASE_LIST =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringSingle,
+      com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList> METHOD_GET_FOLLOW_COMMUNITY_BASE_LIST =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "GetFollowCommunityBaseList"),
-          io.grpc.protobuf.ProtoUtils.marshaller(ResultProtos.PStringSingle.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommunityProtos.PCommunityBaseList.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringSingle.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<CommunityProtos.PCommunitySort,
-      CommunityProtos.PCommunitySort> METHOD_ADD_COMMUNITY_SORT =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.CommunityProtos.PCommunitySort,
+      com.blemobi.sep.probuf.CommunityProtos.PCommunitySort> METHOD_ADD_COMMUNITY_SORT =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "AddCommunitySort"),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommunityProtos.PCommunitySort.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommunityProtos.PCommunitySort.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommunityProtos.PCommunitySort.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommunityProtos.PCommunitySort.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<CommunityProtos.PCommunitySort,
-      CommonApiProtos.PEmpty> METHOD_DEL_COMMUNITY_SORT =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.CommunityProtos.PCommunitySort,
+      com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_DEL_COMMUNITY_SORT =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "DelCommunitySort"),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommunityProtos.PCommunitySort.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommonApiProtos.PEmpty.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommunityProtos.PCommunitySort.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<CommunityProtos.PCommunitySort,
-      CommonApiProtos.PEmpty> METHOD_SET_COMMUNITY_SORT =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.CommunityProtos.PCommunitySort,
+      com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_SET_COMMUNITY_SORT =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "SetCommunitySort"),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommunityProtos.PCommunitySort.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommonApiProtos.PEmpty.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommunityProtos.PCommunitySort.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<CommonApiProtos.PEmpty,
-      CommunityProtos.PCommunitySortList> METHOD_GET_COMMUNITY_SORT =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.CommonApiProtos.PEmpty,
+      com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList> METHOD_GET_COMMUNITY_SORT =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "GetCommunitySort"),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommonApiProtos.PEmpty.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommunityProtos.PCommunitySortList.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<CommonApiProtos.PEmpty,
-      CommunityProtos.PCommunitySortList> METHOD_GET_RECOMMEND_COMMUNITY_SORT =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.CommonApiProtos.PEmpty,
+      com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList> METHOD_GET_RECOMMEND_COMMUNITY_SORT =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "GetRecommendCommunitySort"),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommonApiProtos.PEmpty.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommunityProtos.PCommunitySortList.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<CommunityProtos.PCommunitySort,
-      CommonApiProtos.PEmpty> METHOD_ADD_RECOMMEND_COMMUNITY_SORT =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.CommunityProtos.PCommunitySort,
+      com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_ADD_RECOMMEND_COMMUNITY_SORT =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "AddRecommendCommunitySort"),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommunityProtos.PCommunitySort.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommonApiProtos.PEmpty.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommunityProtos.PCommunitySort.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<CommunityProtos.PCommunitySortList,
-      CommonApiProtos.PEmpty> METHOD_SET_RECOMMEND_COMMUNITY_SORT =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList,
+      com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_SET_RECOMMEND_COMMUNITY_SORT =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "SetRecommendCommunitySort"),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommunityProtos.PCommunitySortList.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommonApiProtos.PEmpty.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<CommunityProtos.PCommunitySort,
-      CommonApiProtos.PEmpty> METHOD_DEL_RECOMMEND_COMMUNITY_SORT =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.CommunityProtos.PCommunitySort,
+      com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_DEL_RECOMMEND_COMMUNITY_SORT =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "DelRecommendCommunitySort"),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommunityProtos.PCommunitySort.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommonApiProtos.PEmpty.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommunityProtos.PCommunitySort.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<ResultProtos.PStringSingle,
-      CommunityProtos.PCommunitySortList> METHOD_GET_USER_COMMUNITY_SORT =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringSingle,
+      com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList> METHOD_GET_USER_COMMUNITY_SORT =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "GetUserCommunitySort"),
-          io.grpc.protobuf.ProtoUtils.marshaller(ResultProtos.PStringSingle.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommunityProtos.PCommunitySortList.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringSingle.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<CommunityProtos.PCommunitySortList,
-      CommonApiProtos.PEmpty> METHOD_SET_USER_COMMUNITY_SORT =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList,
+      com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_SET_USER_COMMUNITY_SORT =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "SetUserCommunitySort"),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommunityProtos.PCommunitySortList.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommonApiProtos.PEmpty.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<ResultProtos.PStringSingle,
-      ResultProtos.PStringList> METHOD_GET_TOP_USER_LIST =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringSingle,
+      com.blemobi.sep.probuf.ResultProtos.PStringList> METHOD_GET_TOP_USER_LIST =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "GetTopUserList"),
-          io.grpc.protobuf.ProtoUtils.marshaller(ResultProtos.PStringSingle.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(ResultProtos.PStringList.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringSingle.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringList.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<ResultProtos.PStringList,
-      CommonApiProtos.PEmpty> METHOD_SET_TOP_USER_LIST =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringList,
+      com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_SET_TOP_USER_LIST =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "SetTopUserList"),
-          io.grpc.protobuf.ProtoUtils.marshaller(ResultProtos.PStringList.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommonApiProtos.PEmpty.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringList.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<ResultProtos.PStringList,
-      CommonApiProtos.PEmpty> METHOD_ADD_TOP_USER_LIST =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringList,
+      com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_ADD_TOP_USER_LIST =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "AddTopUserList"),
-          io.grpc.protobuf.ProtoUtils.marshaller(ResultProtos.PStringList.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommonApiProtos.PEmpty.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringList.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<ResultProtos.PStringList,
-      CommonApiProtos.PEmpty> METHOD_DEL_TOP_USER_LIST =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringList,
+      com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_DEL_TOP_USER_LIST =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "DelTopUserList"),
-          io.grpc.protobuf.ProtoUtils.marshaller(ResultProtos.PStringList.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommonApiProtos.PEmpty.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringList.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<ResultProtos.PStringList,
-      CommunityApiProtos.PCommunityBaseExList> METHOD_GET_COMMUNITY_BASE_EX_LIST =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringList,
+      com.blemobi.sep.probuf.CommunityApiProtos.PCommunityBaseExList> METHOD_GET_COMMUNITY_BASE_EX_LIST =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "GetCommunityBaseExList"),
-          io.grpc.protobuf.ProtoUtils.marshaller(ResultProtos.PStringList.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommunityApiProtos.PCommunityBaseExList.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringList.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommunityApiProtos.PCommunityBaseExList.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<ResultProtos.PStringList,
-      CommunityProtos.PCommunityManagerRightList> METHOD_GET_COMMUNITY_RIGHT =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringList,
+      com.blemobi.sep.probuf.CommunityProtos.PCommunityManagerRightList> METHOD_GET_COMMUNITY_RIGHT =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "GetCommunityRight"),
-          io.grpc.protobuf.ProtoUtils.marshaller(ResultProtos.PStringList.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommunityProtos.PCommunityManagerRightList.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringList.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommunityProtos.PCommunityManagerRightList.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<ResultProtos.PStringList,
-      CommunityProtos.PCommunityManagerRightList> METHOD_GET_COMMUNITY_RIGHT_WITH_COMMUNITY_ID =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringList,
+      com.blemobi.sep.probuf.CommunityProtos.PCommunityManagerRightList> METHOD_GET_COMMUNITY_RIGHT_WITH_COMMUNITY_ID =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "GetCommunityRightWithCommunityID"),
-          io.grpc.protobuf.ProtoUtils.marshaller(ResultProtos.PStringList.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommunityProtos.PCommunityManagerRightList.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringList.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommunityProtos.PCommunityManagerRightList.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<ResultProtos.PStringList,
-      CommunityProtos.PCommunityBannerEx> METHOD_GET_BANNER_INFO_LIST_EX =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringList,
+      com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerEx> METHOD_GET_BANNER_INFO_LIST_EX =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "GetBannerInfoListEx"),
-          io.grpc.protobuf.ProtoUtils.marshaller(ResultProtos.PStringList.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommunityProtos.PCommunityBannerEx.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringList.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerEx.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<ResultProtos.PStringList,
-      CommonApiProtos.PEmpty> METHOD_PUT_BANNER_STATUS =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringList,
+      com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_PUT_BANNER_STATUS =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "PutBannerStatus"),
-          io.grpc.protobuf.ProtoUtils.marshaller(ResultProtos.PStringList.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommonApiProtos.PEmpty.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringList.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<CommunityProtos.PCommunityBannerInfoEx,
-      CommonApiProtos.PEmpty> METHOD_PUT_BANNER_INFO =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoEx,
+      com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_PUT_BANNER_INFO =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "PutBannerInfo"),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommunityProtos.PCommunityBannerInfoEx.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommonApiProtos.PEmpty.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoEx.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<ResultProtos.PStringList,
-      CommonApiProtos.PEmpty> METHOD_PUT_COMMUNITY_NAME =
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.ResultProtos.PStringList,
+      com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_PUT_COMMUNITY_NAME =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcCommunity", "PutCommunityName"),
-          io.grpc.protobuf.ProtoUtils.marshaller(ResultProtos.PStringList.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(CommonApiProtos.PEmpty.getDefaultInstance()));
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PStringList.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs,
+      com.blemobi.sep.probuf.ResultProtos.PInt32List> METHOD_CHECK_MSG_IDS =
+      io.grpc.MethodDescriptor.create(
+          io.grpc.MethodDescriptor.MethodType.UNARY,
+          generateFullMethodName(
+              "bbproto.IGrpcCommunity", "checkMsgIds"),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PInt32List.getDefaultInstance()));
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -317,8 +332,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PBoolSingle ，失败返回 PResult
      * </pre>
      */
-    public void getForbidFlag(ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<ResultProtos.PBoolSingle> responseObserver) {
+    public void getForbidFlag(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PBoolSingle> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_FORBID_FLAG, responseObserver);
     }
 
@@ -329,8 +344,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PBoolSingle ，失败返回 PResult
      * </pre>
      */
-    public void getForbidTimeList(ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<AccountProtos.PUserBaseCommunityList> responseObserver) {
+    public void getForbidTimeList(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.AccountProtos.PUserBaseCommunityList> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_FORBID_TIME_LIST, responseObserver);
     }
 
@@ -341,8 +356,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PStringList ，失败返回 PResult
      * </pre>
      */
-    public void getCommunityMemberList(ResultProtos.PStringSingle request,
-        io.grpc.stub.StreamObserver<ResultProtos.PStringList> responseObserver) {
+    public void getCommunityMemberList(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PStringList> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_COMMUNITY_MEMBER_LIST, responseObserver);
     }
 
@@ -353,8 +368,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityBaseList ，失败返回 PResult
      * </pre>
      */
-    public void getCommunityBaseList(ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<CommunityProtos.PCommunityBaseList> responseObserver) {
+    public void getCommunityBaseList(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_COMMUNITY_BASE_LIST, responseObserver);
     }
 
@@ -365,8 +380,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityBaseList ，失败返回 PResult
      * </pre>
      */
-    public void getCommunityBaseListWithUuid(ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<CommunityProtos.PCommunityBaseList> responseObserver) {
+    public void getCommunityBaseListWithUuid(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_COMMUNITY_BASE_LIST_WITH_UUID, responseObserver);
     }
 
@@ -377,8 +392,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityBase ，失败返回 PResult
      * </pre>
      */
-    public void getUserCommunityBase(ResultProtos.PStringSingle request,
-        io.grpc.stub.StreamObserver<CommunityProtos.PCommunityBase> responseObserver) {
+    public void getUserCommunityBase(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunityBase> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_USER_COMMUNITY_BASE, responseObserver);
     }
 
@@ -389,8 +404,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PStringList ，失败返回 PResult
      * </pre>
      */
-    public void getFollowCommunityID(ResultProtos.PStringSingle request,
-        io.grpc.stub.StreamObserver<ResultProtos.PStringList> responseObserver) {
+    public void getFollowCommunityID(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PStringList> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_FOLLOW_COMMUNITY_ID, responseObserver);
     }
 
@@ -401,8 +416,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityBaseList ，失败返回 PResult
      * </pre>
      */
-    public void getFollowCommunityBaseList(ResultProtos.PStringSingle request,
-        io.grpc.stub.StreamObserver<CommunityProtos.PCommunityBaseList> responseObserver) {
+    public void getFollowCommunityBaseList(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_FOLLOW_COMMUNITY_BASE_LIST, responseObserver);
     }
 
@@ -413,8 +428,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunitySort PResult
      * </pre>
      */
-    public void addCommunitySort(CommunityProtos.PCommunitySort request,
-        io.grpc.stub.StreamObserver<CommunityProtos.PCommunitySort> responseObserver) {
+    public void addCommunitySort(com.blemobi.sep.probuf.CommunityProtos.PCommunitySort request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunitySort> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_ADD_COMMUNITY_SORT, responseObserver);
     }
 
@@ -425,8 +440,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty，失败返回 PResult
      * </pre>
      */
-    public void delCommunitySort(CommunityProtos.PCommunitySort request,
-        io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty> responseObserver) {
+    public void delCommunitySort(com.blemobi.sep.probuf.CommunityProtos.PCommunitySort request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_DEL_COMMUNITY_SORT, responseObserver);
     }
 
@@ -437,8 +452,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty，失败返回 PResult
      * </pre>
      */
-    public void setCommunitySort(CommunityProtos.PCommunitySort request,
-        io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty> responseObserver) {
+    public void setCommunitySort(com.blemobi.sep.probuf.CommunityProtos.PCommunitySort request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_SET_COMMUNITY_SORT, responseObserver);
     }
 
@@ -448,8 +463,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunitySortList ，失败返回 PResult
      * </pre>
      */
-    public void getCommunitySort(CommonApiProtos.PEmpty request,
-        io.grpc.stub.StreamObserver<CommunityProtos.PCommunitySortList> responseObserver) {
+    public void getCommunitySort(com.blemobi.sep.probuf.CommonApiProtos.PEmpty request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_COMMUNITY_SORT, responseObserver);
     }
 
@@ -459,8 +474,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunitySortList ，失败返回 PResult
      * </pre>
      */
-    public void getRecommendCommunitySort(CommonApiProtos.PEmpty request,
-        io.grpc.stub.StreamObserver<CommunityProtos.PCommunitySortList> responseObserver) {
+    public void getRecommendCommunitySort(com.blemobi.sep.probuf.CommonApiProtos.PEmpty request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_RECOMMEND_COMMUNITY_SORT, responseObserver);
     }
 
@@ -470,8 +485,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty ，失败返回 PResult
      * </pre>
      */
-    public void addRecommendCommunitySort(CommunityProtos.PCommunitySort request,
-        io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty> responseObserver) {
+    public void addRecommendCommunitySort(com.blemobi.sep.probuf.CommunityProtos.PCommunitySort request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_ADD_RECOMMEND_COMMUNITY_SORT, responseObserver);
     }
 
@@ -481,8 +496,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty ，失败返回 PResult
      * </pre>
      */
-    public void setRecommendCommunitySort(CommunityProtos.PCommunitySortList request,
-        io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty> responseObserver) {
+    public void setRecommendCommunitySort(com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_SET_RECOMMEND_COMMUNITY_SORT, responseObserver);
     }
 
@@ -493,8 +508,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty，失败返回 PResult
      * </pre>
      */
-    public void delRecommendCommunitySort(CommunityProtos.PCommunitySort request,
-        io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty> responseObserver) {
+    public void delRecommendCommunitySort(com.blemobi.sep.probuf.CommunityProtos.PCommunitySort request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_DEL_RECOMMEND_COMMUNITY_SORT, responseObserver);
     }
 
@@ -505,8 +520,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunitySortList，失败返回 PResult
      * </pre>
      */
-    public void getUserCommunitySort(ResultProtos.PStringSingle request,
-        io.grpc.stub.StreamObserver<CommunityProtos.PCommunitySortList> responseObserver) {
+    public void getUserCommunitySort(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_USER_COMMUNITY_SORT, responseObserver);
     }
 
@@ -517,8 +532,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty，失败返回 PResult
      * </pre>
      */
-    public void setUserCommunitySort(CommunityProtos.PCommunitySortList request,
-        io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty> responseObserver) {
+    public void setUserCommunitySort(com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_SET_USER_COMMUNITY_SORT, responseObserver);
     }
 
@@ -528,8 +543,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PStringList top user的uuid ，失败返回 PResult
      * </pre>
      */
-    public void getTopUserList(ResultProtos.PStringSingle request,
-        io.grpc.stub.StreamObserver<ResultProtos.PStringList> responseObserver) {
+    public void getTopUserList(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PStringList> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_TOP_USER_LIST, responseObserver);
     }
 
@@ -540,8 +555,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty ，失败返回 PResult
      * </pre>
      */
-    public void setTopUserList(ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty> responseObserver) {
+    public void setTopUserList(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_SET_TOP_USER_LIST, responseObserver);
     }
 
@@ -552,8 +567,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty ，失败返回 PResult
      * </pre>
      */
-    public void addTopUserList(ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty> responseObserver) {
+    public void addTopUserList(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_ADD_TOP_USER_LIST, responseObserver);
     }
 
@@ -564,8 +579,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty ，失败返回 PResult
      * </pre>
      */
-    public void delTopUserList(ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty> responseObserver) {
+    public void delTopUserList(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_DEL_TOP_USER_LIST, responseObserver);
     }
 
@@ -576,8 +591,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityBaseExList ，失败返回 PResult
      * </pre>
      */
-    public void getCommunityBaseExList(ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<CommunityApiProtos.PCommunityBaseExList> responseObserver) {
+    public void getCommunityBaseExList(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityApiProtos.PCommunityBaseExList> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_COMMUNITY_BASE_EX_LIST, responseObserver);
     }
 
@@ -588,8 +603,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityManagerRightList ，失败返回 PResult
      * </pre>
      */
-    public void getCommunityRight(ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<CommunityProtos.PCommunityManagerRightList> responseObserver) {
+    public void getCommunityRight(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunityManagerRightList> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_COMMUNITY_RIGHT, responseObserver);
     }
 
@@ -602,8 +617,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityManagerRightList ，失败返回 PResult
      * </pre>
      */
-    public void getCommunityRightWithCommunityID(ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<CommunityProtos.PCommunityManagerRightList> responseObserver) {
+    public void getCommunityRightWithCommunityID(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunityManagerRightList> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_COMMUNITY_RIGHT_WITH_COMMUNITY_ID, responseObserver);
     }
 
@@ -614,8 +629,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityBannerEx ， 失败返回 PResult
      * </pre>
      */
-    public void getBannerInfoListEx(ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<CommunityProtos.PCommunityBannerEx> responseObserver) {
+    public void getBannerInfoListEx(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerEx> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_BANNER_INFO_LIST_EX, responseObserver);
     }
 
@@ -626,8 +641,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 返回 PResult
      * </pre>
      */
-    public void putBannerStatus(ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty> responseObserver) {
+    public void putBannerStatus(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_PUT_BANNER_STATUS, responseObserver);
     }
 
@@ -638,8 +653,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 返回 PResult
      * </pre>
      */
-    public void putBannerInfo(CommunityProtos.PCommunityBannerInfoEx request,
-        io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty> responseObserver) {
+    public void putBannerInfo(com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoEx request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_PUT_BANNER_INFO, responseObserver);
     }
 
@@ -650,216 +665,234 @@ public class IGrpcCommunityGrpc {
      *&#64;return 返回 PResult
      * </pre>
      */
-    public void putCommunityName(ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty> responseObserver) {
+    public void putCommunityName(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_PUT_COMMUNITY_NAME, responseObserver);
     }
 
-    @Override public io.grpc.ServerServiceDefinition bindService() {
+    /**
+     * <pre>
+     * 检查消息状态（由其它服务提供）
+     * 请求中count表示要检查的消息进行次数，返回uuid-msigId对应的消息触发次数
+     * </pre>
+     */
+    public void checkMsgIds(com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PInt32List> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_CHECK_MSG_IDS, responseObserver);
+    }
+
+    @java.lang.Override public io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             METHOD_GET_FORBID_FLAG,
             asyncUnaryCall(
               new MethodHandlers<
-                ResultProtos.PStringList,
-                ResultProtos.PBoolSingle>(
+                com.blemobi.sep.probuf.ResultProtos.PStringList,
+                com.blemobi.sep.probuf.ResultProtos.PBoolSingle>(
                   this, METHODID_GET_FORBID_FLAG)))
           .addMethod(
             METHOD_GET_FORBID_TIME_LIST,
             asyncUnaryCall(
               new MethodHandlers<
-                ResultProtos.PStringList,
-                AccountProtos.PUserBaseCommunityList>(
+                com.blemobi.sep.probuf.ResultProtos.PStringList,
+                com.blemobi.sep.probuf.AccountProtos.PUserBaseCommunityList>(
                   this, METHODID_GET_FORBID_TIME_LIST)))
           .addMethod(
             METHOD_GET_COMMUNITY_MEMBER_LIST,
             asyncUnaryCall(
               new MethodHandlers<
-                ResultProtos.PStringSingle,
-                ResultProtos.PStringList>(
+                com.blemobi.sep.probuf.ResultProtos.PStringSingle,
+                com.blemobi.sep.probuf.ResultProtos.PStringList>(
                   this, METHODID_GET_COMMUNITY_MEMBER_LIST)))
           .addMethod(
             METHOD_GET_COMMUNITY_BASE_LIST,
             asyncUnaryCall(
               new MethodHandlers<
-                ResultProtos.PStringList,
-                CommunityProtos.PCommunityBaseList>(
+                com.blemobi.sep.probuf.ResultProtos.PStringList,
+                com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList>(
                   this, METHODID_GET_COMMUNITY_BASE_LIST)))
           .addMethod(
             METHOD_GET_COMMUNITY_BASE_LIST_WITH_UUID,
             asyncUnaryCall(
               new MethodHandlers<
-                ResultProtos.PStringList,
-                CommunityProtos.PCommunityBaseList>(
+                com.blemobi.sep.probuf.ResultProtos.PStringList,
+                com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList>(
                   this, METHODID_GET_COMMUNITY_BASE_LIST_WITH_UUID)))
           .addMethod(
             METHOD_GET_USER_COMMUNITY_BASE,
             asyncUnaryCall(
               new MethodHandlers<
-                ResultProtos.PStringSingle,
-                CommunityProtos.PCommunityBase>(
+                com.blemobi.sep.probuf.ResultProtos.PStringSingle,
+                com.blemobi.sep.probuf.CommunityProtos.PCommunityBase>(
                   this, METHODID_GET_USER_COMMUNITY_BASE)))
           .addMethod(
             METHOD_GET_FOLLOW_COMMUNITY_ID,
             asyncUnaryCall(
               new MethodHandlers<
-                ResultProtos.PStringSingle,
-                ResultProtos.PStringList>(
+                com.blemobi.sep.probuf.ResultProtos.PStringSingle,
+                com.blemobi.sep.probuf.ResultProtos.PStringList>(
                   this, METHODID_GET_FOLLOW_COMMUNITY_ID)))
           .addMethod(
             METHOD_GET_FOLLOW_COMMUNITY_BASE_LIST,
             asyncUnaryCall(
               new MethodHandlers<
-                ResultProtos.PStringSingle,
-                CommunityProtos.PCommunityBaseList>(
+                com.blemobi.sep.probuf.ResultProtos.PStringSingle,
+                com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList>(
                   this, METHODID_GET_FOLLOW_COMMUNITY_BASE_LIST)))
           .addMethod(
             METHOD_ADD_COMMUNITY_SORT,
             asyncUnaryCall(
               new MethodHandlers<
-                CommunityProtos.PCommunitySort,
-                CommunityProtos.PCommunitySort>(
+                com.blemobi.sep.probuf.CommunityProtos.PCommunitySort,
+                com.blemobi.sep.probuf.CommunityProtos.PCommunitySort>(
                   this, METHODID_ADD_COMMUNITY_SORT)))
           .addMethod(
             METHOD_DEL_COMMUNITY_SORT,
             asyncUnaryCall(
               new MethodHandlers<
-                CommunityProtos.PCommunitySort,
-                CommonApiProtos.PEmpty>(
+                com.blemobi.sep.probuf.CommunityProtos.PCommunitySort,
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
                   this, METHODID_DEL_COMMUNITY_SORT)))
           .addMethod(
             METHOD_SET_COMMUNITY_SORT,
             asyncUnaryCall(
               new MethodHandlers<
-                CommunityProtos.PCommunitySort,
-                CommonApiProtos.PEmpty>(
+                com.blemobi.sep.probuf.CommunityProtos.PCommunitySort,
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
                   this, METHODID_SET_COMMUNITY_SORT)))
           .addMethod(
             METHOD_GET_COMMUNITY_SORT,
             asyncUnaryCall(
               new MethodHandlers<
-                CommonApiProtos.PEmpty,
-                CommunityProtos.PCommunitySortList>(
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty,
+                com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList>(
                   this, METHODID_GET_COMMUNITY_SORT)))
           .addMethod(
             METHOD_GET_RECOMMEND_COMMUNITY_SORT,
             asyncUnaryCall(
               new MethodHandlers<
-                CommonApiProtos.PEmpty,
-                CommunityProtos.PCommunitySortList>(
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty,
+                com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList>(
                   this, METHODID_GET_RECOMMEND_COMMUNITY_SORT)))
           .addMethod(
             METHOD_ADD_RECOMMEND_COMMUNITY_SORT,
             asyncUnaryCall(
               new MethodHandlers<
-                CommunityProtos.PCommunitySort,
-                CommonApiProtos.PEmpty>(
+                com.blemobi.sep.probuf.CommunityProtos.PCommunitySort,
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
                   this, METHODID_ADD_RECOMMEND_COMMUNITY_SORT)))
           .addMethod(
             METHOD_SET_RECOMMEND_COMMUNITY_SORT,
             asyncUnaryCall(
               new MethodHandlers<
-                CommunityProtos.PCommunitySortList,
-                CommonApiProtos.PEmpty>(
+                com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList,
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
                   this, METHODID_SET_RECOMMEND_COMMUNITY_SORT)))
           .addMethod(
             METHOD_DEL_RECOMMEND_COMMUNITY_SORT,
             asyncUnaryCall(
               new MethodHandlers<
-                CommunityProtos.PCommunitySort,
-                CommonApiProtos.PEmpty>(
+                com.blemobi.sep.probuf.CommunityProtos.PCommunitySort,
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
                   this, METHODID_DEL_RECOMMEND_COMMUNITY_SORT)))
           .addMethod(
             METHOD_GET_USER_COMMUNITY_SORT,
             asyncUnaryCall(
               new MethodHandlers<
-                ResultProtos.PStringSingle,
-                CommunityProtos.PCommunitySortList>(
+                com.blemobi.sep.probuf.ResultProtos.PStringSingle,
+                com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList>(
                   this, METHODID_GET_USER_COMMUNITY_SORT)))
           .addMethod(
             METHOD_SET_USER_COMMUNITY_SORT,
             asyncUnaryCall(
               new MethodHandlers<
-                CommunityProtos.PCommunitySortList,
-                CommonApiProtos.PEmpty>(
+                com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList,
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
                   this, METHODID_SET_USER_COMMUNITY_SORT)))
           .addMethod(
             METHOD_GET_TOP_USER_LIST,
             asyncUnaryCall(
               new MethodHandlers<
-                ResultProtos.PStringSingle,
-                ResultProtos.PStringList>(
+                com.blemobi.sep.probuf.ResultProtos.PStringSingle,
+                com.blemobi.sep.probuf.ResultProtos.PStringList>(
                   this, METHODID_GET_TOP_USER_LIST)))
           .addMethod(
             METHOD_SET_TOP_USER_LIST,
             asyncUnaryCall(
               new MethodHandlers<
-                ResultProtos.PStringList,
-                CommonApiProtos.PEmpty>(
+                com.blemobi.sep.probuf.ResultProtos.PStringList,
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
                   this, METHODID_SET_TOP_USER_LIST)))
           .addMethod(
             METHOD_ADD_TOP_USER_LIST,
             asyncUnaryCall(
               new MethodHandlers<
-                ResultProtos.PStringList,
-                CommonApiProtos.PEmpty>(
+                com.blemobi.sep.probuf.ResultProtos.PStringList,
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
                   this, METHODID_ADD_TOP_USER_LIST)))
           .addMethod(
             METHOD_DEL_TOP_USER_LIST,
             asyncUnaryCall(
               new MethodHandlers<
-                ResultProtos.PStringList,
-                CommonApiProtos.PEmpty>(
+                com.blemobi.sep.probuf.ResultProtos.PStringList,
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
                   this, METHODID_DEL_TOP_USER_LIST)))
           .addMethod(
             METHOD_GET_COMMUNITY_BASE_EX_LIST,
             asyncUnaryCall(
               new MethodHandlers<
-                ResultProtos.PStringList,
-                CommunityApiProtos.PCommunityBaseExList>(
+                com.blemobi.sep.probuf.ResultProtos.PStringList,
+                com.blemobi.sep.probuf.CommunityApiProtos.PCommunityBaseExList>(
                   this, METHODID_GET_COMMUNITY_BASE_EX_LIST)))
           .addMethod(
             METHOD_GET_COMMUNITY_RIGHT,
             asyncUnaryCall(
               new MethodHandlers<
-                ResultProtos.PStringList,
-                CommunityProtos.PCommunityManagerRightList>(
+                com.blemobi.sep.probuf.ResultProtos.PStringList,
+                com.blemobi.sep.probuf.CommunityProtos.PCommunityManagerRightList>(
                   this, METHODID_GET_COMMUNITY_RIGHT)))
           .addMethod(
             METHOD_GET_COMMUNITY_RIGHT_WITH_COMMUNITY_ID,
             asyncUnaryCall(
               new MethodHandlers<
-                ResultProtos.PStringList,
-                CommunityProtos.PCommunityManagerRightList>(
+                com.blemobi.sep.probuf.ResultProtos.PStringList,
+                com.blemobi.sep.probuf.CommunityProtos.PCommunityManagerRightList>(
                   this, METHODID_GET_COMMUNITY_RIGHT_WITH_COMMUNITY_ID)))
           .addMethod(
             METHOD_GET_BANNER_INFO_LIST_EX,
             asyncUnaryCall(
               new MethodHandlers<
-                ResultProtos.PStringList,
-                CommunityProtos.PCommunityBannerEx>(
+                com.blemobi.sep.probuf.ResultProtos.PStringList,
+                com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerEx>(
                   this, METHODID_GET_BANNER_INFO_LIST_EX)))
           .addMethod(
             METHOD_PUT_BANNER_STATUS,
             asyncUnaryCall(
               new MethodHandlers<
-                ResultProtos.PStringList,
-                CommonApiProtos.PEmpty>(
+                com.blemobi.sep.probuf.ResultProtos.PStringList,
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
                   this, METHODID_PUT_BANNER_STATUS)))
           .addMethod(
             METHOD_PUT_BANNER_INFO,
             asyncUnaryCall(
               new MethodHandlers<
-                CommunityProtos.PCommunityBannerInfoEx,
-                CommonApiProtos.PEmpty>(
+                com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoEx,
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
                   this, METHODID_PUT_BANNER_INFO)))
           .addMethod(
             METHOD_PUT_COMMUNITY_NAME,
             asyncUnaryCall(
               new MethodHandlers<
-                ResultProtos.PStringList,
-                CommonApiProtos.PEmpty>(
+                com.blemobi.sep.probuf.ResultProtos.PStringList,
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
                   this, METHODID_PUT_COMMUNITY_NAME)))
+          .addMethod(
+            METHOD_CHECK_MSG_IDS,
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs,
+                com.blemobi.sep.probuf.ResultProtos.PInt32List>(
+                  this, METHODID_CHECK_MSG_IDS)))
           .build();
     }
   }
@@ -876,7 +909,7 @@ public class IGrpcCommunityGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected IGrpcCommunityStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new IGrpcCommunityStub(channel, callOptions);
@@ -889,8 +922,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PBoolSingle ，失败返回 PResult
      * </pre>
      */
-    public void getForbidFlag(ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<ResultProtos.PBoolSingle> responseObserver) {
+    public void getForbidFlag(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PBoolSingle> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_FORBID_FLAG, getCallOptions()), request, responseObserver);
     }
@@ -902,8 +935,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PBoolSingle ，失败返回 PResult
      * </pre>
      */
-    public void getForbidTimeList(ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<AccountProtos.PUserBaseCommunityList> responseObserver) {
+    public void getForbidTimeList(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.AccountProtos.PUserBaseCommunityList> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_FORBID_TIME_LIST, getCallOptions()), request, responseObserver);
     }
@@ -915,8 +948,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PStringList ，失败返回 PResult
      * </pre>
      */
-    public void getCommunityMemberList(ResultProtos.PStringSingle request,
-        io.grpc.stub.StreamObserver<ResultProtos.PStringList> responseObserver) {
+    public void getCommunityMemberList(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PStringList> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_COMMUNITY_MEMBER_LIST, getCallOptions()), request, responseObserver);
     }
@@ -928,8 +961,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityBaseList ，失败返回 PResult
      * </pre>
      */
-    public void getCommunityBaseList(ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<CommunityProtos.PCommunityBaseList> responseObserver) {
+    public void getCommunityBaseList(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_COMMUNITY_BASE_LIST, getCallOptions()), request, responseObserver);
     }
@@ -941,8 +974,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityBaseList ，失败返回 PResult
      * </pre>
      */
-    public void getCommunityBaseListWithUuid(ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<CommunityProtos.PCommunityBaseList> responseObserver) {
+    public void getCommunityBaseListWithUuid(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_COMMUNITY_BASE_LIST_WITH_UUID, getCallOptions()), request, responseObserver);
     }
@@ -954,8 +987,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityBase ，失败返回 PResult
      * </pre>
      */
-    public void getUserCommunityBase(ResultProtos.PStringSingle request,
-        io.grpc.stub.StreamObserver<CommunityProtos.PCommunityBase> responseObserver) {
+    public void getUserCommunityBase(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunityBase> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_USER_COMMUNITY_BASE, getCallOptions()), request, responseObserver);
     }
@@ -967,8 +1000,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PStringList ，失败返回 PResult
      * </pre>
      */
-    public void getFollowCommunityID(ResultProtos.PStringSingle request,
-        io.grpc.stub.StreamObserver<ResultProtos.PStringList> responseObserver) {
+    public void getFollowCommunityID(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PStringList> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_FOLLOW_COMMUNITY_ID, getCallOptions()), request, responseObserver);
     }
@@ -980,8 +1013,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityBaseList ，失败返回 PResult
      * </pre>
      */
-    public void getFollowCommunityBaseList(ResultProtos.PStringSingle request,
-        io.grpc.stub.StreamObserver<CommunityProtos.PCommunityBaseList> responseObserver) {
+    public void getFollowCommunityBaseList(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_FOLLOW_COMMUNITY_BASE_LIST, getCallOptions()), request, responseObserver);
     }
@@ -993,8 +1026,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunitySort PResult
      * </pre>
      */
-    public void addCommunitySort(CommunityProtos.PCommunitySort request,
-        io.grpc.stub.StreamObserver<CommunityProtos.PCommunitySort> responseObserver) {
+    public void addCommunitySort(com.blemobi.sep.probuf.CommunityProtos.PCommunitySort request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunitySort> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_ADD_COMMUNITY_SORT, getCallOptions()), request, responseObserver);
     }
@@ -1006,8 +1039,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty，失败返回 PResult
      * </pre>
      */
-    public void delCommunitySort(CommunityProtos.PCommunitySort request,
-        io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty> responseObserver) {
+    public void delCommunitySort(com.blemobi.sep.probuf.CommunityProtos.PCommunitySort request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_DEL_COMMUNITY_SORT, getCallOptions()), request, responseObserver);
     }
@@ -1019,8 +1052,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty，失败返回 PResult
      * </pre>
      */
-    public void setCommunitySort(CommunityProtos.PCommunitySort request,
-        io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty> responseObserver) {
+    public void setCommunitySort(com.blemobi.sep.probuf.CommunityProtos.PCommunitySort request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_SET_COMMUNITY_SORT, getCallOptions()), request, responseObserver);
     }
@@ -1031,8 +1064,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunitySortList ，失败返回 PResult
      * </pre>
      */
-    public void getCommunitySort(CommonApiProtos.PEmpty request,
-        io.grpc.stub.StreamObserver<CommunityProtos.PCommunitySortList> responseObserver) {
+    public void getCommunitySort(com.blemobi.sep.probuf.CommonApiProtos.PEmpty request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_COMMUNITY_SORT, getCallOptions()), request, responseObserver);
     }
@@ -1043,8 +1076,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunitySortList ，失败返回 PResult
      * </pre>
      */
-    public void getRecommendCommunitySort(CommonApiProtos.PEmpty request,
-        io.grpc.stub.StreamObserver<CommunityProtos.PCommunitySortList> responseObserver) {
+    public void getRecommendCommunitySort(com.blemobi.sep.probuf.CommonApiProtos.PEmpty request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_RECOMMEND_COMMUNITY_SORT, getCallOptions()), request, responseObserver);
     }
@@ -1055,8 +1088,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty ，失败返回 PResult
      * </pre>
      */
-    public void addRecommendCommunitySort(CommunityProtos.PCommunitySort request,
-        io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty> responseObserver) {
+    public void addRecommendCommunitySort(com.blemobi.sep.probuf.CommunityProtos.PCommunitySort request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_ADD_RECOMMEND_COMMUNITY_SORT, getCallOptions()), request, responseObserver);
     }
@@ -1067,8 +1100,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty ，失败返回 PResult
      * </pre>
      */
-    public void setRecommendCommunitySort(CommunityProtos.PCommunitySortList request,
-        io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty> responseObserver) {
+    public void setRecommendCommunitySort(com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_SET_RECOMMEND_COMMUNITY_SORT, getCallOptions()), request, responseObserver);
     }
@@ -1080,8 +1113,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty，失败返回 PResult
      * </pre>
      */
-    public void delRecommendCommunitySort(CommunityProtos.PCommunitySort request,
-        io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty> responseObserver) {
+    public void delRecommendCommunitySort(com.blemobi.sep.probuf.CommunityProtos.PCommunitySort request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_DEL_RECOMMEND_COMMUNITY_SORT, getCallOptions()), request, responseObserver);
     }
@@ -1093,8 +1126,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunitySortList，失败返回 PResult
      * </pre>
      */
-    public void getUserCommunitySort(ResultProtos.PStringSingle request,
-        io.grpc.stub.StreamObserver<CommunityProtos.PCommunitySortList> responseObserver) {
+    public void getUserCommunitySort(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_USER_COMMUNITY_SORT, getCallOptions()), request, responseObserver);
     }
@@ -1106,8 +1139,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty，失败返回 PResult
      * </pre>
      */
-    public void setUserCommunitySort(CommunityProtos.PCommunitySortList request,
-        io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty> responseObserver) {
+    public void setUserCommunitySort(com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_SET_USER_COMMUNITY_SORT, getCallOptions()), request, responseObserver);
     }
@@ -1118,8 +1151,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PStringList top user的uuid ，失败返回 PResult
      * </pre>
      */
-    public void getTopUserList(ResultProtos.PStringSingle request,
-        io.grpc.stub.StreamObserver<ResultProtos.PStringList> responseObserver) {
+    public void getTopUserList(com.blemobi.sep.probuf.ResultProtos.PStringSingle request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PStringList> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_TOP_USER_LIST, getCallOptions()), request, responseObserver);
     }
@@ -1131,8 +1164,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty ，失败返回 PResult
      * </pre>
      */
-    public void setTopUserList(ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty> responseObserver) {
+    public void setTopUserList(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_SET_TOP_USER_LIST, getCallOptions()), request, responseObserver);
     }
@@ -1144,8 +1177,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty ，失败返回 PResult
      * </pre>
      */
-    public void addTopUserList(ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty> responseObserver) {
+    public void addTopUserList(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_ADD_TOP_USER_LIST, getCallOptions()), request, responseObserver);
     }
@@ -1157,8 +1190,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty ，失败返回 PResult
      * </pre>
      */
-    public void delTopUserList(ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty> responseObserver) {
+    public void delTopUserList(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_DEL_TOP_USER_LIST, getCallOptions()), request, responseObserver);
     }
@@ -1170,8 +1203,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityBaseExList ，失败返回 PResult
      * </pre>
      */
-    public void getCommunityBaseExList(ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<CommunityApiProtos.PCommunityBaseExList> responseObserver) {
+    public void getCommunityBaseExList(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityApiProtos.PCommunityBaseExList> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_COMMUNITY_BASE_EX_LIST, getCallOptions()), request, responseObserver);
     }
@@ -1183,8 +1216,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityManagerRightList ，失败返回 PResult
      * </pre>
      */
-    public void getCommunityRight(ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<CommunityProtos.PCommunityManagerRightList> responseObserver) {
+    public void getCommunityRight(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunityManagerRightList> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_COMMUNITY_RIGHT, getCallOptions()), request, responseObserver);
     }
@@ -1198,8 +1231,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityManagerRightList ，失败返回 PResult
      * </pre>
      */
-    public void getCommunityRightWithCommunityID(ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<CommunityProtos.PCommunityManagerRightList> responseObserver) {
+    public void getCommunityRightWithCommunityID(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunityManagerRightList> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_COMMUNITY_RIGHT_WITH_COMMUNITY_ID, getCallOptions()), request, responseObserver);
     }
@@ -1211,8 +1244,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityBannerEx ， 失败返回 PResult
      * </pre>
      */
-    public void getBannerInfoListEx(ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<CommunityProtos.PCommunityBannerEx> responseObserver) {
+    public void getBannerInfoListEx(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerEx> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_BANNER_INFO_LIST_EX, getCallOptions()), request, responseObserver);
     }
@@ -1224,8 +1257,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 返回 PResult
      * </pre>
      */
-    public void putBannerStatus(ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty> responseObserver) {
+    public void putBannerStatus(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_PUT_BANNER_STATUS, getCallOptions()), request, responseObserver);
     }
@@ -1237,8 +1270,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 返回 PResult
      * </pre>
      */
-    public void putBannerInfo(CommunityProtos.PCommunityBannerInfoEx request,
-        io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty> responseObserver) {
+    public void putBannerInfo(com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoEx request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_PUT_BANNER_INFO, getCallOptions()), request, responseObserver);
     }
@@ -1250,10 +1283,22 @@ public class IGrpcCommunityGrpc {
      *&#64;return 返回 PResult
      * </pre>
      */
-    public void putCommunityName(ResultProtos.PStringList request,
-        io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty> responseObserver) {
+    public void putCommunityName(com.blemobi.sep.probuf.ResultProtos.PStringList request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_PUT_COMMUNITY_NAME, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * 检查消息状态（由其它服务提供）
+     * 请求中count表示要检查的消息进行次数，返回uuid-msigId对应的消息触发次数
+     * </pre>
+     */
+    public void checkMsgIds(com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PInt32List> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_CHECK_MSG_IDS, getCallOptions()), request, responseObserver);
     }
   }
 
@@ -1269,7 +1314,7 @@ public class IGrpcCommunityGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected IGrpcCommunityBlockingStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new IGrpcCommunityBlockingStub(channel, callOptions);
@@ -1282,7 +1327,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PBoolSingle ，失败返回 PResult
      * </pre>
      */
-    public ResultProtos.PBoolSingle getForbidFlag(ResultProtos.PStringList request) {
+    public com.blemobi.sep.probuf.ResultProtos.PBoolSingle getForbidFlag(com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_FORBID_FLAG, getCallOptions(), request);
     }
@@ -1294,7 +1339,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PBoolSingle ，失败返回 PResult
      * </pre>
      */
-    public AccountProtos.PUserBaseCommunityList getForbidTimeList(ResultProtos.PStringList request) {
+    public com.blemobi.sep.probuf.AccountProtos.PUserBaseCommunityList getForbidTimeList(com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_FORBID_TIME_LIST, getCallOptions(), request);
     }
@@ -1306,7 +1351,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PStringList ，失败返回 PResult
      * </pre>
      */
-    public ResultProtos.PStringList getCommunityMemberList(ResultProtos.PStringSingle request) {
+    public com.blemobi.sep.probuf.ResultProtos.PStringList getCommunityMemberList(com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_COMMUNITY_MEMBER_LIST, getCallOptions(), request);
     }
@@ -1318,7 +1363,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityBaseList ，失败返回 PResult
      * </pre>
      */
-    public CommunityProtos.PCommunityBaseList getCommunityBaseList(ResultProtos.PStringList request) {
+    public com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList getCommunityBaseList(com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_COMMUNITY_BASE_LIST, getCallOptions(), request);
     }
@@ -1330,7 +1375,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityBaseList ，失败返回 PResult
      * </pre>
      */
-    public CommunityProtos.PCommunityBaseList getCommunityBaseListWithUuid(ResultProtos.PStringList request) {
+    public com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList getCommunityBaseListWithUuid(com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_COMMUNITY_BASE_LIST_WITH_UUID, getCallOptions(), request);
     }
@@ -1342,7 +1387,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityBase ，失败返回 PResult
      * </pre>
      */
-    public CommunityProtos.PCommunityBase getUserCommunityBase(ResultProtos.PStringSingle request) {
+    public com.blemobi.sep.probuf.CommunityProtos.PCommunityBase getUserCommunityBase(com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_USER_COMMUNITY_BASE, getCallOptions(), request);
     }
@@ -1354,7 +1399,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PStringList ，失败返回 PResult
      * </pre>
      */
-    public ResultProtos.PStringList getFollowCommunityID(ResultProtos.PStringSingle request) {
+    public com.blemobi.sep.probuf.ResultProtos.PStringList getFollowCommunityID(com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_FOLLOW_COMMUNITY_ID, getCallOptions(), request);
     }
@@ -1366,7 +1411,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityBaseList ，失败返回 PResult
      * </pre>
      */
-    public CommunityProtos.PCommunityBaseList getFollowCommunityBaseList(ResultProtos.PStringSingle request) {
+    public com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList getFollowCommunityBaseList(com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_FOLLOW_COMMUNITY_BASE_LIST, getCallOptions(), request);
     }
@@ -1378,7 +1423,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunitySort PResult
      * </pre>
      */
-    public CommunityProtos.PCommunitySort addCommunitySort(CommunityProtos.PCommunitySort request) {
+    public com.blemobi.sep.probuf.CommunityProtos.PCommunitySort addCommunitySort(com.blemobi.sep.probuf.CommunityProtos.PCommunitySort request) {
       return blockingUnaryCall(
           getChannel(), METHOD_ADD_COMMUNITY_SORT, getCallOptions(), request);
     }
@@ -1390,7 +1435,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty，失败返回 PResult
      * </pre>
      */
-    public CommonApiProtos.PEmpty delCommunitySort(CommunityProtos.PCommunitySort request) {
+    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty delCommunitySort(com.blemobi.sep.probuf.CommunityProtos.PCommunitySort request) {
       return blockingUnaryCall(
           getChannel(), METHOD_DEL_COMMUNITY_SORT, getCallOptions(), request);
     }
@@ -1402,7 +1447,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty，失败返回 PResult
      * </pre>
      */
-    public CommonApiProtos.PEmpty setCommunitySort(CommunityProtos.PCommunitySort request) {
+    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty setCommunitySort(com.blemobi.sep.probuf.CommunityProtos.PCommunitySort request) {
       return blockingUnaryCall(
           getChannel(), METHOD_SET_COMMUNITY_SORT, getCallOptions(), request);
     }
@@ -1413,7 +1458,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunitySortList ，失败返回 PResult
      * </pre>
      */
-    public CommunityProtos.PCommunitySortList getCommunitySort(CommonApiProtos.PEmpty request) {
+    public com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList getCommunitySort(com.blemobi.sep.probuf.CommonApiProtos.PEmpty request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_COMMUNITY_SORT, getCallOptions(), request);
     }
@@ -1424,7 +1469,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunitySortList ，失败返回 PResult
      * </pre>
      */
-    public CommunityProtos.PCommunitySortList getRecommendCommunitySort(CommonApiProtos.PEmpty request) {
+    public com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList getRecommendCommunitySort(com.blemobi.sep.probuf.CommonApiProtos.PEmpty request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_RECOMMEND_COMMUNITY_SORT, getCallOptions(), request);
     }
@@ -1435,7 +1480,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty ，失败返回 PResult
      * </pre>
      */
-    public CommonApiProtos.PEmpty addRecommendCommunitySort(CommunityProtos.PCommunitySort request) {
+    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty addRecommendCommunitySort(com.blemobi.sep.probuf.CommunityProtos.PCommunitySort request) {
       return blockingUnaryCall(
           getChannel(), METHOD_ADD_RECOMMEND_COMMUNITY_SORT, getCallOptions(), request);
     }
@@ -1446,7 +1491,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty ，失败返回 PResult
      * </pre>
      */
-    public CommonApiProtos.PEmpty setRecommendCommunitySort(CommunityProtos.PCommunitySortList request) {
+    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty setRecommendCommunitySort(com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList request) {
       return blockingUnaryCall(
           getChannel(), METHOD_SET_RECOMMEND_COMMUNITY_SORT, getCallOptions(), request);
     }
@@ -1458,7 +1503,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty，失败返回 PResult
      * </pre>
      */
-    public CommonApiProtos.PEmpty delRecommendCommunitySort(CommunityProtos.PCommunitySort request) {
+    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty delRecommendCommunitySort(com.blemobi.sep.probuf.CommunityProtos.PCommunitySort request) {
       return blockingUnaryCall(
           getChannel(), METHOD_DEL_RECOMMEND_COMMUNITY_SORT, getCallOptions(), request);
     }
@@ -1470,7 +1515,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunitySortList，失败返回 PResult
      * </pre>
      */
-    public CommunityProtos.PCommunitySortList getUserCommunitySort(ResultProtos.PStringSingle request) {
+    public com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList getUserCommunitySort(com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_USER_COMMUNITY_SORT, getCallOptions(), request);
     }
@@ -1482,7 +1527,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty，失败返回 PResult
      * </pre>
      */
-    public CommonApiProtos.PEmpty setUserCommunitySort(CommunityProtos.PCommunitySortList request) {
+    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty setUserCommunitySort(com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList request) {
       return blockingUnaryCall(
           getChannel(), METHOD_SET_USER_COMMUNITY_SORT, getCallOptions(), request);
     }
@@ -1493,7 +1538,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PStringList top user的uuid ，失败返回 PResult
      * </pre>
      */
-    public ResultProtos.PStringList getTopUserList(ResultProtos.PStringSingle request) {
+    public com.blemobi.sep.probuf.ResultProtos.PStringList getTopUserList(com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_TOP_USER_LIST, getCallOptions(), request);
     }
@@ -1505,7 +1550,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty ，失败返回 PResult
      * </pre>
      */
-    public CommonApiProtos.PEmpty setTopUserList(ResultProtos.PStringList request) {
+    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty setTopUserList(com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return blockingUnaryCall(
           getChannel(), METHOD_SET_TOP_USER_LIST, getCallOptions(), request);
     }
@@ -1517,7 +1562,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty ，失败返回 PResult
      * </pre>
      */
-    public CommonApiProtos.PEmpty addTopUserList(ResultProtos.PStringList request) {
+    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty addTopUserList(com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return blockingUnaryCall(
           getChannel(), METHOD_ADD_TOP_USER_LIST, getCallOptions(), request);
     }
@@ -1529,7 +1574,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty ，失败返回 PResult
      * </pre>
      */
-    public CommonApiProtos.PEmpty delTopUserList(ResultProtos.PStringList request) {
+    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty delTopUserList(com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return blockingUnaryCall(
           getChannel(), METHOD_DEL_TOP_USER_LIST, getCallOptions(), request);
     }
@@ -1541,7 +1586,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityBaseExList ，失败返回 PResult
      * </pre>
      */
-    public CommunityApiProtos.PCommunityBaseExList getCommunityBaseExList(ResultProtos.PStringList request) {
+    public com.blemobi.sep.probuf.CommunityApiProtos.PCommunityBaseExList getCommunityBaseExList(com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_COMMUNITY_BASE_EX_LIST, getCallOptions(), request);
     }
@@ -1553,7 +1598,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityManagerRightList ，失败返回 PResult
      * </pre>
      */
-    public CommunityProtos.PCommunityManagerRightList getCommunityRight(ResultProtos.PStringList request) {
+    public com.blemobi.sep.probuf.CommunityProtos.PCommunityManagerRightList getCommunityRight(com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_COMMUNITY_RIGHT, getCallOptions(), request);
     }
@@ -1567,7 +1612,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityManagerRightList ，失败返回 PResult
      * </pre>
      */
-    public CommunityProtos.PCommunityManagerRightList getCommunityRightWithCommunityID(ResultProtos.PStringList request) {
+    public com.blemobi.sep.probuf.CommunityProtos.PCommunityManagerRightList getCommunityRightWithCommunityID(com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_COMMUNITY_RIGHT_WITH_COMMUNITY_ID, getCallOptions(), request);
     }
@@ -1579,7 +1624,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityBannerEx ， 失败返回 PResult
      * </pre>
      */
-    public CommunityProtos.PCommunityBannerEx getBannerInfoListEx(ResultProtos.PStringList request) {
+    public com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerEx getBannerInfoListEx(com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_BANNER_INFO_LIST_EX, getCallOptions(), request);
     }
@@ -1591,7 +1636,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 返回 PResult
      * </pre>
      */
-    public CommonApiProtos.PEmpty putBannerStatus(ResultProtos.PStringList request) {
+    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty putBannerStatus(com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return blockingUnaryCall(
           getChannel(), METHOD_PUT_BANNER_STATUS, getCallOptions(), request);
     }
@@ -1603,7 +1648,7 @@ public class IGrpcCommunityGrpc {
      *&#64;return 返回 PResult
      * </pre>
      */
-    public CommonApiProtos.PEmpty putBannerInfo(CommunityProtos.PCommunityBannerInfoEx request) {
+    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty putBannerInfo(com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoEx request) {
       return blockingUnaryCall(
           getChannel(), METHOD_PUT_BANNER_INFO, getCallOptions(), request);
     }
@@ -1615,9 +1660,20 @@ public class IGrpcCommunityGrpc {
      *&#64;return 返回 PResult
      * </pre>
      */
-    public CommonApiProtos.PEmpty putCommunityName(ResultProtos.PStringList request) {
+    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty putCommunityName(com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return blockingUnaryCall(
           getChannel(), METHOD_PUT_COMMUNITY_NAME, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * 检查消息状态（由其它服务提供）
+     * 请求中count表示要检查的消息进行次数，返回uuid-msigId对应的消息触发次数
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.ResultProtos.PInt32List checkMsgIds(com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_CHECK_MSG_IDS, getCallOptions(), request);
     }
   }
 
@@ -1633,7 +1689,7 @@ public class IGrpcCommunityGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected IGrpcCommunityFutureStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new IGrpcCommunityFutureStub(channel, callOptions);
@@ -1646,8 +1702,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PBoolSingle ，失败返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<ResultProtos.PBoolSingle> getForbidFlag(
-        ResultProtos.PStringList request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.ResultProtos.PBoolSingle> getForbidFlag(
+        com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_FORBID_FLAG, getCallOptions()), request);
     }
@@ -1659,8 +1715,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PBoolSingle ，失败返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<AccountProtos.PUserBaseCommunityList> getForbidTimeList(
-        ResultProtos.PStringList request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.AccountProtos.PUserBaseCommunityList> getForbidTimeList(
+        com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_FORBID_TIME_LIST, getCallOptions()), request);
     }
@@ -1672,8 +1728,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PStringList ，失败返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<ResultProtos.PStringList> getCommunityMemberList(
-        ResultProtos.PStringSingle request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.ResultProtos.PStringList> getCommunityMemberList(
+        com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_COMMUNITY_MEMBER_LIST, getCallOptions()), request);
     }
@@ -1685,8 +1741,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityBaseList ，失败返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<CommunityProtos.PCommunityBaseList> getCommunityBaseList(
-        ResultProtos.PStringList request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList> getCommunityBaseList(
+        com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_COMMUNITY_BASE_LIST, getCallOptions()), request);
     }
@@ -1698,8 +1754,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityBaseList ，失败返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<CommunityProtos.PCommunityBaseList> getCommunityBaseListWithUuid(
-        ResultProtos.PStringList request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList> getCommunityBaseListWithUuid(
+        com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_COMMUNITY_BASE_LIST_WITH_UUID, getCallOptions()), request);
     }
@@ -1711,8 +1767,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityBase ，失败返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<CommunityProtos.PCommunityBase> getUserCommunityBase(
-        ResultProtos.PStringSingle request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommunityProtos.PCommunityBase> getUserCommunityBase(
+        com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_USER_COMMUNITY_BASE, getCallOptions()), request);
     }
@@ -1724,8 +1780,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PStringList ，失败返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<ResultProtos.PStringList> getFollowCommunityID(
-        ResultProtos.PStringSingle request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.ResultProtos.PStringList> getFollowCommunityID(
+        com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_FOLLOW_COMMUNITY_ID, getCallOptions()), request);
     }
@@ -1737,8 +1793,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityBaseList ，失败返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<CommunityProtos.PCommunityBaseList> getFollowCommunityBaseList(
-        ResultProtos.PStringSingle request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList> getFollowCommunityBaseList(
+        com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_FOLLOW_COMMUNITY_BASE_LIST, getCallOptions()), request);
     }
@@ -1750,8 +1806,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunitySort PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<CommunityProtos.PCommunitySort> addCommunitySort(
-        CommunityProtos.PCommunitySort request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommunityProtos.PCommunitySort> addCommunitySort(
+        com.blemobi.sep.probuf.CommunityProtos.PCommunitySort request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_ADD_COMMUNITY_SORT, getCallOptions()), request);
     }
@@ -1763,8 +1819,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty，失败返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<CommonApiProtos.PEmpty> delCommunitySort(
-        CommunityProtos.PCommunitySort request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> delCommunitySort(
+        com.blemobi.sep.probuf.CommunityProtos.PCommunitySort request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_DEL_COMMUNITY_SORT, getCallOptions()), request);
     }
@@ -1776,8 +1832,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty，失败返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<CommonApiProtos.PEmpty> setCommunitySort(
-        CommunityProtos.PCommunitySort request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> setCommunitySort(
+        com.blemobi.sep.probuf.CommunityProtos.PCommunitySort request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_SET_COMMUNITY_SORT, getCallOptions()), request);
     }
@@ -1788,8 +1844,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunitySortList ，失败返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<CommunityProtos.PCommunitySortList> getCommunitySort(
-        CommonApiProtos.PEmpty request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList> getCommunitySort(
+        com.blemobi.sep.probuf.CommonApiProtos.PEmpty request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_COMMUNITY_SORT, getCallOptions()), request);
     }
@@ -1800,8 +1856,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunitySortList ，失败返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<CommunityProtos.PCommunitySortList> getRecommendCommunitySort(
-        CommonApiProtos.PEmpty request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList> getRecommendCommunitySort(
+        com.blemobi.sep.probuf.CommonApiProtos.PEmpty request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_RECOMMEND_COMMUNITY_SORT, getCallOptions()), request);
     }
@@ -1812,8 +1868,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty ，失败返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<CommonApiProtos.PEmpty> addRecommendCommunitySort(
-        CommunityProtos.PCommunitySort request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> addRecommendCommunitySort(
+        com.blemobi.sep.probuf.CommunityProtos.PCommunitySort request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_ADD_RECOMMEND_COMMUNITY_SORT, getCallOptions()), request);
     }
@@ -1824,8 +1880,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty ，失败返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<CommonApiProtos.PEmpty> setRecommendCommunitySort(
-        CommunityProtos.PCommunitySortList request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> setRecommendCommunitySort(
+        com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_SET_RECOMMEND_COMMUNITY_SORT, getCallOptions()), request);
     }
@@ -1837,8 +1893,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty，失败返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<CommonApiProtos.PEmpty> delRecommendCommunitySort(
-        CommunityProtos.PCommunitySort request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> delRecommendCommunitySort(
+        com.blemobi.sep.probuf.CommunityProtos.PCommunitySort request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_DEL_RECOMMEND_COMMUNITY_SORT, getCallOptions()), request);
     }
@@ -1850,8 +1906,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunitySortList，失败返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<CommunityProtos.PCommunitySortList> getUserCommunitySort(
-        ResultProtos.PStringSingle request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList> getUserCommunitySort(
+        com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_USER_COMMUNITY_SORT, getCallOptions()), request);
     }
@@ -1863,8 +1919,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty，失败返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<CommonApiProtos.PEmpty> setUserCommunitySort(
-        CommunityProtos.PCommunitySortList request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> setUserCommunitySort(
+        com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_SET_USER_COMMUNITY_SORT, getCallOptions()), request);
     }
@@ -1875,8 +1931,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PStringList top user的uuid ，失败返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<ResultProtos.PStringList> getTopUserList(
-        ResultProtos.PStringSingle request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.ResultProtos.PStringList> getTopUserList(
+        com.blemobi.sep.probuf.ResultProtos.PStringSingle request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_TOP_USER_LIST, getCallOptions()), request);
     }
@@ -1888,8 +1944,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty ，失败返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<CommonApiProtos.PEmpty> setTopUserList(
-        ResultProtos.PStringList request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> setTopUserList(
+        com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_SET_TOP_USER_LIST, getCallOptions()), request);
     }
@@ -1901,8 +1957,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty ，失败返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<CommonApiProtos.PEmpty> addTopUserList(
-        ResultProtos.PStringList request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> addTopUserList(
+        com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_ADD_TOP_USER_LIST, getCallOptions()), request);
     }
@@ -1914,8 +1970,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PEmpty ，失败返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<CommonApiProtos.PEmpty> delTopUserList(
-        ResultProtos.PStringList request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> delTopUserList(
+        com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_DEL_TOP_USER_LIST, getCallOptions()), request);
     }
@@ -1927,8 +1983,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityBaseExList ，失败返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<CommunityApiProtos.PCommunityBaseExList> getCommunityBaseExList(
-        ResultProtos.PStringList request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommunityApiProtos.PCommunityBaseExList> getCommunityBaseExList(
+        com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_COMMUNITY_BASE_EX_LIST, getCallOptions()), request);
     }
@@ -1940,8 +1996,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityManagerRightList ，失败返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<CommunityProtos.PCommunityManagerRightList> getCommunityRight(
-        ResultProtos.PStringList request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommunityProtos.PCommunityManagerRightList> getCommunityRight(
+        com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_COMMUNITY_RIGHT, getCallOptions()), request);
     }
@@ -1955,8 +2011,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityManagerRightList ，失败返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<CommunityProtos.PCommunityManagerRightList> getCommunityRightWithCommunityID(
-        ResultProtos.PStringList request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommunityProtos.PCommunityManagerRightList> getCommunityRightWithCommunityID(
+        com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_COMMUNITY_RIGHT_WITH_COMMUNITY_ID, getCallOptions()), request);
     }
@@ -1968,8 +2024,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 成功返回 PCommunityBannerEx ， 失败返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<CommunityProtos.PCommunityBannerEx> getBannerInfoListEx(
-        ResultProtos.PStringList request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerEx> getBannerInfoListEx(
+        com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_BANNER_INFO_LIST_EX, getCallOptions()), request);
     }
@@ -1981,8 +2037,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<CommonApiProtos.PEmpty> putBannerStatus(
-        ResultProtos.PStringList request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> putBannerStatus(
+        com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_PUT_BANNER_STATUS, getCallOptions()), request);
     }
@@ -1994,8 +2050,8 @@ public class IGrpcCommunityGrpc {
      *&#64;return 返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<CommonApiProtos.PEmpty> putBannerInfo(
-        CommunityProtos.PCommunityBannerInfoEx request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> putBannerInfo(
+        com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoEx request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_PUT_BANNER_INFO, getCallOptions()), request);
     }
@@ -2007,10 +2063,22 @@ public class IGrpcCommunityGrpc {
      *&#64;return 返回 PResult
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<CommonApiProtos.PEmpty> putCommunityName(
-        ResultProtos.PStringList request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> putCommunityName(
+        com.blemobi.sep.probuf.ResultProtos.PStringList request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_PUT_COMMUNITY_NAME, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * 检查消息状态（由其它服务提供）
+     * 请求中count表示要检查的消息进行次数，返回uuid-msigId对应的消息触发次数
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.ResultProtos.PInt32List> checkMsgIds(
+        com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_CHECK_MSG_IDS, getCallOptions()), request);
     }
   }
 
@@ -2043,6 +2111,7 @@ public class IGrpcCommunityGrpc {
   private static final int METHODID_PUT_BANNER_STATUS = 26;
   private static final int METHODID_PUT_BANNER_INFO = 27;
   private static final int METHODID_PUT_COMMUNITY_NAME = 28;
+  private static final int METHODID_CHECK_MSG_IDS = 29;
 
   private static class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2057,133 +2126,137 @@ public class IGrpcCommunityGrpc {
       this.methodId = methodId;
     }
 
-    @Override
-    @SuppressWarnings("unchecked")
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_FORBID_FLAG:
-          serviceImpl.getForbidFlag((ResultProtos.PStringList) request,
-              (io.grpc.stub.StreamObserver<ResultProtos.PBoolSingle>) responseObserver);
+          serviceImpl.getForbidFlag((com.blemobi.sep.probuf.ResultProtos.PStringList) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PBoolSingle>) responseObserver);
           break;
         case METHODID_GET_FORBID_TIME_LIST:
-          serviceImpl.getForbidTimeList((ResultProtos.PStringList) request,
-              (io.grpc.stub.StreamObserver<AccountProtos.PUserBaseCommunityList>) responseObserver);
+          serviceImpl.getForbidTimeList((com.blemobi.sep.probuf.ResultProtos.PStringList) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.AccountProtos.PUserBaseCommunityList>) responseObserver);
           break;
         case METHODID_GET_COMMUNITY_MEMBER_LIST:
-          serviceImpl.getCommunityMemberList((ResultProtos.PStringSingle) request,
-              (io.grpc.stub.StreamObserver<ResultProtos.PStringList>) responseObserver);
+          serviceImpl.getCommunityMemberList((com.blemobi.sep.probuf.ResultProtos.PStringSingle) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PStringList>) responseObserver);
           break;
         case METHODID_GET_COMMUNITY_BASE_LIST:
-          serviceImpl.getCommunityBaseList((ResultProtos.PStringList) request,
-              (io.grpc.stub.StreamObserver<CommunityProtos.PCommunityBaseList>) responseObserver);
+          serviceImpl.getCommunityBaseList((com.blemobi.sep.probuf.ResultProtos.PStringList) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList>) responseObserver);
           break;
         case METHODID_GET_COMMUNITY_BASE_LIST_WITH_UUID:
-          serviceImpl.getCommunityBaseListWithUuid((ResultProtos.PStringList) request,
-              (io.grpc.stub.StreamObserver<CommunityProtos.PCommunityBaseList>) responseObserver);
+          serviceImpl.getCommunityBaseListWithUuid((com.blemobi.sep.probuf.ResultProtos.PStringList) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList>) responseObserver);
           break;
         case METHODID_GET_USER_COMMUNITY_BASE:
-          serviceImpl.getUserCommunityBase((ResultProtos.PStringSingle) request,
-              (io.grpc.stub.StreamObserver<CommunityProtos.PCommunityBase>) responseObserver);
+          serviceImpl.getUserCommunityBase((com.blemobi.sep.probuf.ResultProtos.PStringSingle) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunityBase>) responseObserver);
           break;
         case METHODID_GET_FOLLOW_COMMUNITY_ID:
-          serviceImpl.getFollowCommunityID((ResultProtos.PStringSingle) request,
-              (io.grpc.stub.StreamObserver<ResultProtos.PStringList>) responseObserver);
+          serviceImpl.getFollowCommunityID((com.blemobi.sep.probuf.ResultProtos.PStringSingle) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PStringList>) responseObserver);
           break;
         case METHODID_GET_FOLLOW_COMMUNITY_BASE_LIST:
-          serviceImpl.getFollowCommunityBaseList((ResultProtos.PStringSingle) request,
-              (io.grpc.stub.StreamObserver<CommunityProtos.PCommunityBaseList>) responseObserver);
+          serviceImpl.getFollowCommunityBaseList((com.blemobi.sep.probuf.ResultProtos.PStringSingle) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunityBaseList>) responseObserver);
           break;
         case METHODID_ADD_COMMUNITY_SORT:
-          serviceImpl.addCommunitySort((CommunityProtos.PCommunitySort) request,
-              (io.grpc.stub.StreamObserver<CommunityProtos.PCommunitySort>) responseObserver);
+          serviceImpl.addCommunitySort((com.blemobi.sep.probuf.CommunityProtos.PCommunitySort) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunitySort>) responseObserver);
           break;
         case METHODID_DEL_COMMUNITY_SORT:
-          serviceImpl.delCommunitySort((CommunityProtos.PCommunitySort) request,
-              (io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty>) responseObserver);
+          serviceImpl.delCommunitySort((com.blemobi.sep.probuf.CommunityProtos.PCommunitySort) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
           break;
         case METHODID_SET_COMMUNITY_SORT:
-          serviceImpl.setCommunitySort((CommunityProtos.PCommunitySort) request,
-              (io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty>) responseObserver);
+          serviceImpl.setCommunitySort((com.blemobi.sep.probuf.CommunityProtos.PCommunitySort) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
           break;
         case METHODID_GET_COMMUNITY_SORT:
-          serviceImpl.getCommunitySort((CommonApiProtos.PEmpty) request,
-              (io.grpc.stub.StreamObserver<CommunityProtos.PCommunitySortList>) responseObserver);
+          serviceImpl.getCommunitySort((com.blemobi.sep.probuf.CommonApiProtos.PEmpty) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList>) responseObserver);
           break;
         case METHODID_GET_RECOMMEND_COMMUNITY_SORT:
-          serviceImpl.getRecommendCommunitySort((CommonApiProtos.PEmpty) request,
-              (io.grpc.stub.StreamObserver<CommunityProtos.PCommunitySortList>) responseObserver);
+          serviceImpl.getRecommendCommunitySort((com.blemobi.sep.probuf.CommonApiProtos.PEmpty) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList>) responseObserver);
           break;
         case METHODID_ADD_RECOMMEND_COMMUNITY_SORT:
-          serviceImpl.addRecommendCommunitySort((CommunityProtos.PCommunitySort) request,
-              (io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty>) responseObserver);
+          serviceImpl.addRecommendCommunitySort((com.blemobi.sep.probuf.CommunityProtos.PCommunitySort) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
           break;
         case METHODID_SET_RECOMMEND_COMMUNITY_SORT:
-          serviceImpl.setRecommendCommunitySort((CommunityProtos.PCommunitySortList) request,
-              (io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty>) responseObserver);
+          serviceImpl.setRecommendCommunitySort((com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
           break;
         case METHODID_DEL_RECOMMEND_COMMUNITY_SORT:
-          serviceImpl.delRecommendCommunitySort((CommunityProtos.PCommunitySort) request,
-              (io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty>) responseObserver);
+          serviceImpl.delRecommendCommunitySort((com.blemobi.sep.probuf.CommunityProtos.PCommunitySort) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
           break;
         case METHODID_GET_USER_COMMUNITY_SORT:
-          serviceImpl.getUserCommunitySort((ResultProtos.PStringSingle) request,
-              (io.grpc.stub.StreamObserver<CommunityProtos.PCommunitySortList>) responseObserver);
+          serviceImpl.getUserCommunitySort((com.blemobi.sep.probuf.ResultProtos.PStringSingle) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList>) responseObserver);
           break;
         case METHODID_SET_USER_COMMUNITY_SORT:
-          serviceImpl.setUserCommunitySort((CommunityProtos.PCommunitySortList) request,
-              (io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty>) responseObserver);
+          serviceImpl.setUserCommunitySort((com.blemobi.sep.probuf.CommunityProtos.PCommunitySortList) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
           break;
         case METHODID_GET_TOP_USER_LIST:
-          serviceImpl.getTopUserList((ResultProtos.PStringSingle) request,
-              (io.grpc.stub.StreamObserver<ResultProtos.PStringList>) responseObserver);
+          serviceImpl.getTopUserList((com.blemobi.sep.probuf.ResultProtos.PStringSingle) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PStringList>) responseObserver);
           break;
         case METHODID_SET_TOP_USER_LIST:
-          serviceImpl.setTopUserList((ResultProtos.PStringList) request,
-              (io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty>) responseObserver);
+          serviceImpl.setTopUserList((com.blemobi.sep.probuf.ResultProtos.PStringList) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
           break;
         case METHODID_ADD_TOP_USER_LIST:
-          serviceImpl.addTopUserList((ResultProtos.PStringList) request,
-              (io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty>) responseObserver);
+          serviceImpl.addTopUserList((com.blemobi.sep.probuf.ResultProtos.PStringList) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
           break;
         case METHODID_DEL_TOP_USER_LIST:
-          serviceImpl.delTopUserList((ResultProtos.PStringList) request,
-              (io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty>) responseObserver);
+          serviceImpl.delTopUserList((com.blemobi.sep.probuf.ResultProtos.PStringList) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
           break;
         case METHODID_GET_COMMUNITY_BASE_EX_LIST:
-          serviceImpl.getCommunityBaseExList((ResultProtos.PStringList) request,
-              (io.grpc.stub.StreamObserver<CommunityApiProtos.PCommunityBaseExList>) responseObserver);
+          serviceImpl.getCommunityBaseExList((com.blemobi.sep.probuf.ResultProtos.PStringList) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityApiProtos.PCommunityBaseExList>) responseObserver);
           break;
         case METHODID_GET_COMMUNITY_RIGHT:
-          serviceImpl.getCommunityRight((ResultProtos.PStringList) request,
-              (io.grpc.stub.StreamObserver<CommunityProtos.PCommunityManagerRightList>) responseObserver);
+          serviceImpl.getCommunityRight((com.blemobi.sep.probuf.ResultProtos.PStringList) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunityManagerRightList>) responseObserver);
           break;
         case METHODID_GET_COMMUNITY_RIGHT_WITH_COMMUNITY_ID:
-          serviceImpl.getCommunityRightWithCommunityID((ResultProtos.PStringList) request,
-              (io.grpc.stub.StreamObserver<CommunityProtos.PCommunityManagerRightList>) responseObserver);
+          serviceImpl.getCommunityRightWithCommunityID((com.blemobi.sep.probuf.ResultProtos.PStringList) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunityManagerRightList>) responseObserver);
           break;
         case METHODID_GET_BANNER_INFO_LIST_EX:
-          serviceImpl.getBannerInfoListEx((ResultProtos.PStringList) request,
-              (io.grpc.stub.StreamObserver<CommunityProtos.PCommunityBannerEx>) responseObserver);
+          serviceImpl.getBannerInfoListEx((com.blemobi.sep.probuf.ResultProtos.PStringList) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerEx>) responseObserver);
           break;
         case METHODID_PUT_BANNER_STATUS:
-          serviceImpl.putBannerStatus((ResultProtos.PStringList) request,
-              (io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty>) responseObserver);
+          serviceImpl.putBannerStatus((com.blemobi.sep.probuf.ResultProtos.PStringList) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
           break;
         case METHODID_PUT_BANNER_INFO:
-          serviceImpl.putBannerInfo((CommunityProtos.PCommunityBannerInfoEx) request,
-              (io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty>) responseObserver);
+          serviceImpl.putBannerInfo((com.blemobi.sep.probuf.CommunityProtos.PCommunityBannerInfoEx) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
           break;
         case METHODID_PUT_COMMUNITY_NAME:
-          serviceImpl.putCommunityName((ResultProtos.PStringList) request,
-              (io.grpc.stub.StreamObserver<CommonApiProtos.PEmpty>) responseObserver);
+          serviceImpl.putCommunityName((com.blemobi.sep.probuf.ResultProtos.PStringList) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
+          break;
+        case METHODID_CHECK_MSG_IDS:
+          serviceImpl.checkMsgIds((com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PInt32List>) responseObserver);
           break;
         default:
           throw new AssertionError();
       }
     }
 
-    @Override
-    @SuppressWarnings("unchecked")
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
@@ -2223,7 +2296,8 @@ public class IGrpcCommunityGrpc {
         METHOD_GET_BANNER_INFO_LIST_EX,
         METHOD_PUT_BANNER_STATUS,
         METHOD_PUT_BANNER_INFO,
-        METHOD_PUT_COMMUNITY_NAME);
+        METHOD_PUT_COMMUNITY_NAME,
+        METHOD_CHECK_MSG_IDS);
   }
 
 }

@@ -15,12 +15,12 @@ public final class TaskApiProtos {
     /**
      * <code>repeated .bbproto.PTaskMsg taskMsg = 1;</code>
      */
-    java.util.List<PTaskMsg>
+    java.util.List<com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg> 
         getTaskMsgList();
     /**
      * <code>repeated .bbproto.PTaskMsg taskMsg = 1;</code>
      */
-    PTaskMsg getTaskMsg(int index);
+    com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg getTaskMsg(int index);
     /**
      * <code>repeated .bbproto.PTaskMsg taskMsg = 1;</code>
      */
@@ -28,13 +28,13 @@ public final class TaskApiProtos {
     /**
      * <code>repeated .bbproto.PTaskMsg taskMsg = 1;</code>
      */
-    java.util.List<? extends PTaskMsgOrBuilder>
+    java.util.List<? extends com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgOrBuilder> 
         getTaskMsgOrBuilderList();
     /**
      * <code>repeated .bbproto.PTaskMsg taskMsg = 1;</code>
      */
-    PTaskMsgOrBuilder getTaskMsgOrBuilder(
-            int index);
+    com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgOrBuilder getTaskMsgOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code bbproto.PTaskMsgs}
@@ -51,7 +51,7 @@ public final class TaskApiProtos {
       taskMsg_ = java.util.Collections.emptyList();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -77,10 +77,10 @@ public final class TaskApiProtos {
             }
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                taskMsg_ = new java.util.ArrayList<PTaskMsg>();
+                taskMsg_ = new java.util.ArrayList<com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              taskMsg_.add(input.readMessage(PTaskMsg.parser(), extensionRegistry));
+              taskMsg_.add(input.readMessage(com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg.parser(), extensionRegistry));
               break;
             }
           }
@@ -100,28 +100,28 @@ public final class TaskApiProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return TaskApiProtos.internal_static_bbproto_PTaskMsgs_descriptor;
+      return com.blemobi.sep.probuf.TaskApiProtos.internal_static_bbproto_PTaskMsgs_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return TaskApiProtos.internal_static_bbproto_PTaskMsgs_fieldAccessorTable
+      return com.blemobi.sep.probuf.TaskApiProtos.internal_static_bbproto_PTaskMsgs_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              PTaskMsgs.class, Builder.class);
+              com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs.class, com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs.Builder.class);
     }
 
     public static final int TASKMSG_FIELD_NUMBER = 1;
-    private java.util.List<PTaskMsg> taskMsg_;
+    private java.util.List<com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg> taskMsg_;
     /**
      * <code>repeated .bbproto.PTaskMsg taskMsg = 1;</code>
      */
-    public java.util.List<PTaskMsg> getTaskMsgList() {
+    public java.util.List<com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg> getTaskMsgList() {
       return taskMsg_;
     }
     /**
      * <code>repeated .bbproto.PTaskMsg taskMsg = 1;</code>
      */
-    public java.util.List<? extends PTaskMsgOrBuilder>
+    public java.util.List<? extends com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgOrBuilder> 
         getTaskMsgOrBuilderList() {
       return taskMsg_;
     }
@@ -134,13 +134,13 @@ public final class TaskApiProtos {
     /**
      * <code>repeated .bbproto.PTaskMsg taskMsg = 1;</code>
      */
-    public PTaskMsg getTaskMsg(int index) {
+    public com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg getTaskMsg(int index) {
       return taskMsg_.get(index);
     }
     /**
      * <code>repeated .bbproto.PTaskMsg taskMsg = 1;</code>
      */
-    public PTaskMsgOrBuilder getTaskMsgOrBuilder(
+    public com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgOrBuilder getTaskMsgOrBuilder(
         int index) {
       return taskMsg_.get(index);
     }
@@ -176,53 +176,53 @@ public final class TaskApiProtos {
     }
 
     private static final long serialVersionUID = 0L;
-    public static PTaskMsgs parseFrom(
+    public static com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static PTaskMsgs parseFrom(
+    public static com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static PTaskMsgs parseFrom(byte[] data)
+    public static com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static PTaskMsgs parseFrom(
+    public static com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static PTaskMsgs parseFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static PTaskMsgs parseFrom(
+    public static com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static PTaskMsgs parseDelimitedFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static PTaskMsgs parseDelimitedFrom(
+    public static com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static PTaskMsgs parseFrom(
+    public static com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static PTaskMsgs parseFrom(
+    public static com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -233,7 +233,7 @@ public final class TaskApiProtos {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(PTaskMsgs prototype) {
+    public static Builder newBuilder(com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -241,9 +241,9 @@ public final class TaskApiProtos {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -253,17 +253,17 @@ public final class TaskApiProtos {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:bbproto.PTaskMsgs)
-        PTaskMsgsOrBuilder {
+        com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return TaskApiProtos.internal_static_bbproto_PTaskMsgs_descriptor;
+        return com.blemobi.sep.probuf.TaskApiProtos.internal_static_bbproto_PTaskMsgs_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return TaskApiProtos.internal_static_bbproto_PTaskMsgs_fieldAccessorTable
+        return com.blemobi.sep.probuf.TaskApiProtos.internal_static_bbproto_PTaskMsgs_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                PTaskMsgs.class, Builder.class);
+                com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs.class, com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs.Builder.class);
       }
 
       // Construct using com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs.newBuilder()
@@ -272,7 +272,7 @@ public final class TaskApiProtos {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -294,23 +294,23 @@ public final class TaskApiProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return TaskApiProtos.internal_static_bbproto_PTaskMsgs_descriptor;
+        return com.blemobi.sep.probuf.TaskApiProtos.internal_static_bbproto_PTaskMsgs_descriptor;
       }
 
-      public PTaskMsgs getDefaultInstanceForType() {
-        return PTaskMsgs.getDefaultInstance();
+      public com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs.getDefaultInstance();
       }
 
-      public PTaskMsgs build() {
-        PTaskMsgs result = buildPartial();
+      public com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs build() {
+        com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public PTaskMsgs buildPartial() {
-        PTaskMsgs result = new PTaskMsgs(this);
+      public com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs buildPartial() {
+        com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs result = new com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs(this);
         int from_bitField0_ = bitField0_;
         if (taskMsgBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -326,16 +326,16 @@ public final class TaskApiProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof PTaskMsgs) {
-          return mergeFrom((PTaskMsgs)other);
+        if (other instanceof com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs) {
+          return mergeFrom((com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(PTaskMsgs other) {
-        if (other == PTaskMsgs.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs other) {
+        if (other == com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs.getDefaultInstance()) return this;
         if (taskMsgBuilder_ == null) {
           if (!other.taskMsg_.isEmpty()) {
             if (taskMsg_.isEmpty()) {
@@ -374,11 +374,11 @@ public final class TaskApiProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        PTaskMsgs parsedMessage = null;
+        com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (PTaskMsgs) e.getUnfinishedMessage();
+          parsedMessage = (com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -389,22 +389,22 @@ public final class TaskApiProtos {
       }
       private int bitField0_;
 
-      private java.util.List<PTaskMsg> taskMsg_ =
+      private java.util.List<com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg> taskMsg_ =
         java.util.Collections.emptyList();
       private void ensureTaskMsgIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          taskMsg_ = new java.util.ArrayList<PTaskMsg>(taskMsg_);
+          taskMsg_ = new java.util.ArrayList<com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg>(taskMsg_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          PTaskMsg, PTaskMsg.Builder, PTaskMsgOrBuilder> taskMsgBuilder_;
+          com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg, com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg.Builder, com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgOrBuilder> taskMsgBuilder_;
 
       /**
        * <code>repeated .bbproto.PTaskMsg taskMsg = 1;</code>
        */
-      public java.util.List<PTaskMsg> getTaskMsgList() {
+      public java.util.List<com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg> getTaskMsgList() {
         if (taskMsgBuilder_ == null) {
           return java.util.Collections.unmodifiableList(taskMsg_);
         } else {
@@ -424,7 +424,7 @@ public final class TaskApiProtos {
       /**
        * <code>repeated .bbproto.PTaskMsg taskMsg = 1;</code>
        */
-      public PTaskMsg getTaskMsg(int index) {
+      public com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg getTaskMsg(int index) {
         if (taskMsgBuilder_ == null) {
           return taskMsg_.get(index);
         } else {
@@ -435,7 +435,7 @@ public final class TaskApiProtos {
        * <code>repeated .bbproto.PTaskMsg taskMsg = 1;</code>
        */
       public Builder setTaskMsg(
-          int index, PTaskMsg value) {
+          int index, com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg value) {
         if (taskMsgBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -452,7 +452,7 @@ public final class TaskApiProtos {
        * <code>repeated .bbproto.PTaskMsg taskMsg = 1;</code>
        */
       public Builder setTaskMsg(
-          int index, PTaskMsg.Builder builderForValue) {
+          int index, com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg.Builder builderForValue) {
         if (taskMsgBuilder_ == null) {
           ensureTaskMsgIsMutable();
           taskMsg_.set(index, builderForValue.build());
@@ -465,7 +465,7 @@ public final class TaskApiProtos {
       /**
        * <code>repeated .bbproto.PTaskMsg taskMsg = 1;</code>
        */
-      public Builder addTaskMsg(PTaskMsg value) {
+      public Builder addTaskMsg(com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg value) {
         if (taskMsgBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -482,7 +482,7 @@ public final class TaskApiProtos {
        * <code>repeated .bbproto.PTaskMsg taskMsg = 1;</code>
        */
       public Builder addTaskMsg(
-          int index, PTaskMsg value) {
+          int index, com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg value) {
         if (taskMsgBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -499,7 +499,7 @@ public final class TaskApiProtos {
        * <code>repeated .bbproto.PTaskMsg taskMsg = 1;</code>
        */
       public Builder addTaskMsg(
-          PTaskMsg.Builder builderForValue) {
+          com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg.Builder builderForValue) {
         if (taskMsgBuilder_ == null) {
           ensureTaskMsgIsMutable();
           taskMsg_.add(builderForValue.build());
@@ -513,7 +513,7 @@ public final class TaskApiProtos {
        * <code>repeated .bbproto.PTaskMsg taskMsg = 1;</code>
        */
       public Builder addTaskMsg(
-          int index, PTaskMsg.Builder builderForValue) {
+          int index, com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg.Builder builderForValue) {
         if (taskMsgBuilder_ == null) {
           ensureTaskMsgIsMutable();
           taskMsg_.add(index, builderForValue.build());
@@ -527,7 +527,7 @@ public final class TaskApiProtos {
        * <code>repeated .bbproto.PTaskMsg taskMsg = 1;</code>
        */
       public Builder addAllTaskMsg(
-          Iterable<? extends PTaskMsg> values) {
+          java.lang.Iterable<? extends com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg> values) {
         if (taskMsgBuilder_ == null) {
           ensureTaskMsgIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -567,14 +567,14 @@ public final class TaskApiProtos {
       /**
        * <code>repeated .bbproto.PTaskMsg taskMsg = 1;</code>
        */
-      public PTaskMsg.Builder getTaskMsgBuilder(
+      public com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg.Builder getTaskMsgBuilder(
           int index) {
         return getTaskMsgFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .bbproto.PTaskMsg taskMsg = 1;</code>
        */
-      public PTaskMsgOrBuilder getTaskMsgOrBuilder(
+      public com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgOrBuilder getTaskMsgOrBuilder(
           int index) {
         if (taskMsgBuilder_ == null) {
           return taskMsg_.get(index);  } else {
@@ -584,7 +584,7 @@ public final class TaskApiProtos {
       /**
        * <code>repeated .bbproto.PTaskMsg taskMsg = 1;</code>
        */
-      public java.util.List<? extends PTaskMsgOrBuilder>
+      public java.util.List<? extends com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgOrBuilder> 
            getTaskMsgOrBuilderList() {
         if (taskMsgBuilder_ != null) {
           return taskMsgBuilder_.getMessageOrBuilderList();
@@ -595,31 +595,31 @@ public final class TaskApiProtos {
       /**
        * <code>repeated .bbproto.PTaskMsg taskMsg = 1;</code>
        */
-      public PTaskMsg.Builder addTaskMsgBuilder() {
+      public com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg.Builder addTaskMsgBuilder() {
         return getTaskMsgFieldBuilder().addBuilder(
-            PTaskMsg.getDefaultInstance());
+            com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg.getDefaultInstance());
       }
       /**
        * <code>repeated .bbproto.PTaskMsg taskMsg = 1;</code>
        */
-      public PTaskMsg.Builder addTaskMsgBuilder(
+      public com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg.Builder addTaskMsgBuilder(
           int index) {
         return getTaskMsgFieldBuilder().addBuilder(
-            index, PTaskMsg.getDefaultInstance());
+            index, com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg.getDefaultInstance());
       }
       /**
        * <code>repeated .bbproto.PTaskMsg taskMsg = 1;</code>
        */
-      public java.util.List<PTaskMsg.Builder>
+      public java.util.List<com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg.Builder> 
            getTaskMsgBuilderList() {
         return getTaskMsgFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          PTaskMsg, PTaskMsg.Builder, PTaskMsgOrBuilder>
+          com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg, com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg.Builder, com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgOrBuilder> 
           getTaskMsgFieldBuilder() {
         if (taskMsgBuilder_ == null) {
           taskMsgBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              PTaskMsg, PTaskMsg.Builder, PTaskMsgOrBuilder>(
+              com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg, com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg.Builder, com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgOrBuilder>(
                   taskMsg_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
@@ -643,12 +643,12 @@ public final class TaskApiProtos {
     }
 
     // @@protoc_insertion_point(class_scope:bbproto.PTaskMsgs)
-    private static final PTaskMsgs DEFAULT_INSTANCE;
+    private static final com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new PTaskMsgs();
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs();
     }
 
-    public static PTaskMsgs getDefaultInstance() {
+    public static com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -675,12 +675,12 @@ public final class TaskApiProtos {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<PTaskMsgs> getParserForType() {
       return PARSER;
     }
 
-    public PTaskMsgs getDefaultInstanceForType() {
+    public com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -697,7 +697,7 @@ public final class TaskApiProtos {
      * 用户uuid
      * </pre>
      */
-    String getUuid();
+    java.lang.String getUuid();
     /**
      * <code>optional string uuid = 1;</code>
      *
@@ -743,7 +743,7 @@ public final class TaskApiProtos {
       count_ = 0;
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -768,7 +768,7 @@ public final class TaskApiProtos {
               break;
             }
             case 10: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               uuid_ = s;
               break;
@@ -797,18 +797,18 @@ public final class TaskApiProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return TaskApiProtos.internal_static_bbproto_PTaskMsg_descriptor;
+      return com.blemobi.sep.probuf.TaskApiProtos.internal_static_bbproto_PTaskMsg_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return TaskApiProtos.internal_static_bbproto_PTaskMsg_fieldAccessorTable
+      return com.blemobi.sep.probuf.TaskApiProtos.internal_static_bbproto_PTaskMsg_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              PTaskMsg.class, Builder.class);
+              com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg.class, com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg.Builder.class);
     }
 
     public static final int UUID_FIELD_NUMBER = 1;
-    private volatile Object uuid_;
+    private volatile java.lang.Object uuid_;
     /**
      * <code>optional string uuid = 1;</code>
      *
@@ -816,14 +816,14 @@ public final class TaskApiProtos {
      * 用户uuid
      * </pre>
      */
-    public String getUuid() {
-      Object ref = uuid_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getUuid() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         uuid_ = s;
         return s;
       }
@@ -837,11 +837,11 @@ public final class TaskApiProtos {
      */
     public com.google.protobuf.ByteString
         getUuidBytes() {
-      Object ref = uuid_;
-      if (ref instanceof String) {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         uuid_ = b;
         return b;
       } else {
@@ -919,53 +919,53 @@ public final class TaskApiProtos {
     }
 
     private static final long serialVersionUID = 0L;
-    public static PTaskMsg parseFrom(
+    public static com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static PTaskMsg parseFrom(
+    public static com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static PTaskMsg parseFrom(byte[] data)
+    public static com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static PTaskMsg parseFrom(
+    public static com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static PTaskMsg parseFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static PTaskMsg parseFrom(
+    public static com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static PTaskMsg parseDelimitedFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static PTaskMsg parseDelimitedFrom(
+    public static com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static PTaskMsg parseFrom(
+    public static com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static PTaskMsg parseFrom(
+    public static com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -976,7 +976,7 @@ public final class TaskApiProtos {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(PTaskMsg prototype) {
+    public static Builder newBuilder(com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -984,9 +984,9 @@ public final class TaskApiProtos {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -996,17 +996,17 @@ public final class TaskApiProtos {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:bbproto.PTaskMsg)
-        PTaskMsgOrBuilder {
+        com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return TaskApiProtos.internal_static_bbproto_PTaskMsg_descriptor;
+        return com.blemobi.sep.probuf.TaskApiProtos.internal_static_bbproto_PTaskMsg_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return TaskApiProtos.internal_static_bbproto_PTaskMsg_fieldAccessorTable
+        return com.blemobi.sep.probuf.TaskApiProtos.internal_static_bbproto_PTaskMsg_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                PTaskMsg.class, Builder.class);
+                com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg.class, com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg.Builder.class);
       }
 
       // Construct using com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg.newBuilder()
@@ -1015,7 +1015,7 @@ public final class TaskApiProtos {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1036,23 +1036,23 @@ public final class TaskApiProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return TaskApiProtos.internal_static_bbproto_PTaskMsg_descriptor;
+        return com.blemobi.sep.probuf.TaskApiProtos.internal_static_bbproto_PTaskMsg_descriptor;
       }
 
-      public PTaskMsg getDefaultInstanceForType() {
-        return PTaskMsg.getDefaultInstance();
+      public com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg.getDefaultInstance();
       }
 
-      public PTaskMsg build() {
-        PTaskMsg result = buildPartial();
+      public com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg build() {
+        com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public PTaskMsg buildPartial() {
-        PTaskMsg result = new PTaskMsg(this);
+      public com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg buildPartial() {
+        com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg result = new com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg(this);
         result.uuid_ = uuid_;
         result.msgID_ = msgID_;
         result.count_ = count_;
@@ -1061,16 +1061,16 @@ public final class TaskApiProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof PTaskMsg) {
-          return mergeFrom((PTaskMsg)other);
+        if (other instanceof com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg) {
+          return mergeFrom((com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(PTaskMsg other) {
-        if (other == PTaskMsg.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg other) {
+        if (other == com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg.getDefaultInstance()) return this;
         if (!other.getUuid().isEmpty()) {
           uuid_ = other.uuid_;
           onChanged();
@@ -1093,11 +1093,11 @@ public final class TaskApiProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        PTaskMsg parsedMessage = null;
+        com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (PTaskMsg) e.getUnfinishedMessage();
+          parsedMessage = (com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -1107,7 +1107,7 @@ public final class TaskApiProtos {
         return this;
       }
 
-      private Object uuid_ = "";
+      private java.lang.Object uuid_ = "";
       /**
        * <code>optional string uuid = 1;</code>
        *
@@ -1115,16 +1115,16 @@ public final class TaskApiProtos {
        * 用户uuid
        * </pre>
        */
-      public String getUuid() {
-        Object ref = uuid_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getUuid() {
+        java.lang.Object ref = uuid_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           uuid_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -1136,11 +1136,11 @@ public final class TaskApiProtos {
        */
       public com.google.protobuf.ByteString
           getUuidBytes() {
-        Object ref = uuid_;
+        java.lang.Object ref = uuid_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           uuid_ = b;
           return b;
         } else {
@@ -1155,7 +1155,7 @@ public final class TaskApiProtos {
        * </pre>
        */
       public Builder setUuid(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1286,12 +1286,12 @@ public final class TaskApiProtos {
     }
 
     // @@protoc_insertion_point(class_scope:bbproto.PTaskMsg)
-    private static final PTaskMsg DEFAULT_INSTANCE;
+    private static final com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new PTaskMsg();
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg();
     }
 
-    public static PTaskMsg getDefaultInstance() {
+    public static com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1318,12 +1318,12 @@ public final class TaskApiProtos {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<PTaskMsg> getParserForType() {
       return PARSER;
     }
 
-    public PTaskMsg getDefaultInstanceForType() {
+    public com.blemobi.sep.probuf.TaskApiProtos.PTaskMsg getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1340,7 +1340,7 @@ public final class TaskApiProtos {
      * 用户uuid
      * </pre>
      */
-    String getUuid();
+    java.lang.String getUuid();
     /**
      * <code>optional string uuid = 1;</code>
      *
@@ -1358,7 +1358,7 @@ public final class TaskApiProtos {
      * 订单号
      * </pre>
      */
-    String getOrderNo();
+    java.lang.String getOrderNo();
     /**
      * <code>optional string orderNo = 2;</code>
      *
@@ -1395,7 +1395,7 @@ public final class TaskApiProtos {
       gold_ = 0;
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -1420,13 +1420,13 @@ public final class TaskApiProtos {
               break;
             }
             case 10: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               uuid_ = s;
               break;
             }
             case 18: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               orderNo_ = s;
               break;
@@ -1450,18 +1450,18 @@ public final class TaskApiProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return TaskApiProtos.internal_static_bbproto_PGoldExchg_descriptor;
+      return com.blemobi.sep.probuf.TaskApiProtos.internal_static_bbproto_PGoldExchg_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return TaskApiProtos.internal_static_bbproto_PGoldExchg_fieldAccessorTable
+      return com.blemobi.sep.probuf.TaskApiProtos.internal_static_bbproto_PGoldExchg_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              PGoldExchg.class, Builder.class);
+              com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg.class, com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg.Builder.class);
     }
 
     public static final int UUID_FIELD_NUMBER = 1;
-    private volatile Object uuid_;
+    private volatile java.lang.Object uuid_;
     /**
      * <code>optional string uuid = 1;</code>
      *
@@ -1469,14 +1469,14 @@ public final class TaskApiProtos {
      * 用户uuid
      * </pre>
      */
-    public String getUuid() {
-      Object ref = uuid_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getUuid() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         uuid_ = s;
         return s;
       }
@@ -1490,11 +1490,11 @@ public final class TaskApiProtos {
      */
     public com.google.protobuf.ByteString
         getUuidBytes() {
-      Object ref = uuid_;
-      if (ref instanceof String) {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         uuid_ = b;
         return b;
       } else {
@@ -1503,7 +1503,7 @@ public final class TaskApiProtos {
     }
 
     public static final int ORDERNO_FIELD_NUMBER = 2;
-    private volatile Object orderNo_;
+    private volatile java.lang.Object orderNo_;
     /**
      * <code>optional string orderNo = 2;</code>
      *
@@ -1511,14 +1511,14 @@ public final class TaskApiProtos {
      * 订单号
      * </pre>
      */
-    public String getOrderNo() {
-      Object ref = orderNo_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getOrderNo() {
+      java.lang.Object ref = orderNo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         orderNo_ = s;
         return s;
       }
@@ -1532,11 +1532,11 @@ public final class TaskApiProtos {
      */
     public com.google.protobuf.ByteString
         getOrderNoBytes() {
-      Object ref = orderNo_;
-      if (ref instanceof String) {
+      java.lang.Object ref = orderNo_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         orderNo_ = b;
         return b;
       } else {
@@ -1600,53 +1600,53 @@ public final class TaskApiProtos {
     }
 
     private static final long serialVersionUID = 0L;
-    public static PGoldExchg parseFrom(
+    public static com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static PGoldExchg parseFrom(
+    public static com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static PGoldExchg parseFrom(byte[] data)
+    public static com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static PGoldExchg parseFrom(
+    public static com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static PGoldExchg parseFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static PGoldExchg parseFrom(
+    public static com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static PGoldExchg parseDelimitedFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static PGoldExchg parseDelimitedFrom(
+    public static com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static PGoldExchg parseFrom(
+    public static com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static PGoldExchg parseFrom(
+    public static com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1657,7 +1657,7 @@ public final class TaskApiProtos {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(PGoldExchg prototype) {
+    public static Builder newBuilder(com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -1665,9 +1665,9 @@ public final class TaskApiProtos {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1677,17 +1677,17 @@ public final class TaskApiProtos {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:bbproto.PGoldExchg)
-        PGoldExchgOrBuilder {
+        com.blemobi.sep.probuf.TaskApiProtos.PGoldExchgOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return TaskApiProtos.internal_static_bbproto_PGoldExchg_descriptor;
+        return com.blemobi.sep.probuf.TaskApiProtos.internal_static_bbproto_PGoldExchg_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return TaskApiProtos.internal_static_bbproto_PGoldExchg_fieldAccessorTable
+        return com.blemobi.sep.probuf.TaskApiProtos.internal_static_bbproto_PGoldExchg_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                PGoldExchg.class, Builder.class);
+                com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg.class, com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg.Builder.class);
       }
 
       // Construct using com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg.newBuilder()
@@ -1696,7 +1696,7 @@ public final class TaskApiProtos {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1717,23 +1717,23 @@ public final class TaskApiProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return TaskApiProtos.internal_static_bbproto_PGoldExchg_descriptor;
+        return com.blemobi.sep.probuf.TaskApiProtos.internal_static_bbproto_PGoldExchg_descriptor;
       }
 
-      public PGoldExchg getDefaultInstanceForType() {
-        return PGoldExchg.getDefaultInstance();
+      public com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg.getDefaultInstance();
       }
 
-      public PGoldExchg build() {
-        PGoldExchg result = buildPartial();
+      public com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg build() {
+        com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public PGoldExchg buildPartial() {
-        PGoldExchg result = new PGoldExchg(this);
+      public com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg buildPartial() {
+        com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg result = new com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg(this);
         result.uuid_ = uuid_;
         result.orderNo_ = orderNo_;
         result.gold_ = gold_;
@@ -1742,16 +1742,16 @@ public final class TaskApiProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof PGoldExchg) {
-          return mergeFrom((PGoldExchg)other);
+        if (other instanceof com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg) {
+          return mergeFrom((com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(PGoldExchg other) {
-        if (other == PGoldExchg.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg other) {
+        if (other == com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg.getDefaultInstance()) return this;
         if (!other.getUuid().isEmpty()) {
           uuid_ = other.uuid_;
           onChanged();
@@ -1775,11 +1775,11 @@ public final class TaskApiProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        PGoldExchg parsedMessage = null;
+        com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (PGoldExchg) e.getUnfinishedMessage();
+          parsedMessage = (com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -1789,7 +1789,7 @@ public final class TaskApiProtos {
         return this;
       }
 
-      private Object uuid_ = "";
+      private java.lang.Object uuid_ = "";
       /**
        * <code>optional string uuid = 1;</code>
        *
@@ -1797,16 +1797,16 @@ public final class TaskApiProtos {
        * 用户uuid
        * </pre>
        */
-      public String getUuid() {
-        Object ref = uuid_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getUuid() {
+        java.lang.Object ref = uuid_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           uuid_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -1818,11 +1818,11 @@ public final class TaskApiProtos {
        */
       public com.google.protobuf.ByteString
           getUuidBytes() {
-        Object ref = uuid_;
+        java.lang.Object ref = uuid_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           uuid_ = b;
           return b;
         } else {
@@ -1837,7 +1837,7 @@ public final class TaskApiProtos {
        * </pre>
        */
       public Builder setUuid(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1878,7 +1878,7 @@ public final class TaskApiProtos {
         return this;
       }
 
-      private Object orderNo_ = "";
+      private java.lang.Object orderNo_ = "";
       /**
        * <code>optional string orderNo = 2;</code>
        *
@@ -1886,16 +1886,16 @@ public final class TaskApiProtos {
        * 订单号
        * </pre>
        */
-      public String getOrderNo() {
-        Object ref = orderNo_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getOrderNo() {
+        java.lang.Object ref = orderNo_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           orderNo_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -1907,11 +1907,11 @@ public final class TaskApiProtos {
        */
       public com.google.protobuf.ByteString
           getOrderNoBytes() {
-        Object ref = orderNo_;
+        java.lang.Object ref = orderNo_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           orderNo_ = b;
           return b;
         } else {
@@ -1926,7 +1926,7 @@ public final class TaskApiProtos {
        * </pre>
        */
       public Builder setOrderNo(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2019,12 +2019,12 @@ public final class TaskApiProtos {
     }
 
     // @@protoc_insertion_point(class_scope:bbproto.PGoldExchg)
-    private static final PGoldExchg DEFAULT_INSTANCE;
+    private static final com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new PGoldExchg();
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg();
     }
 
-    public static PGoldExchg getDefaultInstance() {
+    public static com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2051,12 +2051,12 @@ public final class TaskApiProtos {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<PGoldExchg> getParserForType() {
       return PARSER;
     }
 
-    public PGoldExchg getDefaultInstanceForType() {
+    public com.blemobi.sep.probuf.TaskApiProtos.PGoldExchg getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2085,7 +2085,7 @@ public final class TaskApiProtos {
   private static com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    String[] descriptorData = {
+    java.lang.String[] descriptorData = {
       "\n\021task_inside.proto\022\007bbproto\032\014result.pro" +
       "to\"/\n\tPTaskMsgs\022\"\n\007taskMsg\030\001 \003(\0132\021.bbpro" +
       "to.PTaskMsg\"6\n\010PTaskMsg\022\014\n\004uuid\030\001 \001(\t\022\r\n" +
@@ -2109,27 +2109,27 @@ public final class TaskApiProtos {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          ResultProtos.getDescriptor(),
+          com.blemobi.sep.probuf.ResultProtos.getDescriptor(),
         }, assigner);
     internal_static_bbproto_PTaskMsgs_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_bbproto_PTaskMsgs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PTaskMsgs_descriptor,
-        new String[] { "TaskMsg", });
+        new java.lang.String[] { "TaskMsg", });
     internal_static_bbproto_PTaskMsg_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_bbproto_PTaskMsg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PTaskMsg_descriptor,
-        new String[] { "Uuid", "MsgID", "Count", });
+        new java.lang.String[] { "Uuid", "MsgID", "Count", });
     internal_static_bbproto_PGoldExchg_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_bbproto_PGoldExchg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PGoldExchg_descriptor,
-        new String[] { "Uuid", "OrderNo", "Gold", });
-    ResultProtos.getDescriptor();
+        new java.lang.String[] { "Uuid", "OrderNo", "Gold", });
+    com.blemobi.sep.probuf.ResultProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -25,14 +25,14 @@ public class AchievementHttpClient extends BaseHttpClient {
 	 * @throws IOException
 	 */
 	public PMessage action(PAchievementActions achievementActions) throws IOException {
-		super.basePath = new StringBuilder("/v1/achievement/inside/action?from=");
-		super.basePath.append(JettyServer.getServerName());
+		StringBuilder basePath = new StringBuilder("/v1/achievement/inside/action?from=");
+		basePath.append(JettyServer.getServerName());
 
 		PMessage messagebody = PMessage.newBuilder().setType("PAchievementActions")
 				.setData(achievementActions.toByteString()).build();
 
 		super.body = messagebody.toByteArray();
 		super.contentType = "application/x-protobuf";
-		return super.postBodyMethod();
+		return super.postBodyMethod(basePath.toString());
 	}
 }

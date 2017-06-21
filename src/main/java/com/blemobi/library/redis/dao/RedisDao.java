@@ -3,6 +3,7 @@ package com.blemobi.library.redis.dao;
 import java.io.IOException;
 import java.util.List;
 
+import com.blemobi.library.redis.LockManager;
 import com.blemobi.library.redis.RedisManager;
 
 import redis.clients.jedis.Jedis;
@@ -59,6 +60,17 @@ public class RedisDao<T> {
 			}
 			RedisManager.returnResource(jedis);
 		}
+	}
+
+	public T execLock(String lock, ILockDao<T> lockDao) {
+		if (LockManager.getLock(lock, 30)) {
+			try {
+				return lockDao.sync();
+			} finally {
+				LockManager.releaseLock(lock);
+			}
+		} else
+			throw new RuntimeException("获得同步锁失败！");
 	}
 
 	/**

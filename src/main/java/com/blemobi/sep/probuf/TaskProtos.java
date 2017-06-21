@@ -8,1416 +8,90 @@ public final class TaskProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface PTaskUserBasicOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bbproto.PTaskUserBasic)
+  public interface PGoldTaskOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PGoldTask)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional int32 level = 1;</code>
-     *
-     * <pre>
-     * 经验等级（1-9依次为：新手、菜鸟、青铜、白银、黄金、白金、钻石、大师、王者）
-     * </pre>
-     */
-    int getLevel();
-
-    /**
-     * <code>optional string levelName = 2;</code>
-     *
-     * <pre>
-     * 经验等级名称（预留）
-     * </pre>
-     */
-    java.lang.String getLevelName();
-    /**
-     * <code>optional string levelName = 2;</code>
-     *
-     * <pre>
-     * 经验等级名称（预留）
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getLevelNameBytes();
-
-    /**
-     * <code>optional int64 exp = 3;</code>
-     *
-     * <pre>
-     * 经验值
-     * </pre>
-     */
-    long getExp();
-
-    /**
-     * <code>optional int32 nextLevel = 4;</code>
-     *
-     * <pre>
-     * 下一个经验等级（如果=level表示已是最高等级）
-     * </pre>
-     */
-    int getNextLevel();
-
-    /**
-     * <code>optional string nextLevelName = 5;</code>
-     *
-     * <pre>
-     * 下一个经验等级名称（预留）
-     * </pre>
-     */
-    java.lang.String getNextLevelName();
-    /**
-     * <code>optional string nextLevelName = 5;</code>
-     *
-     * <pre>
-     * 下一个经验等级名称（预留）
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getNextLevelNameBytes();
-
-    /**
-     * <code>optional int64 nextLevelExp = 6;</code>
-     *
-     * <pre>
-     * 下一个经验等级的最低经验值
-     * </pre>
-     */
-    long getNextLevelExp();
-
-    /**
-     * <code>optional string nickname = 7;</code>
-     *
-     * <pre>
-     * 用户昵称
-     * </pre>
-     */
-    java.lang.String getNickname();
-    /**
-     * <code>optional string nickname = 7;</code>
-     *
-     * <pre>
-     * 用户昵称
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getNicknameBytes();
-
-    /**
-     * <code>optional string headimg = 8;</code>
-     *
-     * <pre>
-     * 用户头像url
-     * </pre>
-     */
-    java.lang.String getHeadimg();
-    /**
-     * <code>optional string headimg = 8;</code>
-     *
-     * <pre>
-     * 用户头像url
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getHeadimgBytes();
-  }
-  /**
-   * Protobuf type {@code bbproto.PTaskUserBasic}
-   */
-  public  static final class PTaskUserBasic extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:bbproto.PTaskUserBasic)
-      PTaskUserBasicOrBuilder {
-    // Use PTaskUserBasic.newBuilder() to construct.
-    private PTaskUserBasic(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-    }
-    private PTaskUserBasic() {
-      level_ = 0;
-      levelName_ = "";
-      exp_ = 0L;
-      nextLevel_ = 0;
-      nextLevelName_ = "";
-      nextLevelExp_ = 0L;
-      nickname_ = "";
-      headimg_ = "";
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-    }
-    private PTaskUserBasic(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
-      this();
-      int mutable_bitField0_ = 0;
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 8: {
-
-              level_ = input.readInt32();
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              levelName_ = s;
-              break;
-            }
-            case 24: {
-
-              exp_ = input.readInt64();
-              break;
-            }
-            case 32: {
-
-              nextLevel_ = input.readInt32();
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              nextLevelName_ = s;
-              break;
-            }
-            case 48: {
-
-              nextLevelExp_ = input.readInt64();
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              nickname_ = s;
-              break;
-            }
-            case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              headimg_ = s;
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
-      } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
-      } finally {
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PTaskUserBasic_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PTaskUserBasic_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.class, com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.Builder.class);
-    }
-
-    public static final int LEVEL_FIELD_NUMBER = 1;
-    private int level_;
-    /**
-     * <code>optional int32 level = 1;</code>
-     *
-     * <pre>
-     * 经验等级（1-9依次为：新手、菜鸟、青铜、白银、黄金、白金、钻石、大师、王者）
-     * </pre>
-     */
-    public int getLevel() {
-      return level_;
-    }
-
-    public static final int LEVELNAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object levelName_;
-    /**
-     * <code>optional string levelName = 2;</code>
-     *
-     * <pre>
-     * 经验等级名称（预留）
-     * </pre>
-     */
-    public java.lang.String getLevelName() {
-      java.lang.Object ref = levelName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        levelName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>optional string levelName = 2;</code>
-     *
-     * <pre>
-     * 经验等级名称（预留）
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getLevelNameBytes() {
-      java.lang.Object ref = levelName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        levelName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int EXP_FIELD_NUMBER = 3;
-    private long exp_;
-    /**
-     * <code>optional int64 exp = 3;</code>
-     *
-     * <pre>
-     * 经验值
-     * </pre>
-     */
-    public long getExp() {
-      return exp_;
-    }
-
-    public static final int NEXTLEVEL_FIELD_NUMBER = 4;
-    private int nextLevel_;
-    /**
-     * <code>optional int32 nextLevel = 4;</code>
-     *
-     * <pre>
-     * 下一个经验等级（如果=level表示已是最高等级）
-     * </pre>
-     */
-    public int getNextLevel() {
-      return nextLevel_;
-    }
-
-    public static final int NEXTLEVELNAME_FIELD_NUMBER = 5;
-    private volatile java.lang.Object nextLevelName_;
-    /**
-     * <code>optional string nextLevelName = 5;</code>
-     *
-     * <pre>
-     * 下一个经验等级名称（预留）
-     * </pre>
-     */
-    public java.lang.String getNextLevelName() {
-      java.lang.Object ref = nextLevelName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        nextLevelName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>optional string nextLevelName = 5;</code>
-     *
-     * <pre>
-     * 下一个经验等级名称（预留）
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getNextLevelNameBytes() {
-      java.lang.Object ref = nextLevelName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        nextLevelName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int NEXTLEVELEXP_FIELD_NUMBER = 6;
-    private long nextLevelExp_;
-    /**
-     * <code>optional int64 nextLevelExp = 6;</code>
-     *
-     * <pre>
-     * 下一个经验等级的最低经验值
-     * </pre>
-     */
-    public long getNextLevelExp() {
-      return nextLevelExp_;
-    }
-
-    public static final int NICKNAME_FIELD_NUMBER = 7;
-    private volatile java.lang.Object nickname_;
-    /**
-     * <code>optional string nickname = 7;</code>
-     *
-     * <pre>
-     * 用户昵称
-     * </pre>
-     */
-    public java.lang.String getNickname() {
-      java.lang.Object ref = nickname_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        nickname_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>optional string nickname = 7;</code>
-     *
-     * <pre>
-     * 用户昵称
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getNicknameBytes() {
-      java.lang.Object ref = nickname_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        nickname_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int HEADIMG_FIELD_NUMBER = 8;
-    private volatile java.lang.Object headimg_;
-    /**
-     * <code>optional string headimg = 8;</code>
-     *
-     * <pre>
-     * 用户头像url
-     * </pre>
-     */
-    public java.lang.String getHeadimg() {
-      java.lang.Object ref = headimg_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        headimg_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>optional string headimg = 8;</code>
-     *
-     * <pre>
-     * 用户头像url
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getHeadimgBytes() {
-      java.lang.Object ref = headimg_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        headimg_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (level_ != 0) {
-        output.writeInt32(1, level_);
-      }
-      if (!getLevelNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 2, levelName_);
-      }
-      if (exp_ != 0L) {
-        output.writeInt64(3, exp_);
-      }
-      if (nextLevel_ != 0) {
-        output.writeInt32(4, nextLevel_);
-      }
-      if (!getNextLevelNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 5, nextLevelName_);
-      }
-      if (nextLevelExp_ != 0L) {
-        output.writeInt64(6, nextLevelExp_);
-      }
-      if (!getNicknameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 7, nickname_);
-      }
-      if (!getHeadimgBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 8, headimg_);
-      }
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (level_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, level_);
-      }
-      if (!getLevelNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, levelName_);
-      }
-      if (exp_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(3, exp_);
-      }
-      if (nextLevel_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, nextLevel_);
-      }
-      if (!getNextLevelNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, nextLevelName_);
-      }
-      if (nextLevelExp_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(6, nextLevelExp_);
-      }
-      if (!getNicknameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, nickname_);
-      }
-      if (!getHeadimgBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(8, headimg_);
-      }
-      memoizedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code bbproto.PTaskUserBasic}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bbproto.PTaskUserBasic)
-        com.blemobi.sep.probuf.TaskProtos.PTaskUserBasicOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PTaskUserBasic_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PTaskUserBasic_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.class, com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.Builder.class);
-      }
-
-      // Construct using com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        level_ = 0;
-
-        levelName_ = "";
-
-        exp_ = 0L;
-
-        nextLevel_ = 0;
-
-        nextLevelName_ = "";
-
-        nextLevelExp_ = 0L;
-
-        nickname_ = "";
-
-        headimg_ = "";
-
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PTaskUserBasic_descriptor;
-      }
-
-      public com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.getDefaultInstance();
-      }
-
-      public com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic build() {
-        com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic buildPartial() {
-        com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic result = new com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic(this);
-        result.level_ = level_;
-        result.levelName_ = levelName_;
-        result.exp_ = exp_;
-        result.nextLevel_ = nextLevel_;
-        result.nextLevelName_ = nextLevelName_;
-        result.nextLevelExp_ = nextLevelExp_;
-        result.nickname_ = nickname_;
-        result.headimg_ = headimg_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic) {
-          return mergeFrom((com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic other) {
-        if (other == com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.getDefaultInstance()) return this;
-        if (other.getLevel() != 0) {
-          setLevel(other.getLevel());
-        }
-        if (!other.getLevelName().isEmpty()) {
-          levelName_ = other.levelName_;
-          onChanged();
-        }
-        if (other.getExp() != 0L) {
-          setExp(other.getExp());
-        }
-        if (other.getNextLevel() != 0) {
-          setNextLevel(other.getNextLevel());
-        }
-        if (!other.getNextLevelName().isEmpty()) {
-          nextLevelName_ = other.nextLevelName_;
-          onChanged();
-        }
-        if (other.getNextLevelExp() != 0L) {
-          setNextLevelExp(other.getNextLevelExp());
-        }
-        if (!other.getNickname().isEmpty()) {
-          nickname_ = other.nickname_;
-          onChanged();
-        }
-        if (!other.getHeadimg().isEmpty()) {
-          headimg_ = other.headimg_;
-          onChanged();
-        }
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private int level_ ;
-      /**
-       * <code>optional int32 level = 1;</code>
-       *
-       * <pre>
-       * 经验等级（1-9依次为：新手、菜鸟、青铜、白银、黄金、白金、钻石、大师、王者）
-       * </pre>
-       */
-      public int getLevel() {
-        return level_;
-      }
-      /**
-       * <code>optional int32 level = 1;</code>
-       *
-       * <pre>
-       * 经验等级（1-9依次为：新手、菜鸟、青铜、白银、黄金、白金、钻石、大师、王者）
-       * </pre>
-       */
-      public Builder setLevel(int value) {
-        
-        level_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 level = 1;</code>
-       *
-       * <pre>
-       * 经验等级（1-9依次为：新手、菜鸟、青铜、白银、黄金、白金、钻石、大师、王者）
-       * </pre>
-       */
-      public Builder clearLevel() {
-        
-        level_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object levelName_ = "";
-      /**
-       * <code>optional string levelName = 2;</code>
-       *
-       * <pre>
-       * 经验等级名称（预留）
-       * </pre>
-       */
-      public java.lang.String getLevelName() {
-        java.lang.Object ref = levelName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          levelName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string levelName = 2;</code>
-       *
-       * <pre>
-       * 经验等级名称（预留）
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getLevelNameBytes() {
-        java.lang.Object ref = levelName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          levelName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string levelName = 2;</code>
-       *
-       * <pre>
-       * 经验等级名称（预留）
-       * </pre>
-       */
-      public Builder setLevelName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        levelName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string levelName = 2;</code>
-       *
-       * <pre>
-       * 经验等级名称（预留）
-       * </pre>
-       */
-      public Builder clearLevelName() {
-        
-        levelName_ = getDefaultInstance().getLevelName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string levelName = 2;</code>
-       *
-       * <pre>
-       * 经验等级名称（预留）
-       * </pre>
-       */
-      public Builder setLevelNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        levelName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private long exp_ ;
-      /**
-       * <code>optional int64 exp = 3;</code>
-       *
-       * <pre>
-       * 经验值
-       * </pre>
-       */
-      public long getExp() {
-        return exp_;
-      }
-      /**
-       * <code>optional int64 exp = 3;</code>
-       *
-       * <pre>
-       * 经验值
-       * </pre>
-       */
-      public Builder setExp(long value) {
-        
-        exp_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int64 exp = 3;</code>
-       *
-       * <pre>
-       * 经验值
-       * </pre>
-       */
-      public Builder clearExp() {
-        
-        exp_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private int nextLevel_ ;
-      /**
-       * <code>optional int32 nextLevel = 4;</code>
-       *
-       * <pre>
-       * 下一个经验等级（如果=level表示已是最高等级）
-       * </pre>
-       */
-      public int getNextLevel() {
-        return nextLevel_;
-      }
-      /**
-       * <code>optional int32 nextLevel = 4;</code>
-       *
-       * <pre>
-       * 下一个经验等级（如果=level表示已是最高等级）
-       * </pre>
-       */
-      public Builder setNextLevel(int value) {
-        
-        nextLevel_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 nextLevel = 4;</code>
-       *
-       * <pre>
-       * 下一个经验等级（如果=level表示已是最高等级）
-       * </pre>
-       */
-      public Builder clearNextLevel() {
-        
-        nextLevel_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object nextLevelName_ = "";
-      /**
-       * <code>optional string nextLevelName = 5;</code>
-       *
-       * <pre>
-       * 下一个经验等级名称（预留）
-       * </pre>
-       */
-      public java.lang.String getNextLevelName() {
-        java.lang.Object ref = nextLevelName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          nextLevelName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string nextLevelName = 5;</code>
-       *
-       * <pre>
-       * 下一个经验等级名称（预留）
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getNextLevelNameBytes() {
-        java.lang.Object ref = nextLevelName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          nextLevelName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string nextLevelName = 5;</code>
-       *
-       * <pre>
-       * 下一个经验等级名称（预留）
-       * </pre>
-       */
-      public Builder setNextLevelName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        nextLevelName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string nextLevelName = 5;</code>
-       *
-       * <pre>
-       * 下一个经验等级名称（预留）
-       * </pre>
-       */
-      public Builder clearNextLevelName() {
-        
-        nextLevelName_ = getDefaultInstance().getNextLevelName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string nextLevelName = 5;</code>
-       *
-       * <pre>
-       * 下一个经验等级名称（预留）
-       * </pre>
-       */
-      public Builder setNextLevelNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        nextLevelName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private long nextLevelExp_ ;
-      /**
-       * <code>optional int64 nextLevelExp = 6;</code>
-       *
-       * <pre>
-       * 下一个经验等级的最低经验值
-       * </pre>
-       */
-      public long getNextLevelExp() {
-        return nextLevelExp_;
-      }
-      /**
-       * <code>optional int64 nextLevelExp = 6;</code>
-       *
-       * <pre>
-       * 下一个经验等级的最低经验值
-       * </pre>
-       */
-      public Builder setNextLevelExp(long value) {
-        
-        nextLevelExp_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int64 nextLevelExp = 6;</code>
-       *
-       * <pre>
-       * 下一个经验等级的最低经验值
-       * </pre>
-       */
-      public Builder clearNextLevelExp() {
-        
-        nextLevelExp_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object nickname_ = "";
-      /**
-       * <code>optional string nickname = 7;</code>
-       *
-       * <pre>
-       * 用户昵称
-       * </pre>
-       */
-      public java.lang.String getNickname() {
-        java.lang.Object ref = nickname_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          nickname_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string nickname = 7;</code>
-       *
-       * <pre>
-       * 用户昵称
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getNicknameBytes() {
-        java.lang.Object ref = nickname_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          nickname_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string nickname = 7;</code>
-       *
-       * <pre>
-       * 用户昵称
-       * </pre>
-       */
-      public Builder setNickname(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        nickname_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string nickname = 7;</code>
-       *
-       * <pre>
-       * 用户昵称
-       * </pre>
-       */
-      public Builder clearNickname() {
-        
-        nickname_ = getDefaultInstance().getNickname();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string nickname = 7;</code>
-       *
-       * <pre>
-       * 用户昵称
-       * </pre>
-       */
-      public Builder setNicknameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        nickname_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object headimg_ = "";
-      /**
-       * <code>optional string headimg = 8;</code>
-       *
-       * <pre>
-       * 用户头像url
-       * </pre>
-       */
-      public java.lang.String getHeadimg() {
-        java.lang.Object ref = headimg_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          headimg_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string headimg = 8;</code>
-       *
-       * <pre>
-       * 用户头像url
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getHeadimgBytes() {
-        java.lang.Object ref = headimg_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          headimg_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string headimg = 8;</code>
-       *
-       * <pre>
-       * 用户头像url
-       * </pre>
-       */
-      public Builder setHeadimg(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        headimg_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string headimg = 8;</code>
-       *
-       * <pre>
-       * 用户头像url
-       * </pre>
-       */
-      public Builder clearHeadimg() {
-        
-        headimg_ = getDefaultInstance().getHeadimg();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string headimg = 8;</code>
-       *
-       * <pre>
-       * 用户头像url
-       * </pre>
-       */
-      public Builder setHeadimgBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        headimg_ = value;
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:bbproto.PTaskUserBasic)
-    }
-
-    // @@protoc_insertion_point(class_scope:bbproto.PTaskUserBasic)
-    private static final com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic();
-    }
-
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<PTaskUserBasic>
-        PARSER = new com.google.protobuf.AbstractParser<PTaskUserBasic>() {
-      public PTaskUserBasic parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
-          return new PTaskUserBasic(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
-      }
-    };
-
-    public static com.google.protobuf.Parser<PTaskUserBasic> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PTaskUserBasic> getParserForType() {
-      return PARSER;
-    }
-
-    public com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface PTaskListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bbproto.PTaskList)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
+     * <code>optional .bbproto.PUserBase user = 1;</code>
      *
      * <pre>
      * 用户基础信息
      * </pre>
      */
-    boolean hasUserBasic();
+    boolean hasUser();
     /**
-     * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
+     * <code>optional .bbproto.PUserBase user = 1;</code>
      *
      * <pre>
      * 用户基础信息
      * </pre>
      */
-    com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic getUserBasic();
+    com.blemobi.sep.probuf.AccountProtos.PUserBase getUser();
     /**
-     * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
+     * <code>optional .bbproto.PUserBase user = 1;</code>
      *
      * <pre>
      * 用户基础信息
      * </pre>
      */
-    com.blemobi.sep.probuf.TaskProtos.PTaskUserBasicOrBuilder getUserBasicOrBuilder();
+    com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserOrBuilder();
 
     /**
-     * <code>optional int32 taskTotal = 2;</code>
+     * <code>optional int32 gold = 2;</code>
      *
      * <pre>
-     * 任务总数（包括日常和主线）
+     * 金币
      * </pre>
      */
-    int getTaskTotal();
+    int getGold();
 
     /**
-     * <code>optional int32 dailyTaskTotal = 3;</code>
+     * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
      *
      * <pre>
-     * 日常任务总数
-     * </pre>
-     */
-    int getDailyTaskTotal();
-
-    /**
-     * <code>optional int32 dailyTaskCompleteTotal = 4;</code>
-     *
-     * <pre>
-     * 已完成日常任务数
-     * </pre>
-     */
-    int getDailyTaskCompleteTotal();
-
-    /**
-     * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
-     *
-     * <pre>
-     * 主线任务列表
+     * 新手任务列表
      * </pre>
      */
     java.util.List<com.blemobi.sep.probuf.TaskProtos.PTaskInfo> 
-        getMainTaskList();
+        getNovicTaskList();
     /**
-     * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
+     * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
      *
      * <pre>
-     * 主线任务列表
+     * 新手任务列表
      * </pre>
      */
-    com.blemobi.sep.probuf.TaskProtos.PTaskInfo getMainTask(int index);
+    com.blemobi.sep.probuf.TaskProtos.PTaskInfo getNovicTask(int index);
     /**
-     * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
+     * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
      *
      * <pre>
-     * 主线任务列表
+     * 新手任务列表
      * </pre>
      */
-    int getMainTaskCount();
+    int getNovicTaskCount();
     /**
-     * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
+     * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
      *
      * <pre>
-     * 主线任务列表
+     * 新手任务列表
      * </pre>
      */
     java.util.List<? extends com.blemobi.sep.probuf.TaskProtos.PTaskInfoOrBuilder> 
-        getMainTaskOrBuilderList();
+        getNovicTaskOrBuilderList();
     /**
-     * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
+     * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
      *
      * <pre>
-     * 主线任务列表
+     * 新手任务列表
      * </pre>
      */
-    com.blemobi.sep.probuf.TaskProtos.PTaskInfoOrBuilder getMainTaskOrBuilder(
+    com.blemobi.sep.probuf.TaskProtos.PTaskInfoOrBuilder getNovicTaskOrBuilder(
         int index);
 
     /**
-     * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+     * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
      *
      * <pre>
      * 日常任务列表
@@ -1426,7 +100,7 @@ public final class TaskProtos {
     java.util.List<com.blemobi.sep.probuf.TaskProtos.PTaskInfo> 
         getDailyTaskList();
     /**
-     * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+     * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
      *
      * <pre>
      * 日常任务列表
@@ -1434,7 +108,7 @@ public final class TaskProtos {
      */
     com.blemobi.sep.probuf.TaskProtos.PTaskInfo getDailyTask(int index);
     /**
-     * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+     * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
      *
      * <pre>
      * 日常任务列表
@@ -1442,7 +116,7 @@ public final class TaskProtos {
      */
     int getDailyTaskCount();
     /**
-     * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+     * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
      *
      * <pre>
      * 日常任务列表
@@ -1451,7 +125,7 @@ public final class TaskProtos {
     java.util.List<? extends com.blemobi.sep.probuf.TaskProtos.PTaskInfoOrBuilder> 
         getDailyTaskOrBuilderList();
     /**
-     * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+     * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
      *
      * <pre>
      * 日常任务列表
@@ -1461,21 +135,19 @@ public final class TaskProtos {
         int index);
   }
   /**
-   * Protobuf type {@code bbproto.PTaskList}
+   * Protobuf type {@code bbproto.PGoldTask}
    */
-  public  static final class PTaskList extends
+  public  static final class PGoldTask extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:bbproto.PTaskList)
-      PTaskListOrBuilder {
-    // Use PTaskList.newBuilder() to construct.
-    private PTaskList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:bbproto.PGoldTask)
+      PGoldTaskOrBuilder {
+    // Use PGoldTask.newBuilder() to construct.
+    private PGoldTask(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-    private PTaskList() {
-      taskTotal_ = 0;
-      dailyTaskTotal_ = 0;
-      dailyTaskCompleteTotal_ = 0;
-      mainTask_ = java.util.Collections.emptyList();
+    private PGoldTask() {
+      gold_ = 0;
+      novicTask_ = java.util.Collections.emptyList();
       dailyTask_ = java.util.Collections.emptyList();
     }
 
@@ -1484,7 +156,7 @@ public final class TaskProtos {
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
     }
-    private PTaskList(
+    private PGoldTask(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
       this();
@@ -1504,45 +176,35 @@ public final class TaskProtos {
               break;
             }
             case 10: {
-              com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.Builder subBuilder = null;
-              if (userBasic_ != null) {
-                subBuilder = userBasic_.toBuilder();
+              com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder subBuilder = null;
+              if (user_ != null) {
+                subBuilder = user_.toBuilder();
               }
-              userBasic_ = input.readMessage(com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.parser(), extensionRegistry);
+              user_ = input.readMessage(com.blemobi.sep.probuf.AccountProtos.PUserBase.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(userBasic_);
-                userBasic_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(user_);
+                user_ = subBuilder.buildPartial();
               }
 
               break;
             }
             case 16: {
 
-              taskTotal_ = input.readInt32();
+              gold_ = input.readInt32();
               break;
             }
-            case 24: {
-
-              dailyTaskTotal_ = input.readInt32();
-              break;
-            }
-            case 32: {
-
-              dailyTaskCompleteTotal_ = input.readInt32();
-              break;
-            }
-            case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-                mainTask_ = new java.util.ArrayList<com.blemobi.sep.probuf.TaskProtos.PTaskInfo>();
-                mutable_bitField0_ |= 0x00000010;
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                novicTask_ = new java.util.ArrayList<com.blemobi.sep.probuf.TaskProtos.PTaskInfo>();
+                mutable_bitField0_ |= 0x00000004;
               }
-              mainTask_.add(input.readMessage(com.blemobi.sep.probuf.TaskProtos.PTaskInfo.parser(), extensionRegistry));
+              novicTask_.add(input.readMessage(com.blemobi.sep.probuf.TaskProtos.PTaskInfo.parser(), extensionRegistry));
               break;
             }
-            case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
                 dailyTask_ = new java.util.ArrayList<com.blemobi.sep.probuf.TaskProtos.PTaskInfo>();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000008;
               }
               dailyTask_.add(input.readMessage(com.blemobi.sep.probuf.TaskProtos.PTaskInfo.parser(), extensionRegistry));
               break;
@@ -1556,10 +218,10 @@ public final class TaskProtos {
             new com.google.protobuf.InvalidProtocolBufferException(
                 e.getMessage()).setUnfinishedMessage(this));
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-          mainTask_ = java.util.Collections.unmodifiableList(mainTask_);
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          novicTask_ = java.util.Collections.unmodifiableList(novicTask_);
         }
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
           dailyTask_ = java.util.Collections.unmodifiableList(dailyTask_);
         }
         makeExtensionsImmutable();
@@ -1567,148 +229,122 @@ public final class TaskProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PTaskList_descriptor;
+      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PGoldTask_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PTaskList_fieldAccessorTable
+      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PGoldTask_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.TaskProtos.PTaskList.class, com.blemobi.sep.probuf.TaskProtos.PTaskList.Builder.class);
+              com.blemobi.sep.probuf.TaskProtos.PGoldTask.class, com.blemobi.sep.probuf.TaskProtos.PGoldTask.Builder.class);
     }
 
     private int bitField0_;
-    public static final int USERBASIC_FIELD_NUMBER = 1;
-    private com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic userBasic_;
+    public static final int USER_FIELD_NUMBER = 1;
+    private com.blemobi.sep.probuf.AccountProtos.PUserBase user_;
     /**
-     * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
+     * <code>optional .bbproto.PUserBase user = 1;</code>
      *
      * <pre>
      * 用户基础信息
      * </pre>
      */
-    public boolean hasUserBasic() {
-      return userBasic_ != null;
+    public boolean hasUser() {
+      return user_ != null;
     }
     /**
-     * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
+     * <code>optional .bbproto.PUserBase user = 1;</code>
      *
      * <pre>
      * 用户基础信息
      * </pre>
      */
-    public com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic getUserBasic() {
-      return userBasic_ == null ? com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.getDefaultInstance() : userBasic_;
+    public com.blemobi.sep.probuf.AccountProtos.PUserBase getUser() {
+      return user_ == null ? com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : user_;
     }
     /**
-     * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
+     * <code>optional .bbproto.PUserBase user = 1;</code>
      *
      * <pre>
      * 用户基础信息
      * </pre>
      */
-    public com.blemobi.sep.probuf.TaskProtos.PTaskUserBasicOrBuilder getUserBasicOrBuilder() {
-      return getUserBasic();
+    public com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserOrBuilder() {
+      return getUser();
     }
 
-    public static final int TASKTOTAL_FIELD_NUMBER = 2;
-    private int taskTotal_;
+    public static final int GOLD_FIELD_NUMBER = 2;
+    private int gold_;
     /**
-     * <code>optional int32 taskTotal = 2;</code>
+     * <code>optional int32 gold = 2;</code>
      *
      * <pre>
-     * 任务总数（包括日常和主线）
+     * 金币
      * </pre>
      */
-    public int getTaskTotal() {
-      return taskTotal_;
+    public int getGold() {
+      return gold_;
     }
 
-    public static final int DAILYTASKTOTAL_FIELD_NUMBER = 3;
-    private int dailyTaskTotal_;
+    public static final int NOVICTASK_FIELD_NUMBER = 3;
+    private java.util.List<com.blemobi.sep.probuf.TaskProtos.PTaskInfo> novicTask_;
     /**
-     * <code>optional int32 dailyTaskTotal = 3;</code>
+     * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
      *
      * <pre>
-     * 日常任务总数
+     * 新手任务列表
      * </pre>
      */
-    public int getDailyTaskTotal() {
-      return dailyTaskTotal_;
-    }
-
-    public static final int DAILYTASKCOMPLETETOTAL_FIELD_NUMBER = 4;
-    private int dailyTaskCompleteTotal_;
-    /**
-     * <code>optional int32 dailyTaskCompleteTotal = 4;</code>
-     *
-     * <pre>
-     * 已完成日常任务数
-     * </pre>
-     */
-    public int getDailyTaskCompleteTotal() {
-      return dailyTaskCompleteTotal_;
-    }
-
-    public static final int MAINTASK_FIELD_NUMBER = 5;
-    private java.util.List<com.blemobi.sep.probuf.TaskProtos.PTaskInfo> mainTask_;
-    /**
-     * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
-     *
-     * <pre>
-     * 主线任务列表
-     * </pre>
-     */
-    public java.util.List<com.blemobi.sep.probuf.TaskProtos.PTaskInfo> getMainTaskList() {
-      return mainTask_;
+    public java.util.List<com.blemobi.sep.probuf.TaskProtos.PTaskInfo> getNovicTaskList() {
+      return novicTask_;
     }
     /**
-     * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
+     * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
      *
      * <pre>
-     * 主线任务列表
+     * 新手任务列表
      * </pre>
      */
     public java.util.List<? extends com.blemobi.sep.probuf.TaskProtos.PTaskInfoOrBuilder> 
-        getMainTaskOrBuilderList() {
-      return mainTask_;
+        getNovicTaskOrBuilderList() {
+      return novicTask_;
     }
     /**
-     * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
+     * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
      *
      * <pre>
-     * 主线任务列表
+     * 新手任务列表
      * </pre>
      */
-    public int getMainTaskCount() {
-      return mainTask_.size();
+    public int getNovicTaskCount() {
+      return novicTask_.size();
     }
     /**
-     * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
+     * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
      *
      * <pre>
-     * 主线任务列表
+     * 新手任务列表
      * </pre>
      */
-    public com.blemobi.sep.probuf.TaskProtos.PTaskInfo getMainTask(int index) {
-      return mainTask_.get(index);
+    public com.blemobi.sep.probuf.TaskProtos.PTaskInfo getNovicTask(int index) {
+      return novicTask_.get(index);
     }
     /**
-     * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
+     * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
      *
      * <pre>
-     * 主线任务列表
+     * 新手任务列表
      * </pre>
      */
-    public com.blemobi.sep.probuf.TaskProtos.PTaskInfoOrBuilder getMainTaskOrBuilder(
+    public com.blemobi.sep.probuf.TaskProtos.PTaskInfoOrBuilder getNovicTaskOrBuilder(
         int index) {
-      return mainTask_.get(index);
+      return novicTask_.get(index);
     }
 
-    public static final int DAILYTASK_FIELD_NUMBER = 6;
+    public static final int DAILYTASK_FIELD_NUMBER = 4;
     private java.util.List<com.blemobi.sep.probuf.TaskProtos.PTaskInfo> dailyTask_;
     /**
-     * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+     * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
      *
      * <pre>
      * 日常任务列表
@@ -1718,7 +354,7 @@ public final class TaskProtos {
       return dailyTask_;
     }
     /**
-     * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+     * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
      *
      * <pre>
      * 日常任务列表
@@ -1729,7 +365,7 @@ public final class TaskProtos {
       return dailyTask_;
     }
     /**
-     * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+     * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
      *
      * <pre>
      * 日常任务列表
@@ -1739,7 +375,7 @@ public final class TaskProtos {
       return dailyTask_.size();
     }
     /**
-     * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+     * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
      *
      * <pre>
      * 日常任务列表
@@ -1749,7 +385,7 @@ public final class TaskProtos {
       return dailyTask_.get(index);
     }
     /**
-     * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+     * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
      *
      * <pre>
      * 日常任务列表
@@ -1772,23 +408,17 @@ public final class TaskProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (userBasic_ != null) {
-        output.writeMessage(1, getUserBasic());
+      if (user_ != null) {
+        output.writeMessage(1, getUser());
       }
-      if (taskTotal_ != 0) {
-        output.writeInt32(2, taskTotal_);
+      if (gold_ != 0) {
+        output.writeInt32(2, gold_);
       }
-      if (dailyTaskTotal_ != 0) {
-        output.writeInt32(3, dailyTaskTotal_);
-      }
-      if (dailyTaskCompleteTotal_ != 0) {
-        output.writeInt32(4, dailyTaskCompleteTotal_);
-      }
-      for (int i = 0; i < mainTask_.size(); i++) {
-        output.writeMessage(5, mainTask_.get(i));
+      for (int i = 0; i < novicTask_.size(); i++) {
+        output.writeMessage(3, novicTask_.get(i));
       }
       for (int i = 0; i < dailyTask_.size(); i++) {
-        output.writeMessage(6, dailyTask_.get(i));
+        output.writeMessage(4, dailyTask_.get(i));
       }
     }
 
@@ -1797,82 +427,74 @@ public final class TaskProtos {
       if (size != -1) return size;
 
       size = 0;
-      if (userBasic_ != null) {
+      if (user_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getUserBasic());
+          .computeMessageSize(1, getUser());
       }
-      if (taskTotal_ != 0) {
+      if (gold_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, taskTotal_);
+          .computeInt32Size(2, gold_);
       }
-      if (dailyTaskTotal_ != 0) {
+      for (int i = 0; i < novicTask_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, dailyTaskTotal_);
-      }
-      if (dailyTaskCompleteTotal_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, dailyTaskCompleteTotal_);
-      }
-      for (int i = 0; i < mainTask_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, mainTask_.get(i));
+          .computeMessageSize(3, novicTask_.get(i));
       }
       for (int i = 0; i < dailyTask_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, dailyTask_.get(i));
+          .computeMessageSize(4, dailyTask_.get(i));
       }
       memoizedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskList parseFrom(
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldTask parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskList parseFrom(
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldTask parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskList parseFrom(byte[] data)
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldTask parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskList parseFrom(
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldTask parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskList parseFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldTask parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskList parseFrom(
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldTask parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskList parseDelimitedFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldTask parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskList parseDelimitedFrom(
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldTask parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskList parseFrom(
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldTask parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskList parseFrom(
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldTask parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1883,7 +505,7 @@ public final class TaskProtos {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.blemobi.sep.probuf.TaskProtos.PTaskList prototype) {
+    public static Builder newBuilder(com.blemobi.sep.probuf.TaskProtos.PGoldTask prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -1898,25 +520,25 @@ public final class TaskProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code bbproto.PTaskList}
+     * Protobuf type {@code bbproto.PGoldTask}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bbproto.PTaskList)
-        com.blemobi.sep.probuf.TaskProtos.PTaskListOrBuilder {
+        // @@protoc_insertion_point(builder_implements:bbproto.PGoldTask)
+        com.blemobi.sep.probuf.TaskProtos.PGoldTaskOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PTaskList_descriptor;
+        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PGoldTask_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PTaskList_fieldAccessorTable
+        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PGoldTask_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.TaskProtos.PTaskList.class, com.blemobi.sep.probuf.TaskProtos.PTaskList.Builder.class);
+                com.blemobi.sep.probuf.TaskProtos.PGoldTask.class, com.blemobi.sep.probuf.TaskProtos.PGoldTask.Builder.class);
       }
 
-      // Construct using com.blemobi.sep.probuf.TaskProtos.PTaskList.newBuilder()
+      // Construct using com.blemobi.sep.probuf.TaskProtos.PGoldTask.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1928,33 +550,29 @@ public final class TaskProtos {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getMainTaskFieldBuilder();
+          getNovicTaskFieldBuilder();
           getDailyTaskFieldBuilder();
         }
       }
       public Builder clear() {
         super.clear();
-        if (userBasicBuilder_ == null) {
-          userBasic_ = null;
+        if (userBuilder_ == null) {
+          user_ = null;
         } else {
-          userBasic_ = null;
-          userBasicBuilder_ = null;
+          user_ = null;
+          userBuilder_ = null;
         }
-        taskTotal_ = 0;
+        gold_ = 0;
 
-        dailyTaskTotal_ = 0;
-
-        dailyTaskCompleteTotal_ = 0;
-
-        if (mainTaskBuilder_ == null) {
-          mainTask_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+        if (novicTaskBuilder_ == null) {
+          novicTask_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
-          mainTaskBuilder_.clear();
+          novicTaskBuilder_.clear();
         }
         if (dailyTaskBuilder_ == null) {
           dailyTask_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           dailyTaskBuilder_.clear();
         }
@@ -1963,46 +581,44 @@ public final class TaskProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PTaskList_descriptor;
+        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PGoldTask_descriptor;
       }
 
-      public com.blemobi.sep.probuf.TaskProtos.PTaskList getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.TaskProtos.PTaskList.getDefaultInstance();
+      public com.blemobi.sep.probuf.TaskProtos.PGoldTask getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.TaskProtos.PGoldTask.getDefaultInstance();
       }
 
-      public com.blemobi.sep.probuf.TaskProtos.PTaskList build() {
-        com.blemobi.sep.probuf.TaskProtos.PTaskList result = buildPartial();
+      public com.blemobi.sep.probuf.TaskProtos.PGoldTask build() {
+        com.blemobi.sep.probuf.TaskProtos.PGoldTask result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.blemobi.sep.probuf.TaskProtos.PTaskList buildPartial() {
-        com.blemobi.sep.probuf.TaskProtos.PTaskList result = new com.blemobi.sep.probuf.TaskProtos.PTaskList(this);
+      public com.blemobi.sep.probuf.TaskProtos.PGoldTask buildPartial() {
+        com.blemobi.sep.probuf.TaskProtos.PGoldTask result = new com.blemobi.sep.probuf.TaskProtos.PGoldTask(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
-        if (userBasicBuilder_ == null) {
-          result.userBasic_ = userBasic_;
+        if (userBuilder_ == null) {
+          result.user_ = user_;
         } else {
-          result.userBasic_ = userBasicBuilder_.build();
+          result.user_ = userBuilder_.build();
         }
-        result.taskTotal_ = taskTotal_;
-        result.dailyTaskTotal_ = dailyTaskTotal_;
-        result.dailyTaskCompleteTotal_ = dailyTaskCompleteTotal_;
-        if (mainTaskBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
-            mainTask_ = java.util.Collections.unmodifiableList(mainTask_);
-            bitField0_ = (bitField0_ & ~0x00000010);
+        result.gold_ = gold_;
+        if (novicTaskBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            novicTask_ = java.util.Collections.unmodifiableList(novicTask_);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
-          result.mainTask_ = mainTask_;
+          result.novicTask_ = novicTask_;
         } else {
-          result.mainTask_ = mainTaskBuilder_.build();
+          result.novicTask_ = novicTaskBuilder_.build();
         }
         if (dailyTaskBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
             dailyTask_ = java.util.Collections.unmodifiableList(dailyTask_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.dailyTask_ = dailyTask_;
         } else {
@@ -2014,51 +630,45 @@ public final class TaskProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.TaskProtos.PTaskList) {
-          return mergeFrom((com.blemobi.sep.probuf.TaskProtos.PTaskList)other);
+        if (other instanceof com.blemobi.sep.probuf.TaskProtos.PGoldTask) {
+          return mergeFrom((com.blemobi.sep.probuf.TaskProtos.PGoldTask)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.blemobi.sep.probuf.TaskProtos.PTaskList other) {
-        if (other == com.blemobi.sep.probuf.TaskProtos.PTaskList.getDefaultInstance()) return this;
-        if (other.hasUserBasic()) {
-          mergeUserBasic(other.getUserBasic());
+      public Builder mergeFrom(com.blemobi.sep.probuf.TaskProtos.PGoldTask other) {
+        if (other == com.blemobi.sep.probuf.TaskProtos.PGoldTask.getDefaultInstance()) return this;
+        if (other.hasUser()) {
+          mergeUser(other.getUser());
         }
-        if (other.getTaskTotal() != 0) {
-          setTaskTotal(other.getTaskTotal());
+        if (other.getGold() != 0) {
+          setGold(other.getGold());
         }
-        if (other.getDailyTaskTotal() != 0) {
-          setDailyTaskTotal(other.getDailyTaskTotal());
-        }
-        if (other.getDailyTaskCompleteTotal() != 0) {
-          setDailyTaskCompleteTotal(other.getDailyTaskCompleteTotal());
-        }
-        if (mainTaskBuilder_ == null) {
-          if (!other.mainTask_.isEmpty()) {
-            if (mainTask_.isEmpty()) {
-              mainTask_ = other.mainTask_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+        if (novicTaskBuilder_ == null) {
+          if (!other.novicTask_.isEmpty()) {
+            if (novicTask_.isEmpty()) {
+              novicTask_ = other.novicTask_;
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
-              ensureMainTaskIsMutable();
-              mainTask_.addAll(other.mainTask_);
+              ensureNovicTaskIsMutable();
+              novicTask_.addAll(other.novicTask_);
             }
             onChanged();
           }
         } else {
-          if (!other.mainTask_.isEmpty()) {
-            if (mainTaskBuilder_.isEmpty()) {
-              mainTaskBuilder_.dispose();
-              mainTaskBuilder_ = null;
-              mainTask_ = other.mainTask_;
-              bitField0_ = (bitField0_ & ~0x00000010);
-              mainTaskBuilder_ = 
+          if (!other.novicTask_.isEmpty()) {
+            if (novicTaskBuilder_.isEmpty()) {
+              novicTaskBuilder_.dispose();
+              novicTaskBuilder_ = null;
+              novicTask_ = other.novicTask_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              novicTaskBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getMainTaskFieldBuilder() : null;
+                   getNovicTaskFieldBuilder() : null;
             } else {
-              mainTaskBuilder_.addAllMessages(other.mainTask_);
+              novicTaskBuilder_.addAllMessages(other.novicTask_);
             }
           }
         }
@@ -2066,7 +676,7 @@ public final class TaskProtos {
           if (!other.dailyTask_.isEmpty()) {
             if (dailyTask_.isEmpty()) {
               dailyTask_ = other.dailyTask_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureDailyTaskIsMutable();
               dailyTask_.addAll(other.dailyTask_);
@@ -2079,7 +689,7 @@ public final class TaskProtos {
               dailyTaskBuilder_.dispose();
               dailyTaskBuilder_ = null;
               dailyTask_ = other.dailyTask_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000008);
               dailyTaskBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getDailyTaskFieldBuilder() : null;
@@ -2100,11 +710,11 @@ public final class TaskProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.blemobi.sep.probuf.TaskProtos.PTaskList parsedMessage = null;
+        com.blemobi.sep.probuf.TaskProtos.PGoldTask parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.TaskProtos.PTaskList) e.getUnfinishedMessage();
+          parsedMessage = (com.blemobi.sep.probuf.TaskProtos.PGoldTask) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -2115,591 +725,515 @@ public final class TaskProtos {
       }
       private int bitField0_;
 
-      private com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic userBasic_ = null;
+      private com.blemobi.sep.probuf.AccountProtos.PUserBase user_ = null;
       private com.google.protobuf.SingleFieldBuilder<
-          com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic, com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.Builder, com.blemobi.sep.probuf.TaskProtos.PTaskUserBasicOrBuilder> userBasicBuilder_;
+          com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> userBuilder_;
       /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 用户基础信息
        * </pre>
        */
-      public boolean hasUserBasic() {
-        return userBasicBuilder_ != null || userBasic_ != null;
+      public boolean hasUser() {
+        return userBuilder_ != null || user_ != null;
       }
       /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 用户基础信息
        * </pre>
        */
-      public com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic getUserBasic() {
-        if (userBasicBuilder_ == null) {
-          return userBasic_ == null ? com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.getDefaultInstance() : userBasic_;
+      public com.blemobi.sep.probuf.AccountProtos.PUserBase getUser() {
+        if (userBuilder_ == null) {
+          return user_ == null ? com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : user_;
         } else {
-          return userBasicBuilder_.getMessage();
+          return userBuilder_.getMessage();
         }
       }
       /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 用户基础信息
        * </pre>
        */
-      public Builder setUserBasic(com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic value) {
-        if (userBasicBuilder_ == null) {
+      public Builder setUser(com.blemobi.sep.probuf.AccountProtos.PUserBase value) {
+        if (userBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          userBasic_ = value;
+          user_ = value;
           onChanged();
         } else {
-          userBasicBuilder_.setMessage(value);
+          userBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 用户基础信息
        * </pre>
        */
-      public Builder setUserBasic(
-          com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.Builder builderForValue) {
-        if (userBasicBuilder_ == null) {
-          userBasic_ = builderForValue.build();
+      public Builder setUser(
+          com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder builderForValue) {
+        if (userBuilder_ == null) {
+          user_ = builderForValue.build();
           onChanged();
         } else {
-          userBasicBuilder_.setMessage(builderForValue.build());
+          userBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 用户基础信息
        * </pre>
        */
-      public Builder mergeUserBasic(com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic value) {
-        if (userBasicBuilder_ == null) {
-          if (userBasic_ != null) {
-            userBasic_ =
-              com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.newBuilder(userBasic_).mergeFrom(value).buildPartial();
+      public Builder mergeUser(com.blemobi.sep.probuf.AccountProtos.PUserBase value) {
+        if (userBuilder_ == null) {
+          if (user_ != null) {
+            user_ =
+              com.blemobi.sep.probuf.AccountProtos.PUserBase.newBuilder(user_).mergeFrom(value).buildPartial();
           } else {
-            userBasic_ = value;
+            user_ = value;
           }
           onChanged();
         } else {
-          userBasicBuilder_.mergeFrom(value);
+          userBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 用户基础信息
        * </pre>
        */
-      public Builder clearUserBasic() {
-        if (userBasicBuilder_ == null) {
-          userBasic_ = null;
+      public Builder clearUser() {
+        if (userBuilder_ == null) {
+          user_ = null;
           onChanged();
         } else {
-          userBasic_ = null;
-          userBasicBuilder_ = null;
+          user_ = null;
+          userBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 用户基础信息
        * </pre>
        */
-      public com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.Builder getUserBasicBuilder() {
+      public com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder getUserBuilder() {
         
         onChanged();
-        return getUserBasicFieldBuilder().getBuilder();
+        return getUserFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 用户基础信息
        * </pre>
        */
-      public com.blemobi.sep.probuf.TaskProtos.PTaskUserBasicOrBuilder getUserBasicOrBuilder() {
-        if (userBasicBuilder_ != null) {
-          return userBasicBuilder_.getMessageOrBuilder();
+      public com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder getUserOrBuilder() {
+        if (userBuilder_ != null) {
+          return userBuilder_.getMessageOrBuilder();
         } else {
-          return userBasic_ == null ?
-              com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.getDefaultInstance() : userBasic_;
+          return user_ == null ?
+              com.blemobi.sep.probuf.AccountProtos.PUserBase.getDefaultInstance() : user_;
         }
       }
       /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
+       * <code>optional .bbproto.PUserBase user = 1;</code>
        *
        * <pre>
        * 用户基础信息
        * </pre>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic, com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.Builder, com.blemobi.sep.probuf.TaskProtos.PTaskUserBasicOrBuilder> 
-          getUserBasicFieldBuilder() {
-        if (userBasicBuilder_ == null) {
-          userBasicBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic, com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.Builder, com.blemobi.sep.probuf.TaskProtos.PTaskUserBasicOrBuilder>(
-                  getUserBasic(),
+          com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder> 
+          getUserFieldBuilder() {
+        if (userBuilder_ == null) {
+          userBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.blemobi.sep.probuf.AccountProtos.PUserBase, com.blemobi.sep.probuf.AccountProtos.PUserBase.Builder, com.blemobi.sep.probuf.AccountProtos.PUserBaseOrBuilder>(
+                  getUser(),
                   getParentForChildren(),
                   isClean());
-          userBasic_ = null;
+          user_ = null;
         }
-        return userBasicBuilder_;
+        return userBuilder_;
       }
 
-      private int taskTotal_ ;
+      private int gold_ ;
       /**
-       * <code>optional int32 taskTotal = 2;</code>
+       * <code>optional int32 gold = 2;</code>
        *
        * <pre>
-       * 任务总数（包括日常和主线）
+       * 金币
        * </pre>
        */
-      public int getTaskTotal() {
-        return taskTotal_;
+      public int getGold() {
+        return gold_;
       }
       /**
-       * <code>optional int32 taskTotal = 2;</code>
+       * <code>optional int32 gold = 2;</code>
        *
        * <pre>
-       * 任务总数（包括日常和主线）
+       * 金币
        * </pre>
        */
-      public Builder setTaskTotal(int value) {
+      public Builder setGold(int value) {
         
-        taskTotal_ = value;
+        gold_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 taskTotal = 2;</code>
+       * <code>optional int32 gold = 2;</code>
        *
        * <pre>
-       * 任务总数（包括日常和主线）
+       * 金币
        * </pre>
        */
-      public Builder clearTaskTotal() {
+      public Builder clearGold() {
         
-        taskTotal_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int dailyTaskTotal_ ;
-      /**
-       * <code>optional int32 dailyTaskTotal = 3;</code>
-       *
-       * <pre>
-       * 日常任务总数
-       * </pre>
-       */
-      public int getDailyTaskTotal() {
-        return dailyTaskTotal_;
-      }
-      /**
-       * <code>optional int32 dailyTaskTotal = 3;</code>
-       *
-       * <pre>
-       * 日常任务总数
-       * </pre>
-       */
-      public Builder setDailyTaskTotal(int value) {
-        
-        dailyTaskTotal_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 dailyTaskTotal = 3;</code>
-       *
-       * <pre>
-       * 日常任务总数
-       * </pre>
-       */
-      public Builder clearDailyTaskTotal() {
-        
-        dailyTaskTotal_ = 0;
+        gold_ = 0;
         onChanged();
         return this;
       }
 
-      private int dailyTaskCompleteTotal_ ;
-      /**
-       * <code>optional int32 dailyTaskCompleteTotal = 4;</code>
-       *
-       * <pre>
-       * 已完成日常任务数
-       * </pre>
-       */
-      public int getDailyTaskCompleteTotal() {
-        return dailyTaskCompleteTotal_;
-      }
-      /**
-       * <code>optional int32 dailyTaskCompleteTotal = 4;</code>
-       *
-       * <pre>
-       * 已完成日常任务数
-       * </pre>
-       */
-      public Builder setDailyTaskCompleteTotal(int value) {
-        
-        dailyTaskCompleteTotal_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 dailyTaskCompleteTotal = 4;</code>
-       *
-       * <pre>
-       * 已完成日常任务数
-       * </pre>
-       */
-      public Builder clearDailyTaskCompleteTotal() {
-        
-        dailyTaskCompleteTotal_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.util.List<com.blemobi.sep.probuf.TaskProtos.PTaskInfo> mainTask_ =
+      private java.util.List<com.blemobi.sep.probuf.TaskProtos.PTaskInfo> novicTask_ =
         java.util.Collections.emptyList();
-      private void ensureMainTaskIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
-          mainTask_ = new java.util.ArrayList<com.blemobi.sep.probuf.TaskProtos.PTaskInfo>(mainTask_);
-          bitField0_ |= 0x00000010;
+      private void ensureNovicTaskIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          novicTask_ = new java.util.ArrayList<com.blemobi.sep.probuf.TaskProtos.PTaskInfo>(novicTask_);
+          bitField0_ |= 0x00000004;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.TaskProtos.PTaskInfo, com.blemobi.sep.probuf.TaskProtos.PTaskInfo.Builder, com.blemobi.sep.probuf.TaskProtos.PTaskInfoOrBuilder> mainTaskBuilder_;
+          com.blemobi.sep.probuf.TaskProtos.PTaskInfo, com.blemobi.sep.probuf.TaskProtos.PTaskInfo.Builder, com.blemobi.sep.probuf.TaskProtos.PTaskInfoOrBuilder> novicTaskBuilder_;
 
       /**
-       * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
+       * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
        *
        * <pre>
-       * 主线任务列表
+       * 新手任务列表
        * </pre>
        */
-      public java.util.List<com.blemobi.sep.probuf.TaskProtos.PTaskInfo> getMainTaskList() {
-        if (mainTaskBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(mainTask_);
+      public java.util.List<com.blemobi.sep.probuf.TaskProtos.PTaskInfo> getNovicTaskList() {
+        if (novicTaskBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(novicTask_);
         } else {
-          return mainTaskBuilder_.getMessageList();
+          return novicTaskBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
+       * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
        *
        * <pre>
-       * 主线任务列表
+       * 新手任务列表
        * </pre>
        */
-      public int getMainTaskCount() {
-        if (mainTaskBuilder_ == null) {
-          return mainTask_.size();
+      public int getNovicTaskCount() {
+        if (novicTaskBuilder_ == null) {
+          return novicTask_.size();
         } else {
-          return mainTaskBuilder_.getCount();
+          return novicTaskBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
+       * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
        *
        * <pre>
-       * 主线任务列表
+       * 新手任务列表
        * </pre>
        */
-      public com.blemobi.sep.probuf.TaskProtos.PTaskInfo getMainTask(int index) {
-        if (mainTaskBuilder_ == null) {
-          return mainTask_.get(index);
+      public com.blemobi.sep.probuf.TaskProtos.PTaskInfo getNovicTask(int index) {
+        if (novicTaskBuilder_ == null) {
+          return novicTask_.get(index);
         } else {
-          return mainTaskBuilder_.getMessage(index);
+          return novicTaskBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
+       * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
        *
        * <pre>
-       * 主线任务列表
+       * 新手任务列表
        * </pre>
        */
-      public Builder setMainTask(
+      public Builder setNovicTask(
           int index, com.blemobi.sep.probuf.TaskProtos.PTaskInfo value) {
-        if (mainTaskBuilder_ == null) {
+        if (novicTaskBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureMainTaskIsMutable();
-          mainTask_.set(index, value);
+          ensureNovicTaskIsMutable();
+          novicTask_.set(index, value);
           onChanged();
         } else {
-          mainTaskBuilder_.setMessage(index, value);
+          novicTaskBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
+       * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
        *
        * <pre>
-       * 主线任务列表
+       * 新手任务列表
        * </pre>
        */
-      public Builder setMainTask(
+      public Builder setNovicTask(
           int index, com.blemobi.sep.probuf.TaskProtos.PTaskInfo.Builder builderForValue) {
-        if (mainTaskBuilder_ == null) {
-          ensureMainTaskIsMutable();
-          mainTask_.set(index, builderForValue.build());
+        if (novicTaskBuilder_ == null) {
+          ensureNovicTaskIsMutable();
+          novicTask_.set(index, builderForValue.build());
           onChanged();
         } else {
-          mainTaskBuilder_.setMessage(index, builderForValue.build());
+          novicTaskBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
+       * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
        *
        * <pre>
-       * 主线任务列表
+       * 新手任务列表
        * </pre>
        */
-      public Builder addMainTask(com.blemobi.sep.probuf.TaskProtos.PTaskInfo value) {
-        if (mainTaskBuilder_ == null) {
+      public Builder addNovicTask(com.blemobi.sep.probuf.TaskProtos.PTaskInfo value) {
+        if (novicTaskBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureMainTaskIsMutable();
-          mainTask_.add(value);
+          ensureNovicTaskIsMutable();
+          novicTask_.add(value);
           onChanged();
         } else {
-          mainTaskBuilder_.addMessage(value);
+          novicTaskBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
+       * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
        *
        * <pre>
-       * 主线任务列表
+       * 新手任务列表
        * </pre>
        */
-      public Builder addMainTask(
+      public Builder addNovicTask(
           int index, com.blemobi.sep.probuf.TaskProtos.PTaskInfo value) {
-        if (mainTaskBuilder_ == null) {
+        if (novicTaskBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureMainTaskIsMutable();
-          mainTask_.add(index, value);
+          ensureNovicTaskIsMutable();
+          novicTask_.add(index, value);
           onChanged();
         } else {
-          mainTaskBuilder_.addMessage(index, value);
+          novicTaskBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
+       * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
        *
        * <pre>
-       * 主线任务列表
+       * 新手任务列表
        * </pre>
        */
-      public Builder addMainTask(
+      public Builder addNovicTask(
           com.blemobi.sep.probuf.TaskProtos.PTaskInfo.Builder builderForValue) {
-        if (mainTaskBuilder_ == null) {
-          ensureMainTaskIsMutable();
-          mainTask_.add(builderForValue.build());
+        if (novicTaskBuilder_ == null) {
+          ensureNovicTaskIsMutable();
+          novicTask_.add(builderForValue.build());
           onChanged();
         } else {
-          mainTaskBuilder_.addMessage(builderForValue.build());
+          novicTaskBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
+       * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
        *
        * <pre>
-       * 主线任务列表
+       * 新手任务列表
        * </pre>
        */
-      public Builder addMainTask(
+      public Builder addNovicTask(
           int index, com.blemobi.sep.probuf.TaskProtos.PTaskInfo.Builder builderForValue) {
-        if (mainTaskBuilder_ == null) {
-          ensureMainTaskIsMutable();
-          mainTask_.add(index, builderForValue.build());
+        if (novicTaskBuilder_ == null) {
+          ensureNovicTaskIsMutable();
+          novicTask_.add(index, builderForValue.build());
           onChanged();
         } else {
-          mainTaskBuilder_.addMessage(index, builderForValue.build());
+          novicTaskBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
+       * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
        *
        * <pre>
-       * 主线任务列表
+       * 新手任务列表
        * </pre>
        */
-      public Builder addAllMainTask(
+      public Builder addAllNovicTask(
           java.lang.Iterable<? extends com.blemobi.sep.probuf.TaskProtos.PTaskInfo> values) {
-        if (mainTaskBuilder_ == null) {
-          ensureMainTaskIsMutable();
+        if (novicTaskBuilder_ == null) {
+          ensureNovicTaskIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, mainTask_);
+              values, novicTask_);
           onChanged();
         } else {
-          mainTaskBuilder_.addAllMessages(values);
+          novicTaskBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
+       * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
        *
        * <pre>
-       * 主线任务列表
+       * 新手任务列表
        * </pre>
        */
-      public Builder clearMainTask() {
-        if (mainTaskBuilder_ == null) {
-          mainTask_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+      public Builder clearNovicTask() {
+        if (novicTaskBuilder_ == null) {
+          novicTask_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
-          mainTaskBuilder_.clear();
+          novicTaskBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
+       * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
        *
        * <pre>
-       * 主线任务列表
+       * 新手任务列表
        * </pre>
        */
-      public Builder removeMainTask(int index) {
-        if (mainTaskBuilder_ == null) {
-          ensureMainTaskIsMutable();
-          mainTask_.remove(index);
+      public Builder removeNovicTask(int index) {
+        if (novicTaskBuilder_ == null) {
+          ensureNovicTaskIsMutable();
+          novicTask_.remove(index);
           onChanged();
         } else {
-          mainTaskBuilder_.remove(index);
+          novicTaskBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
+       * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
        *
        * <pre>
-       * 主线任务列表
+       * 新手任务列表
        * </pre>
        */
-      public com.blemobi.sep.probuf.TaskProtos.PTaskInfo.Builder getMainTaskBuilder(
+      public com.blemobi.sep.probuf.TaskProtos.PTaskInfo.Builder getNovicTaskBuilder(
           int index) {
-        return getMainTaskFieldBuilder().getBuilder(index);
+        return getNovicTaskFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
+       * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
        *
        * <pre>
-       * 主线任务列表
+       * 新手任务列表
        * </pre>
        */
-      public com.blemobi.sep.probuf.TaskProtos.PTaskInfoOrBuilder getMainTaskOrBuilder(
+      public com.blemobi.sep.probuf.TaskProtos.PTaskInfoOrBuilder getNovicTaskOrBuilder(
           int index) {
-        if (mainTaskBuilder_ == null) {
-          return mainTask_.get(index);  } else {
-          return mainTaskBuilder_.getMessageOrBuilder(index);
+        if (novicTaskBuilder_ == null) {
+          return novicTask_.get(index);  } else {
+          return novicTaskBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
+       * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
        *
        * <pre>
-       * 主线任务列表
+       * 新手任务列表
        * </pre>
        */
       public java.util.List<? extends com.blemobi.sep.probuf.TaskProtos.PTaskInfoOrBuilder> 
-           getMainTaskOrBuilderList() {
-        if (mainTaskBuilder_ != null) {
-          return mainTaskBuilder_.getMessageOrBuilderList();
+           getNovicTaskOrBuilderList() {
+        if (novicTaskBuilder_ != null) {
+          return novicTaskBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(mainTask_);
+          return java.util.Collections.unmodifiableList(novicTask_);
         }
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
+       * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
        *
        * <pre>
-       * 主线任务列表
+       * 新手任务列表
        * </pre>
        */
-      public com.blemobi.sep.probuf.TaskProtos.PTaskInfo.Builder addMainTaskBuilder() {
-        return getMainTaskFieldBuilder().addBuilder(
+      public com.blemobi.sep.probuf.TaskProtos.PTaskInfo.Builder addNovicTaskBuilder() {
+        return getNovicTaskFieldBuilder().addBuilder(
             com.blemobi.sep.probuf.TaskProtos.PTaskInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
+       * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
        *
        * <pre>
-       * 主线任务列表
+       * 新手任务列表
        * </pre>
        */
-      public com.blemobi.sep.probuf.TaskProtos.PTaskInfo.Builder addMainTaskBuilder(
+      public com.blemobi.sep.probuf.TaskProtos.PTaskInfo.Builder addNovicTaskBuilder(
           int index) {
-        return getMainTaskFieldBuilder().addBuilder(
+        return getNovicTaskFieldBuilder().addBuilder(
             index, com.blemobi.sep.probuf.TaskProtos.PTaskInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo mainTask = 5;</code>
+       * <code>repeated .bbproto.PTaskInfo novicTask = 3;</code>
        *
        * <pre>
-       * 主线任务列表
+       * 新手任务列表
        * </pre>
        */
       public java.util.List<com.blemobi.sep.probuf.TaskProtos.PTaskInfo.Builder> 
-           getMainTaskBuilderList() {
-        return getMainTaskFieldBuilder().getBuilderList();
+           getNovicTaskBuilderList() {
+        return getNovicTaskFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
           com.blemobi.sep.probuf.TaskProtos.PTaskInfo, com.blemobi.sep.probuf.TaskProtos.PTaskInfo.Builder, com.blemobi.sep.probuf.TaskProtos.PTaskInfoOrBuilder> 
-          getMainTaskFieldBuilder() {
-        if (mainTaskBuilder_ == null) {
-          mainTaskBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          getNovicTaskFieldBuilder() {
+        if (novicTaskBuilder_ == null) {
+          novicTaskBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               com.blemobi.sep.probuf.TaskProtos.PTaskInfo, com.blemobi.sep.probuf.TaskProtos.PTaskInfo.Builder, com.blemobi.sep.probuf.TaskProtos.PTaskInfoOrBuilder>(
-                  mainTask_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  novicTask_,
+                  ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
                   isClean());
-          mainTask_ = null;
+          novicTask_ = null;
         }
-        return mainTaskBuilder_;
+        return novicTaskBuilder_;
       }
 
       private java.util.List<com.blemobi.sep.probuf.TaskProtos.PTaskInfo> dailyTask_ =
         java.util.Collections.emptyList();
       private void ensureDailyTaskIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
           dailyTask_ = new java.util.ArrayList<com.blemobi.sep.probuf.TaskProtos.PTaskInfo>(dailyTask_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -2707,7 +1241,7 @@ public final class TaskProtos {
           com.blemobi.sep.probuf.TaskProtos.PTaskInfo, com.blemobi.sep.probuf.TaskProtos.PTaskInfo.Builder, com.blemobi.sep.probuf.TaskProtos.PTaskInfoOrBuilder> dailyTaskBuilder_;
 
       /**
-       * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+       * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
        *
        * <pre>
        * 日常任务列表
@@ -2721,7 +1255,7 @@ public final class TaskProtos {
         }
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+       * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
        *
        * <pre>
        * 日常任务列表
@@ -2735,7 +1269,7 @@ public final class TaskProtos {
         }
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+       * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
        *
        * <pre>
        * 日常任务列表
@@ -2749,7 +1283,7 @@ public final class TaskProtos {
         }
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+       * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
        *
        * <pre>
        * 日常任务列表
@@ -2770,7 +1304,7 @@ public final class TaskProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+       * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
        *
        * <pre>
        * 日常任务列表
@@ -2788,7 +1322,7 @@ public final class TaskProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+       * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
        *
        * <pre>
        * 日常任务列表
@@ -2808,7 +1342,7 @@ public final class TaskProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+       * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
        *
        * <pre>
        * 日常任务列表
@@ -2829,7 +1363,7 @@ public final class TaskProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+       * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
        *
        * <pre>
        * 日常任务列表
@@ -2847,7 +1381,7 @@ public final class TaskProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+       * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
        *
        * <pre>
        * 日常任务列表
@@ -2865,7 +1399,7 @@ public final class TaskProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+       * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
        *
        * <pre>
        * 日常任务列表
@@ -2884,7 +1418,7 @@ public final class TaskProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+       * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
        *
        * <pre>
        * 日常任务列表
@@ -2893,7 +1427,7 @@ public final class TaskProtos {
       public Builder clearDailyTask() {
         if (dailyTaskBuilder_ == null) {
           dailyTask_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           dailyTaskBuilder_.clear();
@@ -2901,7 +1435,7 @@ public final class TaskProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+       * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
        *
        * <pre>
        * 日常任务列表
@@ -2918,7 +1452,7 @@ public final class TaskProtos {
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+       * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
        *
        * <pre>
        * 日常任务列表
@@ -2929,7 +1463,7 @@ public final class TaskProtos {
         return getDailyTaskFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+       * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
        *
        * <pre>
        * 日常任务列表
@@ -2943,7 +1477,7 @@ public final class TaskProtos {
         }
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+       * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
        *
        * <pre>
        * 日常任务列表
@@ -2958,7 +1492,7 @@ public final class TaskProtos {
         }
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+       * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
        *
        * <pre>
        * 日常任务列表
@@ -2969,7 +1503,7 @@ public final class TaskProtos {
             com.blemobi.sep.probuf.TaskProtos.PTaskInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+       * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
        *
        * <pre>
        * 日常任务列表
@@ -2981,7 +1515,7 @@ public final class TaskProtos {
             index, com.blemobi.sep.probuf.TaskProtos.PTaskInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .bbproto.PTaskInfo dailyTask = 6;</code>
+       * <code>repeated .bbproto.PTaskInfo dailyTask = 4;</code>
        *
        * <pre>
        * 日常任务列表
@@ -2998,7 +1532,7 @@ public final class TaskProtos {
           dailyTaskBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               com.blemobi.sep.probuf.TaskProtos.PTaskInfo, com.blemobi.sep.probuf.TaskProtos.PTaskInfo.Builder, com.blemobi.sep.probuf.TaskProtos.PTaskInfoOrBuilder>(
                   dailyTask_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000008) == 0x00000008),
                   getParentForChildren(),
                   isClean());
           dailyTask_ = null;
@@ -3016,27 +1550,27 @@ public final class TaskProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bbproto.PTaskList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PGoldTask)
     }
 
-    // @@protoc_insertion_point(class_scope:bbproto.PTaskList)
-    private static final com.blemobi.sep.probuf.TaskProtos.PTaskList DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:bbproto.PGoldTask)
+    private static final com.blemobi.sep.probuf.TaskProtos.PGoldTask DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.TaskProtos.PTaskList();
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.TaskProtos.PGoldTask();
     }
 
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskList getDefaultInstance() {
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldTask getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PTaskList>
-        PARSER = new com.google.protobuf.AbstractParser<PTaskList>() {
-      public PTaskList parsePartialFrom(
+    private static final com.google.protobuf.Parser<PGoldTask>
+        PARSER = new com.google.protobuf.AbstractParser<PGoldTask>() {
+      public PGoldTask parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         try {
-          return new PTaskList(input, extensionRegistry);
+          return new PGoldTask(input, extensionRegistry);
         } catch (RuntimeException e) {
           if (e.getCause() instanceof
               com.google.protobuf.InvalidProtocolBufferException) {
@@ -3048,16 +1582,16 @@ public final class TaskProtos {
       }
     };
 
-    public static com.google.protobuf.Parser<PTaskList> parser() {
+    public static com.google.protobuf.Parser<PGoldTask> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PTaskList> getParserForType() {
+    public com.google.protobuf.Parser<PGoldTask> getParserForType() {
       return PARSER;
     }
 
-    public com.blemobi.sep.probuf.TaskProtos.PTaskList getDefaultInstanceForType() {
+    public com.blemobi.sep.probuf.TaskProtos.PGoldTask getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3068,58 +1602,58 @@ public final class TaskProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional int32 taskid = 1;</code>
+     * <code>optional int32 ID = 1;</code>
      *
      * <pre>
      * 任务ID
      * </pre>
      */
-    int getTaskid();
+    int getID();
 
     /**
-     * <code>optional int64 exp = 2;</code>
+     * <code>optional int32 gold = 2;</code>
      *
      * <pre>
-     * 任务完成经验值
+     * 金币
      * </pre>
      */
-    long getExp();
+    int getGold();
 
     /**
      * <code>optional int32 state = 3;</code>
      *
      * <pre>
-     * 任务状态（0-未接受，1-进行中，2-可领奖，3-已完成）
+     * 任务状态（0-进行中，1-可领奖，-1-已完成）
      * </pre>
      */
     int getState();
 
     /**
-     * <code>optional int32 type = 4;</code>
+     * <code>optional int32 count = 4;</code>
      *
      * <pre>
-     * 任务类型
+     * 已完成进度
      * </pre>
      */
-    int getType();
+    int getCount();
 
     /**
-     * <code>optional int32 complete = 5;</code>
+     * <code>optional int32 targ = 5;</code>
      *
      * <pre>
-     * 已完成数量
+     * 要求进度
      * </pre>
      */
-    int getComplete();
+    int getTarg();
 
     /**
-     * <code>optional int32 num = 6;</code>
+     * <code>optional int32 loop = 6;</code>
      *
      * <pre>
-     * 任务总数量
+     * 可完成次数
      * </pre>
      */
-    int getNum();
+    int getLoop();
 
     /**
      * <code>optional string desc = 7;</code>
@@ -3151,12 +1685,12 @@ public final class TaskProtos {
       super(builder);
     }
     private PTaskInfo() {
-      taskid_ = 0;
-      exp_ = 0L;
+      iD_ = 0;
+      gold_ = 0;
       state_ = 0;
-      type_ = 0;
-      complete_ = 0;
-      num_ = 0;
+      count_ = 0;
+      targ_ = 0;
+      loop_ = 0;
       desc_ = "";
     }
 
@@ -3186,12 +1720,12 @@ public final class TaskProtos {
             }
             case 8: {
 
-              taskid_ = input.readInt32();
+              iD_ = input.readInt32();
               break;
             }
             case 16: {
 
-              exp_ = input.readInt64();
+              gold_ = input.readInt32();
               break;
             }
             case 24: {
@@ -3201,17 +1735,17 @@ public final class TaskProtos {
             }
             case 32: {
 
-              type_ = input.readInt32();
+              count_ = input.readInt32();
               break;
             }
             case 40: {
 
-              complete_ = input.readInt32();
+              targ_ = input.readInt32();
               break;
             }
             case 48: {
 
-              num_ = input.readInt32();
+              loop_ = input.readInt32();
               break;
             }
             case 58: {
@@ -3244,30 +1778,30 @@ public final class TaskProtos {
               com.blemobi.sep.probuf.TaskProtos.PTaskInfo.class, com.blemobi.sep.probuf.TaskProtos.PTaskInfo.Builder.class);
     }
 
-    public static final int TASKID_FIELD_NUMBER = 1;
-    private int taskid_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private int iD_;
     /**
-     * <code>optional int32 taskid = 1;</code>
+     * <code>optional int32 ID = 1;</code>
      *
      * <pre>
      * 任务ID
      * </pre>
      */
-    public int getTaskid() {
-      return taskid_;
+    public int getID() {
+      return iD_;
     }
 
-    public static final int EXP_FIELD_NUMBER = 2;
-    private long exp_;
+    public static final int GOLD_FIELD_NUMBER = 2;
+    private int gold_;
     /**
-     * <code>optional int64 exp = 2;</code>
+     * <code>optional int32 gold = 2;</code>
      *
      * <pre>
-     * 任务完成经验值
+     * 金币
      * </pre>
      */
-    public long getExp() {
-      return exp_;
+    public int getGold() {
+      return gold_;
     }
 
     public static final int STATE_FIELD_NUMBER = 3;
@@ -3276,50 +1810,50 @@ public final class TaskProtos {
      * <code>optional int32 state = 3;</code>
      *
      * <pre>
-     * 任务状态（0-未接受，1-进行中，2-可领奖，3-已完成）
+     * 任务状态（0-进行中，1-可领奖，-1-已完成）
      * </pre>
      */
     public int getState() {
       return state_;
     }
 
-    public static final int TYPE_FIELD_NUMBER = 4;
-    private int type_;
+    public static final int COUNT_FIELD_NUMBER = 4;
+    private int count_;
     /**
-     * <code>optional int32 type = 4;</code>
+     * <code>optional int32 count = 4;</code>
      *
      * <pre>
-     * 任务类型
+     * 已完成进度
      * </pre>
      */
-    public int getType() {
-      return type_;
+    public int getCount() {
+      return count_;
     }
 
-    public static final int COMPLETE_FIELD_NUMBER = 5;
-    private int complete_;
+    public static final int TARG_FIELD_NUMBER = 5;
+    private int targ_;
     /**
-     * <code>optional int32 complete = 5;</code>
+     * <code>optional int32 targ = 5;</code>
      *
      * <pre>
-     * 已完成数量
+     * 要求进度
      * </pre>
      */
-    public int getComplete() {
-      return complete_;
+    public int getTarg() {
+      return targ_;
     }
 
-    public static final int NUM_FIELD_NUMBER = 6;
-    private int num_;
+    public static final int LOOP_FIELD_NUMBER = 6;
+    private int loop_;
     /**
-     * <code>optional int32 num = 6;</code>
+     * <code>optional int32 loop = 6;</code>
      *
      * <pre>
-     * 任务总数量
+     * 可完成次数
      * </pre>
      */
-    public int getNum() {
-      return num_;
+    public int getLoop() {
+      return loop_;
     }
 
     public static final int DESC_FIELD_NUMBER = 7;
@@ -3376,23 +1910,23 @@ public final class TaskProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (taskid_ != 0) {
-        output.writeInt32(1, taskid_);
+      if (iD_ != 0) {
+        output.writeInt32(1, iD_);
       }
-      if (exp_ != 0L) {
-        output.writeInt64(2, exp_);
+      if (gold_ != 0) {
+        output.writeInt32(2, gold_);
       }
       if (state_ != 0) {
         output.writeInt32(3, state_);
       }
-      if (type_ != 0) {
-        output.writeInt32(4, type_);
+      if (count_ != 0) {
+        output.writeInt32(4, count_);
       }
-      if (complete_ != 0) {
-        output.writeInt32(5, complete_);
+      if (targ_ != 0) {
+        output.writeInt32(5, targ_);
       }
-      if (num_ != 0) {
-        output.writeInt32(6, num_);
+      if (loop_ != 0) {
+        output.writeInt32(6, loop_);
       }
       if (!getDescBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessage.writeString(output, 7, desc_);
@@ -3404,29 +1938,29 @@ public final class TaskProtos {
       if (size != -1) return size;
 
       size = 0;
-      if (taskid_ != 0) {
+      if (iD_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, taskid_);
+          .computeInt32Size(1, iD_);
       }
-      if (exp_ != 0L) {
+      if (gold_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, exp_);
+          .computeInt32Size(2, gold_);
       }
       if (state_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, state_);
       }
-      if (type_ != 0) {
+      if (count_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, type_);
+          .computeInt32Size(4, count_);
       }
-      if (complete_ != 0) {
+      if (targ_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, complete_);
+          .computeInt32Size(5, targ_);
       }
-      if (num_ != 0) {
+      if (loop_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(6, num_);
+          .computeInt32Size(6, loop_);
       }
       if (!getDescBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(7, desc_);
@@ -3542,17 +2076,17 @@ public final class TaskProtos {
       }
       public Builder clear() {
         super.clear();
-        taskid_ = 0;
+        iD_ = 0;
 
-        exp_ = 0L;
+        gold_ = 0;
 
         state_ = 0;
 
-        type_ = 0;
+        count_ = 0;
 
-        complete_ = 0;
+        targ_ = 0;
 
-        num_ = 0;
+        loop_ = 0;
 
         desc_ = "";
 
@@ -3578,12 +2112,12 @@ public final class TaskProtos {
 
       public com.blemobi.sep.probuf.TaskProtos.PTaskInfo buildPartial() {
         com.blemobi.sep.probuf.TaskProtos.PTaskInfo result = new com.blemobi.sep.probuf.TaskProtos.PTaskInfo(this);
-        result.taskid_ = taskid_;
-        result.exp_ = exp_;
+        result.iD_ = iD_;
+        result.gold_ = gold_;
         result.state_ = state_;
-        result.type_ = type_;
-        result.complete_ = complete_;
-        result.num_ = num_;
+        result.count_ = count_;
+        result.targ_ = targ_;
+        result.loop_ = loop_;
         result.desc_ = desc_;
         onBuilt();
         return result;
@@ -3600,23 +2134,23 @@ public final class TaskProtos {
 
       public Builder mergeFrom(com.blemobi.sep.probuf.TaskProtos.PTaskInfo other) {
         if (other == com.blemobi.sep.probuf.TaskProtos.PTaskInfo.getDefaultInstance()) return this;
-        if (other.getTaskid() != 0) {
-          setTaskid(other.getTaskid());
+        if (other.getID() != 0) {
+          setID(other.getID());
         }
-        if (other.getExp() != 0L) {
-          setExp(other.getExp());
+        if (other.getGold() != 0) {
+          setGold(other.getGold());
         }
         if (other.getState() != 0) {
           setState(other.getState());
         }
-        if (other.getType() != 0) {
-          setType(other.getType());
+        if (other.getCount() != 0) {
+          setCount(other.getCount());
         }
-        if (other.getComplete() != 0) {
-          setComplete(other.getComplete());
+        if (other.getTarg() != 0) {
+          setTarg(other.getTarg());
         }
-        if (other.getNum() != 0) {
-          setNum(other.getNum());
+        if (other.getLoop() != 0) {
+          setLoop(other.getLoop());
         }
         if (!other.getDesc().isEmpty()) {
           desc_ = other.desc_;
@@ -3648,78 +2182,78 @@ public final class TaskProtos {
         return this;
       }
 
-      private int taskid_ ;
+      private int iD_ ;
       /**
-       * <code>optional int32 taskid = 1;</code>
+       * <code>optional int32 ID = 1;</code>
        *
        * <pre>
        * 任务ID
        * </pre>
        */
-      public int getTaskid() {
-        return taskid_;
+      public int getID() {
+        return iD_;
       }
       /**
-       * <code>optional int32 taskid = 1;</code>
+       * <code>optional int32 ID = 1;</code>
        *
        * <pre>
        * 任务ID
        * </pre>
        */
-      public Builder setTaskid(int value) {
+      public Builder setID(int value) {
         
-        taskid_ = value;
+        iD_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 taskid = 1;</code>
+       * <code>optional int32 ID = 1;</code>
        *
        * <pre>
        * 任务ID
        * </pre>
        */
-      public Builder clearTaskid() {
+      public Builder clearID() {
         
-        taskid_ = 0;
+        iD_ = 0;
         onChanged();
         return this;
       }
 
-      private long exp_ ;
+      private int gold_ ;
       /**
-       * <code>optional int64 exp = 2;</code>
+       * <code>optional int32 gold = 2;</code>
        *
        * <pre>
-       * 任务完成经验值
+       * 金币
        * </pre>
        */
-      public long getExp() {
-        return exp_;
+      public int getGold() {
+        return gold_;
       }
       /**
-       * <code>optional int64 exp = 2;</code>
+       * <code>optional int32 gold = 2;</code>
        *
        * <pre>
-       * 任务完成经验值
+       * 金币
        * </pre>
        */
-      public Builder setExp(long value) {
+      public Builder setGold(int value) {
         
-        exp_ = value;
+        gold_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int64 exp = 2;</code>
+       * <code>optional int32 gold = 2;</code>
        *
        * <pre>
-       * 任务完成经验值
+       * 金币
        * </pre>
        */
-      public Builder clearExp() {
+      public Builder clearGold() {
         
-        exp_ = 0L;
+        gold_ = 0;
         onChanged();
         return this;
       }
@@ -3729,7 +2263,7 @@ public final class TaskProtos {
        * <code>optional int32 state = 3;</code>
        *
        * <pre>
-       * 任务状态（0-未接受，1-进行中，2-可领奖，3-已完成）
+       * 任务状态（0-进行中，1-可领奖，-1-已完成）
        * </pre>
        */
       public int getState() {
@@ -3739,7 +2273,7 @@ public final class TaskProtos {
        * <code>optional int32 state = 3;</code>
        *
        * <pre>
-       * 任务状态（0-未接受，1-进行中，2-可领奖，3-已完成）
+       * 任务状态（0-进行中，1-可领奖，-1-已完成）
        * </pre>
        */
       public Builder setState(int value) {
@@ -3752,7 +2286,7 @@ public final class TaskProtos {
        * <code>optional int32 state = 3;</code>
        *
        * <pre>
-       * 任务状态（0-未接受，1-进行中，2-可领奖，3-已完成）
+       * 任务状态（0-进行中，1-可领奖，-1-已完成）
        * </pre>
        */
       public Builder clearState() {
@@ -3762,116 +2296,116 @@ public final class TaskProtos {
         return this;
       }
 
-      private int type_ ;
+      private int count_ ;
       /**
-       * <code>optional int32 type = 4;</code>
+       * <code>optional int32 count = 4;</code>
        *
        * <pre>
-       * 任务类型
+       * 已完成进度
        * </pre>
        */
-      public int getType() {
-        return type_;
+      public int getCount() {
+        return count_;
       }
       /**
-       * <code>optional int32 type = 4;</code>
+       * <code>optional int32 count = 4;</code>
        *
        * <pre>
-       * 任务类型
+       * 已完成进度
        * </pre>
        */
-      public Builder setType(int value) {
+      public Builder setCount(int value) {
         
-        type_ = value;
+        count_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 type = 4;</code>
+       * <code>optional int32 count = 4;</code>
        *
        * <pre>
-       * 任务类型
+       * 已完成进度
        * </pre>
        */
-      public Builder clearType() {
+      public Builder clearCount() {
         
-        type_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int complete_ ;
-      /**
-       * <code>optional int32 complete = 5;</code>
-       *
-       * <pre>
-       * 已完成数量
-       * </pre>
-       */
-      public int getComplete() {
-        return complete_;
-      }
-      /**
-       * <code>optional int32 complete = 5;</code>
-       *
-       * <pre>
-       * 已完成数量
-       * </pre>
-       */
-      public Builder setComplete(int value) {
-        
-        complete_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 complete = 5;</code>
-       *
-       * <pre>
-       * 已完成数量
-       * </pre>
-       */
-      public Builder clearComplete() {
-        
-        complete_ = 0;
+        count_ = 0;
         onChanged();
         return this;
       }
 
-      private int num_ ;
+      private int targ_ ;
       /**
-       * <code>optional int32 num = 6;</code>
+       * <code>optional int32 targ = 5;</code>
        *
        * <pre>
-       * 任务总数量
+       * 要求进度
        * </pre>
        */
-      public int getNum() {
-        return num_;
+      public int getTarg() {
+        return targ_;
       }
       /**
-       * <code>optional int32 num = 6;</code>
+       * <code>optional int32 targ = 5;</code>
        *
        * <pre>
-       * 任务总数量
+       * 要求进度
        * </pre>
        */
-      public Builder setNum(int value) {
+      public Builder setTarg(int value) {
         
-        num_ = value;
+        targ_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 num = 6;</code>
+       * <code>optional int32 targ = 5;</code>
        *
        * <pre>
-       * 任务总数量
+       * 要求进度
        * </pre>
        */
-      public Builder clearNum() {
+      public Builder clearTarg() {
         
-        num_ = 0;
+        targ_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int loop_ ;
+      /**
+       * <code>optional int32 loop = 6;</code>
+       *
+       * <pre>
+       * 可完成次数
+       * </pre>
+       */
+      public int getLoop() {
+        return loop_;
+      }
+      /**
+       * <code>optional int32 loop = 6;</code>
+       *
+       * <pre>
+       * 可完成次数
+       * </pre>
+       */
+      public Builder setLoop(int value) {
+        
+        loop_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 loop = 6;</code>
+       *
+       * <pre>
+       * 可完成次数
+       * </pre>
+       */
+      public Builder clearLoop() {
+        
+        loop_ = 0;
         onChanged();
         return this;
       }
@@ -4022,92 +2556,77 @@ public final class TaskProtos {
 
   }
 
-  public interface PTaskLevelListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bbproto.PTaskLevelList)
+  public interface PGoldDetailsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PGoldDetails)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
+     * <code>optional int32 gold = 1;</code>
      *
      * <pre>
-     * 用户基础信息
+     * 金币（加载更多时此值无效）
      * </pre>
      */
-    boolean hasUserBasic();
-    /**
-     * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
-     *
-     * <pre>
-     * 用户基础信息
-     * </pre>
-     */
-    com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic getUserBasic();
-    /**
-     * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
-     *
-     * <pre>
-     * 用户基础信息
-     * </pre>
-     */
-    com.blemobi.sep.probuf.TaskProtos.PTaskUserBasicOrBuilder getUserBasicOrBuilder();
+    int getGold();
 
     /**
-     * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+     * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
      *
      * <pre>
-     * 等级列表
+     * 金币明细
      * </pre>
      */
-    java.util.List<com.blemobi.sep.probuf.TaskProtos.PTaskLevel> 
-        getTaskLevelList();
+    java.util.List<com.blemobi.sep.probuf.TaskProtos.PGoldDetail> 
+        getDetailList();
     /**
-     * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+     * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
      *
      * <pre>
-     * 等级列表
+     * 金币明细
      * </pre>
      */
-    com.blemobi.sep.probuf.TaskProtos.PTaskLevel getTaskLevel(int index);
+    com.blemobi.sep.probuf.TaskProtos.PGoldDetail getDetail(int index);
     /**
-     * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+     * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
      *
      * <pre>
-     * 等级列表
+     * 金币明细
      * </pre>
      */
-    int getTaskLevelCount();
+    int getDetailCount();
     /**
-     * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+     * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
      *
      * <pre>
-     * 等级列表
+     * 金币明细
      * </pre>
      */
-    java.util.List<? extends com.blemobi.sep.probuf.TaskProtos.PTaskLevelOrBuilder> 
-        getTaskLevelOrBuilderList();
+    java.util.List<? extends com.blemobi.sep.probuf.TaskProtos.PGoldDetailOrBuilder> 
+        getDetailOrBuilderList();
     /**
-     * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+     * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
      *
      * <pre>
-     * 等级列表
+     * 金币明细
      * </pre>
      */
-    com.blemobi.sep.probuf.TaskProtos.PTaskLevelOrBuilder getTaskLevelOrBuilder(
+    com.blemobi.sep.probuf.TaskProtos.PGoldDetailOrBuilder getDetailOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code bbproto.PTaskLevelList}
+   * Protobuf type {@code bbproto.PGoldDetails}
    */
-  public  static final class PTaskLevelList extends
+  public  static final class PGoldDetails extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:bbproto.PTaskLevelList)
-      PTaskLevelListOrBuilder {
-    // Use PTaskLevelList.newBuilder() to construct.
-    private PTaskLevelList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:bbproto.PGoldDetails)
+      PGoldDetailsOrBuilder {
+    // Use PGoldDetails.newBuilder() to construct.
+    private PGoldDetails(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-    private PTaskLevelList() {
-      taskLevel_ = java.util.Collections.emptyList();
+    private PGoldDetails() {
+      gold_ = 0;
+      detail_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -4115,7 +2634,7 @@ public final class TaskProtos {
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
     }
-    private PTaskLevelList(
+    private PGoldDetails(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
       this();
@@ -4134,25 +2653,17 @@ public final class TaskProtos {
               }
               break;
             }
-            case 10: {
-              com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.Builder subBuilder = null;
-              if (userBasic_ != null) {
-                subBuilder = userBasic_.toBuilder();
-              }
-              userBasic_ = input.readMessage(com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(userBasic_);
-                userBasic_ = subBuilder.buildPartial();
-              }
+            case 8: {
 
+              gold_ = input.readInt32();
               break;
             }
             case 18: {
               if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                taskLevel_ = new java.util.ArrayList<com.blemobi.sep.probuf.TaskProtos.PTaskLevel>();
+                detail_ = new java.util.ArrayList<com.blemobi.sep.probuf.TaskProtos.PGoldDetail>();
                 mutable_bitField0_ |= 0x00000002;
               }
-              taskLevel_.add(input.readMessage(com.blemobi.sep.probuf.TaskProtos.PTaskLevel.parser(), extensionRegistry));
+              detail_.add(input.readMessage(com.blemobi.sep.probuf.TaskProtos.PGoldDetail.parser(), extensionRegistry));
               break;
             }
           }
@@ -4165,110 +2676,90 @@ public final class TaskProtos {
                 e.getMessage()).setUnfinishedMessage(this));
       } finally {
         if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          taskLevel_ = java.util.Collections.unmodifiableList(taskLevel_);
+          detail_ = java.util.Collections.unmodifiableList(detail_);
         }
         makeExtensionsImmutable();
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PTaskLevelList_descriptor;
+      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PGoldDetails_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PTaskLevelList_fieldAccessorTable
+      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PGoldDetails_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.TaskProtos.PTaskLevelList.class, com.blemobi.sep.probuf.TaskProtos.PTaskLevelList.Builder.class);
+              com.blemobi.sep.probuf.TaskProtos.PGoldDetails.class, com.blemobi.sep.probuf.TaskProtos.PGoldDetails.Builder.class);
     }
 
     private int bitField0_;
-    public static final int USERBASIC_FIELD_NUMBER = 1;
-    private com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic userBasic_;
+    public static final int GOLD_FIELD_NUMBER = 1;
+    private int gold_;
     /**
-     * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
+     * <code>optional int32 gold = 1;</code>
      *
      * <pre>
-     * 用户基础信息
+     * 金币（加载更多时此值无效）
      * </pre>
      */
-    public boolean hasUserBasic() {
-      return userBasic_ != null;
-    }
-    /**
-     * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
-     *
-     * <pre>
-     * 用户基础信息
-     * </pre>
-     */
-    public com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic getUserBasic() {
-      return userBasic_ == null ? com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.getDefaultInstance() : userBasic_;
-    }
-    /**
-     * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
-     *
-     * <pre>
-     * 用户基础信息
-     * </pre>
-     */
-    public com.blemobi.sep.probuf.TaskProtos.PTaskUserBasicOrBuilder getUserBasicOrBuilder() {
-      return getUserBasic();
+    public int getGold() {
+      return gold_;
     }
 
-    public static final int TASKLEVEL_FIELD_NUMBER = 2;
-    private java.util.List<com.blemobi.sep.probuf.TaskProtos.PTaskLevel> taskLevel_;
+    public static final int DETAIL_FIELD_NUMBER = 2;
+    private java.util.List<com.blemobi.sep.probuf.TaskProtos.PGoldDetail> detail_;
     /**
-     * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+     * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
      *
      * <pre>
-     * 等级列表
+     * 金币明细
      * </pre>
      */
-    public java.util.List<com.blemobi.sep.probuf.TaskProtos.PTaskLevel> getTaskLevelList() {
-      return taskLevel_;
+    public java.util.List<com.blemobi.sep.probuf.TaskProtos.PGoldDetail> getDetailList() {
+      return detail_;
     }
     /**
-     * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+     * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
      *
      * <pre>
-     * 等级列表
+     * 金币明细
      * </pre>
      */
-    public java.util.List<? extends com.blemobi.sep.probuf.TaskProtos.PTaskLevelOrBuilder> 
-        getTaskLevelOrBuilderList() {
-      return taskLevel_;
+    public java.util.List<? extends com.blemobi.sep.probuf.TaskProtos.PGoldDetailOrBuilder> 
+        getDetailOrBuilderList() {
+      return detail_;
     }
     /**
-     * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+     * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
      *
      * <pre>
-     * 等级列表
+     * 金币明细
      * </pre>
      */
-    public int getTaskLevelCount() {
-      return taskLevel_.size();
+    public int getDetailCount() {
+      return detail_.size();
     }
     /**
-     * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+     * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
      *
      * <pre>
-     * 等级列表
+     * 金币明细
      * </pre>
      */
-    public com.blemobi.sep.probuf.TaskProtos.PTaskLevel getTaskLevel(int index) {
-      return taskLevel_.get(index);
+    public com.blemobi.sep.probuf.TaskProtos.PGoldDetail getDetail(int index) {
+      return detail_.get(index);
     }
     /**
-     * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+     * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
      *
      * <pre>
-     * 等级列表
+     * 金币明细
      * </pre>
      */
-    public com.blemobi.sep.probuf.TaskProtos.PTaskLevelOrBuilder getTaskLevelOrBuilder(
+    public com.blemobi.sep.probuf.TaskProtos.PGoldDetailOrBuilder getDetailOrBuilder(
         int index) {
-      return taskLevel_.get(index);
+      return detail_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4283,11 +2774,11 @@ public final class TaskProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (userBasic_ != null) {
-        output.writeMessage(1, getUserBasic());
+      if (gold_ != 0) {
+        output.writeInt32(1, gold_);
       }
-      for (int i = 0; i < taskLevel_.size(); i++) {
-        output.writeMessage(2, taskLevel_.get(i));
+      for (int i = 0; i < detail_.size(); i++) {
+        output.writeMessage(2, detail_.get(i));
       }
     }
 
@@ -4296,66 +2787,66 @@ public final class TaskProtos {
       if (size != -1) return size;
 
       size = 0;
-      if (userBasic_ != null) {
+      if (gold_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getUserBasic());
+          .computeInt32Size(1, gold_);
       }
-      for (int i = 0; i < taskLevel_.size(); i++) {
+      for (int i = 0; i < detail_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, taskLevel_.get(i));
+          .computeMessageSize(2, detail_.get(i));
       }
       memoizedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskLevelList parseFrom(
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldDetails parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskLevelList parseFrom(
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldDetails parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskLevelList parseFrom(byte[] data)
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldDetails parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskLevelList parseFrom(
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldDetails parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskLevelList parseFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldDetails parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskLevelList parseFrom(
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldDetails parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskLevelList parseDelimitedFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldDetails parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskLevelList parseDelimitedFrom(
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldDetails parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskLevelList parseFrom(
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldDetails parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskLevelList parseFrom(
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldDetails parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4366,7 +2857,7 @@ public final class TaskProtos {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.blemobi.sep.probuf.TaskProtos.PTaskLevelList prototype) {
+    public static Builder newBuilder(com.blemobi.sep.probuf.TaskProtos.PGoldDetails prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -4381,25 +2872,25 @@ public final class TaskProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code bbproto.PTaskLevelList}
+     * Protobuf type {@code bbproto.PGoldDetails}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bbproto.PTaskLevelList)
-        com.blemobi.sep.probuf.TaskProtos.PTaskLevelListOrBuilder {
+        // @@protoc_insertion_point(builder_implements:bbproto.PGoldDetails)
+        com.blemobi.sep.probuf.TaskProtos.PGoldDetailsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PTaskLevelList_descriptor;
+        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PGoldDetails_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PTaskLevelList_fieldAccessorTable
+        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PGoldDetails_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.TaskProtos.PTaskLevelList.class, com.blemobi.sep.probuf.TaskProtos.PTaskLevelList.Builder.class);
+                com.blemobi.sep.probuf.TaskProtos.PGoldDetails.class, com.blemobi.sep.probuf.TaskProtos.PGoldDetails.Builder.class);
       }
 
-      // Construct using com.blemobi.sep.probuf.TaskProtos.PTaskLevelList.newBuilder()
+      // Construct using com.blemobi.sep.probuf.TaskProtos.PGoldDetails.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -4411,60 +2902,52 @@ public final class TaskProtos {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getTaskLevelFieldBuilder();
+          getDetailFieldBuilder();
         }
       }
       public Builder clear() {
         super.clear();
-        if (userBasicBuilder_ == null) {
-          userBasic_ = null;
-        } else {
-          userBasic_ = null;
-          userBasicBuilder_ = null;
-        }
-        if (taskLevelBuilder_ == null) {
-          taskLevel_ = java.util.Collections.emptyList();
+        gold_ = 0;
+
+        if (detailBuilder_ == null) {
+          detail_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          taskLevelBuilder_.clear();
+          detailBuilder_.clear();
         }
         return this;
       }
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PTaskLevelList_descriptor;
+        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PGoldDetails_descriptor;
       }
 
-      public com.blemobi.sep.probuf.TaskProtos.PTaskLevelList getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.TaskProtos.PTaskLevelList.getDefaultInstance();
+      public com.blemobi.sep.probuf.TaskProtos.PGoldDetails getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.TaskProtos.PGoldDetails.getDefaultInstance();
       }
 
-      public com.blemobi.sep.probuf.TaskProtos.PTaskLevelList build() {
-        com.blemobi.sep.probuf.TaskProtos.PTaskLevelList result = buildPartial();
+      public com.blemobi.sep.probuf.TaskProtos.PGoldDetails build() {
+        com.blemobi.sep.probuf.TaskProtos.PGoldDetails result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.blemobi.sep.probuf.TaskProtos.PTaskLevelList buildPartial() {
-        com.blemobi.sep.probuf.TaskProtos.PTaskLevelList result = new com.blemobi.sep.probuf.TaskProtos.PTaskLevelList(this);
+      public com.blemobi.sep.probuf.TaskProtos.PGoldDetails buildPartial() {
+        com.blemobi.sep.probuf.TaskProtos.PGoldDetails result = new com.blemobi.sep.probuf.TaskProtos.PGoldDetails(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
-        if (userBasicBuilder_ == null) {
-          result.userBasic_ = userBasic_;
-        } else {
-          result.userBasic_ = userBasicBuilder_.build();
-        }
-        if (taskLevelBuilder_ == null) {
+        result.gold_ = gold_;
+        if (detailBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            taskLevel_ = java.util.Collections.unmodifiableList(taskLevel_);
+            detail_ = java.util.Collections.unmodifiableList(detail_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
-          result.taskLevel_ = taskLevel_;
+          result.detail_ = detail_;
         } else {
-          result.taskLevel_ = taskLevelBuilder_.build();
+          result.detail_ = detailBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -4472,42 +2955,42 @@ public final class TaskProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.TaskProtos.PTaskLevelList) {
-          return mergeFrom((com.blemobi.sep.probuf.TaskProtos.PTaskLevelList)other);
+        if (other instanceof com.blemobi.sep.probuf.TaskProtos.PGoldDetails) {
+          return mergeFrom((com.blemobi.sep.probuf.TaskProtos.PGoldDetails)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.blemobi.sep.probuf.TaskProtos.PTaskLevelList other) {
-        if (other == com.blemobi.sep.probuf.TaskProtos.PTaskLevelList.getDefaultInstance()) return this;
-        if (other.hasUserBasic()) {
-          mergeUserBasic(other.getUserBasic());
+      public Builder mergeFrom(com.blemobi.sep.probuf.TaskProtos.PGoldDetails other) {
+        if (other == com.blemobi.sep.probuf.TaskProtos.PGoldDetails.getDefaultInstance()) return this;
+        if (other.getGold() != 0) {
+          setGold(other.getGold());
         }
-        if (taskLevelBuilder_ == null) {
-          if (!other.taskLevel_.isEmpty()) {
-            if (taskLevel_.isEmpty()) {
-              taskLevel_ = other.taskLevel_;
+        if (detailBuilder_ == null) {
+          if (!other.detail_.isEmpty()) {
+            if (detail_.isEmpty()) {
+              detail_ = other.detail_;
               bitField0_ = (bitField0_ & ~0x00000002);
             } else {
-              ensureTaskLevelIsMutable();
-              taskLevel_.addAll(other.taskLevel_);
+              ensureDetailIsMutable();
+              detail_.addAll(other.detail_);
             }
             onChanged();
           }
         } else {
-          if (!other.taskLevel_.isEmpty()) {
-            if (taskLevelBuilder_.isEmpty()) {
-              taskLevelBuilder_.dispose();
-              taskLevelBuilder_ = null;
-              taskLevel_ = other.taskLevel_;
+          if (!other.detail_.isEmpty()) {
+            if (detailBuilder_.isEmpty()) {
+              detailBuilder_.dispose();
+              detailBuilder_ = null;
+              detail_ = other.detail_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              taskLevelBuilder_ = 
+              detailBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getTaskLevelFieldBuilder() : null;
+                   getDetailFieldBuilder() : null;
             } else {
-              taskLevelBuilder_.addAllMessages(other.taskLevel_);
+              detailBuilder_.addAllMessages(other.detail_);
             }
           }
         }
@@ -4523,11 +3006,11 @@ public final class TaskProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.blemobi.sep.probuf.TaskProtos.PTaskLevelList parsedMessage = null;
+        com.blemobi.sep.probuf.TaskProtos.PGoldDetails parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.TaskProtos.PTaskLevelList) e.getUnfinishedMessage();
+          parsedMessage = (com.blemobi.sep.probuf.TaskProtos.PGoldDetails) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -4538,469 +3021,354 @@ public final class TaskProtos {
       }
       private int bitField0_;
 
-      private com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic userBasic_ = null;
-      private com.google.protobuf.SingleFieldBuilder<
-          com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic, com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.Builder, com.blemobi.sep.probuf.TaskProtos.PTaskUserBasicOrBuilder> userBasicBuilder_;
+      private int gold_ ;
       /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
+       * <code>optional int32 gold = 1;</code>
        *
        * <pre>
-       * 用户基础信息
+       * 金币（加载更多时此值无效）
        * </pre>
        */
-      public boolean hasUserBasic() {
-        return userBasicBuilder_ != null || userBasic_ != null;
+      public int getGold() {
+        return gold_;
       }
       /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
+       * <code>optional int32 gold = 1;</code>
        *
        * <pre>
-       * 用户基础信息
+       * 金币（加载更多时此值无效）
        * </pre>
        */
-      public com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic getUserBasic() {
-        if (userBasicBuilder_ == null) {
-          return userBasic_ == null ? com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.getDefaultInstance() : userBasic_;
-        } else {
-          return userBasicBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
-       *
-       * <pre>
-       * 用户基础信息
-       * </pre>
-       */
-      public Builder setUserBasic(com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic value) {
-        if (userBasicBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          userBasic_ = value;
-          onChanged();
-        } else {
-          userBasicBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
-       *
-       * <pre>
-       * 用户基础信息
-       * </pre>
-       */
-      public Builder setUserBasic(
-          com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.Builder builderForValue) {
-        if (userBasicBuilder_ == null) {
-          userBasic_ = builderForValue.build();
-          onChanged();
-        } else {
-          userBasicBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
-       *
-       * <pre>
-       * 用户基础信息
-       * </pre>
-       */
-      public Builder mergeUserBasic(com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic value) {
-        if (userBasicBuilder_ == null) {
-          if (userBasic_ != null) {
-            userBasic_ =
-              com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.newBuilder(userBasic_).mergeFrom(value).buildPartial();
-          } else {
-            userBasic_ = value;
-          }
-          onChanged();
-        } else {
-          userBasicBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
-       *
-       * <pre>
-       * 用户基础信息
-       * </pre>
-       */
-      public Builder clearUserBasic() {
-        if (userBasicBuilder_ == null) {
-          userBasic_ = null;
-          onChanged();
-        } else {
-          userBasic_ = null;
-          userBasicBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
-       *
-       * <pre>
-       * 用户基础信息
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.Builder getUserBasicBuilder() {
+      public Builder setGold(int value) {
         
+        gold_ = value;
         onChanged();
-        return getUserBasicFieldBuilder().getBuilder();
+        return this;
       }
       /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
+       * <code>optional int32 gold = 1;</code>
        *
        * <pre>
-       * 用户基础信息
+       * 金币（加载更多时此值无效）
        * </pre>
        */
-      public com.blemobi.sep.probuf.TaskProtos.PTaskUserBasicOrBuilder getUserBasicOrBuilder() {
-        if (userBasicBuilder_ != null) {
-          return userBasicBuilder_.getMessageOrBuilder();
-        } else {
-          return userBasic_ == null ?
-              com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.getDefaultInstance() : userBasic_;
-        }
-      }
-      /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
-       *
-       * <pre>
-       * 用户基础信息
-       * </pre>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic, com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.Builder, com.blemobi.sep.probuf.TaskProtos.PTaskUserBasicOrBuilder> 
-          getUserBasicFieldBuilder() {
-        if (userBasicBuilder_ == null) {
-          userBasicBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic, com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.Builder, com.blemobi.sep.probuf.TaskProtos.PTaskUserBasicOrBuilder>(
-                  getUserBasic(),
-                  getParentForChildren(),
-                  isClean());
-          userBasic_ = null;
-        }
-        return userBasicBuilder_;
+      public Builder clearGold() {
+        
+        gold_ = 0;
+        onChanged();
+        return this;
       }
 
-      private java.util.List<com.blemobi.sep.probuf.TaskProtos.PTaskLevel> taskLevel_ =
+      private java.util.List<com.blemobi.sep.probuf.TaskProtos.PGoldDetail> detail_ =
         java.util.Collections.emptyList();
-      private void ensureTaskLevelIsMutable() {
+      private void ensureDetailIsMutable() {
         if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          taskLevel_ = new java.util.ArrayList<com.blemobi.sep.probuf.TaskProtos.PTaskLevel>(taskLevel_);
+          detail_ = new java.util.ArrayList<com.blemobi.sep.probuf.TaskProtos.PGoldDetail>(detail_);
           bitField0_ |= 0x00000002;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.TaskProtos.PTaskLevel, com.blemobi.sep.probuf.TaskProtos.PTaskLevel.Builder, com.blemobi.sep.probuf.TaskProtos.PTaskLevelOrBuilder> taskLevelBuilder_;
+          com.blemobi.sep.probuf.TaskProtos.PGoldDetail, com.blemobi.sep.probuf.TaskProtos.PGoldDetail.Builder, com.blemobi.sep.probuf.TaskProtos.PGoldDetailOrBuilder> detailBuilder_;
 
       /**
-       * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+       * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
        *
        * <pre>
-       * 等级列表
+       * 金币明细
        * </pre>
        */
-      public java.util.List<com.blemobi.sep.probuf.TaskProtos.PTaskLevel> getTaskLevelList() {
-        if (taskLevelBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(taskLevel_);
+      public java.util.List<com.blemobi.sep.probuf.TaskProtos.PGoldDetail> getDetailList() {
+        if (detailBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(detail_);
         } else {
-          return taskLevelBuilder_.getMessageList();
+          return detailBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+       * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
        *
        * <pre>
-       * 等级列表
+       * 金币明细
        * </pre>
        */
-      public int getTaskLevelCount() {
-        if (taskLevelBuilder_ == null) {
-          return taskLevel_.size();
+      public int getDetailCount() {
+        if (detailBuilder_ == null) {
+          return detail_.size();
         } else {
-          return taskLevelBuilder_.getCount();
+          return detailBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+       * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
        *
        * <pre>
-       * 等级列表
+       * 金币明细
        * </pre>
        */
-      public com.blemobi.sep.probuf.TaskProtos.PTaskLevel getTaskLevel(int index) {
-        if (taskLevelBuilder_ == null) {
-          return taskLevel_.get(index);
+      public com.blemobi.sep.probuf.TaskProtos.PGoldDetail getDetail(int index) {
+        if (detailBuilder_ == null) {
+          return detail_.get(index);
         } else {
-          return taskLevelBuilder_.getMessage(index);
+          return detailBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+       * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
        *
        * <pre>
-       * 等级列表
+       * 金币明细
        * </pre>
        */
-      public Builder setTaskLevel(
-          int index, com.blemobi.sep.probuf.TaskProtos.PTaskLevel value) {
-        if (taskLevelBuilder_ == null) {
+      public Builder setDetail(
+          int index, com.blemobi.sep.probuf.TaskProtos.PGoldDetail value) {
+        if (detailBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureTaskLevelIsMutable();
-          taskLevel_.set(index, value);
+          ensureDetailIsMutable();
+          detail_.set(index, value);
           onChanged();
         } else {
-          taskLevelBuilder_.setMessage(index, value);
+          detailBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+       * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
        *
        * <pre>
-       * 等级列表
+       * 金币明细
        * </pre>
        */
-      public Builder setTaskLevel(
-          int index, com.blemobi.sep.probuf.TaskProtos.PTaskLevel.Builder builderForValue) {
-        if (taskLevelBuilder_ == null) {
-          ensureTaskLevelIsMutable();
-          taskLevel_.set(index, builderForValue.build());
+      public Builder setDetail(
+          int index, com.blemobi.sep.probuf.TaskProtos.PGoldDetail.Builder builderForValue) {
+        if (detailBuilder_ == null) {
+          ensureDetailIsMutable();
+          detail_.set(index, builderForValue.build());
           onChanged();
         } else {
-          taskLevelBuilder_.setMessage(index, builderForValue.build());
+          detailBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+       * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
        *
        * <pre>
-       * 等级列表
+       * 金币明细
        * </pre>
        */
-      public Builder addTaskLevel(com.blemobi.sep.probuf.TaskProtos.PTaskLevel value) {
-        if (taskLevelBuilder_ == null) {
+      public Builder addDetail(com.blemobi.sep.probuf.TaskProtos.PGoldDetail value) {
+        if (detailBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureTaskLevelIsMutable();
-          taskLevel_.add(value);
+          ensureDetailIsMutable();
+          detail_.add(value);
           onChanged();
         } else {
-          taskLevelBuilder_.addMessage(value);
+          detailBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+       * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
        *
        * <pre>
-       * 等级列表
+       * 金币明细
        * </pre>
        */
-      public Builder addTaskLevel(
-          int index, com.blemobi.sep.probuf.TaskProtos.PTaskLevel value) {
-        if (taskLevelBuilder_ == null) {
+      public Builder addDetail(
+          int index, com.blemobi.sep.probuf.TaskProtos.PGoldDetail value) {
+        if (detailBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureTaskLevelIsMutable();
-          taskLevel_.add(index, value);
+          ensureDetailIsMutable();
+          detail_.add(index, value);
           onChanged();
         } else {
-          taskLevelBuilder_.addMessage(index, value);
+          detailBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+       * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
        *
        * <pre>
-       * 等级列表
+       * 金币明细
        * </pre>
        */
-      public Builder addTaskLevel(
-          com.blemobi.sep.probuf.TaskProtos.PTaskLevel.Builder builderForValue) {
-        if (taskLevelBuilder_ == null) {
-          ensureTaskLevelIsMutable();
-          taskLevel_.add(builderForValue.build());
+      public Builder addDetail(
+          com.blemobi.sep.probuf.TaskProtos.PGoldDetail.Builder builderForValue) {
+        if (detailBuilder_ == null) {
+          ensureDetailIsMutable();
+          detail_.add(builderForValue.build());
           onChanged();
         } else {
-          taskLevelBuilder_.addMessage(builderForValue.build());
+          detailBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+       * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
        *
        * <pre>
-       * 等级列表
+       * 金币明细
        * </pre>
        */
-      public Builder addTaskLevel(
-          int index, com.blemobi.sep.probuf.TaskProtos.PTaskLevel.Builder builderForValue) {
-        if (taskLevelBuilder_ == null) {
-          ensureTaskLevelIsMutable();
-          taskLevel_.add(index, builderForValue.build());
+      public Builder addDetail(
+          int index, com.blemobi.sep.probuf.TaskProtos.PGoldDetail.Builder builderForValue) {
+        if (detailBuilder_ == null) {
+          ensureDetailIsMutable();
+          detail_.add(index, builderForValue.build());
           onChanged();
         } else {
-          taskLevelBuilder_.addMessage(index, builderForValue.build());
+          detailBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+       * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
        *
        * <pre>
-       * 等级列表
+       * 金币明细
        * </pre>
        */
-      public Builder addAllTaskLevel(
-          java.lang.Iterable<? extends com.blemobi.sep.probuf.TaskProtos.PTaskLevel> values) {
-        if (taskLevelBuilder_ == null) {
-          ensureTaskLevelIsMutable();
+      public Builder addAllDetail(
+          java.lang.Iterable<? extends com.blemobi.sep.probuf.TaskProtos.PGoldDetail> values) {
+        if (detailBuilder_ == null) {
+          ensureDetailIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, taskLevel_);
+              values, detail_);
           onChanged();
         } else {
-          taskLevelBuilder_.addAllMessages(values);
+          detailBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+       * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
        *
        * <pre>
-       * 等级列表
+       * 金币明细
        * </pre>
        */
-      public Builder clearTaskLevel() {
-        if (taskLevelBuilder_ == null) {
-          taskLevel_ = java.util.Collections.emptyList();
+      public Builder clearDetail() {
+        if (detailBuilder_ == null) {
+          detail_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
-          taskLevelBuilder_.clear();
+          detailBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+       * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
        *
        * <pre>
-       * 等级列表
+       * 金币明细
        * </pre>
        */
-      public Builder removeTaskLevel(int index) {
-        if (taskLevelBuilder_ == null) {
-          ensureTaskLevelIsMutable();
-          taskLevel_.remove(index);
+      public Builder removeDetail(int index) {
+        if (detailBuilder_ == null) {
+          ensureDetailIsMutable();
+          detail_.remove(index);
           onChanged();
         } else {
-          taskLevelBuilder_.remove(index);
+          detailBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+       * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
        *
        * <pre>
-       * 等级列表
+       * 金币明细
        * </pre>
        */
-      public com.blemobi.sep.probuf.TaskProtos.PTaskLevel.Builder getTaskLevelBuilder(
+      public com.blemobi.sep.probuf.TaskProtos.PGoldDetail.Builder getDetailBuilder(
           int index) {
-        return getTaskLevelFieldBuilder().getBuilder(index);
+        return getDetailFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+       * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
        *
        * <pre>
-       * 等级列表
+       * 金币明细
        * </pre>
        */
-      public com.blemobi.sep.probuf.TaskProtos.PTaskLevelOrBuilder getTaskLevelOrBuilder(
+      public com.blemobi.sep.probuf.TaskProtos.PGoldDetailOrBuilder getDetailOrBuilder(
           int index) {
-        if (taskLevelBuilder_ == null) {
-          return taskLevel_.get(index);  } else {
-          return taskLevelBuilder_.getMessageOrBuilder(index);
+        if (detailBuilder_ == null) {
+          return detail_.get(index);  } else {
+          return detailBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+       * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
        *
        * <pre>
-       * 等级列表
+       * 金币明细
        * </pre>
        */
-      public java.util.List<? extends com.blemobi.sep.probuf.TaskProtos.PTaskLevelOrBuilder> 
-           getTaskLevelOrBuilderList() {
-        if (taskLevelBuilder_ != null) {
-          return taskLevelBuilder_.getMessageOrBuilderList();
+      public java.util.List<? extends com.blemobi.sep.probuf.TaskProtos.PGoldDetailOrBuilder> 
+           getDetailOrBuilderList() {
+        if (detailBuilder_ != null) {
+          return detailBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(taskLevel_);
+          return java.util.Collections.unmodifiableList(detail_);
         }
       }
       /**
-       * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+       * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
        *
        * <pre>
-       * 等级列表
+       * 金币明细
        * </pre>
        */
-      public com.blemobi.sep.probuf.TaskProtos.PTaskLevel.Builder addTaskLevelBuilder() {
-        return getTaskLevelFieldBuilder().addBuilder(
-            com.blemobi.sep.probuf.TaskProtos.PTaskLevel.getDefaultInstance());
+      public com.blemobi.sep.probuf.TaskProtos.PGoldDetail.Builder addDetailBuilder() {
+        return getDetailFieldBuilder().addBuilder(
+            com.blemobi.sep.probuf.TaskProtos.PGoldDetail.getDefaultInstance());
       }
       /**
-       * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+       * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
        *
        * <pre>
-       * 等级列表
+       * 金币明细
        * </pre>
        */
-      public com.blemobi.sep.probuf.TaskProtos.PTaskLevel.Builder addTaskLevelBuilder(
+      public com.blemobi.sep.probuf.TaskProtos.PGoldDetail.Builder addDetailBuilder(
           int index) {
-        return getTaskLevelFieldBuilder().addBuilder(
-            index, com.blemobi.sep.probuf.TaskProtos.PTaskLevel.getDefaultInstance());
+        return getDetailFieldBuilder().addBuilder(
+            index, com.blemobi.sep.probuf.TaskProtos.PGoldDetail.getDefaultInstance());
       }
       /**
-       * <code>repeated .bbproto.PTaskLevel taskLevel = 2;</code>
+       * <code>repeated .bbproto.PGoldDetail detail = 2;</code>
        *
        * <pre>
-       * 等级列表
+       * 金币明细
        * </pre>
        */
-      public java.util.List<com.blemobi.sep.probuf.TaskProtos.PTaskLevel.Builder> 
-           getTaskLevelBuilderList() {
-        return getTaskLevelFieldBuilder().getBuilderList();
+      public java.util.List<com.blemobi.sep.probuf.TaskProtos.PGoldDetail.Builder> 
+           getDetailBuilderList() {
+        return getDetailFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.TaskProtos.PTaskLevel, com.blemobi.sep.probuf.TaskProtos.PTaskLevel.Builder, com.blemobi.sep.probuf.TaskProtos.PTaskLevelOrBuilder> 
-          getTaskLevelFieldBuilder() {
-        if (taskLevelBuilder_ == null) {
-          taskLevelBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              com.blemobi.sep.probuf.TaskProtos.PTaskLevel, com.blemobi.sep.probuf.TaskProtos.PTaskLevel.Builder, com.blemobi.sep.probuf.TaskProtos.PTaskLevelOrBuilder>(
-                  taskLevel_,
+          com.blemobi.sep.probuf.TaskProtos.PGoldDetail, com.blemobi.sep.probuf.TaskProtos.PGoldDetail.Builder, com.blemobi.sep.probuf.TaskProtos.PGoldDetailOrBuilder> 
+          getDetailFieldBuilder() {
+        if (detailBuilder_ == null) {
+          detailBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.blemobi.sep.probuf.TaskProtos.PGoldDetail, com.blemobi.sep.probuf.TaskProtos.PGoldDetail.Builder, com.blemobi.sep.probuf.TaskProtos.PGoldDetailOrBuilder>(
+                  detail_,
                   ((bitField0_ & 0x00000002) == 0x00000002),
                   getParentForChildren(),
                   isClean());
-          taskLevel_ = null;
+          detail_ = null;
         }
-        return taskLevelBuilder_;
+        return detailBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5013,27 +3381,27 @@ public final class TaskProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bbproto.PTaskLevelList)
+      // @@protoc_insertion_point(builder_scope:bbproto.PGoldDetails)
     }
 
-    // @@protoc_insertion_point(class_scope:bbproto.PTaskLevelList)
-    private static final com.blemobi.sep.probuf.TaskProtos.PTaskLevelList DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:bbproto.PGoldDetails)
+    private static final com.blemobi.sep.probuf.TaskProtos.PGoldDetails DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.TaskProtos.PTaskLevelList();
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.TaskProtos.PGoldDetails();
     }
 
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskLevelList getDefaultInstance() {
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldDetails getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PTaskLevelList>
-        PARSER = new com.google.protobuf.AbstractParser<PTaskLevelList>() {
-      public PTaskLevelList parsePartialFrom(
+    private static final com.google.protobuf.Parser<PGoldDetails>
+        PARSER = new com.google.protobuf.AbstractParser<PGoldDetails>() {
+      public PGoldDetails parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         try {
-          return new PTaskLevelList(input, extensionRegistry);
+          return new PGoldDetails(input, extensionRegistry);
         } catch (RuntimeException e) {
           if (e.getCause() instanceof
               com.google.protobuf.InvalidProtocolBufferException) {
@@ -5045,86 +3413,86 @@ public final class TaskProtos {
       }
     };
 
-    public static com.google.protobuf.Parser<PTaskLevelList> parser() {
+    public static com.google.protobuf.Parser<PGoldDetails> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PTaskLevelList> getParserForType() {
+    public com.google.protobuf.Parser<PGoldDetails> getParserForType() {
       return PARSER;
     }
 
-    public com.blemobi.sep.probuf.TaskProtos.PTaskLevelList getDefaultInstanceForType() {
+    public com.blemobi.sep.probuf.TaskProtos.PGoldDetails getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface PTaskLevelOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bbproto.PTaskLevel)
+  public interface PGoldDetailOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bbproto.PGoldDetail)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional int32 id = 1;</code>
+     * <code>optional int64 time = 1;</code>
      *
      * <pre>
-     * 等级ID
+     * 时间（保留到毫秒）
      * </pre>
      */
-    int getId();
+    long getTime();
 
     /**
-     * <code>optional string name = 2;</code>
+     * <code>optional int32 gold = 2;</code>
      *
      * <pre>
-     * 等级名称
+     * 金币（大于0是收入，小于0是支出）
      * </pre>
      */
-    java.lang.String getName();
+    int getGold();
+
     /**
-     * <code>optional string name = 2;</code>
+     * <code>optional int32 type = 3;</code>
      *
      * <pre>
-     * 等级名称
+     * 类型（1-新手任务，2-每日任务，3-商城消费，4-监管操作）
+     * </pre>
+     */
+    int getType();
+
+    /**
+     * <code>optional string desc = 4;</code>
+     *
+     * <pre>
+     * 描述
+     * </pre>
+     */
+    java.lang.String getDesc();
+    /**
+     * <code>optional string desc = 4;</code>
+     *
+     * <pre>
+     * 描述
      * </pre>
      */
     com.google.protobuf.ByteString
-        getNameBytes();
-
-    /**
-     * <code>optional int64 minExp = 3;</code>
-     *
-     * <pre>
-     * 经验值范围（小）
-     * </pre>
-     */
-    long getMinExp();
-
-    /**
-     * <code>optional int64 maxExp = 4;</code>
-     *
-     * <pre>
-     * 经验值范围（大）
-     * </pre>
-     */
-    long getMaxExp();
+        getDescBytes();
   }
   /**
-   * Protobuf type {@code bbproto.PTaskLevel}
+   * Protobuf type {@code bbproto.PGoldDetail}
    */
-  public  static final class PTaskLevel extends
+  public  static final class PGoldDetail extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:bbproto.PTaskLevel)
-      PTaskLevelOrBuilder {
-    // Use PTaskLevel.newBuilder() to construct.
-    private PTaskLevel(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:bbproto.PGoldDetail)
+      PGoldDetailOrBuilder {
+    // Use PGoldDetail.newBuilder() to construct.
+    private PGoldDetail(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-    private PTaskLevel() {
-      id_ = 0;
-      name_ = "";
-      minExp_ = 0L;
-      maxExp_ = 0L;
+    private PGoldDetail() {
+      time_ = 0L;
+      gold_ = 0;
+      type_ = 0;
+      desc_ = "";
     }
 
     @java.lang.Override
@@ -5132,7 +3500,7 @@ public final class TaskProtos {
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
     }
-    private PTaskLevel(
+    private PGoldDetail(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
       this();
@@ -5153,2544 +3521,23 @@ public final class TaskProtos {
             }
             case 8: {
 
-              id_ = input.readInt32();
+              time_ = input.readInt64();
               break;
             }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 16: {
 
-              name_ = s;
-              break;
-            }
-            case 24: {
-
-              minExp_ = input.readInt64();
-              break;
-            }
-            case 32: {
-
-              maxExp_ = input.readInt64();
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
-      } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
-      } finally {
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PTaskLevel_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PTaskLevel_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.TaskProtos.PTaskLevel.class, com.blemobi.sep.probuf.TaskProtos.PTaskLevel.Builder.class);
-    }
-
-    public static final int ID_FIELD_NUMBER = 1;
-    private int id_;
-    /**
-     * <code>optional int32 id = 1;</code>
-     *
-     * <pre>
-     * 等级ID
-     * </pre>
-     */
-    public int getId() {
-      return id_;
-    }
-
-    public static final int NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object name_;
-    /**
-     * <code>optional string name = 2;</code>
-     *
-     * <pre>
-     * 等级名称
-     * </pre>
-     */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>optional string name = 2;</code>
-     *
-     * <pre>
-     * 等级名称
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int MINEXP_FIELD_NUMBER = 3;
-    private long minExp_;
-    /**
-     * <code>optional int64 minExp = 3;</code>
-     *
-     * <pre>
-     * 经验值范围（小）
-     * </pre>
-     */
-    public long getMinExp() {
-      return minExp_;
-    }
-
-    public static final int MAXEXP_FIELD_NUMBER = 4;
-    private long maxExp_;
-    /**
-     * <code>optional int64 maxExp = 4;</code>
-     *
-     * <pre>
-     * 经验值范围（大）
-     * </pre>
-     */
-    public long getMaxExp() {
-      return maxExp_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (id_ != 0) {
-        output.writeInt32(1, id_);
-      }
-      if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 2, name_);
-      }
-      if (minExp_ != 0L) {
-        output.writeInt64(3, minExp_);
-      }
-      if (maxExp_ != 0L) {
-        output.writeInt64(4, maxExp_);
-      }
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (id_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, id_);
-      }
-      if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, name_);
-      }
-      if (minExp_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(3, minExp_);
-      }
-      if (maxExp_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(4, maxExp_);
-      }
-      memoizedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskLevel parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskLevel parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskLevel parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskLevel parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskLevel parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskLevel parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskLevel parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskLevel parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskLevel parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskLevel parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.blemobi.sep.probuf.TaskProtos.PTaskLevel prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code bbproto.PTaskLevel}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bbproto.PTaskLevel)
-        com.blemobi.sep.probuf.TaskProtos.PTaskLevelOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PTaskLevel_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PTaskLevel_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.TaskProtos.PTaskLevel.class, com.blemobi.sep.probuf.TaskProtos.PTaskLevel.Builder.class);
-      }
-
-      // Construct using com.blemobi.sep.probuf.TaskProtos.PTaskLevel.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        id_ = 0;
-
-        name_ = "";
-
-        minExp_ = 0L;
-
-        maxExp_ = 0L;
-
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PTaskLevel_descriptor;
-      }
-
-      public com.blemobi.sep.probuf.TaskProtos.PTaskLevel getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.TaskProtos.PTaskLevel.getDefaultInstance();
-      }
-
-      public com.blemobi.sep.probuf.TaskProtos.PTaskLevel build() {
-        com.blemobi.sep.probuf.TaskProtos.PTaskLevel result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.blemobi.sep.probuf.TaskProtos.PTaskLevel buildPartial() {
-        com.blemobi.sep.probuf.TaskProtos.PTaskLevel result = new com.blemobi.sep.probuf.TaskProtos.PTaskLevel(this);
-        result.id_ = id_;
-        result.name_ = name_;
-        result.minExp_ = minExp_;
-        result.maxExp_ = maxExp_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.TaskProtos.PTaskLevel) {
-          return mergeFrom((com.blemobi.sep.probuf.TaskProtos.PTaskLevel)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.blemobi.sep.probuf.TaskProtos.PTaskLevel other) {
-        if (other == com.blemobi.sep.probuf.TaskProtos.PTaskLevel.getDefaultInstance()) return this;
-        if (other.getId() != 0) {
-          setId(other.getId());
-        }
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          onChanged();
-        }
-        if (other.getMinExp() != 0L) {
-          setMinExp(other.getMinExp());
-        }
-        if (other.getMaxExp() != 0L) {
-          setMaxExp(other.getMaxExp());
-        }
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.blemobi.sep.probuf.TaskProtos.PTaskLevel parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.TaskProtos.PTaskLevel) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private int id_ ;
-      /**
-       * <code>optional int32 id = 1;</code>
-       *
-       * <pre>
-       * 等级ID
-       * </pre>
-       */
-      public int getId() {
-        return id_;
-      }
-      /**
-       * <code>optional int32 id = 1;</code>
-       *
-       * <pre>
-       * 等级ID
-       * </pre>
-       */
-      public Builder setId(int value) {
-        
-        id_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 id = 1;</code>
-       *
-       * <pre>
-       * 等级ID
-       * </pre>
-       */
-      public Builder clearId() {
-        
-        id_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object name_ = "";
-      /**
-       * <code>optional string name = 2;</code>
-       *
-       * <pre>
-       * 等级名称
-       * </pre>
-       */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string name = 2;</code>
-       *
-       * <pre>
-       * 等级名称
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string name = 2;</code>
-       *
-       * <pre>
-       * 等级名称
-       * </pre>
-       */
-      public Builder setName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string name = 2;</code>
-       *
-       * <pre>
-       * 等级名称
-       * </pre>
-       */
-      public Builder clearName() {
-        
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string name = 2;</code>
-       *
-       * <pre>
-       * 等级名称
-       * </pre>
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        name_ = value;
-        onChanged();
-        return this;
-      }
-
-      private long minExp_ ;
-      /**
-       * <code>optional int64 minExp = 3;</code>
-       *
-       * <pre>
-       * 经验值范围（小）
-       * </pre>
-       */
-      public long getMinExp() {
-        return minExp_;
-      }
-      /**
-       * <code>optional int64 minExp = 3;</code>
-       *
-       * <pre>
-       * 经验值范围（小）
-       * </pre>
-       */
-      public Builder setMinExp(long value) {
-        
-        minExp_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int64 minExp = 3;</code>
-       *
-       * <pre>
-       * 经验值范围（小）
-       * </pre>
-       */
-      public Builder clearMinExp() {
-        
-        minExp_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long maxExp_ ;
-      /**
-       * <code>optional int64 maxExp = 4;</code>
-       *
-       * <pre>
-       * 经验值范围（大）
-       * </pre>
-       */
-      public long getMaxExp() {
-        return maxExp_;
-      }
-      /**
-       * <code>optional int64 maxExp = 4;</code>
-       *
-       * <pre>
-       * 经验值范围（大）
-       * </pre>
-       */
-      public Builder setMaxExp(long value) {
-        
-        maxExp_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int64 maxExp = 4;</code>
-       *
-       * <pre>
-       * 经验值范围（大）
-       * </pre>
-       */
-      public Builder clearMaxExp() {
-        
-        maxExp_ = 0L;
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:bbproto.PTaskLevel)
-    }
-
-    // @@protoc_insertion_point(class_scope:bbproto.PTaskLevel)
-    private static final com.blemobi.sep.probuf.TaskProtos.PTaskLevel DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.TaskProtos.PTaskLevel();
-    }
-
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskLevel getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<PTaskLevel>
-        PARSER = new com.google.protobuf.AbstractParser<PTaskLevel>() {
-      public PTaskLevel parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
-          return new PTaskLevel(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
-      }
-    };
-
-    public static com.google.protobuf.Parser<PTaskLevel> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PTaskLevel> getParserForType() {
-      return PARSER;
-    }
-
-    public com.blemobi.sep.probuf.TaskProtos.PTaskLevel getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface PTaskUserPkOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bbproto.PTaskUserPk)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
-     *
-     * <pre>
-     * 用户基础信息
-     * </pre>
-     */
-    boolean hasUserBasic();
-    /**
-     * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
-     *
-     * <pre>
-     * 用户基础信息
-     * </pre>
-     */
-    com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic getUserBasic();
-    /**
-     * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
-     *
-     * <pre>
-     * 用户基础信息
-     * </pre>
-     */
-    com.blemobi.sep.probuf.TaskProtos.PTaskUserBasicOrBuilder getUserBasicOrBuilder();
-
-    /**
-     * <code>optional .bbproto.PTaskUserBasic pkUserBasic = 2;</code>
-     *
-     * <pre>
-     * 对方用户基础信息
-     * </pre>
-     */
-    boolean hasPkUserBasic();
-    /**
-     * <code>optional .bbproto.PTaskUserBasic pkUserBasic = 2;</code>
-     *
-     * <pre>
-     * 对方用户基础信息
-     * </pre>
-     */
-    com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic getPkUserBasic();
-    /**
-     * <code>optional .bbproto.PTaskUserBasic pkUserBasic = 2;</code>
-     *
-     * <pre>
-     * 对方用户基础信息
-     * </pre>
-     */
-    com.blemobi.sep.probuf.TaskProtos.PTaskUserBasicOrBuilder getPkUserBasicOrBuilder();
-
-    /**
-     * <code>optional int32 userTaskTotol = 3;</code>
-     *
-     * <pre>
-     * 自己已完成任务总数
-     * </pre>
-     */
-    int getUserTaskTotol();
-
-    /**
-     * <code>optional int32 pkUserTaskTotol = 4;</code>
-     *
-     * <pre>
-     * 对方已完成任务总数
-     * </pre>
-     */
-    int getPkUserTaskTotol();
-  }
-  /**
-   * Protobuf type {@code bbproto.PTaskUserPk}
-   */
-  public  static final class PTaskUserPk extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:bbproto.PTaskUserPk)
-      PTaskUserPkOrBuilder {
-    // Use PTaskUserPk.newBuilder() to construct.
-    private PTaskUserPk(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-    }
-    private PTaskUserPk() {
-      userTaskTotol_ = 0;
-      pkUserTaskTotol_ = 0;
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-    }
-    private PTaskUserPk(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
-      this();
-      int mutable_bitField0_ = 0;
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.Builder subBuilder = null;
-              if (userBasic_ != null) {
-                subBuilder = userBasic_.toBuilder();
-              }
-              userBasic_ = input.readMessage(com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(userBasic_);
-                userBasic_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.Builder subBuilder = null;
-              if (pkUserBasic_ != null) {
-                subBuilder = pkUserBasic_.toBuilder();
-              }
-              pkUserBasic_ = input.readMessage(com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(pkUserBasic_);
-                pkUserBasic_ = subBuilder.buildPartial();
-              }
-
+              gold_ = input.readInt32();
               break;
             }
             case 24: {
 
-              userTaskTotol_ = input.readInt32();
-              break;
-            }
-            case 32: {
-
-              pkUserTaskTotol_ = input.readInt32();
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
-      } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
-      } finally {
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PTaskUserPk_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PTaskUserPk_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.TaskProtos.PTaskUserPk.class, com.blemobi.sep.probuf.TaskProtos.PTaskUserPk.Builder.class);
-    }
-
-    public static final int USERBASIC_FIELD_NUMBER = 1;
-    private com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic userBasic_;
-    /**
-     * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
-     *
-     * <pre>
-     * 用户基础信息
-     * </pre>
-     */
-    public boolean hasUserBasic() {
-      return userBasic_ != null;
-    }
-    /**
-     * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
-     *
-     * <pre>
-     * 用户基础信息
-     * </pre>
-     */
-    public com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic getUserBasic() {
-      return userBasic_ == null ? com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.getDefaultInstance() : userBasic_;
-    }
-    /**
-     * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
-     *
-     * <pre>
-     * 用户基础信息
-     * </pre>
-     */
-    public com.blemobi.sep.probuf.TaskProtos.PTaskUserBasicOrBuilder getUserBasicOrBuilder() {
-      return getUserBasic();
-    }
-
-    public static final int PKUSERBASIC_FIELD_NUMBER = 2;
-    private com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic pkUserBasic_;
-    /**
-     * <code>optional .bbproto.PTaskUserBasic pkUserBasic = 2;</code>
-     *
-     * <pre>
-     * 对方用户基础信息
-     * </pre>
-     */
-    public boolean hasPkUserBasic() {
-      return pkUserBasic_ != null;
-    }
-    /**
-     * <code>optional .bbproto.PTaskUserBasic pkUserBasic = 2;</code>
-     *
-     * <pre>
-     * 对方用户基础信息
-     * </pre>
-     */
-    public com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic getPkUserBasic() {
-      return pkUserBasic_ == null ? com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.getDefaultInstance() : pkUserBasic_;
-    }
-    /**
-     * <code>optional .bbproto.PTaskUserBasic pkUserBasic = 2;</code>
-     *
-     * <pre>
-     * 对方用户基础信息
-     * </pre>
-     */
-    public com.blemobi.sep.probuf.TaskProtos.PTaskUserBasicOrBuilder getPkUserBasicOrBuilder() {
-      return getPkUserBasic();
-    }
-
-    public static final int USERTASKTOTOL_FIELD_NUMBER = 3;
-    private int userTaskTotol_;
-    /**
-     * <code>optional int32 userTaskTotol = 3;</code>
-     *
-     * <pre>
-     * 自己已完成任务总数
-     * </pre>
-     */
-    public int getUserTaskTotol() {
-      return userTaskTotol_;
-    }
-
-    public static final int PKUSERTASKTOTOL_FIELD_NUMBER = 4;
-    private int pkUserTaskTotol_;
-    /**
-     * <code>optional int32 pkUserTaskTotol = 4;</code>
-     *
-     * <pre>
-     * 对方已完成任务总数
-     * </pre>
-     */
-    public int getPkUserTaskTotol() {
-      return pkUserTaskTotol_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (userBasic_ != null) {
-        output.writeMessage(1, getUserBasic());
-      }
-      if (pkUserBasic_ != null) {
-        output.writeMessage(2, getPkUserBasic());
-      }
-      if (userTaskTotol_ != 0) {
-        output.writeInt32(3, userTaskTotol_);
-      }
-      if (pkUserTaskTotol_ != 0) {
-        output.writeInt32(4, pkUserTaskTotol_);
-      }
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (userBasic_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getUserBasic());
-      }
-      if (pkUserBasic_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getPkUserBasic());
-      }
-      if (userTaskTotol_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, userTaskTotol_);
-      }
-      if (pkUserTaskTotol_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, pkUserTaskTotol_);
-      }
-      memoizedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskUserPk parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskUserPk parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskUserPk parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskUserPk parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskUserPk parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskUserPk parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskUserPk parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskUserPk parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskUserPk parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskUserPk parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.blemobi.sep.probuf.TaskProtos.PTaskUserPk prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code bbproto.PTaskUserPk}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bbproto.PTaskUserPk)
-        com.blemobi.sep.probuf.TaskProtos.PTaskUserPkOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PTaskUserPk_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PTaskUserPk_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.TaskProtos.PTaskUserPk.class, com.blemobi.sep.probuf.TaskProtos.PTaskUserPk.Builder.class);
-      }
-
-      // Construct using com.blemobi.sep.probuf.TaskProtos.PTaskUserPk.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        if (userBasicBuilder_ == null) {
-          userBasic_ = null;
-        } else {
-          userBasic_ = null;
-          userBasicBuilder_ = null;
-        }
-        if (pkUserBasicBuilder_ == null) {
-          pkUserBasic_ = null;
-        } else {
-          pkUserBasic_ = null;
-          pkUserBasicBuilder_ = null;
-        }
-        userTaskTotol_ = 0;
-
-        pkUserTaskTotol_ = 0;
-
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PTaskUserPk_descriptor;
-      }
-
-      public com.blemobi.sep.probuf.TaskProtos.PTaskUserPk getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.TaskProtos.PTaskUserPk.getDefaultInstance();
-      }
-
-      public com.blemobi.sep.probuf.TaskProtos.PTaskUserPk build() {
-        com.blemobi.sep.probuf.TaskProtos.PTaskUserPk result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.blemobi.sep.probuf.TaskProtos.PTaskUserPk buildPartial() {
-        com.blemobi.sep.probuf.TaskProtos.PTaskUserPk result = new com.blemobi.sep.probuf.TaskProtos.PTaskUserPk(this);
-        if (userBasicBuilder_ == null) {
-          result.userBasic_ = userBasic_;
-        } else {
-          result.userBasic_ = userBasicBuilder_.build();
-        }
-        if (pkUserBasicBuilder_ == null) {
-          result.pkUserBasic_ = pkUserBasic_;
-        } else {
-          result.pkUserBasic_ = pkUserBasicBuilder_.build();
-        }
-        result.userTaskTotol_ = userTaskTotol_;
-        result.pkUserTaskTotol_ = pkUserTaskTotol_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.TaskProtos.PTaskUserPk) {
-          return mergeFrom((com.blemobi.sep.probuf.TaskProtos.PTaskUserPk)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.blemobi.sep.probuf.TaskProtos.PTaskUserPk other) {
-        if (other == com.blemobi.sep.probuf.TaskProtos.PTaskUserPk.getDefaultInstance()) return this;
-        if (other.hasUserBasic()) {
-          mergeUserBasic(other.getUserBasic());
-        }
-        if (other.hasPkUserBasic()) {
-          mergePkUserBasic(other.getPkUserBasic());
-        }
-        if (other.getUserTaskTotol() != 0) {
-          setUserTaskTotol(other.getUserTaskTotol());
-        }
-        if (other.getPkUserTaskTotol() != 0) {
-          setPkUserTaskTotol(other.getPkUserTaskTotol());
-        }
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.blemobi.sep.probuf.TaskProtos.PTaskUserPk parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.TaskProtos.PTaskUserPk) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic userBasic_ = null;
-      private com.google.protobuf.SingleFieldBuilder<
-          com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic, com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.Builder, com.blemobi.sep.probuf.TaskProtos.PTaskUserBasicOrBuilder> userBasicBuilder_;
-      /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
-       *
-       * <pre>
-       * 用户基础信息
-       * </pre>
-       */
-      public boolean hasUserBasic() {
-        return userBasicBuilder_ != null || userBasic_ != null;
-      }
-      /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
-       *
-       * <pre>
-       * 用户基础信息
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic getUserBasic() {
-        if (userBasicBuilder_ == null) {
-          return userBasic_ == null ? com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.getDefaultInstance() : userBasic_;
-        } else {
-          return userBasicBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
-       *
-       * <pre>
-       * 用户基础信息
-       * </pre>
-       */
-      public Builder setUserBasic(com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic value) {
-        if (userBasicBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          userBasic_ = value;
-          onChanged();
-        } else {
-          userBasicBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
-       *
-       * <pre>
-       * 用户基础信息
-       * </pre>
-       */
-      public Builder setUserBasic(
-          com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.Builder builderForValue) {
-        if (userBasicBuilder_ == null) {
-          userBasic_ = builderForValue.build();
-          onChanged();
-        } else {
-          userBasicBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
-       *
-       * <pre>
-       * 用户基础信息
-       * </pre>
-       */
-      public Builder mergeUserBasic(com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic value) {
-        if (userBasicBuilder_ == null) {
-          if (userBasic_ != null) {
-            userBasic_ =
-              com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.newBuilder(userBasic_).mergeFrom(value).buildPartial();
-          } else {
-            userBasic_ = value;
-          }
-          onChanged();
-        } else {
-          userBasicBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
-       *
-       * <pre>
-       * 用户基础信息
-       * </pre>
-       */
-      public Builder clearUserBasic() {
-        if (userBasicBuilder_ == null) {
-          userBasic_ = null;
-          onChanged();
-        } else {
-          userBasic_ = null;
-          userBasicBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
-       *
-       * <pre>
-       * 用户基础信息
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.Builder getUserBasicBuilder() {
-        
-        onChanged();
-        return getUserBasicFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
-       *
-       * <pre>
-       * 用户基础信息
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.TaskProtos.PTaskUserBasicOrBuilder getUserBasicOrBuilder() {
-        if (userBasicBuilder_ != null) {
-          return userBasicBuilder_.getMessageOrBuilder();
-        } else {
-          return userBasic_ == null ?
-              com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.getDefaultInstance() : userBasic_;
-        }
-      }
-      /**
-       * <code>optional .bbproto.PTaskUserBasic userBasic = 1;</code>
-       *
-       * <pre>
-       * 用户基础信息
-       * </pre>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic, com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.Builder, com.blemobi.sep.probuf.TaskProtos.PTaskUserBasicOrBuilder> 
-          getUserBasicFieldBuilder() {
-        if (userBasicBuilder_ == null) {
-          userBasicBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic, com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.Builder, com.blemobi.sep.probuf.TaskProtos.PTaskUserBasicOrBuilder>(
-                  getUserBasic(),
-                  getParentForChildren(),
-                  isClean());
-          userBasic_ = null;
-        }
-        return userBasicBuilder_;
-      }
-
-      private com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic pkUserBasic_ = null;
-      private com.google.protobuf.SingleFieldBuilder<
-          com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic, com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.Builder, com.blemobi.sep.probuf.TaskProtos.PTaskUserBasicOrBuilder> pkUserBasicBuilder_;
-      /**
-       * <code>optional .bbproto.PTaskUserBasic pkUserBasic = 2;</code>
-       *
-       * <pre>
-       * 对方用户基础信息
-       * </pre>
-       */
-      public boolean hasPkUserBasic() {
-        return pkUserBasicBuilder_ != null || pkUserBasic_ != null;
-      }
-      /**
-       * <code>optional .bbproto.PTaskUserBasic pkUserBasic = 2;</code>
-       *
-       * <pre>
-       * 对方用户基础信息
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic getPkUserBasic() {
-        if (pkUserBasicBuilder_ == null) {
-          return pkUserBasic_ == null ? com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.getDefaultInstance() : pkUserBasic_;
-        } else {
-          return pkUserBasicBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .bbproto.PTaskUserBasic pkUserBasic = 2;</code>
-       *
-       * <pre>
-       * 对方用户基础信息
-       * </pre>
-       */
-      public Builder setPkUserBasic(com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic value) {
-        if (pkUserBasicBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          pkUserBasic_ = value;
-          onChanged();
-        } else {
-          pkUserBasicBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .bbproto.PTaskUserBasic pkUserBasic = 2;</code>
-       *
-       * <pre>
-       * 对方用户基础信息
-       * </pre>
-       */
-      public Builder setPkUserBasic(
-          com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.Builder builderForValue) {
-        if (pkUserBasicBuilder_ == null) {
-          pkUserBasic_ = builderForValue.build();
-          onChanged();
-        } else {
-          pkUserBasicBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .bbproto.PTaskUserBasic pkUserBasic = 2;</code>
-       *
-       * <pre>
-       * 对方用户基础信息
-       * </pre>
-       */
-      public Builder mergePkUserBasic(com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic value) {
-        if (pkUserBasicBuilder_ == null) {
-          if (pkUserBasic_ != null) {
-            pkUserBasic_ =
-              com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.newBuilder(pkUserBasic_).mergeFrom(value).buildPartial();
-          } else {
-            pkUserBasic_ = value;
-          }
-          onChanged();
-        } else {
-          pkUserBasicBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .bbproto.PTaskUserBasic pkUserBasic = 2;</code>
-       *
-       * <pre>
-       * 对方用户基础信息
-       * </pre>
-       */
-      public Builder clearPkUserBasic() {
-        if (pkUserBasicBuilder_ == null) {
-          pkUserBasic_ = null;
-          onChanged();
-        } else {
-          pkUserBasic_ = null;
-          pkUserBasicBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .bbproto.PTaskUserBasic pkUserBasic = 2;</code>
-       *
-       * <pre>
-       * 对方用户基础信息
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.Builder getPkUserBasicBuilder() {
-        
-        onChanged();
-        return getPkUserBasicFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .bbproto.PTaskUserBasic pkUserBasic = 2;</code>
-       *
-       * <pre>
-       * 对方用户基础信息
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.TaskProtos.PTaskUserBasicOrBuilder getPkUserBasicOrBuilder() {
-        if (pkUserBasicBuilder_ != null) {
-          return pkUserBasicBuilder_.getMessageOrBuilder();
-        } else {
-          return pkUserBasic_ == null ?
-              com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.getDefaultInstance() : pkUserBasic_;
-        }
-      }
-      /**
-       * <code>optional .bbproto.PTaskUserBasic pkUserBasic = 2;</code>
-       *
-       * <pre>
-       * 对方用户基础信息
-       * </pre>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic, com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.Builder, com.blemobi.sep.probuf.TaskProtos.PTaskUserBasicOrBuilder> 
-          getPkUserBasicFieldBuilder() {
-        if (pkUserBasicBuilder_ == null) {
-          pkUserBasicBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic, com.blemobi.sep.probuf.TaskProtos.PTaskUserBasic.Builder, com.blemobi.sep.probuf.TaskProtos.PTaskUserBasicOrBuilder>(
-                  getPkUserBasic(),
-                  getParentForChildren(),
-                  isClean());
-          pkUserBasic_ = null;
-        }
-        return pkUserBasicBuilder_;
-      }
-
-      private int userTaskTotol_ ;
-      /**
-       * <code>optional int32 userTaskTotol = 3;</code>
-       *
-       * <pre>
-       * 自己已完成任务总数
-       * </pre>
-       */
-      public int getUserTaskTotol() {
-        return userTaskTotol_;
-      }
-      /**
-       * <code>optional int32 userTaskTotol = 3;</code>
-       *
-       * <pre>
-       * 自己已完成任务总数
-       * </pre>
-       */
-      public Builder setUserTaskTotol(int value) {
-        
-        userTaskTotol_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 userTaskTotol = 3;</code>
-       *
-       * <pre>
-       * 自己已完成任务总数
-       * </pre>
-       */
-      public Builder clearUserTaskTotol() {
-        
-        userTaskTotol_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int pkUserTaskTotol_ ;
-      /**
-       * <code>optional int32 pkUserTaskTotol = 4;</code>
-       *
-       * <pre>
-       * 对方已完成任务总数
-       * </pre>
-       */
-      public int getPkUserTaskTotol() {
-        return pkUserTaskTotol_;
-      }
-      /**
-       * <code>optional int32 pkUserTaskTotol = 4;</code>
-       *
-       * <pre>
-       * 对方已完成任务总数
-       * </pre>
-       */
-      public Builder setPkUserTaskTotol(int value) {
-        
-        pkUserTaskTotol_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 pkUserTaskTotol = 4;</code>
-       *
-       * <pre>
-       * 对方已完成任务总数
-       * </pre>
-       */
-      public Builder clearPkUserTaskTotol() {
-        
-        pkUserTaskTotol_ = 0;
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:bbproto.PTaskUserPk)
-    }
-
-    // @@protoc_insertion_point(class_scope:bbproto.PTaskUserPk)
-    private static final com.blemobi.sep.probuf.TaskProtos.PTaskUserPk DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.TaskProtos.PTaskUserPk();
-    }
-
-    public static com.blemobi.sep.probuf.TaskProtos.PTaskUserPk getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<PTaskUserPk>
-        PARSER = new com.google.protobuf.AbstractParser<PTaskUserPk>() {
-      public PTaskUserPk parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
-          return new PTaskUserPk(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
-      }
-    };
-
-    public static com.google.protobuf.Parser<PTaskUserPk> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PTaskUserPk> getParserForType() {
-      return PARSER;
-    }
-
-    public com.blemobi.sep.probuf.TaskProtos.PTaskUserPk getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface PExpLevelListOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bbproto.PExpLevelList)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-     *
-     * <pre>
-     * 等级列表
-     * </pre>
-     */
-    java.util.List<com.blemobi.sep.probuf.TaskProtos.PExpLevel> 
-        getExpLevelList();
-    /**
-     * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-     *
-     * <pre>
-     * 等级列表
-     * </pre>
-     */
-    com.blemobi.sep.probuf.TaskProtos.PExpLevel getExpLevel(int index);
-    /**
-     * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-     *
-     * <pre>
-     * 等级列表
-     * </pre>
-     */
-    int getExpLevelCount();
-    /**
-     * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-     *
-     * <pre>
-     * 等级列表
-     * </pre>
-     */
-    java.util.List<? extends com.blemobi.sep.probuf.TaskProtos.PExpLevelOrBuilder> 
-        getExpLevelOrBuilderList();
-    /**
-     * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-     *
-     * <pre>
-     * 等级列表
-     * </pre>
-     */
-    com.blemobi.sep.probuf.TaskProtos.PExpLevelOrBuilder getExpLevelOrBuilder(
-        int index);
-  }
-  /**
-   * Protobuf type {@code bbproto.PExpLevelList}
-   */
-  public  static final class PExpLevelList extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:bbproto.PExpLevelList)
-      PExpLevelListOrBuilder {
-    // Use PExpLevelList.newBuilder() to construct.
-    private PExpLevelList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-    }
-    private PExpLevelList() {
-      expLevel_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-    }
-    private PExpLevelList(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
-      this();
-      int mutable_bitField0_ = 0;
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                expLevel_ = new java.util.ArrayList<com.blemobi.sep.probuf.TaskProtos.PExpLevel>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              expLevel_.add(input.readMessage(com.blemobi.sep.probuf.TaskProtos.PExpLevel.parser(), extensionRegistry));
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
-      } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-          expLevel_ = java.util.Collections.unmodifiableList(expLevel_);
-        }
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PExpLevelList_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PExpLevelList_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.TaskProtos.PExpLevelList.class, com.blemobi.sep.probuf.TaskProtos.PExpLevelList.Builder.class);
-    }
-
-    public static final int EXPLEVEL_FIELD_NUMBER = 1;
-    private java.util.List<com.blemobi.sep.probuf.TaskProtos.PExpLevel> expLevel_;
-    /**
-     * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-     *
-     * <pre>
-     * 等级列表
-     * </pre>
-     */
-    public java.util.List<com.blemobi.sep.probuf.TaskProtos.PExpLevel> getExpLevelList() {
-      return expLevel_;
-    }
-    /**
-     * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-     *
-     * <pre>
-     * 等级列表
-     * </pre>
-     */
-    public java.util.List<? extends com.blemobi.sep.probuf.TaskProtos.PExpLevelOrBuilder> 
-        getExpLevelOrBuilderList() {
-      return expLevel_;
-    }
-    /**
-     * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-     *
-     * <pre>
-     * 等级列表
-     * </pre>
-     */
-    public int getExpLevelCount() {
-      return expLevel_.size();
-    }
-    /**
-     * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-     *
-     * <pre>
-     * 等级列表
-     * </pre>
-     */
-    public com.blemobi.sep.probuf.TaskProtos.PExpLevel getExpLevel(int index) {
-      return expLevel_.get(index);
-    }
-    /**
-     * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-     *
-     * <pre>
-     * 等级列表
-     * </pre>
-     */
-    public com.blemobi.sep.probuf.TaskProtos.PExpLevelOrBuilder getExpLevelOrBuilder(
-        int index) {
-      return expLevel_.get(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < expLevel_.size(); i++) {
-        output.writeMessage(1, expLevel_.get(i));
-      }
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < expLevel_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, expLevel_.get(i));
-      }
-      memoizedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.TaskProtos.PExpLevelList parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PExpLevelList parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PExpLevelList parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PExpLevelList parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PExpLevelList parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PExpLevelList parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PExpLevelList parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PExpLevelList parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PExpLevelList parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PExpLevelList parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.blemobi.sep.probuf.TaskProtos.PExpLevelList prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code bbproto.PExpLevelList}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bbproto.PExpLevelList)
-        com.blemobi.sep.probuf.TaskProtos.PExpLevelListOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PExpLevelList_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PExpLevelList_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.TaskProtos.PExpLevelList.class, com.blemobi.sep.probuf.TaskProtos.PExpLevelList.Builder.class);
-      }
-
-      // Construct using com.blemobi.sep.probuf.TaskProtos.PExpLevelList.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getExpLevelFieldBuilder();
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        if (expLevelBuilder_ == null) {
-          expLevel_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          expLevelBuilder_.clear();
-        }
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PExpLevelList_descriptor;
-      }
-
-      public com.blemobi.sep.probuf.TaskProtos.PExpLevelList getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.TaskProtos.PExpLevelList.getDefaultInstance();
-      }
-
-      public com.blemobi.sep.probuf.TaskProtos.PExpLevelList build() {
-        com.blemobi.sep.probuf.TaskProtos.PExpLevelList result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.blemobi.sep.probuf.TaskProtos.PExpLevelList buildPartial() {
-        com.blemobi.sep.probuf.TaskProtos.PExpLevelList result = new com.blemobi.sep.probuf.TaskProtos.PExpLevelList(this);
-        int from_bitField0_ = bitField0_;
-        if (expLevelBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
-            expLevel_ = java.util.Collections.unmodifiableList(expLevel_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.expLevel_ = expLevel_;
-        } else {
-          result.expLevel_ = expLevelBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.TaskProtos.PExpLevelList) {
-          return mergeFrom((com.blemobi.sep.probuf.TaskProtos.PExpLevelList)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.blemobi.sep.probuf.TaskProtos.PExpLevelList other) {
-        if (other == com.blemobi.sep.probuf.TaskProtos.PExpLevelList.getDefaultInstance()) return this;
-        if (expLevelBuilder_ == null) {
-          if (!other.expLevel_.isEmpty()) {
-            if (expLevel_.isEmpty()) {
-              expLevel_ = other.expLevel_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureExpLevelIsMutable();
-              expLevel_.addAll(other.expLevel_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.expLevel_.isEmpty()) {
-            if (expLevelBuilder_.isEmpty()) {
-              expLevelBuilder_.dispose();
-              expLevelBuilder_ = null;
-              expLevel_ = other.expLevel_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              expLevelBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getExpLevelFieldBuilder() : null;
-            } else {
-              expLevelBuilder_.addAllMessages(other.expLevel_);
-            }
-          }
-        }
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.blemobi.sep.probuf.TaskProtos.PExpLevelList parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.TaskProtos.PExpLevelList) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<com.blemobi.sep.probuf.TaskProtos.PExpLevel> expLevel_ =
-        java.util.Collections.emptyList();
-      private void ensureExpLevelIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          expLevel_ = new java.util.ArrayList<com.blemobi.sep.probuf.TaskProtos.PExpLevel>(expLevel_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.TaskProtos.PExpLevel, com.blemobi.sep.probuf.TaskProtos.PExpLevel.Builder, com.blemobi.sep.probuf.TaskProtos.PExpLevelOrBuilder> expLevelBuilder_;
-
-      /**
-       * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-       *
-       * <pre>
-       * 等级列表
-       * </pre>
-       */
-      public java.util.List<com.blemobi.sep.probuf.TaskProtos.PExpLevel> getExpLevelList() {
-        if (expLevelBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(expLevel_);
-        } else {
-          return expLevelBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-       *
-       * <pre>
-       * 等级列表
-       * </pre>
-       */
-      public int getExpLevelCount() {
-        if (expLevelBuilder_ == null) {
-          return expLevel_.size();
-        } else {
-          return expLevelBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-       *
-       * <pre>
-       * 等级列表
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.TaskProtos.PExpLevel getExpLevel(int index) {
-        if (expLevelBuilder_ == null) {
-          return expLevel_.get(index);
-        } else {
-          return expLevelBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-       *
-       * <pre>
-       * 等级列表
-       * </pre>
-       */
-      public Builder setExpLevel(
-          int index, com.blemobi.sep.probuf.TaskProtos.PExpLevel value) {
-        if (expLevelBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureExpLevelIsMutable();
-          expLevel_.set(index, value);
-          onChanged();
-        } else {
-          expLevelBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-       *
-       * <pre>
-       * 等级列表
-       * </pre>
-       */
-      public Builder setExpLevel(
-          int index, com.blemobi.sep.probuf.TaskProtos.PExpLevel.Builder builderForValue) {
-        if (expLevelBuilder_ == null) {
-          ensureExpLevelIsMutable();
-          expLevel_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          expLevelBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-       *
-       * <pre>
-       * 等级列表
-       * </pre>
-       */
-      public Builder addExpLevel(com.blemobi.sep.probuf.TaskProtos.PExpLevel value) {
-        if (expLevelBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureExpLevelIsMutable();
-          expLevel_.add(value);
-          onChanged();
-        } else {
-          expLevelBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-       *
-       * <pre>
-       * 等级列表
-       * </pre>
-       */
-      public Builder addExpLevel(
-          int index, com.blemobi.sep.probuf.TaskProtos.PExpLevel value) {
-        if (expLevelBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureExpLevelIsMutable();
-          expLevel_.add(index, value);
-          onChanged();
-        } else {
-          expLevelBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-       *
-       * <pre>
-       * 等级列表
-       * </pre>
-       */
-      public Builder addExpLevel(
-          com.blemobi.sep.probuf.TaskProtos.PExpLevel.Builder builderForValue) {
-        if (expLevelBuilder_ == null) {
-          ensureExpLevelIsMutable();
-          expLevel_.add(builderForValue.build());
-          onChanged();
-        } else {
-          expLevelBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-       *
-       * <pre>
-       * 等级列表
-       * </pre>
-       */
-      public Builder addExpLevel(
-          int index, com.blemobi.sep.probuf.TaskProtos.PExpLevel.Builder builderForValue) {
-        if (expLevelBuilder_ == null) {
-          ensureExpLevelIsMutable();
-          expLevel_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          expLevelBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-       *
-       * <pre>
-       * 等级列表
-       * </pre>
-       */
-      public Builder addAllExpLevel(
-          java.lang.Iterable<? extends com.blemobi.sep.probuf.TaskProtos.PExpLevel> values) {
-        if (expLevelBuilder_ == null) {
-          ensureExpLevelIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, expLevel_);
-          onChanged();
-        } else {
-          expLevelBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-       *
-       * <pre>
-       * 等级列表
-       * </pre>
-       */
-      public Builder clearExpLevel() {
-        if (expLevelBuilder_ == null) {
-          expLevel_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          expLevelBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-       *
-       * <pre>
-       * 等级列表
-       * </pre>
-       */
-      public Builder removeExpLevel(int index) {
-        if (expLevelBuilder_ == null) {
-          ensureExpLevelIsMutable();
-          expLevel_.remove(index);
-          onChanged();
-        } else {
-          expLevelBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-       *
-       * <pre>
-       * 等级列表
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.TaskProtos.PExpLevel.Builder getExpLevelBuilder(
-          int index) {
-        return getExpLevelFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-       *
-       * <pre>
-       * 等级列表
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.TaskProtos.PExpLevelOrBuilder getExpLevelOrBuilder(
-          int index) {
-        if (expLevelBuilder_ == null) {
-          return expLevel_.get(index);  } else {
-          return expLevelBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-       *
-       * <pre>
-       * 等级列表
-       * </pre>
-       */
-      public java.util.List<? extends com.blemobi.sep.probuf.TaskProtos.PExpLevelOrBuilder> 
-           getExpLevelOrBuilderList() {
-        if (expLevelBuilder_ != null) {
-          return expLevelBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(expLevel_);
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-       *
-       * <pre>
-       * 等级列表
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.TaskProtos.PExpLevel.Builder addExpLevelBuilder() {
-        return getExpLevelFieldBuilder().addBuilder(
-            com.blemobi.sep.probuf.TaskProtos.PExpLevel.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-       *
-       * <pre>
-       * 等级列表
-       * </pre>
-       */
-      public com.blemobi.sep.probuf.TaskProtos.PExpLevel.Builder addExpLevelBuilder(
-          int index) {
-        return getExpLevelFieldBuilder().addBuilder(
-            index, com.blemobi.sep.probuf.TaskProtos.PExpLevel.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .bbproto.PExpLevel expLevel = 1;</code>
-       *
-       * <pre>
-       * 等级列表
-       * </pre>
-       */
-      public java.util.List<com.blemobi.sep.probuf.TaskProtos.PExpLevel.Builder> 
-           getExpLevelBuilderList() {
-        return getExpLevelFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.TaskProtos.PExpLevel, com.blemobi.sep.probuf.TaskProtos.PExpLevel.Builder, com.blemobi.sep.probuf.TaskProtos.PExpLevelOrBuilder> 
-          getExpLevelFieldBuilder() {
-        if (expLevelBuilder_ == null) {
-          expLevelBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              com.blemobi.sep.probuf.TaskProtos.PExpLevel, com.blemobi.sep.probuf.TaskProtos.PExpLevel.Builder, com.blemobi.sep.probuf.TaskProtos.PExpLevelOrBuilder>(
-                  expLevel_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
-                  getParentForChildren(),
-                  isClean());
-          expLevel_ = null;
-        }
-        return expLevelBuilder_;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:bbproto.PExpLevelList)
-    }
-
-    // @@protoc_insertion_point(class_scope:bbproto.PExpLevelList)
-    private static final com.blemobi.sep.probuf.TaskProtos.PExpLevelList DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.TaskProtos.PExpLevelList();
-    }
-
-    public static com.blemobi.sep.probuf.TaskProtos.PExpLevelList getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<PExpLevelList>
-        PARSER = new com.google.protobuf.AbstractParser<PExpLevelList>() {
-      public PExpLevelList parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
-          return new PExpLevelList(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
-      }
-    };
-
-    public static com.google.protobuf.Parser<PExpLevelList> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PExpLevelList> getParserForType() {
-      return PARSER;
-    }
-
-    public com.blemobi.sep.probuf.TaskProtos.PExpLevelList getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface PExpLevelOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bbproto.PExpLevel)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional int32 id = 1;</code>
-     *
-     * <pre>
-     * 等级ID
-     * </pre>
-     */
-    int getId();
-
-    /**
-     * <code>optional string titleSc = 2;</code>
-     *
-     * <pre>
-     * 等级中文繁体
-     * </pre>
-     */
-    java.lang.String getTitleSc();
-    /**
-     * <code>optional string titleSc = 2;</code>
-     *
-     * <pre>
-     * 等级中文繁体
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getTitleScBytes();
-
-    /**
-     * <code>optional string titleTc = 3;</code>
-     *
-     * <pre>
-     * 等级中文简体
-     * </pre>
-     */
-    java.lang.String getTitleTc();
-    /**
-     * <code>optional string titleTc = 3;</code>
-     *
-     * <pre>
-     * 等级中文简体
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getTitleTcBytes();
-
-    /**
-     * <code>optional string titleEn = 4;</code>
-     *
-     * <pre>
-     * 等级英文
-     * </pre>
-     */
-    java.lang.String getTitleEn();
-    /**
-     * <code>optional string titleEn = 4;</code>
-     *
-     * <pre>
-     * 等级英文
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getTitleEnBytes();
-
-    /**
-     * <code>optional string titleKr = 5;</code>
-     *
-     * <pre>
-     * 等级韩文
-     * </pre>
-     */
-    java.lang.String getTitleKr();
-    /**
-     * <code>optional string titleKr = 5;</code>
-     *
-     * <pre>
-     * 等级韩文
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getTitleKrBytes();
-  }
-  /**
-   * Protobuf type {@code bbproto.PExpLevel}
-   */
-  public  static final class PExpLevel extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:bbproto.PExpLevel)
-      PExpLevelOrBuilder {
-    // Use PExpLevel.newBuilder() to construct.
-    private PExpLevel(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-    }
-    private PExpLevel() {
-      id_ = 0;
-      titleSc_ = "";
-      titleTc_ = "";
-      titleEn_ = "";
-      titleKr_ = "";
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-    }
-    private PExpLevel(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
-      this();
-      int mutable_bitField0_ = 0;
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 8: {
-
-              id_ = input.readInt32();
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              titleSc_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              titleTc_ = s;
+              type_ = input.readInt32();
               break;
             }
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              titleEn_ = s;
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              titleKr_ = s;
+              desc_ = s;
               break;
             }
           }
@@ -7707,1773 +3554,97 @@ public final class TaskProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PExpLevel_descriptor;
+      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PGoldDetail_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PExpLevel_fieldAccessorTable
+      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PGoldDetail_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.TaskProtos.PExpLevel.class, com.blemobi.sep.probuf.TaskProtos.PExpLevel.Builder.class);
+              com.blemobi.sep.probuf.TaskProtos.PGoldDetail.class, com.blemobi.sep.probuf.TaskProtos.PGoldDetail.Builder.class);
     }
 
-    public static final int ID_FIELD_NUMBER = 1;
-    private int id_;
-    /**
-     * <code>optional int32 id = 1;</code>
-     *
-     * <pre>
-     * 等级ID
-     * </pre>
-     */
-    public int getId() {
-      return id_;
-    }
-
-    public static final int TITLESC_FIELD_NUMBER = 2;
-    private volatile java.lang.Object titleSc_;
-    /**
-     * <code>optional string titleSc = 2;</code>
-     *
-     * <pre>
-     * 等级中文繁体
-     * </pre>
-     */
-    public java.lang.String getTitleSc() {
-      java.lang.Object ref = titleSc_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        titleSc_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>optional string titleSc = 2;</code>
-     *
-     * <pre>
-     * 等级中文繁体
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getTitleScBytes() {
-      java.lang.Object ref = titleSc_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        titleSc_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TITLETC_FIELD_NUMBER = 3;
-    private volatile java.lang.Object titleTc_;
-    /**
-     * <code>optional string titleTc = 3;</code>
-     *
-     * <pre>
-     * 等级中文简体
-     * </pre>
-     */
-    public java.lang.String getTitleTc() {
-      java.lang.Object ref = titleTc_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        titleTc_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>optional string titleTc = 3;</code>
-     *
-     * <pre>
-     * 等级中文简体
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getTitleTcBytes() {
-      java.lang.Object ref = titleTc_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        titleTc_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TITLEEN_FIELD_NUMBER = 4;
-    private volatile java.lang.Object titleEn_;
-    /**
-     * <code>optional string titleEn = 4;</code>
-     *
-     * <pre>
-     * 等级英文
-     * </pre>
-     */
-    public java.lang.String getTitleEn() {
-      java.lang.Object ref = titleEn_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        titleEn_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>optional string titleEn = 4;</code>
-     *
-     * <pre>
-     * 等级英文
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getTitleEnBytes() {
-      java.lang.Object ref = titleEn_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        titleEn_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TITLEKR_FIELD_NUMBER = 5;
-    private volatile java.lang.Object titleKr_;
-    /**
-     * <code>optional string titleKr = 5;</code>
-     *
-     * <pre>
-     * 等级韩文
-     * </pre>
-     */
-    public java.lang.String getTitleKr() {
-      java.lang.Object ref = titleKr_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        titleKr_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>optional string titleKr = 5;</code>
-     *
-     * <pre>
-     * 等级韩文
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getTitleKrBytes() {
-      java.lang.Object ref = titleKr_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        titleKr_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (id_ != 0) {
-        output.writeInt32(1, id_);
-      }
-      if (!getTitleScBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 2, titleSc_);
-      }
-      if (!getTitleTcBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 3, titleTc_);
-      }
-      if (!getTitleEnBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 4, titleEn_);
-      }
-      if (!getTitleKrBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 5, titleKr_);
-      }
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (id_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, id_);
-      }
-      if (!getTitleScBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, titleSc_);
-      }
-      if (!getTitleTcBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, titleTc_);
-      }
-      if (!getTitleEnBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, titleEn_);
-      }
-      if (!getTitleKrBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, titleKr_);
-      }
-      memoizedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.TaskProtos.PExpLevel parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PExpLevel parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PExpLevel parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PExpLevel parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PExpLevel parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PExpLevel parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PExpLevel parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PExpLevel parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PExpLevel parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PExpLevel parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.blemobi.sep.probuf.TaskProtos.PExpLevel prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code bbproto.PExpLevel}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bbproto.PExpLevel)
-        com.blemobi.sep.probuf.TaskProtos.PExpLevelOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PExpLevel_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PExpLevel_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.TaskProtos.PExpLevel.class, com.blemobi.sep.probuf.TaskProtos.PExpLevel.Builder.class);
-      }
-
-      // Construct using com.blemobi.sep.probuf.TaskProtos.PExpLevel.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        id_ = 0;
-
-        titleSc_ = "";
-
-        titleTc_ = "";
-
-        titleEn_ = "";
-
-        titleKr_ = "";
-
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PExpLevel_descriptor;
-      }
-
-      public com.blemobi.sep.probuf.TaskProtos.PExpLevel getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.TaskProtos.PExpLevel.getDefaultInstance();
-      }
-
-      public com.blemobi.sep.probuf.TaskProtos.PExpLevel build() {
-        com.blemobi.sep.probuf.TaskProtos.PExpLevel result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.blemobi.sep.probuf.TaskProtos.PExpLevel buildPartial() {
-        com.blemobi.sep.probuf.TaskProtos.PExpLevel result = new com.blemobi.sep.probuf.TaskProtos.PExpLevel(this);
-        result.id_ = id_;
-        result.titleSc_ = titleSc_;
-        result.titleTc_ = titleTc_;
-        result.titleEn_ = titleEn_;
-        result.titleKr_ = titleKr_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.TaskProtos.PExpLevel) {
-          return mergeFrom((com.blemobi.sep.probuf.TaskProtos.PExpLevel)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.blemobi.sep.probuf.TaskProtos.PExpLevel other) {
-        if (other == com.blemobi.sep.probuf.TaskProtos.PExpLevel.getDefaultInstance()) return this;
-        if (other.getId() != 0) {
-          setId(other.getId());
-        }
-        if (!other.getTitleSc().isEmpty()) {
-          titleSc_ = other.titleSc_;
-          onChanged();
-        }
-        if (!other.getTitleTc().isEmpty()) {
-          titleTc_ = other.titleTc_;
-          onChanged();
-        }
-        if (!other.getTitleEn().isEmpty()) {
-          titleEn_ = other.titleEn_;
-          onChanged();
-        }
-        if (!other.getTitleKr().isEmpty()) {
-          titleKr_ = other.titleKr_;
-          onChanged();
-        }
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.blemobi.sep.probuf.TaskProtos.PExpLevel parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.TaskProtos.PExpLevel) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private int id_ ;
-      /**
-       * <code>optional int32 id = 1;</code>
-       *
-       * <pre>
-       * 等级ID
-       * </pre>
-       */
-      public int getId() {
-        return id_;
-      }
-      /**
-       * <code>optional int32 id = 1;</code>
-       *
-       * <pre>
-       * 等级ID
-       * </pre>
-       */
-      public Builder setId(int value) {
-        
-        id_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 id = 1;</code>
-       *
-       * <pre>
-       * 等级ID
-       * </pre>
-       */
-      public Builder clearId() {
-        
-        id_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object titleSc_ = "";
-      /**
-       * <code>optional string titleSc = 2;</code>
-       *
-       * <pre>
-       * 等级中文繁体
-       * </pre>
-       */
-      public java.lang.String getTitleSc() {
-        java.lang.Object ref = titleSc_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          titleSc_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string titleSc = 2;</code>
-       *
-       * <pre>
-       * 等级中文繁体
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getTitleScBytes() {
-        java.lang.Object ref = titleSc_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          titleSc_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string titleSc = 2;</code>
-       *
-       * <pre>
-       * 等级中文繁体
-       * </pre>
-       */
-      public Builder setTitleSc(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        titleSc_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string titleSc = 2;</code>
-       *
-       * <pre>
-       * 等级中文繁体
-       * </pre>
-       */
-      public Builder clearTitleSc() {
-        
-        titleSc_ = getDefaultInstance().getTitleSc();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string titleSc = 2;</code>
-       *
-       * <pre>
-       * 等级中文繁体
-       * </pre>
-       */
-      public Builder setTitleScBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        titleSc_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object titleTc_ = "";
-      /**
-       * <code>optional string titleTc = 3;</code>
-       *
-       * <pre>
-       * 等级中文简体
-       * </pre>
-       */
-      public java.lang.String getTitleTc() {
-        java.lang.Object ref = titleTc_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          titleTc_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string titleTc = 3;</code>
-       *
-       * <pre>
-       * 等级中文简体
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getTitleTcBytes() {
-        java.lang.Object ref = titleTc_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          titleTc_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string titleTc = 3;</code>
-       *
-       * <pre>
-       * 等级中文简体
-       * </pre>
-       */
-      public Builder setTitleTc(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        titleTc_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string titleTc = 3;</code>
-       *
-       * <pre>
-       * 等级中文简体
-       * </pre>
-       */
-      public Builder clearTitleTc() {
-        
-        titleTc_ = getDefaultInstance().getTitleTc();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string titleTc = 3;</code>
-       *
-       * <pre>
-       * 等级中文简体
-       * </pre>
-       */
-      public Builder setTitleTcBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        titleTc_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object titleEn_ = "";
-      /**
-       * <code>optional string titleEn = 4;</code>
-       *
-       * <pre>
-       * 等级英文
-       * </pre>
-       */
-      public java.lang.String getTitleEn() {
-        java.lang.Object ref = titleEn_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          titleEn_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string titleEn = 4;</code>
-       *
-       * <pre>
-       * 等级英文
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getTitleEnBytes() {
-        java.lang.Object ref = titleEn_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          titleEn_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string titleEn = 4;</code>
-       *
-       * <pre>
-       * 等级英文
-       * </pre>
-       */
-      public Builder setTitleEn(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        titleEn_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string titleEn = 4;</code>
-       *
-       * <pre>
-       * 等级英文
-       * </pre>
-       */
-      public Builder clearTitleEn() {
-        
-        titleEn_ = getDefaultInstance().getTitleEn();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string titleEn = 4;</code>
-       *
-       * <pre>
-       * 等级英文
-       * </pre>
-       */
-      public Builder setTitleEnBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        titleEn_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object titleKr_ = "";
-      /**
-       * <code>optional string titleKr = 5;</code>
-       *
-       * <pre>
-       * 等级韩文
-       * </pre>
-       */
-      public java.lang.String getTitleKr() {
-        java.lang.Object ref = titleKr_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          titleKr_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string titleKr = 5;</code>
-       *
-       * <pre>
-       * 等级韩文
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getTitleKrBytes() {
-        java.lang.Object ref = titleKr_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          titleKr_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string titleKr = 5;</code>
-       *
-       * <pre>
-       * 等级韩文
-       * </pre>
-       */
-      public Builder setTitleKr(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        titleKr_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string titleKr = 5;</code>
-       *
-       * <pre>
-       * 等级韩文
-       * </pre>
-       */
-      public Builder clearTitleKr() {
-        
-        titleKr_ = getDefaultInstance().getTitleKr();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string titleKr = 5;</code>
-       *
-       * <pre>
-       * 等级韩文
-       * </pre>
-       */
-      public Builder setTitleKrBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        titleKr_ = value;
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:bbproto.PExpLevel)
-    }
-
-    // @@protoc_insertion_point(class_scope:bbproto.PExpLevel)
-    private static final com.blemobi.sep.probuf.TaskProtos.PExpLevel DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.TaskProtos.PExpLevel();
-    }
-
-    public static com.blemobi.sep.probuf.TaskProtos.PExpLevel getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<PExpLevel>
-        PARSER = new com.google.protobuf.AbstractParser<PExpLevel>() {
-      public PExpLevel parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
-          return new PExpLevel(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
-      }
-    };
-
-    public static com.google.protobuf.Parser<PExpLevel> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PExpLevel> getParserForType() {
-      return PARSER;
-    }
-
-    public com.blemobi.sep.probuf.TaskProtos.PExpLevel getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface PSubscribeArrayOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bbproto.PSubscribeArray)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-     */
-    java.util.List<com.blemobi.sep.probuf.TaskProtos.PSubscribe> 
-        getSubscribeList();
-    /**
-     * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-     */
-    com.blemobi.sep.probuf.TaskProtos.PSubscribe getSubscribe(int index);
-    /**
-     * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-     */
-    int getSubscribeCount();
-    /**
-     * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-     */
-    java.util.List<? extends com.blemobi.sep.probuf.TaskProtos.PSubscribeOrBuilder> 
-        getSubscribeOrBuilderList();
-    /**
-     * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-     */
-    com.blemobi.sep.probuf.TaskProtos.PSubscribeOrBuilder getSubscribeOrBuilder(
-        int index);
-  }
-  /**
-   * Protobuf type {@code bbproto.PSubscribeArray}
-   */
-  public  static final class PSubscribeArray extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:bbproto.PSubscribeArray)
-      PSubscribeArrayOrBuilder {
-    // Use PSubscribeArray.newBuilder() to construct.
-    private PSubscribeArray(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-    }
-    private PSubscribeArray() {
-      subscribe_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-    }
-    private PSubscribeArray(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
-      this();
-      int mutable_bitField0_ = 0;
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                subscribe_ = new java.util.ArrayList<com.blemobi.sep.probuf.TaskProtos.PSubscribe>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              subscribe_.add(input.readMessage(com.blemobi.sep.probuf.TaskProtos.PSubscribe.parser(), extensionRegistry));
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
-      } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-          subscribe_ = java.util.Collections.unmodifiableList(subscribe_);
-        }
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PSubscribeArray_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PSubscribeArray_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.TaskProtos.PSubscribeArray.class, com.blemobi.sep.probuf.TaskProtos.PSubscribeArray.Builder.class);
-    }
-
-    public static final int SUBSCRIBE_FIELD_NUMBER = 1;
-    private java.util.List<com.blemobi.sep.probuf.TaskProtos.PSubscribe> subscribe_;
-    /**
-     * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-     */
-    public java.util.List<com.blemobi.sep.probuf.TaskProtos.PSubscribe> getSubscribeList() {
-      return subscribe_;
-    }
-    /**
-     * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-     */
-    public java.util.List<? extends com.blemobi.sep.probuf.TaskProtos.PSubscribeOrBuilder> 
-        getSubscribeOrBuilderList() {
-      return subscribe_;
-    }
-    /**
-     * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-     */
-    public int getSubscribeCount() {
-      return subscribe_.size();
-    }
-    /**
-     * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-     */
-    public com.blemobi.sep.probuf.TaskProtos.PSubscribe getSubscribe(int index) {
-      return subscribe_.get(index);
-    }
-    /**
-     * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-     */
-    public com.blemobi.sep.probuf.TaskProtos.PSubscribeOrBuilder getSubscribeOrBuilder(
-        int index) {
-      return subscribe_.get(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < subscribe_.size(); i++) {
-        output.writeMessage(1, subscribe_.get(i));
-      }
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < subscribe_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, subscribe_.get(i));
-      }
-      memoizedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.TaskProtos.PSubscribeArray parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PSubscribeArray parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PSubscribeArray parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PSubscribeArray parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PSubscribeArray parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PSubscribeArray parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PSubscribeArray parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PSubscribeArray parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PSubscribeArray parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PSubscribeArray parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.blemobi.sep.probuf.TaskProtos.PSubscribeArray prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code bbproto.PSubscribeArray}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bbproto.PSubscribeArray)
-        com.blemobi.sep.probuf.TaskProtos.PSubscribeArrayOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PSubscribeArray_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PSubscribeArray_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.TaskProtos.PSubscribeArray.class, com.blemobi.sep.probuf.TaskProtos.PSubscribeArray.Builder.class);
-      }
-
-      // Construct using com.blemobi.sep.probuf.TaskProtos.PSubscribeArray.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getSubscribeFieldBuilder();
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        if (subscribeBuilder_ == null) {
-          subscribe_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          subscribeBuilder_.clear();
-        }
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PSubscribeArray_descriptor;
-      }
-
-      public com.blemobi.sep.probuf.TaskProtos.PSubscribeArray getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.TaskProtos.PSubscribeArray.getDefaultInstance();
-      }
-
-      public com.blemobi.sep.probuf.TaskProtos.PSubscribeArray build() {
-        com.blemobi.sep.probuf.TaskProtos.PSubscribeArray result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.blemobi.sep.probuf.TaskProtos.PSubscribeArray buildPartial() {
-        com.blemobi.sep.probuf.TaskProtos.PSubscribeArray result = new com.blemobi.sep.probuf.TaskProtos.PSubscribeArray(this);
-        int from_bitField0_ = bitField0_;
-        if (subscribeBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
-            subscribe_ = java.util.Collections.unmodifiableList(subscribe_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.subscribe_ = subscribe_;
-        } else {
-          result.subscribe_ = subscribeBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.TaskProtos.PSubscribeArray) {
-          return mergeFrom((com.blemobi.sep.probuf.TaskProtos.PSubscribeArray)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.blemobi.sep.probuf.TaskProtos.PSubscribeArray other) {
-        if (other == com.blemobi.sep.probuf.TaskProtos.PSubscribeArray.getDefaultInstance()) return this;
-        if (subscribeBuilder_ == null) {
-          if (!other.subscribe_.isEmpty()) {
-            if (subscribe_.isEmpty()) {
-              subscribe_ = other.subscribe_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureSubscribeIsMutable();
-              subscribe_.addAll(other.subscribe_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.subscribe_.isEmpty()) {
-            if (subscribeBuilder_.isEmpty()) {
-              subscribeBuilder_.dispose();
-              subscribeBuilder_ = null;
-              subscribe_ = other.subscribe_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              subscribeBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getSubscribeFieldBuilder() : null;
-            } else {
-              subscribeBuilder_.addAllMessages(other.subscribe_);
-            }
-          }
-        }
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.blemobi.sep.probuf.TaskProtos.PSubscribeArray parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.TaskProtos.PSubscribeArray) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<com.blemobi.sep.probuf.TaskProtos.PSubscribe> subscribe_ =
-        java.util.Collections.emptyList();
-      private void ensureSubscribeIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          subscribe_ = new java.util.ArrayList<com.blemobi.sep.probuf.TaskProtos.PSubscribe>(subscribe_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.TaskProtos.PSubscribe, com.blemobi.sep.probuf.TaskProtos.PSubscribe.Builder, com.blemobi.sep.probuf.TaskProtos.PSubscribeOrBuilder> subscribeBuilder_;
-
-      /**
-       * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-       */
-      public java.util.List<com.blemobi.sep.probuf.TaskProtos.PSubscribe> getSubscribeList() {
-        if (subscribeBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(subscribe_);
-        } else {
-          return subscribeBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-       */
-      public int getSubscribeCount() {
-        if (subscribeBuilder_ == null) {
-          return subscribe_.size();
-        } else {
-          return subscribeBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-       */
-      public com.blemobi.sep.probuf.TaskProtos.PSubscribe getSubscribe(int index) {
-        if (subscribeBuilder_ == null) {
-          return subscribe_.get(index);
-        } else {
-          return subscribeBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-       */
-      public Builder setSubscribe(
-          int index, com.blemobi.sep.probuf.TaskProtos.PSubscribe value) {
-        if (subscribeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSubscribeIsMutable();
-          subscribe_.set(index, value);
-          onChanged();
-        } else {
-          subscribeBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-       */
-      public Builder setSubscribe(
-          int index, com.blemobi.sep.probuf.TaskProtos.PSubscribe.Builder builderForValue) {
-        if (subscribeBuilder_ == null) {
-          ensureSubscribeIsMutable();
-          subscribe_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          subscribeBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-       */
-      public Builder addSubscribe(com.blemobi.sep.probuf.TaskProtos.PSubscribe value) {
-        if (subscribeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSubscribeIsMutable();
-          subscribe_.add(value);
-          onChanged();
-        } else {
-          subscribeBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-       */
-      public Builder addSubscribe(
-          int index, com.blemobi.sep.probuf.TaskProtos.PSubscribe value) {
-        if (subscribeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSubscribeIsMutable();
-          subscribe_.add(index, value);
-          onChanged();
-        } else {
-          subscribeBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-       */
-      public Builder addSubscribe(
-          com.blemobi.sep.probuf.TaskProtos.PSubscribe.Builder builderForValue) {
-        if (subscribeBuilder_ == null) {
-          ensureSubscribeIsMutable();
-          subscribe_.add(builderForValue.build());
-          onChanged();
-        } else {
-          subscribeBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-       */
-      public Builder addSubscribe(
-          int index, com.blemobi.sep.probuf.TaskProtos.PSubscribe.Builder builderForValue) {
-        if (subscribeBuilder_ == null) {
-          ensureSubscribeIsMutable();
-          subscribe_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          subscribeBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-       */
-      public Builder addAllSubscribe(
-          java.lang.Iterable<? extends com.blemobi.sep.probuf.TaskProtos.PSubscribe> values) {
-        if (subscribeBuilder_ == null) {
-          ensureSubscribeIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, subscribe_);
-          onChanged();
-        } else {
-          subscribeBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-       */
-      public Builder clearSubscribe() {
-        if (subscribeBuilder_ == null) {
-          subscribe_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          subscribeBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-       */
-      public Builder removeSubscribe(int index) {
-        if (subscribeBuilder_ == null) {
-          ensureSubscribeIsMutable();
-          subscribe_.remove(index);
-          onChanged();
-        } else {
-          subscribeBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-       */
-      public com.blemobi.sep.probuf.TaskProtos.PSubscribe.Builder getSubscribeBuilder(
-          int index) {
-        return getSubscribeFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-       */
-      public com.blemobi.sep.probuf.TaskProtos.PSubscribeOrBuilder getSubscribeOrBuilder(
-          int index) {
-        if (subscribeBuilder_ == null) {
-          return subscribe_.get(index);  } else {
-          return subscribeBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-       */
-      public java.util.List<? extends com.blemobi.sep.probuf.TaskProtos.PSubscribeOrBuilder> 
-           getSubscribeOrBuilderList() {
-        if (subscribeBuilder_ != null) {
-          return subscribeBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(subscribe_);
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-       */
-      public com.blemobi.sep.probuf.TaskProtos.PSubscribe.Builder addSubscribeBuilder() {
-        return getSubscribeFieldBuilder().addBuilder(
-            com.blemobi.sep.probuf.TaskProtos.PSubscribe.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-       */
-      public com.blemobi.sep.probuf.TaskProtos.PSubscribe.Builder addSubscribeBuilder(
-          int index) {
-        return getSubscribeFieldBuilder().addBuilder(
-            index, com.blemobi.sep.probuf.TaskProtos.PSubscribe.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .bbproto.PSubscribe subscribe = 1;</code>
-       */
-      public java.util.List<com.blemobi.sep.probuf.TaskProtos.PSubscribe.Builder> 
-           getSubscribeBuilderList() {
-        return getSubscribeFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.TaskProtos.PSubscribe, com.blemobi.sep.probuf.TaskProtos.PSubscribe.Builder, com.blemobi.sep.probuf.TaskProtos.PSubscribeOrBuilder> 
-          getSubscribeFieldBuilder() {
-        if (subscribeBuilder_ == null) {
-          subscribeBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              com.blemobi.sep.probuf.TaskProtos.PSubscribe, com.blemobi.sep.probuf.TaskProtos.PSubscribe.Builder, com.blemobi.sep.probuf.TaskProtos.PSubscribeOrBuilder>(
-                  subscribe_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
-                  getParentForChildren(),
-                  isClean());
-          subscribe_ = null;
-        }
-        return subscribeBuilder_;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:bbproto.PSubscribeArray)
-    }
-
-    // @@protoc_insertion_point(class_scope:bbproto.PSubscribeArray)
-    private static final com.blemobi.sep.probuf.TaskProtos.PSubscribeArray DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.TaskProtos.PSubscribeArray();
-    }
-
-    public static com.blemobi.sep.probuf.TaskProtos.PSubscribeArray getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<PSubscribeArray>
-        PARSER = new com.google.protobuf.AbstractParser<PSubscribeArray>() {
-      public PSubscribeArray parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
-          return new PSubscribeArray(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
-      }
-    };
-
-    public static com.google.protobuf.Parser<PSubscribeArray> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PSubscribeArray> getParserForType() {
-      return PARSER;
-    }
-
-    public com.blemobi.sep.probuf.TaskProtos.PSubscribeArray getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface PSubscribeOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bbproto.PSubscribe)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional string uuid = 1;</code>
-     *
-     * <pre>
-     * 用户uuid
-     * </pre>
-     */
-    java.lang.String getUuid();
-    /**
-     * <code>optional string uuid = 1;</code>
-     *
-     * <pre>
-     * 用户uuid
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getUuidBytes();
-
-    /**
-     * <code>optional int32 msgid = 2;</code>
-     *
-     * <pre>
-     * 消息ID
-     * </pre>
-     */
-    int getMsgid();
-
-    /**
-     * <code>optional int64 time = 3;</code>
-     *
-     * <pre>
-     * 消息有效时间（-1表示永久，0表示取消订阅，其它表示失效时间的时间戳）
-     * </pre>
-     */
-    long getTime();
-  }
-  /**
-   * Protobuf type {@code bbproto.PSubscribe}
-   */
-  public  static final class PSubscribe extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:bbproto.PSubscribe)
-      PSubscribeOrBuilder {
-    // Use PSubscribe.newBuilder() to construct.
-    private PSubscribe(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-    }
-    private PSubscribe() {
-      uuid_ = "";
-      msgid_ = 0;
-      time_ = 0L;
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-    }
-    private PSubscribe(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
-      this();
-      int mutable_bitField0_ = 0;
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              uuid_ = s;
-              break;
-            }
-            case 16: {
-
-              msgid_ = input.readInt32();
-              break;
-            }
-            case 24: {
-
-              time_ = input.readInt64();
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
-      } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
-      } finally {
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PSubscribe_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PSubscribe_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.TaskProtos.PSubscribe.class, com.blemobi.sep.probuf.TaskProtos.PSubscribe.Builder.class);
-    }
-
-    public static final int UUID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object uuid_;
-    /**
-     * <code>optional string uuid = 1;</code>
-     *
-     * <pre>
-     * 用户uuid
-     * </pre>
-     */
-    public java.lang.String getUuid() {
-      java.lang.Object ref = uuid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        uuid_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>optional string uuid = 1;</code>
-     *
-     * <pre>
-     * 用户uuid
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getUuidBytes() {
-      java.lang.Object ref = uuid_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        uuid_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int MSGID_FIELD_NUMBER = 2;
-    private int msgid_;
-    /**
-     * <code>optional int32 msgid = 2;</code>
-     *
-     * <pre>
-     * 消息ID
-     * </pre>
-     */
-    public int getMsgid() {
-      return msgid_;
-    }
-
-    public static final int TIME_FIELD_NUMBER = 3;
+    public static final int TIME_FIELD_NUMBER = 1;
     private long time_;
     /**
-     * <code>optional int64 time = 3;</code>
+     * <code>optional int64 time = 1;</code>
      *
      * <pre>
-     * 消息有效时间（-1表示永久，0表示取消订阅，其它表示失效时间的时间戳）
+     * 时间（保留到毫秒）
      * </pre>
      */
     public long getTime() {
       return time_;
     }
 
+    public static final int GOLD_FIELD_NUMBER = 2;
+    private int gold_;
+    /**
+     * <code>optional int32 gold = 2;</code>
+     *
+     * <pre>
+     * 金币（大于0是收入，小于0是支出）
+     * </pre>
+     */
+    public int getGold() {
+      return gold_;
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 3;
+    private int type_;
+    /**
+     * <code>optional int32 type = 3;</code>
+     *
+     * <pre>
+     * 类型（1-新手任务，2-每日任务，3-商城消费，4-监管操作）
+     * </pre>
+     */
+    public int getType() {
+      return type_;
+    }
+
+    public static final int DESC_FIELD_NUMBER = 4;
+    private volatile java.lang.Object desc_;
+    /**
+     * <code>optional string desc = 4;</code>
+     *
+     * <pre>
+     * 描述
+     * </pre>
+     */
+    public java.lang.String getDesc() {
+      java.lang.Object ref = desc_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        desc_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string desc = 4;</code>
+     *
+     * <pre>
+     * 描述
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getDescBytes() {
+      java.lang.Object ref = desc_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        desc_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -9486,14 +3657,17 @@ public final class TaskProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getUuidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, uuid_);
-      }
-      if (msgid_ != 0) {
-        output.writeInt32(2, msgid_);
-      }
       if (time_ != 0L) {
-        output.writeInt64(3, time_);
+        output.writeInt64(1, time_);
+      }
+      if (gold_ != 0) {
+        output.writeInt32(2, gold_);
+      }
+      if (type_ != 0) {
+        output.writeInt32(3, type_);
+      }
+      if (!getDescBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, desc_);
       }
     }
 
@@ -9502,69 +3676,73 @@ public final class TaskProtos {
       if (size != -1) return size;
 
       size = 0;
-      if (!getUuidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, uuid_);
-      }
-      if (msgid_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, msgid_);
-      }
       if (time_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(3, time_);
+          .computeInt64Size(1, time_);
+      }
+      if (gold_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, gold_);
+      }
+      if (type_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, type_);
+      }
+      if (!getDescBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, desc_);
       }
       memoizedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.TaskProtos.PSubscribe parseFrom(
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldDetail parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PSubscribe parseFrom(
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldDetail parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PSubscribe parseFrom(byte[] data)
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldDetail parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PSubscribe parseFrom(
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldDetail parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PSubscribe parseFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldDetail parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PSubscribe parseFrom(
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldDetail parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PSubscribe parseDelimitedFrom(java.io.InputStream input)
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldDetail parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PSubscribe parseDelimitedFrom(
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldDetail parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PSubscribe parseFrom(
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldDetail parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.blemobi.sep.probuf.TaskProtos.PSubscribe parseFrom(
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldDetail parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -9575,7 +3753,7 @@ public final class TaskProtos {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.blemobi.sep.probuf.TaskProtos.PSubscribe prototype) {
+    public static Builder newBuilder(com.blemobi.sep.probuf.TaskProtos.PGoldDetail prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -9590,25 +3768,25 @@ public final class TaskProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code bbproto.PSubscribe}
+     * Protobuf type {@code bbproto.PGoldDetail}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bbproto.PSubscribe)
-        com.blemobi.sep.probuf.TaskProtos.PSubscribeOrBuilder {
+        // @@protoc_insertion_point(builder_implements:bbproto.PGoldDetail)
+        com.blemobi.sep.probuf.TaskProtos.PGoldDetailOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PSubscribe_descriptor;
+        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PGoldDetail_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PSubscribe_fieldAccessorTable
+        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PGoldDetail_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.TaskProtos.PSubscribe.class, com.blemobi.sep.probuf.TaskProtos.PSubscribe.Builder.class);
+                com.blemobi.sep.probuf.TaskProtos.PGoldDetail.class, com.blemobi.sep.probuf.TaskProtos.PGoldDetail.Builder.class);
       }
 
-      // Construct using com.blemobi.sep.probuf.TaskProtos.PSubscribe.newBuilder()
+      // Construct using com.blemobi.sep.probuf.TaskProtos.PGoldDetail.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -9624,61 +3802,67 @@ public final class TaskProtos {
       }
       public Builder clear() {
         super.clear();
-        uuid_ = "";
-
-        msgid_ = 0;
-
         time_ = 0L;
+
+        gold_ = 0;
+
+        type_ = 0;
+
+        desc_ = "";
 
         return this;
       }
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PSubscribe_descriptor;
+        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PGoldDetail_descriptor;
       }
 
-      public com.blemobi.sep.probuf.TaskProtos.PSubscribe getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.TaskProtos.PSubscribe.getDefaultInstance();
+      public com.blemobi.sep.probuf.TaskProtos.PGoldDetail getDefaultInstanceForType() {
+        return com.blemobi.sep.probuf.TaskProtos.PGoldDetail.getDefaultInstance();
       }
 
-      public com.blemobi.sep.probuf.TaskProtos.PSubscribe build() {
-        com.blemobi.sep.probuf.TaskProtos.PSubscribe result = buildPartial();
+      public com.blemobi.sep.probuf.TaskProtos.PGoldDetail build() {
+        com.blemobi.sep.probuf.TaskProtos.PGoldDetail result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.blemobi.sep.probuf.TaskProtos.PSubscribe buildPartial() {
-        com.blemobi.sep.probuf.TaskProtos.PSubscribe result = new com.blemobi.sep.probuf.TaskProtos.PSubscribe(this);
-        result.uuid_ = uuid_;
-        result.msgid_ = msgid_;
+      public com.blemobi.sep.probuf.TaskProtos.PGoldDetail buildPartial() {
+        com.blemobi.sep.probuf.TaskProtos.PGoldDetail result = new com.blemobi.sep.probuf.TaskProtos.PGoldDetail(this);
         result.time_ = time_;
+        result.gold_ = gold_;
+        result.type_ = type_;
+        result.desc_ = desc_;
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.TaskProtos.PSubscribe) {
-          return mergeFrom((com.blemobi.sep.probuf.TaskProtos.PSubscribe)other);
+        if (other instanceof com.blemobi.sep.probuf.TaskProtos.PGoldDetail) {
+          return mergeFrom((com.blemobi.sep.probuf.TaskProtos.PGoldDetail)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.blemobi.sep.probuf.TaskProtos.PSubscribe other) {
-        if (other == com.blemobi.sep.probuf.TaskProtos.PSubscribe.getDefaultInstance()) return this;
-        if (!other.getUuid().isEmpty()) {
-          uuid_ = other.uuid_;
-          onChanged();
-        }
-        if (other.getMsgid() != 0) {
-          setMsgid(other.getMsgid());
-        }
+      public Builder mergeFrom(com.blemobi.sep.probuf.TaskProtos.PGoldDetail other) {
+        if (other == com.blemobi.sep.probuf.TaskProtos.PGoldDetail.getDefaultInstance()) return this;
         if (other.getTime() != 0L) {
           setTime(other.getTime());
+        }
+        if (other.getGold() != 0) {
+          setGold(other.getGold());
+        }
+        if (other.getType() != 0) {
+          setType(other.getType());
+        }
+        if (!other.getDesc().isEmpty()) {
+          desc_ = other.desc_;
+          onChanged();
         }
         onChanged();
         return this;
@@ -9692,11 +3876,11 @@ public final class TaskProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.blemobi.sep.probuf.TaskProtos.PSubscribe parsedMessage = null;
+        com.blemobi.sep.probuf.TaskProtos.PGoldDetail parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.TaskProtos.PSubscribe) e.getUnfinishedMessage();
+          parsedMessage = (com.blemobi.sep.probuf.TaskProtos.PGoldDetail) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -9706,149 +3890,22 @@ public final class TaskProtos {
         return this;
       }
 
-      private java.lang.Object uuid_ = "";
-      /**
-       * <code>optional string uuid = 1;</code>
-       *
-       * <pre>
-       * 用户uuid
-       * </pre>
-       */
-      public java.lang.String getUuid() {
-        java.lang.Object ref = uuid_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          uuid_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string uuid = 1;</code>
-       *
-       * <pre>
-       * 用户uuid
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getUuidBytes() {
-        java.lang.Object ref = uuid_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          uuid_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string uuid = 1;</code>
-       *
-       * <pre>
-       * 用户uuid
-       * </pre>
-       */
-      public Builder setUuid(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        uuid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string uuid = 1;</code>
-       *
-       * <pre>
-       * 用户uuid
-       * </pre>
-       */
-      public Builder clearUuid() {
-        
-        uuid_ = getDefaultInstance().getUuid();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string uuid = 1;</code>
-       *
-       * <pre>
-       * 用户uuid
-       * </pre>
-       */
-      public Builder setUuidBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        uuid_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int msgid_ ;
-      /**
-       * <code>optional int32 msgid = 2;</code>
-       *
-       * <pre>
-       * 消息ID
-       * </pre>
-       */
-      public int getMsgid() {
-        return msgid_;
-      }
-      /**
-       * <code>optional int32 msgid = 2;</code>
-       *
-       * <pre>
-       * 消息ID
-       * </pre>
-       */
-      public Builder setMsgid(int value) {
-        
-        msgid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 msgid = 2;</code>
-       *
-       * <pre>
-       * 消息ID
-       * </pre>
-       */
-      public Builder clearMsgid() {
-        
-        msgid_ = 0;
-        onChanged();
-        return this;
-      }
-
       private long time_ ;
       /**
-       * <code>optional int64 time = 3;</code>
+       * <code>optional int64 time = 1;</code>
        *
        * <pre>
-       * 消息有效时间（-1表示永久，0表示取消订阅，其它表示失效时间的时间戳）
+       * 时间（保留到毫秒）
        * </pre>
        */
       public long getTime() {
         return time_;
       }
       /**
-       * <code>optional int64 time = 3;</code>
+       * <code>optional int64 time = 1;</code>
        *
        * <pre>
-       * 消息有效时间（-1表示永久，0表示取消订阅，其它表示失效时间的时间戳）
+       * 时间（保留到毫秒）
        * </pre>
        */
       public Builder setTime(long value) {
@@ -9858,10 +3915,10 @@ public final class TaskProtos {
         return this;
       }
       /**
-       * <code>optional int64 time = 3;</code>
+       * <code>optional int64 time = 1;</code>
        *
        * <pre>
-       * 消息有效时间（-1表示永久，0表示取消订阅，其它表示失效时间的时间戳）
+       * 时间（保留到毫秒）
        * </pre>
        */
       public Builder clearTime() {
@@ -9870,1324 +3927,168 @@ public final class TaskProtos {
         onChanged();
         return this;
       }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
 
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:bbproto.PSubscribe)
-    }
-
-    // @@protoc_insertion_point(class_scope:bbproto.PSubscribe)
-    private static final com.blemobi.sep.probuf.TaskProtos.PSubscribe DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.TaskProtos.PSubscribe();
-    }
-
-    public static com.blemobi.sep.probuf.TaskProtos.PSubscribe getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<PSubscribe>
-        PARSER = new com.google.protobuf.AbstractParser<PSubscribe>() {
-      public PSubscribe parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
-          return new PSubscribe(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
-      }
-    };
-
-    public static com.google.protobuf.Parser<PSubscribe> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PSubscribe> getParserForType() {
-      return PARSER;
-    }
-
-    public com.blemobi.sep.probuf.TaskProtos.PSubscribe getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface PCallbackArrayOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bbproto.PCallbackArray)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>repeated .bbproto.PCallback callback = 1;</code>
-     */
-    java.util.List<com.blemobi.sep.probuf.TaskProtos.PCallback> 
-        getCallbackList();
-    /**
-     * <code>repeated .bbproto.PCallback callback = 1;</code>
-     */
-    com.blemobi.sep.probuf.TaskProtos.PCallback getCallback(int index);
-    /**
-     * <code>repeated .bbproto.PCallback callback = 1;</code>
-     */
-    int getCallbackCount();
-    /**
-     * <code>repeated .bbproto.PCallback callback = 1;</code>
-     */
-    java.util.List<? extends com.blemobi.sep.probuf.TaskProtos.PCallbackOrBuilder> 
-        getCallbackOrBuilderList();
-    /**
-     * <code>repeated .bbproto.PCallback callback = 1;</code>
-     */
-    com.blemobi.sep.probuf.TaskProtos.PCallbackOrBuilder getCallbackOrBuilder(
-        int index);
-  }
-  /**
-   * Protobuf type {@code bbproto.PCallbackArray}
-   */
-  public  static final class PCallbackArray extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:bbproto.PCallbackArray)
-      PCallbackArrayOrBuilder {
-    // Use PCallbackArray.newBuilder() to construct.
-    private PCallbackArray(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-    }
-    private PCallbackArray() {
-      callback_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-    }
-    private PCallbackArray(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
-      this();
-      int mutable_bitField0_ = 0;
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                callback_ = new java.util.ArrayList<com.blemobi.sep.probuf.TaskProtos.PCallback>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              callback_.add(input.readMessage(com.blemobi.sep.probuf.TaskProtos.PCallback.parser(), extensionRegistry));
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
-      } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-          callback_ = java.util.Collections.unmodifiableList(callback_);
-        }
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PCallbackArray_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PCallbackArray_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.TaskProtos.PCallbackArray.class, com.blemobi.sep.probuf.TaskProtos.PCallbackArray.Builder.class);
-    }
-
-    public static final int CALLBACK_FIELD_NUMBER = 1;
-    private java.util.List<com.blemobi.sep.probuf.TaskProtos.PCallback> callback_;
-    /**
-     * <code>repeated .bbproto.PCallback callback = 1;</code>
-     */
-    public java.util.List<com.blemobi.sep.probuf.TaskProtos.PCallback> getCallbackList() {
-      return callback_;
-    }
-    /**
-     * <code>repeated .bbproto.PCallback callback = 1;</code>
-     */
-    public java.util.List<? extends com.blemobi.sep.probuf.TaskProtos.PCallbackOrBuilder> 
-        getCallbackOrBuilderList() {
-      return callback_;
-    }
-    /**
-     * <code>repeated .bbproto.PCallback callback = 1;</code>
-     */
-    public int getCallbackCount() {
-      return callback_.size();
-    }
-    /**
-     * <code>repeated .bbproto.PCallback callback = 1;</code>
-     */
-    public com.blemobi.sep.probuf.TaskProtos.PCallback getCallback(int index) {
-      return callback_.get(index);
-    }
-    /**
-     * <code>repeated .bbproto.PCallback callback = 1;</code>
-     */
-    public com.blemobi.sep.probuf.TaskProtos.PCallbackOrBuilder getCallbackOrBuilder(
-        int index) {
-      return callback_.get(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < callback_.size(); i++) {
-        output.writeMessage(1, callback_.get(i));
-      }
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < callback_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, callback_.get(i));
-      }
-      memoizedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.TaskProtos.PCallbackArray parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PCallbackArray parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PCallbackArray parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PCallbackArray parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PCallbackArray parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PCallbackArray parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PCallbackArray parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PCallbackArray parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PCallbackArray parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PCallbackArray parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.blemobi.sep.probuf.TaskProtos.PCallbackArray prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code bbproto.PCallbackArray}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bbproto.PCallbackArray)
-        com.blemobi.sep.probuf.TaskProtos.PCallbackArrayOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PCallbackArray_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PCallbackArray_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.TaskProtos.PCallbackArray.class, com.blemobi.sep.probuf.TaskProtos.PCallbackArray.Builder.class);
-      }
-
-      // Construct using com.blemobi.sep.probuf.TaskProtos.PCallbackArray.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getCallbackFieldBuilder();
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        if (callbackBuilder_ == null) {
-          callback_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          callbackBuilder_.clear();
-        }
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PCallbackArray_descriptor;
-      }
-
-      public com.blemobi.sep.probuf.TaskProtos.PCallbackArray getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.TaskProtos.PCallbackArray.getDefaultInstance();
-      }
-
-      public com.blemobi.sep.probuf.TaskProtos.PCallbackArray build() {
-        com.blemobi.sep.probuf.TaskProtos.PCallbackArray result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.blemobi.sep.probuf.TaskProtos.PCallbackArray buildPartial() {
-        com.blemobi.sep.probuf.TaskProtos.PCallbackArray result = new com.blemobi.sep.probuf.TaskProtos.PCallbackArray(this);
-        int from_bitField0_ = bitField0_;
-        if (callbackBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
-            callback_ = java.util.Collections.unmodifiableList(callback_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.callback_ = callback_;
-        } else {
-          result.callback_ = callbackBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.TaskProtos.PCallbackArray) {
-          return mergeFrom((com.blemobi.sep.probuf.TaskProtos.PCallbackArray)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.blemobi.sep.probuf.TaskProtos.PCallbackArray other) {
-        if (other == com.blemobi.sep.probuf.TaskProtos.PCallbackArray.getDefaultInstance()) return this;
-        if (callbackBuilder_ == null) {
-          if (!other.callback_.isEmpty()) {
-            if (callback_.isEmpty()) {
-              callback_ = other.callback_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureCallbackIsMutable();
-              callback_.addAll(other.callback_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.callback_.isEmpty()) {
-            if (callbackBuilder_.isEmpty()) {
-              callbackBuilder_.dispose();
-              callbackBuilder_ = null;
-              callback_ = other.callback_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              callbackBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getCallbackFieldBuilder() : null;
-            } else {
-              callbackBuilder_.addAllMessages(other.callback_);
-            }
-          }
-        }
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.blemobi.sep.probuf.TaskProtos.PCallbackArray parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.TaskProtos.PCallbackArray) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<com.blemobi.sep.probuf.TaskProtos.PCallback> callback_ =
-        java.util.Collections.emptyList();
-      private void ensureCallbackIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          callback_ = new java.util.ArrayList<com.blemobi.sep.probuf.TaskProtos.PCallback>(callback_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.TaskProtos.PCallback, com.blemobi.sep.probuf.TaskProtos.PCallback.Builder, com.blemobi.sep.probuf.TaskProtos.PCallbackOrBuilder> callbackBuilder_;
-
+      private int gold_ ;
       /**
-       * <code>repeated .bbproto.PCallback callback = 1;</code>
-       */
-      public java.util.List<com.blemobi.sep.probuf.TaskProtos.PCallback> getCallbackList() {
-        if (callbackBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(callback_);
-        } else {
-          return callbackBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PCallback callback = 1;</code>
-       */
-      public int getCallbackCount() {
-        if (callbackBuilder_ == null) {
-          return callback_.size();
-        } else {
-          return callbackBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PCallback callback = 1;</code>
-       */
-      public com.blemobi.sep.probuf.TaskProtos.PCallback getCallback(int index) {
-        if (callbackBuilder_ == null) {
-          return callback_.get(index);
-        } else {
-          return callbackBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PCallback callback = 1;</code>
-       */
-      public Builder setCallback(
-          int index, com.blemobi.sep.probuf.TaskProtos.PCallback value) {
-        if (callbackBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureCallbackIsMutable();
-          callback_.set(index, value);
-          onChanged();
-        } else {
-          callbackBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PCallback callback = 1;</code>
-       */
-      public Builder setCallback(
-          int index, com.blemobi.sep.probuf.TaskProtos.PCallback.Builder builderForValue) {
-        if (callbackBuilder_ == null) {
-          ensureCallbackIsMutable();
-          callback_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          callbackBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PCallback callback = 1;</code>
-       */
-      public Builder addCallback(com.blemobi.sep.probuf.TaskProtos.PCallback value) {
-        if (callbackBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureCallbackIsMutable();
-          callback_.add(value);
-          onChanged();
-        } else {
-          callbackBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PCallback callback = 1;</code>
-       */
-      public Builder addCallback(
-          int index, com.blemobi.sep.probuf.TaskProtos.PCallback value) {
-        if (callbackBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureCallbackIsMutable();
-          callback_.add(index, value);
-          onChanged();
-        } else {
-          callbackBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PCallback callback = 1;</code>
-       */
-      public Builder addCallback(
-          com.blemobi.sep.probuf.TaskProtos.PCallback.Builder builderForValue) {
-        if (callbackBuilder_ == null) {
-          ensureCallbackIsMutable();
-          callback_.add(builderForValue.build());
-          onChanged();
-        } else {
-          callbackBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PCallback callback = 1;</code>
-       */
-      public Builder addCallback(
-          int index, com.blemobi.sep.probuf.TaskProtos.PCallback.Builder builderForValue) {
-        if (callbackBuilder_ == null) {
-          ensureCallbackIsMutable();
-          callback_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          callbackBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PCallback callback = 1;</code>
-       */
-      public Builder addAllCallback(
-          java.lang.Iterable<? extends com.blemobi.sep.probuf.TaskProtos.PCallback> values) {
-        if (callbackBuilder_ == null) {
-          ensureCallbackIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, callback_);
-          onChanged();
-        } else {
-          callbackBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PCallback callback = 1;</code>
-       */
-      public Builder clearCallback() {
-        if (callbackBuilder_ == null) {
-          callback_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          callbackBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PCallback callback = 1;</code>
-       */
-      public Builder removeCallback(int index) {
-        if (callbackBuilder_ == null) {
-          ensureCallbackIsMutable();
-          callback_.remove(index);
-          onChanged();
-        } else {
-          callbackBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .bbproto.PCallback callback = 1;</code>
-       */
-      public com.blemobi.sep.probuf.TaskProtos.PCallback.Builder getCallbackBuilder(
-          int index) {
-        return getCallbackFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .bbproto.PCallback callback = 1;</code>
-       */
-      public com.blemobi.sep.probuf.TaskProtos.PCallbackOrBuilder getCallbackOrBuilder(
-          int index) {
-        if (callbackBuilder_ == null) {
-          return callback_.get(index);  } else {
-          return callbackBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PCallback callback = 1;</code>
-       */
-      public java.util.List<? extends com.blemobi.sep.probuf.TaskProtos.PCallbackOrBuilder> 
-           getCallbackOrBuilderList() {
-        if (callbackBuilder_ != null) {
-          return callbackBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(callback_);
-        }
-      }
-      /**
-       * <code>repeated .bbproto.PCallback callback = 1;</code>
-       */
-      public com.blemobi.sep.probuf.TaskProtos.PCallback.Builder addCallbackBuilder() {
-        return getCallbackFieldBuilder().addBuilder(
-            com.blemobi.sep.probuf.TaskProtos.PCallback.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .bbproto.PCallback callback = 1;</code>
-       */
-      public com.blemobi.sep.probuf.TaskProtos.PCallback.Builder addCallbackBuilder(
-          int index) {
-        return getCallbackFieldBuilder().addBuilder(
-            index, com.blemobi.sep.probuf.TaskProtos.PCallback.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .bbproto.PCallback callback = 1;</code>
-       */
-      public java.util.List<com.blemobi.sep.probuf.TaskProtos.PCallback.Builder> 
-           getCallbackBuilderList() {
-        return getCallbackFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.blemobi.sep.probuf.TaskProtos.PCallback, com.blemobi.sep.probuf.TaskProtos.PCallback.Builder, com.blemobi.sep.probuf.TaskProtos.PCallbackOrBuilder> 
-          getCallbackFieldBuilder() {
-        if (callbackBuilder_ == null) {
-          callbackBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              com.blemobi.sep.probuf.TaskProtos.PCallback, com.blemobi.sep.probuf.TaskProtos.PCallback.Builder, com.blemobi.sep.probuf.TaskProtos.PCallbackOrBuilder>(
-                  callback_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
-                  getParentForChildren(),
-                  isClean());
-          callback_ = null;
-        }
-        return callbackBuilder_;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:bbproto.PCallbackArray)
-    }
-
-    // @@protoc_insertion_point(class_scope:bbproto.PCallbackArray)
-    private static final com.blemobi.sep.probuf.TaskProtos.PCallbackArray DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.TaskProtos.PCallbackArray();
-    }
-
-    public static com.blemobi.sep.probuf.TaskProtos.PCallbackArray getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<PCallbackArray>
-        PARSER = new com.google.protobuf.AbstractParser<PCallbackArray>() {
-      public PCallbackArray parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
-          return new PCallbackArray(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
-      }
-    };
-
-    public static com.google.protobuf.Parser<PCallbackArray> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PCallbackArray> getParserForType() {
-      return PARSER;
-    }
-
-    public com.blemobi.sep.probuf.TaskProtos.PCallbackArray getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface PCallbackOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bbproto.PCallback)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional string uuid = 1;</code>
-     *
-     * <pre>
-     * 用户uuid
-     * </pre>
-     */
-    java.lang.String getUuid();
-    /**
-     * <code>optional string uuid = 1;</code>
-     *
-     * <pre>
-     * 用户uuid
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getUuidBytes();
-
-    /**
-     * <code>optional int32 msgid = 2;</code>
-     *
-     * <pre>
-     * 消息ID
-     * </pre>
-     */
-    int getMsgid();
-
-    /**
-     * <code>optional int64 time = 3;</code>
-     *
-     * <pre>
-     * 消息时间（时间戳）
-     * </pre>
-     */
-    long getTime();
-  }
-  /**
-   * Protobuf type {@code bbproto.PCallback}
-   */
-  public  static final class PCallback extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:bbproto.PCallback)
-      PCallbackOrBuilder {
-    // Use PCallback.newBuilder() to construct.
-    private PCallback(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-    }
-    private PCallback() {
-      uuid_ = "";
-      msgid_ = 0;
-      time_ = 0L;
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-    }
-    private PCallback(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
-      this();
-      int mutable_bitField0_ = 0;
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              uuid_ = s;
-              break;
-            }
-            case 16: {
-
-              msgid_ = input.readInt32();
-              break;
-            }
-            case 24: {
-
-              time_ = input.readInt64();
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
-      } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
-      } finally {
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PCallback_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PCallback_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.blemobi.sep.probuf.TaskProtos.PCallback.class, com.blemobi.sep.probuf.TaskProtos.PCallback.Builder.class);
-    }
-
-    public static final int UUID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object uuid_;
-    /**
-     * <code>optional string uuid = 1;</code>
-     *
-     * <pre>
-     * 用户uuid
-     * </pre>
-     */
-    public java.lang.String getUuid() {
-      java.lang.Object ref = uuid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        uuid_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>optional string uuid = 1;</code>
-     *
-     * <pre>
-     * 用户uuid
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getUuidBytes() {
-      java.lang.Object ref = uuid_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        uuid_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int MSGID_FIELD_NUMBER = 2;
-    private int msgid_;
-    /**
-     * <code>optional int32 msgid = 2;</code>
-     *
-     * <pre>
-     * 消息ID
-     * </pre>
-     */
-    public int getMsgid() {
-      return msgid_;
-    }
-
-    public static final int TIME_FIELD_NUMBER = 3;
-    private long time_;
-    /**
-     * <code>optional int64 time = 3;</code>
-     *
-     * <pre>
-     * 消息时间（时间戳）
-     * </pre>
-     */
-    public long getTime() {
-      return time_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getUuidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, uuid_);
-      }
-      if (msgid_ != 0) {
-        output.writeInt32(2, msgid_);
-      }
-      if (time_ != 0L) {
-        output.writeInt64(3, time_);
-      }
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getUuidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, uuid_);
-      }
-      if (msgid_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, msgid_);
-      }
-      if (time_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(3, time_);
-      }
-      memoizedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    public static com.blemobi.sep.probuf.TaskProtos.PCallback parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PCallback parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PCallback parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PCallback parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PCallback parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PCallback parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PCallback parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PCallback parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PCallback parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.blemobi.sep.probuf.TaskProtos.PCallback parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.blemobi.sep.probuf.TaskProtos.PCallback prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code bbproto.PCallback}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bbproto.PCallback)
-        com.blemobi.sep.probuf.TaskProtos.PCallbackOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PCallback_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PCallback_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.blemobi.sep.probuf.TaskProtos.PCallback.class, com.blemobi.sep.probuf.TaskProtos.PCallback.Builder.class);
-      }
-
-      // Construct using com.blemobi.sep.probuf.TaskProtos.PCallback.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        uuid_ = "";
-
-        msgid_ = 0;
-
-        time_ = 0L;
-
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.blemobi.sep.probuf.TaskProtos.internal_static_bbproto_PCallback_descriptor;
-      }
-
-      public com.blemobi.sep.probuf.TaskProtos.PCallback getDefaultInstanceForType() {
-        return com.blemobi.sep.probuf.TaskProtos.PCallback.getDefaultInstance();
-      }
-
-      public com.blemobi.sep.probuf.TaskProtos.PCallback build() {
-        com.blemobi.sep.probuf.TaskProtos.PCallback result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.blemobi.sep.probuf.TaskProtos.PCallback buildPartial() {
-        com.blemobi.sep.probuf.TaskProtos.PCallback result = new com.blemobi.sep.probuf.TaskProtos.PCallback(this);
-        result.uuid_ = uuid_;
-        result.msgid_ = msgid_;
-        result.time_ = time_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.blemobi.sep.probuf.TaskProtos.PCallback) {
-          return mergeFrom((com.blemobi.sep.probuf.TaskProtos.PCallback)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.blemobi.sep.probuf.TaskProtos.PCallback other) {
-        if (other == com.blemobi.sep.probuf.TaskProtos.PCallback.getDefaultInstance()) return this;
-        if (!other.getUuid().isEmpty()) {
-          uuid_ = other.uuid_;
-          onChanged();
-        }
-        if (other.getMsgid() != 0) {
-          setMsgid(other.getMsgid());
-        }
-        if (other.getTime() != 0L) {
-          setTime(other.getTime());
-        }
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.blemobi.sep.probuf.TaskProtos.PCallback parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.blemobi.sep.probuf.TaskProtos.PCallback) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object uuid_ = "";
-      /**
-       * <code>optional string uuid = 1;</code>
+       * <code>optional int32 gold = 2;</code>
        *
        * <pre>
-       * 用户uuid
+       * 金币（大于0是收入，小于0是支出）
        * </pre>
        */
-      public java.lang.String getUuid() {
-        java.lang.Object ref = uuid_;
+      public int getGold() {
+        return gold_;
+      }
+      /**
+       * <code>optional int32 gold = 2;</code>
+       *
+       * <pre>
+       * 金币（大于0是收入，小于0是支出）
+       * </pre>
+       */
+      public Builder setGold(int value) {
+        
+        gold_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 gold = 2;</code>
+       *
+       * <pre>
+       * 金币（大于0是收入，小于0是支出）
+       * </pre>
+       */
+      public Builder clearGold() {
+        
+        gold_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int type_ ;
+      /**
+       * <code>optional int32 type = 3;</code>
+       *
+       * <pre>
+       * 类型（1-新手任务，2-每日任务，3-商城消费，4-监管操作）
+       * </pre>
+       */
+      public int getType() {
+        return type_;
+      }
+      /**
+       * <code>optional int32 type = 3;</code>
+       *
+       * <pre>
+       * 类型（1-新手任务，2-每日任务，3-商城消费，4-监管操作）
+       * </pre>
+       */
+      public Builder setType(int value) {
+        
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 type = 3;</code>
+       *
+       * <pre>
+       * 类型（1-新手任务，2-每日任务，3-商城消费，4-监管操作）
+       * </pre>
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object desc_ = "";
+      /**
+       * <code>optional string desc = 4;</code>
+       *
+       * <pre>
+       * 描述
+       * </pre>
+       */
+      public java.lang.String getDesc() {
+        java.lang.Object ref = desc_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          uuid_ = s;
+          desc_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>optional string uuid = 1;</code>
+       * <code>optional string desc = 4;</code>
        *
        * <pre>
-       * 用户uuid
+       * 描述
        * </pre>
        */
       public com.google.protobuf.ByteString
-          getUuidBytes() {
-        java.lang.Object ref = uuid_;
+          getDescBytes() {
+        java.lang.Object ref = desc_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          uuid_ = b;
+          desc_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>optional string uuid = 1;</code>
+       * <code>optional string desc = 4;</code>
        *
        * <pre>
-       * 用户uuid
+       * 描述
        * </pre>
        */
-      public Builder setUuid(
+      public Builder setDesc(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        uuid_ = value;
+        desc_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string uuid = 1;</code>
+       * <code>optional string desc = 4;</code>
        *
        * <pre>
-       * 用户uuid
+       * 描述
        * </pre>
        */
-      public Builder clearUuid() {
+      public Builder clearDesc() {
         
-        uuid_ = getDefaultInstance().getUuid();
+        desc_ = getDefaultInstance().getDesc();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string uuid = 1;</code>
+       * <code>optional string desc = 4;</code>
        *
        * <pre>
-       * 用户uuid
+       * 描述
        * </pre>
        */
-      public Builder setUuidBytes(
+      public Builder setDescBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        uuid_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int msgid_ ;
-      /**
-       * <code>optional int32 msgid = 2;</code>
-       *
-       * <pre>
-       * 消息ID
-       * </pre>
-       */
-      public int getMsgid() {
-        return msgid_;
-      }
-      /**
-       * <code>optional int32 msgid = 2;</code>
-       *
-       * <pre>
-       * 消息ID
-       * </pre>
-       */
-      public Builder setMsgid(int value) {
-        
-        msgid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 msgid = 2;</code>
-       *
-       * <pre>
-       * 消息ID
-       * </pre>
-       */
-      public Builder clearMsgid() {
-        
-        msgid_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private long time_ ;
-      /**
-       * <code>optional int64 time = 3;</code>
-       *
-       * <pre>
-       * 消息时间（时间戳）
-       * </pre>
-       */
-      public long getTime() {
-        return time_;
-      }
-      /**
-       * <code>optional int64 time = 3;</code>
-       *
-       * <pre>
-       * 消息时间（时间戳）
-       * </pre>
-       */
-      public Builder setTime(long value) {
-        
-        time_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int64 time = 3;</code>
-       *
-       * <pre>
-       * 消息时间（时间戳）
-       * </pre>
-       */
-      public Builder clearTime() {
-        
-        time_ = 0L;
+        desc_ = value;
         onChanged();
         return this;
       }
@@ -11202,27 +4103,27 @@ public final class TaskProtos {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bbproto.PCallback)
+      // @@protoc_insertion_point(builder_scope:bbproto.PGoldDetail)
     }
 
-    // @@protoc_insertion_point(class_scope:bbproto.PCallback)
-    private static final com.blemobi.sep.probuf.TaskProtos.PCallback DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:bbproto.PGoldDetail)
+    private static final com.blemobi.sep.probuf.TaskProtos.PGoldDetail DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.TaskProtos.PCallback();
+      DEFAULT_INSTANCE = new com.blemobi.sep.probuf.TaskProtos.PGoldDetail();
     }
 
-    public static com.blemobi.sep.probuf.TaskProtos.PCallback getDefaultInstance() {
+    public static com.blemobi.sep.probuf.TaskProtos.PGoldDetail getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PCallback>
-        PARSER = new com.google.protobuf.AbstractParser<PCallback>() {
-      public PCallback parsePartialFrom(
+    private static final com.google.protobuf.Parser<PGoldDetail>
+        PARSER = new com.google.protobuf.AbstractParser<PGoldDetail>() {
+      public PGoldDetail parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         try {
-          return new PCallback(input, extensionRegistry);
+          return new PGoldDetail(input, extensionRegistry);
         } catch (RuntimeException e) {
           if (e.getCause() instanceof
               com.google.protobuf.InvalidProtocolBufferException) {
@@ -11234,81 +4135,41 @@ public final class TaskProtos {
       }
     };
 
-    public static com.google.protobuf.Parser<PCallback> parser() {
+    public static com.google.protobuf.Parser<PGoldDetail> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PCallback> getParserForType() {
+    public com.google.protobuf.Parser<PGoldDetail> getParserForType() {
       return PARSER;
     }
 
-    public com.blemobi.sep.probuf.TaskProtos.PCallback getDefaultInstanceForType() {
+    public com.blemobi.sep.probuf.TaskProtos.PGoldDetail getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_bbproto_PTaskUserBasic_descriptor;
+    internal_static_bbproto_PGoldTask_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_bbproto_PTaskUserBasic_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_bbproto_PTaskList_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_bbproto_PTaskList_fieldAccessorTable;
+      internal_static_bbproto_PGoldTask_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_bbproto_PTaskInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_bbproto_PTaskInfo_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_bbproto_PTaskLevelList_descriptor;
+    internal_static_bbproto_PGoldDetails_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_bbproto_PTaskLevelList_fieldAccessorTable;
+      internal_static_bbproto_PGoldDetails_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_bbproto_PTaskLevel_descriptor;
+    internal_static_bbproto_PGoldDetail_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_bbproto_PTaskLevel_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_bbproto_PTaskUserPk_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_bbproto_PTaskUserPk_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_bbproto_PExpLevelList_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_bbproto_PExpLevelList_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_bbproto_PExpLevel_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_bbproto_PExpLevel_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_bbproto_PSubscribeArray_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_bbproto_PSubscribeArray_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_bbproto_PSubscribe_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_bbproto_PSubscribe_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_bbproto_PCallbackArray_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_bbproto_PCallbackArray_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_bbproto_PCallback_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_bbproto_PCallback_fieldAccessorTable;
+      internal_static_bbproto_PGoldDetail_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -11318,38 +4179,18 @@ public final class TaskProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\ntask.proto\022\007bbproto\"\242\001\n\016PTaskUserBasic" +
-      "\022\r\n\005level\030\001 \001(\005\022\021\n\tlevelName\030\002 \001(\t\022\013\n\003ex" +
-      "p\030\003 \001(\003\022\021\n\tnextLevel\030\004 \001(\005\022\025\n\rnextLevelN" +
-      "ame\030\005 \001(\t\022\024\n\014nextLevelExp\030\006 \001(\003\022\020\n\010nickn" +
-      "ame\030\007 \001(\t\022\017\n\007headimg\030\010 \001(\t\"\317\001\n\tPTaskList" +
-      "\022*\n\tuserBasic\030\001 \001(\0132\027.bbproto.PTaskUserB" +
-      "asic\022\021\n\ttaskTotal\030\002 \001(\005\022\026\n\016dailyTaskTota" +
-      "l\030\003 \001(\005\022\036\n\026dailyTaskCompleteTotal\030\004 \001(\005\022" +
-      "$\n\010mainTask\030\005 \003(\0132\022.bbproto.PTaskInfo\022%\n" +
-      "\tdailyTask\030\006 \003(\0132\022.bbproto.PTaskInfo\"r\n\t",
-      "PTaskInfo\022\016\n\006taskid\030\001 \001(\005\022\013\n\003exp\030\002 \001(\003\022\r" +
-      "\n\005state\030\003 \001(\005\022\014\n\004type\030\004 \001(\005\022\020\n\010complete\030" +
-      "\005 \001(\005\022\013\n\003num\030\006 \001(\005\022\014\n\004desc\030\007 \001(\t\"d\n\016PTas" +
-      "kLevelList\022*\n\tuserBasic\030\001 \001(\0132\027.bbproto." +
-      "PTaskUserBasic\022&\n\ttaskLevel\030\002 \003(\0132\023.bbpr" +
-      "oto.PTaskLevel\"F\n\nPTaskLevel\022\n\n\002id\030\001 \001(\005" +
-      "\022\014\n\004name\030\002 \001(\t\022\016\n\006minExp\030\003 \001(\003\022\016\n\006maxExp" +
-      "\030\004 \001(\003\"\227\001\n\013PTaskUserPk\022*\n\tuserBasic\030\001 \001(" +
-      "\0132\027.bbproto.PTaskUserBasic\022,\n\013pkUserBasi" +
-      "c\030\002 \001(\0132\027.bbproto.PTaskUserBasic\022\025\n\ruser",
-      "TaskTotol\030\003 \001(\005\022\027\n\017pkUserTaskTotol\030\004 \001(\005" +
-      "\"5\n\rPExpLevelList\022$\n\010expLevel\030\001 \003(\0132\022.bb" +
-      "proto.PExpLevel\"[\n\tPExpLevel\022\n\n\002id\030\001 \001(\005" +
-      "\022\017\n\007titleSc\030\002 \001(\t\022\017\n\007titleTc\030\003 \001(\t\022\017\n\007ti" +
-      "tleEn\030\004 \001(\t\022\017\n\007titleKr\030\005 \001(\t\"9\n\017PSubscri" +
-      "beArray\022&\n\tsubscribe\030\001 \003(\0132\023.bbproto.PSu" +
-      "bscribe\"7\n\nPSubscribe\022\014\n\004uuid\030\001 \001(\t\022\r\n\005m" +
-      "sgid\030\002 \001(\005\022\014\n\004time\030\003 \001(\003\"6\n\016PCallbackArr" +
-      "ay\022$\n\010callback\030\001 \003(\0132\022.bbproto.PCallback" +
-      "\"6\n\tPCallback\022\014\n\004uuid\030\001 \001(\t\022\r\n\005msgid\030\002 \001",
-      "(\005\022\014\n\004time\030\003 \001(\003B$\n\026com.blemobi.sep.prob" +
-      "ufB\nTaskProtosb\006proto3"
+      "\n\ntask.proto\022\007bbproto\032\raccount.proto\"\211\001\n" +
+      "\tPGoldTask\022 \n\004user\030\001 \001(\0132\022.bbproto.PUser" +
+      "Base\022\014\n\004gold\030\002 \001(\005\022%\n\tnovicTask\030\003 \003(\0132\022." +
+      "bbproto.PTaskInfo\022%\n\tdailyTask\030\004 \003(\0132\022.b" +
+      "bproto.PTaskInfo\"m\n\tPTaskInfo\022\n\n\002ID\030\001 \001(" +
+      "\005\022\014\n\004gold\030\002 \001(\005\022\r\n\005state\030\003 \001(\005\022\r\n\005count\030" +
+      "\004 \001(\005\022\014\n\004targ\030\005 \001(\005\022\014\n\004loop\030\006 \001(\005\022\014\n\004des" +
+      "c\030\007 \001(\t\"B\n\014PGoldDetails\022\014\n\004gold\030\001 \001(\005\022$\n" +
+      "\006detail\030\002 \003(\0132\024.bbproto.PGoldDetail\"E\n\013P" +
+      "GoldDetail\022\014\n\004time\030\001 \001(\003\022\014\n\004gold\030\002 \001(\005\022\014",
+      "\n\004type\030\003 \001(\005\022\014\n\004desc\030\004 \001(\tB$\n\026com.blemob" +
+      "i.sep.probufB\nTaskProtosb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11362,79 +4203,33 @@ public final class TaskProtos {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.blemobi.sep.probuf.AccountProtos.getDescriptor(),
         }, assigner);
-    internal_static_bbproto_PTaskUserBasic_descriptor =
+    internal_static_bbproto_PGoldTask_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bbproto_PTaskUserBasic_fieldAccessorTable = new
+    internal_static_bbproto_PGoldTask_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_bbproto_PTaskUserBasic_descriptor,
-        new java.lang.String[] { "Level", "LevelName", "Exp", "NextLevel", "NextLevelName", "NextLevelExp", "Nickname", "Headimg", });
-    internal_static_bbproto_PTaskList_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_bbproto_PTaskList_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_bbproto_PTaskList_descriptor,
-        new java.lang.String[] { "UserBasic", "TaskTotal", "DailyTaskTotal", "DailyTaskCompleteTotal", "MainTask", "DailyTask", });
+        internal_static_bbproto_PGoldTask_descriptor,
+        new java.lang.String[] { "User", "Gold", "NovicTask", "DailyTask", });
     internal_static_bbproto_PTaskInfo_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_bbproto_PTaskInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_bbproto_PTaskInfo_descriptor,
-        new java.lang.String[] { "Taskid", "Exp", "State", "Type", "Complete", "Num", "Desc", });
-    internal_static_bbproto_PTaskLevelList_descriptor =
+        new java.lang.String[] { "ID", "Gold", "State", "Count", "Targ", "Loop", "Desc", });
+    internal_static_bbproto_PGoldDetails_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_bbproto_PGoldDetails_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_bbproto_PGoldDetails_descriptor,
+        new java.lang.String[] { "Gold", "Detail", });
+    internal_static_bbproto_PGoldDetail_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_bbproto_PTaskLevelList_fieldAccessorTable = new
+    internal_static_bbproto_PGoldDetail_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_bbproto_PTaskLevelList_descriptor,
-        new java.lang.String[] { "UserBasic", "TaskLevel", });
-    internal_static_bbproto_PTaskLevel_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_bbproto_PTaskLevel_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_bbproto_PTaskLevel_descriptor,
-        new java.lang.String[] { "Id", "Name", "MinExp", "MaxExp", });
-    internal_static_bbproto_PTaskUserPk_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_bbproto_PTaskUserPk_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_bbproto_PTaskUserPk_descriptor,
-        new java.lang.String[] { "UserBasic", "PkUserBasic", "UserTaskTotol", "PkUserTaskTotol", });
-    internal_static_bbproto_PExpLevelList_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_bbproto_PExpLevelList_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_bbproto_PExpLevelList_descriptor,
-        new java.lang.String[] { "ExpLevel", });
-    internal_static_bbproto_PExpLevel_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_bbproto_PExpLevel_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_bbproto_PExpLevel_descriptor,
-        new java.lang.String[] { "Id", "TitleSc", "TitleTc", "TitleEn", "TitleKr", });
-    internal_static_bbproto_PSubscribeArray_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_bbproto_PSubscribeArray_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_bbproto_PSubscribeArray_descriptor,
-        new java.lang.String[] { "Subscribe", });
-    internal_static_bbproto_PSubscribe_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_bbproto_PSubscribe_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_bbproto_PSubscribe_descriptor,
-        new java.lang.String[] { "Uuid", "Msgid", "Time", });
-    internal_static_bbproto_PCallbackArray_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_bbproto_PCallbackArray_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_bbproto_PCallbackArray_descriptor,
-        new java.lang.String[] { "Callback", });
-    internal_static_bbproto_PCallback_descriptor =
-      getDescriptor().getMessageTypes().get(11);
-    internal_static_bbproto_PCallback_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_bbproto_PCallback_descriptor,
-        new java.lang.String[] { "Uuid", "Msgid", "Time", });
+        internal_static_bbproto_PGoldDetail_descriptor,
+        new java.lang.String[] { "Time", "Gold", "Type", "Desc", });
+    com.blemobi.sep.probuf.AccountProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

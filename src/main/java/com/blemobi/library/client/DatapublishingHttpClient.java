@@ -24,8 +24,8 @@ public class DatapublishingHttpClient extends BaseHttpClient {
 	 * @throws IOException
 	 */
 	public PMessage getLastHeartbeat(String uuids) throws IOException {
-		super.basePath = new StringBuilder("/datapublishing/inside/heartbeat/last?from=");
-		super.basePath.append(JettyServer.getServerName()).append("&uuids=").append(uuids);
-		return super.getMethod();
+		StringBuilder basePath = new StringBuilder("/datapublishing/inside/heartbeat/last?from=");
+		basePath.append(JettyServer.getServerName()).append("&uuids=").append(uuids);
+		return super.getMethod(basePath.toString());
 	}
 }

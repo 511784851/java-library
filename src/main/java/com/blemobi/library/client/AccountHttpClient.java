@@ -27,9 +27,9 @@ public class AccountHttpClient extends BaseHttpClient {
 	 * @throws IOException
 	 */
 	public PMessage getUser(String uuid) throws IOException {
-		super.basePath = new StringBuilder("/account/user/profile?from=");
-		super.basePath.append(JettyServer.getServerName()).append("&uuid=").append(uuid);
-		return super.getMethod();
+		StringBuilder basePath = new StringBuilder("/account/user/profile?from=");
+		basePath.append(JettyServer.getServerName()).append("&uuid=").append(uuid);
+		return super.getMethod(basePath.toString());
 	}
 
 	/**
@@ -43,10 +43,10 @@ public class AccountHttpClient extends BaseHttpClient {
 	 * @throws IOException
 	 */
 	public PMessage isVOTOVIP(String vo_uuid, String uuid) throws IOException {
-		super.basePath = new StringBuilder("/v1/account/inside/vo/member/state?from=");
-		super.basePath.append(JettyServer.getServerName()).append("&project=sep&void=").append(vo_uuid).append("&uuid=")
+		StringBuilder basePath = new StringBuilder("/v1/account/inside/vo/member/state?from=");
+		basePath.append(JettyServer.getServerName()).append("&project=sep&void=").append(vo_uuid).append("&uuid=")
 				.append(uuid);
-		return super.getMethod();
+		return super.getMethod(basePath.toString());
 	}
 
 	/**
@@ -58,9 +58,9 @@ public class AccountHttpClient extends BaseHttpClient {
 	 * @throws IOException
 	 */
 	public PMessage getUserInfo(String uuids) throws IOException {
-		super.basePath = new StringBuilder("/v1/account/users/baseinfo?from=");
-		super.basePath.append(JettyServer.getServerName()).append("&uuids=").append(uuids.toString());
-		return super.getMethod();
+		StringBuilder basePath = new StringBuilder("/v1/account/users/baseinfo?from=");
+		basePath.append(JettyServer.getServerName()).append("&uuids=").append(uuids.toString());
+		return super.getMethod(basePath.toString());
 	}
 
 	/**
@@ -72,10 +72,10 @@ public class AccountHttpClient extends BaseHttpClient {
 	 * @throws IOException
 	 */
 	public PMessage getUserVOInfo(byte[] body) throws IOException {
-		super.basePath = new StringBuilder("/v1/account/inside/users/vo?from=");
-		super.basePath.append(JettyServer.getServerName()).append("&project=sep");
+		StringBuilder basePath = new StringBuilder("/v1/account/inside/users/vo?from=");
+		basePath.append(JettyServer.getServerName()).append("&project=sep");
 		super.body = body;
 		super.contentType = "form-data";
-		return super.postBodyMethod();
+		return super.postBodyMethod(basePath.toString());
 	}
 }

@@ -38,14 +38,6 @@ public class BaseHttpClient {
 	 */
 	private String serverName;
 	/**
-	 * 最终请求的url
-	 */
-	protected StringBuilder url = new StringBuilder("http://");
-	/**
-	 * 接口地址
-	 */
-	protected StringBuilder basePath;
-	/**
 	 * POST方式参数
 	 */
 	protected List<NameValuePair> params;
@@ -79,8 +71,8 @@ public class BaseHttpClient {
 	 * @throws ClientProtocolException
 	 * @throws IOException
 	 */
-	public PMessage postMethod() throws ClientProtocolException, IOException {
-		getServerURL();
+	public PMessage postMethod(String basePath) throws ClientProtocolException, IOException {
+		String url = getServerURL(basePath);
 		HttpPost httpPost = new HttpPost(url.toString());
 
 		if (params != null) {
@@ -98,8 +90,8 @@ public class BaseHttpClient {
 	 * @throws ClientProtocolException
 	 * @throws IOException
 	 */
-	public PMessage getMethod() throws ClientProtocolException, IOException {
-		getServerURL();
+	public PMessage getMethod(String basePath) throws ClientProtocolException, IOException {
+		String url = getServerURL(basePath);
 		HttpGet httpGet = new HttpGet(url.toString());
 		return execute(httpGet);
 	}
@@ -110,8 +102,8 @@ public class BaseHttpClient {
 	 * @return
 	 * @throws IOException
 	 */
-	public PMessage postBodyMethod() throws IOException {
-		getServerURL();
+	public PMessage postBodyMethod(String basePath) throws IOException {
+		String url = getServerURL(basePath);
 		HttpPost httpPost = new HttpPost(url.toString());
 		ByteArrayEntity entity = new ByteArrayEntity(body, ContentType.create(contentType));
 		httpPost.setEntity(entity);// 设置参数
@@ -139,9 +131,11 @@ public class BaseHttpClient {
 	/**
 	 * 生成服务的URL
 	 */
-	protected void getServerURL() {
+	protected String getServerURL(String basePath) {
 		ServiceInfo serviceInfo = ConsulServiceMgr.getHealthlyServiceByNm(serverName);// Consul中获取服务信息
-		url.append(serviceInfo.getAddr()).append(":").append(serviceInfo.getPort()).append(basePath.toString());
+		StringBuilder url = new StringBuilder("http://");
+		url.append(serviceInfo.getAddr()).append(":").append(serviceInfo.getPort()).append(basePath);
 		log.debug("Http Request url=[" + url + "]");
+		return url.toString();
 	}
 }

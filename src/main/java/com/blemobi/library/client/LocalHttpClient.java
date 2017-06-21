@@ -17,13 +17,13 @@ public class LocalHttpClient extends BaseHttpClient {
 	private String address;
 	private int port;
 
-	public LocalHttpClient(String address, int port, StringBuffer basePath, List<NameValuePair> params, byte[] body,
+	public LocalHttpClient(String address, int port, List<NameValuePair> params, String cookie, byte[] body,
 			String contentType) {
 		super("");
 		this.address = address;
 		this.port = port;
-		super.basePath = new StringBuilder();
 		super.params = params;
+		super.cookie = cookie;
 		super.body = body;
 		super.contentType = contentType;
 	}
@@ -32,9 +32,10 @@ public class LocalHttpClient extends BaseHttpClient {
 	 * 生成服务的URL
 	 */
 	@Override
-	protected void getServerURL() {
-		url = new StringBuilder("http://");
-		url.append(address).append(":").append(port).append(basePath.toString());
+	protected String getServerURL(String basePath) {
+		StringBuilder url = new StringBuilder("http://");
+		url.append(address).append(":").append(port).append(basePath);
 		log.debug("Http Request url=[" + url + "]");
+		return url.toString();
 	}
 }
