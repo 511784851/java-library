@@ -34,16 +34,18 @@ public final class ExcelUtils {
             cell1.setCellValue(title);
             row = sheet.createRow(1);
             createTitle(row, titleList);
-            Map<String, Object> dMap = null;
-            for (int i = 0; i < dataList.size(); i++) {
-                dMap = dataList.get(i);
-                row = sheet.createRow(i + 2);
-                HSSFCell cell = null;
-                int col = 0;
-                for (int j = 0; j < header.size(); j++) {
-                    cell = row.createCell(col++);
-                    cell.setCellValue(
-                            dMap.get(header.get(j)) == null ? "-" : dMap.get(header.get(j)).toString());
+            if(dataList != null && !dataList.isEmpty()) {
+                Map<String, Object> dMap = null;
+                for (int i = 0; i < dataList.size(); i++) {
+                    dMap = dataList.get(i);
+                    row = sheet.createRow(i + 2);
+                    HSSFCell cell = null;
+                    int col = 0;
+                    for (int j = 0; j < header.size(); j++) {
+                        cell = row.createCell(col++);
+                        cell.setCellValue(
+                                dMap.get(header.get(j)) == null ? "-" : dMap.get(header.get(j)).toString());
+                    }
                 }
             }
             workbook.write(baos);
