@@ -13,23 +13,6 @@ import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
-
-import com.blemobi.sep.probuf.CommentApiProtos;
-import com.blemobi.sep.probuf.CommentProtos;
-import com.blemobi.sep.probuf.CommonApiProtos;
-import com.blemobi.sep.probuf.ResultProtos;
-import com.blemobi.sep.probuf.CommentApiProtos.PCommentCommentParam;
-import com.blemobi.sep.probuf.CommentApiProtos.PCommentParam;
-import com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam;
-import com.blemobi.sep.probuf.CommentProtos.PBetchCommentVote;
-import com.blemobi.sep.probuf.CommentProtos.PBetchCommentVoteExist;
-import com.blemobi.sep.probuf.CommentProtos.PClientCommentList;
-import com.blemobi.sep.probuf.CommentProtos.PCommentExtList;
-import com.blemobi.sep.probuf.CommonApiProtos.PEmpty;
-import com.blemobi.sep.probuf.ResultProtos.PInt32List;
-import com.blemobi.sep.probuf.ResultProtos.PInt32Single;
-import com.blemobi.sep.probuf.ResultProtos.PStringList;
-
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 
 /**
@@ -125,6 +108,15 @@ public class IGrpcCommentGrpc {
               "bbproto.IGrpcComment", "GrpcGetCommentByIds"),
           io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam.getDefaultInstance()),
           io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommentProtos.PCommentExtList.getDefaultInstance()));
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs,
+      com.blemobi.sep.probuf.ResultProtos.PInt32List> METHOD_CHECK_MSG_IDS =
+      io.grpc.MethodDescriptor.create(
+          io.grpc.MethodDescriptor.MethodType.UNARY,
+          generateFullMethodName(
+              "bbproto.IGrpcComment", "checkMsgIds"),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PInt32List.getDefaultInstance()));
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -261,6 +253,18 @@ public class IGrpcCommentGrpc {
       asyncUnimplementedUnaryCall(METHOD_GRPC_GET_COMMENT_BY_IDS, responseObserver);
     }
 
+    /**
+     * <pre>
+     *&#64;note    检查消息状态(由其它服务提供)
+     *&#64;param   请求中count表示要检查的消息进行次数
+     *&#64;return  uuid-msigId对应的消息触发次数
+     * </pre>
+     */
+    public void checkMsgIds(com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PInt32List> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_CHECK_MSG_IDS, responseObserver);
+    }
+
     @java.lang.Override public io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -326,6 +330,13 @@ public class IGrpcCommentGrpc {
                 com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam,
                 com.blemobi.sep.probuf.CommentProtos.PCommentExtList>(
                   this, METHODID_GRPC_GET_COMMENT_BY_IDS)))
+          .addMethod(
+            METHOD_CHECK_MSG_IDS,
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs,
+                com.blemobi.sep.probuf.ResultProtos.PInt32List>(
+                  this, METHODID_CHECK_MSG_IDS)))
           .build();
     }
   }
@@ -464,6 +475,19 @@ public class IGrpcCommentGrpc {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GRPC_GET_COMMENT_BY_IDS, getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     *&#64;note    检查消息状态(由其它服务提供)
+     *&#64;param   请求中count表示要检查的消息进行次数
+     *&#64;return  uuid-msigId对应的消息触发次数
+     * </pre>
+     */
+    public void checkMsgIds(com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PInt32List> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_CHECK_MSG_IDS, getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -590,6 +614,18 @@ public class IGrpcCommentGrpc {
     public com.blemobi.sep.probuf.CommentProtos.PCommentExtList grpcGetCommentByIds(com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GRPC_GET_COMMENT_BY_IDS, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     *&#64;note    检查消息状态(由其它服务提供)
+     *&#64;param   请求中count表示要检查的消息进行次数
+     *&#64;return  uuid-msigId对应的消息触发次数
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.ResultProtos.PInt32List checkMsgIds(com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_CHECK_MSG_IDS, getCallOptions(), request);
     }
   }
 
@@ -727,6 +763,19 @@ public class IGrpcCommentGrpc {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GRPC_GET_COMMENT_BY_IDS, getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     *&#64;note    检查消息状态(由其它服务提供)
+     *&#64;param   请求中count表示要检查的消息进行次数
+     *&#64;return  uuid-msigId对应的消息触发次数
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.ResultProtos.PInt32List> checkMsgIds(
+        com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_CHECK_MSG_IDS, getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GRPC_COMMENT = 0;
@@ -738,6 +787,7 @@ public class IGrpcCommentGrpc {
   private static final int METHODID_GRPC_LOAD_COMMENT = 6;
   private static final int METHODID_GRPC_LOAD_COMMENT_COMMENT = 7;
   private static final int METHODID_GRPC_GET_COMMENT_BY_IDS = 8;
+  private static final int METHODID_CHECK_MSG_IDS = 9;
 
   private static class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -792,6 +842,10 @@ public class IGrpcCommentGrpc {
           serviceImpl.grpcGetCommentByIds((com.blemobi.sep.probuf.CommentApiProtos.PQueryByIdsParam) request,
               (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommentProtos.PCommentExtList>) responseObserver);
           break;
+        case METHODID_CHECK_MSG_IDS:
+          serviceImpl.checkMsgIds((com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PInt32List>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -818,7 +872,8 @@ public class IGrpcCommentGrpc {
         METHOD_GRPC_GET_COMMENT_REPLY_CNT,
         METHOD_GRPC_LOAD_COMMENT,
         METHOD_GRPC_LOAD_COMMENT_COMMENT,
-        METHOD_GRPC_GET_COMMENT_BY_IDS);
+        METHOD_GRPC_GET_COMMENT_BY_IDS,
+        METHOD_CHECK_MSG_IDS);
   }
 
 }

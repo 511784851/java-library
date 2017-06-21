@@ -13,29 +13,6 @@ import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
-
-import com.blemobi.sep.probuf.CommonApiProtos;
-import com.blemobi.sep.probuf.NewsApiProtos;
-import com.blemobi.sep.probuf.NewsProtos;
-import com.blemobi.sep.probuf.ResultProtos;
-import com.blemobi.sep.probuf.CommonApiProtos.PEmpty;
-import com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam;
-import com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew;
-import com.blemobi.sep.probuf.NewsApiProtos.PPostBriefList;
-import com.blemobi.sep.probuf.NewsApiProtos.PPostCountStatistic;
-import com.blemobi.sep.probuf.NewsApiProtos.PQueryHitoryParam;
-import com.blemobi.sep.probuf.NewsApiProtos.PRefreshTimelineParam;
-import com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam;
-import com.blemobi.sep.probuf.NewsProtos.PBetchFollowAction;
-import com.blemobi.sep.probuf.NewsProtos.PBetchVoteAction;
-import com.blemobi.sep.probuf.NewsProtos.PNewsFollowExist;
-import com.blemobi.sep.probuf.NewsProtos.PNewsVoteExist;
-import com.blemobi.sep.probuf.NewsProtos.PPostNew;
-import com.blemobi.sep.probuf.NewsProtos.PPostViewList;
-import com.blemobi.sep.probuf.ResultProtos.PInt32List;
-import com.blemobi.sep.probuf.ResultProtos.PInt64Single;
-import com.blemobi.sep.probuf.ResultProtos.PStringList;
-
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 
 /**
@@ -51,13 +28,13 @@ public class IGrpcNewsGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.NewsProtos.PPostNew,
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.NewsApiProtos.PPostEditParam,
       com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_GRPC_POST_EDIT =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
               "bbproto.IGrpcNews", "GrpcPostEdit"),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.NewsProtos.PPostNew.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.NewsApiProtos.PPostEditParam.getDefaultInstance()),
           io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew,
@@ -212,6 +189,33 @@ public class IGrpcNewsGrpc {
               "bbproto.IGrpcNews", "GrpcDeletePost"),
           io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.NewsApiProtos.PDeletePostsParam.getDefaultInstance()),
           io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.NewsApiProtos.PDeletePostsParam,
+      com.blemobi.sep.probuf.CommonApiProtos.PEmpty> METHOD_GRPC_UN_DELETE_POST =
+      io.grpc.MethodDescriptor.create(
+          io.grpc.MethodDescriptor.MethodType.UNARY,
+          generateFullMethodName(
+              "bbproto.IGrpcNews", "GrpcUnDeletePost"),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.NewsApiProtos.PDeletePostsParam.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.CommonApiProtos.PEmpty.getDefaultInstance()));
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.NewsApiProtos.PNewsQueryUserParam,
+      com.blemobi.sep.probuf.NewsApiProtos.PNewsUserStatisticList> METHOD_GRPC_GET_USER_STATISTIC =
+      io.grpc.MethodDescriptor.create(
+          io.grpc.MethodDescriptor.MethodType.UNARY,
+          generateFullMethodName(
+              "bbproto.IGrpcNews", "GrpcGetUserStatistic"),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.NewsApiProtos.PNewsQueryUserParam.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.NewsApiProtos.PNewsUserStatisticList.getDefaultInstance()));
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs,
+      com.blemobi.sep.probuf.ResultProtos.PInt32List> METHOD_CHECK_MSG_IDS =
+      io.grpc.MethodDescriptor.create(
+          io.grpc.MethodDescriptor.MethodType.UNARY,
+          generateFullMethodName(
+              "bbproto.IGrpcNews", "checkMsgIds"),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.blemobi.sep.probuf.ResultProtos.PInt32List.getDefaultInstance()));
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -243,11 +247,11 @@ public class IGrpcNewsGrpc {
     /**
      * <pre>
      *&#64;note 编辑帖子
-     *&#64;param PPostNew 编辑后的帖子 
+     *&#64;param PPostEditParam 编辑后的帖子 
      *&#64;return PEmpty
      * </pre>
      */
-    public void grpcPostEdit(com.blemobi.sep.probuf.NewsProtos.PPostNew request,
+    public void grpcPostEdit(com.blemobi.sep.probuf.NewsApiProtos.PPostEditParam request,
         io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GRPC_POST_EDIT, responseObserver);
     }
@@ -455,13 +459,49 @@ public class IGrpcNewsGrpc {
       asyncUnimplementedUnaryCall(METHOD_GRPC_DELETE_POST, responseObserver);
     }
 
+    /**
+     * <pre>
+     *&#64;note    恢复被删除的帖子(粉丝管理系统)
+     *&#64;param    PDeletePostsParam 帖子ID
+     *&#64;return   PEmpty
+     * </pre>
+     */
+    public void grpcUnDeletePost(com.blemobi.sep.probuf.NewsApiProtos.PDeletePostsParam request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_GRPC_UN_DELETE_POST, responseObserver);
+    }
+
+    /**
+     * <pre>
+     *&#64;note    查询用户的统计信息(粉丝数、关注数、帖子数)
+     *&#64;param    PNewsQueryUserParam 帖子ID
+     *&#64;return   PNewsUserStatisticList
+     * </pre>
+     */
+    public void grpcGetUserStatistic(com.blemobi.sep.probuf.NewsApiProtos.PNewsQueryUserParam request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.NewsApiProtos.PNewsUserStatisticList> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_GRPC_GET_USER_STATISTIC, responseObserver);
+    }
+
+    /**
+     * <pre>
+     *&#64;note    检查消息状态(由其它服务提供)
+     *&#64;param   请求中count表示要检查的消息进行次数
+     *&#64;return  uuid-msigId对应的消息触发次数
+     * </pre>
+     */
+    public void checkMsgIds(com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PInt32List> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_CHECK_MSG_IDS, responseObserver);
+    }
+
     @java.lang.Override public io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             METHOD_GRPC_POST_EDIT,
             asyncUnaryCall(
               new MethodHandlers<
-                com.blemobi.sep.probuf.NewsProtos.PPostNew,
+                com.blemobi.sep.probuf.NewsApiProtos.PPostEditParam,
                 com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
                   this, METHODID_GRPC_POST_EDIT)))
           .addMethod(
@@ -583,6 +623,27 @@ public class IGrpcNewsGrpc {
                 com.blemobi.sep.probuf.NewsApiProtos.PDeletePostsParam,
                 com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
                   this, METHODID_GRPC_DELETE_POST)))
+          .addMethod(
+            METHOD_GRPC_UN_DELETE_POST,
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.blemobi.sep.probuf.NewsApiProtos.PDeletePostsParam,
+                com.blemobi.sep.probuf.CommonApiProtos.PEmpty>(
+                  this, METHODID_GRPC_UN_DELETE_POST)))
+          .addMethod(
+            METHOD_GRPC_GET_USER_STATISTIC,
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.blemobi.sep.probuf.NewsApiProtos.PNewsQueryUserParam,
+                com.blemobi.sep.probuf.NewsApiProtos.PNewsUserStatisticList>(
+                  this, METHODID_GRPC_GET_USER_STATISTIC)))
+          .addMethod(
+            METHOD_CHECK_MSG_IDS,
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs,
+                com.blemobi.sep.probuf.ResultProtos.PInt32List>(
+                  this, METHODID_CHECK_MSG_IDS)))
           .build();
     }
   }
@@ -608,11 +669,11 @@ public class IGrpcNewsGrpc {
     /**
      * <pre>
      *&#64;note 编辑帖子
-     *&#64;param PPostNew 编辑后的帖子 
+     *&#64;param PPostEditParam 编辑后的帖子 
      *&#64;return PEmpty
      * </pre>
      */
-    public void grpcPostEdit(com.blemobi.sep.probuf.NewsProtos.PPostNew request,
+    public void grpcPostEdit(com.blemobi.sep.probuf.NewsApiProtos.PPostEditParam request,
         io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GRPC_POST_EDIT, getCallOptions()), request, responseObserver);
@@ -837,6 +898,45 @@ public class IGrpcNewsGrpc {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GRPC_DELETE_POST, getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     *&#64;note    恢复被删除的帖子(粉丝管理系统)
+     *&#64;param    PDeletePostsParam 帖子ID
+     *&#64;return   PEmpty
+     * </pre>
+     */
+    public void grpcUnDeletePost(com.blemobi.sep.probuf.NewsApiProtos.PDeletePostsParam request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_GRPC_UN_DELETE_POST, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     *&#64;note    查询用户的统计信息(粉丝数、关注数、帖子数)
+     *&#64;param    PNewsQueryUserParam 帖子ID
+     *&#64;return   PNewsUserStatisticList
+     * </pre>
+     */
+    public void grpcGetUserStatistic(com.blemobi.sep.probuf.NewsApiProtos.PNewsQueryUserParam request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.NewsApiProtos.PNewsUserStatisticList> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_GRPC_GET_USER_STATISTIC, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     *&#64;note    检查消息状态(由其它服务提供)
+     *&#64;param   请求中count表示要检查的消息进行次数
+     *&#64;return  uuid-msigId对应的消息触发次数
+     * </pre>
+     */
+    public void checkMsgIds(com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs request,
+        io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PInt32List> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_CHECK_MSG_IDS, getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -860,11 +960,11 @@ public class IGrpcNewsGrpc {
     /**
      * <pre>
      *&#64;note 编辑帖子
-     *&#64;param PPostNew 编辑后的帖子 
+     *&#64;param PPostEditParam 编辑后的帖子 
      *&#64;return PEmpty
      * </pre>
      */
-    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty grpcPostEdit(com.blemobi.sep.probuf.NewsProtos.PPostNew request) {
+    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty grpcPostEdit(com.blemobi.sep.probuf.NewsApiProtos.PPostEditParam request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GRPC_POST_EDIT, getCallOptions(), request);
     }
@@ -1071,6 +1171,42 @@ public class IGrpcNewsGrpc {
       return blockingUnaryCall(
           getChannel(), METHOD_GRPC_DELETE_POST, getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     *&#64;note    恢复被删除的帖子(粉丝管理系统)
+     *&#64;param    PDeletePostsParam 帖子ID
+     *&#64;return   PEmpty
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.CommonApiProtos.PEmpty grpcUnDeletePost(com.blemobi.sep.probuf.NewsApiProtos.PDeletePostsParam request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_GRPC_UN_DELETE_POST, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     *&#64;note    查询用户的统计信息(粉丝数、关注数、帖子数)
+     *&#64;param    PNewsQueryUserParam 帖子ID
+     *&#64;return   PNewsUserStatisticList
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.NewsApiProtos.PNewsUserStatisticList grpcGetUserStatistic(com.blemobi.sep.probuf.NewsApiProtos.PNewsQueryUserParam request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_GRPC_GET_USER_STATISTIC, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     *&#64;note    检查消息状态(由其它服务提供)
+     *&#64;param   请求中count表示要检查的消息进行次数
+     *&#64;return  uuid-msigId对应的消息触发次数
+     * </pre>
+     */
+    public com.blemobi.sep.probuf.ResultProtos.PInt32List checkMsgIds(com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_CHECK_MSG_IDS, getCallOptions(), request);
+    }
   }
 
   /**
@@ -1094,12 +1230,12 @@ public class IGrpcNewsGrpc {
     /**
      * <pre>
      *&#64;note 编辑帖子
-     *&#64;param PPostNew 编辑后的帖子 
+     *&#64;param PPostEditParam 编辑后的帖子 
      *&#64;return PEmpty
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> grpcPostEdit(
-        com.blemobi.sep.probuf.NewsProtos.PPostNew request) {
+        com.blemobi.sep.probuf.NewsApiProtos.PPostEditParam request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GRPC_POST_EDIT, getCallOptions()), request);
     }
@@ -1323,6 +1459,45 @@ public class IGrpcNewsGrpc {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GRPC_DELETE_POST, getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     *&#64;note    恢复被删除的帖子(粉丝管理系统)
+     *&#64;param    PDeletePostsParam 帖子ID
+     *&#64;return   PEmpty
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.CommonApiProtos.PEmpty> grpcUnDeletePost(
+        com.blemobi.sep.probuf.NewsApiProtos.PDeletePostsParam request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_GRPC_UN_DELETE_POST, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     *&#64;note    查询用户的统计信息(粉丝数、关注数、帖子数)
+     *&#64;param    PNewsQueryUserParam 帖子ID
+     *&#64;return   PNewsUserStatisticList
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.NewsApiProtos.PNewsUserStatisticList> grpcGetUserStatistic(
+        com.blemobi.sep.probuf.NewsApiProtos.PNewsQueryUserParam request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_GRPC_GET_USER_STATISTIC, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     *&#64;note    检查消息状态(由其它服务提供)
+     *&#64;param   请求中count表示要检查的消息进行次数
+     *&#64;return  uuid-msigId对应的消息触发次数
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.blemobi.sep.probuf.ResultProtos.PInt32List> checkMsgIds(
+        com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_CHECK_MSG_IDS, getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GRPC_POST_EDIT = 0;
@@ -1343,6 +1518,9 @@ public class IGrpcNewsGrpc {
   private static final int METHODID_GRPC_GET_POST_BRIEF = 15;
   private static final int METHODID_GRPC_GET_POST_EXTRA_INFO = 16;
   private static final int METHODID_GRPC_DELETE_POST = 17;
+  private static final int METHODID_GRPC_UN_DELETE_POST = 18;
+  private static final int METHODID_GRPC_GET_USER_STATISTIC = 19;
+  private static final int METHODID_CHECK_MSG_IDS = 20;
 
   private static class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1362,7 +1540,7 @@ public class IGrpcNewsGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GRPC_POST_EDIT:
-          serviceImpl.grpcPostEdit((com.blemobi.sep.probuf.NewsProtos.PPostNew) request,
+          serviceImpl.grpcPostEdit((com.blemobi.sep.probuf.NewsApiProtos.PPostEditParam) request,
               (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
           break;
         case METHODID_GRPC_POST_PUBLISH:
@@ -1433,6 +1611,18 @@ public class IGrpcNewsGrpc {
           serviceImpl.grpcDeletePost((com.blemobi.sep.probuf.NewsApiProtos.PDeletePostsParam) request,
               (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
           break;
+        case METHODID_GRPC_UN_DELETE_POST:
+          serviceImpl.grpcUnDeletePost((com.blemobi.sep.probuf.NewsApiProtos.PDeletePostsParam) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.CommonApiProtos.PEmpty>) responseObserver);
+          break;
+        case METHODID_GRPC_GET_USER_STATISTIC:
+          serviceImpl.grpcGetUserStatistic((com.blemobi.sep.probuf.NewsApiProtos.PNewsQueryUserParam) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.NewsApiProtos.PNewsUserStatisticList>) responseObserver);
+          break;
+        case METHODID_CHECK_MSG_IDS:
+          serviceImpl.checkMsgIds((com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs) request,
+              (io.grpc.stub.StreamObserver<com.blemobi.sep.probuf.ResultProtos.PInt32List>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -1468,7 +1658,10 @@ public class IGrpcNewsGrpc {
         METHOD_GRPC_GET_USER_POST_HISTORY,
         METHOD_GRPC_GET_POST_BRIEF,
         METHOD_GRPC_GET_POST_EXTRA_INFO,
-        METHOD_GRPC_DELETE_POST);
+        METHOD_GRPC_DELETE_POST,
+        METHOD_GRPC_UN_DELETE_POST,
+        METHOD_GRPC_GET_USER_STATISTIC,
+        METHOD_CHECK_MSG_IDS);
   }
 
 }

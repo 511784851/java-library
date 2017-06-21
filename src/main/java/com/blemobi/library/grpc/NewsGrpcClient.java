@@ -20,17 +20,24 @@
  *****************************************************************/
 package com.blemobi.library.grpc;
 
+import java.util.List;
+
+import org.apache.commons.lang.StringUtils;
+
 import com.blemobi.sep.grpc.IGrpcNewsGrpc;
 import com.blemobi.sep.probuf.CommonApiProtos.PEmpty;
-import com.blemobi.sep.probuf.NewsApiProtos.*;
+import com.blemobi.sep.probuf.NewsApiProtos.EStateOperType;
+import com.blemobi.sep.probuf.NewsApiProtos.PDeletePostsParam;
+import com.blemobi.sep.probuf.NewsApiProtos.PGetPostsParam;
+import com.blemobi.sep.probuf.NewsApiProtos.PInsidePostNew;
+import com.blemobi.sep.probuf.NewsApiProtos.PSetPostStateParam;
 import com.blemobi.sep.probuf.NewsProtos.PPostView;
 import com.blemobi.sep.probuf.NewsProtos.PPostViewList;
 import com.blemobi.sep.probuf.ResultProtos.PInt32List;
 import com.blemobi.sep.probuf.ResultProtos.PStringList;
-import lombok.extern.log4j.Log4j;
-import org.apache.commons.lang.StringUtils;
+import com.blemobi.sep.probuf.TaskApiProtos.PTaskMsgs;
 
-import java.util.List;
+import lombok.extern.log4j.Log4j;
 
 /**
  * @ClassName NewsGrpcClient
@@ -58,7 +65,7 @@ public class NewsGrpcClient extends BaseGRPCClient {
 			}
 		});
 	}
-	
+
 	public PPostView getPostExtraInfo(String postId, String uuid) {
 		PGetPostsParam param = PGetPostsParam.newBuilder().addPostIds(Long.parseLong(postId)).setUuid(uuid)
 				.setViewType(0).build();
@@ -71,9 +78,9 @@ public class NewsGrpcClient extends BaseGRPCClient {
 			}
 		});
 	}
-	
-	public void setPostState(List<Long> value, EStateOperType type){
-		if(value == null || value.isEmpty()){
+
+	public void setPostState(List<Long> value, EStateOperType type) {
+		if (value == null || value.isEmpty()) {
 			log.debug("要设置为审核不通过的帖子ID为空");
 			return;
 		}
@@ -100,8 +107,7 @@ public class NewsGrpcClient extends BaseGRPCClient {
 			}
 		});
 	}
-	
-	
+
 	public PPostView getPostInfoById(String postId) {
 		PGetPostsParam param = PGetPostsParam.newBuilder().addPostIds(Long.parseLong(postId)).build();
 		return this.execute(param, new GrpcCallback<PPostView>() {
@@ -113,7 +119,7 @@ public class NewsGrpcClient extends BaseGRPCClient {
 			}
 		});
 	}
-	
+
 	public void createPost(PInsidePostNew post) {
 		this.execute(post, new GrpcCallback<PEmpty>() {
 			@Override
@@ -122,5 +128,16 @@ public class NewsGrpcClient extends BaseGRPCClient {
 				return stub.grpcPostPublish(post);
 			}
 		});
+	}
+
+	public PInt32List checkMsgIds(PTaskMsgs request) {
+		PInt32List list = this.execute(request, new GrpcCallback<PInt32List>() {
+			@Override
+			public PInt32List doGrpcRequest() {
+				stub = IGrpcNewsGrpc.newBlockingStub(channel);
+				return stub.checkMsgIds(request);
+			}
+		});
+		return list;
 	}
 }
