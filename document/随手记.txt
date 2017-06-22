@@ -1,0 +1,146 @@
+----------帐号信息----------
+网站        帐号                      密码             新密码            地址
+Ali Email   andy.zhao@blemobi.com     Miwu123456
+Confluence：andy.zhao                 zy198988                           http://confluence.blemobi.com/#all-updates
+JIRA        andy.zhao                 zy198988                           http://jira.blemobi.com/secure/Dashboard.jspa
+Github      zhaoyongandy              zy198988         zhaoyong1988      https://github.com/
+阿里云      zhaoyongaliyun            zy198988
+阿里运维    andy.zhao                 zy198988                           https://signin.aliyun.com/1041052169943785/login.htm
+Skype       andy.zhao@blemobi.com     zy198988                           
+Jinkens     andy.zhao                 zjbkGDnL3NpSFizJDGsXtbaje
+融云        rongcloud-developer@blemobi.com    XkFNQxZo5jgtXSPQ          https://developer.rongcloud.cn/
+魔方(prod)  jrmf360-developer@blemobi.com      BytYOgJqeU2cIT2NVaYS      https://www.jrmf360.com
+魔方(test)  andy.zhao@blemobi.com     321ewq                             https://yuntest-custom.jrmf360.com
+Artifactory javadev / javamobi!       admin / blemobi!jack               http://120.24.236.93:8081/
+谷歌        g511784851@gmail.com      zy198988 
+----------帐号信息----------
+
+
+----------Jumpbox----------
+区域      地址                                   备注  
+深圳      120.24.38.64                           连接各应用服务器以及端口转发到Consul服务器
+杭州      hz1jumpbox001.miwukeji.net             连接各应用服务器以及端口转发到Consul服务器
+香港      47.89.9.176                            端口转发到Jinkens服务器
+登录各区域Jempbox统一帐号和密码：
+user: andy.zhao     
+password：miwu_zy198988
+跳转应用服务器统一密码: 
+0e529f0b63548c1b5b032366449ef39d75789778580ca8b38d317b16f258104e
+----------Jumpbox----------
+
+
+----------应用服务器----------
+服务     sz001                              hz001                            hz002                           程序路径
+chat     ssh andy.zhao@10.26.222.100        ssh andy.zhao@10.252.114.49      ssh andy.zhao@10.162.52.131     cd /opt/miwu/service
+task     ssh andy.zhao@10.27.187.122        ssh andy.zhao@10.132.14.91       ssh andy.zhao@10.132.13.34      cd /opt/miwu/service
+netdisk  ssh andy.zhao@10.26.88.74          ssh andy.zhao@10.161.222.50      ssh andy.zhao@10.47.135.132     cd /opt/miwu/service
+contact  ssh andy.zhao@10.26.76.10          ssh andy.zhao@10.161.161.1       ssh andy.zhao@10.117.187.121    cd /opt/miwu/service
+payment  ssh andy.zhao@10.27.169.192        ssh andy.zhao@10.117.42.96       ssh andy.zhao@10.168.182.230    cd /opt/miwu/service
+----------应用服务器----------
+
+
+----------端口转发----------
+ssh -L 8081:10.44.91.241:8081 andy.zhao@120.24.38.64
+服务器         转发目标地址      转发目标端口           本地端口（自定义）
+香港Jenkins    172.16.0.2        8080                   8080
+深圳Consul     10.26.118.96      80                     8500
+杭州Consul     10.117.0.180      80                     8501
+Artifactory    10.44.91.241      8081                   8502
+----------端口转发----------
+
+
+----------Redis----------
+区域和服务      地址                                                      密码
+深圳chat        c28fed3f42be41a2.redis.rds.aliyuncs.com:6379              FF5FF22550AA9888bb48b51f7533
+深圳task        r-wz9a3ffa01ffef14.redis.rds.aliyuncs.com:6379            i4hPjgjphpMSev 
+深圳netdisk     19e62e26d9f5475c.redis.rds.aliyuncs.com:6379              9354B655E905419812709aefe5a4b0
+深圳contact     7a4b980559414cfd.redis.rds.aliyuncs.com:6379              80EBFBF81A63D0AA5c7bd599d84098              
+杭州chat        1c3fe12b2e7a4305.redis.rds.aliyuncs.com:6379              71AC5764202F1B04dac8c751cb15c6
+杭州task        r-bp10c58bd123a464.redis.rds.aliyuncs.com:6379            Miwu3721
+----------Redis----------
+
+
+重启服务
+systemctl restart chat
+/etc/systemd/system/
+查看文件占用大小
+du -ha
+删除文件夹实例：
+rm -rf /var/log/httpd/access
+删除文件使用实例：
+rm -f /var/log/httpd/access.log
+搜索日志内容
+cat task.log.2017-06-03.bak | grep "2017-06-03 20:33"
+
+maven生成proto        mvn protobuf:compile
+maven生成grpc         mvn protobuf:compile-custom
+maven打包不执行测试   mvn package -DskipTests=true
+
+
+移动文件
+scp /home/andy.zhao/java-tablestore-service-1.0.0.jar andy.zhao@10.27.169.192:/home/andy.zhao
+scp /home/andy.zhao/java-tablestore-service-1.0.0.jar andy.zhao@10.117.42.96:/home/andy.zhao
+scp /home/andy.zhao/java-tablestore-service-1.0.0.jar andy.zhao@10.168.182.230:/home/andy.zhao
+
+
+
+阿里云运维后台
+url: https://signin.aliyun.com/1041052169943785/login.htm
+user: andy.zhao
+password: zy198988
+
+
+公司内网SSH连接帐号：root   密码：blemobi3721
+
+杭州 consul url:ssh andy.zhao@10.117.0.180:80
+深圳 Consul：ssh -L 8500:10.26.118.96:80 username@120.24.38.64
+杭州 consul url: ssh andy.zhao@8500:10.26.118.96:80
+香港 Jenkins：ssh -L 8080:172.16.0.2:8080 username@47.89.9.176
+
+
+
+微信支付API密钥：blemobiblemobiblemobiblemobi3721
+
+
+Consul CMD
+consul agent -dev -bind 192.168.1.166
+consul.exe agent -config-dir d:/consul/cfg
+Sudo systemctl start consul.service
+
+https://qypac.net/2c7auyc0
+
+
+阿里悟空
+orochi717	Kc3AlIknMfENn3G9YmMB	https://imwukong.com/
+
+73c6c37b21d94b42	miwu-chat-redis-test	73c6c37b21d94b42.m.uswtb.kvstore.aliyuncs.com	6379	Miwu3721
+
+hz1gamificatio
+
+
+redis-cli -h 192.168.1.245 -p 6379 -a 
+
+http://192.168.7.245:9014/v1/payment/user/thirdToken?uuid=aaaaaaaaaaaa
+http://192.168.7.245:9014/v1/payment/redEnve/send-list?uuid=1471175703665920835&count=10
+
+ssh -L 6378:73c6c37b21d94b42.m.uswtb.kvstore.aliyuncs.com:6379
+
+
+nohup java -jar blemobi-wukong-app.jar -env test >Loop.log &
+nohup java -jar blemobi-task-app.jar -env test >taskManager.log &
+nohup java -jar blemobi-payment-app.jar -env test >Loop.log &
+nohup java -jar blemobi-contact-app.jar -env test >Loop.log &
+nohup java -jar blemobi-netdisk-app.jar -env test >Loop.log &
+
+
+
+tar -zxvf apache-tomcat-7.0.70.tar.gz -C /usr/local/把文件 解压包 /usr/local/ 
+
+nohup java -jar blemobi-tablestore.jar &
+
+
+https://github.com/blemobi/java-public-library.git
+
+
+修改MySQL表字段字符集
+ALTER TABLE `t_gift_lottery` MODIFY COLUMN `remark` VARCHAR(100) CHARACTER SET utf8mb4 ; 
