@@ -22,16 +22,11 @@ package com.blemobi.library.grpc_v1;
 
 import com.blemobi.library.consul_v1.Constants;
 import com.blemobi.library.consul_v1.ConsulKVMgr;
-import com.blemobi.library.consul_v1.PropsUtils;
-import com.blemobi.library.grpc_v1.annotation.GRPCService;
 import io.grpc.*;
 import lombok.extern.log4j.Log4j;
-import org.apache.commons.lang3.StringUtils;
-import org.reflections.Reflections;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -44,33 +39,22 @@ import java.util.Set;
  */
 @Log4j
 public final class GRPCServer {
-    private static final String GRPC_BASE_PKG = "grpc.annotation.basepkg";
     private static final List<BindableService> bsList = new ArrayList<BindableService>();
     private static Server server;
-    private static Set<Class<?>> annotated = new HashSet<Class<?>>();
-    
+
     public static void start(String serverNm, Set<Class<?>> anno, ServerInterceptor... interceptors) {
-    	annotated = anno;
-        /*String basePackage = PropsUtils.getString(GRPC_BASE_PKG);
-        if (!StringUtils.isEmpty(basePackage)) {
-            Reflections reflections = new Reflections(basePackage);
-            annotated = reflections.getTypesAnnotatedWith(GRPCService.class);
-        } else {
-            log.error("没有配置grpc服务基包 grpc.base.pkg");
-            System.exit(0);
-        }*/
-    	
-        if (annotated.isEmpty()) {
+        if (anno == null || anno.isEmpty()) {
             log.warn("没有找到GRPC服务");
             return;
         }
+    	
         Integer port = Integer.parseInt(ConsulKVMgr.getValue((Constants.GRPC_KV_KEY.getGRPCPortKey(serverNm))));
         if (port == null || port < 1) {
             log.warn("没有配置grpc端口号 grpc.server.port");
             System.exit(0);
         }
 
-        annotated.forEach(c -> {
+        anno.forEach(c -> {
             try {
                 log.debug("添加className -> " + c.getName() + " 到grpc service中");
                 BindableService instance = (BindableService) c.newInstance();
